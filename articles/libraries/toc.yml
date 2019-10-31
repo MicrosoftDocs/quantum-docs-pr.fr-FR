@@ -1,0 +1,9 @@
+- name: Bibliothèques standard
+  topicHref: standard/index.md
+  href: standard/toc.yml
+- name: Bibliothèque de chimie de quantum
+  topicHref: chemistry/index.md
+  href: chemistry/toc.yml
+- name: Bibliothèque de valeurs numériques de quantum
+  topicHref: numerics/index.md
+  href: numerics/toc.yml
