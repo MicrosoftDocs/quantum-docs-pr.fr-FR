@@ -1,0 +1,10 @@
+- name: Compteur de profondeur
+  href: depth-counter.md
+- name: Vérificateur d’entrées distinct
+  href: distinct-inputs-checker.md
+- name: Vérificateur d’utilisation de qubits non valide
+  href: invalidated-qubits-use-checker.md
+- name: Compteur d’opérations primitives
+  href: primitive-operations-counter.md
+- name: Compteur de largeur
+  href: width-counter.md

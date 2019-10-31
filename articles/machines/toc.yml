@@ -1,0 +1,11 @@
+- name: Machines et pilotes classiques
+  href: index.md
+- name: Simulateur de quantum
+  href: full-state-simulator.md
+- name: Estimateur de ressources
+  href: resources-estimator.md
+- name: Simulateur de traces d'ordinateur de quantum
+  topicHref: qc-trace-simulator/index.md
+  href: qc-trace-simulator/toc.yml
+- name: Simulateur Toffoli
+  href: toffoli-simulator.md
