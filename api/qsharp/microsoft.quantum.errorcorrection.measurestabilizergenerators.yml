@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
+name: MeasureStabilizerGenerators
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Mesure le jeu de générateurs donné d’un groupe stabilisant.
+remarks: >-
+  Cela ne vérifie pas si l’ensemble donné de générateurs se transporte.
+
+  Dans le cas contraire, le résultat des mesures peut être arbitraire.
+syntax: 'operation MeasureStabilizerGenerators (stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result)) : Microsoft.Quantum.ErrorCorrection.Syndrome'
+input:
+  content: '(stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result))'
+  types:
+  - name: stabilizerGroup
+    summary: >-
+      Tableau d’opérateurs Pauli multiqubit.
+
+      Par exemple, `stabilizerGroup[0]` est une liste de matrices Pauli à qubit unique, dont le produit tenseur est un générateur stabilisant.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: logicalRegister
+    summary: Tableau de qubits où le code stabilisant est défini.
+    uid: microsoft.quantum.errorcorrection.logicalregister
+  - name: gadget
+    summary: Opération qui spécifie comment mesurer un opérateur multiqubit Pauli.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Pauli
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+output:
+  content: Microsoft.Quantum.ErrorCorrection.Syndrome
+  types:
+  - summary: Résultat des mesures.
+    uid: microsoft.quantum.errorcorrection.syndrome
+ms.openlocfilehash: 1ebc1613c471e11a3d06878bc9ca48cf2d5be505
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226758"

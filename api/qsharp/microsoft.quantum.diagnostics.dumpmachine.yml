@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.dumpmachine
+name: DumpMachine
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Vide l’état actuel de l’ordinateur cible.
+remarks: >-
+  Cette méthode vous permet de vider les informations relatives à l’état actuel de l’ordinateur cible dans un fichier ou un autre emplacement.
+
+  Les informations réelles générées et la sémantique des `location` sont spécifiques à chaque ordinateur cible. Toutefois, le fait de fournir un tuple vide comme emplacement (`()`) ou simplement d’omettre le paramètre `location` signifie généralement générer la sortie vers la console.
+
+
+  Pour le simulateur d’état complet distribué dans le cadre du kit de développement quantique, cette méthode attend une chaîne avec le chemin d’accès à un fichier dans lequel elle écrira la fonction Wave sous la forme d’un tableau unidimensionnel de nombres complexes, dans lequel chaque élément représente le amplitudes de la probabilité de mesure de l’état correspondant.
+syntax: "function DumpMachine (location : 'T) : Unit"
+input:
+  content: "(location : 'T)"
+  types:
+  - name: location
+    summary: Fournit des informations sur l’emplacement de génération de l’image mémoire de l’ordinateur.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - summary: Aucun(e).
+    isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 7d268127c56dc5554e7c99494ae90b2bc14b336c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227064"

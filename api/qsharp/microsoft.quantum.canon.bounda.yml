@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bounda
+name: BoundA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  À partir d’un tableau d’opérations agissant sur une seule entrée, produit une nouvelle opération qui effectue chaque opération donnée dans l’ordre.
+
+  Le modificateur `A` indique que toutes les opérations dans le tableau sont adjointable.
+examples: >-
+  Les éléments suivants sont équivalents :
+
+
+  ```qsharp
+
+  let bound = BoundA([U, V]);
+
+  bound(x);
+
+  ```
+
+
+  et la
+
+
+  ```qsharp
+
+  U(x); V(x);
+
+  ```
+syntax: "function BoundA (operations : ('T => Unit is Adj)[]) : ('T => Unit is Adj)"
+input:
+  content: "(operations : ('T => Unit is Adj)[])"
+  types:
+  - name: operations
+    summary: Séquence d’opérations à effectuer sur une entrée donnée.
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: ('T => Unit is Adj)
+  types:
+  - summary: Nouvelle opération qui effectue chaque opération donnée dans l’ordre de son entrée.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+typeParameters:
+- uid: "'T"
+  summary: Cible sur laquelle les opérations du tableau agissent.
+seeAlso:
+- microsoft.quantum.canon.bound
+ms.openlocfilehash: a4707b75fdedf6612343690f0b42368fe0979ead
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220621"

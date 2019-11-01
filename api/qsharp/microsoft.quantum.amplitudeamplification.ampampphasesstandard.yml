@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
+name: AmpAmpPhasesStandard
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Calcule les phases de réflexion partielle pour l’amplification de l’amplitude standard.
+remarks: Toutes les phases sont de $ \pi $, à l’exception de la première réflexion à propos de l’état de démarrage et de la dernière réflexion sur l’État cible, qui sont $0 $.
+syntax: 'function AmpAmpPhasesStandard (nIterations : Int) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+input:
+  content: '(nIterations : Int)'
+  types:
+  - name: nIterations
+    summary: Nombre d’itérations d’amplification d’amplitude pour générer des phases de réflexion partielles pour.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+  types:
+  - summary: Opération qui implémente des phases spécifiées en tant que réflexions partielles
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+ms.openlocfilehash: eeea673baba07c1d36ba15e4dc16268938655f86
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215674"

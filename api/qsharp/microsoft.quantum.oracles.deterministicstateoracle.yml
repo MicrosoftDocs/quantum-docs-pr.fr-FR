@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.deterministicstateoracle
+name: DeterministicStateOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Représente une préparation d’État Oracle for déterministe.
+
+
+  L’entrée dans le $O Oracle est :
+
+
+  - Registre qui stocke l’État Quantum souhaité $ \ket{\Psi}\_s $.
+remarks: >-
+  Cette Oracle définie par $O \ket{0}= \ket{\Psi} $ agit sur le niveau de calcul de l’état de base $ \ket{0}$ pour créer l’État $ \ket{\Psi} $.
+
+  Le premier paramètre est le registre qubit de $ \ket{\Psi} $.
+syntax: newtype DeterministicStateOracle = (Qubit[] => Unit is Adj + Ctl);
+ms.openlocfilehash: bc10b84502866d1f5e19b28e77e54c1b10d01b28
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231127"

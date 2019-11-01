@@ -1,0 +1,99 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.quantumrom
+name: QuantumROM
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Utilise la technique Quantum ROM pour représenter une matrice de densité donnée.
+
+
+  À partir de la liste des $N $ coefficients $ \alpha_j $, retourne un $U unitaire $ qui utilise la technique Quantum-ROM pour préparer une approximation $ \tilde\rho\sum_{j = 0} ^ {N-1} p_j\ket {j} \ Bra {j} $ de la purification de la matrice de densité $ \rho = \sum_{j = 0} ^ {N-1} \frac{| alpha_j |} {\sum_k | \alpha_k |} \ket{j}\bra{j} $. Dans cette approximation, l’erreur $ \epsilon $ est telle que $ | p_j-\frac{| alpha_j |} {\sum_k | \alpha_k |} | \Le \epsilon/N $ et $\|\tilde\rho-\rho\| \Le \epsilon $. En d’autres termes, $ $ \begin{align} U\ket{0}^ {\lceil\log_2 N\rceil} \ Ket{0}^ {m} = \sum_{j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{garbage}_J}.
+
+  \end{align} $ $
+examples: >-
+  L’extrait de code suivant prépare une purification de l’État $3 $-qubit $ \rho = \sum_{j = 0} ^{4}\frac{| alpha_j |} {\sum_k | \alpha_k |} \ket{j}\bra{j} $, où $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $, et l’erreur est `1e-3`;
+
+
+  ```qsharp
+
+  let coefficients = [1.0,2.0,3.0,4.0,5.0];
+
+  let targetError = 1e-3;
+
+  let ((nTotalQubits, (nIndexQubits, nGarbageQubits)), oneNorm, op) = QuantumROM(targetError, coefficients);
+
+  using (indexRegister = Qubit[nIndexQubits]) {
+      using (garbageRegister = Qubit[nGarbageQubits]) {
+          op(LittleEndian(indexRegister), garbageRegister);
+      }
+  }
+
+  ```
+syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))'
+references: '- Encodage des spectres électroniques dans des circuits quantiques avec une complexité T linéaire Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru pâle, Austin Fowler, Hartmut Neven https://arxiv.org/abs/1805.03662'
+input:
+  content: '(targetError : Double, coefficients : Double[])'
+  types:
+  - name: targetError
+    summary: L’erreur cible $ \epsilon $.
+    isPrimitive: true
+    uid: Double
+  - name: coefficients
+    summary: >-
+      Tableau de $N $ coefficient spécifiant la probabilité des États de base.
+
+      Les nombres négatifs $-\alpha_j $ seront traités comme étant positifs $ | \alpha_j | $.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>Premier paramètre
+
+
+      Un tuple `(x,(y,z))` où `x = y + z` est le nombre total de qubits alloués, `y` est le nombre de qubits pour le registre de `LittleEndian`, et `z` est le nombre de garbage qubits.
+
+
+      ## <a name="second-parameter"></a>Deuxième paramètre
+
+
+      La norme $ \sum_j | \alpha_j | $ du tableau coefficient.
+
+
+      ## <a name="third-parameter"></a>Troisième paramètre
+
+
+      Le $U unitaire $.
+    types:
+    - types:
+      - isPrimitive: true
+        uid: Int
+      - types:
+        - isPrimitive: true
+          uid: Int
+        - isPrimitive: true
+          uid: Int
+    - isPrimitive: true
+      uid: Double
+    - isOperation: true
+      input:
+        types:
+        - uid: microsoft.quantum.arithmetic.littleendian
+        - isArray: true
+          isPrimitive: true
+          uid: Qubit
+      output:
+        types:
+        - isPrimitive: true
+          uid: Unit
+      functors:
+      - Adjoint
+      - Controlled
+ms.openlocfilehash: 33d21289b0b1ad64577677d5fa5ca622346224cc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226418"

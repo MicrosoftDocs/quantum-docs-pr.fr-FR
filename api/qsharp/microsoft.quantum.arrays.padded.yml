@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.padded
+name: Padded
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Retourne un tableau rempli à l’aide des valeurs spécifiées jusqu’à une longueur spécifiée.
+examples: >-
+  ```qsharp
+
+  let array = [10, 11, 12];
+
+  // The following line returns [10, 12, 15, 2, 2, 2].
+
+  let output = Padded(-6, array, 2);
+
+  // The following line returns [2, 2, 2, 10, 12, 15].
+
+  let output = Padded(6, array, 2);
+
+  ```
+syntax: "function Padded (nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[]) : 'T[]"
+input:
+  content: "(nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[])"
+  types:
+  - name: nElementsTotal
+    summary: Longueur du tableau rempli. Si ce est positif, `inputArray` est rempli au début. Si cette valeur est négative, `inputArray` est rempli à la fin.
+    isPrimitive: true
+    uid: Int
+  - name: defaultElement
+    summary: Valeur par défaut à utiliser pour les éléments de remplissage.
+    uid: "'T"
+    isLocal: true
+  - name: inputArray
+    summary: Tableau dont les valeurs sont situées à l’en-tête du tableau de sortie.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Tableau `output` qui est le `inputArray` complété au début avec `defaultElement`s jusqu’à ce que `output` ait une longueur `nElementsTotal`
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Type des éléments du tableau.
+ms.openlocfilehash: 3fb999af73e68de9143ddc051b8a43247f5282f0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218054"

@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.measurewithscratch
+name: MeasureWithScratch
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: Mesure l’opérateur Pauli donné à l’aide d’un qubit de travail explicite pour effectuer la mesure.
+syntax: 'operation MeasureWithScratch (pauli : Pauli[], target : Qubit[]) : Result'
+input:
+  content: '(pauli : Pauli[], target : Qubit[])'
+  types:
+  - name: pauli
+    summary: Opérateur qubit Pauli spécifié sous la forme d’un tableau d’opérateurs Pauli qubit uniques.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: target
+    summary: Registre qubit à mesurer.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: Résultat de la mesure de l’opérateur Pauli donné sur le registre `target`.
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 4b302c21dac11fbf33138555371ded2c7f43a409
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231348"
