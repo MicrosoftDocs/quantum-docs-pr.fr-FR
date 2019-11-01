@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.cascadecnot
+name: CascadeCNOT
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Implémente une cascade de portes CNOTIN sur les qubits voisins dans un registre qubit donné, en commençant par le qubit à la position 0 comme contrôle du qubit à la position 1 comme cible, puis du qubit à la position 1 comme contrôle du qubit à la position 2 comme cible. , etc., se terminant par le qubit dans la position `Length(register)-1` en tant que cible.
+syntax: 'operation CascadeCNOT (register : Qubit[]) : Unit'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: Registre qubit.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 9089948665a9ad8d4884196c4a84ed715104048a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221301"

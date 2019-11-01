@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyreversedopleca
+name: ApplyReversedOpLECA
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Applique une opération qui utilise l’entrée Little endian à un registre qui encode un entier non signé utilisant le format Big-endian.
+syntax: 'operation ApplyReversedOpLECA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl + Adj), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+input:
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl + Adj), register : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: op
+    summary: Opération qui agit sur un registre Little endian.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: register
+    summary: Registre Big-endian à transformer.
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- applyreversedople
+- applyreversedoplea
+- applyreversedoplec
+ms.openlocfilehash: dcead315cbde4d40a7166477dff05107e4b8c173
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219720"

@@ -1,0 +1,188 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.intrinsic
+name: Microsoft. Quantum. Intrinsic
+functions:
+- uid: microsoft.quantum.intrinsic.message
+  summary: Consigne un message.
+operations:
+- uid: microsoft.quantum.intrinsic.assert
+  summary: Les assertions qui mesurent le qubits donné dans la base Pauli donnée auront toujours le résultat donné.
+- uid: microsoft.quantum.intrinsic.assertprob
+  summary: Les assertions qui mesurent le qubits donné dans la base Pauli donnée auront le résultat donné avec la probabilité donnée, dans une certaine tolérance.
+- uid: microsoft.quantum.intrinsic.ccnot
+  summary: Applique la porte doublement contrôlée-NOT (CCNOT) à trois qubits.
+- uid: microsoft.quantum.intrinsic.cnot
+  summary: >-
+    Applique la porte contrôlée-NOT (CNOTIN) à une paire de qubits.
+
+
+    \begin{align} \operatorname{CNOT} \mathrel{ : =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix} , \end{align}
+
+
+    où les lignes et les colonnes sont classées comme dans le guide des concepts Quantum.
+- uid: microsoft.quantum.intrinsic.exp
+  summary: >-
+    Applique l’exponentiel d’un opérateur qubit Pauli.
+
+
+    \begin{align} e ^ {i \Theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align} où $P _i $ est le $i $ th élément de `paulis`et où $N = $`Length(paulis)`.
+- uid: microsoft.quantum.intrinsic.expfrac
+  summary: >-
+    Applique l’exponentiel d’un opérateur Pauli qubit avec un argument donné par une fraction dyadic.
+
+
+    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}, \end{align} où $P _i $ est le $i $ ième élément de `paulis`et où $N = $`Length(paulis)`.
+- uid: microsoft.quantum.intrinsic.h
+  summary: >-
+    Applique la transformation Hadarmard à un qubit unique.
+
+
+    \begin{align} H \mathrel{ : =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ 1 &-1 \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.i
+  summary: Effectue l’opération d’identité (no-op) sur un qubit unique.
+- uid: microsoft.quantum.intrinsic.m
+  summary: >-
+    Effectue une mesure d’un seul qubit dans le Pauli $Z $.
+
+
+    Le résultat de la sortie est donné par la \begin{align} de distribution \Pr (\texttt{Zero} | \ket{\Psi}) = \braket{\Psi | 0} \braket{0 | \Psi}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.measure
+  summary: >-
+    Effectue une mesure conjointe d’un ou plusieurs qubits dans les bases Pauli spécifiées.
+
+
+    Le résultat obtenu est fourni par la distribution : \begin{align} \Pr (\texttt{Zero} | \ket{\Psi}) = \frac12 \braket{\Psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \Psi}, \end{align} où $P _i $ est le $i $ th élément de @no__ t_0_ et où $N = \texttt{Length} (\texttt{bases}) $.
+
+    Autrement dit, la mesure retourne un `Result` $d $ de telle sorte que le eigenvalue de l’effet de mesure observé est $ (-1) ^ d $.
+- uid: microsoft.quantum.intrinsic.r
+  summary: >-
+    Applique une rotation autour de l’axe Pauli donné.
+
+
+    \begin{align} r_ {\mu} (\Theta) \mathrel{ : =} e ^ {-i \Theta \sigma_{\mu}/2}, \end{align} où $ \mu \Dans \{I, X, Y, Z\}$.
+- uid: microsoft.quantum.intrinsic.r1
+  summary: >-
+    Applique une rotation autour de l’État $ \ket{1}$ d’un angle donné.
+
+
+    \begin{align} R_1 (\Theta) \mathrel{ : =} \operatorname{Diag} (1, e ^ {i\theta}).
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.r1frac
+  summary: >-
+    Applique une rotation autour de l’État $ \ket{1}$ par un angle spécifié comme une fraction dyadic.
+
+
+    \begin{align} R_1 (n, k) \mathrel{ : =} \operatorname{Diag} (1, e ^ {i \pi k/2 ^ n}).
+
+    \end{align}
+
+
+    > [!WARNING]
+
+    > Cette opération utilise la Convention de signe **opposée** de @"microsoft.quantum.intrinsic.r"et n’inclut pas le facteur de $1/2 $ inclus par @"microsoft.quantum.intrinsic.r1".
+- uid: microsoft.quantum.intrinsic.random
+  summary: >-
+    L’opération aléatoire prend un tableau de doubles comme entrée et retourne un index sélectionné de façon aléatoire dans le tableau en tant que `Int`.
+
+    La probabilité de sélectionner un index spécifique est proportionnelle à la valeur de l’élément de tableau au niveau de cet index.
+
+    Les éléments de tableau qui sont égaux à zéro sont ignorés et leurs index ne sont jamais retournés. Si un élément de tableau est inférieur à zéro, ou si aucun élément de tableau n’est supérieur à zéro, l’opération échoue.
+- uid: microsoft.quantum.intrinsic.reset
+  summary: Étant donné un qubit unique, le mesure et s’assure qu’il est dans l’État | 0 ⟩, de sorte qu’il peut être libéré en toute sécurité.
+- uid: microsoft.quantum.intrinsic.resetall
+  summary: À partir d’un tableau de qubits, mesurez-les et assurez-vous qu’ils sont dans l’État | 0 ⟩, de sorte qu’ils puissent être libérés en toute sécurité.
+- uid: microsoft.quantum.intrinsic.rfrac
+  summary: >-
+    Applique une rotation autour de l’axe de Pauli donné par un angle spécifié comme une fraction dyadic.
+
+
+    \begin{align} r_ {\mu} (n, k) \mathrel{ : =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align} où $ \mu \Dans \{I, X, Y, Z\}$.
+
+
+    > [!WARNING]
+
+    > Cette opération utilise la Convention de signe **opposée** de @"microsoft.quantum.intrinsic.r".
+- uid: microsoft.quantum.intrinsic.rx
+  summary: >-
+    Applique une rotation autour du $x $-AXIS par un angle donné.
+
+
+    \begin{align} R_x (\Theta) \mathrel{ : =} e ^ {-i \Theta \sigma_x/2} = \begin{bmatrix} \cos \frac{\Theta}{2} &-i\sin \frac{\Theta}{2}\\\\-i\sin \frac{\Theta}{2} & \cos \frac{\Theta}{2} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.ry
+  summary: >-
+    Applique une rotation autour du $y $-AXIS par un angle donné.
+
+
+    \begin{align} R_y (\Theta) \mathrel{ : =} e ^ {-i \Theta \sigma_y/2} = \begin{bmatrix} \cos \frac{\Theta}{2} &-\sin \frac{\Theta}{2}\\\\ \sin \frac{\Theta}{2} & \cos \frac{\Theta}{2} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.rz
+  summary: >-
+    Applique une rotation autour du $z $-AXIS par un angle donné.
+
+
+    \begin{align} R_z (\Theta) \mathrel{ : =} e ^ {-i \Theta \sigma_z/2} = \begin{bmatrix} e ^ {-i \Theta/2} & 0 \\\\ 0 & e ^ {\Theta/2} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.s
+  summary: >-
+    Applique la porte de phase π/4 à un seul qubit.
+
+
+    \begin{align} S \mathrel{ : =} \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.swap
+  summary: >-
+    Applique la porte d’échange à une paire de qubits.
+
+
+    \begin{align} \operatorname{SWAP} \mathrel{ : =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} , \end{align}
+
+
+    où les lignes et les colonnes sont classées comme dans le guide des concepts Quantum.
+- uid: microsoft.quantum.intrinsic.t
+  summary: >-
+    Applique la porte π/8 à un seul qubit.
+
+
+    \begin{align} T \mathrel{ : =} \begin{bmatrix} 1 & 0 \\\\ 0 & e ^ {i \pi/4} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.x
+  summary: >-
+    Applique le Pauli $X $ Gate.
+
+
+    \begin{align} \sigma_x \mathrel{ : =} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.y
+  summary: >-
+    Applique le Pauli $Y $ Gate.
+
+
+    \begin{align} \sigma_y \mathrel{ : =} \begin{bmatrix} 0 &-i \\\\ i & 0 \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.z
+  summary: >-
+    Applique le Pauli $Z $ Gate.
+
+
+    \begin{align} \sigma_z \mathrel{ : =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
+
+    \end{align}
+ms.openlocfilehash: a2f80ca98d86e5a1457efb6dad34c60d6ef75a2e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056347"

@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.assertprobint
+name: AssertProbInt
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Déclare que la probabilité d’un état spécifique d’un registre Quantum a la valeur attendue.
+
+
+  Étant donné un $n $-qubit Quantum State $ \ket{\Psi} = \sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $, déclare que la probabilité $ | \alpha_j | ^ 2 $ de l’État $ \ket{j} $ indexée par $j $ a la valeur attendue.
+examples: >-
+  Supposons que le `qubits` inscrire code un État Quantum 3-qubit $ \ket{\Psi} = \ sqrt {1/8} \ Ket{0}+ \ sqrt {7/8} \ Ket{6}$ dans un format Little endian.
+
+  Cela signifie que le nombre indique $ \ket{0}\equiv\ket{0}\ket{0}\ket{0}$ et $ \ket{6}\equiv\ket{0}\ket{1}\ket{1}$. Les affirmations suivantes ont ensuite été effectuées :
+
+
+  - `AssertProbInt(0,0.125,qubits,10e-10);`
+
+  - `AssertProbInt(6,0.875,qubits,10e-10);`
+syntax: 'operation AssertProbInt (stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double) : Unit'
+input:
+  content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double)'
+  types:
+  - name: stateIndex
+    summary: L’index $j $ de l’État $ \ket{j} $ représenté par un registre `LittleEndian`.
+    isPrimitive: true
+    uid: Int
+  - name: expected
+    summary: La valeur attendue de $ | \alpha_j | ^ 2 $.
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    summary: Le registre qubit qui stocke $ \ket{\Psi} $ dans un format avec primauté des octets de poids faible.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: tolerance
+    summary: Tolérance absolue sur la différence entre réel et attendu.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221437"

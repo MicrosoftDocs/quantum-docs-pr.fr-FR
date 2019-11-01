@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.dumpregister
+name: DumpRegister
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Vide l’état de l’ordinateur cible actuel associé à l’qubits donné.
+remarks: >-
+  Cette méthode vous permet de vider les informations associées à l’état du qubits donné dans un fichier ou un autre emplacement.
+
+  Les informations réelles générées et la sémantique des `location` sont spécifiques à chaque ordinateur cible. Toutefois, le fait de fournir un tuple vide en tant qu’emplacement (`()`) signifie généralement qu’il doit générer la sortie dans la console.
+
+
+  Pour le simulateur d’état local distribué dans le cadre du kit de développement Quantum, cette méthode attend une chaîne avec le chemin d’accès à un fichier dans lequel elle écrira l’état du qubits donné (c.-à-d. la fonction Wave du sous-système correspondant) en tant qu’élément AR unidimensionnel. rayon de nombres complexes, dans lequel chaque élément représente les amplitudes de la probabilité de mesurer l’état correspondant.
+
+  Si le qubits donné est enchevêtré avec un autre qubit et que son état ne peut pas être séparé, il signale simplement que les qubits sont enchevêtrés.
+syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
+input:
+  content: "(location : 'T, qubits : Qubit[])"
+  types:
+  - name: location
+    summary: Fournit des informations sur l’emplacement de génération de l’image mémoire de l’État.
+    uid: "'T"
+    isLocal: true
+  - name: qubits
+    summary: Liste des qubits à signaler.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - summary: Aucun(e).
+    isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 6d553a95bfa619d142b681e2830fc0375c6bcae5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227030"

@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparesinglequbitidentity
+name: PrepareSingleQubitIdentity
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Prépare un qubit dans l’état maximal mélangé.
+
+
+  Elle prépare le qubit donné dans l’État $ \boldone/$2 en appliquant le canal de dépolarisation $ $ \begin{align} \Omega (\rho) \mathrel{ : =} \frac{1}{4} \sum_{\mu \Dans \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\ poignard}, \end{align} $ $ où $ \sigma\_i $ est l’opérateur $i $ th Pauli et où $ \rho $ est un opérateur de densité représentant un État mixte.
+remarks: >-
+  L’État mixte $ \boldone/$2 décrivant le résultat de l’application de cette opération à un état décrit de façon implicite une valeur d’attente sur les choix aléatoires effectués dans cette opération.
+
+  Ainsi, pour n’importe quelle application, cette opération mappe des États purs à des États purs, mais elle agit comme décrit en prévision.
+
+  En particulier, cette opération peut être utilisée dans la tomographie de processus pour mesurer les composants *non unitaires* d’un canal.
+syntax: 'operation PrepareSingleQubitIdentity (qubit : Qubit) : Unit'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: Un qubit dont l’État doit être dépolarisé de la manière décrite ci-dessus.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 944178e3a8473b2206de037031bd8def546425b8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226520"

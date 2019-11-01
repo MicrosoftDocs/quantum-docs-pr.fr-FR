@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bound
+name: Bound
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: À partir d’un tableau d’opérations agissant sur une seule entrée, produit une nouvelle opération qui effectue chaque opération donnée dans l’ordre.
+examples: >-
+  Les éléments suivants sont équivalents :
+
+
+  ```qsharp
+
+  let bound = Bound([U, V]);
+
+  bound(x);
+
+  ```
+
+
+  et la
+
+
+  ```qsharp
+
+  U(x); V(x);
+
+  ```
+syntax: "function Bound (operations : ('T => Unit)[]) : ('T => Unit)"
+input:
+  content: "(operations : ('T => Unit)[])"
+  types:
+  - name: operations
+    summary: Séquence d’opérations à effectuer sur une entrée donnée.
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: ('T => Unit)
+  types:
+  - summary: Nouvelle opération qui effectue chaque opération donnée dans l’ordre de son entrée.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Cible sur laquelle les opérations du tableau agissent.
+seeAlso:
+- microsoft.quantum.canon.boundc
+- microsoft.quantum.canon.bounda
+- microsoft.quantum.canon.boundca
+ms.openlocfilehash: 67cb4cb93c5d306491bfce83caf1c112194991be
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220638"

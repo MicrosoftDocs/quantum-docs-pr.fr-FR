@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
+name: IdenticalPointPosFactFxP
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: Déclarez que tous les nombres à virgule fixe dans le tableau fourni ont des positions de point identiques lors du comptage à partir du bit de poids faible. Par exemple, le nombre de bits moins la position du point doit être constant pour tous les nombres à virgule fixe dans le tableau.
+syntax: 'function IdenticalPointPosFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[]) : Unit'
+input:
+  content: '(fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[])'
+  types:
+  - name: fixedPoints
+    summary: Tableau de nombres à virgule fixe Quantum dont la compatibilité est vérifiée (à l’aide d’assertions).
+    isArray: true
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 2cd4bcb86490cf468215c507d32d8dc015af2a5b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220978"

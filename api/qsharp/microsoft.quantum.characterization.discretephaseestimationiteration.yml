@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.discretephaseestimationiteration
+name: DiscretePhaseEstimationIteration
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Exécute une seule itération d’un algorithme d’estimation de phase itérative (contrôlée de manière classique) à l’aide des puissances de nombre entier d’une entité Oracle.
+syntax: 'operation DiscretePhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit'
+input:
+  content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
+  types:
+  - name: oracle
+    summary: Opération agissant sur un entier et un registre, de sorte que $U ^ m $ est appliqué au registre donné, où $U $ est l’unité de temps dont la phase doit être estimée, et où $m est la puissance de l’entier accordée à Oracle.
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: power
+    summary: Nombre de fois où l’application Oracle unitaire donnée est appliquée.
+    isPrimitive: true
+    uid: Int
+  - name: theta
+    summary: Angle d’inversion de la phase sur le contrôle qubit avant d’agir sur l’État cible.
+    isPrimitive: true
+    uid: Double
+  - name: targetState
+    summary: Registre d’état traité par l’entité Oracle donnée.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: controlQubit
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 9acf864fe93303489308078eb5039189808549f1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229223"
