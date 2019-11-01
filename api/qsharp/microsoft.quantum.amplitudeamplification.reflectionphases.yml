@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.reflectionphases
+name: ReflectionPhases
+type: newtype
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Phases pour une séquence de réflexions partielles dans l’amplification d’amplitude.
+remarks: >-
+  Le premier paramètre est un tableau de phases pour la réflexion sur l’état de démarrage. Le deuxième paramètre est un tableau de phases pour la réflexion sur l’État cible.
+
+  Les deux tableaux doivent être de longueur égale. Notez que dans de nombreux cas, la première phase à propos de l’état de démarrage et de la dernière phase de l’État cible introduit une phase de décalage global et peut être définie sur $0 $.
+syntax: newtype ReflectionPhases = (Double[], Double[]);
+ms.openlocfilehash: ce9bab0540f70ac0115d5b7780437410e019a09b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215555"
