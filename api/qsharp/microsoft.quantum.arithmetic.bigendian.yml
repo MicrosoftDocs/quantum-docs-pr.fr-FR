@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.bigendian
+name: BigEndian
+type: newtype
+namespace: Microsoft.Quantum.Arithmetic
+summary: Inscrivez-vous pour encoder un entier non signé dans l’ordre Big-endian. Le qubit avec l’index `0` encode le bit le plus élevé d’un entier non signé.
+remarks: Nous abrégeons `BigEndian` comme `BE` dans la documentation.
+syntax: newtype BigEndian = Qubit[];
+ms.openlocfilehash: a4d96ab9299d983583949de5ae8eebba64a189a4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221352"

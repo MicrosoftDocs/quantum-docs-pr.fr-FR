@@ -1,0 +1,16 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.hterm
+name: HTerm
+type: newtype
+namespace: Microsoft.Quantum.Chemistry
+summary: >-
+  Format des données passées de C# à Q # pour représenter un terme de la même façon.
+
+  La signification des données représentées est déterminée par l’algorithme qui la reçoit.
+syntax: newtype HTerm = (Int[], Double[]);
+ms.openlocfilehash: 9284a94448e3f0c3738e8e68df0839e349c7946a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228968"

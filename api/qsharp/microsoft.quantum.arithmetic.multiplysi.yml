@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplysi
+name: MultiplySI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Multipliez les `xs` entières signées par un entier signé `ys` et stockez le résultat dans `result`, qui doit être initialement zéro.
+syntax: 'operation MultiplySI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
+  types:
+  - name: xs
+    summary: multiplicande n bits (SignedLittleEndian)
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+  - name: ys
+    summary: multiplicateur n-bit (SignedLittleEndian)
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+  - name: result
+    summary: résultat de 2n bits (SignedLittleEndian), doit être dans l’État $ \ket{0}$ initialement.
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 154e870416e47547a115fcc5533d187b3ed67213
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214807"

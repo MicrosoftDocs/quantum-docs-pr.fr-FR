@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.approximateqft
+name: ApproximateQFT
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Appliquez la transformation de Fourier quantique approximative (AQFT) à un registre Quantum.
+remarks: >-
+  AQFT requiert des portes de rotation Z de la forme 2π/2k et des portes Hadarmard.
+
+
+  L’entrée et la sortie sont supposées être encodées en encodage Big endian.
+syntax: 'operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+references: >-
+  - [*M. Roetteler, Th. Beth*, Appl. algèbre eng. commun. Terminé. 19 (3) : 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
+
+  - [*D. Coppersmith* arXiv : quant-pH/0201067v1](https://arxiv.org/abs/quant-ph/0201067)
+input:
+  content: '(a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: a
+    summary: >-
+      paramètre de approximation qui détermine à quel niveau les rotations Z contrôlées qui se produisent dans le circuit QFT sont nettoyées.
+
+
+      Le paramètre approximatif a détermine le niveau de nettoyage des rotations Z, c’est-à-dire un ∈ {0.. n} et toutes les rotations de Z 2π/2k où k > a sont supprimés du circuit QFT. Il est connu que, pour k > = log ₂ (n) + Journal ₂ (1/ε) + 3, une liaison peut être liée | | QFT-AQFT | | < ε.
+    isPrimitive: true
+    uid: Int
+  - name: qs
+    summary: Registre quantique de n qubits auquel la transformation de Fourier quantique approximative est appliquée.
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6d650d4c1d80e747df7560c630543189513d252a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212529"

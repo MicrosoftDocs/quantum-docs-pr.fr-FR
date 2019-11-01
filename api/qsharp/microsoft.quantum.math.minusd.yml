@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.minusd
+name: MinusD
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Retourne la différence entre deux entrées.
+syntax: 'function MinusD (a : Double, b : Double) : Double'
+input:
+  content: '(a : Double, b : Double)'
+  types:
+  - name: a
+    summary: Première entrée $a $ à soustraire.
+    isPrimitive: true
+    uid: Double
+  - name: b
+    summary: Deuxième entrée $b $ à soustraire.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - summary: La différence $a-b $.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: c4c74c1a9eebee07e1633e9e1d0df58de7a0a296
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233847"

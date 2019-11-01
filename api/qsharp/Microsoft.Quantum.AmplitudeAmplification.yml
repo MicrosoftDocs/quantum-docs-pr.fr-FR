@@ -1,0 +1,43 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.amplitudeamplification
+name: Microsoft. Quantum. AmplitudeAmplification
+summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions et des opérations pour effectuer une amplification d’amplitude.\n\n # <a name=\"description\"></a>description\n L’amplification d’amplitude oublie avec des réflexions partielles est la forme la plus générale d’amplification d’amplitude implémentée ici.\n\n Cette opération est appelée par le biais de l’opération AmpAmpObliviousByReflectionPhases.\n\n Il existe deux registres : `ancillaRegister` et `systemRegister`.\n\n Cela accepte deux Oracle pour ces réflexions de type `ReflectionOracle` qui agissent uniquement sur le registre de `ancillaRegister`.\n\n Cela accepte une amplification d’amplitude Oracle spécial vers oublie de type `ObliviousOracle` qui agit conjointement sur les deux registres.\n\n L’état d’entrée pour `ancillaRegister` est supposé être le eigenstate unique $-$1 du premier opérateur de réflexion $I-2 \\ Ket {s} \\ Bra {s} $.\n\n Les réflexions sur un État Quantum cible sont souvent implémentées en supposant l’accès à un Oracle qui prépare cet État à partir de la base de calcul $ \\ket{0\\cdots 0} $.\n\n Notre convention pour ces Oracle requiert deux registres : un registre `flagQubit` qubit et un registre pour tout le reste sur le registre ancillaRegister.\n\n Oracle de type `StateOracle` agit conjointement sur les deux registres pour créer l’État cible marqué par $ \\ket{1}$ dans le registre de `flagQubit` avec une amplitude réelle.\n\n La réflexion `ReflectionOracle` sur l’état de cet indicateur est générée par l’opération `TargetStateReflectionOracle`.\n\n La réflexion `ReflectionOracle` à propos de l’état d’entrée pour `ancillaRegister` est générée par le StateOracle inversé, puis reflète environ $ \\ket{0\\cdots 0} $ avec ReflectionStart ().\n\n Oracle de type `DeterministicStateOracle` agit sur le `qubitState` s’inscrit pour créer l’État cible exactement sans indicateur.\n\n `AmpAmpObliviousByOraclePhases` est une version de oublie amplitude amplification qui accepte Oracle `StateOracle` et `ObliviousOracle` au lieu de réflexions.\n\n Notez que l’amplification de l’amplitude est un cas spécial d’amplification de l’amplitude oublie où `ObliviousOracle` est l’opérateur d’identité et qu’il n’y a pas de qubits système, c’est-à-dire que `systemRegister` est vide.\n\n Cette opération est appelée via l’opération `AmpAmByReflectionPhases` et `AmpAmpByOraclePhases`.\n\n Les phases des réflexions partielles dans le cas standard de la recherche Grover sont fournies par la fonction AmpAmpPhasesStandard.\n\n Par exemple, nous avons les dépendances suivantes : AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases."
+functions:
+- uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
+  summary: Algorithme d’amplification d’amplitude standard
+- uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
+  summary: Amplification d’amplitude par Oracle pour les réflexions partielles.
+- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionsphases
+  summary: Amplification de l’amplitude par réflexions partielles.
+- uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
+  summary: Amplification d’amplitude oublie par Oracle pour les réflexions partielles.
+- uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
+  summary: Retourne un Unity qui implémente l’amplification de l’amplitude oublie en spécifiant pour les réflexions partielles.
+- uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
+  summary: Calcule les phases de réflexion partielle pour l’amplification de l’amplitude à virgule fixe.
+- uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
+  summary: Calcule les phases de réflexion partielle pour l’amplification de l’amplitude standard.
+- uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
+  summary: Convertit les phases spécifiées sous forme de rotations de qubit simple en phases spécifiées comme réflexions partielles.
+- uid: microsoft.quantum.amplitudeamplification.reflectionstart
+  summary: Construit une réflexion à propos de la chaîne All-Zero | 0... 0 〉, qui est l’état d’entrée typique de l’amplification d’amplitude.
+- uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
+  summary: >-
+    Construit un `ReflectionOracle` sur l’État cible qui est marqué de manière unique par l’indicateur qubit.
+
+
+    L’État cible a un seul qubit défini sur 1, et tous les autres 0 : $ \ket{1}_f $.
+operations:
+- uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
+  summary: Algorithme d’amplification d’amplitude à virgule fixe
+newtypes:
+- uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  summary: Phases pour une séquence de réflexions partielles dans l’amplification d’amplitude.
+- uid: microsoft.quantum.amplitudeamplification.rotationphases
+  summary: Phases pour une séquence de rotations à qubit unique dans l’amplification d’amplitude.
+ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057112"

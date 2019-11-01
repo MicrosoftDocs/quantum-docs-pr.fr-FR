@@ -1,0 +1,68 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.conjugatedbyca
+name: ConjugatedByCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: En fonction des opérations externes et internes, retourne une nouvelle opération qui conjugue l’opération interne par l’opération externe.
+remarks: L’opération externe est toujours supposée être adjointable, mais elle n’a pas besoin d’être contrôlable pour que l’opération combinée soit contrôlable.
+syntax: "function ConjugatedByCA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl)) : ('T => Unit is Adj + Ctl)"
+input:
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl))"
+  types:
+  - name: outerOperation
+    summary: L’opération $U $ qui doit être utilisée pour conjuguer $V $. Notez que l’opération externe $U $ doit être adjointable, mais qu’elle n’a pas besoin d’être contrôlable.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: innerOperation
+    summary: L’opération $V être conjuguée.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: ('T => Unit is Adj + Ctl)
+  types:
+  - summary: Nouvelle opération dont l’action est représentée par le $U unitaire ^ {\dagger} V U $.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: Type de la cible sur laquelle les opérations internes et externes agissent.
+seeAlso:
+- conjugatedbya
+- conjugatedbyc
+- conjugatedbyca
+- applywith
+ms.openlocfilehash: c9ffbcd0c7c441f3148ae3c834e47d944895557d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223579"

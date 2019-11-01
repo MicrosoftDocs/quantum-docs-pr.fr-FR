@@ -1,0 +1,78 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelsebca
+name: ApplyIfElseBCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Applique l’une des deux opérations unitaires, en fonction de la valeur d’un bit classique.
+
+
+  Étant donné un bit `bit`, applique l’opération `trueOp` avec `trueInput` comme entrée lorsque `bit` est `true`, et applique `falseOp(falseInput)` lorsque `bit` est `false`.
+syntax: "operation ApplyIfElseBCA (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit"
+input:
+  content: "(bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U))"
+  types:
+  - name: bit
+    isPrimitive: true
+    uid: Bool
+  - name: trueOp
+    summary: Opération unitaire à appliquer lorsque `bit` est `true`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: trueInput
+    summary: Entrée à fournir à `trueOp` lorsque `bit` est `true`.
+    uid: "'T"
+    isLocal: true
+  - name: falseOp
+    summary: Opération unitaire à appliquer lorsque `bit` est `false`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: falseInput
+    summary: Entrée à fournir à `falseOp` lorsque `bit` est `false`.
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Type d’entrée de l’opération `trueOp` appliqué de manière conditionnelle.
+- uid: "'U"
+  summary: Type d’entrée de l’opération `falseOp` appliqué de manière conditionnelle.
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: d9fa6aad5c319d4cde19ff6b1da697f47bcc8806
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213770"

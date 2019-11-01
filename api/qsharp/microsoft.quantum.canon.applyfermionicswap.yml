@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyfermionicswap
+name: ApplyFermionicSWAP
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Applique l’échange Fermionic.
+
+
+  Cela échange le qubits tout en appliquant une phase globale de-1 si les deux qubits sont des 1s. Préserve l’anti-symmetrization des orbites.
+
+  Pour plus d’informations, consultez.
+
+
+  Cette opération est représentée par l’opérateur d’unité \begin{align} f_ {swap} \mathrel{ : =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-1 \\\\ \end{bmatrix}.
+
+  \end{align}
+syntax: 'operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit'
+references: '- [*Ryan Babbush, Nathan Wiebe, Jarrod McClean, James McClain, Hartmut Neven, Garnet comparses-LIC Chan*, arXiv : 1706.00023](https://arxiv.org/pdf/1706.00023.pdf)'
+input:
+  content: '(qubit1 : Qubit, qubit2 : Qubit)'
+  types:
+  - name: qubit1
+    summary: Premier qubit à permuter.
+    isPrimitive: true
+    uid: Qubit
+  - name: qubit2
+    summary: Deuxième qubit à permuter.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.intrinsic.swap
+ms.openlocfilehash: 4d9fd4ea879dd0df6bddddb3d4f769f4e8096657
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213821"

@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.evolutiongenerator
+name: evolutionGenerator
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Représente un générateur dynamique sous la forme d’un ensemble de portes simulables et d’une expansion en termes de cette base.
+
+
+  Dernier paramètre pour le nombre de termes.
+syntax: newtype EvolutionGenerator = (Microsoft.Quantum.Simulation.EvolutionSet, Microsoft.Quantum.Simulation.GeneratorSystem);
+ms.openlocfilehash: fd749a401510bc32d4628d65b56c387d0b178ef6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067116"

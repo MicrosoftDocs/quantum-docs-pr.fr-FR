@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.subarray
+name: Subarray
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Prend un tableau et une liste d’emplacements et produit un nouveau tableau formé à partir des éléments du tableau d’origine qui correspondent aux emplacements donnés.
+remarks: >-
+  La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons un tableau `'T[]` et une liste d’emplacements `Int[]` de définir le sous-tableau.
+
+  La construction du sous-tableau est basée sur la génération d’une nouvelle copie complète du tableau donné au lieu de conserver les références.
+
+
+  Si `Length(indices) < Length(array)`, cette fonction retourne un sous-ensemble de `array`. En revanche, si `indices` contient des éléments répétés, les éléments correspondants de `array` seront de la même façon répétés.
+
+  Si `indices` et `array` ont la même longueur, cette fonction fournit des permutations de `array`.
+syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
+input:
+  content: "(indices : Int[], array : 'T[])"
+  types:
+  - name: indices
+    summary: Liste d’entiers utilisée pour définir le sous-tableau.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: array
+    summary: Tableau d’éléments sur `'T`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Tableau `out` d’éléments dont les index correspondent au sous-tableau, de telle sorte que `out[idx] == array[indices[idx]]`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Type des éléments de `array`.
+ms.openlocfilehash: 1590e5c24dad56db8c6a0f5dc433bf060d8ac175
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217850"

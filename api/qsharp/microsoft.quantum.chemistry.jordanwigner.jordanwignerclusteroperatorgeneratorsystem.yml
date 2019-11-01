@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
+name: JordanWignerClusterOperatorGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: Convertit une `GeneratorSystem` de Hamilton décrite par `JWOptimizedHTerms` en une exprimée en termes de la Convention `GeneratorIndex` définie dans ce fichier.
+syntax: 'function JordanWignerClusterOperatorGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[])'
+  types:
+  - name: data
+    summary: Description de la présentation de la structure de `JWOptimizedHTerms`.
+    isArray: true
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
+  types:
+  - summary: Représentation de la sous-forme de la `GeneratorSystem`.
+    uid: microsoft.quantum.simulation.generatorsystem
+ms.openlocfilehash: d1521bfa75ed2383ca13dca1bfeae78c59ebf0b9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228764"

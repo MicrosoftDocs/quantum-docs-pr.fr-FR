@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.indexrange
+name: IndexRange
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: À partir d’un tableau, retourne une plage sur les index de ce tableau, pouvant être utilisée dans une boucle for.
+examples: >-
+  Les boucles `for` suivantes sont équivalentes :
+
+
+  ```Q#
+
+  for (idx in IndexRange(array)) { ... }
+
+  for (idx in IndexRange(array)) { ... }
+
+  ```
+syntax: "function IndexRange (array : 'TElement[]) : Range"
+input:
+  content: "(array : 'TElement[])"
+  types:
+  - name: array
+    summary: Tableau pour lequel une plage d’index doit être retournée.
+    isArray: true
+    uid: "'TElement"
+    isLocal: true
+output:
+  content: Range
+  types:
+  - summary: Plage sur tous les index du tableau.
+    isPrimitive: true
+    uid: Range
+typeParameters:
+- uid: "'TElement"
+  summary: Type des éléments du tableau.
+ms.openlocfilehash: a70935980fc49a3f8c155fe1901b13da923caaee
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218156"

@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangestep
+name: RangeStep
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Retourne l’entier qui spécifie le mode de calcul de la valeur suivante d’une plage.
+remarks: Le premier élément d’une expression de plage est `start`, son deuxième élément est `start+step`, le troisième élément est `start+step+step`, etc., jusqu’à ce que `end` soit passé.
+syntax: 'function RangeStep (range : Range) : Int'
+input:
+  content: '(plage : plage)'
+  types:
+  - name: range
+    isPrimitive: true
+    uid: Range
+output:
+  content: int
+  types:
+  - summary: Valeur de l’étape définie de la plage donnée.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066606"

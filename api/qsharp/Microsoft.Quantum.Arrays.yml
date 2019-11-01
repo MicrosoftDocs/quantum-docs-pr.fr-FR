@@ -1,0 +1,64 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.arrays
+name: Microsoft. Quantum. Arrays
+summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions pour la création et la manipulation de tableaux de données."
+functions:
+- uid: microsoft.quantum.arrays.all
+  summary: À partir d’un tableau et d’un prédicat définis pour les éléments du tableau, et vérifie si tous les éléments du tableau répondent au prédicat.
+- uid: microsoft.quantum.arrays.any
+  summary: À partir d’un tableau et d’un prédicat définis pour les éléments du tableau, vérifie si au moins un élément du tableau est conforme au prédicat.
+- uid: microsoft.quantum.arrays.constantarray
+  summary: Crée un tableau de longueur donnée avec tous les éléments égaux à la valeur donnée.
+- uid: microsoft.quantum.arrays.enumerated
+  summary: À partir d’un tableau, retourne un nouveau tableau contenant les éléments du tableau d’origine, ainsi que les index de chaque élément.
+- uid: microsoft.quantum.arrays.exclude
+  summary: Retourne un tableau contenant les éléments d’un autre tableau, en excluant les éléments d’une liste donnée d’index.
+- uid: microsoft.quantum.arrays.filtered
+  summary: À partir d’un tableau et d’un prédicat définis pour les éléments du tableau, retourne un tableau qui se compose des éléments qui satisfont au prédicat.
+- uid: microsoft.quantum.arrays.fold
+  summary: Itère une fonction `f` via un tableau `array`, en retournant `f(f(f(initialState, array[0]), array[1]), ...)`.
+- uid: microsoft.quantum.arrays.head
+  summary: Retourne le premier élément du tableau.
+- uid: microsoft.quantum.arrays.indexof
+  summary: Retourne le premier index du premier élément d’un tableau qui répond à un prédicat donné. Si aucun élément de ce type n’existe, retourne-1.
+- uid: microsoft.quantum.arrays.indexrange
+  summary: À partir d’un tableau, retourne une plage sur les index de ce tableau, pouvant être utilisée dans une boucle for.
+- uid: microsoft.quantum.arrays.lookupfunction
+  summary: À partir d’un tableau, retourne une fonction qui retourne des éléments de ce tableau.
+- uid: microsoft.quantum.arrays.mapped
+  summary: À partir d’un tableau et d’une fonction définis pour les éléments du tableau, retourne un nouveau tableau qui se compose des images du tableau d’origine sous la fonction.
+- uid: microsoft.quantum.arrays.mappedbyindex
+  summary: À partir d’un tableau et d’une fonction définis pour les éléments indexés du tableau, retourne un nouveau tableau qui se compose des images du tableau d’origine sous la fonction.
+- uid: microsoft.quantum.arrays.most
+  summary: Crée un tableau qui est égal à un tableau d’entrée, sauf que le dernier élément de tableau est supprimé.
+- uid: microsoft.quantum.arrays.padded
+  summary: Retourne un tableau rempli à l’aide des valeurs spécifiées jusqu’à une longueur spécifiée.
+- uid: microsoft.quantum.arrays.partitioned
+  summary: Fractionne un tableau en plusieurs parties.
+- uid: microsoft.quantum.arrays.rest
+  summary: Crée un tableau qui est égal à un tableau d’entrée, sauf que le premier élément de tableau est supprimé.
+- uid: microsoft.quantum.arrays.reversed
+  summary: Créez un tableau qui contient les mêmes éléments qu’un tableau d’entrée, mais dans l’ordre inverse.
+- uid: microsoft.quantum.arrays.sequencei
+  summary: Obtient un tableau d’entiers dans un intervalle donné.
+- uid: microsoft.quantum.arrays.sequencel
+  summary: Obtient un tableau d’entiers dans un intervalle donné.
+- uid: microsoft.quantum.arrays.subarray
+  summary: Prend un tableau et une liste d’emplacements et produit un nouveau tableau formé à partir des éléments du tableau d’origine qui correspondent aux emplacements donnés.
+- uid: microsoft.quantum.arrays.tail
+  summary: Retourne le dernier élément du tableau.
+- uid: microsoft.quantum.arrays.zip
+  summary: À partir de deux tableaux, retourne un nouveau tableau de paires de sorte que chaque paire contient un élément de chaque tableau d’origine.
+- uid: microsoft.quantum.arrays.zip3
+  summary: À partir de trois tableaux, retourne un nouveau tableau de 3 tuples de sorte que chaque 3 tuple contient un élément de chaque tableau d’origine.
+- uid: microsoft.quantum.arrays.zip4
+  summary: À partir de quatre tableaux, retourne un nouveau tableau de 4 tuples de telle sorte que chaque 4 tuple contient un élément de chaque tableau d’origine.
+operations:
+- uid: microsoft.quantum.arrays.foreach
+  summary: À partir d’un tableau et d’une opération définie pour les éléments du tableau, retourne un nouveau tableau qui se compose des images du tableau d’origine sous l’opération.
+ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057180"

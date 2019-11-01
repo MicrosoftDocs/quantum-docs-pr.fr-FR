@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifonea
+name: ApplyIfOneA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Applique une opération adjointable conditionnée sur une valeur de résultat classique qui en est une.
+
+
+  Dans le cas d’une opération `op` et d’une valeur de résultat `result`, applique `op` au `target` si `result` est `One`. Si `Zero`, rien ne se passe au `target`.
+
+  Le suffixe `A` indique que l’opération à appliquer est adjointable.
+syntax: "operation ApplyIfOneA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
+  types:
+  - name: result
+    summary: Résultat de mesure qui contrôle si l’opération est appliquée ou non.
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: Opération à appliquer de manière conditionnelle.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: target
+    summary: Entrée à laquelle l’opération est appliquée.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Type d’entrée de l’opération à appliquer de façon conditionnelle.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyifonec
+- microsoft.quantum.canon.applyifonea
+- microsoft.quantum.canon.applyifoneca
+ms.openlocfilehash: 5846b1178a8373f4b21faaa63ae9f6f86e514339
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217408"

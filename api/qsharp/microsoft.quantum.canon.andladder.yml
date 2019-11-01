@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.andladder
+name: AndLadder
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Effectue un contrôle « et une échelle » sur le qubits cible.
+
+
+  Cela s’applique à une unité donnée par la carte suivante sur les vecteurs de base de calcul : $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1 , \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $ WHERE $ \ket{x\_1, \dots, x\_n} $ fait référence aux États de base de calcul de `controls`, et où $ \ket{y\_1, \dots, y\_{n-1}} $ fait référence aux États de la base de calcul de `targets`.
+remarks: >-
+  - Utilisé dans le cadre de <xref:microsoft.quantum.canon.applymulticontrolledc> et <xref:microsoft.quantum.canon.applymulticontrolledca>.
+
+  - Pour le diagramme explication et circuit, voir la figure 4,10, section 4,3 dans Nielsen & Chuang.
+syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
+references: '- [*Michael A. Nielsen, Isaac L. Chuang*, calcul quantique et informations Quantum](http://doi.org/10.1017/CBO9780511976667)'
+input:
+  content: '(ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: ccnot
+    summary: Porte CCNOT à utiliser pour la construction.
+    uid: microsoft.quantum.canon.ccnotop
+  - name: controls
+    summary: >-
+      Un registre de qubits à utiliser comme contrôles pour l’échelle et.
+
+      Cette opération laisse les États de base de calcul de `controls` invariants.
+
+      La longueur de `controls` doit être au moins égale à 2, et doit être égal à un plus la longueur de `targets`.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targets
+    summary: La longueur de `targets` doit être au moins égale à 1 et égale à la longueur de `controls` moins un.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+ms.openlocfilehash: 2970f9c783ea233f2f1ceb4089802320efe82602
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217714"

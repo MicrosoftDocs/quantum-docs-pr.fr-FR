@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applypauli
+name: ApplyPauli
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: À partir d’un opérateur qubit Pauli, applique l’opération correspondante à un registre.
+examples: >-
+  Les éléments suivants sont équivalents :
+
+
+  ```qsharp
+
+  ApplyPauli([PauliY, PauliZ, PauliX], target);
+
+  ```
+
+
+  et la
+
+
+  ```qsharp
+
+  Y(target[0]);
+
+  Z(target[1]);
+
+  X(target[2]);
+
+  ```
+syntax: 'operation ApplyPauli (pauli : Pauli[], target : Qubit[]) : Unit'
+input:
+  content: '(pauli : Pauli[], target : Qubit[])'
+  types:
+  - name: pauli
+    summary: Opérateur Pauli qubit multiple représenté sous la forme d’un tableau d’opérateurs Pauli qubit uniques.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: target
+    summary: Inscrivez-vous pour appliquer l’opération Pauli donnée sur.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: d44160aebb18ea6308b955f359ff719c6269c264
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213498"

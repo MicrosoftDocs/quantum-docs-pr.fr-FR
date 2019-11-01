@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zip3
+name: Zip3
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: À partir de trois tableaux, retourne un nouveau tableau de 3 tuples de sorte que chaque 3 tuple contient un élément de chaque tableau d’origine.
+syntax: "function Zip3 (first : 'T1[], second : 'T2[], third : 'T3[]) : ('T1, 'T2, 'T3)[]"
+input:
+  content: "(first : 'T1[], second : 'T2[], third : 'T3[])"
+  types:
+  - name: first
+    summary: Tableau contenant des valeurs pour le premier élément de chaque tuple.
+    isArray: true
+    uid: "'T1"
+    isLocal: true
+  - name: second
+    summary: Tableau contenant les valeurs du deuxième élément de chaque tuple.
+    isArray: true
+    uid: "'T2"
+    isLocal: true
+  - name: third
+    summary: Tableau contenant des valeurs pour le troisième élément de chaque tuple.
+    isArray: true
+    uid: "'T3"
+    isLocal: true
+output:
+  content: ('T1, 'T2, 'T3)[]
+  types:
+  - summary: Tableau contenant 3 tuples de la forme `(first[idx], second[idx], third[idx])` pour chaque `idx`. Si les trois tableaux ne sont pas de longueur égale, la sortie sera aussi longue que la plus petite des entrées.
+    isArray: true
+    types:
+    - uid: "'T1"
+      isLocal: true
+    - uid: "'T2"
+      isLocal: true
+    - uid: "'T3"
+      isLocal: true
+typeParameters:
+- uid: "'T1"
+  summary: Type des premiers éléments du tableau.
+- uid: "'T2"
+  summary: Type du deuxième élément de tableau.
+- uid: "'T3"
+  summary: Type du troisième élément de tableau.
+seeAlso:
+- zip
+- zip4
+ms.openlocfilehash: 1a4f3a533178e089d975d5a510d202afe004d999
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214178"

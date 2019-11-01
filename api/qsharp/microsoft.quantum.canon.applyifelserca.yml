@@ -1,0 +1,79 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelserca
+name: ApplyIfElseRCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Applique l’une des deux opérations unitaires, en fonction de la valeur d’un résultat classique.
+
+
+  À partir d’un `result`de résultats, applique l’opération `zeroOp` avec `zeroInput` comme entrée lorsque `result` est égal à `Zero`et s’applique `oneOp(oneInput)` lorsque `result == One`.
+syntax: "operation ApplyIfElseRCA (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit"
+input:
+  content: "(result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U))"
+  types:
+  - name: result
+    summary: Résultat de mesure utilisé pour déterminer si `zeroOp` ou `oneOp` est appliqué.
+    isPrimitive: true
+    uid: Result
+  - name: zeroOp
+    summary: Opération unitaire à appliquer lorsque `result == Zero`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: zeroInput
+    summary: Entrée à fournir à `zeroOp` lorsque `result == Zero`.
+    uid: "'T"
+    isLocal: true
+  - name: oneOp
+    summary: Opération unitaire à appliquer lorsque `result == One`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: oneInput
+    summary: Entrée à fournir à `oneOp` lorsque `result == One`.
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Type d’entrée de l’opération `zeroOp` appliqué de manière conditionnelle.
+- uid: "'U"
+  summary: Type d’entrée de l’opération `oneOp` appliqué de manière conditionnelle.
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: 79fc62ca2c3525699deec6669e6b078408ede837
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213719"

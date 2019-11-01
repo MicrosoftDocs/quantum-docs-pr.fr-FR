@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.conditioned
+name: Conditioned
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Retourne l’une des deux valeurs, en fonction de la valeur d’une condition booléenne.
+remarks: >-
+  Contrairement à l’opérateur `?|`, cette fonction n’a pas de court-circuit, de sorte que les deux entrées sont entièrement évaluées.
+
+
+  Jusqu’au comportement de court-circuit, les éléments suivants sont équivalents :
+
+
+  ```Q#
+
+  let x = condition ? ifTrue | ifFalse;
+
+  let x = Conditioned(condition, ifTrue, ifFalse);
+
+  ```
+syntax: "function Conditioned (condition : Bool, ifTrue : 'T, ifFalse : 'T) : 'T"
+input:
+  content: "(condition : Bool, ifTrue : 'T, ifFalse : 'T)"
+  types:
+  - name: condition
+    summary: Condition utilisée pour contrôler l’entrée retournée.
+    isPrimitive: true
+    uid: Bool
+  - name: ifTrue
+    summary: Valeur à retourner lorsque `condition` est `true`.
+    uid: "'T"
+    isLocal: true
+  - name: ifFalse
+    summary: Valeur à retourner lorsque `condition` est `false`.
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T"
+  types:
+  - summary: '`ifTrue` si `condition` est `true`et `ifFalse` dans le cas contraire.'
+    uid: "'T"
+    isLocal: true
+ms.openlocfilehash: f26e540b181ce405125dbf80cd97c3e177ad9531
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233337"

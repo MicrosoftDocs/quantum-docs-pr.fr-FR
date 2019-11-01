@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexz
+name: MultiplexZ
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Applique une rotation Pauli Z conditionnée sur un tableau de qubits.
+
+
+  Cela applique l’opération unitaire contrôlée par multiplication $U $ qui effectue des rotations par angle $ \theta_j $ sur l’opérateur qubit Pauli $Z $ lorsqu’il est contrôlé par l' $n de l’État $ \ket{j} $.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {\theta_j} $.
+remarks: '`coefficients` est complété avec les éléments $ \theta_j = $0,0 si moins de $2 ^ n $ sont spécifiés.'
+syntax: 'operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+references: '- Synthèse des circuits logiques quantiques Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
+input:
+  content: '(coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  types:
+  - name: coefficients
+    summary: Un tableau allant jusqu’à $2 ^ n $ coefficient $ \theta_j $. Le $j $ th coefficient indexe le nombre d’États $ \ket{j} $ encodé au format Little endian.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: control
+    summary: $n Registre de contrôle $-qubit qui encode les États de nombre $ \ket{j} $ dans un format avec primauté des octets de poids faible.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: Registre qubit unique qui est pivoté par $e ^ {i P \theta_j} $.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 7098b849ea730b46b4cc3039520ef2b040d43d34
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222695"

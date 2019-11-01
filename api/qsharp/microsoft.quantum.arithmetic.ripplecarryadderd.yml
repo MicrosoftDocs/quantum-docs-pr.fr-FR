@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.ripplecarryadderd
+name: RippleCarryAdderD
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Les ondulations réversibles, sur place, ajoutent deux entiers.
+
+  Deux $n entiers $ bits encodés dans LittleEndian s’inscrivent `xs` et `ys`, tandis qu’un qubit porte, l’opération calcule la somme des deux entiers où les bits $n les moins significatifs du résultat sont conservés dans `ys` et le bit d’exécution est XOR au qubit `carry`.
+remarks: L’opération contrôlée spécifiée utilise la symétrie et l’annulation mutuelle des opérations pour améliorer l’implémentation par défaut qui ajoute un contrôle à chaque opération.
+syntax: 'operation RippleCarryAdderD (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
+references: >-
+  - Thomas G. Draper : « addition sur un ordinateur quantique », 2000.
+    https://arxiv.org/abs/quant-ph/0008033
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit)'
+  types:
+  - name: xs
+    summary: LittleEndian qubit Register Encoding the First entier opérande.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: LittleEndian qubit Register Encoding the second opérande entier, est modifié pour contenir le $n les bits les moins significatifs de la somme.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: carry
+    summary: Transporter qubit, est XOR avec le bit le plus significatif de la somme.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: ef8f5ec89d0a1bf32e401385f21a6dcf1ec24db7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214569"

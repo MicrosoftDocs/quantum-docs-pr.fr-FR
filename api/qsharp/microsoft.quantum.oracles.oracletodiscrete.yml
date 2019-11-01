@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.oracletodiscrete
+name: OracleToDiscrete
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: Dans le cas d’une opération qui représente une « boîte noire » Oracle, retourne une Oracle discrète qui représente la « boîte noire » Oracle répétée plusieurs fois.
+examples: '`OracleToDiscrete(U)(3, target)` équivaut à `U(target)` répétées trois fois.'
+syntax: 'function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl)) : Microsoft.Quantum.Oracles.DiscreteOracle'
+input:
+  content: '(blackBoxOracle : (Qubit[] => Unit is Adj + Ctl))'
+  types:
+  - name: blackBoxOracle
+    summary: Opération à élever.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: Microsoft.Quantum.Oracles.DiscreteOracle
+  types:
+  - summary: Opération partiellement appliquée sur la « boîte noire » Oracle représentant le temps d’Oracle discret
+    uid: microsoft.quantum.oracles.discreteoracle
+ms.openlocfilehash: e82c2f3a9d606b1e5316c45aaceeff702d067258
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230889"
