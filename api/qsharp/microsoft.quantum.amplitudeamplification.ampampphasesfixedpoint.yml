@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
+name: AmpAmpPhasesFixedPoint
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Calcule les phases de réflexion partielle pour l’amplification de l’amplitude à virgule fixe.
+syntax: 'function AmpAmpPhasesFixedPoint (nQueries : Int, successMin : Double) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+references: >-
+  Nous utilisons les phases de « amplification de l’amplitude à virgule fixe avec un nombre optimal de requêtes »
+
+
+  - [YoderLowChuang2014](https://arxiv.org/abs/1409.3305) Voir aussi « méthodologie des portes Quantum composites »
+
+  - [LowYoderChuang2016](https://arxiv.org/abs/1603.03996) pour les phases au format `RotationPhases`.
+input:
+  content: '(nQueries : Int, successMin : Double)'
+  types:
+  - name: nQueries
+    summary: Nombre de requêtes à la préparation de l’État Oracle. Doit être un entier impair.
+    isPrimitive: true
+    uid: Int
+  - name: successMin
+    summary: Probabilité de réussite minimale cible.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+  types:
+  - summary: Tableau de phases qui peut être utilisé dans l’implémentation de l’algorithme Quantum d’amplification à virgule fixe.
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+ms.openlocfilehash: 0dc2c9b18998bac65cd746b5c4065a09a990ef13
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215691"

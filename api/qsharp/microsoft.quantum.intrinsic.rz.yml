@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.rz
+name: Rz
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Applique une rotation autour du $z $-AXIS par un angle donné.
+
+
+  \begin{align} R_z (\Theta) \mathrel{ : =} e ^ {-i \Theta \sigma_z/2} = \begin{bmatrix} e ^ {-i \Theta/2} & 0 \\\\ 0 & e ^ {\Theta/2} \end{bmatrix}.
+
+  \end{align}
+remarks: >-
+  Équivalent à :
+
+
+  ```qsharp
+
+  R(PauliZ, theta, qubit);
+
+  ```
+syntax: 'operation Rz (theta : Double, qubit : Qubit) : Unit'
+input:
+  content: '(theta : Double, qubit : Qubit)'
+  types:
+  - name: theta
+    summary: Angle sur lequel le qubit doit être pivoté.
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    summary: Qubit auquel la porte doit être appliquée.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 3a1655e226a1f7ac9dafc2b7928de87ee2bd1173
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216371"

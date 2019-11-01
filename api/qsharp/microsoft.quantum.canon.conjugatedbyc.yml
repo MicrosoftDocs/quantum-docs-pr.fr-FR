@@ -1,0 +1,66 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.conjugatedbyc
+name: ConjugatedByC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: En fonction des opérations externes et internes, retourne une nouvelle opération qui conjugue l’opération interne par l’opération externe.
+remarks: L’opération externe est toujours supposée être adjointable, mais elle n’a pas besoin d’être contrôlable pour que l’opération combinée soit contrôlable.
+syntax: "function ConjugatedByC (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl)) : ('T => Unit is Ctl)"
+input:
+  content: '(outerOperation : (t = > unité est adj), innerOperation : (t = > unité est CTL))'
+  types:
+  - name: outerOperation
+    summary: L’opération $U $ qui doit être utilisée pour conjuguer $V $. Notez que l’opération externe $U $ doit être adjointable, mais qu’elle n’a pas besoin d’être contrôlable.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: innerOperation
+    summary: L’opération $V être conjuguée.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+output:
+  content: (T = > unité est CTL)
+  types:
+  - summary: Nouvelle opération dont l’action est représentée par le $U unitaire ^ {\dagger} V U $.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: Type de la cible sur laquelle les opérations internes et externes agissent.
+seeAlso:
+- conjugatedby
+- conjugatedbya
+- conjugatedbyca
+- applywith
+ms.openlocfilehash: 64b754d98164ea9d7ef5fcdc17141a5b1ef008d4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067966"

@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.call
+name: Call
+type: operation
+namespace: Microsoft.Quantum.Convert
+summary: >-
+  Appelle une fonction avec une entrée donnée.
+
+
+  À partir d’une fonction et d’une entrée de cette fonction, appelle la fonction et retourne sa sortie.
+remarks: Cette opération est principalement utile pour forcer l’appel d’une fonction à un emplacement spécifique au sein d’une opération, ou pour appeler une fonction dans laquelle une opération est attendue.
+syntax: "operation Call (fn : ('Input -> 'Output), input : 'Input) : 'Output"
+input:
+  content: "(fn : ('Input -> 'Output), input : 'Input)"
+  types:
+  - name: fn
+    summary: Fonction à appeler.
+    isFunction: true
+    input:
+      types:
+      - uid: "'Input"
+        isLocal: true
+    output:
+      types:
+      - uid: "'Output"
+        isLocal: true
+  - name: input
+    summary: Entrée à passer à la fonction.
+    uid: "'Input"
+    isLocal: true
+output:
+  content: "'Output"
+  types:
+  - summary: Résultat de l’appel de `fn`.
+    uid: "'Output"
+    isLocal: true
+ms.openlocfilehash: a2cbb56ce70dbe3cbec0fbddffb5155a17704b84
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219329"

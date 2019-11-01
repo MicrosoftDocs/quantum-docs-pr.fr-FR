@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.multiplygeneratorsystem
+name: MultiplyGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Multiplie le coefficient de tous les termes dans un `GeneratorSystem`.
+syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(multiplicateur : double, generatorSystem : Microsoft. Quantum. simulation. GeneratorSystem)'
+  types:
+  - name: Multiple
+    summary: Multiplicateur sur le coefficient.
+    isPrimitive: true
+    uid: Double
+  - name: generatorSystem
+    summary: '`GeneratorSystem` à multiplier.'
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: Microsoft. Quantum. simulation. GeneratorSystem
+  types:
+  - summary: '`GeneratorSystem` représentant un système avec des coefficients un facteur `multiplier` plus grand.'
+    uid: microsoft.quantum.simulation.generatorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem
+ms.openlocfilehash: e96870c4e59773542924dcd247aedc498d3f3307
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065450"

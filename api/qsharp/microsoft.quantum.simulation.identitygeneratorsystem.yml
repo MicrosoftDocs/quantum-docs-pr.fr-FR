@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.identitygeneratorsystem
+name: IdentityGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Retourne un système de générateur cohérent avec la `H = 0`de zéro-Hamilton, qui correspond à l’opération d’évolution de l’identité.
+syntax: 'function IdentityGeneratorSystem () : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
+  types:
+  - summary: Système de générateur représentant l’évolution sous la $H de la Hamilton-$0.
+    uid: microsoft.quantum.simulation.generatorsystem
+ms.openlocfilehash: c15d81a712c144f891a5a92fc56d859162049a6a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216218"

@@ -1,0 +1,45 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.bitwise
+name: Microsoft.Quantum.Bitwise
+functions:
+- uid: microsoft.quantum.bitwise.and
+  summary: >-
+    Retourne l’opération de bits AND de deux entiers.
+
+    Cela effectue le même calcul que l’opérateur intégré `&&&`.
+- uid: microsoft.quantum.bitwise.leftshiftedi
+  summary: Déplace la représentation au niveau du bit d’un nombre laissé par un nombre donné de bits.
+- uid: microsoft.quantum.bitwise.leftshiftedl
+  summary: Déplace la représentation au niveau du bit d’un nombre laissé par un nombre donné de bits.
+- uid: microsoft.quantum.bitwise.not
+  summary: >-
+    Retourne l’opérateur or au niveau du bit d’un entier.
+
+    Cela effectue le même calcul que l’opérateur intégré `~~~`.
+- uid: microsoft.quantum.bitwise.or
+  summary: >-
+    Retourne l’opération or au niveau du bit de deux entiers.
+
+    Cela effectue le même calcul que l’opérateur intégré `|||`.
+- uid: microsoft.quantum.bitwise.parity
+  summary: Retourne la parité au niveau du bit d’un entier (1 si sa représentation binaire contient un nombre impair de uns et 0 dans le cas contraire).
+- uid: microsoft.quantum.bitwise.rightshiftedi
+  summary: Déplace la représentation au niveau du bit d’un nombre vers la droite d’un nombre donné de bits.
+- uid: microsoft.quantum.bitwise.rightshiftedl
+  summary: Déplace la représentation au niveau du bit d’un nombre vers la droite d’un nombre donné de bits.
+- uid: microsoft.quantum.bitwise.xbits
+  summary: Retourne un entier représentant les X bits d’un tableau d’opérateurs Pauli.
+- uid: microsoft.quantum.bitwise.xor
+  summary: >-
+    Retourne l’opérateur OR exclusif au niveau du bit (XOR) de deux entiers.
+
+    Cela effectue le même calcul que l’opérateur intégré `^^^`.
+- uid: microsoft.quantum.bitwise.zbits
+  summary: Retourne un entier représentant les bits Z d’un tableau d’opérateurs Pauli.
+summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions permettant d’agir sur la représentation au niveau du bit des types de données classiques."
+ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210948"

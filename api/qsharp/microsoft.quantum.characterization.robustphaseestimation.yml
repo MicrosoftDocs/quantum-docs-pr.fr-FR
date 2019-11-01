@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.robustphaseestimation
+name: RobustPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Exécute l’algorithme d’estimation de phase quantique non itérative fiable pour un `U` et eigenstate Oracle donné, et fournit une estimation réelle de la phase avec la mise à l’échelle des écarts à la limite Heisenberg.
+remarks: Dans la limite d’un grand nombre de requêtes, les limites inférieures de Cramer-Rao pour l’écart type de l’estimation de $ \Phi $ satisfont à $ \sigma \ge 2 \pi/\text{# de requêtes} $.
+syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
+references: '- Étalonnage robuste d’un jeu de portes Universel simple-qubit via une estimation de phase robuste Shelby Kimmel, Guang Hao faible, Theodore J. Yoder https://arxiv.org/abs/1502.02677'
+input:
+  content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
+  types:
+  - name: bitsPrecision
+    summary: Cela fournit une estimation de $ \Phi $ avec l’écart type $ \sigma \Le 2 \ pi/2 ^ \text{bitsPrecision} $ à l’aide de plusieurs requêtes de mise à l’échelle, telles que $ \sigma \Le 10,7 \pi/\text{# de requêtes} $.
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: Une opération qui implémente $U ^ m $ pour des valeurs entières données $m $.
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: targetState
+    summary: Registre quantique sur lequel $U $ agit. S’il stocke un eigenstate $ \ket{\Phi} $ de $U $, $U \ket{\Phi} = e ^ {i\phi} \ket{\Phi} $ pour $ \phi\in (-\pi, \pi] $ une phase inconnue.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 169a828036fbe84f49e5d87399319d14a9584051
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229053"

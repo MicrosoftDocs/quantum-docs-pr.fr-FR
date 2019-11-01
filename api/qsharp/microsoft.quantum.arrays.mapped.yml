@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.mapped
+name: Mapped
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: À partir d’un tableau et d’une fonction définis pour les éléments du tableau, retourne un nouveau tableau qui se compose des images du tableau d’origine sous la fonction.
+remarks: "La fonction est définie pour les types génériques, autrement dit, chaque fois que nous avons un tableau `'T[]` et une fonction `mapper: 'T -> 'U` nous pouvons mapper les éléments du tableau et produire un nouveau tableau de type `'U[]`."
+syntax: "function Mapped (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
+input:
+  content: "(mapper : ('T -> 'U), array : 'T[])"
+  types:
+  - name: mapper
+    summary: Fonction de `'T` à `'U` utilisée pour mapper des éléments.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: array
+    summary: Tableau d’éléments sur `'T`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'U[]"
+  types:
+  - summary: Tableau `'U[]` d’éléments mappés par la fonction `mapper`.
+    isArray: true
+    uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Type des éléments de `array`.
+- uid: "'U"
+  summary: Type de résultat de la fonction `mapper`.
+ms.openlocfilehash: 3e9262d3d2b294ccfafac24b2b080b124c9e319c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218122"

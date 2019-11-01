@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.incrementbyinteger
+name: IncrementByInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Incrémente un registre quantique non signé par un entier classique, à l’aide de rotations de phase.
+
+
+  Supposons que `target` encode un entier non signé $x $ dans un encodage Little endian et que `increment` est égal à $a $.
+
+  Ensuite, cette opération implémente l’unité $ \ket{x} \mapsto \ket{x + a} $, où l’ajout est effectué modulo $2 ^ n $, où $n = \texttt{Length (target !)} $.
+syntax: 'operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: increment
+    summary: Entier par lequel le `target` est incrémenté.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: Un registre Quantum codant un entier non signé utilisant l’encodage Little endian.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- incrementbyintegerphasele
+ms.openlocfilehash: 3eafc268377e36301d511b77feb4db352a075d5d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215011"

@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.not
+name: Not
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Retourne la négation booléenne d’une valeur.
+remarks: >-
+  Les éléments suivants sont équivalents :
+
+
+  ```Q#
+
+  let x = not value;
+
+  let x = Not(value);
+
+  ```
+syntax: 'function Not (value : Bool) : Bool'
+input:
+  content: '(value : Bool)'
+  types:
+  - name: value
+    summary: Valeur à rendre négative.
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Bool
+  types:
+  - summary: '`true` si et seulement si `value` est `false`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 85df2e3787e96ab18c351dc5a210e5b8a2803b09
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235411"

@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.rightshiftedi
+name: RightShiftedI
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: Déplace la représentation au niveau du bit d’un nombre vers la droite d’un nombre donné de bits.
+remarks: >-
+  Les éléments suivants sont équivalents :
+
+
+  ```Q#
+
+  let c = a >>> b;
+
+  let c = RightShiftedI(a, b);
+
+  ```
+syntax: 'function RightShiftedI (value : Int, amount : Int) : Int'
+input:
+  content: '(value : Int, amount : Int)'
+  types:
+  - name: value
+    summary: Nombre dont la représentation au niveau du bit doit être décalée vers la droite (moins significative).
+    isPrimitive: true
+    uid: Int
+  - name: amount
+    summary: Nombre de bits par lequel `value` doit être décalé vers la droite.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Valeur de `value`, décalée vers la droite par `amount` bits.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 801e07c06b8af34385fb80badf4dfebb503c982d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217748"

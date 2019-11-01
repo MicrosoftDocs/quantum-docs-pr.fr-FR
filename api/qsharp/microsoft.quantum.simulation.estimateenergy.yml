@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.estimateenergy
+name: EstimateEnergy
+type: operation
+namespace: Microsoft.Quantum.Simulation
+summary: Exécute la préparation de l’État en appliquant un `statePrepUnitary` sur une estimation de la phase d’état d’entrée allouée automatiquement par rapport à `qpeUnitary`sur l’état résultant à l’aide d’un `phaseEstAlgorithm`.
+syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
+input:
+  content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
+  types:
+  - name: nQubits
+    summary: Nombre de qubits utilisés pour effectuer la simulation.
+    isPrimitive: true
+    uid: Int
+  - name: statePrepUnitary
+    summary: Oracle qui représente la préparation de l’état du générateur dynamique initial.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: qpeUnitary
+    summary: Oracle représentant un opérateur d’unités $U $ représentant l’évolution de l’heure $ \delta t $ sous un générateur dynamique avec l’état du sol $ \ket{\Phi} $ et l’énergie de l’état du sol $E = \Phi\\, \delta t $.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: phaseEstAlgorithm
+    summary: >-
+      Opération qui effectue une estimation de phase sur une opération unitaire donnée.
+
+      Pour plus d’informations, consultez estimation de la [phase itérative](/quantum/libraries/characterization#iterative-phase-estimation) .
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.oracles.discreteoracle
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Double
+output:
+  content: Double
+  types:
+  - summary: Estimation $ \hat{\Phi} $ de l’énergie de l’état du sol $ \Phi $ de l’énergie de l’état du sol du générateur représenté par $U $.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: aff8ac5575b6a5e08dc80263a7a8d4bfec59fa12
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223324"

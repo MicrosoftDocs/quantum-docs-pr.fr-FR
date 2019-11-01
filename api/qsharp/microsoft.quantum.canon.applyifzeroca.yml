@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifzeroca
+name: ApplyIfZeroCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Applique une opération unitaire conditionnée sur une valeur de résultat classique égale à zéro.
+
+
+  Dans le cas d’une opération `op` et d’une valeur de résultat `result`, applique `op` au `target` si `result` est `Zero`. Si `One`, rien ne se passe au `target`.
+
+  Le suffixe `CA` indique que l’opération à appliquer est unitaire (contrôlable et adjointable).
+syntax: "operation ApplyIfZeroCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
+  types:
+  - name: result
+    summary: Résultat de mesure qui contrôle si l’opération est appliquée ou non.
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: Opération à appliquer de manière conditionnelle.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: target
+    summary: Entrée à laquelle l’opération est appliquée.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Type d’entrée de l’opération à appliquer de façon conditionnelle.
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifzeroc
+- microsoft.quantum.canon.applyifzeroa
+- microsoft.quantum.canon.applyifzeroca
+ms.openlocfilehash: 9ec05f688c3895b2d68fc3f4717401e127fbe641
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213600"

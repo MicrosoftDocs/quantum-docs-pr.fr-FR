@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.phaselittleendian
+name: PhaseLittleEndian
+type: newtype
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Entiers non signés avec primauté des octets de poids faible (Little-endian) dans QFT.
+
+
+  Par exemple, si $ \ket{x} $ est l’encodage Little-endian de l’entier $x $ dans la base de calcul, alors $ \operatorname{QFTLE} \ket{x} $ est l’encodage de $x $ dans la base QFT.
+remarks: Nous abrégeons `PhaseLittleEndian` comme `PhaseLE` dans la documentation.
+syntax: newtype PhaseLittleEndian = Qubit[];
+seeAlso:
+- qft
+- qftle
+ms.openlocfilehash: 8efb8b58ff7ee5c0530abfb81792366f6990997e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218717"

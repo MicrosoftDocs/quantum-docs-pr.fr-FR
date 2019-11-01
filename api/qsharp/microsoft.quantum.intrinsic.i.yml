@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.i
+name: I
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: Effectue l’opération d’identité (no-op) sur un qubit unique.
+remarks: Il s’agit d’une absence d’opération. Elle est fournie à des fins d’exhaustivité et, car il est parfois utile d’appeler l’identité dans un algorithme ou de la passer en tant que paramètre.
+syntax: 'operation I (target : Qubit) : Unit'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: fd4e9566c6ed1998681385d46643b4f001c6fb6e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234170"

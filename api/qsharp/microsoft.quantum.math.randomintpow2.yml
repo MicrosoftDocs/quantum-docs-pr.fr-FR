@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomintpow2
+name: RandomIntPow2
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: Génère un entier aléatoire échantillonné de façon uniforme à partir de tous les entiers qui peuvent être représentés dans un nombre donné de bits.
+remarks: Cette fonction appelle <xref:microsoft.quantum.intrinsic.random>, donc son caractère aléatoire dépend de l’implémentation de `Random`.
+syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
+input:
+  content: '(maxBits : Int)'
+  types:
+  - name: maxBits
+    summary: Nombre de bits classiques requis pour représenter le plus grand entier pouvant être retourné par cette opération.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Entier $x $ uniformément au hasard à partir de $ [0, 2 ^ {\texttt{maxBits}}-1] $; autrement dit, avec $ \Pr (x) = \frac{1}{2 ^ {\texttt{maxBits}}} $.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: e690509a7dcd2b1ec51bdde85da6439a688e75e7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219975"

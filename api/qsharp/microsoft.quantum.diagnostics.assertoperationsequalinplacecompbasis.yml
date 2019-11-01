@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
+name: AssertOperationsEqualInPlaceCompBasis
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  Vérifie si l’opération `givenU` est égale à l’opération `expectedU` sur la taille d’entrée donnée en vérifiant l’action des opérations uniquement sur les vecteurs à partir de la base de calcul.
+
+  Il s’agit d’une condition nécessaire, mais pas suffisante, pour l’égalité de deux unités.
+syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
+input:
+  content: '(nQubits : int, donné : (qubit [] = > unité), expected : (qubit [] = > Unit est adj))'
+  types:
+  - name: nQubits
+    summary: Nombre de qubits $n $ que les opérations `givenU` et `expectedU` fonctionnent.
+    isPrimitive: true
+    uid: Int
+  - name: donné
+    summary: Opération sur $n $ qubits à vérifier.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: ATTENDU
+    summary: Opération de référence sur $n $ qubits à laquelle `givenU` doit être comparé.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: Unité
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066555"

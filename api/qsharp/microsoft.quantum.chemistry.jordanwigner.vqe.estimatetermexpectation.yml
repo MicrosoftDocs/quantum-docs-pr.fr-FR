@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+name: EstimateTermExpectation
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: >-
+  Calcule l’énergie associée à un terme de la Jordanie-Wigner Hamilton.
+
+
+  Cette opération estime la valeur de prévision associée à chaque opérateur de mesure et la multiplie par le coefficient correspondant, à l’aide de l’échantillonnage.
+
+  Les résultats sont agrégés dans une variable contenant l’énergie du terme Jordanie-Wigner.
+syntax: 'operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int) : Double'
+input:
+  content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int)'
+  types:
+  - name: inputStateUnitary
+    summary: Unité utilisée pour la préparation de l’État.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: ops
+    summary: Les opérateurs de mesure du terme Jordanie-Wigner.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: coeffs
+    summary: Coefficients du terme Jordanie-Wigner.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: nQubits
+    summary: Nombre de qubits nécessaires pour simuler le système moléculaire.
+    isPrimitive: true
+    uid: Int
+  - name: nSamples
+    summary: Nombre d’échantillons à utiliser pour l’estimation du terme attendu.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: Énergie associée au terme Jordanie-Wigner.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 9efa1c2aaa66d4b35e3266f785f837cb5e4dba27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228441"

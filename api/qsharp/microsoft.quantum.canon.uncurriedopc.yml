@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.uncurriedopc
+name: UncurriedOpC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  À partir d’une fonction qui retourne des opérations, retourne une nouvelle opération qui accepte les deux entrées en tant que Tuple.
+
+  Le modificateur `C` indique que les opérations sont contrôlables.
+syntax: "function UncurriedOpC (curriedOp : ('T -> ('U => Unit is Ctl))) : (('T, 'U) => Unit is Ctl)"
+input:
+  content: "(curriedOp : ('T -> ('U => Unit is Ctl)))"
+  types:
+  - name: curriedOp
+    summary: Fonction qui retourne des opérations.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+        functors:
+        - Controlled
+output:
+  content: (('T, 'U) => Unit is Ctl)
+  types:
+  - summary: Une nouvelle opération `op` telle que `op(t, u)` équivaut à `(curriedOp(t))(u)`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: Type du premier argument d’une fonction curryfiée.
+- uid: "'U"
+  summary: Type du deuxième argument d’une fonction curryfiée.
+seeAlso:
+- microsoft.quantum.canon.uncurryop
+ms.openlocfilehash: 2808ad1be091f98185ca9b218d2df6065c15a143
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216949"

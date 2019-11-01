@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
+name: AmpAmpRUSByOracle
+type: operation
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Algorithme d’amplification d’amplitude à virgule fixe
+remarks: StartQubits doit être dans l’État $ \ket{0 \cdots 0} $. Cette opération effectue une itération sur un certain nombre de requêtes dans les puissances de $2 $ jusqu’à ce qu’un nombre maximal de requêtes soit atteint ou que l’État cible soit trouvé.
+syntax: 'operation AmpAmpRUSByOracle (statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[]) : Unit'
+input:
+  content: '(statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[])'
+  types:
+  - name: statePrepOracle
+    summary: Oracle unitaire qui prépare l’état de démarrage.
+    uid: microsoft.quantum.oracles.stateoracle
+  - name: startQubits
+    summary: Registre qubit
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: a652d0fc94986552946a438a21bf9bfcba193eea
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215572"

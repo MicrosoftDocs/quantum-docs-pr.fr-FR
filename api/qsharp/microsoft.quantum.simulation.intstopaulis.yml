@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.intstopaulis
+name: IntsToPaulis
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Convertit un tableau d’entiers en un tableau d’opérateurs Pauli qubit uniques.
+syntax: 'function IntsToPaulis (ints : Int[]) : Pauli[]'
+input:
+  content: '(ints : int [])'
+  types:
+  - name: ints
+    summary: Tableau d’entiers dans la plage `0..3` à convertir en opérateurs Pauli.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli[]
+  types:
+  - summary: Tableau `paulis` d’opérateurs Pauli `Pauli[]` de la même longueur que `ints` de telle sorte que `paulis[idxPauli]` soit égal à l’élément de `[PauliI, PauliX, PauliY, PauliZ]` donné par `ints[idxPauli]`.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 407ad1481c220f390fffb5f1b59f0968d6d6570c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066980"

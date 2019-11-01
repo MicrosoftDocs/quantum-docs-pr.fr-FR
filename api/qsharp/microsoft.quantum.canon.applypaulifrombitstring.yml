@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applypaulifrombitstring
+name: ApplyPauliFromBitString
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Applique un opérateur Pauli sur chaque qubit d’un tableau si le bit correspondant d’un tableau booléen correspond à une entrée donnée.
+remarks: Le tableau booléen et le registre Quantum doivent être de longueur égale.
+syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : Unit'
+input:
+  content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
+  types:
+  - name: pauli
+    summary: Opérateur Pauli à appliquer à `qubits[idx]` où `bitsApply == bits[idx]`
+    isPrimitive: true
+    uid: Pauli
+  - name: bitApply
+    summary: appliquer Pauli si le bit est cette valeur
+    isPrimitive: true
+    uid: Bool
+  - name: bits
+    summary: Registre booléen spécifiant le qubit correspondant dans `qubits` doit être traité
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: qubits
+    summary: Registre quantique sur lequel appliquer de manière sélective l’opérateur Pauli spécifié
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: a39d19c11a0ce48b2901097ac497c2ad9c707bba
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220672"

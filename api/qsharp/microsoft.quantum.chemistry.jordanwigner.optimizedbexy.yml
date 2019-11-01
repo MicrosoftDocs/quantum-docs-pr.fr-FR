@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
+name: OptimizedBEXY
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: Une unité de $U $ qui applique la chaîne Pauli sur $ (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0 $ sur qubits $0.. p $ conditionné sur un index $z \Dans\{0, 1\}$ et $p $. Autrement dit, $ $ \begin{align} U\ket {z} \ Ket {p} \ Ket {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0\ket {\ PSI} \end{align} $ $
+syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
+references: '- Encodage des spectres électroniques dans des circuits quantiques avec une complexité T linéaire Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru pâle, Austin Fowler, Hartmut Neven https://arxiv.org/abs/1805.03662'
+input:
+  content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
+  types:
+  - name: pauliBasis
+    summary: Quand ce qubit est dans l’État $ \ket{0}$, $X $ est appliqué. Lorsqu’il est dans l’État $ \ket{1}$, $Y $ est appliqué.
+    isPrimitive: true
+    uid: Qubit
+  - name: indexRegister
+    summary: L’État $ \ket{p} $ de ce registre détermine le qubit sur lequel $X $ ou $Y $ est appliqué.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: targetRegister
+    summary: Registre de qubits sur lequel les opérateurs Pauli sont appliqués.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: e0ac3f2f050ed584053f7da7a310f1855e992141
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228458"

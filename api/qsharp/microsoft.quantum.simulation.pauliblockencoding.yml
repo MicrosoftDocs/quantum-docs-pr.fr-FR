@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.pauliblockencoding
+name: PauliBlockEncoding
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Crée un Unity d’encodage de bloc pour un produit Hamilton.
+
+
+  Le $H de Hamilton, = \sum_{j}\alpha_j P_j $, est décrit par une somme de termes Pauli $P _J $, chacun avec un coefficient réel $ \alpha_j $.
+remarks: Cela est obtenu en préparant et en dépréparant l’État $ \ sum_ {j} \ sqrt {\ alpha_j/\ alpha} \ Ket {j} $, et en construisant un <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> unitaire contrôlé par multiplication et <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>.
+syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
+input:
+  content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
+  types:
+  - name: generatorSystem
+    summary: '`GeneratorSystem` qui décrit $H $ en tant que somme de termes Pauli'
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>Premier paramètre
+
+
+      La norme « One-normal » est $ \alpha = \sum_{j} | \alpha_j | $.
+
+
+      ## <a name="second-parameter"></a>Deuxième paramètre
+
+
+      Un `BlockEncodingReflection` unitaire $U $ de la $H de la $. Étant donné que cette unité répond à $U ^ 2 = I $, il s’agit également d’une réflexion.
+    types:
+    - isPrimitive: true
+      uid: Double
+    - uid: microsoft.quantum.simulation.blockencodingreflection
+ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216133"

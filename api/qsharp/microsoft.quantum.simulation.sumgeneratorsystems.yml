@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.sumgeneratorsystems
+name: SumGeneratorSystems
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Ajoute plusieurs `GeneratorSystem`s pour créer un nouveau GeneratorSystem.
+syntax: 'function SumGeneratorSystems (generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(generatorSystems : Microsoft. Quantum. simulation. GeneratorSystem [])'
+  types:
+  - name: generatorSystems
+    summary: Tableau de type `GeneratorSystem[]`.
+    isArray: true
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: Microsoft. Quantum. simulation. GeneratorSystem
+  types:
+  - summary: '`GeneratorSystem` représentant un système qui est la somme des systèmes de génération d’entrée.'
+    uid: microsoft.quantum.simulation.generatorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem
+ms.openlocfilehash: 610e6f8e49d940d70c9f0e7d15eb63298453920e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065314"

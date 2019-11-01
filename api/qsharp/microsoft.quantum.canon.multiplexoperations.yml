@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexoperations
+name: MultiplexOperations
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Applique un tableau d’opérations contrôlé par un tableau d’États de nombre.
+
+
+  Autrement dit, applique une opération unitaire contrôlée par multiplication $U $ qui applique un $V unitaire _J $ lorsqu’il est contrôlé par $n l’état de qubit $ \ket{j} $.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+remarks: les `coefficients` sont complétées par des éléments d’identité si moins de $2 ^ n $ sont spécifiés. Cette implémentation utilise $n-$1 Ancilla qubits.
+syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
+references: '- Vers la première simulation de Quantum avec accélération de Quantum Andrew M. Childs, Dmitri Maslov, Yunseong Nam, Neil J. Ross, Yuan su https://arxiv.org/abs/1711.10980'
+input:
+  content: "(unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
+  types:
+  - name: unitaries
+    summary: Tableau allant jusqu’à $2 ^ n $ opérations unitaires. Le $j $ th opération est indexé par le nombre d’États $ \ket{j} $ encodé au format Little endian.
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: index
+    summary: $n Registre de contrôle $-qubit qui encode les États de nombre $ \ket{j} $ dans un format avec primauté des octets de poids faible.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: Registre qubit générique sur lequel $V _J $ agit.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: bd248ece9d76729a33db3dfead177fa68909f438
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223494"

@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.foreach
+name: ForEach
+type: operation
+namespace: Microsoft.Quantum.Arrays
+summary: À partir d’un tableau et d’une opération définie pour les éléments du tableau, retourne un nouveau tableau qui se compose des images du tableau d’origine sous l’opération.
+remarks: "L’opération est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons un tableau `'T[]` et une opération `action : 'T -> 'U` nous pouvons mapper les éléments du tableau et produire un nouveau tableau de type `'U[]`."
+syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
+input:
+  content: "(action : ('T => 'U), array : 'T[])"
+  types:
+  - name: action
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: array
+    summary: Tableau d’éléments sur `'T`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'U[]"
+  types:
+  - summary: Tableau `'U[]` d’éléments mappés par l’opération de `action`.
+    isArray: true
+    uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Type des éléments de `array`.
+- uid: "'U"
+  summary: Type de résultat de l’opération de `action`.
+ms.openlocfilehash: f97e01504142681f34772cc84d6e598507d7d734
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218326"

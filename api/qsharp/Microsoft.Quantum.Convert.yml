@@ -1,0 +1,65 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.convert
+name: Microsoft.Quantum.Convert
+summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions de conversion entre différents types de données Q #."
+functions:
+- uid: microsoft.quantum.convert.bigintasboolarray
+  summary: >-
+    Convertit un grand entier donné en un tableau de valeurs booléennes.
+
+    L’élément 0 du tableau est le bit le moins significatif du grand entier.
+- uid: microsoft.quantum.convert.boolarrayasbigint
+  summary: >-
+    Convertit un tableau de valeurs booléennes donné en un grand entier équivalent.
+
+    L’élément 0 du tableau est le bit le moins significatif du grand entier.
+- uid: microsoft.quantum.convert.boolarrayasint
+  summary: Produit un entier positif à partir d’une chaîne de bits au format Little endian.
+- uid: microsoft.quantum.convert.boolarrayaspauli
+  summary: Dans le cas d’une chaîne binaire, retourne un opérateur Pauli qubit multiple représenté sous la forme d’un tableau d’opérateurs Pauli qubit uniques.
+- uid: microsoft.quantum.convert.boolarrayasresultarray
+  summary: Convertit un type `Bool[]` en type `Result[]`, où `true` est mappé à `One` et `false` est mappé à `Zero`.
+- uid: microsoft.quantum.convert.boolasresult
+  summary: Convertit un type `Bool` en type `Result`, où `true` est mappé à `One` et `false` est mappé à `Zero`.
+- uid: microsoft.quantum.convert.boolasstring
+  summary: Convertit une valeur booléenne donnée en une représentation sous forme de chaîne équivalente.
+- uid: microsoft.quantum.convert.doubleasstring
+  summary: Convertit un nombre à virgule flottante double précision donné en une représentation sous forme de chaîne équivalente.
+- uid: microsoft.quantum.convert.doubleasstringwithformat
+  summary: Convertit un nombre à virgule flottante double précision donné en une représentation sous forme de chaîne équivalente à l’aide du format donné.
+- uid: microsoft.quantum.convert.functionasoperation
+  summary: Convertit des fonctions en opérations.
+- uid: microsoft.quantum.convert.intasbigint
+  summary: Convertit un entier donné en un grand entier équivalent.
+- uid: microsoft.quantum.convert.intasboolarray
+  summary: Produit une représentation binaire d’un entier positif, à l’aide de la représentation avec primauté des octets de poids faible (Little-endian) pour le tableau retourné.
+- uid: microsoft.quantum.convert.intasdouble
+  summary: Convertit un entier donné en nombre à virgule flottante double précision équivalent.
+- uid: microsoft.quantum.convert.intasstring
+  summary: Convertit un nombre entier donné en une représentation sous forme de chaîne équivalente.
+- uid: microsoft.quantum.convert.intasstringwithformat
+  summary: Convertit un nombre entier donné en une représentation sous forme de chaîne équivalente à l’aide du format donné.
+- uid: microsoft.quantum.convert.maybebigintasint
+  summary: >-
+    Convertit un grand entier donné en un entier équivalent, si possible.
+
+    La fonction retourne une paire de l’entier résultant et un indicateur booléen qui a la valeur true, si et seulement si la conversion était possible.
+- uid: microsoft.quantum.convert.pauliarrayasint
+  summary: Encode un opérateur Pauli à plusieurs qubit représenté sous la forme d’un tableau d’opérateurs Pauli qubit uniques en un entier.
+- uid: microsoft.quantum.convert.rangeasintarray
+  summary: Crée un tableau `arr` d’entiers énumérés par Start.. étape.. effet.
+- uid: microsoft.quantum.convert.resultarrayasboolarray
+  summary: Convertit un type `Result[]` en type `Bool[]`, où `One` est mappé à `true` et `Zero` est mappé à `false`.
+- uid: microsoft.quantum.convert.resultarrayasint
+  summary: Produit un entier positif à partir d’une chaîne de résultats au format Little endian.
+- uid: microsoft.quantum.convert.resultasbool
+  summary: Convertit un type `Result` en type `Bool`, où `One` est mappé à `true` et `Zero` est mappé à `false`.
+operations:
+- uid: microsoft.quantum.convert.call
+  summary: Appelle une fonction avec une entrée donnée.
+ms.openlocfilehash: a0c347d8004b8f8bd35fc1b7f7eaf52e6230cee0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210965"

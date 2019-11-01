@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
+name: EstimateEnergy
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: >-
+  Évalue l’énergie de la molécule en additionnant l’énergie fournie par les termes individuels de la Jordanie-Wigner.
+
+
+  Cette opération repose implicitement sur la Convention d’indexation Spin Down.
+syntax: 'operation EstimateEnergy (jwHamiltonian : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, nSamples : Int) : Double'
+input:
+  content: '(jwHamiltonian : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, nSamples : Int)'
+  types:
+  - name: jwHamiltonian
+    summary: La Jordanie-Wigner Hamilton.
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
+  - name: nSamples
+    summary: Nombre d’échantillons à utiliser pour l’estimation du terme attentes.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: L’énergie estimée de la molécule
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 057a695c6206679ec5aad4c8ee8f2bb8e5ffbbd3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225024"
