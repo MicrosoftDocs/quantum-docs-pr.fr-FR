@@ -1,4 +1,4 @@
-- name: Machines et pilotes classiques
+- name: Vue d'ensemble
   href: index.md
 - name: Simulateur de quantum
   href: full-state-simulator.md

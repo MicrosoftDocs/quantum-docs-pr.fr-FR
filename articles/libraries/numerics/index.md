@@ -6,14 +6,14 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: 0bffe0c2adeacce514fd9985c9206f6f9c3157be
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056429"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442449"
 ---
-# <a name="introduction"></a>Introduction
+# <a name="introduction-to-the-quantum-numerics-library"></a>Introduction à la bibliothèque de valeurs numériques de quantum
 
 De nombreux algorithmes de quantum reposent sur [oracles](xref:microsoft.quantum.concepts.oracles) qui évaluent les fonctions mathématiques sur une superposition d’entrées.
 Le composant principal de l’algorithme de Shori, par exemple, évalue $f(x) = a^x\operatorname{mod} N$ pour un $a$ fixe, le nombre à factoriser $N$ et $x$ a entier $2n$-qubit dans une superposition uniforme sur toutes les chaînes de $2n$ bits.
