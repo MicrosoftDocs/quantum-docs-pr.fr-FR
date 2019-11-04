@@ -1,21 +1,18 @@
 ---
-title: Licence Microsoft Quantum Development Kit | Microsoft Docs
+title: Licence Microsoft Quantum Development Kit
 description: Licence Microsoft Quantum Development Kit
-services: service-name-with-dashes-AZURE-ONLY
-keywords: N’ajoutez pas ou ne modifiez pas de mots clés sans consulter votre expert SEO.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
-ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
-ms.openlocfilehash: e14720143144d4890358a1c6167541a0ea5a8362
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.author: cpalmer
+ms.date: 11/04/2019
+ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184931"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463371"
 ---
 # <a name="microsoft-software-license-terms"></a>TERMES DU CONTRAT DE LICENCE LOGICIEL MICROSOFT 
-# <a name="microsoft-quantum-development-kit-preview"></a>KIT DE DÉVELOPPEMENT QUANTUM MICROSOFT (VERSION PRÉLIMINAIRE)
+## <a name="microsoft-quantum-development-kit-preview"></a>KIT DE DÉVELOPPEMENT QUANTUM MICROSOFT (VERSION PRÉLIMINAIRE)
 
 
 * * *
@@ -61,13 +58,13 @@ SI VOUS RESPECTEZ CES TERMES DU CONTRAT DE LICENCE, VOUS DISPOSEZ DES DROITS ÉN
     
     e. partager, publier, distribuer ou prêter le logiciel, fournir le logiciel en tant que solution hébergée autonome pour les autres utilisateurs, ou transférer le logiciel ou le présent contrat à un tiers.
 
-1. **restrictions**à l’exportation. Vous devez respecter toutes les lois et réglementations nationales et internationales sur l’exportation applicables au logiciel, qui comprennent des restrictions concernant les destinations, les utilisateurs finals et les utilisations finales. Pour plus d’informations sur les restrictions à l’exportation, voir http://aka.ms/exporting.
+1. **restrictions**à l’exportation. Vous devez respecter toutes les lois et réglementations nationales et internationales sur l’exportation applicables au logiciel, qui comprennent des restrictions concernant les destinations, les utilisateurs finals et les utilisations finales. Pour plus d’informations sur les restrictions à l’exportation, voir https://aka.ms/exporting.
 
 1. **services de support technique**. Microsoft n’est nullement tenu aux termes de ce contrat de fournir des services de support pour le logiciel. Tout support fourni l’est « tel quel », « avec toutes ses imperfections », et sans garantie d’aucune sorte.
 
 1. **Mises à jour**. Le logiciel peut vérifier périodiquement l’existence de mises à jour, puis les télécharger et les installer pour vous. Vous pouvez obtenir des mises à jour exclusivement de Microsoft ou de sources autorisées. Il se peut que Microsoft doive mettre à jour votre système pour vous fournir les mises à jour. Vous acceptez de recevoir ces mises à jour automatiques sans autre préavis. Il se peut que des mises à jour n’incluent pas ou ne prennent pas en charge l’ensemble des fonctionnalités, services ou périphériques existants.
 
-1. **arbitrage de liaison et DÉrogation d’action de classe. Cette section s’applique si vous vivez dans (ou, si une entreprise, votre lieu de travail principal), le États-Unis**.  En cas de litige entre vous et Microsoft, vous et Microsoft vous engagez à tenter pendant 60 jours de résoudre ce litige de façon informelle. Si vous et Microsoft ne le pouvez pas, vous et Microsoft vous engagez à **lier un arbitrage individuel avant l’association American arbitrale** en vertu de la loi fédérale d’arbitrage (« FAA »), et **non à une juridiction en justice devant un juge ou un jury**. Au lieu de cela, un arbitre neutre décidera. Les **instances d’action de classe, les arbitrages à l’ensemble de la classe, les actions privées d’avocat-général**et toute autre procédure où une personne agit dans une capacité représentative ne **sont pas autorisées**; ni ne combinent des procédures individuelles sans le consentement de toutes les parties. La convention d’arbitrage complète comporte d’autres conditions. Vous pouvez la consulter sur la page http://aka.ms/arb-agreement-1. Vous et Microsoft acceptez ces clauses.
+1. **arbitrage de liaison et DÉrogation d’action de classe. Cette section s’applique si vous vivez dans (ou, si une entreprise, votre lieu de travail principal), le États-Unis**.  En cas de litige entre vous et Microsoft, vous et Microsoft vous engagez à tenter pendant 60 jours de résoudre ce litige de façon informelle. Si vous et Microsoft ne le pouvez pas, vous et Microsoft vous engagez à **lier un arbitrage individuel avant l’association American arbitrale** en vertu de la loi fédérale d’arbitrage (« FAA »), et **non à une juridiction en justice devant un juge ou un jury**. Au lieu de cela, un arbitre neutre décidera. Les **instances d’action de classe, les arbitrages à l’ensemble de la classe, les actions privées d’avocat-général**et toute autre procédure où une personne agit dans une capacité représentative ne **sont pas autorisées**; ni ne combinent des procédures individuelles sans le consentement de toutes les parties. La convention d’arbitrage complète comporte d’autres conditions. Vous pouvez la consulter sur la page https://aka.ms/arb-agreement-1. Vous et Microsoft acceptez ces clauses.
 
 1. **intégralité des accords**. Ce contrat, ainsi que toutes les autres clauses que Microsoft peut prévoir pour des suppléments, des mises à jour ou des applications tierces, constitue le contrat complet applicable au logiciel.
 

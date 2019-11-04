@@ -1,0 +1,12 @@
+- name: Informations de référence
+  items:
+    - name: 'Bibliothèques Q#'
+      href: qsharp/toc.yml
+    - name: Bibliothèques .NET
+      items:
+        - name: Simulateur de trace
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
+        - name: Chimie quantique
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
+    - name: Bibliothèques Python
+      href: 'https://docs.microsoft.com/python/qsharp'

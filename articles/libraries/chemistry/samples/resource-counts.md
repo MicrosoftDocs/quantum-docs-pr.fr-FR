@@ -6,16 +6,16 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: b28a27c4c1f1e64644fcfb074a731ff7b65cacb6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: f9311c1987ced4336c4e98bdb984fbee009e9acc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184081"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442454"
 ---
-## <a name="obtaining-resource-counts"></a>Obtention du nombre de ressources
+# <a name="obtaining-resource-counts"></a>Obtention du nombre de ressources
 
-Le coût de la simulation de $n $ qubits sur un ordinateur classique évolue de façon exponentielle avec $n $. Cela limite beaucoup la taille d’une simulation de chimie quantique que nous pouvons effectuer avec le simulateur d’état complet. Pour les grandes instances de chimie, nous pouvons néanmoins obtenir des informations utiles. Ici, nous examinons comment les coûts des ressources, tels que le nombre de grilles de T ou de CNOTIN, pour simuler la chimie peuvent être obtenus de manière automatisée à l’aide du [simulateur de trace](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Ces informations nous informent du moment où les ordinateurs quantiques peuvent être suffisamment grands pour exécuter ces algorithmes de chimie de Quantum. Pour référence, consultez l’exemple de `GetGateCount` fourni.
+Le coût de la simulation de $n $ qubits sur les ordinateurs classiques évolue de façon exponentielle avec $n $. Cela limite beaucoup la taille d’une simulation de chimie quantique que nous pouvons effectuer avec le simulateur d’état complet. Pour les grandes instances de chimie, nous pouvons néanmoins obtenir des informations utiles. Ici, nous examinons comment les coûts des ressources, tels que le nombre de grilles de T ou de CNOTIN, pour simuler la chimie peuvent être obtenus de manière automatisée à l’aide du [simulateur de trace](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Ces informations nous informent du moment où les ordinateurs quantiques peuvent être suffisamment grands pour exécuter ces algorithmes de chimie de Quantum. Pour référence, consultez l’exemple de `GetGateCount` fourni.
 
 Supposons que nous avons déjà une instance de `FermionHamiltonian`, par exemple, chargée à partir du schéma Broombridge comme indiqué dans l’exemple [chargement-à partir d’un fichier](xref:microsoft.quantum.chemistry.examples.loadhamiltonian) . 
 
@@ -31,7 +31,7 @@ Supposons que nous avons déjà une instance de `FermionHamiltonian`, par exempl
     var qSharpData = problem.ToQSharpFormat();
 ```
 
-La syntaxe permettant d’obtenir des estimations de ressources est presque identique à l’exécution de l’algorithme sur le simulateur d’état complet. Nous choisissons simplement un autre ordinateur cible. Dans le cadre des estimations de ressources, il suffit d’évaluer le coût d’une seule étape Trotter ou d’un parcours quantique créé par la technique Qubitization. Les réutilisables pour l’appel de ces algorithmes sont les suivants.
+La syntaxe permettant d’obtenir des estimations de ressources est presque identique à l’exécution de l’algorithme sur le simulateur d’état complet. Nous choisissons simplement un autre ordinateur cible. Dans le cadre des estimations de ressources, il suffit d’évaluer le coût d’une seule étape Trotter ou d’un parcours quantique créé par la technique Qubitization. L’appel de ces algorithmes est le suivant :
 
 ```qsharp
 //////////////////////////////////////////////////////////////////////////
@@ -83,7 +83,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-Nous configurons maintenant le simulateur de trace pour suivre les ressources qui nous intéressent. Dans ce cas, nous comptons les opérations de quantum de la primitive en affectant à l’indicateur `usePrimitiveOperationsCounter` la valeur `true`. Une `throwOnUnconstraintMeasurement` de détails techniques est définie sur `false` pour éviter les exceptions dans les cas où le code Q # n’affirme pas correctement les probabiltiy de résultats de mesure, le cas échéant.
+Nous configurons maintenant le simulateur de trace pour suivre les ressources qui nous intéressent. Dans ce cas, nous comptons les opérations de quantum de la primitive en affectant à l’indicateur `usePrimitiveOperationsCounter` la valeur `true`. Une `throwOnUnconstraintMeasurement` de détails techniques est définie sur `false` pour éviter les exceptions dans les cas où le code Q # n’affirme pas correctement la probabilité des résultats de mesure, le cas échéant.
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()

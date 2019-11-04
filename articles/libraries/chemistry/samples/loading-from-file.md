@@ -6,14 +6,14 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
-ms.openlocfilehash: 9902e95b09d38323b4b91c29ab897a4f0124b6cd
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 18f257efe8d53d2a22af4840bd8d17ab6b80a503
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184183"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442333"
 ---
-## <a name="loading-a-hamiltonian-from-file"></a>Chargement d’un présentisme à partir d’un fichier
+# <a name="loading-a-hamiltonian-from-file"></a>Chargement d’un Hamiltonien à partir d’un fichier
 Auparavant, nous avons construit Hamiltonians en y ajoutant des termes. Bien que cela soit parfait pour les petits exemples, la chimie quantique à l’échelle nécessite Hamiltonians avec des millions ou des milliards de termes. Ces Hamiltonians, générés par des packages de chimie tels que NWChem, sont trop volumineux pour être importés manuellement. Dans cet exemple, nous illustrons comment une instance de `FermionHamiltonian` peut être générée automatiquement à partir d’une molécule représentée par le [schéma Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge). Pour référence, vous pouvez inspecter l’exemple de `LithiumHydrideGUI` fourni ou l’exemple `RunSimulation`. Une prise en charge limitée est également disponible pour l’importation à partir du format consommé par [LIQUi | >](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).
 
 Prenons l’exemple de la molécule d’azote, fourni dans le dossier `IntegralData/YAML` du référentiel d’exemples. La méthode de chargement du schéma de `Broombridge` est simple.

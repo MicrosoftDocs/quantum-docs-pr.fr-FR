@@ -1,18 +1,20 @@
 ---
-title: Glossaire | Microsoft Docs
+title: Glossaire quantum computing | Microsoft Docs
 description: Glossaire des termes quantiques
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: bfa275b3330ea2c2a541b08f137893b63b6213aa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183622"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442547"
 ---
+# <a name="quantum-computing-glossary"></a>Glossaire quantum computing
+
 |Conditions|Définition|
 |-------------|----------|
 |Voisin|Transposer le conjugué complexe de l’opération. Pour les opérations qui implémentent un opérateur unitaire, le voisin est l’inverse de l’opération.|
@@ -29,7 +31,7 @@ ms.locfileid: "73183622"
 |Mesure|Obtention d’un bit classique à partir d’un qubit (ou d’un ensemble de qubits). Pour plus d’informations, consultez la section [concepts de qubit](xref:microsoft.quantum.concepts.qubit) .|
 |Mutable|Variable dont la valeur peut être modifiée après sa création.|
 |Espace de noms|Étiquette pour une collection de noms associés (en général, les opérations, les fonctions et les types). Par exemple, l’espace de noms [`Microsoft.Quantum.Preparation`](xref:microsoft.quantum.preparation) étiquette tous les symboles définis dans la bibliothèque standard qui facilitent la préparation des États initiaux.|
-|Opération|Unité de base de l’exécution du quantum dans Q #. Elle est à peu près équivalente à une fonction C++ en C ou python, ou à une C# méthode statique dans ou Java.|
+|Opération|Unité de base de l’exécution du quantum dans Q #. Elle est à peu près l’équivalent d’une fonction en C, C++ ou Python, ou d’une méthode statique en C# ou Java.|
 |Application opérateur|Exécution d’une opération de Quantum. Cela applique généralement une matrice d’unités au vecteur d’état actuel. Pour plus d’informations, consultez [Présentation des concepts quantiques](xref:microsoft.quantum.concepts.intro) .|
 |Oracle|Sous-routine qui fournit des informations dépendantes aux données à un algorithme Quantum au moment de l’exécution. En règle générale, l’objectif est de fournir une superposition des sorties correspondant aux entrées en superposition.   |
 |Application partielle|Appel d’une fonction ou d’une opération sans tous les paramètres requis. Retourne un nouvel appelable qui n’a besoin que des paramètres manquants fournis au cours d’une prochaine application.|

@@ -6,27 +6,23 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 56455e9d5cd452b8620ee794f40563d1d3040193
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183843"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463320"
 ---
 # <a name="q-style-guide"></a>Guide de style Q # #
 ## <a name="general-conventions"></a>Conventions générales ##
 
 Les conventions suggérées dans ce guide sont destinées à faciliter la lecture et la compréhension des programmes et des bibliothèques écrits dans Q #.
 
-# <a name="guidancetabguidance"></a>[Assistance](#tab/guidance)
+## <a name="guidance"></a>Assistance
 
 Nous vous suggérons :
 
 - N’ignorez pas une convention, sauf si vous le configurez intentionnellement pour fournir du code plus lisible et plus compréhensible à vos utilisateurs.
-
-# <a name="examplestabexamples"></a>[Exemples](#tab/examples)
-
-***
 
 ## <a name="naming-conventions"></a>Conventions de nommage ##
 

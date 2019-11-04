@@ -1,0 +1,14 @@
+- name: 'Q# et les structures de fichiers'
+  href: file-structure.md
+- name: Opérations et fonctions
+  href: operations-and-functions.md
+- name: Variables locales
+  href: local-variables.md
+- name: Utilisation des qubits
+  href: working-with-qubits.md
+- name: Exemple complet
+  href: putting-it-all-together.md
+- name: Aller plus loin
+  href: going-further.md
+- name: Test et débogage
+  href: testing-and-debugging.md
