@@ -1,0 +1,72 @@
+---
+title: Créer un générateur de nombres aléatoires quantique
+description: Générez un projet Q# qui démontre des concepts quantiques fondamentaux comme la superposition en créant un générateur de nombres aléatoires quantique.
+author: bromeg
+ms.author: megbrow@microsoft.com
+ms.date: 10/25/2019
+ms.topic: article
+uid: microsoft.quantum.quickstarts.qrng
+ms.openlocfilehash: a7c077eda3e46430cbe6598cb899adb460451f75
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73443917"
+---
+# <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a><span data-ttu-id="01feb-103">Démarrage rapide : Implémenter un générateur de nombres aléatoires quantique en Q#</span><span class="sxs-lookup"><span data-stu-id="01feb-103">Quickstart: Implement a Quantum Random Number Generator in Q#</span></span>
+<span data-ttu-id="01feb-104">Un générateur de nombres aléatoires quantique est un exemple simple d’algorithme quantique écrit en Q#.</span><span class="sxs-lookup"><span data-stu-id="01feb-104">A simple example of a quantum algorithm written in Q# is a quantum random number generator.</span></span> <span data-ttu-id="01feb-105">Cet algorithme exploite la nature de la mécanique quantique pour produire un nombre aléatoire.</span><span class="sxs-lookup"><span data-stu-id="01feb-105">This algorithm leverages the nature of quantum mechanics to produce a random number.</span></span> 
+
+## <a name="prerequisites"></a><span data-ttu-id="01feb-106">Prérequis</span><span class="sxs-lookup"><span data-stu-id="01feb-106">Prerequisites</span></span>
+
+- <span data-ttu-id="01feb-107">Le Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).</span><span class="sxs-lookup"><span data-stu-id="01feb-107">The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).</span></span>
+- [<span data-ttu-id="01feb-108">Créer un projet Q#</span><span class="sxs-lookup"><span data-stu-id="01feb-108">Create a Q# Project</span></span>](xref:microsoft.quantum.howto.createproject)
+
+
+## <a name="write-a-q-operation"></a><span data-ttu-id="01feb-109">Écrire une opération Q#</span><span class="sxs-lookup"><span data-stu-id="01feb-109">Write a Q# operation</span></span>
+
+### <a name="q-operation-code"></a><span data-ttu-id="01feb-110">Code d’opération Q#</span><span class="sxs-lookup"><span data-stu-id="01feb-110">Q# operation code</span></span>
+
+1. <span data-ttu-id="01feb-111">Remplacez le contenu du fichier Operation.qs par le code suivant :</span><span class="sxs-lookup"><span data-stu-id="01feb-111">Replace the contents of the Operation.qs file with the following code:</span></span>
+
+    ```qsharp
+    namespace Quantum {
+        open Microsoft.Quantum.Intrinsic;
+
+        operation QuantumRandomNumberGenerator() : Result {
+            using(q = Qubit())  { // Allocate a qubit.
+                H(q);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
+                let r = M(q);     // Measure the qubit value.
+                Reset(q);
+                return r;
+            }
+        }
+    }
+    ```
+
+<span data-ttu-id="01feb-112">Comme mentionné dans notre article intitulé [Qu’est-ce que l’informatique quantique ?](xref:microsoft.quantum.overview.what), un qubit est une unité d’information quantique qui peut être dans une superposition.</span><span class="sxs-lookup"><span data-stu-id="01feb-112">As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition.</span></span> <span data-ttu-id="01feb-113">Lorsqu’il est mesuré, un qubit peut uniquement avoir la valeur 0 ou 1.</span><span class="sxs-lookup"><span data-stu-id="01feb-113">When measured, a qubit can only be either 0 or 1.</span></span> <span data-ttu-id="01feb-114">En revanche, pendant l’exécution, l’état du qubit représente la probabilité d’avoir la valeur 0 ou 1 avec une mesure.</span><span class="sxs-lookup"><span data-stu-id="01feb-114">However, during execution the state of the qubit represents the probability of reading either a 0 or a 1 with a measurement.</span></span> <span data-ttu-id="01feb-115">Cet état probabiliste est appelé superposition.</span><span class="sxs-lookup"><span data-stu-id="01feb-115">This probabilistic state is known as superposition.</span></span> <span data-ttu-id="01feb-116">Nous pouvons utiliser cette probabilité pour générer des nombres aléatoires.</span><span class="sxs-lookup"><span data-stu-id="01feb-116">We can use this probability to generate random numbers.</span></span>
+
+<span data-ttu-id="01feb-117">Dans notre opération Q#, nous introduisons le type de données `Qubit`, natif en Q#.</span><span class="sxs-lookup"><span data-stu-id="01feb-117">In our Q# operation, we introduce the `Qubit` datatype, native to Q#.</span></span> <span data-ttu-id="01feb-118">Nous pouvons uniquement allouer un `Qubit` avec une instruction `using`.</span><span class="sxs-lookup"><span data-stu-id="01feb-118">We can only allocate a `Qubit` with a `using` statement.</span></span> <span data-ttu-id="01feb-119">Lorsqu’il est alloué, un qubit est toujours dans l’état `Zero`.</span><span class="sxs-lookup"><span data-stu-id="01feb-119">When it gets allocated a qubit is always in the `Zero`  state.</span></span> 
+
+<span data-ttu-id="01feb-120">À l’aide de l’opération `H`, nous pouvons placer notre `Qubit` dans une superposition.</span><span class="sxs-lookup"><span data-stu-id="01feb-120">Using the `H` operation, we are able to put our `Qubit` in superposition.</span></span> <span data-ttu-id="01feb-121">Pour mesurer un qubit et lire sa valeur, vous utilisez l’opération intrinsèque `M`.</span><span class="sxs-lookup"><span data-stu-id="01feb-121">To measure a qubit and read its value, you use the `M` intrinsic operation.</span></span>
+
+<span data-ttu-id="01feb-122">En plaçant notre `Qubit` dans une superposition et en le mesurant, notre résultat est une valeur différente à chaque fois que le code est appelé.</span><span class="sxs-lookup"><span data-stu-id="01feb-122">By putting our `Qubit` in superposition and measuring it, our result will be a different value each time the code is invoked.</span></span> 
+
+<span data-ttu-id="01feb-123">Quand un `Qubit` est désalloué, il doit être explicitement redéfini à l’état `Zero`. Sinon, le simulateur signale une erreur d’exécution.</span><span class="sxs-lookup"><span data-stu-id="01feb-123">When a `Qubit` is de-allocated it must be explicitly set back to the `Zero` state, otherwise the simulator will report a runtime error.</span></span> <span data-ttu-id="01feb-124">Un moyen simple d’y parvenir consiste à appeler `Reset`.</span><span class="sxs-lookup"><span data-stu-id="01feb-124">An easy way to achieve this is invoking `Reset`.</span></span>
+
+### <a name="visualizing-the-code-with-the-bloch-sphere"></a><span data-ttu-id="01feb-125">Visualisation du code avec la sphère de Bloch</span><span class="sxs-lookup"><span data-stu-id="01feb-125">Visualizing the code with the Bloch sphere</span></span>
+
+<span data-ttu-id="01feb-126">Dans la sphère de Bloch, le pôle nord représente la valeur classique **0** et le pôle sud représente la valeur classique **1**.</span><span class="sxs-lookup"><span data-stu-id="01feb-126">In the Bloch sphere the north pole represents the classical value **0** and the south pole represents the classical value **1**.</span></span> <span data-ttu-id="01feb-127">Toute superposition peut être représentée par un point sur la sphère (représentée par une flèche).</span><span class="sxs-lookup"><span data-stu-id="01feb-127">Any superposition can be represented by a point on the sphere (represented by an arrow).</span></span> <span data-ttu-id="01feb-128">Plus l’extrémité de la flèche est proche d’un pôle, plus la probabilité est élevée que le qubit soit réduit à la valeur classique attribuée à ce pôle lors de la mesure.</span><span class="sxs-lookup"><span data-stu-id="01feb-128">When the closer the end of the arrow to a pole, the higher the probability the qubit collapses into the classical value assigned to that pole when measured.</span></span> <span data-ttu-id="01feb-129">Par exemple, l’état du qubit représenté par la flèche rouge ci-dessous a une probabilité plus élevée de donner la valeur **0** si nous le mesurons.</span><span class="sxs-lookup"><span data-stu-id="01feb-129">For example, the qubit state represented by the red arrow below has a higher probability of giving the value **0** if we measure it.</span></span>
+
+<img src="./Bloch.svg" width="175">
+
+<span data-ttu-id="01feb-130">Nous pouvons utiliser cette représentation pour visualiser ce que fait le code :</span><span class="sxs-lookup"><span data-stu-id="01feb-130">We can use this representation to visualize what the code is doing:</span></span>
+
+* <span data-ttu-id="01feb-131">Tout d’abord, nous commençons avec un qubit à l’état initial de **0** et nous appliquons `H` pour créer une superposition dans laquelle les probabilités d’obtenir **0** et **1** sont les mêmes.</span><span class="sxs-lookup"><span data-stu-id="01feb-131">First we start with a qubit initalizated in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.</span></span>
+
+<img src="./H.svg" width="450">
+
+* <span data-ttu-id="01feb-132">Ensuite, nous mesurons le qubit et nous enregistrons la sortie :</span><span class="sxs-lookup"><span data-stu-id="01feb-132">Then we measure the qubit and save the output:</span></span>
+
+<img src="./Measurement2.svg" width="450">
+
+<span data-ttu-id="01feb-133">Étant donné que le résultat de la mesure est complètement aléatoire, nous avons obtenu un bit aléatoire.</span><span class="sxs-lookup"><span data-stu-id="01feb-133">Since the outcome of the measurement is completely random, we have obtained a random bit.</span></span> <span data-ttu-id="01feb-134">Nous pouvons appeler cette fonction plusieurs fois pour créer des entiers.</span><span class="sxs-lookup"><span data-stu-id="01feb-134">We can call this function several times to create integers.</span></span> <span data-ttu-id="01feb-135">Par exemple, si nous appelons la fonction trois fois pour obtenir trois bits aléatoires, nous pouvons générer des nombres de 3 bits aléatoires (c’est-à-dire un nombre aléatoire compris entre 0 et 7).</span><span class="sxs-lookup"><span data-stu-id="01feb-135">For example, if we call the function three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).</span></span>
