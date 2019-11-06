@@ -16,9 +16,10 @@ newtypes:
     Format des données passées de C# à Q # pour représenter un terme de la même façon.
 
     La signification des données représentées est déterminée par l’algorithme qui la reçoit.
-ms.openlocfilehash: 78d6e9f54c25f9d1a6af32c157d23069b8a4872b
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210914"
+metadata:
+  ms.openlocfilehash: 78d6e9f54c25f9d1a6af32c157d23069b8a4872b
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73210914"

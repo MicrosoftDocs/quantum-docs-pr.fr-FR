@@ -6,9 +6,9 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: Applique une opération qui prend une entrée de poids fort (Big-endian) à un registre qui encode un entier non signé utilisant le format Little endian.
 syntax: 'operation ApplyReversedOpBEC (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
-  content: '(op : (Microsoft. Quantum. Arithmetic. BigEndian = > unité est CTL), Register : Microsoft. Quantum. Arithmetic. LittleEndian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
-  - name: opérationnel
+  - name: op
     summary: Opération qui agit sur un registre Big endian.
     isOperation: true
     input:
@@ -20,11 +20,11 @@ input:
         uid: Unit
     functors:
     - Controlled
-  - name: inscription
+  - name: register
     summary: Registre Little endian à transformer.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
-  content: Unité
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -34,9 +34,10 @@ seeAlso:
 - applyreversedopbe
 - applyreversedopbea
 - applyreversedopbeca
-ms.openlocfilehash: fcf4110845e43426b7f2e1ec882bce75159ef789
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056977"
+metadata:
+  ms.openlocfilehash: fcf4110845e43426b7f2e1ec882bce75159ef789
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056977"

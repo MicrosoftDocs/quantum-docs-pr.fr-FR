@@ -6,9 +6,9 @@ namespace: Microsoft.Quantum.Simulation
 summary: Convertit un entier en opérateur Pauli qubit unique.
 syntax: 'function IntToPauli (idx : Int) : Pauli'
 input:
-  content: '(idx : int)'
+  content: '(idx : Int)'
   types:
-  - name: mét
+  - name: idx
     summary: Entier dans la plage `0..3` à convertir en opérateurs Pauli.
     isPrimitive: true
     uid: Int
@@ -18,9 +18,10 @@ output:
   - summary: Opérateur `Pauli` donné par `[PauliI, PauliX, PauliY, PauliZ][idx]`.
     isPrimitive: true
     uid: Pauli
-ms.openlocfilehash: ca2ed56364d9fee748ac53b3f7f0aa40a96475b9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065484"
+metadata:
+  ms.openlocfilehash: ca2ed56364d9fee748ac53b3f7f0aa40a96475b9
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065484"
