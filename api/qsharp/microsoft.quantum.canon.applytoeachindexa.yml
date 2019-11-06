@@ -9,7 +9,7 @@ summary: >-
   Le modificateur `A` indique que l’opération à qubit unique est adjointable.
 syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[]) : Unit"
 input:
-  content: "(singleElementOperation : ((int, t) = > unité est adj), Register : 't []]"
+  content: "(singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[])"
   types:
   - name: singleElementOperation
     summary: Opération à appliquer à chaque qubit.
@@ -26,13 +26,13 @@ input:
         uid: Unit
     functors:
     - Adjoint
-  - name: inscription
+  - name: register
     summary: Tableau de qubits sur lequel appliquer l’opération donnée.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
-  content: Unité
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -45,8 +45,8 @@ seeAlso:
 - microsoft.quantum.canon.applytoeachindex
 metadata:
   ms.openlocfilehash: 6b99e977120a417780875475b35094a44d1c4e08
-  ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 10/30/2019
+  ms.lasthandoff: 11/05/2019
   ms.locfileid: "73068476"

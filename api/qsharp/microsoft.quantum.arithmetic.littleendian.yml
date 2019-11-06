@@ -6,9 +6,10 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: Inscrivez-vous pour encoder un entier non signé dans l’ordre de primauté des octets de poids faible. Le qubit avec l’index `0` encode le bit le plus bas d’un entier non signé.
 remarks: Nous abrégeons `LittleEndian` comme `LE` dans la documentation.
 syntax: newtype LittleEndian = Qubit[];
-ms.openlocfilehash: 6431500dfe67b46cab590f0fc31953d9fb80f9af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73218819"
+metadata:
+  ms.openlocfilehash: 6431500dfe67b46cab590f0fc31953d9fb80f9af
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73218819"

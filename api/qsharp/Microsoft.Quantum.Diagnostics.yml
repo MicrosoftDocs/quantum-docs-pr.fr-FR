@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.diagnostics
-name: Microsoft. Quantum. Diagnostics
+name: Microsoft.Quantum.Diagnostics
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: Déclare que deux tableaux de valeurs booléennes sont égaux.
@@ -74,9 +74,10 @@ operations:
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: Déclare que le `q` qubit se trouve dans le eigenstate attendu de l’opérateur Z Pauli jusqu’à une tolérance donnée.
 summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions et des opérations utiles à des fins de diagnostic, notamment des opérations d’assertion et des fonctions de revendication."
-ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056857"
+metadata:
+  ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056857"

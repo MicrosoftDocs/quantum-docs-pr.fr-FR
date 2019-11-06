@@ -49,9 +49,10 @@ output:
   - summary: Estimation de $ \hat{p} $ de la fréquence avec laquelle $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourne `Zero`, obtenue à l’aide de l’estimateur binomiale non biaisé $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $, où $n\_{\ flèche haut} $ est le nombre de résultats `Zero` observés.
     isPrimitive: true
     uid: Double
-ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73229172"
+metadata:
+  ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73229172"

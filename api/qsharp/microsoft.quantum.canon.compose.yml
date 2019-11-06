@@ -54,9 +54,10 @@ typeParameters:
   summary: Type de sortie de la première fonction à appliquer et type d’entrée de la deuxième fonction à appliquer.
 - uid: "'V"
   summary: Type de sortie de la deuxième fonction à appliquer.
-ms.openlocfilehash: 69fbd6a4fafbc61a63e41257b7100303fd48d4d4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73223069"
+metadata:
+  ms.openlocfilehash: 69fbd6a4fafbc61a63e41257b7100303fd48d4d4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73223069"
