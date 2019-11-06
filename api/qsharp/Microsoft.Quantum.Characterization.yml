@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.characterization
-name: Microsoft. Quantum. caractérisation
+name: Microsoft.Quantum.Characterization
 summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions et des opérations pour l’apprentissage des propriétés des États et des processus Quantum, y compris la tomographie et l’estimation de phase."
 operations:
 - uid: microsoft.quantum.characterization.continuousphaseestimationiteration
@@ -25,9 +25,10 @@ operations:
   summary: Exécute l’algorithme d’estimation de phase quantique non itérative fiable pour un `U` et eigenstate Oracle donné, et fournit une estimation réelle de la phase avec la mise à l’échelle des écarts à la limite Heisenberg.
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: Effectue une mesure de tomographie de processus qubit unique dans la base de Pauli, en fonction d’un canal d’intérêt particulier.
-ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056948"
+metadata:
+  ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056948"

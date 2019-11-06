@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.errorcorrection
-name: Microsoft. Quantum. ErrorCorrection
+name: Microsoft.Quantum.ErrorCorrection
 summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions, des opérations et des types définis par l’utilisateur pour la correction des erreurs Quantum."
 functions:
 - uid: microsoft.quantum.errorcorrection.bitflipcode
@@ -109,9 +109,10 @@ newtypes:
   summary: Type pour les résultats de mesure `Result[]` qui spécifient un syndrome d’erreur d’un code de Quantum.
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: Représente une opération utilisée pour mesurer le syndrome d’un bloc de code de correction des erreurs.
-ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056794"
+metadata:
+  ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056794"
