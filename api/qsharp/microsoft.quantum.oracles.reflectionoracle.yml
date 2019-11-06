@@ -15,9 +15,10 @@ summary: >-
   - Registre qubit sur lequel effectuer la réflexion donnée.
 remarks: Ce $O Oracle = \boldone-(1-e ^ {i \Phi}) \ket{\Psi}\bra{\Psi} $ effectue une réflexion partielle par une phase $ \Phi $ à propos d’un seul état pur $ \ket{\Psi} $.
 syntax: newtype ReflectionOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
-ms.openlocfilehash: 7ca6551a83ae279c5a937556d7c2c9dde98e4522
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73230855"
+metadata:
+  ms.openlocfilehash: 7ca6551a83ae279c5a937556d7c2c9dde98e4522
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73230855"

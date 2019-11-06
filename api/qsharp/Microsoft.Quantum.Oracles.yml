@@ -72,9 +72,10 @@ newtypes:
     - Entier qui indexe l’indicateur qubit $f $.
 
     - Le registre système $s $ qui stocke l’État Quantum souhaité $ \ket{\Psi}\_s $.
-ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73216099"
+metadata:
+  ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73216099"

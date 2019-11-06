@@ -7,9 +7,9 @@ summary: Applique une opération qui accepte un registre <xref:microsoft.quantum
 remarks: Le Registre est transformé en `LittleEndian` par l’utilisation de <xref:microsoft.quantum.canon.qftle> et est ensuite renvoyé à sa représentation d’origine après l’application de `op`.
 syntax: 'operation ApplyLEOperationOnPhaseLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
-  content: '(op : (Microsoft. Quantum. Arithmetic. LittleEndian = > unité), cible : Microsoft. Quantum. Arithmetic. PhaseLittleEndian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
-  - name: opérationnel
+  - name: op
     summary: Opération à appliquer.
     isOperation: true
     input:
@@ -23,7 +23,7 @@ input:
     summary: Registre auquel l’opération est appliquée.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
-  content: Unité
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -31,9 +31,10 @@ seeAlso:
 - microsoft.quantum.canon.applyleoperationonphaselea
 - microsoft.quantum.canon.applyleoperationonphaselea
 - microsoft.quantum.canon.applyleoperationonphaseleca
-ms.openlocfilehash: 9364435896dc43710eb37238b00f8139f9e6b62d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056728"
+metadata:
+  ms.openlocfilehash: 9364435896dc43710eb37238b00f8139f9e6b62d
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056728"

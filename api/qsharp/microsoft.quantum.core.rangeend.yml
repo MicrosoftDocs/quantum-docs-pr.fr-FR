@@ -11,20 +11,21 @@ remarks: >-
   Notez que la valeur de fin définie d’une plage peut être différente de celle du dernier élément de la séquence spécifiée par la plage ; par exemple, dans une plage 0.. 2.. 5 le dernier élément est 4, mais la valeur de fin est 5.
 syntax: 'function RangeEnd (range : Range) : Int'
 input:
-  content: '(plage : plage)'
+  content: '(range : Range)'
   types:
   - name: range
     isPrimitive: true
     uid: Range
 output:
-  content: int
+  content: Int
   types:
   - summary: Valeur de fin définie de la plage donnée.
     isPrimitive: true
     uid: Int
-ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066640"
+metadata:
+  ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066640"
