@@ -6,20 +6,22 @@ ms.author: nakersha
 ms.date: 10/16/2019
 ms.topic: article
 uid: microsoft.quantum.overview.why
-ms.openlocfilehash: 1ccf21aad9473f18a33bf6b12e14b021ac159cbb
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 389b745a9f19caa6272e7d537e3ee5f884cec36b
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443900"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529916"
 ---
 # <a name="why-learn-quantum-computing"></a>Pourquoi apprendre l’informatique quantique ?
 
-Les ordinateurs quantiques sont cool, mais pourquoi apprendre l’informatique quantique ? Cette section explique pourquoi l’apprentissage de l’informatique quantique est une excellente idée.
+Les ordinateurs quantiques sont cool, mais pourquoi apprendre l’informatique quantique ?
+
+Cette section explique pourquoi l’apprentissage de l’informatique quantique est une excellente idée.
 
 ## <a name="join-the-quantum-revolution"></a>Rejoignez la révolution quantique
 
-Les chercheurs viennent tout juste de prendre la mesure du potentiel des futures technologies quantiques. Nous assistons aujourd’hui au début de ce que d’aucuns appellent la deuxième révolution quantique. La première a consisté à utiliser la physique quantique pour créer des inventions révolutionnaires telles que le laser et le transistor. Au cours de la dernière décennie, la science a commencé à maîtriser les systèmes quantiques au niveau des particules. Cela ouvre la voie à d’immenses possibilités, dont la plupart restent à découvrir. Cessez d’être témoin et commencez à faire ! Aujourd’hui, vous pouvez commencer à contribuer à la technologie qui façonnera le monde de demain.
+Les chercheurs viennent tout juste de prendre la mesure du potentiel des futures technologies quantiques. Nous assistons aujourd’hui au début de ce que d’aucuns appellent la deuxième révolution quantique. La première a consisté à utiliser la physique quantique pour créer des inventions révolutionnaires telles que le laser et le transistor. Au cours de la dernière décennie, la science a commencé à maîtriser les systèmes quantiques au niveau des particules, en ouvrant la porte à des possibilités énormes, dont la plupart sont encore à découvrir. Cessez d’être témoin et commencez à faire ! Aujourd’hui, vous pouvez commencer à contribuer à la technologie qui façonnera le monde de demain.
 
 ## <a name="solving-great-challenges-requires-diverse-communities"></a>Résoudre de grands défis nécessite des communautés diversifiées
 
