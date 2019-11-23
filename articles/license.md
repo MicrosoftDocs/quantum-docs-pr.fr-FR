@@ -86,7 +86,7 @@ SI VOUS RESPECTEZ CES TERMES DU CONTRAT DE LICENCE, VOUS DISPOSEZ DES DROITS ÉN
 
 <p>15. <strong>LIMITATION ET EXCLUSION DES DOMMAGES. SI VOUS AVEZ DES BASES POUR LA RÉCUPÉRATION DES DOMMAGES EN DÉPIT DE L’EXCLUSION DE GARANTIE PRÉCÉDENTE, VOUS POUVEZ RÉCUPÉRER AUPRÈS DE MICROSOFT ET DE SES FOURNISSEURS UNIQUEMENT DES DOMMAGES DIRECTS ALLANT JUSQU’AUX ÉTATS-UNIS $5,00. VOUS NE POUVEZ PAS RÉCUPÉRER D’AUTRES DOMMAGES, Y COMPRIS LES DOMMAGES INDIRECTS, SPÉCIAUX, INDIRECTS OU ACCESSOIRES.</strong>
 
-**Cette limitation s’applique à tout ce qui concerne le logiciel, les services, le contenu (y compris le code) sur des sites Internet tiers ou des applications tierces ; et (b) les réclamations en cas de violation du contrat, de la garantie, de la garantie ou de la condition ; responsabilité stricte, négligence ou autre délit ; ou toute autre revendication ; dans tous les cas, dans la mesure permise par la loi applicable**.
+**Cette limitation s’applique à tout ce qui est lié au logiciel, aux services, au contenu (y compris le code) sur des sites Internet tiers ou à des applications tierces ; et (b) des réclamations en cas de violation du contrat, de la garantie, de la garantie ou de la condition ; responsabilité stricte, négligence ou autre délit, ou toute autre revendication**
 
 **Elle s’applique également même si Microsoft connaissait ou aurait pu connaître la possibilité des dommages. Il se peut que la limitation ou l’exclusion ci-dessus ne s’appliquent pas, car votre état, province ou pays n’autorise pas l’exclusion ou la limitation des dommages accidentels, indirects ou autres**.
 </blockquote>
