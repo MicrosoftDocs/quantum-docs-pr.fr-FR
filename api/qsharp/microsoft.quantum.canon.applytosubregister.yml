@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: Applique une opération à un sous-registre d’un registre, avec qubits spécifié par un tableau de leurs index.
 examples: >-
-  Créer trois États qubit $ \frac{1}{\sqrt{2}} \ket{0}\_2 (\ket{0}\_1 \ Ket{0}_3 + \ket{1}\_1 \ Ket{1}_3) $ :
+  Créer trois États qubit $ \frac{1}{\sqrt{2}} \ket{0}\_2 (\ket{0}\_1 \ Ket{0}_3 + \ket{1}\_1 \ Ket{1}_3) $ :
 
 
   ```qsharp

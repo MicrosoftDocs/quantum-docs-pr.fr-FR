@@ -7,8 +7,8 @@ summary: >-
   Ajoute deux nombres à virgule fixe stockés dans des registres quantiques.
 
 
-  À partir de deux registres à virgule fixe respectivement dans les États $ \ket{F_1} $ et $ \ket{f_2} $, exécute l’opération $ \ket{F_1} \ket{f_2} \mapsto \ket{F_1} \ket{F_1 + f_2} $.
-remarks: Dans l’implémentation actuelle, les deux nombres à virgule fixe doivent avoir la même position de point que le bit de poids faible, c’est-à-dire $n _i $ et $p _i $ doivent être égaux.
+  À partir de deux registres à virgule fixe respectivement dans les États $ \ket{f_1} $ et $ \ket{f_2} $, exécute l’opération $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2} $.
+remarks: Dans l’implémentation actuelle, les deux nombres à virgule fixe doivent avoir la même position de point que le bit le moins significatif, c.-à-d. $n _i $ et $p _i $ doit être égal.
 syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'

@@ -14,7 +14,7 @@ summary: >-
 
   - Le Registre du système $s $ sur lequel le $U unitaire souhaité $ est appliqué, après sélection du registre $a $ étant dans l’État $ \ket{t}\_a $.
 remarks: >-
-  Ce Oracle défini par $ $ O\ket {s}\_a\ket {\ PSI}\_s = \lambda\ket{t}\_a \ket{\Psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ agit sur l’État Ancilla $ \ket{s}\_un $ à Implémentez le $U unitaire $ sur tout état du système $ \ket{\Psi}\_s $ avec l’amplitude $ \lambda $ dans la base marquée par $ \ket{t}\_un $.
+  Cette Oracle définie par $ $ O\ket {s}\_a\ket {\ PSI}\_s = \lambda\ket{t}\_a \ket{\Psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ agit sur l’État Ancilla $ \ket{s}\_un $ pour implémenter le $U unitaire $ sur tout état système $ \ket{\Psi}\_s $ avec l’amplitude $ \lambda $ dans la base marquée par $ \ket{t}\_un $.
 
   Le premier paramètre est le registre qubit de $ \ket{s}\_un $. Le deuxième paramètre est le registre qubit de $ \ket{\Psi}\_s $.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);

@@ -7,7 +7,7 @@ summary: >-
   Prépare un qubit dans l’état maximal mélangé.
 
 
-  Elle prépare le qubit donné dans l’État $ \boldone/$2 en appliquant le canal de dépolarisation $ $ \begin{align} \Omega (\rho) \mathrel{ : =} \frac{1}{4} \sum_{\mu \Dans \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\ poignard}, \end{align} $ $ où $ \sigma\_i $ est l’opérateur $i $ th Pauli et où $ \rho $ est un opérateur de densité représentant un État mixte.
+  Elle prépare le qubit donné dans l’État $ \boldone/$2 en appliquant le canal de dépolarisation $ $ \begin{align} \Omega (\rho) \mathrel{ : =} \frac{1}{4} \ sum_ {\mu \Dans \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}, \end{align} $ $ WHERE $ \sigma\_i $ est l’opérateur $i $ th Pauli et où $ \rho $ est un opérateur de densité représentant un État mixte.
 remarks: >-
   L’État mixte $ \boldone/$2 décrivant le résultat de l’application de cette opération à un état décrit de façon implicite une valeur d’attente sur les choix aléatoires effectués dans cette opération.
 

@@ -7,7 +7,7 @@ summary: >-
   À partir de deux opérations, déclare qu’elles agissent de la même manière pour tous les États d’entrée.
 
 
-  Cette assertion est implémentée en vérifiant l’action des opérations sur tous les États sous la forme $V _0 \otimes... \otimes V_ {n-1} $, où $V _K $ est l’un des États $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ et $ \ket{i} $ (+ 1 eigenstate de l’opérateur Y Pauli).
+  Cette assertion est implémentée en vérifiant l’action des opérations sur tous les États sous la forme $V _0 \otimes... \otimes V_ {n-1} $, où $V _k $ est l’un des États $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ et $ \ket{i} $ (+ 1 eigenstate de l’opérateur Y Pauli).
 
 
   Cette assertion utilise $n $ qubits et nécessite plusieurs appels des opérations comparées.

@@ -7,18 +7,18 @@ summary: >-
   Applique une rotation Pauli Z conditionnée sur un tableau de qubits.
 
 
-  Cela applique l’opération unitaire contrôlée par multiplication $U $ qui effectue des rotations par angle $ \theta_j $ sur l’opérateur qubit Pauli $Z $ lorsqu’il est contrôlé par l' $n de l’État $ \ket{j} $.
+  Cela applique l’opération unitaire contrôlée par multiplication $U $ qui effectue des rotations par angle $ \ theta_j $ à propos de l’opérateur Pauli qubit $Z $ lorsqu’il est contrôlé par l' $n $-qubit Number State $ \ket{j} $.
 
 
-  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {\theta_j} $.
-remarks: '`coefficients` est complété avec les éléments $ \theta_j = $0,0 si moins de $2 ^ n $ sont spécifiés.'
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \ theta_j} $.
+remarks: '`coefficients` est rempli avec les éléments $ \ theta_j = $0,0 si moins de $2 ^ n $ sont spécifiés.'
 syntax: 'operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 references: '- Synthèse des circuits logiques quantiques Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
 input:
   content: '(coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
   - name: coefficients
-    summary: Un tableau allant jusqu’à $2 ^ n $ coefficient $ \theta_j $. Le $j $ th coefficient indexe le nombre d’États $ \ket{j} $ encodé au format Little endian.
+    summary: Tableau allant jusqu’à $2 ^ n $ coefficients $ \ theta_j $. Le $j $ th coefficient indexe le nombre d’États $ \ket{j} $ encodé au format Little endian.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -26,7 +26,7 @@ input:
     summary: $n Registre de contrôle $-qubit qui encode les États de nombre $ \ket{j} $ dans un format avec primauté des octets de poids faible.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Registre qubit unique qui est pivoté par $e ^ {i P \theta_j} $.
+    summary: Registre qubit unique qui est pivoté par $e ^ {i P theta_j} $.
     isPrimitive: true
     uid: Qubit
 output:
