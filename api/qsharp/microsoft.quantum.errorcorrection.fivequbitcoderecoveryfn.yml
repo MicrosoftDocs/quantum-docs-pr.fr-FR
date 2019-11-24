@@ -7,7 +7,7 @@ summary: Retourne une fonction qui mappe les mesures de syndrome d’erreur aux 
 remarks: >-
   En effectuant une itération sur toutes les erreurs de poids $1 $, nous obtenons un total de $3 \ Times 5 = 15 $ de syndromes non triviales possibles.
 
-  Avec l’identité, un tableau d’erreurs et le syndrome correspondant sont générés. Pour le code 5 qubit, cette table est donnée par : $X\_1 : (0, 0, 0, 1); X\_2 : (1,0, 0, 0); X\_3 : (1, 1, 0, 0); X\_4 : (0, 1, 1, 0); X\_5 : (0, 0, 1, 1) $, $Z\_1 : (1, 0, 1, 0); Z\_2 : (0, 1, 0, 1); Z\_3 : (0, 0, 1, 0); Z\_4 : (1, 0, 0, 1); Z\_5 : (0, 1, 0, 0) $ avec $Y _i $ obtenu en ajoutant le $X _i $ et $Z _i $ syndromes. Notez que le classement de la récupération de la table de recherche est donné en convertissant le bitvectors en entiers (à l’aide de Little endian).
+  Avec l’identité, un tableau d’erreurs et le syndrome correspondant sont générés. Pour le code 5 qubit, cette table est donnée par : $X\_1 : (0, 0, 0, 1); X\_2 : (1,0, 0, 0); X\_3 : (1, 1, 0, 0); X\_4 : (0, 1, 1, 0); X\_5 : (0, 0, 1, 1) $, $Z\_1 : (1, 0, 1, 0); Z\_2 : (0, 1, 0, 1); Z\_3 : (0, 0, 1, 0); Z\_4 : (1, 0, 0, 1); Z\_5 : (0, 1, 0, 0) $ avec $Y _i $ obtenue en ajoutant les $X _i $ et $Z $ syndromes $. Notez que le classement de la récupération de la table de recherche est donné en convertissant le bitvectors en entiers (à l’aide de Little endian).
 syntax: 'function FiveQubitCodeRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: ()

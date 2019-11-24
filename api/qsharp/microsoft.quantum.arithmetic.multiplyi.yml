@@ -7,7 +7,7 @@ summary: Multipliez les `xs` entières par des `ys` entières et stockez le rés
 remarks: >-
   Utilise une approche standard Shift-and-Add pour implémenter la multiplication.
 
-  La version contrôlée a été améliorée en copiant $x _i $ dans un qubit Ancilla conditionnel sur le contrôle qubits, puis en contrôlant l’ajout sur la Ancilla qubit.
+  La version contrôlée a été améliorée par la copie des $x _i $ dans un Ancilla qubit conditionnel sur le qubits de contrôle, puis en contrôlant l’ajout sur le qubit Ancilla.
 syntax: 'operation MultiplyI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'

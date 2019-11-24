@@ -7,10 +7,10 @@ summary: >-
   Représente une unité où un opérateur arbitraire d’intérêt est encodé dans le bloc supérieur gauche.
 
 
-  Autrement dit, une `BlockEncoding` est une unité $U $ où un opérateur arbitraire $H $ d’intérêt qui agit sur le Registre du système `s` est encodé dans le bloc supérieur gauche correspondant à l’État auxiliaire $ \ket{0}a $. C'est
+  Autrement dit, une `BlockEncoding` est une unité $U $ où un opérateur arbitraire $H $ d’intérêt qui agit sur le Registre du système `s` est encodé dans le bloc supérieur gauche correspondant à l’État auxiliaire $ \ket{0}_a $. C'est
 
 
-  $ $ \begin{align} (\bra{0}a \ otimes I_s) U (\ket{0}a \ otimes I_s) = H \end{align} $ $.
+  $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \otimes I_s) = H \end{align} $ $.
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
   ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7

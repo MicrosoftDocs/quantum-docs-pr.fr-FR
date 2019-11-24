@@ -9,7 +9,7 @@ input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: Coefficients du polynôme impair sous forme de tableau double, c’est-à-dire le tableau $ [a_0, A_1,..., a_k] $ pour le polynôme impair $P (x) = a_0 x + A_1 x ^ 3 + \cdots + a_k x ^ {2k + 1} $.
+    summary: Coefficients du polynôme impair sous forme de tableau double, c’est-à-dire le tableau $ [a_0, a_1,..., a_k] $ pour la $P polynomiale irrégulière (x) = a_0 x + a_1 x ^ 3 + \cdots + a_k x ^ {2k + 1} $.
     isArray: true
     isPrimitive: true
     uid: Double
