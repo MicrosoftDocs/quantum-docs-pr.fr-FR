@@ -7,7 +7,7 @@ summary: >-
   Applique une rotation autour de l’axe de Pauli donné par un angle spécifié comme une fraction dyadic.
 
 
-  \begin{align} r_ {\mu} (n, k) \mathrel{ : =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align} où $ \mu \Dans \{I, X, Y, Z\}$.
+  \begin{align} R_ {\mu} (n, k) \mathrel{ : =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} où $ \mu \Dans \{I, X, Y, Z\}$.
 
 
   > [!WARNING]

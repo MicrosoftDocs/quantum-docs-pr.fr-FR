@@ -7,7 +7,7 @@ summary: >-
   Applique l’exponentiel d’un opérateur qubit Pauli.
 
 
-  \begin{align} e ^ {i \Theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align} où $P _i $ est le $i $ th élément de `paulis`et où $N = $`Length(paulis)`.
+  \begin{align} e ^ {i \Theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align} où $P _i $ est le $i élément $ Th de `paulis`, et où $N = $`Length(paulis)`.
 syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'

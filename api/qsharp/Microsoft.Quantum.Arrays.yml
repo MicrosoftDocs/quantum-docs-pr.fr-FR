@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
-summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions pour la création et la manipulation de tableaux de données."
+summary: " # <a name=\"summary\"></a>summary\n Cet espace de noms contient des fonctions pour la création et la manipulation de tableaux de données."
 functions:
 - uid: microsoft.quantum.arrays.all
   summary: À partir d’un tableau et d’un prédicat définis pour les éléments du tableau, et vérifie si tous les éléments du tableau répondent au prédicat.

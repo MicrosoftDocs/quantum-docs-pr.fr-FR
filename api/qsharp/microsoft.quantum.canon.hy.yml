@@ -7,7 +7,7 @@ summary: >-
   Applique l’analogique Y à la transformation Hadarmard qui change les axes Z et Y.
 
 
-  La transformation Y Hadarmard $H _Y = S H $ sur un seul qubit est :
+  La transformation Y Hadarmard $H _Y = S H $ sur un qubit unique est :
 
 
   \begin{align} H_Y \mathrel{ : =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i &-i \end{bmatrix}.
