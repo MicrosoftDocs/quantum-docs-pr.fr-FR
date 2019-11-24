@@ -7,7 +7,7 @@ summary: >-
   Calcule la parité d’un tableau de qubits dans un qubit cible.
 
 
-  Si le tableau est initialement dans l’État $ \ket{q_0} \ket{q_1} \cdots \ket{Q_{\text{Target}}} $, l’état final est donné par $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{Q_{n-1} \oplus \cdots \oplus q_0 \oplus Q_ {\text{Target}}} $.
+  Si le tableau est initialement dans l’État $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\text{Target}}} $, l’état final est donné par $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\text{Target}}} $.
 remarks: >-
   Les éléments suivants sont équivalents :
 
@@ -19,7 +19,7 @@ remarks: >-
   ```
 
 
-  et la
+  and
 
 
   ```qsharp

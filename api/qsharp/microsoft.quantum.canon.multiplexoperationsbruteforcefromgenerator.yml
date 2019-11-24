@@ -4,7 +4,7 @@ name: MultiplexOperationsBruteForceFromGenerator
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Applique une opération unitaire contrôlée par multiplication $U $ qui applique un $V unitaire _J $ lorsqu’il est contrôlé par le numéro d’État n-qubit $ \ket{j} $.
+  Applique une opération unitaire contrôlée par multiplication $U $ qui applique un $V unitaire _j $ lorsqu’il est contrôlé par le numéro d’État n-qubit $ \ket{j} $.
 
 
   $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -14,7 +14,7 @@ input:
   content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
   types:
   - name: unitaryGenerator
-    summary: Un tuple où le premier élément `Int` est le nombre d’unités de $N $, et le deuxième élément `(Int -> ('T => () is Adj + Ctl))` est une fonction qui accepte un entier $j $ dans $ [0, N-1] $ et génère l’opération unitaire $V _J $.
+    summary: Un tuple où le premier élément `Int` est le nombre d’unités de $N $, et le deuxième élément `(Int -> ('T => () is Adj + Ctl))` est une fonction qui accepte un entier $j $ dans $ [0, N-1] $ et génère l’opération unitaire $V _j $.
     types:
     - isPrimitive: true
       uid: Int
@@ -41,7 +41,7 @@ input:
     summary: $n Registre de contrôle $-qubit qui encode les États de nombre $ \ket{j} $ dans un format avec primauté des octets de poids faible.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Registre qubit générique sur lequel $V _J $ agit.
+    summary: Registre qubit générique sur lequel $V _j $ agit.
     uid: "'T"
     isLocal: true
 output:

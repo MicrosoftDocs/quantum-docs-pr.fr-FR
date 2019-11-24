@@ -7,8 +7,8 @@ summary: >-
   Crée un Unity d’encodage de bloc pour un produit Hamilton.
 
 
-  Le $H de Hamilton, = \sum_{j}\alpha_j P_j $, est décrit par une somme de termes Pauli $P _J $, chacun avec un coefficient réel $ \alpha_j $.
-remarks: Cela est obtenu en préparant et en dépréparant l’État $ \ sum_ {j} \ sqrt {\ alpha_j/\ alpha} \ Ket {j} $, et en construisant un <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> unitaire contrôlé par multiplication et <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>.
+  Le $H de Hamilton, = \ sum_ {j} \ alpha_j P_j $ est décrit par une somme de termes Pauli $P _j $, chacun avec un coefficient réel $ \ alpha_j $.
+remarks: Cela est obtenu en préparant et en dépréparant l’État $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ et en construisant un <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> unitaire et un <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>unitaires contrôlés par multiplication.
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -23,7 +23,7 @@ output:
       ## <a name="first-parameter"></a>Premier paramètre
 
 
-      La norme « One-normal » est $ \alpha = \sum_{j} | \alpha_j | $.
+      La norme « One-normal » est $ \alpha = \ sum_ {j} | \ alpha_j | $.
 
 
       ## <a name="second-parameter"></a>Deuxième paramètre

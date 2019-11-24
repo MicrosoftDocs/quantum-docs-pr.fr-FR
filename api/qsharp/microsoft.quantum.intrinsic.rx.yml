@@ -7,7 +7,7 @@ summary: >-
   Applique une rotation autour du $x $-AXIS par un angle donné.
 
 
-  \begin{align} R_x (\Theta) \mathrel{ : =} e ^ {-i \Theta \sigma_x/2} = \begin{bmatrix} \cos \frac{\Theta}{2} &-i\sin \frac{\Theta}{2}\\\\-i\sin \frac{\Theta}{2} & \cos \frac{\Theta}{2} \end{bmatrix}.
+  \begin{align} R_x (\Theta) \mathrel{ : =} e ^ {-i \Theta \ sigma_x/2} = \begin{bmatrix} \cos \frac{\Theta}{2} &-i\sin \frac{\Theta}{2}\\\\-i\sin \frac{\Theta}{2} & \cos \frac{\Theta}{2} \end{bmatrix}.
 
   \end{align}
 remarks: >-

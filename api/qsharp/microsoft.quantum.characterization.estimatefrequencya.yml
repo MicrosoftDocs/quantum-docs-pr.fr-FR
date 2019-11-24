@@ -46,7 +46,7 @@ input:
 output:
   content: Double
   types:
-  - summary: Estimation de $ \hat{p} $ de la fréquence avec laquelle $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourne `Zero`, obtenue à l’aide de l’estimateur binomiale non biaisé $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $, où $n\_{\ flèche haut} $ est le nombre de résultats `Zero` observés.
+  - summary: Estimation de $ \hat{p} $ de la fréquence avec laquelle $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourne `Zero`, obtenue à l’aide de l’estimateur binomiale non biaisé $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $, où $n\_{\uparrow} $ est le nombre de résultats de `Zero` observés.
     isPrimitive: true
     uid: Double
 metadata:
