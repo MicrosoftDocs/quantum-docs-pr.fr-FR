@@ -3,150 +3,66 @@ uid: microsoft.quantum.primitive
 name: Microsoft.Quantum.Primitive
 functions:
 - uid: microsoft.quantum.primitive.message
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.message".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nLe message est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.message\".\nUtilisez @\"microsoft.quantum.intrinsic.message\"."
 operations:
 - uid: microsoft.quantum.primitive.assert
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.assert".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nL’assertion est dépréciée. Utilisez plutôt @\"microsoft.quantum.intrinsic.assert\".\nUtilisez @\"microsoft.quantum.intrinsic.assert\"."
 - uid: microsoft.quantum.primitive.assertprob
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.assertprob".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertProb est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.assertprob\".\nUtilisez @\"microsoft.quantum.intrinsic.assertprob\"."
 - uid: microsoft.quantum.primitive.ccnot
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.ccnot".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nCCNOT est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.ccnot\".\nUtilisez @\"microsoft.quantum.intrinsic.ccnot\"."
 - uid: microsoft.quantum.primitive.cnot
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.cnot".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nCNOTIN est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.cnot\".\nUtilisez @\"microsoft.quantum.intrinsic.cnot\"."
 - uid: microsoft.quantum.primitive.exp
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.exp".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nExp est dépréciée. Utilisez plutôt @\"microsoft.quantum.intrinsic.exp\".\nUtilisez @\"microsoft.quantum.intrinsic.exp\"."
 - uid: microsoft.quantum.primitive.expfrac
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.expfrac".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nExpFrac est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.expfrac\".\nUtilisez @\"microsoft.quantum.intrinsic.expfrac\"."
 - uid: microsoft.quantum.primitive.h
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.h".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nH est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.h\".\nUtilisez @\"microsoft.quantum.intrinsic.h\"."
 - uid: microsoft.quantum.primitive.i
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.i".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nJ’ai été déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.i\".\nUtilisez @\"microsoft.quantum.intrinsic.i\"."
 - uid: microsoft.quantum.primitive.m
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.m".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nM est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.m\".\nUtilisez @\"microsoft.quantum.intrinsic.m\"."
 - uid: microsoft.quantum.primitive.measure
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.measure".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nLa mesure est dépréciée. Utilisez plutôt @\"microsoft.quantum.intrinsic.measure\".\nUtilisez @\"microsoft.quantum.intrinsic.measure\"."
 - uid: microsoft.quantum.primitive.multix
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.canon.applytoeachca".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nMultiX est déconseillé. Utilisez @ \"applytoeachca (x, _)\" à la place.\nUtilisez @\"microsoft.quantum.canon.applytoeachca\"."
 - uid: microsoft.quantum.primitive.r
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.r".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nR est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.r\".\nUtilisez @\"microsoft.quantum.intrinsic.r\"."
 - uid: microsoft.quantum.primitive.r1
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.r1".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nR1 est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.r1\".\nUtilisez @\"microsoft.quantum.intrinsic.r1\"."
 - uid: microsoft.quantum.primitive.r1frac
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.r1frac".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nR1Frac est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.r1frac\".\nUtilisez @\"microsoft.quantum.intrinsic.r1frac\"."
 - uid: microsoft.quantum.primitive.random
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.random".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nRandom est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.random\".\nUtilisez @\"microsoft.quantum.intrinsic.random\"."
 - uid: microsoft.quantum.primitive.reset
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.reset".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nLa réinitialisation a été dépréciée. Utilisez plutôt @\"microsoft.quantum.intrinsic.reset\".\nUtilisez @\"microsoft.quantum.intrinsic.reset\"."
 - uid: microsoft.quantum.primitive.resetall
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.resetall".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nResetAll est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.resetall\".\nUtilisez @\"microsoft.quantum.intrinsic.resetall\"."
 - uid: microsoft.quantum.primitive.rfrac
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.rfrac".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nRFrac est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.rfrac\".\nUtilisez @\"microsoft.quantum.intrinsic.rfrac\"."
 - uid: microsoft.quantum.primitive.rx
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.rx".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nRX est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.rx\".\nUtilisez @\"microsoft.quantum.intrinsic.rx\"."
 - uid: microsoft.quantum.primitive.ry
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.ry".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nRy est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.ry\".\nUtilisez @\"microsoft.quantum.intrinsic.ry\"."
 - uid: microsoft.quantum.primitive.rz
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.rz".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nRZ est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.rz\".\nUtilisez @\"microsoft.quantum.intrinsic.rz\"."
 - uid: microsoft.quantum.primitive.s
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.s".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nS est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.s\".\nUtilisez @\"microsoft.quantum.intrinsic.s\"."
 - uid: microsoft.quantum.primitive.swap
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.swap".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nL’échange est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.swap\".\nUtilisez @\"microsoft.quantum.intrinsic.swap\"."
 - uid: microsoft.quantum.primitive.t
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.t".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nT est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.t\".\nUtilisez @\"microsoft.quantum.intrinsic.t\"."
 - uid: microsoft.quantum.primitive.x
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.x".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nX est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.x\".\nUtilisez @\"microsoft.quantum.intrinsic.x\"."
 - uid: microsoft.quantum.primitive.y
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.y".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nY est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.y\".\nUtilisez @\"microsoft.quantum.intrinsic.y\"."
 - uid: microsoft.quantum.primitive.z
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.intrinsic.z".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nZ est déconseillé. Utilisez plutôt @\"microsoft.quantum.intrinsic.z\".\nUtilisez @\"microsoft.quantum.intrinsic.z\"."
 metadata:
-  ms.openlocfilehash: 87dc52b15f7fb17c6e9c3c11ec04a91e775a36ef
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d3eef5b065a00cee2b31ea1a99e8814b5ca11ae0
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216031"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858239"

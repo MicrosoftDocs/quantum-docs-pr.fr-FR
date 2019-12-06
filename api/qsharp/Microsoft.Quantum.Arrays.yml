@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
-summary: " # <a name=\"summary\"></a>summary\n Cet espace de noms contient des fonctions pour la création et la manipulation de tableaux de données."
+summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions pour la création et la manipulation de tableaux de données."
 functions:
 - uid: microsoft.quantum.arrays.all
   summary: À partir d’un tableau et d’un prédicat définis pour les éléments du tableau, et vérifie si tous les éléments du tableau répondent au prédicat.
@@ -45,8 +45,12 @@ functions:
   summary: Obtient un tableau d’entiers dans un intervalle donné.
 - uid: microsoft.quantum.arrays.subarray
   summary: Prend un tableau et une liste d’emplacements et produit un nouveau tableau formé à partir des éléments du tableau d’origine qui correspondent aux emplacements donnés.
+- uid: microsoft.quantum.arrays.swapped
+  summary: Applique un échange de deux éléments dans un tableau.
 - uid: microsoft.quantum.arrays.tail
   summary: Retourne le dernier élément du tableau.
+- uid: microsoft.quantum.arrays.tuplearrayasnestedarray
+  summary: Convertit une liste de 2 tuples en tableau imbriqué.
 - uid: microsoft.quantum.arrays.zip
   summary: À partir de deux tableaux, retourne un nouveau tableau de paires de sorte que chaque paire contient un élément de chaque tableau d’origine.
 - uid: microsoft.quantum.arrays.zip3
@@ -57,9 +61,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: À partir d’un tableau et d’une opération définie pour les éléments du tableau, retourne un nouveau tableau qui se compose des images du tableau d’origine sous l’opération.
 metadata:
-  ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 12835bef2608d979809027cb9a271f2cda864b10
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73057180"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858868"

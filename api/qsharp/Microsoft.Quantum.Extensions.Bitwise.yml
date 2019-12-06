@@ -3,44 +3,23 @@ uid: microsoft.quantum.extensions.bitwise
 name: Microsoft.Quantum.Extensions.Bitwise
 functions:
 - uid: microsoft.quantum.extensions.bitwise.and
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.bitwise.and".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nEt est déconseillé. Utilisez plutôt @\"microsoft.quantum.bitwise.and\".\nUtilisez @\"microsoft.quantum.bitwise.and\"."
 - uid: microsoft.quantum.extensions.bitwise.not
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.bitwise.not".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nN’a pas été déconseillé. Utilisez plutôt @\"microsoft.quantum.bitwise.not\".\nUtilisez @\"microsoft.quantum.bitwise.not\"."
 - uid: microsoft.quantum.extensions.bitwise.or
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.bitwise.or".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nOu est déconseillé. Utilisez plutôt @\"microsoft.quantum.bitwise.or\".\nUtilisez @\"microsoft.quantum.bitwise.or\"."
 - uid: microsoft.quantum.extensions.bitwise.parity
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.bitwise.parity".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nLa parité est dépréciée. Utilisez plutôt @\"microsoft.quantum.bitwise.parity\".\nUtilisez @\"microsoft.quantum.bitwise.parity\"."
 - uid: microsoft.quantum.extensions.bitwise.xbits
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.bitwise.xbits".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nXBits est déconseillé. Utilisez plutôt @\"microsoft.quantum.bitwise.xbits\".\nUtilisez @\"microsoft.quantum.bitwise.xbits\"."
 - uid: microsoft.quantum.extensions.bitwise.xor
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.bitwise.xor".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nXOR est déconseillé. Utilisez plutôt @\"microsoft.quantum.bitwise.xor\".\nUtilisez @\"microsoft.quantum.bitwise.xor\"."
 - uid: microsoft.quantum.extensions.bitwise.zbits
-  summary: >-
-    > [!WARNING]
-
-    > Déconseillé, utilisez @"microsoft.quantum.bitwise.zbits".
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nZBits est déconseillé. Utilisez plutôt @\"microsoft.quantum.bitwise.zbits\".\nUtilisez @\"microsoft.quantum.bitwise.zbits\"."
 metadata:
-  ms.openlocfilehash: ac63e91ec3fefe0002f14b1542eaa97456bd33aa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 69399e7aa3c7173b1173f278a79046e639db71d6
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056760"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858395"
