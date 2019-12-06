@@ -7,7 +7,7 @@ functions:
 - uid: microsoft.quantum.math.abscomplexpolar
   summary: Retourne la valeur absolue d’un nombre complexe de type `ComplexPolar`.
 - uid: microsoft.quantum.math.absd
-  summary: Retourne la valeur absolue d’un nombre à virgule flottante double précision.
+  summary: Retourne la valeur absolue d'un nombre à virgule flottante double précision.
 - uid: microsoft.quantum.math.absi
   summary: Retourne la valeur absolue d’un entier.
 - uid: microsoft.quantum.math.absl
@@ -17,17 +17,17 @@ functions:
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
   summary: Retourne la valeur absolue au carré d’un nombre complexe de type `ComplexPolar`.
 - uid: microsoft.quantum.math.arccos
-  summary: Retourne l’angle dont le cosinus est le nombre spécifié.
+  summary: Retourne l'angle dont le cosinus est le nombre spécifié.
 - uid: microsoft.quantum.math.arccosh
   summary: Calcule le cosinus hyperbolique inverse d’un nombre.
 - uid: microsoft.quantum.math.arcsin
-  summary: Retourne l’angle dont le sinus est le nombre spécifié.
+  summary: Retourne l'angle dont le sinus est le nombre spécifié.
 - uid: microsoft.quantum.math.arcsinh
   summary: Calcule le sinus hyperbolique inverse d’un nombre.
 - uid: microsoft.quantum.math.arctan
-  summary: Retourne l’angle dont la tangente est le nombre spécifié.
+  summary: Retourne l'angle dont la tangente est le nombre spécifié.
 - uid: microsoft.quantum.math.arctan2
-  summary: Retourne l’angle dont la tangente est le quotient de deux nombres spécifiés.
+  summary: Retourne l'angle dont la tangente est le quotient de deux nombres spécifiés.
 - uid: microsoft.quantum.math.arctanh
   summary: Calcule la tangente hyperbolique inverse d’un nombre.
 - uid: microsoft.quantum.math.argcomplex
@@ -53,17 +53,17 @@ functions:
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: Convertit un nombre complexe de `ComplexPolar` de type en un nombre complexe de type `Complex`.
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: ''
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nComplexPolarToComplex est déconseillé. Utilisez plutôt @\"microsoft.quantum.math.complexpolarascomplex\"."
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: ''
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nComplexToComplexPolar est déconseillé. Utilisez plutôt @\"microsoft.quantum.math.complexascomplexpolar\"."
 - uid: microsoft.quantum.math.continuedfractionconvergenti
   summary: Recherche la fraction continue la plus proche de `fraction` avec le dénominateur inférieur ou égal à `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
   summary: Recherche la fraction continue la plus proche de `fraction` avec le dénominateur inférieur ou égal à `denominatorBound`
 - uid: microsoft.quantum.math.cos
-  summary: Retourne le cosinus de l’angle spécifié.
+  summary: Retourne le cosinus de l'angle spécifié.
 - uid: microsoft.quantum.math.cosh
-  summary: Retourne le cosinus hyperbolique de l’angle spécifié.
+  summary: Retourne le cosinus hyperbolique de l'angle spécifié.
 - uid: microsoft.quantum.math.dividedbyc
   summary: Retourne le quotient de deux entrées.
 - uid: microsoft.quantum.math.dividedbycp
@@ -95,7 +95,7 @@ functions:
 - uid: microsoft.quantum.math.greatestcommondivisorl
   summary: Calcule le plus grand commun diviseur de $a $ et $b $. Le GCD est toujours positif.
 - uid: microsoft.quantum.math.ieeeremainder
-  summary: Retourne le reste résultant de la Division d’un nombre spécifié par un autre nombre spécifié.
+  summary: Retourne le reste de la division d'un nombre spécifié par un autre.
 - uid: microsoft.quantum.math.inversemodi
   summary: Retourne $b $ de telle sorte que $a \cdot b = 1 (\operatorname{mod} \texttt{Modulus}) $.
 - uid: microsoft.quantum.math.inversemodl
@@ -109,7 +109,7 @@ functions:
 - uid: microsoft.quantum.math.log
   summary: Retourne le logarithme népérien (base $e $) d’un nombre spécifié.
 - uid: microsoft.quantum.math.log10
-  summary: Retourne le logarithme de base 10 d’un nombre spécifié.
+  summary: Retourne le logarithme de base 10 d'un nombre spécifié.
 - uid: microsoft.quantum.math.logof2
   summary: Retourne le logarithme népérien de 2.
 - uid: microsoft.quantum.math.max
@@ -159,7 +159,7 @@ functions:
 - uid: microsoft.quantum.math.negationl
   summary: Retourne la négation unaire d’une entrée.
 - uid: microsoft.quantum.math.pi
-  summary: Représente le rapport de la circonférence d’un cercle à son diamètre, spécifié par la constante, π.
+  summary: Représente le rapport de la circonférence d’un cercle à son diamètre, spécifié par la constante π.
 - uid: microsoft.quantum.math.plusa
   summary: Retourne la somme (concaténation) de deux entrées.
 - uid: microsoft.quantum.math.plusc
@@ -177,7 +177,7 @@ functions:
     Retourne l' `L(p)` norme d’un vecteur de `Double`s.
 
 
-    Autrement dit, étant donné un tableau $x $ de type `Double[]`, cela retourne le $p $-normal $\|x\|\_p = (\sum_{j} | x_j | ^ {p}) ^ {1/p} $.
+    Autrement dit, étant donné un tableau $x $ de type `Double[]`, cela retourne le $p $-normal $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
     Normalise un vecteur de `Double`s dans la norme `L(p)`.
@@ -197,7 +197,7 @@ functions:
 - uid: microsoft.quantum.math.realmod
   summary: Calcule le modulo entre deux nombres réels.
 - uid: microsoft.quantum.math.round
-  summary: Arrondit une valeur à l’entier le plus proche ou au nombre spécifié de chiffres fractionnaires.
+  summary: Arrondit une valeur à l'entier le plus proche ou au nombre spécifié de chiffres fractionnaires.
 - uid: microsoft.quantum.math.signd
   summary: Retourne un entier qui indique le signe d’un nombre.
 - uid: microsoft.quantum.math.signi
@@ -205,15 +205,15 @@ functions:
 - uid: microsoft.quantum.math.signl
   summary: Retourne un entier qui indique le signe d’un nombre.
 - uid: microsoft.quantum.math.sin
-  summary: Retourne le sinus de l’angle spécifié.
+  summary: Retourne le sinus de l'angle spécifié.
 - uid: microsoft.quantum.math.sinh
-  summary: Retourne le sinus hyperbolique de l’angle spécifié.
+  summary: Retourne le sinus hyperbolique de l'angle spécifié.
 - uid: microsoft.quantum.math.sqrt
-  summary: Retourne la racine carrée d’un nombre spécifié.
+  summary: Retourne la racine carrée d'un nombre spécifié.
 - uid: microsoft.quantum.math.tan
-  summary: Retourne la tangente de l’angle spécifié.
+  summary: Retourne la tangente de l'angle spécifié.
 - uid: microsoft.quantum.math.tanh
-  summary: Retourne la tangente hyperbolique de l’angle spécifié.
+  summary: Retourne la tangente hyperbolique de l'angle spécifié.
 - uid: microsoft.quantum.math.timesc
   summary: Retourne le produit de deux entrées.
 - uid: microsoft.quantum.math.timescp
@@ -225,7 +225,7 @@ functions:
 - uid: microsoft.quantum.math.timesl
   summary: Retourne le produit de deux entrées.
 - uid: microsoft.quantum.math.truncate
-  summary: Calcule la partie entière d’un nombre.
+  summary: Calcule la partie entière d'un nombre.
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
   summary: Représente un nombre rationnel de la `p/q`de formulaire. Entier `p` est le premier élément du tuple et `q` est le deuxième élément du tuple.
@@ -253,9 +253,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Retourne l’un des opérateurs Pauli à qubit unique uniformément au hasard.
 metadata:
-  ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 00156d553e8378b1a38dcd6f1749c4ff3cb689a7
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056297"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858256"
