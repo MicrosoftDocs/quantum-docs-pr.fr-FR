@@ -1,17 +1,17 @@
 ---
 title: Vérificateur d’entrées distinct | Simulateur de trace d’ordinateur Quantum | Microsoft Docs
-description: Vue d’ensemble du simulateur de trace d’ordinateur Quantum
+description: Vue d’ensemble du simulateur de traces d’ordinateur quantique
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 0df28f6d74279db4678c3485a23a9341680eec52
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ce3f156a84a4509781a74c9276b953c79670a756
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184693"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864302"
 ---
 # <a name="distinct-inputs-checker"></a>Vérificateur d’entrées distinct
 
@@ -28,7 +28,7 @@ operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => 
 Lorsque l’utilisateur regarde ce programme, il suppose que l’ordre dans lequel les `op1` et les `op2` sont appelés n’a pas d’importance, car `q1` et `q2` sont différents qubits et opérations agissant sur différents qubits. Prenons à présent un exemple, où cette opération est utilisée :
 
 ```qsharp
-operation DisctinctQubitCaptured2Test () : Unit {
+operation CapturedQubits () : Unit {
 
     using (q = Qubit[3]) {
         let op1 = CNOT(_, q[1]);

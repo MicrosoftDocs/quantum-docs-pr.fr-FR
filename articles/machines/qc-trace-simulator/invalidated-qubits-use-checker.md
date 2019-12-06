@@ -1,24 +1,24 @@
 ---
 title: Vérificateur d’utilisation de qubits invalidée | Simulateur de trace d’ordinateur Quantum | Microsoft Docs
-description: Vue d’ensemble du simulateur de trace d’ordinateur Quantum
+description: Vue d’ensemble du simulateur de traces d’ordinateur quantique
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: 7403381b995ab660aa5cbc5a52b1e12c5c9ce442
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 283cc7d7d88f731f40fa396c38ae5ea8dd90537f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184965"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863178"
 ---
 # <a name="invalidated-qubits-use-checker"></a>Vérificateur d’utilisation de qubits non valide
 
 Le `Invalidated Qubits Use Checker` fait partie de l’ordinateur Quantum [TraceSimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) conçu pour détecter les bogues potentiels dans le code. Examinez l’élément suivant du code Q # pour illustrer les problèmes détectés par l' `Invalidated Qubits Use Checker`.
 
 ```qsharp
-operation UseReleasedQubitTest () : Unit {
+operation UseReleasedQubit () : Unit {
     mutable q = new Qubit[1];
     using (ans = Qubit()) {
         set q w/= 0 <- ans;

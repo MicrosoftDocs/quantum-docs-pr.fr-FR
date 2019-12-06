@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5aac40686ba9b45a51e0274a1828f2ff7cce6fc3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184438"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863195"
 ---
 # <a name="error-correction"></a>Correction des erreurs #
 
@@ -28,7 +28,7 @@ Dans le paramètre Quantum, nous voyons que la mesure est problématique. Nous p
 Il est utile de le faire pour voir comment vous pouvez généraliser la correction des erreurs dans le cas Quantum.
 Par conséquent, laissez $ \ket{\overline{0}} = \ket{000} = \ket{0} \otimes \ket{0} \otimes \ket{0}$ et laissez $ \ket{\overline{1}} = \ket{111}$.
 Ensuite, par linéarité, nous avons défini notre code de répétition pour toutes les entrées ; par exemple, $ \ket{\overline{+}} = (\ket{\overline{0}} + \ket{\overline{1}})/\sqrt{2} = (\ket{000} + \ket{111})/\sqrt{2}$.
-En particulier, si vous laissez une erreur de retournement de bit $X _ 1 $ agir sur le qubit du milieu, nous constatons que la correction nécessaire dans les deux branches est précise $X _ 1 $ : $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket @no__ t_3_ \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010} + \ket{101} \right).
+En particulier, si vous laissez une erreur de retournement de bit $X _ 1 $ Act sur le qubit du milieu, nous voyons que la correction nécessaire dans les deux branches est précisément $X _ 1 $ : $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket{111} \right) \\\\ & = \frac{1}{\sqrt{2}} \left
 \end{align} $ $
 
 Pour voir comment nous pouvons déterminer que c’est le cas sans mesurer le tout l’état que nous tentons de protéger, il est utile de noter ce que fait chaque erreur de retournement de bits vers nos États logiques :
@@ -45,7 +45,7 @@ Par exemple, si nous mesurons $Z _0 $, nous obtenons un résultat différent pou
 En revanche, envisagez de mesurer $Z _0 Z_1 $, la parité des deux premiers bits dans chaque État de base de calcul.
 Rappelez-vous que chaque mesure d’un opérateur Pauli vérifie les eigenvalue l’État mesuré correspond à. donc, pour chaque État $ \ket{\Psi} $ dans le tableau ci-dessus, nous pouvons calculer $Z _0 Z_1 \ket{\Psi} $ pour voir si nous obtenons $ \pm\ket{\Psi} $.
 Notez que $Z _0 Z_1 \ket{000} = \ket{000}$ et que $Z _0 Z_1 \ket{111} = \ket{111}$, nous concluons que cette mesure fait la même chose pour les deux États encodés.
-En revanche, $Z _0 Z_1 \ket{100} =-\ket{100}$ et $Z _0 Z_1 \ket{011} =-\ket{011}$, le résultat de la mesure de $Z _0 Z_1 $ révèle des informations utiles sur l’erreur qui s’est produite.
+En revanche, $Z _0 Z_1 \ket{100} =-\ket{100}$ et $Z _0 Z_1 \ket{011} =-\ket{011}$, de sorte que le résultat de la mesure de $Z _0 Z_1 $ révèle des informations utiles sur l’erreur qui s’est produite.
 
 Pour souligner cela, nous répétons le tableau ci-dessus, mais nous ajoutons les résultats de la mesure $Z _0 Z_1 $ et $Z _ 1 Z_2 $ sur chaque ligne.
 Nous désignons les résultats de chaque mesure par le signe du eigenvalue observé, $ + $ ou $-$, correspondant aux valeurs Q # `Result` de `Zero` et de `One`, respectivement.
@@ -67,7 +67,7 @@ En particulier, nous insistons sur le fait que la récupération est une procéd
 > De même, l’application d’une opération de basculement de phase `Z` mappera $ \ket{\overline{1}} $ à $-\ket{\overline{1}} $, et mappera donc $ \ket{\overline{+}} $ à $ \ket{\overline{-}} $.
 > Plus généralement, il est possible de créer des codes pour gérer le plus grand nombre d’erreurs et de gérer les erreurs de $Z $, ainsi que les erreurs $X $.
 
-L’information qui nous permet de décrire les mesures de correction des erreurs Quantum qui agissent de la même manière sur tous les États de code est l’Essen du *formalisme du stabilisant*.
+L’information qui nous permet de décrire les mesures dans la correction des erreurs Quantum qui agissent de la même manière sur tous les États de code est l’essence du *formalisme du stabilisant*.
 Le moteur Q # Canon fournit une infrastructure pour décrire l’encodage et le décodage à partir de codes stabilisants, et pour décrire la façon dont l’un récupère des erreurs.
 Dans cette section, nous décrivons cette infrastructure et son application à quelques codes de correction des erreurs Quantum simples.
 
@@ -117,6 +117,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-Nous explorons ceci plus en détail dans l' [exemple de code de symétrie de bit](https://github.com/Microsoft/Quantum/tree/master/Samples/src/BitFlipCode).
+Nous explorons ceci plus en détail dans l' [exemple de code de symétrie de bit](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
 
-Hormis le code d’inversion de bits, le moteur Q # Canon est fourni avec les implémentations du [code parfait qubit](https://arxiv.org/abs/1305.08)et du [Code de sept qubit](https://arxiv.org/abs/quant-ph/9705052), qui peuvent corriger une erreur de qubit unique arbitraire.
+Hormis le code d’inversion de bits, le moteur Q # Canon est fourni avec les implémentations du [code parfait qubit](https://arxiv.org/abs/quant-ph/9602019)et du [Code de sept qubit](https://arxiv.org/abs/quant-ph/9705052), qui peuvent corriger une erreur de qubit unique arbitraire.

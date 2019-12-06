@@ -5,18 +5,17 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4677b0f9c4f64a9c1bc46d34e8a883dc006ba8f0
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183299"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863144"
 ---
 # <a name="going-further"></a>Aller plus loin #
 
 Maintenant que vous avez vu comment écrire des programmes quantiques intéressants dans Q #, cette section va plus loin en introduisant des rubriques plus avancées qui doivent se révéler utiles.
 
-<!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
 ## <a name="generic-operations-and-functions"></a>Opérations et fonctions génériques ##
 
@@ -24,7 +23,7 @@ Maintenant que vous avez vu comment écrire des programmes quantiques intéressa
 > Cette section suppose une connaissance de base des [génériques dans C# ](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics), des [génériques dans F# ](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/), [ C++ des modèles](https://docs.microsoft.com/cpp/cpp/templates-cpp)ou des approches similaires à la surprogrammation dans d’autres langages.
 
 De nombreuses fonctions et opérations que nous pouvons souhaiter définir ne s’appuient pas vraiment sur les types de leurs entrées, mais plutôt implicitement utiliser leurs types via une autre fonction ou opération.
-Par exemple, considérez le concept de *carte* commun à de nombreux langages fonctionnels ; à partir d’une fonction $f (x) $ et d’une collection de valeurs $\{X_1, X_2, \dots, x_n\}$, Map retourne une nouvelle collection $\{f (X_1), f (X_2), \dots, f (x_n)\}$.
+Par exemple, considérez le concept de *carte* commun à de nombreux langages fonctionnels ; à partir d’une fonction $f (x) $ et d’une collection de valeurs $\{x_1, x_2, \dots, x_n\}$, Map retourne une nouvelle collection $\{f (x_1), f (x_2), \dots, f (x_n)\}$.
 Pour l’implémenter dans Q #, nous pouvons tirer parti de la première classe de ces fonctions.
 Nous allons écrire un exemple rapide de `Map`, en utilisant ★ en tant qu’espace réservé tout en décrivant les types dont nous avons besoin.
 
@@ -178,6 +177,6 @@ is Adj + Ctl {
 }
 ```
 
-Notez que l’utilisation intensive du combineur `With`---dans sa forme applicable pour les opérations qui prennent en charge la valeur de voisint, c’est-à-dire `WithA`---a été effectuée dans cet exemple, ce qui est un bon style de programmation, car l’ajout d’un contrôle à des structures impliquant `With` uniquement propage le contrôle à l’opération interne. Notez également que, en plus de la `body` de l’opération, une implémentation du corps `controlled` de l’opération a été explicitement fournie, plutôt que de recourir à une instruction `controlled auto`. Cela est dû au fait que nous savons à partir de la structure du circuit comment ajouter facilement des contrôles supplémentaires, ce qui est avantageux par rapport à l’ajout de contrôle à chaque porte de la `body`. 
+Notez que l’utilisation intensive du combineur `With`---dans sa forme applicable pour les opérations qui prennent en charge l’ajout de voisins, c’est-à-dire `WithA`---a été effectuée dans cet exemple, qui est un bon style de programmation, car l’ajout d’un contrôle aux structures impliquant `With` ne propage le contrôle à l’opération interne. Notez également que, en plus de la `body` de l’opération, une implémentation du corps `controlled` de l’opération a été explicitement fournie, plutôt que de recourir à une instruction `controlled auto`. Cela est dû au fait que nous savons à partir de la structure du circuit comment ajouter facilement des contrôles supplémentaires, ce qui est avantageux par rapport à l’ajout de contrôle à chaque porte de la `body`. 
 
 Il est intéressant de comparer ce code avec une autre fonction Canon `MultiControlledXClean` qui atteint le même objectif de l’implémentation d’une opération `X` à contrôle multiple, mais qui utilise plusieurs qubits propres à l’aide du mécanisme de `using`. 
