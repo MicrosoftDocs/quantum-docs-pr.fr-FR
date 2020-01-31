@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 4be86c5045ece62ae3af40090a2cd344d965e65f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3f27f7502c83574e6bd8f950d7e17ee481e44a3c
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057400"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819856"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Contribution au Quantum Development Kit #
 
@@ -61,7 +61,7 @@ Chacun de ces différents éléments trouve sa place dans un référentiel diff�
 > [!NOTE]
 > Nous ne pouvons malheureusement pas accepter de contributions de code et de documentation sur le référentiel [**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC) à ce stade, mais nous continuons d’apprécier les rapports de bogues.
 
-Il existe également quelques autres référentiels plus spécialisés qui se concentrent sur différents événements ou sur des fonctionnalités auxiliaires liées au Quantum Development Kit.
+Il existe également d’autres dépôts plus spécialisés qui se concentrent sur différents événements ou sur des fonctionnalités auxiliaires liées au kit de développement Quantum.
 
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty) : Prise en charge du formatage LaTeX pour la syntaxe Q#.
 - [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019) : Notebook IQ# pour le tutoriel Deutsch-Jozsa donné lors de l’atelier interne 2019.

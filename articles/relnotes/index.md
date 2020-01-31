@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863161"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871615"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notes de publication de Microsoft Quantum Development Kit
 
@@ -20,6 +20,19 @@ Cet article contient des informations sur chaque version de Quantum Development 
 Pour obtenir des instructions d’installation, consultez le [Guide d’installation](xref:microsoft.quantum.install).
 
 Pour obtenir des instructions de mise à jour, consultez le [Guide de mise à jour](xref:microsoft.quantum.update).
+
+## <a name="version-01020012831"></a>Version 0.10.2001.2831
+
+*Date de publication : 29 janvier 2020*
+
+Cette version contient ce qui suit :
+
+- Nouveau package NuGet Microsoft.Quantum.SDK (pour plus d’informations, consultez le fichier [README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md))
+- Prise en charge de .NET Core 3.1 (il est vivement recommandé d’installer la version 3.1.100, car la génération avec d’anciennes versions du SDK .NET Core peut causer des problèmes)
+- Nouvelles transformations de compilateur disponibles sous Microsoft.Quantum.QsCompiler.Experimental
+- Nouvelles fonctionnalités permettant d’exposer les vecteurs d’état de sortie en HTML dans IQ#
+- Ajout de la prise en charge de EstimateFrequencyA à Microsoft.Quantum.Characterization pour les tests Hadarmard et SWAP
+- L’espace de noms AmplitudeAmplification utilise désormais le guide de style Q#
 
 ## <a name="version-01019120501"></a>Version 0.10.1912.0501
 
@@ -127,7 +140,7 @@ Cette version réorganise, étend et met à jour la bibliothèque de chimie :
 * Ajout de la prise en charge des [fonctions d’onde à plusieurs références](xref:microsoft.quantum.chemistry.concepts.multireference), à la fois les fonctions d’onde à plusieurs références éparses et un cluster à couplage unitaire.  [Demande de tirage #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 * (Merci !) Contributeur [1QBit](https://1qbit.com) ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)) : Évaluation de l’énergie avec un ansatz variationnel. [Demande de tirage #120](https://github.com/Microsoft/QuantumLibraries/pull/120).
 * Mise à jour du schéma de [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) vers la nouvelle [version 0.2](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2), ajout d’une spécification de cluster à couplage unitaire. [Problème #65](https://github.com/microsoft/QuantumLibraries/issues/65).
-* Ajout de l’interopérabilité Python aux fonctions de la bibliothèque de chimie. Essayez cet [exemple](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Problème #53](https://github.com/microsoft/QuantumLibraries/issues/53) [Demande de tirage #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* Ajout de l’interopérabilité Python aux fonctions de la bibliothèque de chimie. Essayez cet [exemple](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Problème #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## <a name="version-061905"></a>Version 0.6.1905
 
@@ -357,7 +370,7 @@ Cette version comprend plusieurs contributions de la communauté, et offre une e
 * Amélioration des fonctionnalités de débogage.
 * Contributions de la communauté pour des correctifs de bogues, de nouvelles fonctions d’assistance, des opérations et de nouveaux exemples.
 
-### <a name="performance-improvements"></a>Amélioration des performances
+### <a name="performance-improvements"></a>Optimisation des performances
 
 Cette mise à jour comprend des améliorations significatives des performances pour la simulation de grands nombres et de petits nombres de qubits pour toutes les machines cibles.  Cette amélioration est facilement visible avec la simulation H<sub>2</sub>, qui est un exemple standard du Quantum Development Kit.
 
