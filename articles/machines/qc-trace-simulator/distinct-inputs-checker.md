@@ -6,20 +6,24 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: ce3f156a84a4509781a74c9276b953c79670a756
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3c21a54f5da83bf1ea0792e79cc773be5fba71e8
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864302"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820961"
 ---
 # <a name="distinct-inputs-checker"></a>Vérificateur d’entrées distinct
 
 Le `Distinct Inputs Checker` fait partie du [simulateur](xref:microsoft.quantum.machines.qc-trace-simulator.intro)Quantum Computer trace. Il est conçu pour détecter les bogues potentiels dans le code. Examinez l’élément suivant du code Q # pour illustrer les problèmes détectés par ce package :
 
 ```qsharp
-operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => Unit)) : Unit {
-
+operation ApplyBoth(
+    q1 : Qubit,
+    q2 : Qubit,
+    op1 : (Qubit => Unit),
+    op2 : (Qubit => Unit))
+: Unit {
     op1(q1);
     op2(q2);
 }
@@ -28,17 +32,16 @@ operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => 
 Lorsque l’utilisateur regarde ce programme, il suppose que l’ordre dans lequel les `op1` et les `op2` sont appelés n’a pas d’importance, car `q1` et `q2` sont différents qubits et opérations agissant sur différents qubits. Prenons à présent un exemple, où cette opération est utilisée :
 
 ```qsharp
-operation CapturedQubits () : Unit {
-
-    using (q = Qubit[3]) {
-        let op1 = CNOT(_, q[1]);
-        let op2 = CNOT(q[1], _);
-        DoBoth(q[0], q[2], op1, op2);
+operation ApplyWithNonDistinctInputs() : Unit {
+    using (qubits = Qubit[3]) {
+        let op1 = CNOT(_, qubits[1]);
+        let op2 = CNOT(qubits[1], _);
+        ApplyBoth(qubits[0], qubits[2], op1, op2);
     }
 }
 ```
 
-À présent `op1` et `op2` sont obtenus à l’aide d’une application partielle et partagent un qubit. Lorsque l’utilisateur appelle `DoBoth` dans l’exemple ci-dessus, le résultat de l’opération dépend de l’ordre de `op1` et `op2` dans `DoBoth`. C’est sans aucun doute ce que l’utilisateur s’attend à se produire. Le `Distinct Inputs Checker` détectera de telles situations lorsqu’il sera activé et lèvera `DistinctInputsCheckerException`. Pour plus d’informations, consultez la documentation de l’API sur [DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) .
+À présent `op1` et `op2` sont obtenus à l’aide d’une application partielle et partagent un qubit. Lorsque l’utilisateur appelle `ApplyBoth` dans l’exemple ci-dessus, le résultat de l’opération dépend de l’ordre de `op1` et `op2` dans `ApplyBoth`. C’est sans aucun doute ce que l’utilisateur s’attend à se produire. Le `Distinct Inputs Checker` détectera de telles situations lorsqu’il sera activé et lèvera `DistinctInputsCheckerException`. Pour plus d’informations, consultez la documentation de l’API sur [DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) .
 
 ## <a name="using-the-distinct-inputs-checker-in-your-c-program"></a>Utilisation de l’outil d’analyse des C# entrées distinct dans votre programme
 
@@ -68,6 +71,6 @@ namespace Quantum.MyProgram
 
 La classe `QCTraceSimulatorConfiguration` stocke la configuration du simulateur de trace d’ordinateur Quantum et peut être fournie en tant qu’argument pour le constructeur `QCTraceSimulator`. Lorsque `useDistinctInputsChecker` a la valeur true, la `Distinct Inputs Checker` est activée. Pour plus d’informations, consultez la documentation de l’API sur [QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) et [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?) .
 
-## <a name="see-also"></a>Consultez également la section
+## <a name="see-also"></a>Voir aussi
 
 - Présentation de Quantum Computer [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .

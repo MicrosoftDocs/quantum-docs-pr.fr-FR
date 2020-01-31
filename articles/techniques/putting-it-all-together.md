@@ -1,23 +1,23 @@
 ---
-title: 'Q # techniques-rassembler tout cela | Microsoft Docs'
-description: 'Q # techniques-rassembler tout'
+title: 'Ensemble-Q # techniques | Microsoft Docs'
+description: 'Ensemble-Q # techniques'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f65b3e260f98a7a90da13b62edd6cc63d200f5af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183265"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820162"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Ensemble : téléportage #
 Revenons à l’exemple du circuit de téléportage défini dans [circuits quantiques](xref:microsoft.quantum.concepts.circuits). Nous allons l’utiliser pour illustrer les concepts que nous avons appris jusqu’à présent. Une explication de la téléportage quantique est fournie ci-dessous pour ceux qui ne sont pas familiarisés avec la théorie, suivis d’une procédure pas à pas de l’implémentation de code dans Q #. 
 
 ## <a name="quantum-teleportation-theory"></a>Teleportage quantique : théorie
-La téléportage Quantum est une technique permettant d’envoyer un État Quantum inconnu (que nous allons désigner comme «__message__») à partir d’un qubit dans un emplacement vers un qubit dans un autre emplacement (nous faisons référence à ces qubits__comme suit et__«__là__», respectivement). Nous pouvons représenter notre __message__ sous forme de vecteur à l’aide de la notation Dirac : 
+La téléportage quantique est une technique permettant d’envoyer un État Quantum inconnu (que nous appelons «__message__») à partir d’un qubit dans un emplacement vers un qubit dans un autre emplacement (nous faisons référence à ces qubits__comme suit,__ respectivement). Nous pouvons représenter notre __message__ sous forme de vecteur à l’aide de la notation Dirac : 
 
 $ $ \ket{\Psi} = \alpha\ket{0} + \beta\ket{1} $ $
 
@@ -56,7 +56,7 @@ $ \ket{1}$  | $ \frac{1}{\sqrt{2}} (\ket{0}-\ket{1}) $
 
 Si nous appliquons la porte Hadarmard au premier qubit de chaque terme de la sortie ci-dessus, nous obtenons le résultat suivant :
 
-$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{ \sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
+$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
 
 Notez que chaque terme a des facteurs $2 \frac{1}{\sqrt{2}} $. Nous pouvons multiplier ces valeurs pour obtenir le résultat suivant :
 
@@ -125,7 +125,7 @@ Nous devons également allouer un `here` qubit que nous obtenons avec un bloc `u
 ```
 
 ### <a name="step-1-create-an-entangled-state"></a>Étape 1 : créer un État enchevêtré
-Nous pouvons ensuite créer la paire enchevêtrée entre `here` et `there` à l’aide des opérations @"microsoft.quantum.primitive.h" et @"microsoft.quantum.primitive.cnot" :
+Nous pouvons ensuite créer la paire enchevêtrée entre `here` et `there` à l’aide des opérations @"microsoft.quantum.intrinsic.h" et @"microsoft.quantum.intrinsic.cnot" :
 
 ```qsharp
         H(here);
@@ -141,7 +141,7 @@ Nous utilisons ensuite les \operatorname{CNOT} $ et $H $ Gates suivants pour dé
 ```
 
 ### <a name="step-3--4-measuring-and-interpreting-the-result"></a>Étape 3 & 4 : mesure et interprétation du résultat
-Enfin, nous utilisons @"microsoft.quantum.primitive.m" pour effectuer les mesures et effectuer les opérations de la porte nécessaire pour atteindre l’état souhaité, comme indiqué par les instructions `if` :
+Enfin, nous utilisons @"microsoft.quantum.intrinsic.m" pour effectuer les mesures et effectuer les opérations de la porte nécessaire pour atteindre l’état souhaité, comme indiqué par les instructions `if` :
 
 ```qsharp
         // Measure out the entanglement

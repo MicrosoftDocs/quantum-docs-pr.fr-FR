@@ -6,19 +6,19 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 591e306b3001934bd81342a533e3f6ca25129781
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184982"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820859"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>L’ordinateur cible ResourcesEstimator
 
 Comme son nom l’indique, le `ResourcesEstimator` estime les ressources requises pour exécuter une instance donnée d’une opération Q # sur un ordinateur Quantum.
 Pour ce faire, il exécute l’opération Quantum sans simuler réellement l’état d’un ordinateur quantique. pour cette raison, il peut estimer des ressources pour les opérations Q # qui utilisent des milliers de qubits.
 
-## <a name="usage"></a>Usage
+## <a name="usage"></a>Utilisation
 
 Le `ResourcesEstimator` est simplement un autre type d’ordinateur cible. il peut donc être utilisé pour exécuter n’importe quelle opération Q #. 
 
@@ -97,40 +97,40 @@ Voici la liste des métriques estimées par la `ResourcesEstimator`:
 * __QubitClifford__: nombre de toutes les passerelles qubit Clifford et Pauli exécutées.
 * __Mesure__: nombre de mesures exécutées.
 * __R__: nombre de rotations qubit uniques exécutées, à l’exception des portes T, Clifford et Pauli.
-* __T__: nombre de portes t et leurs conjugués, y compris la porte t, T_x = H. T. H et T_y = Hy. t. HY, exécutées.
+* __T__: le nombre de portes t et leurs conjugués, y compris la porte t, T_x = H. T. H et T_y = Hy. t. HY, exécutés.
 * __Profondeur__: profondeur du circuit Quantum exécuté par l’opération Q #. Par défaut, seules les portes T sont comptées en profondeur. pour plus d’informations, consultez [compteur de profondeur](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
 * __Width__: nombre maximal de qubits alloués lors de l’exécution de l’opération Q #.
 * __BorrowedWidth__: nombre maximal de qubits empruntés à l’intérieur de l’opération Q #.
 
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>Fournir la probabilité des résultats de mesure
+## <a name="providing-the-probability-of-measurement-outcomes"></a>Génération de la probabilité des résultats de mesure
 
-<xref:microsoft.quantum.primitive.assertprob> de l’espace de noms <xref:microsoft.quantum.primitive> peut être utilisé pour fournir des informations sur la probabilité attendue d’une mesure pour aider à piloter l’exécution du programme Q #. L'exemple suivant illustre ce mécanisme :
+<xref:microsoft.quantum.intrinsic.assertprob> de l’espace de noms <xref:microsoft.quantum.intrinsic> peut être utilisé pour fournir des informations sur la probabilité attendue d’une mesure pour aider à piloter l’exécution du programme Q #. L'exemple suivant illustre ce mécanisme :
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
+operation Teleport(source : Qubit, target : Qubit) : Unit {
 
-    using (ancilla = Qubit()) {
+    using (qubit = Qubit()) {
 
-        H(ancilla);
-        CNOT(ancilla, target);
+        H(q);
+        CNOT(qubit, target);
 
-        CNOT(source, ancilla);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(qubit) == One) { X(target); X(qubit); }
     }
 }
 ```
 
-Lorsque le `ResourcesEstimator` est `AssertProb` il enregistre cette `PauliZ` de mesure sur `source` et `ancilla` doit recevoir un résultat de `Zero` avec la probabilité 0,5. Lorsqu’il exécute `M` plus tard, il trouve les valeurs enregistrées des probabilités de résultat et `M` retourne `Zero` ou `One` avec la probabilité 0,5.
+Lorsque le `ResourcesEstimator` est `AssertProb` il enregistre cette `PauliZ` de mesure sur `source` et `q` doit recevoir un résultat de `Zero` avec la probabilité 0,5. Lorsqu’il exécute `M` plus tard, il trouve les valeurs enregistrées des probabilités de résultat et `M` retourne `Zero` ou `One` avec la probabilité 0,5.
 
 
-## <a name="see-also"></a>Consultez également la section
+## <a name="see-also"></a>Voir aussi
 
 Le `ResourcesEstimator` repose sur le [simulateur](xref:microsoft.quantum.machines.qc-trace-simulator.intro)Quantum Computer trace, qui fournit un ensemble plus riche de métriques, la capacité de rapporter des métriques sur le graphique d’appel complet et des fonctionnalités telles que l' [outil de vérification des entrées distinctes](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) pour faciliter la détection des bogues sur les programmes Q #. Pour plus d’informations, consultez la documentation de [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
 

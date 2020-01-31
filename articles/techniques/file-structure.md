@@ -1,18 +1,19 @@
 ---
-title: Présentation des techniques de développement quantique | Microsoft Docs
-description: Présentation des techniques de développement quantique
+title: 'Q # vue d’ensemble du programme-Q # techniques | Microsoft Docs'
+description: 'Q # vue d’ensemble du programme-Q # techniques'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 702d23293a1c340ddd3d7032d0e05294345469b2
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+uid: microsoft.quantum.techniques.file-structure
+ms.openlocfilehash: e8f52e6b0d4382331665a8e845ef19a3a1beabf9
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442557"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820825"
 ---
-# <a name="q-program-overview"></a>Q # vue d’ensemble du programme
+# <a name="q-program-overview"></a>Vue d’ensemble d’un programme Q#
 
 Q # est un langage de programmation évolutif, à plusieurs paradigmes, spécifique à un domaine pour l’informatique Quantum. Q # est un langage de programmation Quantum dans la mesure où il peut être utilisé pour décrire comment les instructions sont exécutées sur les machines quantiques. Les machines qui peuvent être ciblées sont comprises entre les simulateurs et le matériel Quantum réel. Q # est évolutif : il peut être utilisé pour écrire des programmes de démonstration simples comme la téléchargement qui s’exécutent sur quelques qubits, mais il prend également en charge l’écriture de nombreux programmes sophistiqués, tels que les simulations de molécules complexes, qui nécessitent des machines de grande taille avec des millions de qubits. Même si les machines physiques volumineuses sont toujours à l’avenir, Q # permet à un programmeur de programmer des algorithmes Quantum complexes. En plus, Q # prend en charge différentes tâches, telles que le débogage, le profilage, l’estimation des ressources et certaines simulations à usage spécifique de manière évolutive. 
 

@@ -5,35 +5,35 @@ functions:
 - uid: microsoft.quantum.canon.asqubitarray
   summary: "\n> [!WARNING]\n> Déconseillé\n\nAsQubitArray est déconseillé.\nCette fonction a été supprimée."
 - uid: microsoft.quantum.canon.assertalmostequal
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertAlmostEqual est déconseillé. Utilisez plutôt @\"microsoft.quantum.diagnostics.nearequalityfactd\".\nUtilisez plutôt @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertAlmostEqual est déconseillé. Utilisez @\"microsoft.quantum.diagnostics.nearequalityfactd\" à la place.\nUtilisez @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" à la place."
 - uid: microsoft.quantum.canon.assertalmostequaltol
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertAlmostEqualTol est déconseillé. Utilisez plutôt @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\".\nUtilisez plutôt @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertAlmostEqualTol est déconseillé. Utilisez @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\" à la place.\nUtilisez @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\" à la place."
 - uid: microsoft.quantum.canon.assertboolarrayequal
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertBoolArrayEqual est déconseillé. Utilisez plutôt @\"microsoft.quantum.diagnostics.allequalityfactb\".\nUtilisez plutôt @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertBoolArrayEqual est déconseillé. Utilisez @\"microsoft.quantum.diagnostics.allequalityfactb\" à la place.\nUtilisez @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\" à la place."
 - uid: microsoft.quantum.canon.assertboolequal
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertBoolEqual est déconseillé. Utilisez plutôt @\"microsoft.quantum.diagnostics.equalityfactb\".\nUtilisez plutôt @\"Microsoft.Quantum.Diagnostics.EqualityFactB\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertBoolEqual est déconseillé. Utilisez @\"microsoft.quantum.diagnostics.equalityfactb\" à la place.\nUtilisez @\"Microsoft.Quantum.Diagnostics.EqualityFactB\" à la place."
 - uid: microsoft.quantum.canon.assertintequal
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertIntEqual est déconseillé. Utilisez plutôt @\"microsoft.quantum.diagnostics.equalityfacti\".\nUtilisez plutôt @\"Microsoft.Quantum.Diagnostics.EqualityFactI\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertIntEqual est déconseillé. Utilisez @\"microsoft.quantum.diagnostics.equalityfacti\" à la place.\nUtilisez @\"Microsoft.Quantum.Diagnostics.EqualityFactI\" à la place."
 - uid: microsoft.quantum.canon.assertresultequal
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertResultEqual est déconseillé. Utilisez plutôt @\"microsoft.quantum.diagnostics.equalityfactr\".\nUtilisez plutôt @\"Microsoft.Quantum.Diagnostics.EqualityFactR\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertResultEqual est déconseillé. Utilisez @\"microsoft.quantum.diagnostics.equalityfactr\" à la place.\nUtilisez @\"Microsoft.Quantum.Diagnostics.EqualityFactR\" à la place."
 - uid: microsoft.quantum.canon.bigendiantolittleendian
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nBigEndianToLittleEndian est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.bigendianaslittleendian\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nBigEndianToLittleEndian est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.bigendianaslittleendian\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"."
 - uid: microsoft.quantum.canon.bind
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nLa liaison est dépréciée. Utilisez plutôt @\"microsoft.quantum.canon.bound\".\nUtilisez @\"microsoft.quantum.canon.bound\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nLa liaison est dépréciée. Utilisez @\"microsoft.quantum.canon.bound\" à la place.\nUtilisez @\"microsoft.quantum.canon.bound\"."
 - uid: microsoft.quantum.canon.binda
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nBinda est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.bounda\".\nUtilisez @\"microsoft.quantum.canon.bounda\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nBinda est déconseillé. Utilisez @\"microsoft.quantum.canon.bounda\" à la place.\nUtilisez @\"microsoft.quantum.canon.bounda\"."
 - uid: microsoft.quantum.canon.bindc
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nBindC est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.boundc\".\nUtilisez @\"microsoft.quantum.canon.boundc\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nBindC est déconseillé. Utilisez @\"microsoft.quantum.canon.boundc\" à la place.\nUtilisez @\"microsoft.quantum.canon.boundc\"."
 - uid: microsoft.quantum.canon.bindca
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nBindCA est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.boundca\".\nUtilisez @\"microsoft.quantum.canon.boundca\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nBindCA est déconseillé. Utilisez @\"microsoft.quantum.canon.boundca\" à la place.\nUtilisez @\"microsoft.quantum.canon.boundca\"."
 - uid: microsoft.quantum.canon.bitsize
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nLa BitS est dépréciée. Utilisez plutôt @\"microsoft.quantum.math.bitsizei\".\nUtilisez @\"microsoft.quantum.math.bitsizei\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nLa BitS est dépréciée. Utilisez @\"microsoft.quantum.math.bitsizei\" à la place.\nUtilisez @\"microsoft.quantum.math.bitsizei\"."
 - uid: microsoft.quantum.canon.boolarrfrompositiveint
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nBoolArrFromPositiveInt est déconseillé. Utilisez plutôt @\"microsoft.quantum.convert.intasboolarray\".\nUtilisez @\"microsoft.quantum.convert.intasboolarray\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nBoolArrFromPositiveInt est déconseillé. Utilisez @\"microsoft.quantum.convert.intasboolarray\" à la place.\nUtilisez @\"microsoft.quantum.convert.intasboolarray\"."
 - uid: microsoft.quantum.canon.boolarrfromresultarr
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nBoolArrFromResultArr est déconseillé. Utilisez plutôt @\"microsoft.quantum.convert.resultarrayasboolarray\".\nUtilisez @\"microsoft.quantum.convert.resultarrayasboolarray\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nBoolArrFromResultArr est déconseillé. Utilisez @\"microsoft.quantum.convert.resultarrayasboolarray\" à la place.\nUtilisez @\"microsoft.quantum.convert.resultarrayasboolarray\"."
 - uid: microsoft.quantum.canon.boolfromresult
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nBoolFromResult est déconseillé. Utilisez plutôt @\"microsoft.quantum.convert.resultasbool\".\nUtilisez @\"microsoft.quantum.convert.resultasbool\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nBoolFromResult est déconseillé. Utilisez @\"microsoft.quantum.convert.resultasbool\" à la place.\nUtilisez @\"microsoft.quantum.convert.resultasbool\"."
 - uid: microsoft.quantum.canon.bound
   summary: À partir d’un tableau d’opérations agissant sur une seule entrée, produit une nouvelle opération qui effectue chaque opération donnée dans l’ordre.
 - uid: microsoft.quantum.canon.bounda
@@ -69,11 +69,7 @@ functions:
 
     Le modificateur `CA` indique que l’opération est contrôlable et adjointable.
 - uid: microsoft.quantum.canon.compose
-  summary: >-
-    Génère la composition de deux fonctions.
-
-
-    Autrement dit, étant donné deux fonctions $f $ et $g $, retourne une nouvelle fonction représentant $f \circ g $.
+  summary: Retourne la composition de deux fonctions.
 - uid: microsoft.quantum.canon.conjugatedby
   summary: En fonction des opérations externes et internes, retourne une nouvelle opération qui conjugue l’opération interne par l’opération externe.
 - uid: microsoft.quantum.canon.conjugatedbya
@@ -83,7 +79,7 @@ functions:
 - uid: microsoft.quantum.canon.conjugatedbyca
   summary: En fonction des opérations externes et internes, retourne une nouvelle opération qui conjugue l’opération interne par l’opération externe.
 - uid: microsoft.quantum.canon.continuedfractionconvergent
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nContinuedFractionConvergent est déconseillé. Utilisez plutôt @\"microsoft.quantum.math.continuedfractionconvergenti\".\nUtilisez @\"microsoft.quantum.math.continuedfractionconvergenti\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nContinuedFractionConvergent est déconseillé. Utilisez @\"microsoft.quantum.math.continuedfractionconvergenti\" à la place.\nUtilisez @\"microsoft.quantum.math.continuedfractionconvergenti\"."
 - uid: microsoft.quantum.canon.controlledonbitstring
   summary: Retourne un opérateur unitaire qui applique Oracle sur le registre cible si l’état du registre de contrôle correspond à un masque de bits spécifié.
 - uid: microsoft.quantum.canon.controlledonint
@@ -95,9 +91,11 @@ functions:
 
     Autrement dit, étant donné une opération avec deux entrées, cette fonction applique $f isomorphism (x, y) \equiv f (x) (y) $ de l’expression de la valeur pour retourner une opération d’une entrée qui retourne une opération d’une entrée.
 - uid: microsoft.quantum.canon.curryop
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nCurryOp est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.curriedop\".\nUtilisez @\"microsoft.quantum.canon.curriedop\"."
-- uid: microsoft.quantum.canon.decomposeintotimestepsca
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nCurryOp est déconseillé. Utilisez @\"microsoft.quantum.canon.curriedop\" à la place.\nUtilisez @\"microsoft.quantum.canon.curriedop\"."
+- uid: microsoft.quantum.canon.decomposedintotimestepsca
   summary: Retourne une opération implémentant l’intégrateur Trotter – Suzuki pour une opération donnée.
+- uid: microsoft.quantum.canon.decomposeintotimestepsca
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nDecomposeIntoTimeStepsCA est déconseillé. Utilisez @\"microsoft.quantum.canon.decomposedintotimestepsca\" à la place."
 - uid: microsoft.quantum.canon.delayed
   summary: Retourne une opération qui applique l’opération donnée avec l’argument donné.
 - uid: microsoft.quantum.canon.delayeda
@@ -109,43 +107,43 @@ functions:
 - uid: microsoft.quantum.canon.embedpauli
   summary: À partir d’un opérateur Pauli qubit unique et de l’index d’un qubit, retourne un opérateur de Pauli à plusieurs qubit avec l’opérateur Single-qubit donné au niveau de cet index et `PauliI` à chaque autre index.
 - uid: microsoft.quantum.canon.expmod
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nExpMod est déconseillé. Utilisez plutôt @\"microsoft.quantum.math.expmodi\".\nUtilisez @\"microsoft.quantum.math.expmodi\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nExpMod est déconseillé. Utilisez @\"microsoft.quantum.math.expmodi\" à la place.\nUtilisez @\"microsoft.quantum.math.expmodi\"."
 - uid: microsoft.quantum.canon.extendedgcd
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nExtendedGCD est déconseillé. Utilisez plutôt @\"microsoft.quantum.math.extendedgreatestcommondivisori\".\nUtilisez @\"microsoft.quantum.math.extendedgreatestcommondivisori\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nExtendedGCD est déconseillé. Utilisez @\"microsoft.quantum.math.extendedgreatestcommondivisori\" à la place.\nUtilisez @\"microsoft.quantum.math.extendedgreatestcommondivisori\"."
 - uid: microsoft.quantum.canon.filter
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nLe filtre est déconseillé. Utilisez plutôt @\"microsoft.quantum.arrays.filtered\".\nUtilisez plutôt @\"Microsoft.Quantum.Arrays.Filtered\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nLe filtre est déconseillé. Utilisez @\"microsoft.quantum.arrays.filtered\" à la place.\nUtilisez @\"Microsoft.Quantum.Arrays.Filtered\" à la place."
 - uid: microsoft.quantum.canon.forall
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nForAll est déconseillé. Utilisez plutôt @\"microsoft.quantum.arrays.all\".\nUtilisez plutôt @\"Microsoft.Quantum.Arrays.All\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nForAll est déconseillé. Utilisez @\"microsoft.quantum.arrays.all\" à la place.\nUtilisez @\"Microsoft.Quantum.Arrays.All\" à la place."
 - uid: microsoft.quantum.canon.forany
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nForAny est déconseillé. Utilisez plutôt @\"microsoft.quantum.arrays.any\".\nUtilisez plutôt @\"Microsoft.Quantum.Arrays.Any\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nForAny est déconseillé. Utilisez @\"microsoft.quantum.arrays.any\" à la place.\nUtilisez @\"Microsoft.Quantum.Arrays.Any\" à la place."
 - uid: microsoft.quantum.canon.fst
   summary: À partir d’une paire, retourne son premier élément.
 - uid: microsoft.quantum.canon.gcd
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nGCD est déconseillé. Utilisez plutôt @\"microsoft.quantum.math.greatestcommondivisori\".\nUtilisez @\"microsoft.quantum.math.greatestcommondivisori\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nGCD est déconseillé. Utilisez @\"microsoft.quantum.math.greatestcommondivisori\" à la place.\nUtilisez @\"microsoft.quantum.math.greatestcommondivisori\"."
 - uid: microsoft.quantum.canon.ignore
   summary: Ignore la sortie d’une opération ou d’une fonction.
 - uid: microsoft.quantum.canon.intabs
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nLes onglets sont dépréciés. Utilisez plutôt @\"microsoft.quantum.math.absi\".\nCette fonction a été supprimée."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nLes onglets sont dépréciés. Utilisez @\"microsoft.quantum.math.absi\" à la place.\nCette fonction a été supprimée."
 - uid: microsoft.quantum.canon.intarrayfromrange
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nIntArrayFromRange est déconseillé. Utilisez plutôt @\"microsoft.quantum.convert.rangeasintarray\".\nUtilisez @\"microsoft.quantum.convert.rangeasintarray\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nIntArrayFromRange est déconseillé. Utilisez @\"microsoft.quantum.convert.rangeasintarray\" à la place.\nUtilisez @\"microsoft.quantum.convert.rangeasintarray\"."
 - uid: microsoft.quantum.canon.intmax
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nIntMax est déconseillé. Utilisez plutôt @\"microsoft.quantum.math.maxi\".\nCette fonction a été supprimée."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nIntMax est déconseillé. Utilisez @\"microsoft.quantum.math.maxi\" à la place.\nCette fonction a été supprimée."
 - uid: microsoft.quantum.canon.inversemod
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nInverseMod est déconseillé. Utilisez plutôt @\"microsoft.quantum.math.inversemodi\".\nUtilisez @\"microsoft.quantum.math.inversemodi\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nInverseMod est déconseillé. Utilisez @\"microsoft.quantum.math.inversemodi\" à la place.\nUtilisez @\"microsoft.quantum.math.inversemodi\"."
 - uid: microsoft.quantum.canon.iscoprime
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nIsCoprime est déconseillé. Utilisez plutôt @\"microsoft.quantum.math.iscoprimei\".\nUtilisez @\"microsoft.quantum.math.greatestcommondivisori\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nIsCoprime est déconseillé. Utilisez @\"microsoft.quantum.math.iscoprimei\" à la place.\nUtilisez @\"microsoft.quantum.math.greatestcommondivisori\"."
 - uid: microsoft.quantum.canon.isresultone
   summary: Teste si une valeur de résultat donnée est égale à `One`.
 - uid: microsoft.quantum.canon.isresultzero
   summary: Teste si une valeur de résultat donnée est égale à `Zero`.
 - uid: microsoft.quantum.canon.littleendiantobigendian
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nLittleEndianToBigEndian est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.littleendianasbigendian\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nLittleEndianToBigEndian est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.littleendianasbigendian\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"."
 - uid: microsoft.quantum.canon.map
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nLe mappage est déconseillé. Utilisez plutôt @\"microsoft.quantum.arrays.mapped\".\nUtilisez plutôt @\"Microsoft.Quantum.Arrays.Mapped\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nLe mappage est déconseillé. Utilisez @\"microsoft.quantum.arrays.mapped\" à la place.\nUtilisez @\"Microsoft.Quantum.Arrays.Mapped\" à la place."
 - uid: microsoft.quantum.canon.mapindex
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nMapIndex est déconseillé. Utilisez plutôt @\"microsoft.quantum.arrays.mappedbyindex\".\nUtilisez plutôt @\"Microsoft.Quantum.Arrays.MappedByIndex\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nMapIndex est déconseillé. Utilisez @\"microsoft.quantum.arrays.mappedbyindex\" à la place.\nUtilisez @\"Microsoft.Quantum.Arrays.MappedByIndex\" à la place."
 - uid: microsoft.quantum.canon.modulus
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nLe modulo est déconseillé. Utilisez plutôt @\"microsoft.quantum.math.modulusi\".\nUtilisez @\"microsoft.quantum.math.modulusi\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nLe modulo est déconseillé. Utilisez @\"microsoft.quantum.math.modulusi\" à la place.\nUtilisez @\"microsoft.quantum.math.modulusi\"."
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
     Retourne une opération unitaire contrôlée par multiplication $U $ qui applique une $V unitaire _j $ lorsqu’elle est contrôlée par le numéro d’État n-qubit $ \ket{j} $.
@@ -159,7 +157,7 @@ functions:
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.nearequalityfact
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nNearEqualityFact est déconseillé. Utilisez plutôt @\"microsoft.quantum.diagnostics.nearequalityfactd\".\nUtilisez plutôt @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nNearEqualityFact est déconseillé. Utilisez @\"microsoft.quantum.diagnostics.nearequalityfactd\" à la place.\nUtilisez @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" à la place."
 - uid: microsoft.quantum.canon.operationpow
   summary: >-
     Élève une opération à une puissance.
@@ -191,15 +189,15 @@ functions:
 
     Autrement dit, étant donné une opération représentant une porte $U $, retourne une nouvelle opération $U ^ m $ pour une alimentation $m $.
 - uid: microsoft.quantum.canon.pad
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nLe bloc est déconseillé. Utilisez plutôt @\"microsoft.quantum.arrays.padded\".\nUtilisez plutôt @\"Microsoft.Quantum.Arrays.Padded\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nLe bloc est déconseillé. Utilisez @\"microsoft.quantum.arrays.padded\" à la place.\nUtilisez @\"Microsoft.Quantum.Arrays.Padded\" à la place."
 - uid: microsoft.quantum.canon.paulifrombitstring
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nPauliFromBitString est déconseillé. Utilisez plutôt @\"microsoft.quantum.convert.boolarrayaspauli\".\nUtilisez @\"microsoft.quantum.convert.boolarrayaspauli\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nPauliFromBitString est déconseillé. Utilisez @\"microsoft.quantum.convert.boolarrayaspauli\" à la place.\nUtilisez @\"microsoft.quantum.convert.boolarrayaspauli\"."
 - uid: microsoft.quantum.canon.pnormalize
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nPNormalize est déconseillé. Utilisez plutôt @\"microsoft.quantum.math.pnormalized\".\nUtilisez @\"microsoft.quantum.math.pnormalized\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nPNormalize est déconseillé. Utilisez @\"microsoft.quantum.math.pnormalized\" à la place.\nUtilisez @\"microsoft.quantum.math.pnormalized\"."
 - uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nPositiveIntFromBoolArr est déconseillé. Utilisez plutôt @\"microsoft.quantum.convert.boolarrayasint\".\nUtilisez @\"microsoft.quantum.convert.boolarrayasint\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nPositiveIntFromBoolArr est déconseillé. Utilisez @\"microsoft.quantum.convert.boolarrayasint\" à la place.\nUtilisez @\"microsoft.quantum.convert.boolarrayasint\"."
 - uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nPositiveIntFromResultArr est déconseillé. Utilisez plutôt @\"microsoft.quantum.convert.resultarrayasint\".\nUtilisez @\"microsoft.quantum.canon.resultarrayasint\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nPositiveIntFromResultArr est déconseillé. Utilisez @\"microsoft.quantum.convert.resultarrayasint\" à la place.\nUtilisez @\"microsoft.quantum.canon.resultarrayasint\"."
 - uid: microsoft.quantum.canon.restrictedtosubregister
   summary: Restreint une opération à un tableau d’index d’un registre, c’est-à-dire un sous-registre.
 - uid: microsoft.quantum.canon.restrictedtosubregistera
@@ -218,39 +216,39 @@ functions:
 
     Le modificateur `CA` indique que l’opération est contrôlable et adjointable.
 - uid: microsoft.quantum.canon.restricttosubregister
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nRestrictToSubregister est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.restrictedtosubregister\".\nUtilisez @\"microsoft.quantum.canon.restrictedtosubregister\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nRestrictToSubregister est déconseillé. Utilisez @\"microsoft.quantum.canon.restrictedtosubregister\" à la place.\nUtilisez @\"microsoft.quantum.canon.restrictedtosubregister\"."
 - uid: microsoft.quantum.canon.restricttosubregistera
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nRestrictToSubregisterA est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.restrictedtosubregistera\".\nUtilisez @\"microsoft.quantum.canon.restrictedtosubregistera\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nRestrictToSubregisterA est déconseillé. Utilisez @\"microsoft.quantum.canon.restrictedtosubregistera\" à la place.\nUtilisez @\"microsoft.quantum.canon.restrictedtosubregistera\"."
 - uid: microsoft.quantum.canon.restricttosubregisterc
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nRestrictToSubregisterC est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.restrictedtosubregisterc\".\nUtilisez @\"microsoft.quantum.canon.restrictedtosubregisterc\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nRestrictToSubregisterC est déconseillé. Utilisez @\"microsoft.quantum.canon.restrictedtosubregisterc\" à la place.\nUtilisez @\"microsoft.quantum.canon.restrictedtosubregisterc\"."
 - uid: microsoft.quantum.canon.restricttosubregisterca
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nRestrictToSubregisterCA est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.restrictedtosubregisterca\".\nUtilisez @\"microsoft.quantum.canon.restrictedtosubregisterca\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nRestrictToSubregisterCA est déconseillé. Utilisez @\"microsoft.quantum.canon.restrictedtosubregisterca\" à la place.\nUtilisez @\"microsoft.quantum.canon.restrictedtosubregisterca\"."
 - uid: microsoft.quantum.canon.resultarrfromboolarr
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nResultArrFromBoolArr est déconseillé. Utilisez plutôt @\"microsoft.quantum.convert.boolarrayasresultarray\".\nUtilisez @\"microsoft.quantum.convert.resultarrayasboolarray\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nResultArrFromBoolArr est déconseillé. Utilisez @\"microsoft.quantum.convert.boolarrayasresultarray\" à la place.\nUtilisez @\"microsoft.quantum.convert.resultarrayasboolarray\"."
 - uid: microsoft.quantum.canon.resultasint
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nResultAsInt est déconseillé. Utilisez plutôt @\"microsoft.quantum.convert.resultarrayasint\".\nUtilisez @\"microsoft.quantum.convert.resultarrayasint\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nResultAsInt est déconseillé. Utilisez @\"microsoft.quantum.convert.resultarrayasint\" à la place.\nUtilisez @\"microsoft.quantum.convert.resultarrayasint\"."
 - uid: microsoft.quantum.canon.resultfrombool
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nResultFromBool est déconseillé. Utilisez plutôt @\"microsoft.quantum.convert.boolasresult\".\nUtilisez @\"microsoft.quantum.convert.boolasresult\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nResultFromBool est déconseillé. Utilisez @\"microsoft.quantum.convert.boolasresult\" à la place.\nUtilisez @\"microsoft.quantum.convert.boolasresult\"."
 - uid: microsoft.quantum.canon.reverse
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nL’inversion a été dépréciée. Utilisez plutôt @\"microsoft.quantum.arrays.reversed\".\nUtilisez plutôt @\"Microsoft.Quantum.Arrays.Reversed\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nL’inversion a été dépréciée. Utilisez @\"microsoft.quantum.arrays.reversed\" à la place.\nUtilisez @\"Microsoft.Quantum.Arrays.Reversed\" à la place."
 - uid: microsoft.quantum.canon.snd
   summary: À partir d’une paire, retourne son deuxième élément.
 - uid: microsoft.quantum.canon.splitarray
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nSplitArray est déconseillé. Utilisez plutôt @\"microsoft.quantum.arrays.partitioned\".\nUtilisez plutôt @\"Microsoft.Quantum.Arrays.Partitioned\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nSplitArray est déconseillé. Utilisez @\"microsoft.quantum.arrays.partitioned\" à la place.\nUtilisez @\"Microsoft.Quantum.Arrays.Partitioned\" à la place."
 - uid: microsoft.quantum.canon.stackcapacity
-  summary: Récupère la capacité d’un <xref:microsoft.quantum.canon.resultstack>.
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nStackCapacity est déconseillé."
 - uid: microsoft.quantum.canon.stacklength
-  summary: Récupère le nombre d’éléments stockés dans un <xref:microsoft.quantum.canon.resultstack>.
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nStackLength est déconseillé."
 - uid: microsoft.quantum.canon.stacknew
-  summary: Crée un <xref:microsoft.quantum.canon.resultstack> vide avec la capacité donnée.
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nStackNew est déconseillé."
 - uid: microsoft.quantum.canon.stackpeek
-  summary: Récupère l’élément le plus haut d’un <xref:microsoft.quantum.canon.resultstack>.
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nStackPeek est déconseillé."
 - uid: microsoft.quantum.canon.stackpop
-  summary: Supprime l’élément le plus haut d’un <xref:microsoft.quantum.canon.resultstack>.
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nStackPop est déconseillé."
 - uid: microsoft.quantum.canon.stackpush
-  summary: Exécute un push d’un nouvel élément sur un <xref:microsoft.quantum.canon.resultstack>.
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nStackPush est déconseillé."
 - uid: microsoft.quantum.canon.tooperation
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nToOperation est déconseillé. Utilisez plutôt @\"microsoft.quantum.convert.functionasoperation\".\nUtilisez @\"microsoft.quantum.convert.functionasoperation\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nToOperation est déconseillé. Utilisez @\"microsoft.quantum.convert.functionasoperation\" à la place.\nUtilisez @\"microsoft.quantum.convert.functionasoperation\"."
 - uid: microsoft.quantum.canon.transformedoperation
   summary: À partir d’une fonction et d’une opération, retourne une nouvelle opération dont l’entrée est transformée par la fonction donnée.
 - uid: microsoft.quantum.canon.transformedoperationa
@@ -277,26 +275,28 @@ functions:
 
     Le modificateur `CA` indique que les opérations sont contrôlable et adjointable.
 - uid: microsoft.quantum.canon.uncurryop
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nUncurryOp est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.uncurriedop\".\nUtilisez @\"microsoft.quantum.canon.uncurriedop\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nUncurryOp est déconseillé. Utilisez @\"microsoft.quantum.canon.uncurriedop\" à la place.\nUtilisez @\"microsoft.quantum.canon.uncurriedop\"."
 - uid: microsoft.quantum.canon.uncurryopa
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nUncurryOpA est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.uncurriedopa\".\nUtilisez @\"microsoft.quantum.canon.uncurriedopa\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nUncurryOpA est déconseillé. Utilisez @\"microsoft.quantum.canon.uncurriedopa\" à la place.\nUtilisez @\"microsoft.quantum.canon.uncurriedopa\"."
 - uid: microsoft.quantum.canon.uncurryopc
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nUncurryOpC est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.uncurriedopc\".\nUtilisez @\"microsoft.quantum.canon.uncurriedopc\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nUncurryOpC est déconseillé. Utilisez @\"microsoft.quantum.canon.uncurriedopc\" à la place.\nUtilisez @\"microsoft.quantum.canon.uncurriedopc\"."
 - uid: microsoft.quantum.canon.uncurryopca
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nUncurryOpCA est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.uncurriedopca\".\nUtilisez @\"microsoft.quantum.canon.uncurriedopca\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nUncurryOpCA est déconseillé. Utilisez @\"microsoft.quantum.canon.uncurriedopca\" à la place.\nUtilisez @\"microsoft.quantum.canon.uncurriedopca\"."
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: Retourne un tableau de tous les opérateurs Weight-1 Pauli sur un nombre donné de qubits.
 - uid: microsoft.quantum.canon.xor
-  summary: Cela calcule le ou exclusif de deux bits.
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nXOR est déconseillé. Utilisez @\"microsoft.quantum.logical.xor\" à la place.\nUtilisez @\"microsoft.quantum.logical.xor\"."
 operations:
 - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nAdiabaticStateEnergyUnitary est déconseillé. Utilisez plutôt @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\".\nUtilisez @\"microsoft.quantum.simuilation.pnormalized\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nAdiabaticStateEnergyUnitary est déconseillé. Utilisez @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\" à la place.\nUtilisez @\"microsoft.quantum.simuilation.pnormalized\"."
 - uid: microsoft.quantum.canon.andladder
-  summary: >-
-    Effectue un contrôle « et une échelle » sur le qubits cible.
-
-
-    Cela s’applique à une unité donnée par la carte suivante sur les vecteurs de base de calcul : $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $ WHERE $ \ket{x\_1, \dots, x\_n} $ fait référence aux États de base de calcul de `controls`, et où $ \ket{y\_1, \dots, y\_{n-1}} $ fait référence aux États de la base de calcul de `targets`.
+  summary: Effectue une « échelle » contrôlée sur un registre de qubits cibles.
+- uid: microsoft.quantum.canon.applyand
+  summary: Inverse un qubit cible donné si et seulement si les deux contrôles qubits sont dans l’État 1, à l’aide de mesures pour exécuter l’opération joint.
+- uid: microsoft.quantum.canon.applycnotchain
+  summary: Calcule la parité d’un registre de qubits sur place.
+- uid: microsoft.quantum.canon.applycnotchainwithtarget
+  summary: Calcule la parité d’un tableau de qubits dans un qubit cible.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: >-
     Applique un tableau de phases complexes aux États de base numériques d’un registre de qubits.
@@ -348,6 +348,8 @@ operations:
   summary: Applique une opération contrôlable conditionnée sur une valeur de résultat classique égale à zéro.
 - uid: microsoft.quantum.canon.applyifzeroca
   summary: Applique une opération unitaire conditionnée sur une valeur de résultat classique égale à zéro.
+- uid: microsoft.quantum.canon.applylowdepthand
+  summary: Inverse un qubit cible donné si et seulement si les deux contrôles qubits sont dans l’État 1, avec T-depth 1, à l’aide de mesures pour effectuer l’opération joint.
 - uid: microsoft.quantum.canon.applymulticontrolledc
   summary: >-
     Applique une version contrôlée par multiplication d’une opération contrôlée de façon unique.
@@ -375,27 +377,27 @@ operations:
 - uid: microsoft.quantum.canon.applyquantumfouriertransformbe
   summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyQuantumFourierTransformBE est déconseillé. Utilisez @ « applyquantumfouriertransform (bigendianaslittleendian (QS)) » à la place.\nCette opération a été supprimée."
 - uid: microsoft.quantum.canon.applyquantumfouriertransformle
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyQuantumFourierTransformLE est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.applyquantumfouriertransform\".\nUtilisez @\"microsoft.quantum.canon.applyquantumfouriertransform\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyQuantumFourierTransformLE est déconseillé. Utilisez @\"microsoft.quantum.canon.applyquantumfouriertransform\" à la place.\nUtilisez @\"microsoft.quantum.canon.applyquantumfouriertransform\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendian
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpBigEndian est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.applyreversedopbe\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpBigEndian est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.applyreversedopbe\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendiana
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpBigEndianA est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.applyreversedopbea\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpBigEndianA est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.applyreversedopbea\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendianc
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpBigEndianC est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.applyreversedopbec\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpBigEndianC est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.applyreversedopbec\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendianca
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpBigEndianCA est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.applyreversedopbeca\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpBigEndianCA est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.applyreversedopbeca\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendian
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpLittleEndian est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.applyreversedople\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpLittleEndian est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.applyreversedople\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendiana
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpLittleEndianA est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.applyreversedoplea\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpLittleEndianA est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.applyreversedoplea\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianc
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpLittleEndianC est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.applyreversedoplec\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpLittleEndianC est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.applyreversedoplec\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianca
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpLittleEndianCA est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.applyreversedopleca\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyReversedOpLittleEndianCA est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.applyreversedopleca\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
   summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyRippleCarryComparatorBE est déconseillé. Utilisez @ \"compareusingripplecarry (bigendianaslittleendian (x), bigendianaslittleendian (y), output)\" à la place.\nCette opération a été supprimée."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorle
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyRippleCarryComparatorLE est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.compareusingripplecarry\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nApplyRippleCarryComparatorLE est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.compareusingripplecarry\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"."
 - uid: microsoft.quantum.canon.applyseriesofops
   summary: Applique de façon séquentielle une liste d’opérations et leurs cibles sur un tableau.
 - uid: microsoft.quantum.canon.applyseriesofopsa
@@ -528,7 +530,7 @@ operations:
 - uid: microsoft.quantum.canon.applywitha
   summary: À partir de deux opérations, applique une telle que conjuguée à l’autre.
 - uid: microsoft.quantum.canon.applywithc
-  summary: ''
+  summary: À partir de deux opérations, applique une telle que conjuguée à l’autre.
 - uid: microsoft.quantum.canon.applywithca
   summary: À partir de deux opérations, applique une telle que conjuguée à l’autre.
 - uid: microsoft.quantum.canon.applywithinputtransformation
@@ -542,9 +544,9 @@ operations:
 - uid: microsoft.quantum.canon.approximateqft
   summary: Appliquez la transformation de Fourier quantique approximative (AQFT) à un registre Quantum.
 - uid: microsoft.quantum.canon.asserthighestbit
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertHighestBit est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.assertmostsignificantbit\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertHighestBit est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.assertmostsignificantbit\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"."
 - uid: microsoft.quantum.canon.assertlessthanphasele
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertLessThanPhaseLE est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.assertphaselessthan\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertLessThanPhaseLE est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.assertphaselessthan\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"."
 - uid: microsoft.quantum.canon.assertphase
   summary: >-
     Déclare que la phase d’un état de superposition égal a la valeur attendue.
@@ -553,20 +555,14 @@ operations:
     En particulier, déclare que la phase $ \Phi $ d’un État Quantum qui peut être exprimée sous la forme $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ Ket{0} + e ^ {-i\phi} \ Ket{1}) $ pour certains t réels arbitraires a la valeur attendue.
 - uid: microsoft.quantum.canon.assertprobintbe
   summary: "\n> [!WARNING]\n> Déconseillé\n\nAssertProbIntBE est déconseillé. Utilisez @ \"assertprobint (StateIndex, prob, bigendianaslittleendian (qubits), Tolerance)\" à la place.\nCette opération a été supprimée."
+- uid: microsoft.quantum.canon.cascadecnot
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nCascadeCNOT est déconseillé. Utilisez @\"microsoft.quantum.canon.applycnotchain\" à la place.\nUtilisez @\"microsoft.quantum.canon.applycnotchain\"."
 - uid: microsoft.quantum.canon.cnotchain
-  summary: >-
-    Calcule la parité d’un tableau de qubits sur place.
-
-
-    Il suit le modèle $ \ket{q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cdots $.
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nCNOTChain est déconseillé. Utilisez @\"microsoft.quantum.canon.applycnotchain\" à la place."
 - uid: microsoft.quantum.canon.cnotchaintarget
-  summary: >-
-    Calcule la parité d’un tableau de qubits dans un qubit cible.
-
-
-    Si le tableau est initialement dans l’État $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\text{Target}}} $, l’état final est donné par $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\text{Target}}} $.
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nCNOTChainTarget est déconseillé. Utilisez @\"microsoft.quantum.canon.applycnotchainwithtarget\" à la place."
 - uid: microsoft.quantum.canon.copymostsignificantbitle
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nCopyMostSignificantBitLE est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.copymostsignificantbit\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nCopyMostSignificantBitLE est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.copymostsignificantbit\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"."
 - uid: microsoft.quantum.canon.cx
   summary: >-
     Applique la porte contrôlée X (CX) à une paire de qubits.
@@ -604,30 +600,32 @@ operations:
     \begin{align} H_Y \mathrel{ : =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i &-i \end{bmatrix}.
 
     \end{align}
+- uid: microsoft.quantum.canon.inplacemajority
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nInPlaceMajority est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.applymajorityinplace\" à la place.\nUtilisez @\"microsoft.quantum.arithmetic.applymajorityinplace\"."
 - uid: microsoft.quantum.canon.inplacexorbe
   summary: "\n> [!WARNING]\n> Déconseillé\n\nInPlaceXorBE est déconseillé. Utilisez @ \"applyreversedopleca (applyxorinplace (valeur, _), cible)\" à la place.\nCette opération a été supprimée."
 - uid: microsoft.quantum.canon.inplacexorle
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nInPlaceXorLE est déconseillé. Utilisez plutôt @\"microsoft.quantum.measurement.applyxorinplace\".\nUtilisez @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nInPlaceXorLE est déconseillé. Utilisez @\"microsoft.quantum.measurement.applyxorinplace\" à la place.\nUtilisez @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"."
 - uid: microsoft.quantum.canon.integerincrementle
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nIntegerIncrementLE est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.incrementbyinteger\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nIntegerIncrementLE est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.incrementbyinteger\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"."
 - uid: microsoft.quantum.canon.integerincrementphasele
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nIntegerIncrementPhaseLE est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.incrementphasebyinteger\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nIntegerIncrementPhaseLE est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.incrementphasebyinteger\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"."
 - uid: microsoft.quantum.canon.iteratethroughcartesianpower
-  summary: Itère une variable, par exemple arr, via le produit cartésien [0, Bound-1] × [0, Bound-1] × [0, Bound-1] et appelle op (arr) pour chaque élément du produit cartésien
+  summary: Applique une opération pour chaque index dans la puissance Cartésiente d’une plage d’entiers.
 - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
-  summary: Itère une variable, par exemple `arr`, par le biais d’un produit cartésien [0, limites [0]-1] × [0, limites [1]-1] × [0, limites [longueur (limites)-1]-1] et appelle op (arr) pour chaque élément du produit cartésien
+  summary: Applique une opération pour chaque index dans le produit cartésien de plusieurs plages.
 - uid: microsoft.quantum.canon.measureintegerbe
   summary: "\n> [!WARNING]\n> Déconseillé\n\nMeasureIntegerBE est déconseillé. Utilisez @ \"measureinteger (bigendianaslittleendian (cible))\" à la place.\nCette opération a été supprimée."
 - uid: microsoft.quantum.canon.modularaddproductle
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nModularAddProductLE est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nModularAddProductLE est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"."
 - uid: microsoft.quantum.canon.modularaddproductphasele
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nModularAddProductPhaseLE est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nModularAddProductPhaseLE est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"."
 - uid: microsoft.quantum.canon.modularincrementle
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nModularIncrementLE est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.modularincrementbyinteger\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nModularIncrementLE est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.modularincrementbyinteger\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"."
 - uid: microsoft.quantum.canon.modularincrementphasele
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nModularIncrementPhaseLE est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nModularIncrementPhaseLE est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"."
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nModularMultiplyByConstantLE est déconseillé. Utilisez plutôt @\"microsoft.quantum.arithmetic.multiplybymodularinteger\".\nUtilisez @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nModularMultiplyByConstantLE est déconseillé. Utilisez @\"microsoft.quantum.arithmetic.multiplybymodularinteger\" à la place.\nUtilisez @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"."
 - uid: microsoft.quantum.canon.multiplexoperations
   summary: >-
     Applique un tableau d’opérations contrôlé par un tableau d’États de nombre.
@@ -690,25 +688,22 @@ operations:
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: Utilise des portes d’échange pour inverser l’ordre des qubits dans un registre.
 - uid: microsoft.quantum.canon.with
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nAvec est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.applywith\".\nUtilisez @\"Microsoft.Quantum.Canon.ApplyWith\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nAvec est déconseillé. Utilisez @\"microsoft.quantum.canon.applywith\" à la place.\nUtilisez @\"Microsoft.Quantum.Canon.ApplyWith\"."
 - uid: microsoft.quantum.canon.witha
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nAveca est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.applywitha\".\nUtilisez @\"Microsoft.Quantum.Canon.ApplyWithA\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nAveca est déconseillé. Utilisez @\"microsoft.quantum.canon.applywitha\" à la place.\nUtilisez @\"Microsoft.Quantum.Canon.ApplyWithA\"."
 - uid: microsoft.quantum.canon.withc
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nWithC est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.applywithc\".\nUtilisez @\"Microsoft.Quantum.Canon.ApplyWithC\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nWithC est déconseillé. Utilisez @\"microsoft.quantum.canon.applywithc\" à la place.\nUtilisez @\"Microsoft.Quantum.Canon.ApplyWithC\"."
 - uid: microsoft.quantum.canon.withca
-  summary: "\n> [!WARNING]\n> Déconseillé\n\nWithCA est déconseillé. Utilisez plutôt @\"microsoft.quantum.canon.applywithca\".\nUtilisez @\"Microsoft.Quantum.Canon.ApplyWithCA\"."
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nWithCA est déconseillé. Utilisez @\"microsoft.quantum.canon.applywithca\" à la place.\nUtilisez @\"Microsoft.Quantum.Canon.ApplyWithCA\"."
 newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: Type de signature de la porte CCNOT.
 - uid: microsoft.quantum.canon.resultstack
-  summary: >-
-    Une pile dernier dans le premier sorti de variables de `Result`.
-
-    La pile se compose d’une capacité d’entier, d’un pointeur de pile et d’un tableau de `Result`.
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nResultStack est déconseillé."
 metadata:
-  ms.openlocfilehash: 457d211ace716ddc09ebcd94c5cbc3c33b42d704
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 8d54303daeb32281b1e531fce50443c132c14093
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858545"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870722"

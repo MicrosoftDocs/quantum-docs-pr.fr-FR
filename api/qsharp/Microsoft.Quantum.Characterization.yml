@@ -11,12 +11,14 @@ operations:
   summary: À partir d’une préparation et d’une mesure, évalue la fréquence à laquelle cette mesure s’est déroulée (retourne `Zero`) en effectuant un nombre donné d’essais.
 - uid: microsoft.quantum.characterization.estimatefrequencya
   summary: Étant donné une préparation qui est adjointable et mesure, évalue la fréquence à laquelle cette mesure s’est déroulée (retourne `Zero`) en effectuant un nombre donné d’essais.
+- uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
+  summary: À partir de deux opérations qui préparent les copies d’un État, évalue la partie imaginaire du chevauchement entre les États préparés par chaque opération.
+- uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
+  summary: À partir de deux opérations qui préparent les copies d’un État, évalue le chevauchement carré entre les États préparés par chaque opération.
+- uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
+  summary: À partir de deux opérations qui préparent les copies d’un État, évalue la partie réelle du chevauchement entre les États préparés par chaque opération.
 - uid: microsoft.quantum.characterization.measureallz
-  summary: >-
-    Mesure conjointement un registre de qubits dans la base Z Pauli.
-
-
-    En d’autres termes, mesure l’opération $Z \otimes Z \otimes \cdots \otimes Z $ sur un registre donné.
+  summary: "\n> [!WARNING]\n> Déconseillé\n\nMeasureAllZ est déconseillé. Utilisez @\"microsoft.quantum.measurement.measureallz\" à la place.\nUtilisez @\"microsoft.quantum.measurement.measureAllZ\"."
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Mesure l’opérateur d’identité sur un registre de qubits.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
@@ -26,9 +28,9 @@ operations:
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: Effectue une mesure de tomographie de processus qubit unique dans la base de Pauli, en fonction d’un canal d’intérêt particulier.
 metadata:
-  ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ff2bee3d5885c4b83a7ba17eeaf578c226dbbf20
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056948"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870679"

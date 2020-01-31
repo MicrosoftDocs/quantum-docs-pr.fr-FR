@@ -7,11 +7,13 @@ summary: >-
   Effectue un incrément modulaire d’un registre qubit à l’aide d’une constante entière.
 
 
-  Supposons que `increment` par un, `modulus` par N et un entier encodé dans `target` par y, alors l’opération effectue la transformation suivante : | y ⟩ ↦ | y + a (mod N) ⟩ les entiers sont encodés au format Little endian dans QFT
+  Laissez-nous `increment` par $a $, `modulus` par $N $ et entiers codés dans `target` par $y $.
+
+  L’opération effectue ensuite la transformation suivante : \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} entiers sont encodés au format Little endian dans QFT.
 remarks: >-
   Suppose que `target` a le bit le plus élevé défini sur 0.
 
-  Suppose également que la valeur de Target est inférieure à N.
+  Suppose également que la valeur de Target est inférieure à $N $.
 
 
   Pour le schéma du circuit et l’explication, voir la figure 5 sur la [page 5 de arXiv : quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5).
@@ -20,12 +22,15 @@ input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: increment
+    summary: Incrément entier $a $ à ajouter à $y $.
     isPrimitive: true
     uid: Int
   - name: modulus
+    summary: Entier $N $ mods $y + a $.
     isPrimitive: true
     uid: Int
   - name: target
+    summary: Entier $y $ dans un format Little-endian encodé en phase qui `increment` $a $ est ajouté à.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -36,11 +41,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- microsoft.quantum.canon.modularincrementle
+- microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: 897e46cca640e714e1f000548ffd3226e8e27fa4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 69240c9ecac0917f8f2a6d1f6a3554cc93269cbd
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219023"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871411"

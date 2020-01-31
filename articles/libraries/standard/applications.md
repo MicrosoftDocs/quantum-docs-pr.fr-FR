@@ -6,14 +6,14 @@ uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864387"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868966"
 ---
-# <a name="applications"></a>applications #
+# <a name="applications"></a>Applications #
 
 ## <a name="hamiltonian-simulation"></a>Simulation hamiltonienne ##
 
@@ -69,15 +69,16 @@ Par exemple, la décomposition Trotter-Suzuki peut être appelée à l’aide de
 
 ```qsharp
 function TrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : SimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: SimulationAlgorithm {
     ...
 }
+
 function TimeDependentTrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : TimeDependentSimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: TimeDependentSimulationAlgorithm {
     ...
 }
 ```
@@ -99,11 +100,11 @@ Nous définissons donc la fonction pratique
 
 ```qsharp
 function InterpolatedEvolution(
-        interpolationTime: Double, 
-        evolutionGeneratorStart: EvolutionGenerator,
-        evolutionGeneratorEnd: EvolutionGenerator,
-        timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
-        : (Qubit[] => Unit is Adj + Ctl) {
+        interpolationTime : Double, 
+        evolutionGeneratorStart : EvolutionGenerator,
+        evolutionGeneratorEnd : EvolutionGenerator,
+        timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)
+: (Qubit[] => Unit is Adj + Ctl) {
         ...
 }
  
@@ -114,13 +115,13 @@ Cela retourne une opération unitaire qui implémente toutes les étapes de pré
 Nous définissons également une opération utile qui effectue automatiquement toutes les étapes d’une expérience de type chimie Quantum typique. Par exemple, nous avons les éléments suivants, qui retournent une estimation d’énergie de l’État produit par la préparation de l’État adiabatic :
 
 ```qsharp
-operation AdiabaticStateEnergyEstimate( 
-    nQubits : Int, 
-    statePrepUnitary: (Qubit[] => Unit),
-    adiabaticUnitary: (Qubit[] => Unit),
+operation EstimateAdiabaticStateEnergy(
+    nQubits : Int,
+    statePrepUnitary : (Qubit[] => Unit),
+    adiabaticUnitary : (Qubit[] => Unit),
     qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
-    : Double {
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
+: Double {
 ...
 }
 ```
@@ -174,7 +175,7 @@ Le $U contrôlé _a $ Gate mappe $ \ket{x} $ à $ \ket{(ax) \text{mod} N} $ si l
 Pour obtenir $ (a ^ NX) \text{mod} N $, nous pouvons simplement appliquer le contrôle de $U _ {a ^ n} $, où nous calculons $a ^ n \text{mod} N $ de façon classique pour brancher le circuit Quantum.  
 Les circuits permettant d’obtenir ce type d’arithmétique modulaire ont été décrits dans la documentation sur les opérations [arithmétiques Quantum](./algorithms.md#arithmetic), en particulier, nous avons besoin d’un circuit modulaire à élévation à la puissance pour implémenter les opérations de\_de $U contrôlées {a ^ i} $.
 
-Alors que le circuit ci-dessus correspond à l' [estimation de phase quantique](xref:microsoft.quantum.characterization.quantumphaseestimation) et active explicitement la recherche de commande, nous pouvons réduire le nombre de qubits requis. Nous pouvons soit suivre la méthode de Beauregard pour trouver la commande comme décrit [à la page 8 de arXiv : quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), soit utiliser l’une des routines d’estimation de phase disponibles dans Microsoft. Quantum. Canon. Par exemple, l' [estimation de phase robuste](xref:microsoft.quantum.characterization.robustphaseestimation) utilise également un qubit supplémentaire.
+Alors que le circuit ci-dessus correspond à l' [estimation de phase quantique](xref:microsoft.quantum.characterization.quantumphaseestimation) et active explicitement la recherche de commande, nous pouvons réduire le nombre de qubits requis. Nous pouvons soit suivre la méthode de Beauregard pour trouver la commande comme décrit [à la page 8 de arXiv : quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), soit utiliser l’une des routines d’estimation de phase disponibles dans Microsoft. Quantum. caractérisation. Par exemple, l' [estimation de phase robuste](xref:microsoft.quantum.characterization.robustphaseestimation) utilise également un qubit supplémentaire.
  
 ### <a name="factoring"></a>Factorisation ###
 L’objectif de la factorisation est de déterminer les deux facteurs premiers de l’entier $N $, où $N $ est un nombre $n de $ bits.  

@@ -1,17 +1,17 @@
 ---
 title: Compteur de profondeur | Simulateur de trace d’ordinateur Quantum | Microsoft Docs
-description: Vue d’ensemble du simulateur de trace d’ordinateur Quantum
+description: Vue d’ensemble du simulateur de traces d’ordinateur quantique
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: f5fcaa64e91290d377eeba597df2e307e187277c
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 07f927c794e2c62e53e4e053b5bc683d24bbed8d
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184897"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820468"
 ---
 # <a name="depth-counter"></a>Compteur de profondeur
 
@@ -20,12 +20,12 @@ Il est utilisé pour regrouper les nombres de la profondeur de chaque opération
 
 Par défaut, toutes les opérations ont la profondeur 0, à l’exception de la porte T qui a la profondeur 1. Cela signifie que, par défaut, seule la profondeur des opérations T est calculée (ce qui est souvent souhaitable). Les statistiques collectées sont agrégées sur tous les bords du graphique des appels d’opérations. 
 
-Calculons à présent le <xref:microsoft.quantum.intrinsic.t> profondeur de l’opération <xref:microsoft.quantum.intrinsic.ccnot>. Nous utiliserons le code du pilote Q # suivant : 
+Calculons à présent le <xref:microsoft.quantum.intrinsic.t> profondeur de l’opération <xref:microsoft.quantum.intrinsic.ccnot>. Nous allons utiliser l’exemple de code Q # suivant :
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
-operation CCNOTDriver() : Unit {
+open Microsoft.Quantum.Intrinsic;
 
+operation ApplySampleWithCCNOT() : Unit {
     using (qubits = Qubit[3]) {
         CCNOT(qubits[0], qubits[1], qubits[2]);
         T(qubits[0]);
@@ -35,7 +35,7 @@ operation CCNOTDriver() : Unit {
 
 ## <a name="using-depth-counter-within-a-c-program"></a>Utilisation du compteur de profondeur C# dans un programme
 
-Pour vérifier que `CCNOT` a `T` profondeur 5 et que `CCNOTDriver` a `T` profondeur 6, nous pouvons utiliser C# le code suivant :
+Pour vérifier que `CCNOT` a `T` profondeur 5 et que `ApplySampleWithCCNOT` a `T` profondeur 6, nous pouvons utiliser C# le code suivant :
 
 ```csharp 
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
@@ -43,17 +43,17 @@ using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
 config.useDepthCounter = true;
 var sim = new QCTraceSimulator(config);
-var res = CCNOTDriver.Run(sim).Result;
+var res = ApplySampleWithCCNOT.Run(sim).Result;
 
-double tDepth = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(DepthCounter.Metrics.Depth);
-double tDepthAll = sim.GetMetric<CCNOTDriver>(DepthCounter.Metrics.Depth);
+double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
+double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
-La première partie du programme exécute `CCNOTDriver`. Dans la deuxième partie, nous utilisons la méthode `QCTraceSimulator.GetMetric` pour connaître l' `T` profondeur de `CCNOT` et `CCNOTDriver`: 
+La première partie du programme exécute `ApplySampleWithCCNOT`. Dans la deuxième partie, nous utilisons la méthode `QCTraceSimulator.GetMetric` pour connaître l' `T` profondeur de `CCNOT` et `ApplySampleWithCCNOT`: 
 
 ```csharp
-double tDepth = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(DepthCounter.Metrics.Depth);
-double tDepthAll = sim.GetMetric<CCNOTDriver>(DepthCounter.Metrics.Depth);
+double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
+double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
 Enfin, pour générer toutes les statistiques collectées par `Depth Counter` au format CSV, nous pouvons utiliser les éléments suivants :
@@ -61,6 +61,6 @@ Enfin, pour générer toutes les statistiques collectées par `Depth Counter` au
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## <a name="see-also"></a>Consultez également la section ##
+## <a name="see-also"></a>Voir aussi ##
 
 - Présentation de Quantum Computer [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .

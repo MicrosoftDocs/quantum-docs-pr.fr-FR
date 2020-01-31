@@ -7,22 +7,27 @@ summary: >-
   Effectue un incrément modulaire d’un registre qubit à l’aide d’une constante entière.
 
 
-  Remarquez `increment` par un, `modulus` par N et entier encodé dans `target` par y, puis l’opération effectue la transformation suivante : \begin{align} \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N} \end{align} entiers sont encodés au format Little endian.
-remarks: Suppose que la valeur de Target est inférieure à N. Notez que <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> implémente la même opération, mais dans la base `PhaseLittleEndian`.
+  Laissez-nous `increment` par $a $, `modulus` par $N $ et entiers codés dans `target` par $y $.
+
+  L’opération effectue ensuite la transformation suivante : \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} entiers sont encodés au format Little endian.
+remarks: >-
+  Suppose que la valeur initiale de Target est inférieure à $N $ et que l’incrément $a $ est inférieur à $N $.
+
+  Notez que <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> implémente la même opération dans la base de `PhaseLittleEndian`.
 syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: increment
-    summary: Incrément entier a à ajouter à y.
+    summary: Incrément entier $a $ à ajouter à $y $.
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: Entier N qui mods y + a.
+    summary: Entier $N $ mods $y + a $.
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Entier y au format `LittleEndian` auquel `increment` un est ajouté.
+    summary: Entier $y $ au format `LittleEndian` qui `increment` $a $ est ajouté à.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -33,11 +38,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- incrementphasebymodularinteger
+- microsoft.quantum.arithmetic.incrementphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 9b61ed007a08d176d1754a7c1cd6cd2d9edce7d2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 975d4548eadbc61f8174b6719d067ffed32797dd
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219057"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871598"

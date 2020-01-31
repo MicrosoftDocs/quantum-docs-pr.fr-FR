@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864370"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870347"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caractérisation quantique et statistiques #
 
@@ -106,7 +106,7 @@ L' [algorithme d’estimation de phase robuste](https://arxiv.org/abs/1502.02677
 
 La fonctionnalité la plus importante de l’estimation de phase fiable, qui est partagée avec la plupart des autres variantes utiles, est que la qualité de reconstruction de $ \hat{\Phi} $ est dans un sens Heisenberg-Limited. Cela signifie que si l’écart de $ \hat{\Phi} $ de la valeur true est $ \sigma $, alors $ \sigma $ est mis à l’échelle inversement-proportionnel au nombre total de requêtes $Q $ effectuées à Control-$U $, c’est-à-dire $ \sigma = \mathcal{O} (1/Q) $. À présent, la définition de l’écart varie selon les différents algorithmes d’estimation. Dans certains cas, cela peut signifier qu’avec au moins $ \mathcal{O} (1) $ probabilité, l’erreur d’estimation $ | \hat{\Phi}-\Phi |\_\circ\le \sigma $ sur une mesure circulaire $ \circ $. Pour une estimation de phase robuste, l’écart est précisément l’écart $ \sigma ^ 2 = \mathbb{E}\_\hat{\Phi} [(\mod\_{2 \ pi} (\hat{\Phi}-\Phi + \pi)-\pi) ^ 2] $ si nous désencapsulons les phases périodiques sur un seul intervalle fini $ (-\pi, \pi] $. Plus précisément, l’écart type de l’estimation de phase fiable satisfait aux inégales $ $ \begin{align} 2,0 \pi/Q \Le \sigma \Le 2 \ pi/2 ^ {n} \Le 10.7 \ pi/Q, \end{align} $ $ où la limite inférieure est atteinte dans la limite de asymptotiquement grande $Q $, et la limite supérieure est garantie même pour les petites tailles d’échantillonnage.  Notez que $n $ Selected par l’entrée `bitsPrecision`, qui définit implicitement $Q $.
 
-D’autres informations pertinentes incluent, par exemple, la surcharge de petite taille de seulement $1 $ Ancilla qubit, ou la procédure n’est pas adaptative, ce qui signifie que la séquence requise des expérimentations de Quantum est indépendante des résultats de mesure intermédiaires. Dans cet exemple et les prochains exemples où le choix de l’algorithme d’estimation de phase est important, vous devez faire référence à la documentation, par exemple @"microsoft.quantum.canon.robustphaseestimation" et les publications référencées dans ce document pour obtenir plus d’informations et pour leur implémentation.
+D’autres informations pertinentes incluent, par exemple, la surcharge de petite taille de seulement $1 $ Ancilla qubit, ou la procédure n’est pas adaptative, ce qui signifie que la séquence requise des expérimentations de Quantum est indépendante des résultats de mesure intermédiaires. Dans cet exemple et les prochains exemples où le choix de l’algorithme d’estimation de phase est important, vous devez faire référence à la documentation, par exemple @"microsoft.quantum.characterization.robustphaseestimation" et les publications référencées dans ce document pour obtenir plus d’informations et pour leur implémentation.
 
 > [!TIP]
 > Il existe de nombreux exemples dans lesquels l’estimation de phase robuste est utilisée. Pour l’estimation de phase dans l’extraction de l’énergie d’État du sol de divers systèmes physiques, consultez l’exemple de [ **simulation H2** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), l' [exemple **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)et l’exemple de [ **modèle Hubbard** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
@@ -154,25 +154,27 @@ Ainsi, comme indiqué dans **H2Sample**, une opération peut accepter un algorit
 
 ```qsharp
 operation H2EstimateEnergy(
-    idxBondLength : Int, 
+    idxBondLength : Int,
     trotterStepSize : Double,
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
 : Double
 ```
 
-Ces algorithmes d’estimation de myriade de phases sont optimisés pour différentes propriétés et paramètres d’entrée, qui doivent être compris pour faire le meilleur choix pour l’application cible. Par exemple, certains algorithmes d’estimation de phase sont adaptatifs, ce qui signifie que les étapes futures sont contrôlées de manière classique par les résultats de mesure des étapes précédentes. Certains requièrent la capacité d’exponentiate de son Oracle sous la boîte noire par des pouvoirs réels arbitraires, tandis que d’autres ne nécessitent que des valeurs entières, mais sont uniquement en mesure de résoudre une estimation de phase modulo $2 \ pi $. Certains requièrent un grand nombre d’qubits auxiliaires, et d’autres requièrent un seul.
+Ces algorithmes d’estimation de myriade de phases sont optimisés pour différentes propriétés et paramètres d’entrée, qui doivent être compris pour faire le meilleur choix pour l’application cible. Par exemple, certains algorithmes d’estimation de phase sont adaptatifs, ce qui signifie que les étapes futures sont contrôlées de manière classique par les résultats de mesure des étapes précédentes. Certains requièrent la capacité d’exponentiate de son Oracle sous la boîte noire par des pouvoirs réels arbitraires, tandis que d’autres ne nécessitent que des valeurs entières, mais sont uniquement en mesure de résoudre une estimation de phase modulo $2 \ pi $. Certains requièrent un grand nombre d’qubits auxiliaires, tandis que d’autres en ont besoin.
 
 De même, l’estimation de la phase de parcours aléatoire s’effectue de la même façon que pour les autres algorithmes fournis avec Canon :
 
 ```qsharp
-operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
-is Adj + Ctl {
+operation ApplyExampleOracle(
+    eigenphase : Double,
+    time : Double,
+    register : Qubit[])
+: Unit is Adj + Ctl {
     Rz(2.0 * eigenphase * time, register[0]);
 }
 
-operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
-
-    let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+operation EstimateBayesianPhase(eigenphase : Double) : Double {
+    let oracle = ContinuousOracle(ApplyExampleOracle(eigenphase, _, _));
     using (eigenstate = Qubit()) {
         X(eigenstate);
         // The additional inputs here specify the mean and variance of the prior, the number of

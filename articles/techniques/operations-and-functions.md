@@ -1,17 +1,17 @@
 ---
-title: 'Techniques Q #-opérations et fonctions | Microsoft Docs'
-description: 'Techniques Q #-opérations et fonctions'
+title: 'Opérations et fonctions-Q # techniques | Microsoft Docs'
+description: 'Opérations et fonctions-Q # techniques'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 06da09dc9c6e0ba0331db6bc0cd3d2ddeb287113
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183452"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820774"
 ---
 # <a name="q-operations-and-functions"></a>Opérations et fonctions Q #
 
@@ -66,7 +66,7 @@ Si une opération implémente une transformation unitaire, il est possible de d�
 L’existence de ces spécialisations peut être déclarée dans le cadre de la signature de l’opération : `is Adj + Ctl` dans l’exemple suivant. L’implémentation correspondante pour chaque spécialisation déclarée implicitement est ensuite générée par le compilateur. 
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
@@ -111,7 +111,7 @@ is Ctl + Adj {
     controlled adjoint invert; 
 }
 ```
-Dans l’exemple ci-dessus, `adjoint invert;` indique que la spécialisation voisine doit être générée en inversant l’implémentation du corps, et `controlled adjoint invert;` indique que la spécialisation de l’entité voisine doit être générée en inversant l’implémentation donnée du spécialisation contrôlée.
+Dans l’exemple ci-dessus, `adjoint invert;` indique que la spécialisation voisine doit être générée en inversant l’implémentation du corps, et `controlled adjoint invert;` indique que la spécialisation de la spécialisation voisine doit être générée en inversant l’implémentation donnée de la spécialisation contrôlée.
 
 Nous verrons plus d’exemples dans le [processus de contrôle d’ordre supérieur](xref:microsoft.quantum.concepts.control-flow).
 
@@ -163,7 +163,7 @@ operation U(target : Qubit) : Unit {
 
 Chaque fois que `U` est appelé, il aura une action différente sur `target`.
 En particulier, le compilateur ne peut pas garantir que si nous avons ajouté une déclaration de spécialisation `adjoint auto` à `U`, `U(target); Adjoint U(target);` agit comme une identité (autrement dit, une absence d’opération).
-Cela ne respecte pas la définition de l’voisine que nous avons vu dans les [vecteurs et les matrices](xref:microsoft.quantum.concepts.vectors), ce qui permet de générer automatiquement une spécialisation de la personne voisine dans une opération où nous avons appelé l’opération <xref:microsoft.quantum.math.randomreal> arrêterait les garanties fournies par le compilateur. ; <xref:microsoft.quantum.math.randomreal> est une opération pour laquelle il n’existe aucune version voisine ou contrôlée.
+Cela viole la définition de l’voisine que nous avons vu dans les [vecteurs et les matrices](xref:microsoft.quantum.concepts.vectors), ce qui permet de générer automatiquement une spécialisation joint dans une opération où nous avons appelé l’opération <xref:microsoft.quantum.math.randomreal> annulerait les garanties fournies par le compilateur. <xref:microsoft.quantum.math.randomreal> est une opération pour laquelle il n’existe aucune version voisine ou contrôlée.
 
 D’un autre côté, il est possible d’autoriser les appels de fonction tels que `Square`, dans la mesure où le compilateur peut être certain qu’il n’a besoin de conserver l’entrée que pour `Square` afin de maintenir la stabilité de la sortie.
 Ainsi, l’isolation de la logique classique la plus possible dans les fonctions facilite la réutilisation de cette logique dans d’autres fonctions et opérations.

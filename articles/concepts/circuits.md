@@ -1,17 +1,17 @@
 ---
 title: Circuits quantiques | Microsoft Docs
-description: Circuits quantiques
+description: Circuits de quantum
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7c2afa58fd70d893529cf794ae07df480466aaec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210652"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820791"
 ---
 # <a name="quantum-circuits"></a>Circuits quantiques
 Prenons un moment pour la transformation unitaire $ \text{CNOTIN} _{01}(H\otimes 1) $.
@@ -39,7 +39,7 @@ Par exemple, le symbole
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_2.png)
 
-est la porte [hadarmard](xref:microsoft.quantum.primitive.h) agissant sur un registre à qubit unique.
+est la porte [hadarmard](xref:microsoft.quantum.intrinsic.h) agissant sur un registre à qubit unique.
 
 Les portes de Quantum sont triées dans l’ordre chronologique avec la porte la plus à gauche à mesure que la porte est appliquée en premier au qubits.
 En d’autres termes, si vous constatez que les câbles sont dépendants de l’État Quantum, les fils importent l’État Quantum par le biais de chacune des portes du diagramme, de gauche à droite.
@@ -72,7 +72,7 @@ Cela signifie que vous pouvez obtenir une intuition sur le workflow pour un gran
 
 ## <a name="controlled-gates"></a>Portes contrôlées
 L’autre construction intégrée aux diagrammes Quantum à plusieurs qubit est le contrôle.
-L’action d’une porte à contrôle quantique, dénotée $ \Lambda (G) $, où une valeur de qubit unique contrôle l’application de $G $, peut être comprise en examinant l’exemple suivant d’une entrée d’état de produit $ \Lambda (G) (\alpha \ket{0} + \beta \ket{1}) \ket{\Psi} = \alpha \ket{0} \ket{\Psi} + \beta \ket{1} G\ket {\ psi} $.
+L’action d’une porte à contrôle quantique, dénotée $ \Lambda (G) $, où une valeur de qubit unique contrôle l’application de $G $, peut être comprise en examinant l’exemple suivant d’une entrée d’état de produit $ \Lambda (G) (\alpha \ket{0} + \beta \ket{1}) \ket{\Psi} = \alpha \ket{0} \ket{\Psi} + \beta \ket{1} G\ket {\ psi}
 Autrement dit, la porte contrôlée applique $G $ au registre contenant $ \Psi $ si et seulement si le contrôle qubit prend la valeur $1 $.
 En général, nous décrivons ces opérations contrôlées dans des diagrammes de circuit comme
 
@@ -81,7 +81,7 @@ En général, nous décrivons ces opérations contrôlées dans des diagrammes d
 ![](~/media/concepts_5.png)
 
 Ici, le cercle noir désigne le bit Quantum sur lequel la porte est contrôlée et un câble vertical dénote l’unité qui est appliquée lorsque le contrôle qubit prend la valeur $1 $.
-Dans les cas spéciaux où $G = X $ et $G = Z $ nous introduisons la notation suivante pour décrire la version contrôlée des portes (Notez que la porte contrôlée-X est la [$CNOT $ Gate](xref:microsoft.quantum.primitive.cnot)) :
+Dans les cas spéciaux où $G = X $ et $G = Z $ nous introduisons la notation suivante pour décrire la version contrôlée des portes (Notez que la porte contrôlée-X est la [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)) :
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -106,7 +106,7 @@ Plus précisément, un sous-circuit similaire à ce qui suit :
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 circuit de mesure ![](~/media/concepts_7.png)
 
-Q # implémente un [opérateur de mesure](xref:microsoft.quantum.primitive.measure) à cet effet.
+Q # implémente un [opérateur de mesure](xref:microsoft.quantum.intrinsic.measure) à cet effet.
 Pour plus d’informations, consultez la [section sur les mesures](xref:microsoft.quantum.libraries.standard.prelude#measurements) .
 
 De même, le sous-circuit

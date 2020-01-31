@@ -1,24 +1,24 @@
 ---
-title: 'Q # techniques-test et débogage | Microsoft Docs'
-description: 'Techniques Q #-test et débogage'
+title: 'Test et débogage-Q # techniques | Microsoft Docs'
+description: 'Test et débogage-techniques Q #'
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864268"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820111"
 ---
 # <a name="testing-and-debugging"></a>Test et débogage
 
 Comme pour la programmation classique, il est essentiel de pouvoir vérifier que les programmes de Quantum fonctionnent comme prévu, et de pouvoir diagnostiquer un programme Quantum qui est incorrect.
 Dans cette section, nous allons aborder les outils proposés par Q # pour le test et le débogage de programmes quantiques.
 
-## <a name="unit-tests"></a>tests unitaires
+## <a name="unit-tests"></a>Tests unitaires
 
 Une approche courante du test des programmes classiques consiste à écrire de petits programmes appelés *tests unitaires* , qui exécutent du code dans une bibliothèque et à comparer la sortie à une sortie attendue.
 Par exemple, nous pouvons nous assurer que `Square(2)` retourne `4`, puisque nous savons *un a priori* que $2 ^ 2 = $4.
@@ -50,8 +50,8 @@ Initialement, ce fichier contient un exemple de test unitaire `AllocateQubit` qu
     @Test("QuantumSimulator")
     operation AllocateQubit () : Unit {
 
-        using (q = Qubit()) {
-            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+        using (qubit = Qubit()) {
+            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");

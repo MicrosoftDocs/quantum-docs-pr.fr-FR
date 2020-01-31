@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 5c7f2c4a572f6194ee846f056016a25b8c5303a2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442547"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820757"
 ---
 # <a name="quantum-computing-glossary"></a>Glossaire quantum computing
 
@@ -19,7 +19,7 @@ ms.locfileid: "73442547"
 |-------------|----------|
 |Voisin|Transposer le conjugué complexe de l’opération. Pour les opérations qui implémentent un opérateur unitaire, le voisin est l’inverse de l’opération.|
 |Pouvant être appelé|Les opérations et les fonctions sont collectivement appelées *callables*.|
-|standard|Opérations et fonctions définies dans Q # en génération sur la logique définie dans Préambule destiné à. L’implémentation de la bibliothèque standard est indépendante en ce qui concerne les ordinateurs cibles.|
+|Standard|Opérations et fonctions définies dans Q # en génération sur la logique définie dans Préambule destiné à. L’implémentation de la bibliothèque standard est indépendante en ce qui concerne les ordinateurs cibles.|
 |Groupe Clifford|Ensemble des opérations qui occupent le octants de la sphère Bloch. Il s’agit notamment des éléments suivants : `X`, `Y`, `Z`, `H` et `S`|
 |Contrôl|Opération de Quantum qui prend un ou plusieurs qubits comme activateurs pour l’opération cible.|
 |Notation Dirac|Représentation abrégée de l’État Quantum. Pour plus d’informations, consultez la section [notation Dirac](xref:microsoft.quantum.concepts.dirac) .|
@@ -39,10 +39,9 @@ ms.locfileid: "73442547"
 |Préambule destiné à|Ensemble des opérations et des fonctions primitives et classiques définies par chaque ordinateur cible, plutôt qu’au niveau Q #.|
 |Circuit quantique|Représentation d’un programme pour un ordinateur Quantum. Pour plus d’informations, consultez la section <xref:microsoft.quantum.concepts.circuits>.|
 |État Quantum|Représentation de qubits dans le système. Il est généralement indiqué comme un vecteur de colonne complexe. Pour plus d’informations, consultez <xref:microsoft.quantum.concepts.vectors>. |
-|qubit|Unité de stockage quantique. Pour plus d’informations, consultez la section <xref:microsoft.quantum.concepts.qubit>.|
+|Qubit|Unité de stockage quantique. Pour plus d’informations, consultez la section <xref:microsoft.quantum.concepts.qubit>.|
 |Répéter jusqu’à réussite|Un algorithme Quantum qui fonctionne de façon probabiliste. En cas d’échec, la routine se réessaie jusqu’à ce qu’elle réussisse (ou qu’une limite a été atteinte). |
-|Pile de logiciels|L’ensemble complet de logiciels classiques et de Quantum, ainsi que les compilateurs, les simulateurs et les runtimes nécessaires à l’utilisation d’un ordinateur quantique. Pour plus d’informations, consultez la section <xref:microsoft.quantum.concepts.software-stack>. |
 |Ordinateur cible|Cible de compilation qui réduit un programme Quantum abstrait en vue d’un matériel ou d’une simulation. Cela inclut généralement les réécritions pour de nombreuses raisons, notamment le remplacement de la porte, l’encodage pour la correction des erreurs, la disposition géométrique et autres.|
-|Passent|Types séparés par des virgules regroupés entre parenthèses. |
-|Type défini par l’utilisateur|Collection de types intégrés ou définis précédemment qui peuvent être désignés sous le terme d’une seule unité.|
+|Tuple|Types séparés par des virgules regroupés entre parenthèses. |
+|Type défini par l'utilisateur|Collection de types intégrés ou définis précédemment qui peuvent être désignés sous le terme d’une seule unité.|
 

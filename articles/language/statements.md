@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5bcbee868c76aaf53d0b7969e6e634da62689aaa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184863"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821063"
 ---
 # <a name="statements-and-other-constructs"></a>Instructions et autres constructions
 
@@ -54,8 +54,7 @@ Exemple :
 ///
 /// # See Also
 /// - Microsoft.Quantum.Intrinsic.H
-operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
-{
+operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
     op(target);
     op(target);
 }
@@ -90,7 +89,6 @@ Si un nom abrégé `Z` pour `X.Y` a été défini dans cet espace de noms et dan
 
 ```qsharp
 namespace NS {
-
     open Microsoft.Quantum.Intrinsic; // opens the namespace
     open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
 }
@@ -181,7 +179,7 @@ for (i in 1 .. 2 .. 10) {
 Des instructions similaires sont disponibles pour tous les opérateurs binaires dans lesquels le type du côté gauche correspond au type d’expression. Cela fournit un moyen pratique pour accumuler les valeurs :
 ```qsharp
 mutable results = new Result[0];
-for (q in qubits) {
+for (qubit in qubits) {
     set results += [M(q)];
     // ...
 }
@@ -193,7 +191,7 @@ Une concaténation similaire existe pour les expressions de copie et de mise à 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -209,19 +207,17 @@ function AddAll (reals : Double[], ims : Double[]) : Complex[] {
 Dans le cas de tableaux, nos bibliothèques standard contiennent les outils nécessaires pour de nombreux besoins d’initialisation et de manipulation de tableaux courants, et permettent ainsi d’éviter d’avoir à mettre à jour les éléments de tableau en premier lieu. Les instructions Update-and-Assign fournissent une alternative si nécessaire :
 
 ```qsharp
-operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-
+operation GenerateRandomInts(max : Int, nSamples : Int) : Int[] {
     mutable samples = new Double[0];
-    for (i in 1 .. nrSamples) {
-        set samples += [RandomInt(maxInt)];
+    for (i in 1 .. nSamples) {
+        set samples += [RandomInt(max)];
     }
     return samples;
 }
 
-operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
-
-    let normalization = 1. / IntAsDouble(prec);
-    mutable samples = RandomInts(prec, nrSamples);
+operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
+    let normalization = 1. / IntAsDouble(nSteps);
+    mutable samples = GenerateRandomInts(nSteps, nSamples);
     
     for (i in IndexRange(samples) {
         let value = IntAsDouble(samples[i]);
@@ -236,10 +232,9 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 
 La fonction
 ```qsharp
-function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
-{
-    mutable pauliArray = new Pauli[n];
-    for (index in 0 .. n - 1) {
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    mutable pauliArray = new Pauli[length];
+    for (index in 0 .. length - 1) {
         set pauliArray w/= index <- 
             index == location ? pauli | PauliI;
     }    
@@ -249,15 +244,15 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
 par exemple, il est simple de simplifier l’utilisation de la fonction `ConstantArray` dans `Microsoft.Quantum.Arrays`, et de retourner une expression de copie et de mise à jour :
 
 ```qsharp
-function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
-    return ConstantArray(n, PauliI) w/ i <- pauli;
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    return ConstantArray(length, PauliI) w/ location <- pauli;
 }
 ```
 
 ### <a name="binding-scopes"></a>Portées de liaison
 
 En général, les liaisons de symboles sont hors de portée et deviennent inopérantes à la fin du bloc d’instructions dans lequel elles se produisent.
-Il existe deux exceptions à cette règle :
+Il y a deux exceptions à cette règle :
 
 - La liaison de la variable de boucle d’une boucle `for` se trouve dans la portée du corps de la boucle for, mais pas après la fin de la boucle.
 - Les trois parties d’une `repeat`/`until` boucle (le corps, le test et la correction) sont traitées comme une seule portée. les symboles liés dans le corps sont donc disponibles dans le test et dans la correction.
@@ -315,7 +310,7 @@ if (a == b) {
 
 ## <a name="control-flow"></a>Flux de contrôle
 
-### <a name="for-loop"></a>Boucle for
+### <a name="for-loop"></a>Boucle For
 
 L’instruction `for` prend en charge l’itération sur une plage d’entiers ou sur un tableau.
 L’instruction se compose du mot clé `for`, d’une parenthèse ouvrante `(`, suivi d’un symbole ou d’un tuple de symbole, du mot clé `in`, d’une expression de type `Range` ou tableau, d’une parenthèse fermante `)`et d’un bloc d’instructions.
@@ -330,8 +325,8 @@ Par exemple,
 
 ```qsharp
 // ...
-for (qb in qubits) { // qubits contains a Qubit[]
-    H(qb);
+for (qubit in qubits) { // qubits contains a Qubit[]
+    H(qubit);
 }
 
 mutable results = new (Int, Results)[Length(qubits)];
@@ -359,13 +354,13 @@ Le corps de la boucle, la condition et la correction sont tous considérés comm
 ```qsharp
 mutable iter = 1;
 repeat {
-    ProbabilisticCircuit(qs);
-    let success = ComputeSuccessIndicator(qs);
+    ProbabilisticCircuit(qubits);
+    let success = ComputeSuccessIndicator(qubits);
 }
 until (success || iter > maxIter)
 fixup {
     iter += 1;
-    ComputeCorrection(qs);
+    ComputeCorrection(qubits);
 }
 ```
 
@@ -374,25 +369,25 @@ Si la condition est true, l’instruction est terminée ; dans le cas contraire
 Notez que l’exécution de la correction met fin à l’étendue de l’instruction, de sorte que les liaisons de symboles effectuées pendant le corps ou la correction ne sont pas disponibles dans les répétitions suivantes.
 
 Par exemple, le code suivant est un circuit probabiliste qui implémente une porte de rotation importante $V _3 = (\boldone + 2 i Z)/\sqrt{5}$ à l’aide des portes Hadarmard et T.
-La boucle se termine dans 8/5 répétitions en moyenne.
+La boucle se termine dans $ \frac{8}{5}$ répétitions en moyenne.
 Pour plus d’informations, consultez [*répéter jusqu’à la réussite : décomposition non déterministe des unités de qubit de données uniques*](https://arxiv.org/abs/1311.1074) (Paetznick et Svore, 2014).
 
 ```qsharp
-using (anc = Qubit()) {
+using (qubit = Qubit()) {
     repeat {
-        H(anc);
-        T(anc);
-        CNOT(target,anc);
-        H(anc);
-        Adjoint T(anc);
-        H(anc);
-        T(anc);
-        H(anc);
-        CNOT(target,anc);
-        T(anc);
+        H(qubit);
+        T(qubit);
+        CNOT(target, qubit);
+        H(qubit);
+        Adjoint T(qubit);
+        H(qubit);
+        T(qubit);
+        H(qubit);
+        CNOT(target, qubit);
+        T(qubit);
         Z(target);
-        H(anc);
-        let result = M(anc);
+        H(qubit);
+        let result = M(qubit);
     } until (result == Zero);
 }
 ```
@@ -438,7 +433,7 @@ if (result == One) {
 } 
 ```
 
-or
+ou
 
 ```qsharp
 if (i == 1) {
@@ -468,13 +463,13 @@ Par exemple,
 return 1;
 ```
 
-or
+ou
 
 ```qsharp
 return ();
 ```
 
-or
+ou
 
 ```qsharp
 return (results, qubits);
@@ -495,7 +490,7 @@ Par exemple,
 fail $"Impossible state reached";
 ```
 
-or
+ou
 
 ```qsharp
 fail $"Syndrome {syn} is incorrect";
@@ -519,15 +514,15 @@ Les initialiseurs sont disponibles pour un qubit unique, indiqué comme `Qubit()
 Par exemple,
 
 ```qsharp
-using (q = Qubit()) {
+using (qubit = Qubit()) {
     // ...
 }
-using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
 
-### <a name="dirty-qubits"></a>Qubits modifié
+### <a name="borrowed-qubits"></a>Qubits empruntés
 
 L’instruction `borrowing` permet d’obtenir des qubits pour une utilisation temporaire. L’instruction se compose du mot clé `borrowing`, suivi d’une parenthèse ouvrante `(`, d’une liaison, d’une parenthèse fermante `)`et du bloc d’instructions dans lequel qubits sera disponible.
 La liaison suit le même modèle et les mêmes règles que celle d’une instruction `using`.
@@ -535,10 +530,10 @@ La liaison suit le même modèle et les mêmes règles que celle d’une instruc
 Par exemple,
 
 ```qsharp
-borrowing (q = Qubit()) {
+borrowing (qubit = Qubit()) {
     // ...
 }
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+borrowing ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
@@ -547,8 +542,7 @@ Le qubits emprunté est dans un état inconnu et est hors de portée à la fin d
 L’emprunteur s’engage à laisser le qubits dans le même État que celui dans lequel il se trouvait lorsqu’il a été emprunté, c’est-à-dire que son état au début et à la fin du bloc d’instructions est supposé être le même.
 En particulier, cet État n’est pas nécessairement un État classique, ce qui signifie que dans la plupart des cas, les étendues d’emprunt ne doivent pas contenir de mesures. 
 
-Ces qubits sont souvent connues sous le nom de « Dirty Ancilla ».
-Pour obtenir un exemple d’utilisation incorrecte de l’Svore, consultez [*factorisation à l’aide de 2n + 2 qubits avec la multiplication modulaire basée sur Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler et Ancilla 2017).
+Pour obtenir un exemple d’utilisation Svore empruntée, voir [*factorisation à l’aide de 2n + 2 qubits avec la multiplication modulaire basée sur Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler et qubit 2017).
 
 Lorsque vous empruntez des qubits, le système tente d’abord de remplir la demande à partir de qubits qui sont en cours d’utilisation, mais qui ne sont pas accessibles pendant le corps de l’instruction `borrowing`.
 S’il n’y a pas suffisamment de qubits, il allouera de nouvelles qubits pour terminer la demande.

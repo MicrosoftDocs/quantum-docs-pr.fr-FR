@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 332781a4356015461426ee7640fd931a41450367
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184608"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821029"
 ---
 # <a name="using-the-numerics-library"></a>Utilisation de la bibliothèque de valeurs numériques
 
@@ -64,7 +64,7 @@ Pour chacun des trois types ci-dessus, diverses opérations sont disponibles :
     - Réciproque (1/x)
     - Mesure (double classique)
 
-Pour plus d’informations et pour obtenir une documentation détaillée sur chacune de ces opérations, consultez les documents de référence sur la bibliothèque Q # sur [docs.Microsoft.com](https://docs.microsoft.com/en-us/quantum)
+Pour plus d’informations et pour obtenir une documentation détaillée sur chacune de ces opérations, consultez les documents de référence sur la bibliothèque Q # sur [docs.Microsoft.com](https://docs.microsoft.com/quantum)
 
 ## <a name="sample-integer-addition"></a>Exemple : ajout d’un entier
 
@@ -72,15 +72,14 @@ Pour plus d’informations et pour obtenir une documentation détaillée sur cha
 
 À l’aide du kit de développement quantique, cette opération peut être appliquée comme suit :
 ```qsharp
-operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
-{
+operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
         x = LittleEndian(xQubits); // define bit order
         y = LittleEndian(yQubits);
         
-        ApplyXorInPlace(xInt, x); // initialize values
-        ApplyXorInPlace(yInt, y);
+        ApplyXorInPlace(xValue, x); // initialize values
+        ApplyXorInPlace(yValue, y);
         
         AddI(x, y); // perform addition x+y into y
         
@@ -93,20 +92,20 @@ operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
 
 Pour évaluer des fonctions lissées telles que $ \sin (x) $ sur un ordinateur Quantum, où $x $ est un nombre `FixedPoint` Quantum, la bibliothèque de valeurs de kit de développement quantum fournit les `EvaluatePolynomialFxP` et les `Evaluate[Even/Odd]PolynomialFxP`d’opérations.
 
-La première `EvaluatePolynomialFxP`permet d’évaluer un polynomial au format $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $ où $d $ indique le *degré*. Pour ce faire, il suffit d’utiliser les coefficients polynomiaux `[a_0,..., a_d]` (de type `Double[]`), le `x : FixedPoint` d’entrée et le `y : FixedPoint` de sortie (initialement zéro) :
+La première, `EvaluatePolynomialFxP`, permet d’évaluer un polynomial au format $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $ où $d $ indique le *degré*. Pour ce faire, il suffit d’utiliser les coefficients polynomiaux `[a_0,..., a_d]` (de type `Double[]`), le `x : FixedPoint` d’entrée et le `y : FixedPoint` de sortie (initialement zéro) :
 ```qsharp
-EvaluatePolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
 Le résultat, $P (x) = 1 + 2x $, est stocké dans `yFxP`.
 
-Le deuxième, `EvaluateEvenPolynomialFxP`et le troisième, `EvaluateOddPolynomialFxP`sont des spécialisations pour les cas de fonctions paires et impaires, respectivement. Autrement dit, pour une fonction pair/impair $f (x) $ et $ $ P_ {même} (x) = a_0 + A_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2J}, $ $ $f (x) $ est bien approximatif en $P _ {même} (x) $ ou $P _ {impaire} (x) : = x\cdot P_ {même} (x) $ conséquence.
+Le deuxième, `EvaluateEvenPolynomialFxP`et le troisième, `EvaluateOddPolynomialFxP`sont des spécialisations pour les cas de fonctions paires et impaires, respectivement. Autrement dit, pour une fonction pair/impair $f (x) $ et $ $ P_ {même} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ est bien approximatif en $P _ {même} (x) $ ou $P _ {impaire} (x) : = x\cdot P_ {pair} (x) $, respectivement.
 Dans Q #, ces deux cas peuvent être gérés comme suit :
 ```qsharp
-EvaluateEvenPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```
 qui évalue $P _ {même} (x) = 1 + 2x ^ 2 $, et
 ```qsharp
-EvaluateOddPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
 qui évalue $P _ {impair} (x) = x + 2x ^ 3 $.
 

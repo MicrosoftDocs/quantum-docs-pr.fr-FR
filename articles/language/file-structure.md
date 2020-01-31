@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 40b2e7ddf5def6285250dffe130b152429dce1f8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185186"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821080"
 ---
 # <a name="file-structure"></a>Structure de fichiers
 
@@ -21,7 +21,7 @@ Une déclaration d’espace de noms peut contenir un nombre quelconque de chaque
 Le seul texte qui peut apparaître en dehors d’une déclaration d’espace de noms est un commentaire.
 En particulier, les commentaires de documentation pour un espace de noms précèdent la déclaration.
 
-## <a name="namespace-declarations"></a>Déclarations d’espaces de noms
+## <a name="namespace-declarations"></a>Déclarations d'espace de noms
 
 Un fichier Q # dispose généralement d’une seule déclaration d’espace de noms, mais il peut avoir la valeur None (et être vide ou contenir simplement des commentaires) ou peut contenir plusieurs espaces de noms.
 Les déclarations d’espaces de noms ne peuvent pas être imbriquées.
@@ -84,13 +84,13 @@ Chaque fichier source Q # peut définir n’importe quel nombre d’opérations.
 
 Les noms d’opérations doivent être uniques dans un espace de noms et peuvent ne pas être en conflit avec les noms de type et de fonction.
 
-Une déclaration d’opération se compose du mot clé `operation`, suivi du symbole qui est le nom de l’opération, d’un tuple d’identificateur typé qui définit les arguments de l’opération, d’un signe deux-points `:`, d’une annotation de type qui décrit le type de résultat de l’opération. éventuellement, une annotation avec les caractéristiques de l’opération, une accolade ouvrante `{`, le corps de la déclaration d’opération et une accolade fermante finale `}`.
+Une déclaration d’opération se compose du mot clé `operation`, suivi du symbole qui est le nom de l’opération, d’un tuple d’identificateur typé qui définit les arguments de l’opération, d’un signe deux-points `:`, d’une annotation `}`de type qui décrit le type de résultat de l’opération, éventuellement d’une annotation avec les `{`caractéristiques de l’opération
 
 Le corps de la déclaration d’opération se compose de l’implémentation par défaut ou d’une liste de spécialisations.
 L’implémentation par défaut peut être spécifiée directement dans la déclaration si seule l’implémentation de la spécialisation du corps par défaut doit être spécifiée explicitement.
 Dans ce cas, une annotation avec les caractéristiques de l’opération dans la déclaration est utile pour s’assurer que le compilateur génère automatiquement d’autres spécialisations en fonction de l’implémentation par défaut. 
 
-Par exemple : 
+Par exemple 
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -138,7 +138,7 @@ is Ctl + Adj {
 }
 ```
 
-Dans l’exemple ci-dessus, `adjoint invert;` indique que la spécialisation voisine doit être générée en inversant l’implémentation du corps, et `controlled adjoint invert;` indique que la spécialisation de l’entité voisine doit être générée en inversant l’implémentation donnée du spécialisation contrôlée.
+Dans l’exemple ci-dessus, `adjoint invert;` indique que la spécialisation voisine doit être générée en inversant l’implémentation du corps, et `controlled adjoint invert;` indique que la spécialisation de la spécialisation voisine doit être générée en inversant l’implémentation donnée de la spécialisation contrôlée.
 
 Pour qu’une opération prenne en charge l’application du `Adjoint` et/ou `Controlled` functor, son type de retour doit obligatoirement être `Unit`. 
 
@@ -187,12 +187,12 @@ Pour `body` et `adjoint`, la liste d’arguments doit toujours être `(...)`; po
 Si une ou plusieurs spécialisations en plus du corps par défaut doivent être déclarées explicitement, l’implémentation du corps par défaut doit également être incluse dans une déclaration de spécialisation appropriée :
 
 ```qsharp
-operation CountOnes(qs: Qubit[]) : Int {
+operation CountOnes(qubits: Qubit[]) : Int {
 
     body (...) // default body specialization
     {
         mutable n = 0;
-        for (q in qs) {
+        for (qubit in qubits) {
             set n += M(q) == One ? 1 | 0;
         }
         return n;
@@ -208,7 +208,7 @@ Il est possible de spécifier une opération sans voisin. par exemple, les opér
 Une opération prend en charge l' `Adjoint` functor si sa déclaration contient une déclaration implicite ou explicite d’une spécialisation voisine.
 Une spécialisation contiguë contrôlée explicitement déclarée implique l’existence d’une spécialisation voisine. 
 
-Pour l’opération dont le corps contient des boucles REPEAT-UNTIL-Successful, des instructions SET, des mesures, des instructions return ou des appels à d’autres opérations qui ne prennent pas en charge l' `Adjoint` functor, ce qui génère automatiquement une spécialisation de la personne adjacente après la `invert` ou @no__ la directive t_2_ n’est pas possible.
+Pour l’opération dont le corps contient des boucles REPEAT-UNTIL-Successful, des instructions SET, des mesures, des instructions return ou des appels à d’autres opérations qui ne prennent pas en charge l' `Adjoint` functor, la génération automatique d’une spécialisation Join à la suite de la directive `invert` ou `auto` n’est pas possible.
 
 ### <a name="controlled"></a>Contrôl
 
@@ -236,7 +236,7 @@ Pour une opération dont le corps contient des appels à d’autres opérations 
 Une déclaration d’opération peut être aussi simple que la suivante, qui définit l’opération Pauli X primitive :
 
 ```qsharp
-operation X (q : Qubit) : Unit
+operation X (qubit : Qubit) : Unit
 is Adj + Ctl {
     body intrinsic;
     adjoint self;
@@ -282,7 +282,7 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 Les fonctions sont des routines purement classiques dans Q #.
 Chaque fichier source Q # peut définir un nombre quelconque de fonctions.
 
-Une déclaration de fonction se compose du mot clé `function`, suivi du symbole qui est le nom de la fonction, d’un tuple d’identificateur typé, d’une annotation de type qui décrit le type de retour de la fonction et d’un bloc d’instructions décrivant l’implémentation du fonctionnalités.
+Une déclaration de fonction se compose du mot clé `function`, suivi du symbole qui est le nom de la fonction, d’un tuple d’identificateur typé, d’une annotation de type qui décrit le type de retour de la fonction, et d’un bloc d’instructions qui décrit l’implémentation de la fonction.
 
 Le bloc d’instructions définissant une fonction doit être placé dans `{` et `}` comme tout autre bloc d’instructions.
 

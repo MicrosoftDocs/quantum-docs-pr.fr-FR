@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5e865dbb48029724b6f507ecb63b85d10d80c9a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ff73cef12a3b8c2a6559308dc244c7c2e865ba9f
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185645"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820451"
 ---
 # <a name="higher-order-control-flow"></a>Contrôle de l’ordre supérieur #
 
@@ -52,9 +52,9 @@ Dans Q #, nous pouvons utiliser <xref:microsoft.quantum.arrays.indexrange> pour 
 ```qsharp
 /// # Summary
 /// Applies $H$ to all qubits in a register.
-operation HAll(register : Qubit[]) : Unit 
-is Adj + Ctl {
-
+operation ApplyHadamardToAll(
+    register : Qubit[])
+: Unit is Adj + Ctl {
     for (qubit in register) {
         H(qubit);
     }
@@ -108,9 +108,9 @@ Les constructions de workflow de contrôle offertes par Canon prennent les opér
 Par exemple, le modèle $UVU ^ {\dagger} $ est extrêmement courant dans la programmation quantique, de sorte que Canon fournit l’opération <xref:microsoft.quantum.canon.applywith> comme une abstraction pour ce modèle.
 Cette abstraction permet également une meilleure conformité dans les circuits, comme `Controlled` agissant sur la séquence `U(qubit); V(qubit); Adjoint U(qubit);` n’a pas besoin d’agir sur chaque `U`.
 Pour le voir, $c (U) $ est l’unité qui représente `Controlled U([control], target)` et Let $c (V) $ doit être définie de la même façon.
-Ensuite, pour un état arbitraire $ \ket{\Psi} $, \begin{align} c (U) c (V) c (U) ^ \dagger \ket{1} \otimes \ket{\Psi} & = \ket{1} \otimes (UVU ^ {\dagger} \ket{\Psi}) \\\\ & = (\boldone \otimes U) (c (V)) (\boldone \otimes U ^ \dagger) \ Ket{1} \otimes \ket{\Psi}.
+Ensuite, pour un état arbitraire $ \ket{\Psi} $, \begin{align} c (U) c (V) c (U) ^ \dagger \ket{1} \otimes \ket{\Psi} & = \ket{1} \otimes (UVU ^ {\dagger} \ket{\Psi}) \\\\ & = (\boldone \otimes U) (c (V)) (\boldone \otimes U ^ \dagger) \ket{1} \otimes \ket{\Psi}.
 \end{align} par la définition de `Controlled`.
-En revanche, \begin{align} c (U) c (V) c (U) ^ \dagger \ket{0} \otimes \ket{\Psi} & = \ket{0} \otimes \ket{\Psi} \\\\ & = \ket{0} \otimes (UU ^ \dagger \ket{\Psi}) \\\\ & = (\boldone \otimes U) (c ( V)) (\boldone \otimes U ^ \dagger) \ket{0} \otimes \ket{\Psi}.
+En revanche, \begin{align} c (U) c (V) c (U) ^ \dagger \ket{0} \otimes \ket{\Psi} & = \ket{0} \otimes \ket{\Psi} \\\\ & = \ket{0} \otimes (UU ^ \dagger \ket{\Psi}) \\\\ & = (\boldone \otimes U) (c (V)) (\boldone \otimes U ^ \dagger) \ket{0} \otimes \ket{\Psi}.
 \end{align} par linéarité, nous pouvons conclure que nous pouvons factoriser $U $ Out de cette manière pour tous les États d’entrée.
 Autrement dit, $c (UVU ^ \dagger) = U c (V) U ^ \dagger $.
 Étant donné que les opérations de contrôle peuvent être coûteuses en général, l’utilisation de variantes contrôlées telles que `WithC` et `WithCA` peut aider à réduire le nombre d’functors de contrôle qui doivent être appliqués.
@@ -123,30 +123,30 @@ Autrement dit, $c (UVU ^ \dagger) = U c (V) U ^ \dagger $.
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-De même, <xref:microsoft.quantum.canon.bind> produit des opérations qui appliquent successivement une séquence d’autres opérations.
+De même, <xref:microsoft.quantum.canon.bound> produit des opérations qui appliquent successivement une séquence d’autres opérations.
 Par exemple, les éléments suivants sont équivalents :
 
 ```qsharp
 H(qubit); X(qubit);
-Bind([H, X], qubit);
+Bound([H, X], qubit);
 ```
 
 La combinaison avec les modèles d’itération peut s’avérer particulièrement utile :
 
 ```qsharp
 // Bracket the quantum Fourier transform with $XH$ on each qubit.
-ApplyWith(ApplyToEach(Bind([H, X]), _), QFT, _);
+ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
 ### <a name="time-ordered-composition"></a>Composition chronologique ###
 
 Nous pouvons continuer en pensant au contrôle de Flow en termes d’application partielle et de fonctions classiques, et peuvent modéliser des concepts de Quantum encore plus sophistiqués en termes de contrôle de la fluidité classique.
 Cette analogie est rendue précise par la reconnaissance selon laquelle les opérateurs d’unités correspondent exactement aux effets secondaires des opérations d’appel, de telle sorte que toute décomposition des opérateurs unitaires en termes d’autres opérateurs unitaires corresponde à la construction d’un séquence d’appel pour les sous-routines classiques qui émettent des instructions pour agir en tant qu’opérateurs unitaires particuliers.
-Dans cette vue, `Bind` est précisément la représentation du produit de la matrice, car `Bind([A, B])(target)` équivaut à `A(target); B(target);`, qui à son tour correspond à la séquence d’appel correspondant à $BA $.
+Dans cette vue, `Bound` est précisément la représentation du produit de la matrice, car `Bound([A, B])(target)` équivaut à `A(target); B(target);`, qui à son tour correspond à la séquence d’appel correspondant à $BA $.
 
 Un exemple plus sophistiqué est l' [expansion Trotter – Suzuki](https://arxiv.org/abs/math-ph/0506007v1).
 Comme indiqué dans la section relative à la représentation du générateur dynamique des [structures de données](xref:microsoft.quantum.libraries.data-structures), l’expansion Trotter – Suzuki offre un moyen particulièrement utile d’exprimer des exponentiels de matrice.
-Par exemple, l’application de l’expansion à son ordre le plus bas donne à tous les opérateurs $A $ et $B $ de telle sorte que $A = A ^ \dagger $ et $B = B ^ \dagger $, \begin{align} \tag{★} \label{EQ : Trotter-Suzuki-0} \exp (i [A + B] t) = \lim_{n\to\infty} \left (\exp (i A t/n) \exp ) \right) ^ n.
+Par exemple, l’application de l’expansion à son ordre le plus bas donne à tous les opérateurs $A $ et $B $ de sorte que $A = A ^ \dagger $ et $B = B ^ \dagger $, \begin{align} \tag{★} \label{EQ : Trotter-Suzuki-0} \exp (i [A + B] t) = \ lim_ {n\to\infty} \left (\exp (i A t/n) \exp (i B t/n) \right) ^ n.
 \end{align} en commun, cela signifie que nous pouvons approximativement faire évoluer un État sous $A + B $ en évoluant alternativement sous $A $ et $B $ seul.
 Si nous représentons l’évolution sous $A $ par une opération `A : (Double, Qubit[]) => Unit` qui applique $e ^ {t A} $, la représentation de l’expansion Trotter – Suzuki en termes de réorganisation des séquences d’appel devient évidente.
 Concrètement, étant donné une opération `U : ((Int, Double, Qubit[]) => Unit is Adj + Ctl` telle que `A = U(0, _, _)` et `B = U(1, _, _)`, nous pouvons définir une nouvelle opération représentant l’intégrale de `U` à l’heure $t $ en générant des séquences de la forme
@@ -183,12 +183,11 @@ Nous n’appellerons pas cette opération directement, mais nous ajoutons donc `
 
 ```qsharp
 operation _ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl),
-        controlRegister : Qubit[],
-        targetRegister: Qubit[]) 
-: Unit 
-is Adj + Ctl {
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl),
+    controlRegister : Qubit[],
+    targetRegister: Qubit[])
+: Unit is Adj + Ctl
 ```
 
 Notez que nous prenons une chaîne de bits, représentée sous la forme d’un tableau de `Bool`, que nous utilisons pour spécifier le conditionnement que nous souhaitons appliquer à l’opération `oracle` que nous avons donnée.
@@ -201,6 +200,7 @@ Par conséquent, nous pouvons appliquer $P = X ^ {s\_0} \otimes X ^ {s\_1} \otim
 Cette construction est `ApplyWith`précisément. nous écrivons donc le corps de notre nouvelle opération en conséquence :
 
 ```qsharp
+{
     ApplyWithCA(
         ApplyPauliFromBitString(PauliX, false, bits, _),
         (Controlled oracle)(_, targetRegister),
@@ -219,8 +219,8 @@ De cette façon, notre nouvelle fonction ressemble beaucoup à `Controlled`, ill
 
 ```qsharp
 function ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl)) 
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl))
 : ((Qubit[], Qubit[]) => Unit is Adj + Ctl) {
     return _ControlledOnBitString(bits, oracle, _, _);
 }
