@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyand
+name: ApplyAnd
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Inverse un qubit cible donné si et seulement si les deux contrôles qubits sont dans l’État 1, à l’aide de mesures pour exécuter l’opération joint.
+
+
+  Inverse `target` si et seulement si les deux contrôles ont la valeur 1, mais suppose que `target` est dans l’État 0.  L’opération a T-Count 4, T-Depth 2 et ne nécessite aucune qubit d’assistance et peut donc être préférable à une opération CCNOT, si `target` est connu pour être 0.  Le voisin de cette opération est basé sur des mesures et ne nécessite pas de grille T.
+
+
+  L’application contrôlée de cette opération ne nécessite aucune qubit d’assistance, `2^c` `Rz` portes et n’est pas optimisée pour plus de précision, où `c` est le nombre de qubits de contrôle globaux, y compris les deux contrôles de l’opération de `ApplyAnd`.  L’application contrôlée par l’application voisine requiert `2^c - 1` portes de `Rz` (avec un angle deux fois la taille de l’opération non voisine), aucune qubit d’assistance et n’est pas optimisée pour la profondeur.
+syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+references: >-
+  - Cody Jones : « nouvelles constructions pour la porte Toffoli à tolérance de pannes », phys. Rev. A 87, 022328, 2013 [arXiv : 1212.5069](https://arxiv.org/abs/1212.5069) doi : 10.1103/PhysRevA. 87.022328
+
+  - Craig Gidney : « diviser le coût de l’ajout quantique », Quantum 2, page 74, 2018 [arXiv : 1709.06648](https://arxiv.org/abs/1709.06648) doi : 10.1103/PhysRevA. 85.044302
+
+  - Mathias Soeken : « circuits Oracle Quantum et modèle d’arborescence de Noël », [article de blog de Decemer 19, 2019](https://msoeken.github.io/blog_qac.html) (Remarque : explique la construction à plusieurs contrôleurs)
+input:
+  content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
+  types:
+  - name: control1
+    summary: Premier contrôle qubit
+    isPrimitive: true
+    uid: Qubit
+  - name: control2
+    summary: Deuxième qubit de contrôle
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Qubit auxiliaire cible ; doit être dans l’État 0
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 7cde3dbbd33ff482609bbaaccb15e4c7b1bc536e
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872986"

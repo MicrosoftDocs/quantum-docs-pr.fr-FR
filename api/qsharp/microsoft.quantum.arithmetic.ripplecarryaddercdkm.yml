@@ -6,6 +6,7 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: >-
   Les ondulations réversibles, sur place, ajoutent deux entiers.
 
+
   Deux $n entiers $ bits encodés dans LittleEndian s’inscrivent `xs` et `ys`, tandis qu’un qubit porte, l’opération calcule la somme des deux entiers où les bits $n les moins significatifs du résultat sont conservés dans `ys` et le bit d’exécution est XOR à la `carry`qubit.
 remarks: Cette opération a la même fonctionnalité que RippleCarryAdderD, mais utilise uniquement un qubit Ancilla au lieu de $n $.
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
@@ -34,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 2d973659a9457c301ba65a282e4fd4b627c93671
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bc5a7af8534741cab8e7b18a404b1745454a20c4
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218479"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871360"

@@ -4,12 +4,14 @@ name: CompareUsingRippleCarry
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: >-
-  Ce test unitaire s’effectue si deux entiers `x` et `y` stockés dans des registres qubit de taille égale satisfont `x > y`. Si la valeur est true, 1 est XOR dans un qubit de sortie. Dans le cas contraire, 0 est XOR dans un qubit de sortie.
+  Cette opération vérifie si un entier représenté par un registre de qubits est supérieur à un autre entier, en appliquant un XOR du résultat dans un qubit de sortie.
 
 
-  En d’autres termes, ce $U unitaire $ satisfait : $ $ \begin{align} U\ket {x} \ Ket {y} \ Ket {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
+  Deux entiers étant `x` et `y` stockés dans des registres qubit de taille égale, cette opération vérifie si elles satisfont `x > y`. Si la valeur est true, 1 est XOR dans un qubit de sortie. Dans le cas contraire, 0 est XOR dans un qubit de sortie.
 
-  \end{align} $ $.
+  En d’autres termes, cette opération peut être représentée par l’unité $ $ \begin{align} U\ket {x} \ Ket {y} \ Ket {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
+
+  \end{align} $ $
 syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
 references: '- Un nouveau circuit d’addition d’ondulations Quantum, Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184'
 input:
@@ -34,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: fa3db99da28f96e1cb42dd03e465440e015722fa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1ef346a9fd33859abffe9c30b14b5ea95068169d
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221097"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871122"

@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.simulation
 name: Microsoft.Quantum.Simulation
-summary: " # <a name=\"summary\"></a>summary\n Cet espace de noms contient des fonctions et des opérations permettant de simuler de façon cohérente la dynamique des systèmes quantiques."
+summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions et des opérations permettant de simuler de façon cohérente la dynamique des systèmes quantiques."
 functions:
 - uid: microsoft.quantum.simulation.addgeneratorsystems
   summary: Ajoute deux `GeneratorSystem`s pour créer un nouveau `GeneratorSystem`.
@@ -62,11 +62,7 @@ functions:
 - uid: microsoft.quantum.simulation.paulistringfromgenidx
   summary: Extrait la chaîne Pauli et ses index qubit d’un terme Pauli décrit par un `GeneratorIndex`.
 - uid: microsoft.quantum.simulation.quantumwalkbyqubitization
-  summary: >-
-    Convertit une `BlockEncodingReflection` en un parcours quantique.
-
-
-    Autrement dit, étant donné un `BlockEncodingReflection` unitaire $U $ qui encode un opérateur $H $ d’intérêt, le convertit en un parcours quantique $W $ contenant le spectre de $ \pm e ^ {\pm i\sin ^{-1}(H)} $.
+  summary: Convertit une réflexion d’encodage de bloc en un parcours quantique.
 - uid: microsoft.quantum.simulation.sumgeneratorsystems
   summary: Ajoute plusieurs `GeneratorSystem`s pour créer un nouveau GeneratorSystem.
 - uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
@@ -162,9 +158,9 @@ newtypes:
 - uid: microsoft.quantum.simulation.unitary
   summary: Représente l’évolution sous un opérateur unitaire.
 metadata:
-  ms.openlocfilehash: 05db213d04304a635e4e86e0f6c40f15bb81441a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 967c27e6c5c8f475e54f7e9d4f3a14594fb04cc5
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215878"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869825"
