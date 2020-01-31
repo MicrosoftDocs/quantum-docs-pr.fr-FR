@@ -1,8 +1,8 @@
-- name: Documentation sur l’informatique quantique de Microsoft
+- name: Documentation du quantum Microsoft
   href: index.yml
-- name: Vue d'ensemble
+- name: Vue d’ensemble
   items:
-    - name: Prise en main
+    - name: Bien démarrer
       href: welcome.md
     - name: Cinq questions sur l’informatique quantique
       items:
@@ -29,7 +29,15 @@
 - name: Guides pratiques
   items:
     - name: Installer le QDK
-      href: install-guide/index.md
+      items:
+        - name: Vue d’ensemble de l’installation
+          href: install-guide/index.md
+        - name: 'Q# + C#'
+          href: install-guide/csinstall.md
+        - name: 'Q# + Python'
+          href: install-guide/pyinstall.md
+        - name: 'Notebooks Jupyter Q#'
+          href: install-guide/qjupyter.md
     - name: Mettre à jour le QDK
       href: install-guide/update.md
     - name: 'Créer un projet Q#'
@@ -58,7 +66,7 @@
       topicHref: contributing/index.md
     - name: Glossaire
       href: Glossary.md
-    - name: Pour plus d’informations
+    - name: Informations supplémentaires
       href: for-more-info.md
     - name: Licence
       href: license.md
