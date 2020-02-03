@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 75028a1dc29abe5fbea2e789d896563f3d6331c9
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: c1fd578fdb3d56a7b48972e6ccc9b1605047fe36
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443934"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820349"
 ---
 # <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>Démarrage rapide : Implémenter l’algorithme de recherche de Grover en Q#
 
@@ -23,7 +23,7 @@ L’algorithme de recherche de Grover permet à un ordinateur quantique d’effe
 
 Il est possible de construire l’algorithme de recherche de Grover en seulement quelques lignes de code.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - Le Microsoft [Quantum Development Kit][install].
 
@@ -43,11 +43,11 @@ Le nombre d’augmentations incrémentielles est inférieur au nombre d’élém
 
 1. Ajoutez le code suivant au fichier `Operations.qs` de votre nouveau projet :
 
-    [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs?highlight=5,27)]
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-23" highlight="5,27":::
 
 1. Pour définir la liste que nous recherchons, créez un fichier `Reflections.qs` et collez-y le code suivant :
 
-    [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/Reflections.qs)]
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/Reflections.qs" range="4-70":::
 
     L’opération `ReflectAboutMarked` définit l’entrée marquée que vous recherchez, à savoir la chaîne de zéros et de uns alternés. Cet exemple code en dur l’entrée marquée. Il peut être étendu à la recherche d’autres entrées ou généralisé pour toute entrée.
 
@@ -57,7 +57,7 @@ Le nombre d’augmentations incrémentielles est inférieur au nombre d’élém
 
     Pour exécuter votre nouveau programme Q# à partir de Python, enregistrez le code suivant sous le nom `host.py` :
 
-    [!code-python[](~/quantum/samples/algorithms/simple-grover/host.py)]
+    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/host.py" range="9-14":::
 
     Vous pouvez ensuite exécuter votre programme hôte Python à partir de la ligne de commande :
 
@@ -75,7 +75,7 @@ Le nombre d’augmentations incrémentielles est inférieur au nombre d’élém
 
     Pour exécuter votre nouveau programme Q# à partir de C#, modifiez `Driver.cs` pour inclure le code C# suivant :
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     Vous pouvez ensuite exécuter votre programme hôte C# à partir de la ligne de commande :
 
@@ -94,7 +94,7 @@ Le nombre d’augmentations incrémentielles est inférieur au nombre d’élém
 
     Pour exécuter votre nouveau programme Q# à partir de C# dans Visual Studio, modifiez `Driver.cs` pour inclure le code C# suivant :
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     Appuyez ensuite sur F5, le programme démarre l’exécution et une nouvelle fenêtre s’affiche avec les résultats suivants : 
 
