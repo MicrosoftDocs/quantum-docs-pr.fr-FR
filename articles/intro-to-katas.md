@@ -1,17 +1,17 @@
 ---
-title: Introduction aux katas Quantum
+title: Introduction aux katas quantiques
 description: En savoir plus sur les katas (exercices de formation) fournis avec le kit de développement Microsoft Quantum (QDK)
 author: natke
 ms.author: nakersha
 ms.date: 10/17/2019
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 7fb8dba2a10f9a983ebee52e394260bbdc0d2f9c
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: af54a2260147b8ca07919b241548aac85ed0d8a1
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444138"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821097"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Découvrez l’informatique quantique avec les katas quantiques
 
@@ -19,7 +19,7 @@ Les [katas quantiques](https://github.com/Microsoft/QuantumKatas/) sont une coll
 
 ## <a name="learning-by-doing"></a>Apprendre par la pratique
 
-Les tutoriels et katas regroupés dans ce projet mettent l’accent sur l’apprentissage par la pratique : ils proposent des tâches de programmation couvrant des sujets qui vont de très simples à très complexes. Chaque tâche vous demande de renseigner du code, les premières peuvent ne nécessiter qu’une seule ligne alors que les dernières peuvent nécessiter un fragment de code assez grand.
+Les tutoriels et les exercices réunis dans ce projet mettent l’accent sur l’apprentissage par la pratique : ils proposent des tâches de programmation couvrant des sujets qui vont de très simples à très complexes. Chaque tâche vous demande de renseigner du code, les premières peuvent ne nécessiter qu’une seule ligne alors que les dernières peuvent nécessiter un fragment de code assez grand.
 
 Plus important encore, les katas incluent des frameworks de test qui configurent, exécutent et valident les solutions des tâches. Ainsi, vous pouvez obtenir des commentaires immédiats sur votre solution et reconsidérer votre approche si elle est incorrecte.
 
@@ -36,10 +36,12 @@ Voici un résumé des principales rubriques traitées dans les katas quantiques.
 
 ### <a name="introduction-to-quantum-computing-concepts"></a>Présentation des concepts de l’informatique quantique
 
-* [Arithmétique complexe](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ComplexArithmetic)
-* [Algèbre linéaire](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/LinearAlgebra)
-* [Concept du qubit](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/Qubit)
-* [Portes quantiques à qubit unique](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/SingleQubitGates)
+* [Arithmétique complexe](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+* [Algèbre linéaire](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
+* [Concept du qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)
+* [Portes quantiques à qubit unique](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)
+* [Systèmes multiqubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)
+* [Portes multiqubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)
 
 ### <a name="quantum-computing-fundamentals"></a>Fondamentaux de l’informatique quantique
 
@@ -52,10 +54,10 @@ Voici un résumé des principales rubriques traitées dans les katas quantiques.
 
 * [Téléportation quantique](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)
 * [codage Superdense](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)
-* [Algorithme de Deutsch-Jozsa](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/DeutschJozsaAlgorithm)
+* [Algorithme de Deutsch-Jozsa](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringDeutschJozsaAlgorithm)
 * [Implémentation de l’algorithme de recherche de Grover](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)
-* [Exploration des propriétés générales de l’algorithme de recherche de Grover](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ExploringGroversAlgorithm)
-* Résolution de problèmes réels à l’aide de l’algorithme de Grover : [Problèmes SAT](https://github.com/microsoft/QuantumKatas/blob/master/SolveSATWithGrover) et [problèmes de couleurs de graphe](https://github.com/microsoft/QuantumKatas/blob/master/GraphColoring)
+* [Exploration des propriétés générales de l’algorithme de recherche de Grover](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringGroversAlgorithm)
+* Résolution de problèmes réels à l’aide de l’algorithme de Grover : [Problèmes SAT](https://github.com/microsoft/QuantumKatas/tree/master/SolveSATWithGrover) et [problèmes de couleurs de graphe](https://github.com/microsoft/QuantumKatas/tree/master/GraphColoring)
 
 ### <a name="protocols-and-libraries"></a>Protocoles et bibliothèques
 
@@ -66,8 +68,8 @@ Voici un résumé des principales rubriques traitées dans les katas quantiques.
 
 ### <a name="entanglement-games"></a>Jeux d’intrication
 
-* [Jeu CHSH](https://github.com/microsoft/QuantumKatas/blob/master/CHSHGame)
-* [Jeu GHZ](https://github.com/microsoft/QuantumKatas/blob/master/GHZGame)
+* [Jeu CHSH](https://github.com/microsoft/QuantumKatas/tree/master/CHSHGame)
+* [Jeu GHZ](https://github.com/microsoft/QuantumKatas/tree/master/GHZGame)
 * [Jeu du carré magique de Peres et Mermin](https://github.com/microsoft/QuantumKatas/tree/master/MagicSquareGame)
 
 ## <a name="resources"></a>Ressources
