@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821012"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036353"
 ---
 # <a name="quantum-algorithms"></a>Algorithmes Quantum #
 
@@ -48,7 +48,8 @@ En outre, l’efficacité de la *transformation de Fourier quantique* (QFT) dép
 
 En guise de généralisation approximative de la QFT, nous fournissons l’opération <xref:microsoft.quantum.canon.approximateqft> qui permet d’effectuer d’autres optimisations en affinant les rotations qui ne sont pas strictement nécessaires pour la précision algorithmique souhaitée.
 Le QFT approximatif requiert l’opération dyadic $Z $-rotation <xref:microsoft.quantum.intrinsic.rfrac> ainsi que l’opération <xref:microsoft.quantum.intrinsic.h>.
-L’entrée et la sortie sont supposées être encodées dans un encodage Big endian (le bit le plus petit/qubit est à gauche, comme la [notation Ket](xref:microsoft.quantum.concepts.dirac)).
+L’entrée et la sortie sont supposées être encodées au format d’encodage Big endian---autrement dit, le qubit avec l’index `0` est encodé dans le bit le plus à gauche (le plus élevé) de la représentation d’entier binaire.
+Cela s’aligne avec la [notation Ket](xref:microsoft.quantum.concepts.dirac), dans la mesure où un registre de trois qubits à l’État $ \ket{100}$ correspond à $q _0 $ se trouve dans l’État $ \ket{1}$, tandis que $q _ 1 $ et $q _2 $ sont tous deux dans l’État $ \ket{0}$.
 Le paramètre approximatif $a $ détermine le niveau de nettoyage des $Z $-rotations, c’est-à-dire $a \Dans [0.. n] $.
 Dans ce cas, tous les $Z $-rotations $2 \ pi/2 ^ k $ où $k > un $ sont supprimés du circuit QFT.
 Il est connu que pour $k \ge \ log_2 (n) + \ log_2 (1/\epsilon) + $3. Il est possible de lier $\\| \operatorname{QFT}-\operatorname{AQFT} \\| < \epsilon $.
@@ -56,7 +57,7 @@ Ici $\\| \cdot\\| $ est la norme d’opérateur qui, dans ce cas, correspond à 
 
 ## <a name="arithmetic"></a>Arithmétique ##
 
-Tout comme l’arithmétique joue un rôle central dans l’informatique classique, il est également indispensable dans quantum computing.  Les algorithmes tels que l’algorithme de factorisation de Shori, les méthodes de simulation quantique et de nombreux algorithmes Oracular s’appuient sur des opérations arithmétiques cohérentes.  La plupart des approches de la génération arithmétique sur les circuits d’Adder quantique.  L’Adder le plus simple accepte une entrée classique $b $ et ajoute la valeur à un État Quantum contenant un entier $ \ket{a} $.  Mathématiquement, l’Adder (que nous désignerons $ \operatorname{Add} (b) $ pour l’entrée classique $b $) a la propriété qui
+Tout comme l’arithmétique joue un rôle central dans l’informatique classique, elle est également indispensable dans quantum computing.  Les algorithmes tels que l’algorithme de factorisation de Shori, les méthodes de simulation quantique et de nombreux algorithmes Oracular s’appuient sur des opérations arithmétiques cohérentes.  La plupart des approches de la génération arithmétique sur les circuits d’Adder quantique.  L’Adder le plus simple accepte une entrée classique $b $ et ajoute la valeur à un État Quantum contenant un entier $ \ket{a} $.  Mathématiquement, l’Adder (que nous désignerons $ \operatorname{Add} (b) $ pour l’entrée classique $b $) a la propriété qui
 
 $ $ \operatorname{Add} (b) \ket{a} = \ket{a + b}.
 $ $ Ce circuit d’Adder de base est plus un incrémenteur qu’un Adder.

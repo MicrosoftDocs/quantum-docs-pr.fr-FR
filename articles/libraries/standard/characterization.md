@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870347"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036251"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caractérisation quantique et statistiques #
 
@@ -88,7 +88,7 @@ La probabilité d’observer `Zero` pour une [mesure de`PauliX`](xref:microsoft.
 
 Après avoir observé une `Result` à partir de la fonction de probabilité d’estimation de la phase itérative, nous pouvons ensuite utiliser la règle de Bayes pour prescrire ce que nous devrions considérer comme étant à l’issue de cette observation.
 Concrètement, \begin{Equation} \Pr (\Phi | d) = \frac{\Pr (d | \Phi) \Pr (\Phi)} {\int \Pr (d | \Phi) \Pr (\Phi) {\mathrm d} \Phi} \Pr (\Phi), \end{Equation} où $d \Dans \\{\texttt{Zero}, \texttt{One}\\} $ est un `Result`, et où $ \Pr (\Phi) $ décrit nos opinions antérieures sur $ \Phi $.
-Cela rend ensuite la nature itérative de l’estimation de la phase itérative explicite, car la distribution POSTERIEURE $ \Pr (\Phi | d) $ décrit nos opinions immédiatement avant l’observation de la `Result`suivante.
+Cela rend ensuite la nature itérative de l’estimation de la phase itérative explicite, car la distribution POSTERIEURE $ \Pr (\Phi | d) $ décrit nos croyances qui précèdent immédiatement l’observation de la `Result`suivante.
 
 À tout moment pendant cette procédure, nous pouvons signaler la phase $ \hat{\Phi} $ déduite par le contrôleur classique en tant que \begin{Equation} \hat{\Phi} \mathrel{ : =} \expect [\Phi | \text{Data}] = \int \Phi \Pr (\Phi | \text{Data}) {\mathrm d} \Phi, \end{Equation} où $ \text{Data} $ correspond à l’enregistrement complet de toutes les valeurs `Result` obtenues.
 

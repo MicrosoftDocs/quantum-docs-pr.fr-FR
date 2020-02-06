@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 9a6f5d53ec21090d0c13f4369e0270d264cd1e9b
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821063"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036489"
 ---
 # <a name="statements-and-other-constructs"></a>Instructions et autres constructions
 
@@ -29,7 +29,7 @@ Dans `///` commentaires, le texte à afficher dans le cadre de la documentation 
 En tant qu’extension de la démarque, les références croisées aux opérations, aux fonctions et aux types définis par l’utilisateur dans Q # peuvent être incluses à l’aide de la `@"<ref target>"`, où `<ref target>` est remplacé par le nom qualifié complet de l’objet de code référencé.
 Le cas échéant, un moteur de documentation peut également prendre en charge des extensions de démarque supplémentaires.
 
-Exemple :
+Par exemple :
 
 ```qsharp
 /// # Summary
@@ -191,7 +191,7 @@ Une concaténation similaire existe pour les expressions de copie et de mise à 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
+function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -273,7 +273,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-et la
+and
 
 ```qsharp
 if (a == b) {
@@ -433,7 +433,7 @@ if (result == One) {
 } 
 ```
 
-ou
+or
 
 ```qsharp
 if (i == 1) {
@@ -463,13 +463,13 @@ Par exemple,
 return 1;
 ```
 
-ou
+or
 
 ```qsharp
 return ();
 ```
 
-ou
+or
 
 ```qsharp
 return (results, qubits);
@@ -490,7 +490,7 @@ Par exemple,
 fail $"Impossible state reached";
 ```
 
-ou
+or
 
 ```qsharp
 fail $"Syndrome {syn} is incorrect";

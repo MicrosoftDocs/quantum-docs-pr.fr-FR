@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 09d493df4e1178fee1f7a5946cfda2f411111006
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185203"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036309"
 ---
 # <a name="expressions"></a>Expressions
 
@@ -22,7 +22,7 @@ Par exemple, `(7)` est une expression `Int`, `([1,2,3])` est une expression de t
 
 L’équivalence entre les valeurs simples et les tuples à un seul élément décrit dans [le modèle de type](xref:microsoft.quantum.language.type-model#tuple-types) supprime l’ambiguïté entre `(6)` en tant que groupe et `(6)` comme un tuple à un seul élément.
 
-## <a name="symbols"></a>Sigle
+## <a name="symbols"></a>Symboles
 
 Le nom d’un symbole lié ou assigné à une valeur de type `'T` est une expression de type `'T`.
 Par exemple, si le symbole `count` est lié à la valeur entière `5`, `count` est une expression d’entier.
@@ -61,7 +61,7 @@ Dans ce cas, le deuxième paramètre doit être contenu dans 32 bits ; Si ce n�
 
 À partir de deux expressions entières ou d’entiers Big, une nouvelle expression de type entier ou entier Big peut être formée à l’aide des opérateurs `%` (modulo), `&&&` (and au niveau du bit), `|||` (or au niveau du bit) ou `^^^` (opérateur de bits XOR).
 
-À partir d’une expression d’entier ou d’entier Big à gauche, et d’une expression d’entier à droite, les opérateurs `<<<` (décalage arithmétique vers la gauche) ou `>>>` (décalage vers la droite arithmétique) peuvent être utilisés pour créer une nouvelle expression avec le même type que la main gauche formule.
+À partir d’une expression d’entier ou d’entier Big à gauche, et d’une expression d’entier à droite, les opérateurs `<<<` (décalage arithmétique vers la gauche) ou `>>>` (décalage vers la droite arithmétique) peuvent être utilisés pour créer une nouvelle expression avec le même type que l’expression de gauche.
 
 Le deuxième paramètre (la valeur de décalage) pour l’opération de décalage doit être supérieur ou égal à zéro ; le comportement des valeurs de décalage négatives n’est pas défini.
 La valeur de décalage pour l’opération de décalage doit également tenir dans 32 bits ; Si ce n’est pas le cas, une erreur d’exécution est générée.
@@ -73,12 +73,12 @@ Autrement dit, le décalage d’une étape vers la gauche ou la droite est exact
 
 Le modulo de la division entière et de l’entier suit le même C#comportement pour les nombres négatifs que.
 Autrement dit, `a % b` aura toujours le même signe que `a`et `b * (a / b) + a % b` sera toujours égal à `a`.
-Exemple :
+Par exemple :
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
- 5\. | 2 | 2 | 1
- 5\. | -2 | -2 | 1
+ 5 | 2 | 2 | 1
+ 5 | -2 | -2 | 1
  -5 | 2 | -2 | -1
  -5 | -2 | 2 | -1
 
@@ -94,9 +94,9 @@ La nouvelle expression sera du même type que l’expression constituante.
 Les deux valeurs littérales de `Bool` sont `true` et `false`.
 
 Compte tenu des deux expressions du même type primitif, les opérateurs binaires `==` et `!=` peuvent être utilisés pour construire une expression `Bool`.
-L’expression aura la valeur true si les deux expressions sont égales (REEE).
+L’expression aura la valeur true si les deux expressions sont égales et false dans le cas contraire.
 
-Les valeurs des types définis par l’utilisateur ne peuvent pas être comparées, seules leurs valeurs peuvent être comparées. Par exemple,
+Les valeurs des types définis par l’utilisateur ne peuvent pas être comparées, seules leurs valeurs désencapsulées peuvent être comparées. Par exemple, à l’aide de l’opérateur « désencapsuler » `!` (expliqué dans la [page de modèle Q # type](xref:microsoft.quantum.language.type-model#user-defined-types)),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -112,7 +112,7 @@ L’état des deux qubits n’est pas comparé, accédé, mesuré ou modifié pa
 La comparaison d’égalité pour les valeurs de `Double` peut être trompeuse en raison des effets arrondis.
 Par exemple, `49.0 * (1.0/49.0) != 1.0`.
 
-À partir de deux expressions numériques quelconques, les opérateurs binaires `>`, `<`, `>=`et `<=` peuvent être utilisés pour construire une nouvelle expression booléenne qui est true si la première expression est respectivement supérieure à, inférieure à, supérieure ou égale à , ou est inférieur ou égal à la deuxième expression.
+À partir de deux expressions numériques quelconques, les opérateurs binaires `>`, `<`, `>=`et `<=` peuvent être utilisés pour construire une nouvelle expression booléenne qui est true si la première expression est respectivement supérieure à, inférieure à, supérieure ou égale à, ou inférieure ou égale à la seconde.
 
 Compte tenu de deux expressions booléennes, les opérateurs binaires `and` et `or` peuvent être utilisés pour construire une nouvelle expression booléenne qui a la valeur true si les deux expressions (REEE, ou les deux) sont vraies.
 
@@ -125,7 +125,7 @@ Q # permet d’utiliser des chaînes dans l’instruction `fail` et la fonction 
 Dans Q #, les chaînes sont des littéraux ou des chaînes interpolées.
 Les littéraux de chaîne sont similaires aux littéraux de chaîne simples dans la plupart des langues : une séquence de caractères Unicode placée entre guillemets doubles, `"`.
 À l’intérieur d’une chaîne, le caractère de barre oblique inverse `\` peut être utilisé pour échapper un caractère de guillemet double, et pour insérer une nouvelle ligne comme `\n`, un retour chariot comme `\r`et un onglet comme `\t`.
-Par exemple :
+Exemple :
 
 ```qsharp
 "\"Hello world!\", she said.\n"
@@ -229,7 +229,7 @@ Cela n’est généralement pas nécessaire, car le compilateur Q # déduira les
 Elle est requise pour une application partielle (voir ci-dessous) si un argument de type paramétrable n’est pas spécifié.
 Elle est également parfois utile lors du passage d’opérations avec des prises en charge de functor différentes à un pouvant être appelé.
 
-Par exemple, si `Func` possède une signature `('T1, 'T2, 'T1) -> 'T2`, `Op1` et `Op2` possèdent une signature `(Qubit[] => Unit is Adj)`, et `Op3` a une signature `(Qubit[] => Unit)`, pour appeler `Func` avec `Op1` comme premier argument, `Op2` comme deuxième et `Op3` en tant que troisième :
+Par exemple, si `Func` possède la signature `('T1, 'T2, 'T1) -> 'T2`, `Op1` et `Op2` possèdent la signature `(Qubit[] => Unit is Adj)`, et `Op3` a une signature `(Qubit[] => Unit)`, pour appeler `Func` avec `Op1` comme premier argument, `Op2` comme deuxième, et `Op3` comme troisième argument :
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -306,7 +306,7 @@ L’opérateur `!` a une priorité plus élevée que tous les autres opérateurs
 
 La priorité de l’opérateur `!` a un impact qui peut ne pas être évident.
 Si une fonction ou une opération retourne une valeur qui est ensuite désencapsulée, l’appel de fonction ou d’opération doit être mis entre parenthèses afin que le tuple d’argument soit lié à l’appel plutôt qu’à la désencapsulation.
-Exemple :
+Par exemple :
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -347,7 +347,7 @@ Les tableaux contenant qubits ou callables doivent être correctement initialis�
 
 Les valeurs par défaut pour chaque type sont :
 
-Type | Par défaut
+Type | Default
 ---------|----------
  `Int` | `0`
  `BigInt` | `0L`
@@ -488,7 +488,7 @@ Les parenthèses pour l’appel de l’opération et de la fonction sont égalem
 
 Opérateurs par ordre de priorité, du plus élevé au plus bas :
 
-Operator | Arité | description | Types d’opérandes
+Opérateur | Arité | Description | Types d’opérandes
 ---------|----------|---------|---------------
  `!` de fin | Unaire | Unwrap (Désencapsuler) | Tout type défini par l’utilisateur
  `-`, `~~~`, `not` | Unaire | Valeur numérique négative, complément au niveau du bit, négation logique | `Int`, `BigInt` ou `Double` pour `-`, `Int` ou `BigInt` pour `~~~`, `Bool` pour `not`
@@ -498,10 +498,10 @@ Operator | Arité | description | Types d’opérandes
  `<<<`, `>>>` | Binary | Décalage vers la gauche, décalage vers la droite | `Int` ou `BigInt`
  `<`, `<=`, `>`, `>=` | Binary | Comparaisons « inférieur à », « inférieur à », « supérieur à », « supérieur à » ou « égal à » | `Int`, `BigInt` ou `Double`
  `==`, `!=` | Binary | comparaisons égales et non égales | tout type primitif
- `&&&` | Binary | And au niveau du bit | `Int` ou `BigInt`
- `^^^` | Binary | XOR au niveau du bit | `Int` ou `BigInt`
- <code>\|\|\|</code> | Binary | Or au niveau du bit | `Int` ou `BigInt`
- `and` | Binary | AND logique | `Bool`
+ `&&&` | Binary | ET au niveau du bit | `Int` ou `BigInt`
+ `^^^` | Binary | Opération de bits XOR | `Int` ou `BigInt`
+ <code>\|\|\|</code> | Binary | Opération de bits OR | `Int` ou `BigInt`
+ `and` | Binary | ET logique | `Bool`
  `or` | Binary | OU logique | `Bool`
  `..` | Binaire/ternaire | Opérateur de plage | `Int`
  `?` `|` | Gradient | Logique conditionnelle | `Bool` pour la partie gauche
