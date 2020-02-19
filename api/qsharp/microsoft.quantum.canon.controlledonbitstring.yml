@@ -3,18 +3,73 @@ uid: microsoft.quantum.canon.controlledonbitstring
 name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Retourne un opérateur unitaire qui applique Oracle sur le registre cible si l’état du registre de contrôle correspond à un masque de bits spécifié.
+summary: >-
+  Retourne un opérateur unitaire qui applique Oracle sur le registre cible si l’état du registre de contrôle correspond à un masque de bits spécifié.
+
+
+  La sortie de cette fonction peut être représentée par une transformation unitaire $U $ telle que \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\Psi} = \ket{b_0 B_1 \cdots b_ {n-1}} \otimes \begin{cases} V \ket{\Psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{bits} \\\\ \ket{\Psi} & \textrm{otherwise} \end{cases}, \end{align} où $V $ est une transformation unitaire qui représente l’action de l’opération `oracle`.
+remarks: >-
+  La longueur de `bits` et `controlRegister` doit être égale.
+
+
+  Étant donné un tableau booléen `bits` et une opération unitaire `oracle`, la sortie de cette fonction est une opération qui effectue les étapes suivantes :
+
+
+  * Appliquez une opération de `X` à chaque qubit du registre de contrôle qui correspond à `false` élément de l' `bits`;
+
+  * appliquer des `Controlled oracle` aux registres de contrôle et cibles ;
+
+  * Appliquez une opération de `X` à chaque qubit du registre de contrôle qui correspond à `false` élément du `bits` pour ramener le registre de contrôle à l’état d’origine.
+
+
+  La sortie de l' `Controlled` functor est un cas spécial de `ControlledOnBitString` où `bits` est égal à `[true, ..., true]`.
+examples: >-
+  Les extraits de code suivants sont équivalents :
+
+
+  ```qsharp
+
+  (ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);
+
+  ```
+
+
+  and
+
+
+  ```qsharp
+
+  within {
+      ApplyPauliFromBitString(PauliX, false, bits, controlRegister);
+  } apply {
+      Controlled oracle(controlRegister, targetRegister);
+  }
+
+  ```
+
+
+  Le code suivant prépare un État $ \frac{1}{2}(\ket{00}-\ket{01} + \ket{10} + \ket{11}) $ :
+
+
+  ```qsharp
+
+  using (register = Qubit[2]) {
+      ApplyToEach(H, register);
+      (ControlledOnBitString([false], Z))(register[0..0], register[1]);
+  }
+
+  ```
 syntax: "function ControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
 input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: Tableau booléen.
+    summary: Chaîne de bits pour contrôler l’opérateur d’unité donné.
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: Opérateur unitaire.
+    summary: Opérateur unitaire à appliquer sur le registre cible.
     isOperation: true
     input:
       types:
@@ -47,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 1abe0f1abcbab06aa9821c52878cf85b03d2c592
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dde246a6eb0cf5e278cd079ff52c3a0b0ff71120
+  ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227387"
+  ms.lasthandoff: 02/18/2020
+  ms.locfileid: "77441054"
