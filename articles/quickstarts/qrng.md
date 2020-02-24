@@ -6,17 +6,17 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 134617455b720cc755b9ee9fb68fb59e624d3f1a
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: d1ad2c1153814e2fa19a38307b2c668c77eae4e3
+ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820908"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77441071"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Démarrage rapide : Implémenter un générateur de nombres aléatoires quantique en Q#
 Un générateur de nombres aléatoires quantique est un exemple simple d’algorithme quantique écrit en Q#. Cet algorithme exploite la nature de la mécanique quantique pour produire un nombre aléatoire. 
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - Le Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
 - [Créer un projet Q#](xref:microsoft.quantum.howto.createproject)
@@ -28,20 +28,7 @@ Un générateur de nombres aléatoires quantique est un exemple simple d’algor
 
 1. Remplacez le contenu du fichier Operation.qs par le code suivant :
 
-    ```qsharp
-    namespace Quantum {
-        open Microsoft.Quantum.Intrinsic;
-
-        operation QuantumRandomNumberGenerator() : Result {
-            using(qubit = Qubit())  { // Allocate a qubit.
-                H(qubit);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
-                let r = M(v);     // Measure the qubit value.
-                Reset(qubit);
-                return r;
-            }
-        }
-    }
-    ```
+ :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-14":::
 
 Comme mentionné dans notre article intitulé [Qu’est-ce que l’informatique quantique ?](xref:microsoft.quantum.overview.what), un qubit est une unité d’information quantique qui peut être dans une superposition. Lorsqu’il est mesuré, un qubit peut uniquement avoir la valeur 0 ou 1. En revanche, pendant l’exécution, l’état du qubit représente la probabilité d’avoir la valeur 0 ou 1 avec une mesure. Cet état probabiliste est appelé superposition. Nous pouvons utiliser cette probabilité pour générer des nombres aléatoires.
 
@@ -75,7 +62,7 @@ Nous pouvons utiliser cette représentation pour visualiser ce que fait le code�
 
 Maintenant que nous avons une opération Q# qui génère des bits aléatoires, nous pouvons l’utiliser pour créer un générateur de nombres aléatoires quantique complet avec un programme hôte.
 
- ### <a name="python-with-visual-studio-code-or-the-command-linetabtabid-python"></a>[Python avec Visual Studio Code ou la ligne de commande](#tab/tabid-python)
+ ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python avec Visual Studio Code ou la ligne de commande](#tab/tabid-python)
  
  Pour exécuter votre nouveau programme Q# à partir de Python, enregistrez le code suivant sous le nom `host.py` :
  
@@ -87,7 +74,7 @@ Maintenant que nous avons une opération Q# qui génère des bits aléatoires, n
  Preparing Q# environment...
  ..The random number generated is 42
  ```
- ### <a name="c-with-visual-studio-code-or-the-command-linetabtabid-csharp"></a>[C# avec Visual Studio Code ou la ligne de commande](#tab/tabid-csharp)
+ ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[C# avec Visual Studio Code ou la ligne de commande](#tab/tabid-csharp)
  
  Pour exécuter votre nouveau programme Q# à partir de C#, modifiez `Driver.cs` pour inclure le code C# suivant :
  
@@ -100,7 +87,7 @@ Maintenant que nous avons une opération Q# qui génère des bits aléatoires, n
  The random number generated is 42
  ```
 
- ### <a name="c-with-visual-studio-2019tabtabid-vs2019"></a>[C# avec Visual Studio 2019](#tab/tabid-vs2019)
+ ### <a name="c-with-visual-studio-2019"></a>[C# avec Visual Studio 2019](#tab/tabid-vs2019)
 
  Pour exécuter votre nouveau programme Q# à partir de C# dans Visual Studio, modifiez `Driver.cs` pour inclure le code C# suivant :
 
