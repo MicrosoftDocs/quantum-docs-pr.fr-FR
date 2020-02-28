@@ -1,21 +1,21 @@
 ---
-title: 'Q # bibliothèques standard-correction des erreurs | Microsoft Docs'
-description: 'Bibliothèques standard Q #-correction d’erreur'
+title: 'Correction des erreurs dans les bibliothèques standard Q #'
+description: 'Découvrez comment utiliser les codes de correction des erreurs dans vos programmes Q # tout en protégeant l’état du qubits.'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863195"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907764"
 ---
 # <a name="error-correction"></a>Correction des erreurs #
 
-## <a name="introduction"></a>Présentation ##
+## <a name="introduction"></a>Introduction ##
 
 Dans le calcul classique, si l’un d’eux veut protéger un peu contre les erreurs, il peut souvent suffire de représenter ce bit par un *bit logique* en répétant le bit de données.
 Par exemple, laissez $ \overline{0} = $0 correspond à l’encodage du bit de données 0, où nous utilisons la ligne a au-dessus de l’étiquette 0 pour indiquer qu’il s’agit d’un encodage d’un bit dans l’État 0.
@@ -28,7 +28,7 @@ Dans le paramètre Quantum, nous voyons que la mesure est problématique. Nous p
 Il est utile de le faire pour voir comment vous pouvez généraliser la correction des erreurs dans le cas Quantum.
 Par conséquent, laissez $ \ket{\overline{0}} = \ket{000} = \ket{0} \otimes \ket{0} \otimes \ket{0}$ et laissez $ \ket{\overline{1}} = \ket{111}$.
 Ensuite, par linéarité, nous avons défini notre code de répétition pour toutes les entrées ; par exemple, $ \ket{\overline{+}} = (\ket{\overline{0}} + \ket{\overline{1}})/\sqrt{2} = (\ket{000} + \ket{111})/\sqrt{2}$.
-En particulier, si vous laissez une erreur de retournement de bit $X _ 1 $ Act sur le qubit du milieu, nous voyons que la correction nécessaire dans les deux branches est précisément $X _ 1 $ : $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket{111} \right) \\\\ & = \frac{1}{\sqrt{2}} \left
+En particulier, si vous laissez une erreur de retournement de bit $X _ 1 $ Act sur le qubit du milieu, nous voyons que la correction nécessaire dans les deux branches est précisément $X _ 1 $ : $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket{111} \right) \\\\ & = \frac{1}{\sqrt{2}} \left{010}{101}
 \end{align} $ $
 
 Pour voir comment nous pouvons déterminer que c’est le cas sans mesurer le tout l’état que nous tentons de protéger, il est utile de noter ce que fait chaque erreur de retournement de bits vers nos États logiques :

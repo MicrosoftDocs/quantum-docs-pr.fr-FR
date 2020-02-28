@@ -1,16 +1,17 @@
 ---
 title: Broombridge-schéma chimie Quantum
+description: Vue d’ensemble du schéma Broombridge Quantum chimie, utilisé pour modéliser les problèmes de chimie réels avec l’Microsoft Quantum Development Kit.
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
-ms.openlocfilehash: c2a7636d0b3f07419e3312e04da5d811229ad854
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a746b63055bb1b2c1168b89993a7459ca9597f86
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185322"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907815"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Schéma de chimie Quantum Broombridge # 
 
@@ -23,9 +24,8 @@ Basé sur YAML, Broombridge est un moyen structuré, explicite et modifiable de 
 - Les États de la terre et de l’enthousiasme peuvent être présentés à l’aide de séquences de création.
 - Les limites supérieure et inférieure des niveaux d’énergie peuvent être spécifiées.
 
-Le format de données peut être généré à partir de NWChem avec facilité : il existe une variété de méthodes qui vont d’une installation complète de NWChem pour exécuter des jeux de données chimiques, tels que ceux fournis [ici](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) et la sortie de Broombridge dans le cadre de l’exécution, sur un ancrage image de NWchem qui peut également être utilisée pour générer des Broombridge à partir de jeux de chimie. Enfin, une méthode visuelle pour la prise en main de la chimie de calcul rapidement sans avoir à installer de logiciel de chimie est fournie par l’interface [EMSL Arrows](https://arrows.emsl.pnnl.gov/api/qsharp_chem) à NWChem. 
+Le format de données peut être généré à partir de NWChem avec facilité : il existe une variété de méthodes qui vont d’une installation complète de NWChem pour exécuter des jeux de données chimiques, tels que ceux fournis [ici](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) et la sortie de Broombridge dans le cadre de l’exécution, sur une image d’ancrage de NWChem qui peut également être utilisée pour générer des Broombridge à partir de jeux de chimie. Enfin, une méthode visuelle pour la prise en main de la chimie de calcul rapidement sans avoir à installer de logiciel de chimie est fournie par l’interface [EMSL Arrows](https://arrows.emsl.pnnl.gov/api/qsharp_chem) à NWChem. 
 
-À un niveau élevé, l’interaction entre NWChem et le Microsoft Quantum Development Kit peut être visualisée comme suit : ![pile chimie](~/media/broombridge.png) la zone bleue grisée représente le schéma Broombridge, les différentes zones grisées représentent l’autre interne représentations de données qui ont été choisies pour représenter et traiter des algorithmes de Quantum pour la chimie de calcul basée sur des problèmes chimie réels. 
+À un niveau élevé, l’interaction entre NWChem et le Microsoft Quantum Development Kit peut être visualisée comme suit : ![pile chimie](~/media/broombridge.png) la zone bleue grisée représente le schéma Broombridge, les différentes zones grisées représentent d’autres représentations de données internes qui ont été choisies pour représenter et traiter des algorithmes de Quantum pour la chimie de calcul basée sur des problèmes chimie réels. 
 
 Plusieurs représentations chimiques définies à l’aide du schéma Broombridge sont fournies [ici](https://github.com/microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML).
-

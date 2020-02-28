@@ -1,17 +1,17 @@
 ---
-title: 'Ensemble-Q # techniques | Microsoft Docs'
-description: 'Ensemble-Q # techniques'
+title: 'Q # techniques-rassembler tout'
+description: 'Parcourez un programme Q # de base qui illustre la téléportage quantique.'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820162"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906829"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Ensemble : téléportage #
 Revenons à l’exemple du circuit de téléportage défini dans [circuits quantiques](xref:microsoft.quantum.concepts.circuits). Nous allons l’utiliser pour illustrer les concepts que nous avons appris jusqu’à présent. Une explication de la téléportage quantique est fournie ci-dessous pour ceux qui ne sont pas familiarisés avec la théorie, suivis d’une procédure pas à pas de l’implémentation de code dans Q #. 

@@ -1,19 +1,19 @@
 ---
-title: Ouverture des requêtes de tirage | Microsoft Docs
-description: Ouverture des requêtes de tirage
+title: Ouverture des requêtes de tirage
+description: Découvrez comment envoyer une requête de tirage GitHub quand vous êtes prêt à contribuer au code ou à la documentation sur le Microsoft Quantum Development Kit.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: d70a0a0319d14cfdae4910b897733d77b236f2f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183724"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907458"
 ---
-# <a name="opening-pull-requests"></a>Ouverture des requêtes de tirage #
+# <a name="opening-pull-requests"></a>Ouverture des demandes de tirage (pull requests) #
 
 Toute la documentation du kit de développement Quantum est gérée à l’aide du système de contrôle de version git via l’utilisation de plusieurs dépôts hébergés sur GitHub.
 L’utilisation conjointe de git et de GitHub facilite la collaboration sur le kit de développement quantique.
@@ -42,19 +42,19 @@ Nous allons souvent dessiner des diagrammes dans lesquels les validations sont d
 Supposons que vous avez commencé une contribution dans une _branche_ appelée `feature`.
 Votre fourche de **Microsoft/Quantum** peut se présenter comme suit :
 
-![](~/media/git-workflow-step0.png)
+![Une branche de travail dans GitHub](~/media/git-workflow-step0.png)
 
 Si vous apportez vos modifications dans votre référentiel local, vous pouvez _extraire_ les modifications d’un autre référentiel dans le vôtre pour prendre en forme les modifications qui se sont produites en amont.
 
-![](~/media/git-workflow-step1.png)
+![Extraction et fusion des modifications à partir d’un référentiel en amont](~/media/git-workflow-step1.png)
 
 Les requêtes de tirage fonctionnent de la même façon, mais dans l’ordre inverse : lorsque vous ouvrez une requête de tirage, vous demandez au référentiel en amont d’extraire votre contribution.
 
-![](~/media/git-workflow-step2.png)
+![Demande d’extraction de vos modifications dans le référentiel d’origine](~/media/git-workflow-step2.png)
 
 Lorsque vous ouvrez une demande de tirage (pull request) dans l’un de nos référentiels, GitHub offre une opportunité aux autres membres de la communauté d’afficher un résumé de vos modifications, de les commenter et d’apporter des suggestions sur la façon d’améliorer la contribution.
 
-![](~/media/pull-request-header.png)
+![Capture d’écran d’une requête de tirage dans GitHub](~/media/pull-request-header.png)
 
 L’utilisation de ce processus nous aide à utiliser la fonctionnalité GitHub pour améliorer les contributions et maintenir un produit de haute qualité pour la communauté de programmation quantique.
 
@@ -84,7 +84,7 @@ This way, you can edit your personal fork to your heart's content before making 
 
 -->
 
-## <a name="next-steps"></a>Prochaines étapes ##
+## <a name="next-steps"></a>Étapes suivantes ##
 
 Félicitations pour l’utilisation de Git pour aider la communauté du kit de développement quantique !
 Pour en savoir plus sur la façon de contribuer au code, poursuivez avec le guide suivant.

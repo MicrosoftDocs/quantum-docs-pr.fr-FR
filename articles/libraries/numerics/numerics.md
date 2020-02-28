@@ -1,21 +1,21 @@
 ---
-title: Utilisation de la bibliothèque de valeurs numériques | Microsoft Docs
-description: Utilisation de la bibliothèque de valeurs numériques
+title: 'Utilisation de la bibliothèque numérique Microsoft Q #'
+description: En savoir plus sur les types et les opérations disponibles dans la bibliothèque de valeurs numériques Quantum Microsoft.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821029"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907254"
 ---
 # <a name="using-the-numerics-library"></a>Utilisation de la bibliothèque de valeurs numériques
 
-## <a name="overview"></a>Présentation
+## <a name="overview"></a>Vue d’ensemble
 
 La bibliothèque de valeurs numériques est constituée de trois composants.
 
@@ -36,7 +36,7 @@ La bibliothèque de valeurs numériques prend en charge les types suivants :
 1. **`SignedLittleEndian`** : identique à `LittleEndian` sauf qu’il représente un entier signé stocké dans le complément à deux.
 1. **`FixedPoint`** : représente un nombre réel constitué d’un tableau qubit `qArr2 : Qubit[]` et d’une position de point binaire `pos`, qui compte le nombre de chiffres binaires à gauche du point binaire. `qArr2` est stocké de la même façon que `SignedLittleEndian`.
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>Opérations
 
 Pour chacun des trois types ci-dessus, diverses opérations sont disponibles :
 

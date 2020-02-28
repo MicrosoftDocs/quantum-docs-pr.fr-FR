@@ -1,17 +1,18 @@
 ---
 title: En savoir plus sur la mise à jour des Microsoft Quantum Development Kit (QDK)
+description: 'Décrit comment mettre à jour vos projets Q # et le Microsoft Quantum Development Kit à la version actuelle.'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: f19285ae0e008b3460d06430a236f098d716e268
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 264b5640216b2c0a468b625cdef4b9e0123d8b39
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036306"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904755"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Mettre à jour le Microsoft Quantum Development Kit (QDK)
 

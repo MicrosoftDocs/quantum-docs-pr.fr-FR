@@ -1,22 +1,22 @@
 ---
-title: Chargement d’un présentisme à partir d’un fichier | Microsoft Docs
-description: Chargement d’un même à partir de documents de fichiers
+title: Chargement d’un Hamiltonien à partir d’un fichier
+description: Découvrez comment générer automatiquement un grand degré de Hamilton à l’aide du schéma Broombridge.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
-ms.openlocfilehash: 18f257efe8d53d2a22af4840bd8d17ab6b80a503
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 715dbcefc10ecc5af45f2bdd228890f1cb28886b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442333"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907288"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Chargement d’un Hamiltonien à partir d’un fichier
 Auparavant, nous avons construit Hamiltonians en y ajoutant des termes. Bien que cela soit parfait pour les petits exemples, la chimie quantique à l’échelle nécessite Hamiltonians avec des millions ou des milliards de termes. Ces Hamiltonians, générés par des packages de chimie tels que NWChem, sont trop volumineux pour être importés manuellement. Dans cet exemple, nous illustrons comment une instance de `FermionHamiltonian` peut être générée automatiquement à partir d’une molécule représentée par le [schéma Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge). Pour référence, vous pouvez inspecter l’exemple de `LithiumHydrideGUI` fourni ou l’exemple `RunSimulation`. Une prise en charge limitée est également disponible pour l’importation à partir du format consommé par [LIQUi | >](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).
 
-Prenons l’exemple de la molécule d’azote, fourni dans le dossier `IntegralData/YAML` du référentiel d’exemples. La méthode de chargement du schéma de `Broombridge` est simple.
+Prenons l’exemple de la molécule d’azote, fourni dans le dossier `IntegralData/YAML` du référentiel d’exemples. La méthode de chargement du schéma `Broombridge` est simple.
 
 ```csharp
 // This is the name of the file we want to load

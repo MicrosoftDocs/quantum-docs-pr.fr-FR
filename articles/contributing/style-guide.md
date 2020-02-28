@@ -1,17 +1,17 @@
 ---
-title: 'Guide de style Q # | Microsoft Docs'
-description: 'Guide de style Q #'
+title: 'Guide de style Microsoft Q #'
+description: 'Découvrez les conventions d’attribution de noms, d’entrée, de documentation et de mise en forme pour les programmes et les bibliothèques Q #.'
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 3c8e432378ec563a197a5b87000c3e90cadb8e18
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463320"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907441"
 ---
 # <a name="q-style-guide"></a>Guide de style Q # #
 ## <a name="general-conventions"></a>Conventions générales ##
@@ -49,7 +49,7 @@ Cette distinction suggère que les opérations sont nommées en tant que verbes 
 > À partir de cette perspective, les types définis par l’utilisateur doivent être nommés en tant que noms afin que le type lui-même et la fonction de constructeur aient des noms cohérents.
 
 Dans la mesure du possible, assurez-vous que les noms des opérations commencent par des verbes qui indiquent clairement l’effet pris par l’opération.
-Exemple :
+Par exemple :
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -66,7 +66,7 @@ D’autres verbes peuvent également être utiles dans ce cas, comme dans `Itera
 | Assert | Une hypothèse sur le résultat d’une mesure de Quantum possible est vérifiée par un simulateur |
 | Estimation | Une valeur classique est retournée, représentant une estimation dessinée à partir d’une ou de plusieurs mesures. |
 | Measure | Une mesure de Quantum est exécutée et son résultat est renvoyé à l’utilisateur. |
-| Préparer | Un registre donné de qubits est initialisé dans un état particulier |
+| Préparation | Un registre donné de qubits est initialisé dans un état particulier |
 | Exemple | Une valeur classique est retournée au hasard à partir d’une distribution |
 
 Pour les fonctions, nous vous suggérons d’éviter l’utilisation de verbes en faveur des noms communs (consultez les conseils sur les noms appropriés ci-dessous) ou des adjectifs :
@@ -80,7 +80,7 @@ Par exemple, `ControlledOnInt` utilise la forme participe du verbe « Control 
 Ce nom présente l’avantage supplémentaire de correspondre à la sémantique du `Controlled` functor intégré, comme indiqué ci-dessous.
 De même, les noms d' _agent_ peuvent être utilisés pour construire des noms de fonction et UDT à partir de noms d’opérations, comme dans le cas du nom `Encoder` pour un UDT qui est fortement associé à `Encode`.
 
-# <a name="guidancetabguidance"></a>[Assistance](#tab/guidance)
+# <a name="guidance"></a>[Assistance](#tab/guidance)
 
 Nous vous suggérons :
 
@@ -91,9 +91,9 @@ Nous vous suggérons :
 - Pour toutes les variables locales, utilisez `pascalCase` en priorité pour `CamelCase`, `snake_case`ou `ANGRY_CASE`. En particulier, vérifiez que les variables locales commencent par des minuscules.
 - Évitez l’utilisation de traits de soulignement `_` dans les noms de fonctions et d’opérations ; quand des niveaux de hiérarchie supplémentaires sont nécessaires, utilisez des espaces de noms et des alias d’espaces de noms.
 
-# <a name="examplestabexamples"></a>[Exemples](#tab/examples)
+# <a name="examples"></a>[Exemples](#tab/examples)
 
-|   | NOM | description |
+|   | Name | Description |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Effacez l’utilisation d’un verbe (« réfléchir ») pour indiquer l’effet de l’opération. |
 | ☒ | <s>`operation XRotation`</s> | L’utilisation de l’expression nominale suggère une fonction plutôt que l’opération. |
@@ -132,7 +132,7 @@ is Adj + Ctl {
 }
 ```
 
-# <a name="guidancetabguidance"></a>[Assistance](#tab/guidance)
+# <a name="guidance"></a>[Assistance](#tab/guidance)
 
 Nous vous suggérons :
 
@@ -141,9 +141,9 @@ Nous vous suggérons :
 - Utilisation de majuscules pour les acronymes courts (à deux lettres) et abréviations.
 - Utilisez `CamelCase` pour des acronymes plus longs (au moins trois lettres) et abréviations.
 
-# <a name="examplestabexamples"></a>[Exemples](#tab/examples)
+# <a name="examples"></a>[Exemples](#tab/examples)
 
-|   | NOM | description |
+|   | Name | Description |
 |---|------|-------------|
 | ☑ | `X` | Raccourci bien maîtrisé pour « appliquer une transformation $X $ » |
 | ☑ | `CNOT` | Raccourci bien maîtrisé pour « contrôlé-non » |
@@ -168,17 +168,17 @@ Par conséquent, nous vous recommandons d’adopter, à chaque fois que cela est
 En guise d’exemple particulier, les opérations d’échange contrôlé unique et non contrôlé doublement sont souvent appelées les opérations « Fredkin » et « Toffoli » dans la documentation académique, mais sont identifiées dans Q # principalement comme `CSWAP` et `CCNOT`.
 Dans les deux cas, les commentaires de documentation de l’API fournissent des noms synonymes basés sur des noms appropriés, ainsi que toutes les citations appropriées.
 
-Cette préférence est particulièrement importante, étant donné que certaines utilisations des noms corrects sont toujours nécessaires. Q # suit le jeu de tradition dans de nombreuses langues classiques, par exemple, et fait référence aux types de `Bool` en référence à la logique booléenne, qui est à son tour nommée en respect de George bool.
+Cette préférence est particulièrement importante, étant donné que certaines utilisations des noms corrects sont toujours nécessaires. Q # suit le jeu de tradition dans de nombreuses langues classiques, par exemple, et fait référence aux types de `Bool` en référence à la logique booléenne, qui est à son tour nommée en respectant George bool.
 De même, quelques concepts quantiques sont nommés de la même façon, y compris le type de `Pauli` intégré au langage Q #.
 En réduisant l’utilisation des noms appropriés dans lesquels ce type d’utilisation n’est pas essentiel, nous réduisons l’impact que les noms appropriés ne peuvent pas être raisonnablement évités.
 
-# <a name="guidancetabguidance"></a>[Assistance](#tab/guidance) 
+# <a name="guidance"></a>[Assistance](#tab/guidance) 
 
 Nous vous suggérons :
 
 - Évitez d’utiliser des noms corrects dans les noms.
 
-# <a name="examplestabexamples"></a>[Exemples](#tab/examples)
+# <a name="examples"></a>[Exemples](#tab/examples)
 
 ***
 
@@ -192,15 +192,15 @@ Nous suggérons, en particulier, que les fonctions de conversion de type ne doiv
 Lors de la liste de types de tableau dans les noms de fonctions de conversion de type, nous vous recommandons le raccourci `Arr`.
 Dans des circonstances exceptionnelles, nous recommandons que toutes les fonctions de conversion de type soient nommées à l’aide d' `As` afin qu’elles puissent être identifiées rapidement.
 
-# <a name="guidancetabguidance"></a>[Assistance](#tab/guidance)
+# <a name="guidance"></a>[Assistance](#tab/guidance)
 
 Nous vous suggérons :
 
 - Si une fonction convertit une valeur de type `X` en une valeur de type `Y`, utilisez le nom `AsY` ou `XAsY`.
 
-# <a name="examplestabexamples"></a>[Exemples](#tab/examples)
+# <a name="examples"></a>[Exemples](#tab/examples)
 
-|   | NOM | description |
+|   | Name | Description |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | La préposition « to » génère une expression verbale, indiquant une opération et non une fonction. |
 | ☒ | <s>`AsDouble`</s> | Le type d’entrée n’est pas clair dans le nom de la fonction. |
@@ -215,15 +215,15 @@ Dans de nombreux cas, un nom est strictement destiné à une utilisation interne
 Il est utile d’indiquer clairement que c’est le cas lorsque vous nommez des fonctions et des opérations afin que les dépendances accidentelles sur le code interne uniquement soient rendues évidentes.
 Si une opération ou une fonction n’est pas destinée à une utilisation directe, mais doit plutôt être utilisée par un Callable correspondant qui agit par une application partielle, envisagez d’utiliser un nom commençant par `_` pour que l’appelabilité soit partiellement appliqué.
 
-# <a name="guidancetabguidance"></a>[Assistance](#tab/guidance)
+# <a name="guidance"></a>[Assistance](#tab/guidance)
 
 Nous vous suggérons :
 
 - Lorsqu’une fonction, une opération ou un type défini par l’utilisateur ne fait pas partie de l’API publique d’une bibliothèque ou d’un programme Q #, assurez-vous que son nom commence par un trait de soulignement de début (`_`).
 
-# <a name="examplestabexamples"></a>[Exemples](#tab/examples)
+# <a name="examples"></a>[Exemples](#tab/examples)
 
-|   | NOM | description |
+|   | Name | Description |
 |---|------|-------------|
 | ☒ | <s>`ApplyDecomposedOperation_`</s> | Le trait de soulignement `_` ne doit pas apparaître à la fin du nom. |
 | ☑ | `_ApplyDecomposedOperation` | Le trait de soulignement `_` au début indique clairement que cette opération est réservée à un usage interne. |
@@ -244,14 +244,14 @@ Ces groupes peuvent être distingués à l’aide du même nom racine, suivi d�
 | `D` | Les entrées ou entrées sont de type `Double` |
 | `L` | Les entrées ou entrées sont de type `BigInt` |
 
-# <a name="guidancetabguidance"></a>[Assistance](#tab/guidance)
+# <a name="guidance"></a>[Assistance](#tab/guidance)
 
 Nous vous suggérons :
 
 - Si une fonction ou une opération n’est pas liée à des fonctions ou des opérations similaires par les types et la prise en charge de functor de leurs entrées, n’utilisez pas de suffixe.
 - Si une fonction ou une opération est liée à des fonctions ou des opérations similaires par les types et la prise en charge de functor de leurs entrées, utilisez des suffixes comme dans le tableau ci-dessus pour distinguer les variantes.
 
-# <a name="examplestabexamples"></a>[Exemples](#tab/examples)
+# <a name="examples"></a>[Exemples](#tab/examples)
 
 ***
 
@@ -261,7 +261,7 @@ L’un des objectifs clés du code Q # pour une fonction ou une opération est q
 De même, les noms des entrées et des arguments de type doivent indiquer comment une fonction ou un argument sera utilisé une fois fourni.
 
 
-# <a name="guidancetabguidance"></a>[Assistance](#tab/guidance)
+# <a name="guidance"></a>[Assistance](#tab/guidance)
 
 Nous vous suggérons :
 
@@ -276,7 +276,7 @@ Nous vous suggérons :
   En particulier, évitez fortement d’utiliser des noms de variable à une seule lettre comme index ; envisagez d’utiliser `idx` au minimum.
 - Les variables utilisées pour contenir les longueurs des tableaux doivent commencer par `n` et doivent être plurielées (par exemple : `nThings`).
 
-# <a name="examplestabexamples"></a>[Exemples](#tab/examples)
+# <a name="examples"></a>[Exemples](#tab/examples)
 
 ***
 
@@ -285,7 +285,7 @@ Nous vous suggérons :
 Les éléments nommés dans les types définis par l’utilisateur doivent être nommés `CamelCase`, même dans l’entrée des constructeurs UDT.
 Cela permet de séparer clairement les éléments nommés des références aux variables de portée locale lors de l’utilisation de la notation d’accesseur (par exemple : `callable::Apply`) ou de la notation de copie et de mise à jour (`set arr w/= Data <- newData`).
 
-# <a name="guidancetabguidance"></a>[Assistance](#tab/guidance)
+# <a name="guidance"></a>[Assistance](#tab/guidance)
 
 Nous vous suggérons :
 
@@ -294,9 +294,9 @@ Nous vous suggérons :
 - Les éléments nommés qui ne sont pas résolus en opérations doivent être nommés comme des expressions nominales.
 - Pour les UDT qui encapsulent des opérations, un seul élément nommé appelé `Apply` doit être défini.
 
-# <a name="examplestabexamples"></a>[Exemples](#tab/examples)
+# <a name="examples"></a>[Exemples](#tab/examples)
 
-|   | Extrait | description |
+|   | Extrait | Description |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | Le nom `Apply` est une expression de verbe au format `CamelCase`, suggérant que l’élément nommé est une opération. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Les éléments nommés doivent commencer par une lettre majuscule initiale. |
@@ -342,7 +342,7 @@ Dans le cas particulier de la minimisation de surprise, certaines fonctions et o
 Par exemple, `ControlledOnInt<'T>` a le type `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)`, de sorte que `ControlledOnInt<Qubit[]>(5, _)` agisse comme le `Controlled` functor, mais sur la condition que le registre de contrôle représente l’État $ \ket{5} = \ket{101}$.
 Ainsi, un développeur s’attend à ce que les entrées `ControlledOnInt` placent l’objet pouvant être appelé en dernier, et que l’opération résultante prenne comme entrée `(Qubit[], 'T)`---le même ordre que celui suivi par la sortie de l' `Controlled` functor.
 
-# <a name="guidancetabguidance"></a>[Assistance](#tab/guidance)
+# <a name="guidance"></a>[Assistance](#tab/guidance)
 
 Nous vous suggérons :
 
@@ -350,11 +350,11 @@ Nous vous suggérons :
 - Utilisez des ordres d’entrée cohérents avec les functors intégrés.
 - Placez toutes les entrées classiques avant toute entrée quantique.
 
-# <a name="examplestabexamples"></a>[Exemples](#tab/examples)
+# <a name="examples"></a>[Exemples](#tab/examples)
 
 ***
 
-## <a name="documentation-conventions"></a>Conventions de la documentation ##
+## <a name="documentation-conventions"></a>Conventions de documentation ##
 
 Le langage Q # permet d’attacher une documentation à des opérations, des fonctions et des types définis par l’utilisateur à l’aide de commentaires de documentation spécialement mis en forme.
 Dénotés par des barres obliques inverses (`///`), ces commentaires de documentation sont de petits documents de [démarque DocFX](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) qui peuvent être utilisés pour décrire l’objectif de chaque opération, fonction et type défini par l’utilisateur, les entrées attendues et ainsi de suite.
@@ -368,7 +368,7 @@ L’utilisation de commentaires de documentation peut aider les utilisateurs à 
 
 Afin d’utiliser efficacement cette fonctionnalité pour aider les utilisateurs, nous vous recommandons de garder certaines choses à l’esprit lorsque vous écrivez des commentaires de documentation.
 
-# <a name="guidancetabguidance"></a>[Assistance](#tab/guidance)
+# <a name="guidance"></a>[Assistance](#tab/guidance)
 
 Nous vous suggérons :
 
@@ -388,7 +388,7 @@ Nous vous suggérons :
 - Lorsqu’une opération ou une fonction est liée à d’autres opérations ou fonctions par des variantes de functor, répertoriez les autres variantes comme des puces dans la section `# See Also`.
 - Laissez une ligne de commentaire vide entre les sections Level-1 (`/// #`), mais ne laissez pas une ligne vide entre les sections Level-2 (`/// ##`).
 
-# <a name="examplestabexamples"></a>[Exemples](#tab/examples)
+# <a name="examples"></a>[Exemples](#tab/examples)
 
 #### <a name=""></a>☑ ####
 
@@ -434,7 +434,7 @@ Ces règles de mise en forme par nature ont tendance à être quelque peu arbitr
 Néanmoins, nous vous recommandons de conserver un ensemble cohérent de conventions de mise en forme au sein d’un groupe de collaborateurs, et en particulier pour les grands projets Q # tels que le kit de développement quantique lui-même.
 Ces règles peuvent être appliquées automatiquement à l’aide de l’outil de mise en forme intégré au compilateur Q #.
 
-# <a name="guidancetabguidance"></a>[Assistance](#tab/guidance) 
+# <a name="guidance"></a>[Assistance](#tab/guidance) 
 
 Nous vous suggérons :
 
@@ -451,9 +451,9 @@ Nous vous suggérons :
 - N’utilisez pas d’espaces après les noms de fonctions, d’opérations ou d’UDT, ou après l' `@` dans les déclarations d’attribut.
 - Chaque déclaration d’attribut doit être sur sa propre ligne.
 
-# <a name="examplestabexamples"></a>[Exemples](#tab/examples)
+# <a name="examples"></a>[Exemples](#tab/examples)
 
-|   | Extrait | description |
+|   | Extrait | Description |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Utilisez des espaces autour des opérateurs binaires. |
 | ☒ | <s>`target:Qubit`</s> | Utilisez des espaces autour des deux-points d’annotation de type. |

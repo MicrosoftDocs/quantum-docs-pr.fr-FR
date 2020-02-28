@@ -1,17 +1,17 @@
 ---
-title: 'Q # bibliothèques standard-applications | Microsoft Docs'
-description: Bibliothèques standard du langage Q#
+title: 'Applications dans les bibliothèques standard Q #'
+description: 'Découvrez deux applications fondamentales dans quantum computing : la simulation de la formation Hamilton et l’algorithme de recherche de Shori.'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: b7c46b634c6d691c067c0dd995301395408c85ca
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868966"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907220"
 ---
 # <a name="applications"></a>Applications #
 
@@ -45,7 +45,7 @@ Dans la plupart des applications pratiques à implémenter sur un ordinateur Qua
 
 Un algorithme de simulation de Quantum convertit une description donnée d’un sous-sein en une séquence de portes quantiques primitives qui, dans l’ensemble, est une évolution approximative de la durée de ce même point de la même manière.
 
-Dans le cas particulier où la décomposition de la partie Hamilton se décompose en une somme de Hermitian, la décomposition Trotter-Suzuki est un algorithme particulièrement simple et intuitif pour simuler les Hamiltonians qui se décomposent en une somme des composants Hermitian. Par exemple, un intégrateur de premier ordre de cette famille est proche de $ $ \begin{align} U (t) & = \left (e ^ {--u\_0 t/r} e ^ {--1\_1 t/r} \cdots e ^ {-m-u\_{d-1} t/r} \right) ^ {r} + max_j \mathcal{O} H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $ utilisant un produit de $r d $ terms. 
+Dans le cas particulier où la décomposition de la partie Hamilton se décompose en une somme de Hermitian, la décomposition Trotter-Suzuki est un algorithme particulièrement simple et intuitif pour simuler les Hamiltonians qui se décomposent en une somme des composants Hermitian. Par exemple, un intégrateur de premier ordre de cette famille est proche de $ $ \begin{align} U (t) & = \left (e ^ {--u\_0 t/r} e ^ {--1\_1 t/r} \cdots e ^ {-m-u\_{d-1} t/r} \right) ^ {r} + max_j \mathcal{O} H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $ utilisant un produit de $r d $ terms.\\ 
 
 > [!TIP]
 > Les applications de l’algorithme de simulation Trotter-Suzuki sont abordées dans les exemples.
@@ -159,7 +159,7 @@ L’estimation de la phase génère donc la valeurs propres $e ^ {2 \ pi i s/r} 
 
 Le schéma de circuit pour la période Quantum Finding est le suivant :
 
-![](./../../media/QPE.svg)
+![Diagramme de circuit pour la recherche d’une période de Quantum](./../../media/QPE.svg)
 
 Ici, $2n $ qubits est initialisé à $ \ket{0}$ et $n $ qubits sont initialisés à $ \ket{1}$.
 Le lecteur peut à nouveau se demander pourquoi le registre quantique contenant le eigenstates est initialisé à $ \ket{1}$.

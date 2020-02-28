@@ -1,17 +1,17 @@
 ---
-title: Contribution du code | Microsoft Docs
-description: Contribution au code
+title: Contribution du code à Microsoft QDK
+description: Apprenez à contribuer à l’exemple de code de bibliothèque et à l’Microsoft Quantum Development Kit (QDK).
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: f9e0f0d9540102331aea64a1245cbaa4833e1e02
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819958"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907475"
 ---
 # <a name="contributing-code"></a>Code de contribution #
 
@@ -26,7 +26,7 @@ Une contribution de code idéale s’appuie sur le travail existant dans un réf
 Lorsque nous acceptons une contribution au code, elle devient une partie du kit de développement quantique proprement dit, de sorte que les nouvelles fonctionnalités seront publiées, gérées et développées de la même façon que le reste du kit de développement quantique.
 Par conséquent, il est utile lorsque la fonctionnalité ajoutée par une contribution est bien testée et est documentée.
 
-### <a name="unit-tests"></a>Tests unitaires ###
+### <a name="unit-tests"></a>tests unitaires ###
 
 Les fonctions Q #, les opérations et les types définis par l’utilisateur qui composent les bibliothèques comme Canon sont testés automatiquement dans le cadre du développement sur le référentiel [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) .
 Lors de l’ouverture d’une nouvelle demande de tirage (pull request), par exemple, notre configuration de [Azure pipelines](https://azure.microsoft.com/services/devops/pipelines/) vérifie que les modifications apportées à la requête de tirage n’interrompent pas les fonctionnalités existantes dont dépend la communauté de programmation quantique.
@@ -98,7 +98,7 @@ Enfin, nous ne pouvons pas accepter les contributions qui causent un préjudice 
 Nous voulons nous assurer que les contributions servent l’ensemble de la communauté de calcul Quantum, à la fois dans sa grande diversité et dans le futur, à mesure qu’elle s’étendra pour devenir encore plus inclusive.
 Nous apprécions votre aide pour la réalisation de cet objectif.
 
-## <a name="next-steps"></a>Prochaines étapes ##
+## <a name="next-steps"></a>Étapes suivantes ##
 
 Merci d’avoir aidé à faire de la communauté de développement quantique une formidable ressource pour l’ensemble de la communauté de programmation quantique !
 Pour plus d’informations, consultez le guide suivant sur le style Q #.

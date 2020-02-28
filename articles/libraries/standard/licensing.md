@@ -1,22 +1,22 @@
 ---
-title: Licences OSS
-description: 'Bibliothèques standard Q #-licence et contribution'
+title: Licence Open source pour QDK
+description: 'En savoir plus sur les licences d’utilisation et de contribution aux bibliothèques Microsoft Q # standard-Licensing et contribution.'
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing
-ms.openlocfilehash: 35e55f6741e5dcc79724f80f31d89937696d8554
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4bc0fb7fbeb4a71b891619218905d509e50911c9
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184387"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906200"
 ---
-# <a name="licensing"></a>Licences #
+# <a name="licensing"></a>Licence #
 
 Le kit de développement quantique est fourni avec un ensemble complet de fonctions et d’opérations Open source, sous licence dans le cadre de la [licence MIT](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt).
-Les parties de la bibliothèque standard qui sont portables sur les ordinateurs cibles peuvent être obtenues à partir du dépôt [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) sur GitHub, ainsi que d’autres bibliothèques telles que et d’autres bibliothèques, telles que la [bibliothèque de chimie quantique. ](xref:microsoft.quantum.chemistry.concepts.intro).
+Les parties de la bibliothèque standard qui sont portables sur les ordinateurs cibles peuvent être obtenues à partir du dépôt [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) sur GitHub, ainsi que d’autres bibliothèques telles que et d’autres bibliothèques, telles que la [bibliothèque de chimie quantique](xref:microsoft.quantum.chemistry.concepts.intro).
 
 Le kit de développement Quantum de Microsoft fournit également des fonctions et des opérations de bibliothèque spécialisées qui sont concédées sous licence par le biais d’une [licence Microsoft Research](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE).
 Celles-ci peuvent être obtenues à partir du dépôt [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) sur GitHub.
@@ -32,5 +32,5 @@ La plupart des contributions vous obligent à accepter un contrat de licence de 
 
 Lorsque vous envoyez une demande de tirage (pull request), un CLA-bot détermine automatiquement si vous devez fournir un CLA et décorer le PR de manière appropriée (par exemple, étiquette, commentaire). Suivez simplement les instructions fournies par le bot. Vous ne devez effectuer cette opération qu’une seule fois dans l’ensemble des pensions à l’aide de notre CLA.
 
-Ce projet a adopté le [Code de conduite open source de Microsoft](https://opensource.microsoft.com/codeofconduct/).
-Pour plus d’informations, consultez la [FAQ sur le code de conduite](https://opensource.microsoft.com/codeofconduct/faq/) ou envoyez vos questions ou vos commentaires à [opencode@microsoft.com](mailto:opencode@microsoft.com).
+Ce projet a adopté le [Code de conduite Open Source de Microsoft](https://opensource.microsoft.com/codeofconduct/).
+Pour plus d’informations, consultez le [Forum Aux Questions sur le Code de conduite](https://opensource.microsoft.com/codeofconduct/faq/) ou contactez [opencode@microsoft.com](mailto:opencode@microsoft.com) si vous avez d’autres questions ou des commentaires.

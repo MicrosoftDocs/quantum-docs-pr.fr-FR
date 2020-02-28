@@ -1,22 +1,22 @@
 ---
-title: 'Variables locales-Q # techniques | Microsoft Docs'
-description: 'Variables locales-techniques Q #'
+title: 'Variables locales-techniques Q #'
+description: 'Découvrez comment définir et utiliser des variables locales dans Q #.'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.local-variables
-ms.openlocfilehash: 8b1de5c096210fb36a81c127a8bbbe1b39522741
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: cb6c662137c31a13c3dd6e9ca3f67879c469f788
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820179"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906863"
 ---
 # <a name="local-variables"></a>Variables locales #
 
 Une valeur de n’importe quel type dans Q # peut être assignée à une variable pour être réutilisée au sein d’une opération ou d’une fonction à l’aide du mot clé `let`.
-Par exemple :
+Exemple :
 
 ```qsharp
 let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];

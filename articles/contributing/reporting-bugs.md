@@ -1,19 +1,19 @@
 ---
-title: Signalement des bogues | Microsoft Docs
-description: Signalement des bogues
+title: Signalement des bogues
+description: Découvrez Comment signaler des bogues ou des problèmes liés au Microsoft Quantum Development Kit (QDK).
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.reporting
-ms.openlocfilehash: bc2a877448f545a3142217331af3e6711ad45329
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 510f842a068a61502d150ccf5e3b2b5742984f3a
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183656"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904789"
 ---
-# <a name="reporting-bugs"></a>Signalement des bogues #
+# <a name="reporting-bugs"></a>Bogues de création de rapports #
 
 Si vous pensez que vous avez trouvé un bogue dans un composant du kit de développement Quantum, nous aimerions beaucoup apprécier un rapport.
 Après tout, quelqu’un d’autre peut éprouver des difficultés avec le même problème ; Nous pouvons nous aider à le résoudre pour tout le monde.

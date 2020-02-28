@@ -1,17 +1,17 @@
 ---
-title: Jordanie-représentation Wigner | Microsoft Docs
-description: Documents conceptuels de la représentation Jordanie-Wigner
+title: Jordanie-représentation Wigner
+description: En savoir plus sur la représentation Jordanie-Wigner, qui met en correspondance les opérateurs Hamilton et les matrices unitaires qui peuvent être plus facilement implémentées sur un ordinateur quantique.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 5d9038e440a2022547395e889e149a531a7ef818
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820536"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904517"
 ---
 # <a name="jordan-wigner-representation"></a>Jordanie-représentation Wigner
 

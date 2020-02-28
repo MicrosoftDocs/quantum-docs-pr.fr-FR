@@ -1,16 +1,17 @@
 ---
-title: Spécification de schéma Broombridge
+title: Spécification de schéma Broombridge (ver 0,2)
+description: Décrit en détail les spécifications du schéma Broombridge Quantum chimie v 0,2 pour la bibliothèque Microsoft Quantum chimie.
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
-ms.openlocfilehash: 2f4be96bc6f1e8e6fe21b93bc0d9ab2aa367fd53
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: df7e651b7d32e672c6e83346ff603132bd55c1a2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185305"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907271"
 ---
 # <a name="broombridge-specification-v02"></a>Spécification Broombridge v 0,2 #
 
@@ -18,7 +19,7 @@ Les mots clés « doit », « ne doit pas », « obligatoire », « doit�
 
 Tout encadré avec les en-têtes « NOTE », « INFORMATION » ou « avertissement » est informatif.
 
-## <a name="introduction"></a>Présentation ##
+## <a name="introduction"></a>Introduction ##
 
 Cette section est informatif.
 
@@ -35,7 +36,7 @@ Pour le reste de cette spécification, « l’objet Broombridge » fait réfé
 
 Sauf mention contraire explicite, les objets ne doivent pas avoir de propriétés supplémentaires au-delà de celles spécifiées explicitement dans ce document.
 
-## <a name="additional-definitions"></a>Définitions complémentaires ##
+## <a name="additional-definitions"></a>Définitions supplémentaires ##
 
 Cette section est normative.
 
@@ -107,7 +108,7 @@ Cette section est normative.
 L’objet Broombridge doit avoir une propriété `format` dont la valeur est un objet JSON avec une propriété appelée `version`.
 La valeur de la propriété `version` doit être `"0.2"`.
 
-### <a name="example"></a>Lire ###
+### <a name="example"></a>Exemple ###
 
 Cette section est informatif.
 
@@ -129,20 +130,20 @@ La valeur de `metadata` peut être l’objet JSON vide (autrement dit, `{}`) ou 
 
 ### <a name="hamiltonian-section"></a>Section Hamilton ###
 
-#### <a name="overview"></a>Présentation ####
+#### <a name="overview"></a>Vue d’ensemble ####
 
 Cette section est informatif.
 
 La propriété `hamiltonian` de chaque objet de description du problème décrit le niveau de Hamilton pour un problème de chimie de Quantum particulier en répertoriant ses termes à un et deux corps comme des tableaux éparss de nombres réels.
 Les opérateurs de type Hamilton décrits par chaque objet de description du problème prennent la forme
 
-$ $ H = \sum\_\{i, j\}\sum\_{\sigma\in\\{\uparrow, \downarrow\\}} H\_\{IJ\} a ^\{\dagger\}\_{i , \sigma} a\_{j, \sigma} + \frac{1}{2}\sum\_\{i, j, k, l\}\sum\_{\sigma, \rho\in\\{\uparrow, \downarrow\\}} h\_{ijkl} a ^ \dagger\_{i , \sigma} a ^ \dagger\_{k, \rho} a\_{l, \rho} a\_{j, \sigma}, $ $
+$ $ H = \sum\_\{i, j\}\sum\_{\sigma\in\\{\uparrow, \downarrow\\}} H\_\{IJ\} a ^\{\dagger\}\_{i, \sigma} a\_{j, \sigma} + \frac{1}{2}\sum\_\{i, j, k, l\}\sum\_{\sigma, \rho\in\\{\uparrow, \downarrow\\}} H\_{ijkl} a ^ \dagger\_{i , \sigma} a ^ \dagger\_{k, \rho} a\_{l, \rho} a\_{j, \sigma}, $ $
 
 ici $h _ {ijkl} = (IJ | KL) $ dans la Convention Mulliken.
 
 Par souci de clarté, le terme à un seul électrons est
 
-$ $ H_ {IJ} = \int {\mathrm d} x \Psi ^ *\_i (x) \left (\frac{1}{2}\nabla ^ 2 + \sum\_{A} \frac{Z\_A} {| x-x\_A |}  \right) \Psi\_j (x), $ $
+$ $ h_ {IJ} = \int {\mathrm d} x \Psi ^ *\_i (x) \left (\frac{1}{2}\nabla ^ 2 + \sum\_{A} \frac{Z\_A} {| x-x\_A |}  \right) \Psi\_j (x), $ $
 
 et le terme à deux électrons est
 
@@ -152,11 +153,11 @@ $$
 Comme indiqué dans la description de la [propriété`basis_set`](#basis-set-object) de chaque élément de la propriété `integral_sets`, nous supposons plus explicitement que les fonctions de base utilisées sont des valeurs réelles.
 Cela nous permet d’utiliser les Symmetries suivantes entre les termes pour compresser la représentation de la représentation du même.
 
-$ $ H_ {ijkl} = H_ {Ijlk} = H_ {jikl} = H_ {JiLK} = H_ {klij} = H_ {klji} = H_ {lkij} = H_ {lkji}.
+$ $ h_ {ijkl} = h_ {Ijlk} = h_ {jikl} = h_ {JiLK} = h_ {klij} = h_ {klji} = h_ {lkij} = h_ {lkji}.
 $$
 
 
-#### <a name="contents"></a>Contenu ####
+#### <a name="contents"></a>Contents ####
 
 Cette section est normative.
 
@@ -174,14 +175,14 @@ Cette section est normative.
 La propriété `one_electron_integrals` de l’objet Hamilton doit être une quantité de tableau épars dont les index sont deux entiers et dont les valeurs sont des nombres.
 Chaque terme doit avoir des index `[i, j]` où `i >= j`.
 
-> OBSERVE Cela reflète la symétrie qui $h _ {IJ} = H_ {ji} $ qui est la conséquence du fait que le Hermitian de la Hamilton est.
+> OBSERVE Cela reflète la symétrie qui $h _ {IJ} = h_ {ji} $, qui est une conséquence du fait que le Hermitian de la Hamilton est le même.
 
 
-###### <a name="example"></a>Lire ######
+###### <a name="example"></a>Exemple ######
 
 Cette section est informatif.
 
-La quantité de tableau épars suivante représente le point de \left-$ H = (-5,0 (a ^\{\dagger\}\_{1, \uparrow} a\_{1, \uparrow} + a ^\{\dagger\}\_{1, \downarrow} a\_{1 , \downarrow}) + 0,17 (a ^\{\dagger\}\_{2, \uparrow} a\_{1, \uparrow} + a ^\{\dagger\}\_{1, \uparrow} a\_{2, \uparrow} + a ^\{\dagger\}\_{2 , \downarrow} a\_{1, \downarrow} + a ^\{\dagger\}\_{1, \downarrow} a\_{2, \downarrow}) \right)\\, \mathrm{Ha}.
+La quantité de tableau fragmenté suivante représente le volume de Hamilton $ $ H = \left (-5,0 (a ^\{\dagger\}\_{1, \uparrow} a\_{1, \uparrow} + a ^\{\dagger\}\_{1, \downarrow} a\_{1, \downarrow}) + 0,17 (a ^\{\dagger\}\_{2, \uparrow} a\_{1, \uparrow} + a ^\{\dagger\}\_{1, \uparrow} a\_{2, \uparrow} + a ^\{\dagger\}\_{2 , \downarrow} a\_{1, \downarrow} + a ^\{\dagger\}\_{1, \downarrow} a\_{2, \downarrow}) \right)\\, \mathrm{Ha}.
 $$
 
 ```yaml
@@ -206,7 +207,7 @@ Chaque élément de la valeur de `two_electron_integrals` doit avoir quatre inde
 
 Chaque propriété `two_electron_integrals` doit avoir une propriété `index_convention`.
 La valeur de la propriété `index_convention` doit être l’une des valeurs autorisées figurant dans le tableau 1.
-Si la valeur de `index_convention` est `mulliken`, alors pour chaque élément de la `two_electron_integrals` quantité de tableau épars, un analyseur chargeant un document Broombridge doit instancier un terme de Hamilton égal à l’opérateur à deux électrons $h _ {i, j, k, l} a ^ \dagger_i a ^ \dagger_j a_k a_l $ , où $i $, $j $, $k $ et $l $ doivent être des entiers de valeur au moins 1, et où $h _ {i, j, k, l} $ est l’élément `[i, j, k, l, h(i, j, k, l)]` de la grandeur du tableau fragmenté.
+Si la valeur de `index_convention` est `mulliken`, alors pour chaque élément de la `two_electron_integrals` quantité de tableau épars, un analyseur chargeant un document Broombridge doit instancier un terme de Hamilton égal à l’opérateur à deux électrons $h _ {i, j, k, l} a ^ \ dagger_i un ^ \ dagger_j a_k a_l $, où $i $, $j $, $k $ et $l $ doivent être des entiers de valeur au moins 1, et où $h _ {i, j, k, l} $ est l’élément `[i, j, k, l, h(i, j, k, l)]` de la grandeur du tableau fragmenté.
 
 ###### <a name="symmetries"></a>Symmetries ######
 
@@ -228,13 +229,13 @@ Si la propriété `index_convention` d’un objet `two_electron_integrals` est �
 
 <!-- h_{ijkl} = h_{ijlk}=h_{jikl}=h_{jilk}=h_{klij}=h_{klji}=h_{lkji}. -->
 
-###### <a name="example"></a>Lire #######
+###### <a name="example"></a>Exemple #######
 
 Cette section est informatif.
 
 L’objet suivant spécifie la
 
-$ $ H = \frac12 \sum\_{\sigma, \rho\in\\{\uparrow, \downarrow\\}} \Biggr (1,6 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{1, \rho} a\_{1, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{6 , \sigma} a ^ {\dagger}\_{1, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\dagger}\_{6, \sigma} a ^ {\dagger}\_{1, \rho} a\_{2, \rho} a\_{3 , \sigma}-0,1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho} a\_{2 , \rho} a\_{3, \sigma} $ $ $ $-0,1 a ^ {\dagger}\_{3, \sigma} a ^ {\dagger}\_{2, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{3, \sigma} a ^ {\dagger}\_{2 , \rho} a\_{1, \rho} a\_{6, \sigma}-0,1 a ^ {\dagger}\_{2, \sigma} a ^ {\dagger}\_{3, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{2 , \sigma} a ^ {\dagger}\_{3, \rho} a\_{1, \rho} a\_{6, \sigma}\Biggr)\\, \textrm{Ha}.
+$ $ H = \frac12 \sum\_{\sigma, \rho\in\\{\uparrow, \downarrow\\}} \Biggr (1,6 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{1, \rho} a\_{1, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{6, \sigma} a ^ {\dagger}\_{1, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\dagger}\_{6, \sigma} a ^ {\dagger}\_{1, \rho} a\_{2 , \rho} a\_{3, \sigma}-0,1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho} a\_{2, \rho} a\_{3, \sigma} $ $ $-0,1 a ^ {\dagger}\_{3, \sigma} a ^ {\dagger}\_{2, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{3 , \sigma} a ^ {\dagger}\_{2, \rho} a\_{1, \rho} a\_{6, \sigma}-0,1 a ^ {\dagger}\_{2, \sigma} a ^ {\dagger}\_{3, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{2, \sigma} a ^ {\dagger}\_{3, \rho} a\_{1, \rho} a\_{6, \sigma}\Biggr)\\, \textrm{Ha}.
 $$
 
 ```yaml
@@ -263,7 +264,7 @@ Chaque objet d’État peut avoir une propriété `energy` dont la valeur doit �
 
 Si la valeur de la propriété `method` est `sparse_multi_configurational`, l’objet d’État doit avoir une propriété `superposition` contenant un tableau d’États de base et leurs amplitudes non normalisées.
 
-Par exemple, les États initiaux $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) \ket{0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {\dagger}\_{1 , \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) + 0,2 (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{3, \uparrow}a ^ {\dagger}\_{2, \downarrow})} {\sqrt{| 0.1 | ^ 2 + | 0,2 | ^ 2}} \ket{0}, $ $ où $ \ket{E} $ a Energy $0,987 \textrm{Ha} $, sont représentés par
+Par exemple, les États initiaux $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) \ket{0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) + 0,2 (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{3, \uparrow}a ^ {\dagger}\_{2, \downarrow})} {\sqrt{| 0.1 | ^ 2 + | 0,2 | ^ 2}} \ket{0}, $ $ où $ \ket{E} $ a Energy $0,987 \textrm{Ha} $, sont représentés par
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
   - label: "|G0>"
@@ -296,7 +297,7 @@ Par exemple, l’État $ $ \ket{\text{Reference}} = (a ^ {\dagger}\_{1, \uparrow
 
 $ $ \ket{\text{UCCSD}} = e ^ {T-T ^ \dagger}\ket{\text{Reference}}, $ $
 
-$ $ T = 0,1 a ^ {\dagger}\_{3, \uparrow}a\_{2, \downarrow} + 0,2 a ^ {\dagger}\_{2, \uparrow}a\_{2, \downarrow}-0,3 a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{3, \downarrow}a\_{3 , \uparrow}a\_{2, \downarrow} $ $ est représenté par
+$ $ T = 0,1 a ^ {\dagger}\_{3, \uparrow}a\_{2, \downarrow} + 0,2 a ^ {\dagger}\_{2, \uparrow}a\_{2, \downarrow}-0,3 a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{3, \downarrow}a\_{3, \uparrow}a\_{2, \downarrow} $ $ est représenté par
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
   - label: "UCCSD"

@@ -1,17 +1,17 @@
 ---
-title: 'Instructions Q # | Microsoft Docs'
-description: 'Instructions Q #'
+title: 'Instructions Q #'
+description: 'En savoir plus sur l’utilisation correcte des instructions dans Q #, y compris les déclarations de fonctions et d’opérations, les déclarations de variables et les affectations, ainsi que les appels d’opération.'
 author: QuantumWriter
 uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9a6f5d53ec21090d0c13f4369e0270d264cd1e9b
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: e801a5fdd24b973f47d23d2aca6f11bbebf333d4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036489"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904670"
 ---
 # <a name="statements-and-other-constructs"></a>Instructions et autres constructions
 

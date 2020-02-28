@@ -1,16 +1,16 @@
 ---
-title: 'Bibliothèques standard Q #-Diagnostics | Microsoft Docs'
-description: 'Bibliothèques standard Q #-Diagnostics'
+title: 'Diagnostics dans les bibliothèques standard Q #'
+description: 'Découvrez les fonctions et opérations de diagnostic dans les bibliothèques standard Q # utilisées pour détecter les erreurs ou les erreurs dans les programmes Quantum.'
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 67ec6780d8cbbda7223d46026a9df97cebc92b33
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ba2f248327bb3db4ee895f8e65ea31c17e42b5f4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820978"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906234"
 ---
 # <a name="diagnostics"></a>Diagnostics #
 

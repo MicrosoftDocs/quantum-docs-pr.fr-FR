@@ -1,17 +1,17 @@
 ---
-title: 'Opérations et fonctions-Q # techniques | Microsoft Docs'
-description: 'Opérations et fonctions-Q # techniques'
+title: 'Opérations et fonctions Q #'
+description: 'Découvrez les opérations et les fonctions Q # et comment elles sont appliquées dans un programme Quantum.'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 43f0cf2da192a607e514d0c7de57a9bdd067faf7
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820774"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907662"
 ---
 # <a name="q-operations-and-functions"></a>Opérations et fonctions Q #
 
@@ -141,7 +141,7 @@ Par conséquent, les fonctions Q # sont *pures*, car elles mappent toujours les 
 Cela permet au compilateur Q # de réorganiser en toute sécurité le mode et le moment où les fonctions sont appelées lors de la génération de spécialisations d’opérations.
 
 La définition d’une fonction fonctionne de la même façon que la définition d’une opération, à la différence qu’il n’est pas possible de définir des spécialisations voisines ou contrôlées pour une fonction.
-Par exemple :
+Exemple :
 
 ```qsharp
 function Square(x : Double) : (Double) {
@@ -231,7 +231,7 @@ operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
 
 Dans cet exemple, la `=>` flèche qui apparaît dans le type `(Qubit => Unit)` indique que le champ d’entrée `op` est une opération qui prend comme entrée le type `Qubit` et produit un tuple vide comme sortie.
 En outre, nous spécifions les caractéristiques de ce type d’opération, qui contiennent les informations sur les functors pris en charge.
-Une opération de type `(Qubit => Unit)` ne prend en charge ni l' `Adjoint` ni le `Controlled` functor. Si vous souhaitez indiquer qu’une opération de ce type doit prendre en charge, par exemple, le `Adjoint` functor, nous devons le déclarer comme étant adjointable. Pour ce faire, utilisez l’annotation `is Adj` au type. De même, `(Qubit => Unit is Ctl)` indique qu’une opération de ce type prend en charge l' `Controlled` functor. Nous étudierons ce point plus en détail lorsque nous aborderons les [types dans Q #] (XREF : Microsoft. Quantum. Language. type-Model) plus généralement.
+Une opération de type `(Qubit => Unit)` ne prend en charge ni l' `Adjoint` ni le `Controlled` functor. Si vous souhaitez indiquer qu’une opération de ce type doit prendre en charge, par exemple, le `Adjoint` functor, nous devons le déclarer comme étant adjointable. Pour ce faire, utilisez l’annotation `is Adj` au type. De même, `(Qubit => Unit is Ctl)` indique qu’une opération de ce type prend en charge l' `Controlled` functor. Nous étudierons cela plus en détail lorsque nous aborderons les [types dans Q #](xref:microsoft.quantum.language.type-model) plus généralement.
 
 Pour le moment, nous insistons sur le fait que nous pouvons également retourner des opérations dans le cadre des sorties, de telle sorte que nous puissions isoler certains genres de logique conditionnelle classique comme une fonction classique qui retourne une description d’un programme Quantum sous la forme d’une opération.
 En guise d’exemple simple, prenons l’exemple de téléportage, dans lequel le tiers recevant un message classique à deux bits doit utiliser le message pour décoder leur qubit dans l’État téléporté approprié.

@@ -1,17 +1,17 @@
 ---
-title: Concepts avancés de la matrice | Microsoft Docs
-description: Concepts avancés de la matrice
+title: Concepts de matrices avancés
+description: En savoir plus sur les exponentiels vecteurs propres, valeurs propres et Matrix, les outils fondamentaux utilisés pour décrire et simuler des algorithmes Quantum.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.matrix-advanced
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f87b3bcd19d2f98fea2a9724a280781a78c4cbb9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a83911e01ad758bbcb7f701000fd58b4f1c91cd2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183758"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907577"
 ---
 # <a name="advanced-matrix-concepts"></a>Concepts avancés de la matrice #
 
@@ -32,14 +32,14 @@ $$
 
 Les vecteurs
 
-$ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0 \ end {bmatrix} et \begin{bmatrix}0 \\\\ 0 \\\\ 1 \ fin {bmatrix} $ $
+$ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0 \ end {bmatrix} et \begin{bmatrix}0 \\\\ 0 \\\\ 1 \ end {bmatrix} $ $
 
 vecteurs propres de cette matrice avec valeurs propres $d _ 1, $d _2 $ et $d _3 $, respectivement. Si $d _ 1 $, $d _2 $ et $d _3 $ sont des nombres distincts, ces vecteurs (et leurs multiples) sont les seuls vecteurs propres de la matrice $D $. En général, pour une matrice diagonale, il est facile de lire les valeurs propres et les vecteurs propres. Les valeurs propres sont tous des nombres apparaissant sur la diagonale, et leurs vecteurs propres respectifs sont les vecteurs d’unité avec une entrée égale à $1 $ et les entrées restantes égales à $0 $.
 
-Notez dans l’exemple ci-dessus que le vecteurs propres de $D $ forment une base pour les vecteurs $3 $ dimensionnels. Une base est un ensemble de vecteurs, de sorte que tout vecteur peut être écrit comme une combinaison linéaire de ces vecteurs. Plus explicitement, $v _ 1 $, $v _2 $ et $v _3 $ forment une base si un vecteur $v $ peut être écrit comme $v = A_1 V_1 + a_2 V_2 + A_3 V_3 $ pour certains nombres $a _ 1 _ 1, $a _2 $ et $a _3 $.
+Notez dans l’exemple ci-dessus que le vecteurs propres de $D $ forment une base pour les vecteurs $3 $ dimensionnels. Une base est un ensemble de vecteurs, de sorte que tout vecteur peut être écrit comme une combinaison linéaire de ces vecteurs. Plus explicitement, $v _ 1 $, $v _2 $ et $v _3 $ forment une base si un vecteur $v $ peut être écrit comme $v = a_1 v_1 + a_2 v_2 + a_3 v_3 $ pour certains nombres $a _ 1 _ 1, $a _2 $ et $a _3 $.
 
 Rappelez-vous qu’une matrice Hermitian (également appelée autojoint) est une matrice carrée complexe égale à son propre conjugué complexe, tandis qu’une matrice d’unités est une matrice carrée complexe dont l’inverse est égal à son conjugué complexe.
-Pour les matrices Hermitian et Unity, qui sont essentiellement les seules matrices rencontrées dans Quantum Computing, il existe un résultat général appelé le [*spectral*](https://en.wikipedia.org/wiki/Spectral_theorem), qui déclare les éléments suivants : pour n’importe quelle matrice Hermitian ou unitaire $M $, il existe un unité de $U $ telle que $M = U ^ \dagger D U $ pour une matrice diagonale $D $. En outre, les entrées diagonales de $D $ seront le valeurs propres de $M $.
+Pour les matrices de Hermitian et d’unités, qui sont essentiellement les seules matrices rencontrées dans Quantum Computing, il existe un résultat général connu sous le nom d’un type d’entité [*spectrale*](https://en.wikipedia.org/wiki/Spectral_theorem), qui déclare les éléments suivants : pour une matrice Hermitian ou unitaire $M $, il existe un $U unitaire $M = u ^ \Dagger D u $ pour une matrice diagonale $D $. En outre, les entrées diagonales de $D $ seront le valeurs propres de $M $.
 
 Nous savons déjà comment calculer le valeurs propres et le vecteurs propres d’une matrice diagonale $D $. À l’aide de cette aide, nous savons que si $v $ est un extraction de $D $ avec eigenvalue $c $, par exemple $Dv = CV $, $U ^ \dagger v $ sera un extraction de $M $ avec eigenvalue $c $. Cela est dû au fait que
 
@@ -55,7 +55,7 @@ Il existe de nombreuses façons de calculer un exponentiel de matrice sur un ord
 
 Le moyen le plus simple de comprendre comment calculer l’exponentiel d’une matrice consiste à utiliser les valeurs propres et les vecteurs propres de cette matrice.  Plus précisément, le point de vue spectral évoqué ci-dessus indique que pour chaque Hermitian ou matrice d’unités $A $ il existe une matrice d’unités $U $ et une matrice diagonale $D $ telle que $A = U ^ \dagger D.  En raison des propriétés de unitarity, nous avons $A ^ 2 = U ^ \dagger D ^ 2 U $ et de la même façon pour toute alimentation $p $ $A ^ p = U ^ \dagger D ^ p U $.  Si nous le remplaçons par la définition d’opérateur de l’opérateur exponentiel, nous obtenons :
 
-$ $ e ^ A = U ^ \dagger \left (\boldone + D + \frac{D ^ 2} {2 !} + \cdots \right) U = U ^ \dagger \begin{bmatrix}\exp (d_{11}) & 0 & \cdots & 0\\\\ 0 & \exp (d_{22}) & \cdots & 0\\\\ \vdots & \vdots & \ddots & \vdots\\\\ 0 & 0 & \cdots & \exp (d_ {NN}) \end{bmatrix} U. $ $
+$ $ e ^ A = U ^ \dagger \left (\boldone + D + \frac{D ^ 2} {2 !} + \cdots \right) U = U ^ \dagger \begin{bmatrix}\exp (D_{11}) & 0 & \cdots & 0\\\\ 0 & \exp (D_{22}) & \cdots & 0\\\\ \vdots & \vdots & \ddots & \vdots\\\\ 0 & 0 & \cdots & \exp (D_ {NN}) \end{bmatrix} U. $ $
 
 En d’autres termes, si vous transformez en eigenbasis de la matrice $A $, le calcul de la valeur exponentielle de la matrice est équivalent au calcul de la valeur exponentielle ordinaire du valeurs propres de la matrice.  Dans la mesure où de nombreuses opérations dans quantum computing impliquent l’exécution de la matrice exponentielles, cette astuce de transformation en eigenbasis d’une matrice pour simplifier l’exécution de l’opérateur exponentiel s’affiche fréquemment et constitue la base de nombreux algorithmes Quantum tels que Trotter – méthodes de simulation de quantum de style Suzuki présentées plus loin dans ce guide.
 

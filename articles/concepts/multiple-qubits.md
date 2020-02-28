@@ -1,17 +1,17 @@
 ---
-title: Plusieurs qubits | Microsoft Docs
-description: Plusieurs qubits
+title: Plusieurs qubits
+description: Découvrez comment effectuer des opérations sur au moins deux qubits.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e9c043f4ee41a878b9544a27d5ea052fce29f06e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863214"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907543"
 ---
 # <a name="multiple-qubits"></a>Plusieurs qubits
 
@@ -27,7 +27,7 @@ Ces outils sont absolument nécessaires pour comprendre les jeux de portes coura
 
 ## <a name="representing-two-qubits"></a>Représentant deux qubits
 La principale différence entre les États à un et deux qubit est que les États de deux qubit sont à quatre dimensions plutôt qu’en deux dimensions.
-Cela est dû au fait que la base de calcul pour les États de deux qubit est formée par les produits tenseur de l’un des États qubit.  Par exemple, nous avons \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.
+Cela est dû au fait que la base de calcul pour les États de deux qubit est formée par les produits tenseur de l’un des États qubit.  Par exemple, nous avons \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.\\
 \end{align}
 
 Il est facile de voir que plus généralement, l’État Quantum de $n $ qubits est représenté par un vecteur d’unité de dimension $2 ^ n $ à l’aide de cette construction.  Le vecteur
@@ -103,7 +103,7 @@ Nous pouvons également former des portes à deux qubit en appliquant des portes
 
 $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} $ $
 
-et la
+and
 
 $ $ \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} $ $
 
@@ -111,7 +111,7 @@ pour le premier et le deuxième qubits, respectivement, cela revient à applique
 
 Notez que si deux portes à qubit unique définissent une porte à deux qubit en prenant leur produit tenseur, la réciproque n’est pas vraie. Les portes à deux qubit ne peuvent pas être écrites en tant que produit tenseur de portes à qubit unique.  Une porte de ce type est appelée porte *emmêlante* . La porte CNOTIN en est un exemple.
 
-L’intuition derrière une porte contrôlée ne peut pas être généralisée à des portes arbitraires.  Une porte contrôlée en général est une porte qui agit comme identité (c’est-à-dire qu’elle n’a aucune action), à moins qu’un qubit spécifique soit $1 $.  Nous dénotaons un appareil contrôlé, contrôlé dans ce cas sur le qubit libellé $x $, avec un $ \Lambda\_x (U) $.  Par exemple, $ \ Lambda_0 (U) e\_{1}\otimes {\Psi} = e\_{1}\otimes U {\Psi} $ et $ \Lambda\_0 (U) e\_{0}\otimes {\Psi} = e\_{0}\otimes{\Psi} $, où $e\_$0 et $e\_$1 sont les vecteurs de base de calcul pour un qubit unique correspondant aux valeurs $0 $ et $1 $.  Par exemple, considérez la porte contrôlée suivante : $Z $, nous pouvons l’exprimer sous la forme $ $ \Lambda\_0 (Z) = \begin{bmatrix}1 & 0 & 0 & 0\\\\0 & 1 & 0 & 0\\0 \\-1 \end{bmatrix} = (\boldone\otimes H) \operatorname{CNOT} (\boldone\otimes H).
+L’intuition derrière une porte contrôlée ne peut pas être généralisée à des portes arbitraires.  Une porte contrôlée en général est une porte qui agit comme identité (c’est-à-dire qu’elle n’a aucune action), à moins qu’un qubit spécifique soit $1 $.  Nous dénotaons un appareil contrôlé, contrôlé dans ce cas sur le qubit libellé $x $, avec un $ \Lambda\_x (U) $.  Par exemple, $ \ Lambda_0 (U) e\_{1}\otimes {\Psi} = e\_{1}\otimes U {\Psi} $ et $ \Lambda\_0 (U) e\_{0}\otimes {\Psi} = e\_{0}\otimes{\Psi} $, où $e\_$0 et $e\_$1 sont les vecteurs de base de calcul pour un qubit unique correspondant aux valeurs $0 $ et $1 $.  Par exemple, considérez la porte contrôlée suivante : $Z $, nous pouvons l’exprimer sous la forme $ $ \Lambda\_0 (Z) = \begin{bmatrix}1 & 0 & 0 & 0\\\\0 & 1 & 0 & 0\\0 \\-1 \end{bmatrix} = (\boldone\otimes H) \operatorname{CNOT} (\boldone\otimes H).\\\\
 $$
 
 La création d’unités contrôlées de manière efficace est un défi majeur.  La façon la plus simple d’implémenter cela consiste à former une base de données de versions contrôlées de portes fondamentales et à remplacer chaque porte fondamentale dans l’opération d’origine par son équivalent contrôlé.  C’est souvent un gaspillage et des informations astucieuses peuvent souvent être utilisées pour remplacer quelques portes avec des versions contrôlées pour obtenir le même impact.  Pour cette raison, nous fournissons dans notre infrastructure la possibilité d’effectuer la méthode naïve de contrôle ou de permettre à l’utilisateur de définir une version contrôlée de l’unité si une version optimisée est connue.

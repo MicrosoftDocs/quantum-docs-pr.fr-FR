@@ -1,17 +1,17 @@
 ---
-title: 'Bibliothèques standard Q #-structures de données | Microsoft Docs'
-description: 'Bibliothèques standard Q #-structures de données'
+title: 'Structures de données dans les bibliothèques standard Q #'
+description: 'En savoir plus sur les structures de données, les Oracle et les générateurs dynamiques dans les bibliothèques Microsoft Q # standard.'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864353"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907781"
 ---
 # <a name="data-structures-and-modeling"></a>Structures de données et modélisation #
 

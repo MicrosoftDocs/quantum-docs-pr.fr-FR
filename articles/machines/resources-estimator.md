@@ -1,24 +1,24 @@
 ---
-title: Estimateur des ressources du kit de développement Quantum | Microsoft Docs
-description: Vue d’ensemble de l’estimateur de ressources du kit de développement Quantum de Microsoft
+title: Estimateur des ressources du kit de développement Quantum
+description: 'En savoir plus sur l’estimateur de ressources, qui estime les ressources requises pour exécuter une instance donnée d’une opération Q # sur un ordinateur Quantum.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820859"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907050"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>L’ordinateur cible ResourcesEstimator
 
 Comme son nom l’indique, le `ResourcesEstimator` estime les ressources requises pour exécuter une instance donnée d’une opération Q # sur un ordinateur Quantum.
 Pour ce faire, il exécute l’opération Quantum sans simuler réellement l’état d’un ordinateur quantique. pour cette raison, il peut estimer des ressources pour les opérations Q # qui utilisent des milliers de qubits.
 
-## <a name="usage"></a>Utilisation
+## <a name="usage"></a>Usage
 
 Le `ResourcesEstimator` est simplement un autre type d’ordinateur cible. il peut donc être utilisé pour exécuter n’importe quelle opération Q #. 
 

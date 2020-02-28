@@ -1,17 +1,17 @@
 ---
-title: Dirac notation | Microsoft Docs
-description: Notation Dirac
+title: Notation Dirac
+description: En savoir plus sur l’utilisation de la notation Dirac pour représenter les États quantiques et pour simuler des opérations de Quantum.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.dirac
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 33d964d079c94bd947e35d2c09516b29df1bba11
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 204e56cc97fe28f9c52dcfb882aadec7e09bb2dc
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184761"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907560"
 ---
 # <a name="dirac-notation"></a>Notation Dirac
 
@@ -36,7 +36,7 @@ $$
 
 La notation suivante est souvent utilisée pour décrire les États qui résultent de l’application de la porte Hadarmard à $ \ket{0}$ et $ \ket{1}$ (qui correspondent aux vecteurs d’unités dans les directions $ + x $ et $-x $ sur la sphère Bloch) :
 
-$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}, \qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-} .
+$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}, \qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-}.
 $$
 
 Ces États peuvent également être développés à l’aide de la notation Dirac comme sommes de $ \ket{0}$ et $ \ket{1}$ :
@@ -62,7 +62,7 @@ $ $ \big | \braket{1 | \Psi}\big | ^ 2 = \left | \frac{3}{5}\braket{1 | 1} + \fr
 ### <a name="tensor-product-notation"></a>Notation de produit tenseur
 La notation Dirac comprend également une structure de produit tenseur implicite.  Cela est important, car dans Quantum Computing, le vecteur d’état décrit par deux registres quantiques non corrélés est les produits tenseur des deux vecteurs d’État.  La description concise de la structure du produit tenseur, ou de son manque, est vitale si vous souhaitez expliquer un calcul quantique.  La structure du produit tenseur implique que nous pouvons écrire $ \Psi \otimes \Phi $ pour deux vecteurs d’État Quantum $ \Phi $ et $ \Psi $ comme $ \ket{\Psi} \ket{\Phi} $, parfois explicitement écrits sous la forme $ \ket{\Psi} \otimes \ket{\Phi} $, toutefois par Convention, en écrivant $ \otimes $ entre les vecteurs n’est pas nécessaire.  Par exemple, l’état avec deux qubits initialisé à l’état zéro est fourni par
 
-$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \ otimes \ket{0}= \ket{0} \ket{0}.
+$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \otimes \ket{0}= \ket{0} \ket{0}.
 $$
 
 De même, l’État $ \ket{p} $ pour Integer $p $ représente un État Quantum qui encode en représentation binaire l’entier $p $.  Par exemple, si nous souhaitons exprimer le nombre $5 $ à l’aide d’un encodage binaire non signé, nous pourrions l’exprimer tout aussi
@@ -78,7 +78,7 @@ $$
 ### <a name="example-describing-superposition-with-dirac-notation"></a>Exemple : description de la superposition avec la notation Dirac
 Voici un autre exemple de la façon dont vous pouvez utiliser la notation Dirac pour décrire un État Quantum, prenez en compte les méthodes équivalentes suivantes pour écrire un État Quantum qui est une superposition égale sur chaque chaîne de bits possible de longueur $n $
 
-$ $ H ^ {\otimes n} \ket{0} = \frac{1}{2 ^ {n/2}} \sum_{j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
+$ $ H ^ {\otimes n} \ket{0} = \frac{1}{2 ^ {n/2}} \ sum_ {j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
 $$
 
 Vous vous demandez peut-être pourquoi la somme va de $0 $ à $2 ^ {n}-$1 pour $n $ bits.  Notez d’abord qu’il y a au plus 2 ^ {n} $ configurations différentes que $n $ bits peut prendre.  Vous pouvez voir cela en notant qu’un bit peut prendre $2 valeurs $, mais deux bits peuvent prendre $4 $ valeurs, et ainsi de suite. En général, cela signifie qu’il y a au plus 2 ^ n $ différentes chaînes de bits possibles, mais la plus grande valeur encodée dans l’une d’entre elles $1 \ cdots 1 = 2 ^ n-$1 et par conséquent, il s’agit de la limite supérieure de la somme.
@@ -93,7 +93,7 @@ Autrement dit, vous pouvez distribuer la notation de produit tenseur dans la not
 
 Les vecteurs Bra suivent une convention similaire pour les vecteurs Ket.  Par exemple, le vecteur $ \bra{\Psi}\bra{\Phi} $ est équivalent au vecteur d’État $ \Psi ^ \dagger \otimes \Phi ^ \dagger = (\psi\otimes \Phi) ^ \dagger $. Si le vecteur Ket $ \ket{\Psi} $ est $ \alpha \ket{0} + \beta \ket{1}$, la version du vecteur Bra du vecteur est $ \bra{\Psi} = \ket{\Psi} ^ \dagger = (\bra{0}\alpha ^ * + \bra{1}\beta ^ *) $.
 
-Par exemple, imaginez que nous souhaitons calculer la probabilité de mesurer l’État $ \ket{\Psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ à l’aide d’un programme Quantum pour mesurer les États en tant que $ \ket{+} $ ou $ \ket{-}$. La probabilité que l’appareil produise la sortie de l’État est $ \ket{-}$ est 
+Par exemple, imaginez que nous souhaitons calculer la probabilité de mesurer l’État $ \ket{\Psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ à l’aide d’un programme Quantum pour mesurer les États comme étant $ \ket{+} $ ou $ \ket{-}$. La probabilité que l’appareil produise la sortie de l’État est $ \ket{-}$ est 
 
 $ $ | \braket{-| \Psi} | ^ 2 = \left | \frac{1}{\sqrt{2}} (\bra{0}-\bra{1}) (\frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}) \right | ^ 2 = \left |-\frac{3}{5 \ sqrt{2}} + \frac{4}{5 \ sqrt{2}} \right | ^ 2 = \frac{1}{50}. $ $
 
@@ -132,7 +132,7 @@ $$
 
 Nous pouvons ensuite constater que cela est cohérent avec la discussion sur les probabilités de mesure pour les États multiqubit à l’aide de la notation de vecteur de colonne :
 
-$ $ P (\text{First qubit = 1}) = \Psi ^ \dagger (e\_{10}e\_{10}^ \dagger + e\_{11}e\_{11}^ \dagger) \Psi = | e\_{10}^ \dagger \Psi | ^ 2 + | e\_{11}^ \ poignard \Psi | ^ 2, $ $
+$ $ P (\text{First qubit = 1}) = \Psi ^ \dagger (e\_{10}e\_{10}^ \dagger + e\_{11}e\_{11}^ \dagger) \Psi = | e\_{10}^ \dagger \Psi | ^ 2 + | e\_{11}^ \dagger \Psi | ^ 2, $ $
 
 qui correspond à la discussion sur la mesure qubit.  La généralisation de ce résultat au cas qubit, cependant, est légèrement plus simple à exprimer à l’aide de la notation Dirac que la notation de vecteur de colonne et est entièrement équivalente au traitement précédent.
 
@@ -146,4 +146,3 @@ Pour le lecteur intéressé, nous vous recommandons de lire l’un des ouvrages 
 
 ## <a name="q-gate-sequences-equivalent-to-quantum-states"></a>Q # séquences de la porte équivalentes aux États quantiques
 Un dernier point intéressant la notation Quantum et le langage de programmation Q # : au début de ce document, nous avons mentionné que l’État Quantum est l’objet fondamental des informations dans quantum computing.  Il peut alors s’avérer surprenant que dans Q #, il n’y ait pas de notion d’État Quantum.  Au lieu de cela, tous les États sont décrits uniquement par les opérations utilisées pour les préparer.  L’exemple précédent est une excellente illustration.  Au lieu d’exprimer une superposition uniforme sur chaque chaîne de bits Quantum dans un registre, nous pouvons représenter le résultat sous la forme $H ^ {\otimes n} \ket{0}$.  Cette description exponentiellement plus concise de l’état présente non seulement l’avantage que nous pouvons en raison de la raison classique, mais elle définit également de manière concise les opérations nécessaires pour être propagées via la pile de logiciels pour implémenter l’algorithme.  Pour cette raison, Q # est conçu pour émettre des séquences de porte plutôt que des États quantiques. Toutefois, à un niveau théorique, les deux perspectives sont équivalentes.
-

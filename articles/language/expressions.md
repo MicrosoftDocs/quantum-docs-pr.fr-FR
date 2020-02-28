@@ -1,17 +1,17 @@
 ---
-title: Expressions | Microsoft Docs
-description: Expressions
+title: 'Expressions Q #'
+description: 'Comprendre comment spécifier, référencer et combiner des constantes, des variables, des opérateurs, des opérations et des fonctions en tant qu’expressions dans Q #.'
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: fbde873f220d737db17f889d00be33541e3eb59b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036309"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907407"
 ---
 # <a name="expressions"></a>Expressions
 

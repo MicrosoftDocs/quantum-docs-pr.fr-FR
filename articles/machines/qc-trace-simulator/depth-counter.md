@@ -1,17 +1,17 @@
 ---
-title: Compteur de profondeur | Simulateur de trace d’ordinateur Quantum | Microsoft Docs
-description: Vue d’ensemble du simulateur de traces d’ordinateur quantique
+title: Compteur de profondeur
+description: Découvrez le compteur de profondeur Microsoft QDK, qui rassemble le nombre de la profondeur de chaque opération appelée dans un programme Quantum.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: 07f927c794e2c62e53e4e053b5bc683d24bbed8d
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: d532a9f512b8c87d83d62ed26e3bb67e1b6f668b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820468"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906098"
 ---
 # <a name="depth-counter"></a>Compteur de profondeur
 
@@ -37,7 +37,7 @@ operation ApplySampleWithCCNOT() : Unit {
 
 Pour vérifier que `CCNOT` a `T` profondeur 5 et que `ApplySampleWithCCNOT` a `T` profondeur 6, nous pouvons utiliser C# le code suivant :
 
-```csharp 
+```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();

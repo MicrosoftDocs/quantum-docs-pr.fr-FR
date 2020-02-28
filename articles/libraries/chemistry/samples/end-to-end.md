@@ -1,16 +1,16 @@
 ---
-title: De bout en bout avec NWChem | Microsoft Docs
-description: De bout en bout avec NWChem docs
+title: Exemple de programme Quantum NWChem
+description: À l’aide d’un pont d’entrée NWChem, passez en revue un exemple d’obtention du nombre de portes pour la simulation de chimie quantique.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 8f727ea4599e06b41ced561c624c4e773b9887d9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185815"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906506"
 ---
 # <a name="end-to-end-with-nwchem"></a>De bout en bout avec NWChem #
 

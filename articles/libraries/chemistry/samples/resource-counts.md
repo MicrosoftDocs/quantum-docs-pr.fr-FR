@@ -1,17 +1,17 @@
 ---
-title: Obtention du nombre de ressources | Microsoft Docs
-description: Obtention de la documentation sur les nombres de ressources
+title: Obtention du nombre de ressources
+description: Découvrez comment obtenir des estimations de ressources à l’aide d’un simulateur de traces Quantum.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: f9311c1987ced4336c4e98bdb984fbee009e9acc
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 14d0a703a20a801dcee9678a113a33404859a1a9
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442454"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907832"
 ---
 # <a name="obtaining-resource-counts"></a>Obtention du nombre de ressources
 

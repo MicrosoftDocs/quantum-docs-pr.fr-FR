@@ -1,17 +1,17 @@
 ---
-title: 'Bibliothèques standard Q #-préambule destiné à | Microsoft Docs'
-description: 'Bibliothèques standard Q #-préambule destiné à'
+title: Opérations et fonctions intrinsèques dans QDK
+description: En savoir plus sur les opérations et les fonctions intrinsèques dans le QDK, y compris les fonctions classiques et les opérations d’unité, de rotation et de mesure.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: dddb3d4a5ebcdca16da41a5ae5520d98ea900a7f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: b1c26c632f36b6c254d940a89b13638f7592ab80
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73183231"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907203"
 ---
 # <a name="the-prelude"></a>Préambule destiné à #
 
@@ -27,7 +27,7 @@ Les opérations intrinsèques définies dans la bibliothèque standard appartien
 - Opérations mettant en œuvre des mesures.
 
 Étant donné que l’ensemble de portes Clifford + $T $ est [universel](xref:microsoft.quantum.concepts.multiple-qubits) pour le quantum computing, ces opérations suffisent à implémenter n’importe quel algorithme Quantum dans une petite erreur negligibly.
-En fournissant également des rotations, Q # permet au programmeur de travailler au sein de la bibliothèque qubit Unity et CNOTIN Gate unique. Cette bibliothèque est beaucoup plus facile à réfléchir, car elle ne nécessite pas que le programmeur n’exprime directement la décomposition Clifford + $T $ et que des méthodes très efficaces existent pour compiler des unités qubit uniques dans Clifford et $T $ Gates (voir [ici](xref:microsoft.quantum.more-information) Pour plus d’informations).
+En fournissant également des rotations, Q # permet au programmeur de travailler au sein de la bibliothèque qubit Unity et CNOTIN Gate unique. Cette bibliothèque est beaucoup plus facile à réfléchir, car elle ne nécessite pas que le programmeur n’exprime directement la décomposition Clifford + $T $ et que des méthodes très efficaces existent pour compiler des unités qubit uniques dans Clifford et $T $ Gates (voir [ici](xref:microsoft.quantum.more-information) pour plus d’informations).
 
 Dans la mesure du possible, les opérations définies dans le préambule destiné à qui agissent sur qubits autorisent l’application de la variante `Controlled`, de telle sorte que l’ordinateur cible effectue la décomposition appropriée.
 
@@ -101,7 +101,7 @@ Il possède une signature `(Qubit => Unit is Adj + Ctl)`, et correspond à l’u
 En plus des opérations Pauli et Clifford ci-dessus, le Q # préambule destiné à fournit diverses façons d’exprimer des rotations.
 Comme décrit dans [opérations à qubit unique](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), la possibilité d’effectuer une rotation est essentielle aux algorithmes Quantum.
 
-Nous commençons par rappeler que nous pouvons exprimer une opération à qubit unique à l’aide de l' $H $ et $T $ Gates, où $H $ est l’opération Hadarmard, et où \begin{Equation} T \mathrel{ : =} \begin{bmatrix} 1 & 0 \\\\% corriger : cela utilise actuellement le quad Back Whack hack.
+Nous commençons par rappeler que nous pouvons exprimer une opération à qubit unique à l’aide de la $H $ et $T $ Gates, où $H $ est l’opération Hadarmard, et où \begin{Equation} T \mathrel{ : =} \begin{bmatrix} 1 & 0 \\\\% corriger : cette valeur utilise actuellement le pirate Quad Back Whack.
 0 & e ^ {i \pi/4} \end{bmatrix} \end{Equation} il s’agit de la racine carrée de l’opération de <xref:microsoft.quantum.intrinsic.s>, de sorte que $T ^ 2 = S $.
 Le $T $ Gate est à son tour implémenté par l’opération <xref:microsoft.quantum.intrinsic.t> et a une signature `(Qubit => Unit is Adj + Ctl)`, indiquant qu’il s’agit d’une opération d’unité sur un qubit unique.
 
@@ -176,7 +176,7 @@ Autrement dit, il implémente la matrice \begin{Equation} \operatorname{SWAP} \m
 > La porte contrôlée par échange, également appelée porte Fredkin, est suffisamment puissante pour inclure tous les calculs classiques.
 
 Enfin, le préambule destiné à fournit deux opérations pour représenter des exponentiels d’opérateurs Pauli à plusieurs qubit.
-L’opération <xref:microsoft.quantum.intrinsic.exp> effectue une rotation basée sur un produit tenseur de matrices Pauli, tel que représenté par le \begin{Equation} \operatorname{Exp} unitaire qubit (\vec{\sigma}, \Phi) \mathrel{ : =} \exp\left (i \Phi \sigma_0 \otimes \sigma_1 \otimes \ cdots \otimes \sigma_n \right), \end{Equation} où $ \vec{\sigma} = (\sigma_0, \sigma_1, \dots, \sigma_n) $ est une séquence d’opérateurs qubit à Pauli unique, et où $ \Phi $ est un angle.
+L’opération <xref:microsoft.quantum.intrinsic.exp> effectue une rotation basée sur un produit tenseur de matrices Pauli, comme représenté par le qubit unitaire \begin{Equation} \operatorname{Exp} (\vec{\sigma}, \Phi) \mathrel{ : =} \exp\left (i \Phi \ sigma_0 \otimes \ sigma_1 \otimes \cdots \otimes \ sigma_n \right), \end{Equation} où $ \vec{\sigma} = (\ sigma_0, \ sigma_1, \dots, \ sigma_n) $ est une séquence d’opérateurs qubit Pauli, et où $ \Phi $ est un angle.
 La rotation `Exp` représente $ \vec{\sigma} $ sous la forme d’un tableau d’éléments `Pauli`, de sorte qu’elle comporte des `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`de signature.
 
 L’opération <xref:microsoft.quantum.intrinsic.expfrac> effectue la même rotation, à l’aide de la notation de fraction dyadic décrite ci-dessus.
@@ -205,7 +205,7 @@ Notez qu’une mesure conjointe n’est pas identique à la mesure individuelle 
 Par exemple, considérez l’État $ \ket{11} = \ket{1} \otimes \ket{1} = X\otimes X \ket{00}$.
 En mesurant $Z _0 $ et $Z _ 1 $ chaque individuellement, nous obtenons les résultats $r _0 = $1 et $r _ 1 = $1.
 En mesurant $Z _0 Z_1 $, nous obtenons le résultat unique $r _ {\textrm{joint}} = $0, ce qui indique que la paire de $ \ket{11}$ est positive.
-Put différemment, $ (-1) ^ {r_0 + R_1} = (-1) ^ r_ {\textrm{joint}}) $.
+Put différemment, $ (-1) ^ {r_0 + r_1} = (-1) ^ r_ {\textrm{joint}}) $.
 En effet, étant donné que nous ne prenons en compte *que* la parité de cette mesure, toutes les informations de Quantum représentées dans la superposition entre les États 2 2-qubit de parité positive, $ \ket{00}$ et $ \ket{11}$, sont conservées.
 Cette propriété sera essentielle plus tard, car nous aborderons la correction des erreurs.
 
@@ -235,7 +235,7 @@ L’implémentation fournie par le kit de développement quantum utilise la bibl
 Bien que cela ne présente pas de problème pour un simulateur local, il peut s’agir d’un problème de performances lors de l’utilisation d’un simulateur distant ou d’un matériel réel comme ordinateur cible.
 Cela dit, un ordinateur cible individuel peut atténuer cet impact sur les performances en remplaçant ces opérations par des versions qui sont plus efficaces pour ce système particulier.
 
-### <a name="math"></a>Mathématiques ###
+### <a name="math"></a>Mathématique ###
 
 L’espace de noms <xref:microsoft.quantum.extensions.math> fournit de nombreuses fonctions utiles à partir de la [classe`System.Math`](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)de la bibliothèque de classes de base .net.
 Ces fonctions peuvent être utilisées de la même façon que les autres fonctions Q # :

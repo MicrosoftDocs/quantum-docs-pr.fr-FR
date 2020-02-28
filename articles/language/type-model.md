@@ -1,17 +1,17 @@
 ---
-title: 'Q # modèle de type | Microsoft Docs'
-description: Modèle de type Q#
+title: 'Types de données Q #'
+description: 'Découvrez les différents types utilisés dans le langage de programmation Q #, y compris les types intégrés, les tableaux, les tuples, les opérations, les fonctions et les types définis par l’utilisateur.'
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 0aabb144779da301b71ad215c8e975cc29b4dcce
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 1fc4c0b3fed9277c7f9f3ac421330df03c1b30e4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76871632"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904653"
 ---
 # <a name="the-type-model"></a>Modèle de type
 
@@ -160,7 +160,7 @@ function PrintedMessage(value : Nested) : Unit {
 L’opérateur Unwrap désencapsule une seule couche de renvoi à la ligne.
 Plusieurs opérateurs Unwrap peuvent être utilisés pour accéder à une valeur encapsuleuse.
 
-Par exemple :
+Exemple :
 
 ```qsharp
 newtype WrappedInt = Int;

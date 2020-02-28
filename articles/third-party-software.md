@@ -1,18 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit Third Party Software | Microsoft Docs
-description: Microsoft Quantum Development Kit Third Party Software
+title: Microsoft Quantum Development Kit Third Party Software
+description: Microsoft Quantum Development Kit des avis et des informations sur les logiciels tiers.
 services: service-name-with-dashes-AZURE-ONLY
 keywords: N’ajoutez pas ou ne modifiez pas de mots clés sans consulter votre expert SEO.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 85bade791c0744d6636d60fe4f7c9b8f7749c7c6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184370"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906812"
 ---
 # <a name="third-party-software-notices-and-information"></a>INFORMATIONS ET MENTIONS RELATIVES AUX LOGICIELS TIERS
 
@@ -20,7 +20,7 @@ Ce fichier est basé sur ou intègre des éléments issus des projets listés ci
 
 1. YamlDotNet. signed version 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
 2. xUnit. Runner. VisualStudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. Runner. console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+3. xUnit. Runner. console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
 4. xUnit. Extensibility. Execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xUnit. Extensibility. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
@@ -39,7 +39,7 @@ Ce fichier est basé sur ou intègre des éléments issus des projets listés ci
 ---------------------------------------
 Copyright (c) 2008, 2009, 2010, 2011, 2012, 2013, 2014 Antoine Aubry et contributeurs
 
-Les autorisations sont octroyées gratuitement à toute personne obtenant une copie de ce logiciel et les fichiers de documentation associés (le « logiciel »), afin de traiter le logiciel sans restriction, y compris sans limitation des droits d’utilisation, de copie, de modification, de fusion publiez, distribuez, sous-licence et/ou vendez des copies du logiciel, et pour permettre aux personnes auxquelles le logiciel est fourni de le faire, sous réserve des conditions suivantes :
+Les autorisations sont octroyées gratuitement à toute personne obtenant une copie de ce logiciel et les fichiers de documentation associés (le « logiciel »). pour traiter le logiciel sans restriction, y compris, sans limitation, les droits d’utilisation, de copie, de modification, de fusion, de publication, de distribution, de sous-licences et/ou de vente de copies du logiciel, ainsi que d’autoriser les personnes à qui le logiciel est fourni pour ce faire, sous réserve des conditions suivantes :
 
 La mention de droits d’auteur ci-dessus et cette notice d’autorisation doivent être incluses dans toutes les copies ou dans des parties importantes du logiciel.
 
@@ -180,7 +180,7 @@ Les « brevets sous licence » sont les revendications de brevet d’un contri
 
 (A) octroi de droits d’auteur-soumis aux termes de cette licence, y compris les conditions de licence et les limitations de la section 3, chaque contributeur vous accorde une licence de Copyright non exclusive, mondiale et gratuite pour reproduire sa contribution, préparer un dérivé travaille de sa contribution et distribue sa contribution ou les œuvres dérivées que vous créez.
 
-(B) octroi de brevets-sous réserve des conditions de cette licence, y compris les conditions de licence et les limitations de la section 3, chaque contributeur vous accorde une licence non exclusive, mondiale et gratuite dans ses brevets sous licence, qui doit être mise en pratique, utilisée, vendue, offre pour vente, importation et/ou élimination de sa contribution dans le logiciel ou les travaux dérivés de la contribution au logiciel.
+(B) octroi de brevet-soumis aux conditions de cette licence, en incluant les conditions de licence et les limitations de la section 3, chaque contributeur vous accorde une licence non exclusive dans le monde entier, sous ses brevets sous licence, pour créer, utiliser, vendre, offrir la vente, importer et/ou éliminer toute contribution au logiciel ou aux travaux dérivés de la contribution dans le logiciel.
 
 3. Conditions et limitations
 
@@ -192,7 +192,7 @@ Les « brevets sous licence » sont les revendications de brevet d’un contri
 
 (D) si vous distribuez une partie du logiciel sous forme de code source, vous pouvez le faire uniquement sous cette licence en incluant une copie complète de cette licence avec votre distribution. Si vous distribuez une partie du logiciel sous forme de code objet ou compilé, vous pouvez uniquement le faire sous une licence conforme à cette licence.
 
-(E) le logiciel est concédé sous licence « en l’or ». Vous êtes seul responsable des risques associés à son utilisation. Les contributeurs n’accordent aucune garantie ou condition expresse. Vous pouvez avoir des droits de consommateur supplémentaires dans le cadre de votre loi locale, que cette licence ne peut pas modifier. Dans la mesure permise par les lois locales, les contributeurs excluent les garanties implicites de qualité marchande, d’adéquation à un usage particulier et d’absence de contrefaçon.
+(E) le logiciel est concédé sous licence « en l’or ». Vous assumez les risques liés à leur utilisation. Les contributeurs n’accordent aucune garantie ou condition expresse. Vous pouvez avoir des droits de consommateur supplémentaires dans le cadre de votre loi locale, que cette licence ne peut pas modifier. Dans la mesure permise par les lois locales, les contributeurs excluent les garanties implicites de qualité marchande, d’adéquation à un usage particulier et d’absence de contrefaçon.
 
 ## <a name="fsharpcore-notices-and-information"></a>INFORMATIONS et avis sur FSharp. Core
 ---------------------------------------
@@ -201,7 +201,7 @@ La licence MIT (MIT)
 Copyright (c) Microsoft Corporation.
 Tous droits réservés.
 
-Les autorisations sont octroyées gratuitement à toute personne obtenant une copie de ce logiciel et les fichiers de documentation associés (le « logiciel »), afin de traiter le logiciel sans restriction, y compris sans limitation des droits d’utilisation, de copie, de modification, de fusion publiez, distribuez, sous-licence et/ou vendez des copies du logiciel, et pour permettre aux personnes auxquelles le logiciel est fourni de le faire, sous réserve des conditions suivantes :
+Les autorisations sont octroyées gratuitement à toute personne obtenant une copie de ce logiciel et les fichiers de documentation associés (le « logiciel »). pour traiter le logiciel sans restriction, y compris, sans limitation, les droits d’utilisation, de copie, de modification, de fusion, de publication, de distribution, de sous-licences et/ou de vente de copies du logiciel, ainsi que d’autoriser les personnes à qui le logiciel est fourni pour ce faire, sous réserve des conditions suivantes :
 
 La mention de droits d’auteur ci-dessus et cette notice d’autorisation doivent être incluses dans toutes les copies ou dans des parties importantes du logiciel.
 
@@ -213,7 +213,7 @@ La licence MIT (MIT)
 
 Copyright (c) 2013 Tomas Petricek
 
-Les autorisations sont octroyées gratuitement à toute personne obtenant une copie de ce logiciel et les fichiers de documentation associés (le « logiciel »), afin de traiter le logiciel sans restriction, y compris sans limitation des droits d’utilisation, de copie, de modification, de fusion publiez, distribuez, sous-licence et/ou vendez des copies du logiciel, et pour permettre aux personnes auxquelles le logiciel est fourni de le faire, sous réserve des conditions suivantes :
+Les autorisations sont octroyées gratuitement à toute personne obtenant une copie de ce logiciel et les fichiers de documentation associés (le « logiciel »). pour traiter le logiciel sans restriction, y compris, sans limitation, les droits d’utilisation, de copie, de modification, de fusion, de publication, de distribution, de sous-licences et/ou de vente de copies du logiciel, ainsi que d’autoriser les personnes à qui le logiciel est fourni pour ce faire, sous réserve des conditions suivantes :
 
 La mention de droits d’auteur ci-dessus et cette notice d’autorisation doivent être incluses dans toutes les copies ou dans des parties importantes du logiciel.
 
@@ -226,7 +226,7 @@ La licence MIT (MIT)
 
 Copyright (c) 2012 Oystein Bjorke
 
-Les autorisations sont octroyées gratuitement à toute personne obtenant une copie de ce logiciel et les fichiers de documentation associés (le « logiciel »), afin de traiter le logiciel sans restriction, y compris sans limitation des droits d’utilisation, de copie, de modification, de fusion publiez, distribuez, sous-licence et/ou vendez des copies du logiciel, et pour permettre aux personnes auxquelles le logiciel est fourni de le faire, sous réserve des conditions suivantes :
+Les autorisations sont octroyées gratuitement à toute personne obtenant une copie de ce logiciel et les fichiers de documentation associés (le « logiciel »). pour traiter le logiciel sans restriction, y compris, sans limitation, les droits d’utilisation, de copie, de modification, de fusion, de publication, de distribution, de sous-licences et/ou de vente de copies du logiciel, ainsi que d’autoriser les personnes à qui le logiciel est fourni pour ce faire, sous réserve des conditions suivantes :
 
 La mention de droits d’auteur ci-dessus et cette notice d’autorisation doivent être incluses dans toutes les copies ou dans des parties importantes du logiciel.
 
@@ -244,7 +244,7 @@ La redistribution et l’utilisation des formes source et binaire, avec ou sans 
 * Les redistributions au format binaire doivent reproduire la mention de droits d’auteur ci-dessus, la présente liste de conditions et l’exclusion de responsabilité suivante dans la documentation et/ou d’autres documents fournis avec la distribution.
 * Ni le nom de FsCheck ni les noms de ses contributeurs ne peuvent être utilisés pour approuver ou promouvoir des produits dérivés de ce logiciel sans autorisation écrite préalable spécifique.
 
-CE LOGICIEL EST FOURNI PAR LES DÉTENTEURS DES DROITS D’AUTEUR ET CONTRIBUTEURS « EN L’ÉTAT » ET TOUTE GARANTIE EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S’Y LIMITER, LES GARANTIES IMPLICITES DE QUALITÉ MARCHANDE ET D’ADÉQUATION À UN USAGE PARTICULIER EST REJETÉE. EN L’ABSENCE DE TOUT ÉVÉNEMENT, LE PROPRIÉTAIRE OU LES CONTRIBUTEURS DU COPYRIGHT SONT RESPONSABLES DES DOMMAGES DIRECTS, INDIRECTS, ACCESSOIRES, SPÉCIAUX, EXEMPLAIRES OU CONSÉCUTIFS (Y COMPRIS, MAIS SANS S’Y LIMITER, L’APPROVISIONNEMENT DE BIENS OU SERVICES DE REMPLACEMENT). PERTE D’UTILISATION, DE DONNÉES OU DE BÉNÉFICES ; OU INTERRUPTION D’ACTIVITÉ) TOUTEFOIS, À LA SUITE DE L’UTILISATION DE CE LOGICIEL ET SUR N’IMPORTE QUELLE THÉORIE DE RESPONSABILITÉ, QU’IL S’AGISSE D’UN CONTRAT, D’UNE RESPONSABILITÉ STRICTE OU D’UN DÉLIT (Y COMPRIS UNE NÉGLIGENCE OU AUTRE) QUI SE PRODUIT DE QUELQUE FAÇON QUE CE SOIT EN DEHORS DE L’UTILISATION DE CE LOGICIEL, MÊME S’IL A ÉTÉ AVISÉ
+CE LOGICIEL EST FOURNI PAR LES DÉTENTEURS ET COLLABORATEURS DES DROITS D'AUTEUR « EN L'ÉTAT » ET EXCLUT TOUTE GARANTIE EXPRESSE OU IMPLICITE, NOTAMMENT, MAIS SANS S'Y LIMITER, LES GARANTIES IMPLICITES DE QUALITÉ ET D'ADÉQUATION À UNE UTILISATION PARTICULIÈRE. EN L’ABSENCE DE TOUT ÉVÉNEMENT, LE PROPRIÉTAIRE OU LES CONTRIBUTEURS DU COPYRIGHT SONT RESPONSABLES DES DOMMAGES DIRECTS, INDIRECTS, ACCESSOIRES, SPÉCIAUX, EXEMPLAIRES OU CONSÉCUTIFS (Y COMPRIS, MAIS SANS S’Y LIMITER, L’APPROVISIONNEMENT DE BIENS OU SERVICES DE REMPLACEMENT). PERTE D’UTILISATION, DE DONNÉES OU DE BÉNÉFICES ; OU INTERRUPTION D’ACTIVITÉ) TOUTEFOIS, À LA SUITE DE L’UTILISATION DE CE LOGICIEL ET SUR N’IMPORTE QUELLE THÉORIE DE RESPONSABILITÉ, QU’IL S’AGISSE D’UN CONTRAT, D’UNE RESPONSABILITÉ STRICTE OU D’UN DÉLIT (Y COMPRIS UNE NÉGLIGENCE OU AUTRE) QUI SE PRODUIT DE QUELQUE FAÇON QUE CE SOIT EN DEHORS DE L’UTILISATION DE CE LOGICIEL, MÊME S’IL A ÉTÉ AVISÉ
 
 ## <a name="argu-notices-and-information"></a>INFORMATIONS et avis de la
 ---------------------------------------
@@ -252,7 +252,7 @@ La licence MIT (MIT)
 
 Copyright (c) 2016 Eirik Tsarpalis
 
-Les autorisations sont octroyées gratuitement à toute personne obtenant une copie de ce logiciel et les fichiers de documentation associés (le « logiciel »), afin de traiter le logiciel sans restriction, y compris sans limitation des droits d’utilisation, de copie, de modification, de fusion publiez, distribuez, sous-licence et/ou vendez des copies du logiciel, et pour permettre aux personnes auxquelles le logiciel est fourni de le faire, sous réserve des conditions suivantes :
+Les autorisations sont octroyées gratuitement à toute personne obtenant une copie de ce logiciel et les fichiers de documentation associés (le « logiciel »). pour traiter le logiciel sans restriction, y compris, sans limitation, les droits d’utilisation, de copie, de modification, de fusion, de publication, de distribution, de sous-licences et/ou de vente de copies du logiciel, ainsi que d’autoriser les personnes à qui le logiciel est fourni pour ce faire, sous réserve des conditions suivantes :
 
 La mention de droits d’auteur ci-dessus et cette notice d’autorisation doivent être incluses dans toutes les copies ou dans des parties importantes du logiciel.
 

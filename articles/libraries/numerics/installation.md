@@ -1,17 +1,17 @@
 ---
-title: Installation et validation de la bibliothèque numérique | Microsoft Docs
-description: Installation et validation de la bibliothèque de valeurs numériques
+title: Bibliothèque de valeurs numériques Quantum Microsoft-installation et validation
+description: Découvrez comment ajouter la bibliothèque de valeurs numériques Quantum Microsoft à votre installation de Visual Studio 2019 ou version ultérieure.
 author: thomashaener
 ms.author: thhaner
 ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: cb0d00a509b3986b605dd7f15f9bccc0661bb894
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036455"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906336"
 ---
 # <a name="numerics-library-installation-and-validation"></a>Installation et validation de la bibliothèque de valeurs numériques
 
@@ -33,7 +33,7 @@ Pour plus d’informations, consultez le Guide de l' [interface utilisateur du g
 
 Vous pouvez également utiliser la console du gestionnaire de package pour ajouter la bibliothèque numérique à votre projet par le biais de l’interface de ligne de commande.
 
-![](../../media/vs2017-nuget-console-menu.png)
+![Utiliser la console du gestionnaire de package à partir de la ligne de commande](../../media/vs2017-nuget-console-menu.png)
 
 À partir de la console du gestionnaire de package, exécutez la commande suivante :
 
