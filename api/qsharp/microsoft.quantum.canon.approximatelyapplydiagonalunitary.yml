@@ -1,10 +1,10 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.applydiagonalunitary
-name: ApplyDiagonalUnitary
+uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
+name: ApproximatelyApplyDiagonalUnitary
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Applique un tableau de phases complexes aux États de base numériques d’un registre de qubits.
+  Applique un tableau de phases complexes aux États de base numériques d’un registre de qubits, en tronquant les petits angles de rotation en fonction d’une tolérance donnée.
 
 
   Cette opération implémente une unité diagonale qui applique une phase complexe $e ^ {i \ theta_j} $ sur le $n $-qubit Number State $ \ket{j} $.
@@ -16,11 +16,15 @@ summary: >-
 
   \end{align} $ $
 remarks: '`coefficients` est rempli avec les éléments $ \ theta_j = $0,0 si moins de $2 ^ n $ sont spécifiés.'
-syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: '- Synthèse des circuits logiques quantiques Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
 input:
-  content: '(coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
+  - name: tolerance
+    summary: Tolérance en dessous de laquelle les petits coefficients sont tronqués.
+    isPrimitive: true
+    uid: Double
   - name: coefficients
     summary: Tableau allant jusqu’à $2 ^ n $ coefficients $ \ theta_j $. Le $j $ th coefficient indexe le nombre d’États $ \ket{j} $ encodé au format Little endian.
     isArray: true
@@ -37,11 +41,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- approximatelyapplydiagonalunitary
+- applydiagonalunitary
 metadata:
-  ms.openlocfilehash: a98bdfc2503f7acf4e5cb145df6d6de528fc3f4f
+  ms.openlocfilehash: 9d2ee3254a3cd7c182ae6b4a57a6c48a993fa679
   ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: fr-FR
   ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905267"
+  ms.locfileid: "77907951"

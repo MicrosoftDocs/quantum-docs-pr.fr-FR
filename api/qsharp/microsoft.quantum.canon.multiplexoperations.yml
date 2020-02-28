@@ -7,11 +7,11 @@ summary: >-
   Applique un tableau d’opérations contrôlé par un tableau d’États de nombre.
 
 
-  Autrement dit, applique une opération unitaire contrôlée par multiplication $U $ qui applique un $V unitaire _J $ lorsqu’il est contrôlé par $n l’état de qubit $ \ket{j} $.
+  Autrement dit, applique une opération unitaire contrôlée par multiplication $U $ qui applique une $V unitaire _j $ lorsqu’elle est contrôlée par $n $-qubit Number State $ \ket{j} $.
 
 
   $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
-remarks: les `coefficients` sont complétées par des éléments d’identité si moins de $2 ^ n $ sont spécifiés. Cette implémentation utilise $n-$1 Ancilla qubits.
+remarks: les `coefficients` sont complétées par des éléments d’identité si moins de $2 ^ n $ sont spécifiés. Cette implémentation utilise $n-$1 auxiliaire qubits.
 syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
 references: '- Vers la première simulation de Quantum avec accélération de Quantum Andrew M. Childs, Dmitri Maslov, Yunseong Nam, Neil J. Ross, Yuan su https://arxiv.org/abs/1711.10980'
 input:
@@ -36,7 +36,7 @@ input:
     summary: $n Registre de contrôle $-qubit qui encode les États de nombre $ \ket{j} $ dans un format avec primauté des octets de poids faible.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Registre qubit générique sur lequel $V _J $ agit.
+    summary: Registre qubit générique sur lequel $V _j $ agit.
     uid: "'T"
     isLocal: true
 output:
@@ -48,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: bd248ece9d76729a33db3dfead177fa68909f438
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 93fa7ef1f5a7374f970098eb5fa865e02854d1ff
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223494"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77906710"

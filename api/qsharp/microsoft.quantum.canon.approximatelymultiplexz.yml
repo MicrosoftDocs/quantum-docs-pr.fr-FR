@@ -1,10 +1,10 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.multiplexz
-name: MultiplexZ
+uid: microsoft.quantum.canon.approximatelymultiplexz
+name: ApproximatelyMultiplexZ
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Applique une rotation Pauli Z conditionnée sur un tableau de qubits.
+  Applique une rotation Pauli Z conditionnée sur un tableau de qubits, ce qui tronque les petits angles de rotation en fonction d’une tolérance donnée.
 
 
   Cela applique l’opération unitaire contrôlée par multiplication qui effectue des rotations par angle $ \ theta_j $ à propos de l’opérateur Pauli qubit $Z $ lorsqu’il est contrôlé par l' $n de l’État $ \ket{j} $.
@@ -16,11 +16,15 @@ summary: >-
 
   \end{align} $ $
 remarks: '`coefficients` est rempli avec les éléments $ \ theta_j = $0,0 si moins de $2 ^ n $ sont spécifiés.'
-syntax: 'operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+syntax: 'operation ApproximatelyMultiplexZ (tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 references: '- Synthèse des circuits logiques quantiques Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
 input:
-  content: '(coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  content: '(tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
+  - name: tolerance
+    summary: Tolérance en dessous de laquelle les petits coefficients sont tronqués.
+    isPrimitive: true
+    uid: Double
   - name: coefficients
     summary: Tableau allant jusqu’à $2 ^ n $ coefficients $ \ theta_j $. Le $j $ th coefficient indexe le nombre d’États $ \ket{j} $ encodé au format Little endian.
     isArray: true
@@ -42,11 +46,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- approximatelymultiplexz
+- multiplexz
 metadata:
-  ms.openlocfilehash: fc686baf501a1bfaba9989e20a0da0787970d352
+  ms.openlocfilehash: 8ca9463a4444ce205cdeeeb3098d47eeab34d8e9
   ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: fr-FR
   ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77906557"
+  ms.locfileid: "77907917"

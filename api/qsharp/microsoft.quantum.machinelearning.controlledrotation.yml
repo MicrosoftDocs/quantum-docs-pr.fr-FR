@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.controlledrotation
+name: ControlledRotation
+type: newtype
+namespace: Microsoft.Quantum.MachineLearning
+summary: Décrit une rotation contrôlée en termes de l’index de la cible et du contrôle, de l’axe de rotation et de l’index dans un vecteur de paramètre de modèle.
+remarks: >-
+  Une rotation non contrôlée peut être représentée en définissant `ControlIndices` sur un tableau vide d’index, `new Int[0]`.
+
+
+  ### <a name="examples"></a>Exemples
+
+  L’exemple suivant représente une rotation à propos du $X $-AXIS du premier qubit dans un registre, contrôlé sur le deuxième qubit, et avec un angle donné par le quatrième paramètre dans un modèle séquentiel :
+
+
+  ```Q#
+
+  let controlledRotation = ControlledRotation(
+      (0, [1]),
+      PauliX,
+      3
+  )
+
+  ```
+syntax: newtype ControlledRotation = ((Int, Int[]), Pauli, Int);
+metadata:
+  ms.openlocfilehash: b09588e77a43be10493184d4e3b8bbe7a0025ce6
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909515"

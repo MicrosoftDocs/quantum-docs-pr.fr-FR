@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.inferredlabels
+name: InferredLabels
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Étant donné un tableau de probabilités de classification et un décalage, retourne l’étiquette déduite de chaque probabilité.
+syntax: 'function InferredLabels (bias : Double, probabilities : Double[]) : Int[]'
+input:
+  content: '(bias : Double, probabilities : Double[])'
+  types:
+  - name: bias
+    summary: Le décalage entre deux classes, généralement le résultat de l’apprentissage d’un classifieur.
+    isPrimitive: true
+    uid: Double
+  - name: probabilities
+    summary: Tableau des probabilités de classification pour un ensemble d’exemples, typiques résultant de l’estimation des fréquences de classification.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Int[]
+  types:
+  - summary: Étiquette déduite à partir de chaque probabilité de classification.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+metadata:
+  ms.openlocfilehash: 97bb7f29df4f66fc54166cdd54f168bf1f02a67c
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909294"

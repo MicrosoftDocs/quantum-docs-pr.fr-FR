@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.nmisclassifications
+name: NMisclassifications
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Étant donné un ensemble d’étiquettes déduites et un ensemble d’étiquettes correctes, retourne le nombre d’index dont chaque ensemble d’étiquettes est différent.
+examples: >-
+  ```Q#
+
+  let nMisclassifications = NMisclassifications([1, 1, 0, 0], [0, 1, 1, 0]);
+
+  Message($"{nMisclassifications}"); // Will print 2.
+
+  ```
+syntax: 'function NMisclassifications (proposed : Int[], actual : Int[]) : Int'
+input:
+  content: '(proposed : Int[], actual : Int[])'
+  types:
+  - name: proposed
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: actual
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Nombre d’index `idx` ce qui `inferredLabels[idx] != actualLabels[idx]`.
+    isPrimitive: true
+    uid: Int
+metadata:
+  ms.openlocfilehash: ba2156db41a1b1778a50b82bdb1ec18559bd7941
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908750"

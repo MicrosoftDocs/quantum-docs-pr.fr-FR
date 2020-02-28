@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.estimategradient
+name: EstimateGradient
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: Estime le dégradé d’apprentissage pour un classifieur séquentiel au niveau d’un modèle particulier et pour une entrée encodée donnée.
+remarks: Cette opération utilise un test Hadarmard et la technique de changement de paramètre ensemble pour estimer le dégradé.
+syntax: 'operation EstimateGradient (model : Microsoft.Quantum.MachineLearning.SequentialModel, encodedInput : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements : Int) : Double[]'
+input:
+  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, encodedInput : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements : Int)'
+  types:
+  - name: model
+    summary: Modèle séquentiel dont le dégradé doit être estimé.
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: encodedInput
+    summary: Entrée du classifieur séquentiel, encodée en une opération de préparation de l’État.
+    uid: microsoft.quantum.machinelearning.stategenerator
+  - name: nMeasurements
+    summary: Nombre de mesures à utiliser pour estimer le dégradé.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double[]
+  types:
+  - summary: Estimation du dégradé d’apprentissage aux paramètres d’entrée et de modèle donnés.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+metadata:
+  ms.openlocfilehash: 05f80d57bc84e937e3a2580e9941a50ec60eab56
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909413"
