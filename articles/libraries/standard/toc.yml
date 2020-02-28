@@ -1,5 +1,3 @@
-- name: Licences OSS
-  href: licensing.md
 - name: Préambule
   href: prelude.md
 - name: Mathématiques classiques
@@ -18,5 +16,7 @@
   href: characterization.md
 - name: Correction des erreurs
   href: error-correction.md
-- name: APPLICATIONS
+- name: Applications
   href: applications.md
+- name: Licences OSS
+  href: licensing.md
