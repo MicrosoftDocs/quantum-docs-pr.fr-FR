@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.validatesequentialclassifier
+name: ValidateSequentialClassifier
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: Valide un classifieur séquentiel donné par rapport à un ensemble donné d’exemples préétiquetés.
+syntax: 'operation ValidateSequentialClassifier (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : Microsoft.Quantum.MachineLearning.ValidationResults'
+input:
+  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
+  types:
+  - name: model
+    summary: Modèle séquentiel à valider.
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: samples
+    summary: Exemples à utiliser pour valider le modèle donné.
+    isArray: true
+    uid: microsoft.quantum.machinelearning.labeledsample
+  - name: tolerance
+    summary: Tolérance approximative à utiliser pour l’encodage de chaque échantillon comme entrée du classifieur séquentiel.
+    isPrimitive: true
+    uid: Double
+  - name: nMeasurements
+    summary: Nombre de mesures à utiliser pour classer chaque échantillon.
+    isPrimitive: true
+    uid: Int
+  - name: validationSchedule
+    summary: Planification selon laquelle les exemples doivent être dessinés à partir du jeu de validation.
+    uid: microsoft.quantum.machinelearning.samplingschedule
+output:
+  content: Microsoft.Quantum.MachineLearning.ValidationResults
+  types:
+  - uid: microsoft.quantum.machinelearning.validationresults
+metadata:
+  ms.openlocfilehash: 211f5110f11a1128da4c73edbdfc948bc87e7959
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908478"

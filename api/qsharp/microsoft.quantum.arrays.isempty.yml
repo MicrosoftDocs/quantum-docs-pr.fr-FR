@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.isempty
+name: IsEmpty
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Retourne la valeur true si et seulement si un tableau est vide.
+syntax: "function IsEmpty (array : 'T[]) : Bool"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: Tableau à vérifier.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: '`true` si et seulement si le tableau est vide (a une longueur de 0).'
+    isPrimitive: true
+    uid: Bool
+metadata:
+  ms.openlocfilehash: 5357baa2e8d4a1922932c087cb71e93beeda9417
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908087"

@@ -5,6 +5,26 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: À partir d’un tableau et d’un prédicat définis pour les éléments du tableau, vérifie si au moins un élément du tableau est conforme au prédicat.
 remarks: "La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons un tableau `'T[]` et une fonction `predicate: 'T -> Bool` nous pouvons produire une valeur `Bool` qui indique si un élément satisfait `predicate`."
+examples: >-
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function IsThreePresent() : Bool {
+      let arrayOfInts = [1, 2, 3, 4, 5];
+      let is3Present = IsNumberPresentInArray(3, arrayOfInts);
+      return is3Present;
+  }
+
+
+  function IsNumberPresentInArray(n : Int, array : Int[]) : Bool {
+      return Any(EqualI(_, n), array);
+  }
+
+  ```
 syntax: "function Any (predicate : ('T -> Bool), array : 'T[]) : Bool"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
@@ -35,9 +55,9 @@ typeParameters:
 - uid: "'T"
   summary: Type des éléments de `array`.
 metadata:
-  ms.openlocfilehash: 11e76d2b0b26d2dfcfed36d126e6ebb6ce76cef8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 35555080f90588bc61d70e89ea412a23209408d6
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218377"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905554"
