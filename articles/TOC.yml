@@ -1,23 +1,21 @@
-- name: Documentation Microsoft Quantum
+- name: Documentation du quantum Microsoft
   href: index.yml
-- name: Vue d’ensemble
+- name: Bien démarrer avec l’informatique quantique
   items:
-    - name: Bien démarrer
+    - name: "Qu’est-ce que l’informatique quantique\_?"
+      href: overview/what-is-quantum-computing.md
+    - name: "Que sont capables de faire les ordinateurs quantiques\_?"
+      href: overview/quantum-computers.md
+    - name: "Pourquoi apprendre l’informatique quantique\_?"
+      href: overview/why-learn-quantum-computing.md
+    - name: 'Présentation de Q# et du QDK'
+      href: overview/what-is-qsharp.md
+    - name: "Comment en savoir plus\_?"
+      href: overview/how-to-learn-quantum-computing.md
+- name: Obtenir le Quantum Development Kit
+  items:
+    - name: Bien démarrer avec le QDK
       href: welcome.md
-    - name: Cinq questions sur l’informatique quantique
-      items:
-        - name: "Qu’est-ce que l’informatique quantique\_?"
-          href: overview/what-is-quantum-computing.md
-        - name: "Que sont capables de faire les ordinateurs quantiques\_?"
-          href: overview/quantum-computers.md
-        - name: "Pourquoi apprendre l’informatique quantique\_?"
-          href: overview/why-learn-quantum-computing.md
-        - name: "Qu’est-ce que Q#\_?"
-          href: overview/what-is-qsharp.md
-        - name: "Comment apprendre l’informatique quantique\_?"
-          href: overview/how-to-learn-quantum-computing.md
-- name: Installer et mettre à jour
-  items:
     - name: Installer le QDK
       items:
         - name: Vue d’ensemble de l’installation
@@ -30,15 +28,23 @@
           href: install-guide/qjupyter.md
     - name: Mettre à jour le QDK
       href: install-guide/update.md
-- name: Démarrages rapides
+    - name: 'Comment créer un projet Q#'
+      href: how-to-guides/create-qsharp-project.md
+- name: 'Ressources d’apprentissage Q#'
   items:
-    - name: Générateur de nombres aléatoires quantique
-      href: quickstarts/qrng.md
-    - name: 'Notions de base sur l’informatique quantique avec Q#'
-      href: quickstart.md
-    - name: Implémenter l’algorithme de recherche de Grover
-      href: quickstarts/search.md
-- name: Concepts
+    - name: Démarrages rapides
+      items:
+        - name: Générateur de nombres aléatoires quantique
+          href: quickstarts/qrng.md
+        - name: 'Exploration de l’intrication avec Q #'
+          href: quickstart.md
+        - name: Implémenter l’algorithme de recherche de Grover
+          href: quickstarts/search.md
+    - name: 'Apprendre Q# avec les katas quantiques'
+      href: intro-to-katas.md
+    - name: 'Exemples de code Q#'
+      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
+- name: QDK en profondeur
   items:
     - name: Techniques de développement quantique
       topicHref: techniques/index.md
@@ -46,33 +52,17 @@
     - name: 'Langage de programmation Q#'
       topicHref: language/index.md
       href: language/toc.yml
-    - name: 'Bibliothèques Q#'
-      href: libraries/toc.yml
     - name: Simulateurs quantiques et estimateurs de ressources
       href: machines/toc.yml
-    - name: Concepts de l’informatique quantique
-      href: concepts/toc.yml
-- name: Guides pratiques
-  items:
-    - name: 'Créer un projet Q#'
-      href: how-to-guides/create-qsharp-project.md
-- name: 'Ressources d’apprentissage Q#'
-  items:
-    - name: Apprendre avec les katas quantiques
-      href: intro-to-katas.md
-    - name: 'Exemples Q#'
-      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: Ressources
-  items:
-    - name: Glossaire
-      href: Glossary.md
-    - name: Lectures supplémentaires
-      href: for-more-info.md
-    - name: Notes de publication de QDK
-      topicHref: relnotes/index.md
-      href: relnotes/toc.yml
-    - name: Contribution au QDK
-      href: contributing/toc.yml
-      topicHref: contributing/index.md
-    - name: Licence
-      href: license.md
+- name: 'Bibliothèques Q#'
+  href: libraries/toc.yml
+- name: Concepts de l’informatique quantique
+  href: concepts/toc.yml
+- name: Lectures supplémentaires
+  href: for-more-info.md
+- name: Contribution au QDK
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: Notes de publication de QDK
+  topicHref: relnotes/index.md
+  href: relnotes/toc.yml
