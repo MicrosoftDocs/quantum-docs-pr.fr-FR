@@ -1,17 +1,17 @@
 ---
-title: Contribution au Quantum Development Kit | Microsoft Docs
-description: Contribution au Quantum Development Kit
+title: Contribution au kit de développement Microsoft Quantum
+description: Découvrez comment contribuer au kit de développement Microsoft Quantum et à la communauté de développement quantique.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 3f27f7502c83574e6bd8f950d7e17ee481e44a3c
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819856"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904874"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Contribution au Quantum Development Kit #
 
@@ -79,4 +79,3 @@ Si vous souhaitez en savoir plus sur la façon de contribuer, veuillez continuer
 
 > [!div class="nextstepaction"]
 > [Découvrir comment ouvrir des demandes de tirage (pull requests)](xref:microsoft.quantum.contributing.pulls)
-

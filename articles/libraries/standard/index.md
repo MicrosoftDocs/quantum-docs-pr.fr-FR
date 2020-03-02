@@ -1,17 +1,17 @@
 ---
-title: Bibliothèques standard Q# - introduction | Microsoft Docs
-description: Bibliothèques standard Q# - introduction
+title: Introduction aux bibliothèques standard Microsoft Q#
+description: Découvrez les bibliothèques standard Microsoft Q# qui définissent les opérations, fonctions et types de données utilisés dans les programmes quantiques.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
-ms.openlocfilehash: 547f4f6066e3ead627cd2a5970b1555999e988bb
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 820ad885e7134aa723116d4c9f853d88210a5514
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056384"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907152"
 ---
 # <a name="introduction-to-the-q-standard-libraries"></a>Introduction aux bibliothèques standard Q# #
 
