@@ -1,25 +1,25 @@
 ---
 title: Comment apprendre l’informatique quantique avec Q# ?
-description: ''
+description: Ressources pour acquérir des connaissances mathématiques et physiques de base pour vous permettre de démarrer avec l’informatique quantique.
 author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
-ms.openlocfilehash: 53682ae8ab9cb31fa0de68832cb3574aa4e30216
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 17fc4e7a73f93a86d981996bf8b59309bccb6e67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529973"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907747"
 ---
-# <a name="how-to-learn-quantum-computing"></a>Comment apprendre l’informatique quantique ?
+# <a name="how-to-learn-about-quantum-computing"></a>Comment apprendre l’informatique quantique ?
 
 Obtenez des conseils pour apprendre l’informatique quantique et écrire vos premiers programmes. Il s’agit moins d’un guide exhaustif que d’un bon point de départ.
 
 ## <a name="getting-started-overview"></a>Vue d’ensemble
 
-[Bien démarrer avec le Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome) est une présentation générale de l’informatique quantique avec Q#, qui inclut des tutoriels pour écrire votre premier programme Q#, des guides de démarrage et une présentation des bibliothèques quantiques Q# pour développer des programmes quantiques.
+[Bien démarrer avec le kit de développement Microsoft Quantum](xref:microsoft.quantum.welcome) est une présentation générale de l’informatique quantique avec Q#, qui inclut des tutoriels pour écrire votre premier programme Q#, des guides de démarrage et une présentation des bibliothèques quantiques Q# pour développer des programmes quantiques.
 
 ## <a name="learning-the-basics-what-do-you-need-to-know"></a>Acquisition des bases : que devez-vous savoir ?
 
