@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3df8df8defabcc9cc87d59f543f425c882b001e0
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 8131c2ec9320b5075c37370e12ad39a4df5bd3d5
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907679"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022857"
 ---
 # <a name="testing-and-debugging"></a>Test et débogage
 
@@ -384,4 +384,4 @@ namespace app
 
 En plus des fonctions et opérations d' `Assert` et de `Dump`, Q # prend en charge un sous-ensemble de fonctionnalités de débogage standard de Visual Studio : la [définition de points d’arrêt de ligne](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), le parcours du [code à l’aide de F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) et l' [inspection des valeurs des variables classiques](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) sont toutes possibles lors de l’exécution du code sur le simulateur.
 
-Dans Visual Studio Code, le débogage s’appuie sur les fonctionnalités de débogage fournies C# par l’extension for Visual Studio code alimentée par OmniSharp et nécessite l’installation de la [dernière version](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp). 
+Dans Visual Studio Code, le débogage s’appuie sur les fonctionnalités de débogage fournies C# par l’extension for Visual Studio code alimentée par OmniSharp et nécessite l’installation de la [dernière version](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp). 
