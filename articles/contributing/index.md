@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904874"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022479"
 ---
-# <a name="contributing-to-the-quantum-development-kit"></a>Contribution au Quantum Development Kit #
+# <a name="contributing-to-the-quantum-development-kit"></a>Contribution au Quantum Development Kit
 
 Le Quantum Development Kit est plus qu’un ensemble d’outils permettant d’écrire des programmes quantiques.
 Il fait partie d’une vaste communauté de personnes qui découvrent l’informatique quantique, font de la recherche sur les algorithmes quantiques, développent de nouvelles applications pour les appareils quantiques ou encore travaillent à tirer le meilleur parti possible de la programmation quantique.
@@ -23,7 +23,7 @@ Nous vous sommes très reconnaissants de votre aimable contribution et de l’oc
 
 Dans ce guide, nous vous donnons quelques conseils sur la façon de rendre votre contribution aussi utile que possible à l’ensemble de la communauté de programmation quantique.
 
-## <a name="building-community"></a>Développement de la communauté ##
+## <a name="building-community"></a>Développement de la communauté
 
 La toute première chose à faire lorsqu’il s’agit d’apporter une contribution est de toujours garder à l’esprit la communauté à laquelle vous contribuez.
 En faisant preuve de respect et de professionnalisme à l’égard de vos pairs au sein de la communauté de programmation quantique et plus généralement, vous pouvez faire en sorte que vos efforts contribuent à bâtir la communauté la meilleure et la plus accueillante possible.
@@ -31,7 +31,7 @@ En faisant preuve de respect et de professionnalisme à l’égard de vos pairs 
 Dans le cadre de cet effort, tous les projets du Quantum Development Kit ont adopté le [code de conduite Open Source de Microsoft](https://opensource.microsoft.com/codeofconduct/).
 Pour plus d’informations, veuillez consulter la [FAQ sur le code de conduite](https://opensource.microsoft.com/codeofconduct/faq/) ou envoyez vos questions ou vos commentaires à l’adresse [opencode@microsoft.com](mailto:opencode@microsoft.com).
 
-## <a name="what-kinds-of-contributions-help-the-community"></a>Quels types de contributions aident la communauté ? ##
+## <a name="what-kinds-of-contributions-help-the-community"></a>Quels types de contributions aident la communauté ?
 
 Il existe de nombreuses façons d’aider la communauté de programmation quantique grâce à vos contributions.
 Dans ce guide, nous nous concentrerons sur trois moyens particulièrement pertinents pour le Quantum Development Kit.
@@ -45,7 +45,7 @@ Cela dit, cette liste n’est certainement pas exhaustive ; nous vous encourage
 Ces différents types de contributions sont d’une immense valeur et sont très appréciés.
 Dans la suite du guide, nous vous donnerons des conseils sur la façon d’apporter chaque type de contribution.
 
-## <a name="where-do-contributions-go"></a>Où vont les contributions ? ##
+## <a name="where-do-contributions-go"></a>Où vont les contributions ?
 
 Le Quantum Development Kit comprend un certain nombre d’éléments qui fonctionnent tous ensemble pour réaliser une plateforme d’écriture de programmes quantiques.
 Chacun de ces différents éléments trouve sa place dans un référentiel différent, de sorte que l’une des premières choses à faire est de déterminer auquel chaque contribution correspond le mieux.
@@ -66,7 +66,7 @@ Il existe également d’autres dépôts plus spécialisés qui se concentrent s
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty) : Prise en charge du formatage LaTeX pour la syntaxe Q#.
 - [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019) : Notebook IQ# pour le tutoriel Deutsch-Jozsa donné lors de l’atelier interne 2019.
 
-## <a name="next-steps"></a>Étapes suivantes ##
+## <a name="next-steps"></a>Étapes suivantes
 
 Merci de faire partie de la communauté du Quantum Development Kit, nous sommes ravis de vos contributions !
 Si vous souhaitez en savoir plus sur la façon de contribuer, veuillez continuer avec l’un des guides suivants.
