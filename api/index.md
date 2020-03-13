@@ -6,20 +6,19 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 25a53e1cb8577761ef89cdcf2cfcddc509093f86
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056961"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022509"
 ---
-# <a name="q-standard-libraries"></a>Bibliothèques standard du langage Q# #
+# <a name="q-api-reference"></a>Informations de référence sur l’API Q# #
 
-Q# est pris en charge par une série d’opérations, de fonctions et de types définis par l’utilisateur différents qui composent la *bibliothèque standard* du langage Q# .
-La bibliothèque standard du langage Q# est divisée en deux parties principales :
+Ces informations de référence sur l’API comprennent la bibliothèque standard Q# et les trois bibliothèques qui reposent dessus : les bibliothèques de chimie, de mathématique et de machine learning. Des bibliothèques .NET et Python sont également disponibles pour Q#.
 
-- **Le préambule** : opérations et fonctions définies dans le cadre de la machine cible et du compilateur, généralement dans le code .NET natif classique.
-  En général, différentes machines cibles peuvent avoir des implémentations différentes du préambule approprié à chaque système.
-- **Le canon** : opérations et fonctions définies en Q# qui sont construites sur la logique définie dans le préambule.
-  L’implémentation du canon est indépendante par rapport aux machines cibles.
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+- [Bibliothèques Q#](xref:microsoft.quantum.qsharplibintro)
+- [Bibliothèques .NET](xref:microsoft.quantum.dotnetlibsintro)
+- [Bibliothèques Python](https://docs.microsoft.com/python/qsharp)
+
+Pour plus d’informations sur les bibliothèques Q#, consultez <xref:microsoft.quantum.libraries>.
