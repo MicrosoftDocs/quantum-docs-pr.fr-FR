@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: e3ce76f5ddcca497adb519eece959c9dd5dec92f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904636"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320716"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Simulation de Dynamics Hamilton
 
@@ -28,14 +28,14 @@ Notez que si $e ^ {-i H t} $ étaient une valeur exponentielle ordinaire, l’er
 Cette erreur se produit car $e ^ {-iHt} $ est un opérateur exponentiel et, par conséquent, une erreur est survenue lors de l’utilisation de cette formule en raison du fait que les $H _j $ Terms ne sont pas inactives (par*exemple*, $H _J H_k \ne H_k H_j $ en général).
 
 Si $t $ est large, les formules Trotter – Suzuki peuvent toujours être utilisées pour simuler la dynamique avec précision en la fractionnant en une séquence d’étapes courtes.
-Laissez $r $ le nombre d’étapes prises dans l’évolution du temps.
-Ensuite, nous avons le signe $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ Right) ^ r + O (m ^ 2 t ^ 2/r), $ $, ce qui signifie que si $r $ se met à l’échelle comme $m ^ 2 t ^ 2/\ Epsilon $, l’erreur peut être effectuée au plus $ \epsilon $ pour n’importe quel $ \epsilon > 0 $.
+$R $ étant le nombre d’étapes effectuées dans l’évolution du temps, chaque étape s’exécute pendant l’heure $t/r $. Ensuite, nous avons le signe $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ Right) ^ r + O (m ^ 2 t ^ 2/r), $ $, ce qui signifie que si $r $ se met à l’échelle comme $m ^ 2 t ^ 2/\ Epsilon $, l’erreur peut être effectuée au plus $ \epsilon $ pour n’importe quel $ \epsilon > 0 $.
 
 Des approximations plus précises peuvent être générées en construisant une séquence de exponentiels d’opérateur de façon à ce que les termes d’erreur s’annulent.
-La formule la plus simple, la formule Trotter symétrique ou le fractionnement Strang, prend la forme $ $ U_1 (t) = \ prod_ {j = 1} ^ m e ^ {-iH_j t/2} \ prod_ {j = m} ^ 1 e ^ {-iH_j t} = e ^ {-iHt} + O (m ^ 3 t ^ 3). $ $, qui peut être inférieur à $ \epsilon $ pour n’importe quel $ \epsilon > 0 $ en choisissant $r $ pour effectuer une mise à l’échelle de $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $.
+La plus simple, la formule suivante, la formule Trotter-Suzuki, prend la forme $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2R} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2R} \ Right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ l’erreur de qui peut être effectuée moins de $ \epsilon $ pour n’importe quel $ \epsilon > 0 $ en choisissant $r $ pour mettre à l’échelle le $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $.
 
-Même les formules Trotter d’ordre supérieur peuvent être construites sur la base de $U _ 1 $.
-La plus simple est la formule de quatrième ordre suivante : initialement introduit par Suzuki : $ $ U_2 (t) = U_1 ^ 2 (s_1t) U_1 ([1-4s_1] t) U_1 ^ 2 (s_1 t) = e ^ {-iHt} + O (m ^ 5t ^ 5), $ $ where $s _ 1 = (4-4 ^ {1/3}) ^{-1}$.
+Même les formules d’ordre supérieur, en particulier ($ 2k $) ième-ordre pour $k > 0 $, peuvent être construites de manière récursive : $ $ U_ {2k} (t) = [U_ {2 Ko-2} (s_k\~ t)] ^ 2 U_ {2k-2} ([1-4s_k] t) [U_ {2k-2} (s_k\~ t)] ^ 2 = e ^ {-iHt} + O ((m t) ^ {2k + 1}/r ^ {2k}), $ $ où $s _k = (4-4 ^ {1/(2k-1)}) ^{-1}$.
+
+La plus simple est la formule suivante ($k = $2), introduite à l’origine par Suzuki : $ $ U_4 (t) = [U_2 (s_2\~ t)] ^ 2 U_2 ([1-4s_2] t) [U_2 (s_2\~ t)] ^ 2 = e ^ {-iHt} + O (m ^ 5t ^ 5/r ^ 4) $ $ WHERE $s _2 = (4-4 ^ {1/3}) ^{-1}$.
 En général, les formules de poids fort arbitraires peuvent être construites de la même façon ; Toutefois, les coûts engendrés par l’utilisation d’intégrateurs plus complexes compensent souvent les avantages supérieurs au quatrième ordre pour les problèmes les plus pratiques.
 
 Pour que les stratégies ci-dessus fonctionnent, nous avons besoin d’une méthode pour simuler une classe étendue de $e ^ {-iH_j t} $.
