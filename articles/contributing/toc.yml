@@ -1,6 +1,6 @@
 - name: Bogues de création de rapports
   href: reporting-bugs.md
-- name: Documentation de contribution
+- name: Amélioration de la documentation
   href: docs.md
 - name: Ouverture des demandes de tirage (pull requests)
   href: pull-requests.md
