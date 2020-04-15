@@ -5,5 +5,5 @@
 - name: Invocation de la bibliothèque de chimie
   topicHref: samples/index.md
   href: samples/toc.yml
-- name: Schéma
+- name: schéma
   href: schema/toc.yml
