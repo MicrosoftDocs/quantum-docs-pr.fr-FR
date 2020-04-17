@@ -7,10 +7,10 @@ ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
 ms.openlocfilehash: a4bf21887e34ac85f75e5e0b9a033138464fd09d
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77906999"
 ---
 # <a name="what-are-q-and-the-qdk"></a>Présentation de Q# et du QDK
@@ -63,7 +63,7 @@ Q# fournit un nombre croissant de bibliothèques et de types définis par des ut
 
 ### <a name="use-q-to-estimate-quantum-resources"></a>Utiliser Q# pour estimer des ressources quantiques
 
-Vous pouvez simuler l’exécution de votre programme Q# à l’aide du simulateur quantique d’état complet fourni avec le kit de développement Quantum (QDK).  Le QDK fournit également des estimateurs de ressources qui vous donnent des insights sur les performances des programmes Q# trop colossaux pour être exécutés sur un simulateur.  Ces estimateurs s’avèrent très utiles pour les concepteurs d’algorithmes, car ils permettent d’ajuster les programmes afin d’utiliser moins de ressources (par exemple, moins de qubits s’exécutent pour un nombre d’opérations inférieur) et d’exécuter les programmes sur du matériel quantique antérieur à plus petite échelle.
+Vous pouvez simuler l’exécution de votre programme Q# à l’aide du simulateur quantique d’état complet fourni avec le Quantum Development Kit (QDK).  Le QDK fournit également des estimateurs de ressources qui vous donnent des insights sur les performances des programmes Q# trop colossaux pour être exécutés sur un simulateur.  Ces estimateurs s’avèrent très utiles pour les concepteurs d’algorithmes, car ils permettent d’ajuster les programmes afin d’utiliser moins de ressources (par exemple, moins de qubits s’exécutent pour un nombre d’opérations inférieur) et d’exécuter les programmes sur du matériel quantique antérieur à plus petite échelle.
 
 ### <a name="use-q-to-validate-hardware-performance"></a>Utiliser Q# pour valider des performances matérielles
 
@@ -72,4 +72,4 @@ Ce qui est remarquable avec Q#, c’est qu’un programme peut être écrit une 
 ## <a name="next-steps"></a>Étapes suivantes
 
 * [Comment m’informer sur l’informatique quantique ?](xref:microsoft.quantum.overview.learn)
-* [Bien démarrer avec le kit de développement Microsoft Quantum](xref:microsoft.quantum.welcome)
+* [Prise en main du Quantum Development Kit de Microsoft](xref:microsoft.quantum.welcome)

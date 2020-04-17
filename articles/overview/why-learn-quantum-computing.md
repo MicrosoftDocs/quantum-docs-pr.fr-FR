@@ -7,10 +7,10 @@ ms.date: 10/16/2019
 ms.topic: article
 uid: microsoft.quantum.overview.why
 ms.openlocfilehash: abf8804dc772a82126d432348cc6d2bc1c77f1f7
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77906965"
 ---
 # <a name="why-learn-quantum-computing"></a>Pourquoi apprendre l’informatique quantique ?
@@ -38,4 +38,4 @@ Outre l’impact sur le monde réel évoqué ci-dessus, nous pensons que l’inf
 ## <a name="next-steps"></a>Étapes suivantes
 
 * [Qu'est-ce que Q# ?](xref:microsoft.quantum.overview.qsharp)
-* [Bien démarrer avec le kit de développement Microsoft Quantum](xref:microsoft.quantum.welcome)
+* [Prise en main du Quantum Development Kit de Microsoft](xref:microsoft.quantum.welcome)

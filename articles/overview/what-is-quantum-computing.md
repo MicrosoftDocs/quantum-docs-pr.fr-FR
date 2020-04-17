@@ -7,10 +7,10 @@ ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.what
 ms.openlocfilehash: 668df50882272bfa56541f178e2f4d5fb35efcf5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77906778"
 ---
 # <a name="what-is-quantum-computing"></a>Qu’est-ce que l’informatique quantique ?
@@ -65,10 +65,10 @@ Le programme quantique de Microsoft est unique en ce sens que nous nous concentr
 * l’ingénierie d’un plan de contrôle cryogénique unique avec une alimentation et une dissipation thermique faibles, 
 * le développement d’une pile logicielle complète pour permettre la programmation de l’ordinateur quantique et le contrôle du système à l’échelle.
 
-Le kit de développement Quantum (QDK) open source a été introduit pour rendre la programmation quantique et le développement d’algorithmes plus accessibles. Notre langage de programmation général, Q#, relève les défis de la programmation quantique.  Nous avons conçu Q# comme un langage de programmation quantique général axé sur le développement d’algorithmes et d’applications. Le compilateur Q# est intégré à une pile logicielle qui permet à un algorithme quantique d’être compilé jusqu’aux opérations primitives d’un ordinateur quantique.  Jusqu’à une certaine échelle (nombre de qubits), l’informatique quantique peut être simulée sur un ordinateur classique. Une simulation vous permet de commencer à écrire des programmes quantiques aujourd’hui pour les exécuter demain sur du matériel quantique.  Nous avons également associé Q# à des exemples, des bibliothèques et des exercices pratiques pour commencer à utiliser la programmation quantique tout de suite. 
+Le Quantum Development kit (QDK) open source a été introduit pour rendre la programmation quantique et le développement d’algorithmes plus accessibles. Notre langage de programmation général, Q#, relève les défis de la programmation quantique.  Nous avons conçu Q# comme un langage de programmation quantique général axé sur le développement d’algorithmes et d’applications. Le compilateur Q# est intégré à une pile logicielle qui permet à un algorithme quantique d’être compilé jusqu’aux opérations primitives d’un ordinateur quantique.  Jusqu’à une certaine échelle (nombre de qubits), l’informatique quantique peut être simulée sur un ordinateur classique. Une simulation vous permet de commencer à écrire des programmes quantiques aujourd’hui pour les exécuter demain sur du matériel quantique.  Nous avons également associé Q# à des exemples, des bibliothèques et des exercices pratiques pour commencer à utiliser la programmation quantique tout de suite. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 * [Que sont capables de faire les ordinateurs quantiques ?](xref:microsoft.quantum.overview.computers)
-* [Bien démarrer avec le kit de développement Microsoft Quantum](xref:microsoft.quantum.welcome)
+* [Prise en main du Quantum Development Kit de Microsoft](xref:microsoft.quantum.welcome)
 * En savoir plus sur les [concepts de l’informatique quantique](xref:microsoft.quantum.concepts.intro)

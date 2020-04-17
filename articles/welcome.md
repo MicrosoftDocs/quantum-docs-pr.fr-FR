@@ -1,31 +1,31 @@
 ---
 uid: microsoft.quantum.welcome
-title: Bien démarrer avec le kit de développement Quantum (QDK)
+title: Bien démarrer avec le Quantum Development Kit (QDK)
 description: Découvrez comment commencer à programmer des projets quantiques en Q# avec le kit de développement Microsoft Quantum (QDK).
 author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
 ms.openlocfilehash: cea39e47ec5e7e2ad97adbbb39ba586274564967
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77907628"
 ---
-# <a name="get-started-with-the-quantum-development-kit-qdk"></a>Bien démarrer avec le kit de développement Quantum (QDK)
+# <a name="get-started-with-the-quantum-development-kit-qdk"></a>Bien démarrer avec le Quantum Development Kit (QDK)
 
-Bienvenue dans le kit de développement Microsoft Quantum  
+Bienvenue dans le Microsoft Quantum Development kit  
 Le QDK contient tous les outils dont vous aurez besoin pour créer vos propres expérimentations et programmes quantiques avec Q#, langage de programmation conçu spécifiquement pour le développement d’applications quantiques. 
 
 Pour vous lancer directement, vous pouvez accéder au [Guide d’installation de QDK](xref:microsoft.quantum.install).
-Vous serez ensuite guidé tout au long de la procédure d’installation du kit de développement Quantum sur les machines Windows, Linux ou MacOS, afin que vous puissiez écrire vos propres programmes quantiques.
+Vous serez ensuite guidé tout au long de la procédure d’installation du Quantum Development Kit sur les machines Windows, Linux ou MacOS, afin que vous puissiez écrire vos propres programmes quantiques.
 
 Si vous ne vous sentez pas vraiment prêt à commencer à programmer, mais que vous souhaitez en savoir plus sur l’informatique quantique et Q#, nous vous invitons à lire cet article pour vous faire une idée des ressources à votre disposition. Dans la section [Cinq questions sur l’informatique quantique](#five-questions-about-quantum-computing), vous trouverez des liens vers exactement ce que vous recherchez.
 
 ## <a name="get-started-programming"></a>Prise en main de la programmation
 
-Le kit de développement Quantum vous offre de nombreuses façons d’apprendre à développer un programme quantique avec Q#.
+Le Quantum Development Kit vous offre de nombreuses façons d’apprendre à développer un programme quantique avec Q#.
 Pour bénéficier de la puissance de l’informatique quantique, vous pouvez tester nos *guides de démarrage rapide* :
 
 * Le [générateur de nombres aléatoires quantique](xref:microsoft.quantum.quickstarts.qrng) est une application de style « Hello World Q# » qui fournit une brève introduction des concepts de l’informatique quantique tout en vous permettant de créer et d’exécuter une application quantique en seulement quelques minutes.
@@ -48,7 +48,7 @@ Si vous êtes novice en développement quantique, nous savons que cette matière
 * [Qu'est-ce que Q# ?](xref:microsoft.quantum.overview.qsharp)
 * [Comment apprendre l’informatique quantique avec Q# ?](xref:microsoft.quantum.overview.learn)
 
-## <a name="quantum-development-kit-documentation"></a>Documentation relative au kit de développement Quantum
+## <a name="quantum-development-kit-documentation"></a>Documentation relative au Quantum Development Kit
 
 La documentation actuelle contient les sujets supplémentaires suivants.
 
@@ -71,12 +71,12 @@ La documentation actuelle contient les sujets supplémentaires suivants.
 * L’article [Lectures supplémentaires](xref:microsoft.quantum.more-information) contient une sélection de références couvrant en profondeur les sujets relatifs à l’informatique quantique.
 
 ### <a name="additional-info"></a>Informations supplémentaires
-* [Notes de publication du kit de développement Microsoft Quantum](xref:microsoft.quantum.relnotes).
+* [Notes de publication de Microsoft Quantum Development Kit](xref:microsoft.quantum.relnotes).
 
 
 ## <a name="be-a-part-of-the-q-open-source-community"></a>Faire partie de la communauté open source Q#
-Le kit de développement Quantum est un kit de développement open source qui permet aux développeurs de rendre l’informatique quantique plus accessible à tous afin que nous puissions relever certains des défis les plus pressants au monde.  Les institutions académiques qui nécessitent des logiciels open source pourront déployer Q# pour mettre en œuvre l’apprentissage de l’informatique quantique et le développement de projets quantiques. Le fait que le kit de développement soit open source permet également aux développeurs et aux experts du domaine de contribuer aux améliorations et aux idées par le biais de leur code.
+Le Quantum Development Kit est un kit de développement open source qui permet aux développeurs de rendre l’informatique quantique plus accessible à tous afin que nous puissions relever certains des défis les plus pressants au monde.  Les institutions académiques qui nécessitent des logiciels open source pourront déployer Q# pour mettre en œuvre l’apprentissage de l’informatique quantique et le développement de projets quantiques. Le fait que le kit de développement soit open source permet également aux développeurs et aux experts du domaine de contribuer aux améliorations et aux idées par le biais de leur code.
 
-Vos commentaires, participations et contributions au kit de développement Quantum sont importants.  Pour découvrir les sources du kit de développement Quantum, soumettre des commentaires et savoir comment participer aux décisions et contribuer à cette plateforme de développement quantique en pleine croissance, consultez [Contribution au kit de développement Quantum](xref:microsoft.quantum.contributing).
+Vos commentaires, participations et contributions au Quantum Development Kit sont importants.  Pour découvrir les sources du Quantum Development Kit, soumettre des commentaires et savoir comment participer aux décisions et contribuer à cette plateforme de développement quantique en pleine croissance, consultez [Contribution au Quantum Development Kit](xref:microsoft.quantum.contributing).
 
 Si vous souhaitez obtenir des informations plus générales sur l’initiative prise par Microsoft dans le domaine de l’informatique quantique, consultez [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/).

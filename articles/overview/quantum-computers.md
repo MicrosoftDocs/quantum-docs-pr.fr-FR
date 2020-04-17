@@ -7,10 +7,10 @@ ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
 ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "73529947"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>Que sont capables de faire les ordinateurs quantiques ?
@@ -29,7 +29,7 @@ La simulation de systèmes microscopiques se comportant conformément aux lois d
 
 Les molécules chimiques étant des systèmes quantiques, il est possible de les analyser de cette manière. L’un de ces produits chimiques est l’enzyme _nitrogénase_ qui, avec une meilleure compréhension de ses propriétés, pourrait réduire la consommation d’énergie et les émissions de gaz à effet de serre des engrais.
 
-## <a name="cryptography"></a>Cryptographie
+## <a name="cryptography"></a>Chiffrement
 
 Le chiffrement est peut-être devenu l’application la plus célèbre des ordinateurs quantiques, quand, en 1994, Peter Shori a montré qu’un ordinateur quantique scalable pouvait décrypter toutes les techniques de chiffrement connues de l’époque.  Le chiffrement classique repose sur l’insolubilité des opérations sur de grands nombres, comme la factorisation de grands nombres en deux nombres premiers.
 
@@ -37,7 +37,7 @@ L’informatique quantique rend ces opérations théoriquement solubles (par le 
 
 Chez Microsoft, nous avons la meilleure équipe au monde dans le domaine du chiffrement post-quantique et de la sécurité qui développe des algorithmes résistants aux ordinateurs quantiques.
 
-## <a name="optimization"></a>Optimisation
+## <a name="optimization"></a>Optimization
 
 L’optimisation est la tâche qui consiste à effectuer une recherche poussée dans un espace dimensionnel élevé d’une solution qui réduit au minimum une fonction coût donnée.   Sur un ordinateur quantique, nous pouvons accélérer les algorithmes d’optimisation, ce qui permet de trouver des solutions qui, sans cela, n’étaient pas possibles. Les applications s’étendent du domaine des transports et de la logistique à celui de la santé, en passant par le diagnostic et la science des matériaux. L’impact sur l’efficacité de ces secteurs peut être colossal.
 
