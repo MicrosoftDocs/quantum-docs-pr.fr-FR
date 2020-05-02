@@ -7,10 +7,10 @@ summary: Vide l’état actuel de l’ordinateur cible.
 remarks: >-
   Cette méthode vous permet de vider les informations relatives à l’état actuel de l’ordinateur cible dans un fichier ou un autre emplacement.
 
-  Les informations réelles générées et la sémantique des `location` sont spécifiques à chaque ordinateur cible. Toutefois, le fait de fournir un tuple vide comme emplacement (`()`) ou simplement d’omettre le paramètre `location` signifie généralement générer la sortie vers la console.
+  Les informations réelles générées et la sémantique de `location` sont spécifiques à chaque ordinateur cible. Toutefois, si vous fournissez un tuple vide comme`()`emplacement () ou que vous `location` omettez simplement le paramètre, cela signifie généralement de générer la sortie dans la console.
 
 
-  Pour le simulateur d’état complet distribué dans le cadre du kit de développement quantique, cette méthode attend une chaîne avec le chemin d’accès à un fichier dans lequel elle écrira la fonction Wave sous la forme d’un tableau unidimensionnel de nombres complexes, dans lequel chaque élément représente le amplitudes de la probabilité de mesure de l’état correspondant.
+  Pour le simulateur d’état local distribué dans le cadre du kit de développement quantique, cette méthode attend une chaîne avec le chemin d’accès à un fichier dans lequel elle écrira la fonction Wave sous la forme d’un tableau unidimensionnel de nombres complexes, dans lequel chaque élément représente les amplitudes de la probabilité de mesure de l’état correspondant.
 syntax: "function DumpMachine (location : 'T) : Unit"
 input:
   content: "(location : 'T)"
@@ -26,9 +26,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 7d268127c56dc5554e7c99494ae90b2bc14b336c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7511e0bdded689c84cb90794860dd79e48950414
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227064"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82656572"
