@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: 03c32331f8988181ec6fedcfc207d752b4a880b2
-ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
+ms.openlocfilehash: a8e830e8f46ac6bd53ed5c607ca8cc2897721a20
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79024200"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82687339"
 ---
 # <a name="q-api-design-principles"></a>Principes de conception de l’API Q #
 
@@ -32,41 +32,41 @@ Cet article répertorie ces principes et donne des exemples pour vous aider à l
 
 **Principe clé :** Exposez les API qui placent le focus sur les applications Quantum.
 
-- ✅ **Choisissez** les noms des opérations et des fonctions qui reflètent la structure de haut niveau des algorithmes et des applications.
+- ✅**Choisissez des** noms d’opération et de fonction qui reflètent la structure de haut niveau des algorithmes et des applications.
 - ⛔️ **n'** exposez pas les API qui se concentrent principalement sur les détails d’implémentation de bas niveau.
 
 **Principe clé :** Démarrez chaque conception d’API avec des exemples de cas d’usage pour vous assurer que les API sont intuitives à utiliser.
 
-- ✅ **Assurez-vous** que chaque composant d’une API publique a un cas d’usage correspondant, plutôt que de tenter de concevoir toutes les utilisations possibles à partir du début.
+- ✅**Assurez-vous** que chaque composant d’une API publique a un cas d’usage correspondant, plutôt que de tenter de concevoir toutes les utilisations possibles à partir du début.
     Autrement dit, n’introduisez pas d’API publiques si elles sont utiles, mais assurez-vous que chaque partie d’une API possède un exemple *concret* dans lequel elle sera utile.
 
   *Exemples :*
-  - @"microsoft.quantum.canon.applytoeachca" peut être utilisé comme `ApplyToEachCA(H, _)` pour préparer les registres dans un état de superposition uniforme, tâche courante dans de nombreux algorithmes quantiques. La même opération peut également être utilisée pour de nombreuses autres tâches dans la préparation, les valeurs numériques et les algorithmes basés sur Oracle.
+  - @"microsoft.quantum.canon.applytoeachca"peut être utilisé en `ApplyToEachCA(H, _)` tant que pour préparer les registres dans un état de superposition uniforme, tâche courante dans de nombreux algorithmes Quantum. La même opération peut également être utilisée pour de nombreuses autres tâches dans la préparation, les valeurs numériques et les algorithmes basés sur Oracle.
 
-- ✅ **effectuez** des conceptions d’API de brainstorming et d’atelier afin de vérifier qu’elles sont intuitives et qu’elles répondent à des cas d’usage proposés.
+- ✅**Effectuez** des conceptions d’API de brainstorming et d’atelier afin de vérifier qu’elles sont intuitives et qu’elles répondent à des cas d’usage proposés.
 
   *Exemples :*
-  - Examinez le code\# Q actuel pour voir comment les nouvelles conceptions d’API peuvent simplifier et clarifier les implémentations existantes.
+  - Examinez le\# code Q actuel pour voir comment les nouvelles conceptions d’API peuvent simplifier et clarifier les implémentations existantes.
   - Passez en revue les conceptions d’API proposées avec les représentants du public principal.
 
 **Principe clé :** Concevez les API pour prendre en charge et encourager le code lisible.
 
-- ✅ **Assurez-vous** que le code est lisible par les experts du domaine et les non-experts.
-- ✅ concentrez **-** vous sur les effets de chaque opération et fonction au sein de l’algorithme de haut niveau, en utilisant la documentation pour approfondir les détails d’implémentation, le cas échéant.
-- ✅ suivez le Guide de [style Q\#](xref:microsoft.quantum.contributing.style) commun **le cas échéant** .
+- ✅**Assurez-vous** que le code est lisible par les experts du domaine et les non-experts.
+- ✅**Placez le** focus sur les effets de chaque opération et fonction au sein de l’algorithme de haut niveau, en utilisant la documentation pour examiner en détail l’implémentation, le cas échéant.
+- ✅**Suivez le** Guide de [style\# Q](xref:microsoft.quantum.contributing.style) commun le cas échéant.
 
 **Principe clé :** Concevoir des API stables et fournir une compatibilité ascendante.
 
-- ✅ **DO** exposent les anciennes API en douceur lorsque des modifications avec rupture sont requises.
+- ✅**Dépréciez** les anciennes API en douceur lorsque des modifications avec rupture sont requises.
 
-- ✅ fournissez des opérations et des fonctions « shim » **qui permettent au** code utilisateur existant de fonctionner correctement pendant la désapprobation.
+- ✅**Fournissez** des fonctions et des opérations « shim » qui permettent au code utilisateur existant de fonctionner correctement pendant la désapprobation.
 
   *Exemples :*
-  - Quand vous renommez une opération appelée `EstimateExpectation` en `EstimateAverage`, introduisez une nouvelle opération nommée `EstimateExpectation` qui appelle l’opération d’origine à son nouveau nom, afin que le code existant puisse continuer à fonctionner correctement.
+  - Quand vous renommez une `EstimateExpectation` opération `EstimateAverage`appelée en, introduisez une `EstimateExpectation` nouvelle opération appelée qui appelle l’opération d’origine à son nouveau nom, afin que le code existant puisse continuer à fonctionner correctement.
 
-- ✅ **Utilisez** l’attribut @"microsoft.quantum.core.deprecated" pour communiquer des désapprobations à l’utilisateur.
+- ✅**Utilisez l'** @"microsoft.quantum.core.deprecated" attribut pour communiquer des désapprobations à l’utilisateur.
 
-- ✅ lorsque vous renommez une opération ou une fonction **, fournissez** le nouveau nom en tant qu’entrée de chaîne à `@Deprecated`.
+- ✅Quand vous renommez une opération ou une fonction **, fournissez** le nouveau nom en tant `@Deprecated`qu’entrée de chaîne à.
 
 - ⛔️ **ne** supprimez pas les fonctions ou opérations existantes sans période d’obsolescence d’au moins six mois pour les versions préliminaires, ou au moins deux ans pour les versions prises en charge.
 
@@ -78,23 +78,23 @@ Cet article répertorie ces principes et donne des exemples pour vous aider à l
 
 **Principe clé :** les fonctions et les opérations de conception peuvent être réutilisables autant que possible et anticiper les besoins futurs.
 
-- ✅ conçoivent des fonctions et des opérations de façon à **ce** qu’elles se composent bien avec d’autres fonctions et opérations, à la fois dans la même API et dans les bibliothèques existantes.
+- ✅**Créez des** fonctions et des opérations pour composer correctement les autres fonctions et opérations, à la fois dans la même API et dans les bibliothèques existantes.
 
   *Exemples :*
-  - L’opération @"microsoft.quantum.canon.delay" fait des hypothèses minimes sur son entrée et peut donc être utilisée pour retarder les applications des deux opérations dans la bibliothèque standard Q # ou comme défini par les utilisateurs.
+  - L' @"microsoft.quantum.canon.delay" opération fait des hypothèses minimes sur son entrée et peut donc être utilisée pour retarder les applications des deux opérations dans la bibliothèque standard Q # ou comme défini par les utilisateurs.
     <!-- TODO: define bad example. -->
 
-- ✅ **DO** exposent la logique classique purement déterministe comme des fonctions plutôt que des opérations.
+- ✅**Exposez** la logique classique purement déterministe comme des fonctions plutôt que des opérations.
 
   *Exemples :*
-  - Une sous-routine qui élève en carré son entrée à virgule flottante peut être écrite de façon déterministe, et doit donc être exposée à l’utilisateur en tant que `Squared : Double -> Double` plutôt qu’en tant qu’opération `Square : Double => Double`. Cela permet à la sous-routine d’être appelée à plusieurs emplacements (par exemple, à l’intérieur d’autres fonctions) et fournit des informations d’optimisation utiles au compilateur qui peuvent affecter les performances et les optimisations.
-  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]` et `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` diffèrent dans les garanties en ce qui concerne le déterminisme ; les deux sont utiles dans différentes circonstances.
-  - Les routines d’API qui transforment l’application des opérations de Quantum peuvent souvent être effectuées de manière déterministe et peuvent donc être rendues disponibles en tant que fonctions de `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)`.
+  - Une sous-routine qui élève en carré son entrée à virgule flottante peut être écrite de façon déterministe, et doit donc être `Squared : Double -> Double` exposée à l’utilisateur `Square : Double => Double`sous la forme d’une opération. Cela permet à la sous-routine d’être appelée à plusieurs emplacements (par exemple, à l’intérieur d’autres fonctions) et fournit des informations d’optimisation utiles au compilateur qui peuvent affecter les performances et les optimisations.
+  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]`et `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` diffèrent dans les garanties prises en ce qui concerne le déterminisme ; les deux sont utiles dans différentes circonstances.
+  - Les routines d’API qui transforment l’application des opérations de Quantum peuvent souvent être effectuées de manière déterministe et peuvent donc être rendues disponibles `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)`en tant que fonctions telles que.
 
-- ✅ généraliser le type d’entrée autant que **cela** soit raisonnable pour chaque fonction et opération, en utilisant les paramètres de type en fonction des besoins.
+- ✅**Généralisez** le type d’entrée autant que possible pour chaque fonction et opération, à l’aide de paramètres de type en fonction des besoins.
 
   *Exemples :*
-  - `ApplyToEach` a le type `<'T>(('T => Unit), 'T[]) => Unit` plutôt que le type spécifique de son application la plus courante, `((Qubit => Unit), Qubit[]) => Unit`.
+  - `ApplyToEach`a un `<'T>(('T => Unit), 'T[]) => Unit` type au lieu du type spécifique de son application la plus `((Qubit => Unit), Qubit[]) => Unit`courante,.
 
 > [!TIP]
 > Il est important d’anticiper les besoins futurs, mais il est également important de résoudre les problèmes concrets pour vos utilisateurs.
@@ -102,23 +102,23 @@ Cet article répertorie ces principes et donne des exemples pour vous aider à l
 
 **Principe clé :** choisissez les types d’entrée et de sortie pour les fonctions et les opérations qui sont prévisibles, et qui communiquent l’objectif d’un appelable.
 
-- ✅ **utilisent** des types de tuples pour regrouper logiquement les entrées et les sorties qui sont uniquement significatives lorsqu’elles sont considérées ensemble. Envisagez d’utiliser un type défini par l’utilisateur dans ces cas-là.
+- ✅**Utilisez les** types de tuples pour regrouper logiquement les entrées et les sorties qui sont significatives uniquement lorsqu’elles sont considérées ensemble. Envisagez d’utiliser un type défini par l’utilisateur dans ces cas-là.
 
   *Exemples :*
-  - Une fonction permettant de générer les minima locaux d’une autre fonction peut avoir besoin de prendre les limites d’un intervalle de recherche comme entrée, de telle sorte que `LocalMinima(fn : (Double -> Double), (left : Double, right : Double)) : Double` peut être une signature appropriée.
-  - Une opération d’estimation d’une dérivée d’un classificateur de Machine Learning à l’aide de la technique de changement de paramètre peut nécessiter l’utilisation des vecteurs de paramètres décalés et non déplacés en tant qu’entrées. Dans ce cas, une entrée similaire à `(unshifted : Double[], shifted : Double[])` peut être appropriée.
+  - Une fonction permettant de générer les minima locaux d’une autre fonction peut avoir besoin de prendre les limites d’un intervalle de recherche comme `LocalMinima(fn : (Double -> Double), (left : Double, right : Double)) : Double` entrée, ce qui peut être une signature appropriée.
+  - Une opération d’estimation d’une dérivée d’un classificateur de Machine Learning à l’aide de la technique de changement de paramètre peut nécessiter l’utilisation des vecteurs de paramètres décalés et non déplacés en tant qu’entrées. Une entrée similaire à `(unshifted : Double[], shifted : Double[])` peut être appropriée dans ce cas.
 
-- ✅ **effectuer** l’ordre des éléments dans les tuples d’entrée et de sortie de manière cohérente entre différentes fonctions et opérations.
-
-  *Exemples :*
-  - Si vous envisagez deux fonctions ou ou des opérations qui prennent chacune un angle de rotation et un qubit cible comme entrées, assurez-vous qu’elles sont triées de la même manière dans chaque tuple d’entrée. Autrement dit, préférez `ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl` et `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)` à `ApplyRotation(target : Qubit, angle : Double) : Unit is Adj + Ctl` et `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)`.
-
-**Principe clé :** concevoir des fonctions et des opérations pour fonctionner correctement avec les fonctionnalités du langage Q\#, telles que l’application partielle.
-
-- ✅ **DO** commandez des éléments dans les tuples d’entrée de telle sorte que les entrées les plus couramment appliquées se produisent en premier (c’est-à-dire, afin que l’application partielle agisse de la même façon que la curryfication).
+- ✅**Ordonnez** les éléments dans les tuples d’entrée et de sortie de manière cohérente entre les différentes fonctions et opérations.
 
   *Exemples :*
-  - Une opération `ApplyRotation` qui accepte un nombre à virgule flottante et un qubit comme entrées peut souvent être partiellement appliquée avec l’entrée à virgule flottante pour une utilisation avec des opérations qui attendent une entrée de type `Qubit => Unit`. Ainsi, une signature de `operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
+  - Si vous envisagez deux fonctions ou ou des opérations qui prennent chacune un angle de rotation et un qubit cible comme entrées, assurez-vous qu’elles sont triées de la même manière dans chaque tuple d’entrée. Il s’agit de `ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl` , `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)` préférez `ApplyRotation(target : Qubit, angle : Double) : Unit is Adj + Ctl` et `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)`à et.
+
+**Principe clé :** concevoir des fonctions et des opérations pour fonctionner correctement\# avec les fonctionnalités du langage Q, telles que l’application partielle.
+
+- ✅**Organisez** les éléments dans les tuples d’entrée de telle sorte que les entrées les plus couramment appliquées se produisent en premier (c’est-à-dire : pour que l’application partielle agisse de la même façon que la curryfication).
+
+  *Exemples :*
+  - Une opération `ApplyRotation` qui accepte un nombre à virgule flottante et un qubit en tant qu’entrées peut souvent être partiellement appliquée avec l’entrée à virgule flottante pour une utilisation avec des opérations qui `Qubit => Unit`attendent une entrée de type. Ainsi, une signature de`operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
       fonctionnent le plus souvent avec une application partielle.
   - En règle générale, cette recommandation consiste à placer toutes les données classiques avant tous les qubits dans les tuples d’entrée, mais à utiliser un bon jugement et à examiner la manière dont votre API est appelée dans la pratique.
 
@@ -126,78 +126,78 @@ Cet article répertorie ces principes et donne des exemples pour vous aider à l
 
 **Principe clé :** utilisez les types définis par l’utilisateur pour faciliter l’utilisation des API.
 
-- ✅ **DO** introduisez de nouveaux types définis par l’utilisateur pour fournir un raccourci utile pour les types longs et/ou complexes.
+- ✅**Introduisez** de nouveaux types définis par l’utilisateur pour fournir un raccourci utile pour les types longs et/ou complexes.
 
   *Exemples :*
-  - Dans les cas où un type d’opération avec trois entrées de tableau qubit est couramment utilisé comme entrée ou retourné comme sortie, en fournissant un UDT tel que `newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl)`
+  - Dans les cas où un type d’opération avec trois entrées de tableau qubit est couramment utilisé comme entrée ou retourné comme sortie, en fournissant un UDT tel que`newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl)`
       peut vous aider à fournir un raccourci utile.
 
-- ✅ **DO** introduisez de nouveaux types définis par l’utilisateur pour indiquer qu’un type de base donné doit être utilisé uniquement dans un sens très particulier.
+- ✅**Introduisez** de nouveaux types définis par l’utilisateur pour indiquer qu’un type de base donné doit être utilisé uniquement dans un sens très particulier.
 
   *Exemples :*
-  - Une opération qui doit être interprétée spécifiquement comme une opération qui encode des données classiques dans un registre quantique peut être appropriée pour étiqueter avec un type défini par l’utilisateur `newtype InputEncoder = (Apply : (Qubit[] => Unit))`.
+  - Une opération qui doit être interprétée spécifiquement comme une opération qui encode des données classiques dans un registre Quantum peut être appropriée pour étiqueter avec un type `newtype InputEncoder = (Apply : (Qubit[] => Unit))`défini par l’utilisateur.
 
-- ✅ **DO** introduisez de nouveaux types définis par l’utilisateur avec des éléments nommés qui permettent une extensibilité future (par exemple, une structure de résultats qui peut contenir des éléments nommés supplémentaires dans le futur).
-
-  *Exemples :*
-  - Lorsqu’une opération `TrainModel` expose un grand nombre d’options de configuration, l’exposition de ces options en tant que nouvel `TrainingOptions` UDT et en fournissant une nouvelle fonction `DefaultTrainingOptions : Unit -> TrainingOptions` permet aux utilisateurs de remplacer des éléments nommés spécifiques dans des valeurs UDT TrainingOptions tout en permettant aux développeurs de bibliothèques d’ajouter de nouveaux éléments UDT en fonction des besoins.
-
-- ✅ **ne** déclarez pas les éléments nommés pour les nouveaux types définis par l’utilisateur de préférence pour obliger les utilisateurs à connaître la déconstruction de tuple correcte.
+- ✅**Introduisez** de nouveaux types définis par l’utilisateur avec des éléments nommés qui permettent une extensibilité future (par exemple, une structure de résultats qui peut contenir des éléments nommés supplémentaires dans le futur).
 
   *Exemples :*
-  - Quand vous représente un nombre complexe dans sa décomposition polaire, préférez `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` à `newtype ComplexPolar = (Double, Double)`.
+  - Lorsqu’une opération `TrainModel` expose un grand nombre d’options de configuration, l’exposition de ces options en `TrainingOptions` tant que nouvel UDT et en `DefaultTrainingOptions : Unit -> TrainingOptions` fournissant une nouvelle fonction permet aux utilisateurs de remplacer des éléments nommés spécifiques dans des valeurs UDT TrainingOptions, tout en permettant aux développeurs de bibliothèque d’ajouter de nouveaux éléments UDT, le cas échéant.
+
+- ✅**Déclarez** les éléments nommés pour les nouveaux types définis par l’utilisateur de préférence pour obliger les utilisateurs à connaître la déconstruction de tuple correcte.
+
+  *Exemples :*
+  - Quand vous `newtype ComplexPolar = (Double, Double)`représente un nombre complexe dans sa décomposition polaire, `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` préférez.
 
 **Principe clé :** utilisez les types définis par l’utilisateur de manière à réduire la charge cognitive et ne nécessite pas que l’utilisateur apprend d’autres concepts et nomenclature.
 
-- ⛔️ **n'** introduisez pas de types définis par l’utilisateur qui requièrent que l’utilisateur utilise fréquemment l’opérateur Unwrap (`!`), ou qui requièrent généralement plusieurs niveaux de désencapsulage. Les stratégies d’atténuation possibles sont les suivantes :
+- ⛔️ **n'** introduisez pas de types définis par l’utilisateur qui requièrent que l’utilisateur utilise fréquemment l’opérateur`!`Unwrap (), ou qui nécessitent généralement plusieurs niveaux de désencapsulage. Les stratégies d’atténuation possibles sont les suivantes :
 
-  - Quand vous exposez un type défini par l’utilisateur avec un seul élément, envisagez de définir un nom pour cet élément. Par exemple, envisagez `newtype Encoder = (Apply : (Qubit[] => Unit is Adj + Ctl))` pour `newtype Encoder = (Qubit[] => Unit is Adj + Ctl)`.
+  - Quand vous exposez un type défini par l’utilisateur avec un seul élément, envisagez de définir un nom pour cet élément. Par exemple, envisagez `newtype Encoder = (Apply : (Qubit[] => Unit is Adj + Ctl))` d' `newtype Encoder = (Qubit[] => Unit is Adj + Ctl)`utiliser la préférence.
 
   - S’assurer que les autres fonctions et opérations peuvent accepter directement les instances UDT « encapsulées ».
 
 - ⛔️ **n'** introduisez pas de nouveaux types définis par l’utilisateur qui dupliquent des types intégrés sans fournir d’expressivité supplémentaire.
 
   *Exemples :*
-  - Un UDT `newtype QubitRegister = Qubit[]` ne fournit pas d’expressivité supplémentaire sur `Qubit[]`et est donc plus difficile à utiliser sans aucun avantage.
+  - Un UDT `newtype QubitRegister = Qubit[]` ne fournit pas d’expressivité `Qubit[]`supplémentaire et est donc plus difficile à utiliser sans aucun avantage.
   - Un UDT `newtype LittleEndian = Qubit[]` documente la manière dont le Registre sous-jacent doit être utilisé et interprété, et fournit ainsi une expressivité supplémentaire par rapport à son type de base.
 
 - ⛔️ **n'** introduisez pas de fonctions d’accesseur sauf si strictement requis ;   préférer fortement les éléments nommés dans ce cas.
 
   *Exemples :*
-  - Lors de l’introduction d’un `newtype Complex = (Double, Double)`UDT, préférez la modification de la définition pour `newtype Complex = (Real : Double, Imag : Double)` à l’introduction des fonctions `GetReal : Complex -> Double` et `GetImag : Complex -> Double`.
+  - Lors de l’introduction `newtype Complex = (Double, Double)`d’un UDT, il est préférable `newtype Complex = (Real : Double, Imag : Double)` de modifier la `GetReal : Complex -> Double` définition `GetImag : Complex -> Double`en pour introduire des fonctions et.
 
 ## <a name="namespaces-and-organization"></a>Espaces de noms et organisation
 
 **Principe clé :** choisissez des noms d’espaces de noms prévisibles et qui communiquent clairement l’objectif des fonctions, des opérations et des types définis par l’utilisateur dans chaque espace de noms.
 
-- ✅ nommez les espaces **de noms en** tant que `Publisher.Product.DomainArea`.
+- ✅**Nommez** les espaces de `Publisher.Product.DomainArea`noms en tant que.
 
   *Exemples :*
-  - Les fonctions, les opérations et les UDT publiés par Microsoft dans le cadre de la fonctionnalité de simulation de Quantum du kit de développement quantique sont placés dans l’espace de noms `Microsoft.Quantum.Simulation`.
-  - `Microsoft.Quantum.Math` représente un espace de noms publié par Microsoft dans le cadre du kit de développement Quantum appartenant à la zone de domaine mathématique.
+  - Les fonctions, les opérations et les UDT publiés par Microsoft dans le cadre de la fonctionnalité de simulation de Quantum du kit de développement quantique `Microsoft.Quantum.Simulation` sont placés dans l’espace de noms.
+  - `Microsoft.Quantum.Math`représente un espace de noms publié par Microsoft dans le cadre du kit de développement Quantum appartenant à la zone de domaine mathématique.
 
-- ✅ **Placez** des opérations, des fonctions et des types définis par l’utilisateur utilisés pour des fonctionnalités spécifiques dans un espace de noms qui décrit cette fonctionnalité, même si cette fonctionnalité est utilisée dans différents domaines de problème.
-
-  *Exemples :*
-  - Les API de préparation d’État publiées par Microsoft dans le cadre du kit de développement quantique sont placées dans `Microsoft.Quantum.Preparation`.
-  - Les API de simulation de Quantum publiées par Microsoft dans le cadre du kit de développement quantique sont placées dans `Microsoft.Quantum.Simulation`.
-
-- ✅ **Placez** des opérations, des fonctions et des types définis par l’utilisateur utilisés uniquement dans des domaines spécifiques dans des espaces de noms indiquant leur domaine d’utilitaire. Si nécessaire, utilisez des sous-espaces de noms pour indiquer des tâches ciblées dans chaque espace de noms spécifique à un domaine.
+- ✅**Placez les** opérations, les fonctions et les types définis par l’utilisateur utilisés pour des fonctionnalités spécifiques dans un espace de noms qui décrit cette fonctionnalité, même si cette fonctionnalité est utilisée dans différents domaines de problème.
 
   *Exemples :*
-  - La bibliothèque de Machine Learning Quantum publiée par Microsoft est largement placée dans l’espace de noms @"microsoft.quantum.machinelearning", mais les exemples de jeux de données sont fournis par l’espace de noms @"microsoft.quantum.machinelearning.datasets".
-  - Les API de la chimie Quantum publiées par Microsoft dans le cadre du kit de développement quantique doivent être mises en `Microsoft.Quantum.Chemistry`. Les fonctionnalités spécifiques à l’implémentation de la décomposition Jordanie--Wigner peuvent être placées dans `Microsoft.Quantum.Chemistry.JordanWigner`, afin que l’interface principale pour la zone de domaine de la chimie Quantum ne concerne pas les implémentations.
+  - Les API de préparation d’État publiées par Microsoft dans le cadre du kit de développement quantique sont `Microsoft.Quantum.Preparation`placées dans.
+  - Les API de simulation de Quantum publiées par Microsoft dans le cadre du kit de développement quantique sont `Microsoft.Quantum.Simulation`intégrées à.
+
+- ✅**Placez les** opérations, les fonctions et les types définis par l’utilisateur utilisés uniquement dans des domaines spécifiques dans des espaces de noms indiquant leur domaine d’utilitaire. Si nécessaire, utilisez des sous-espaces de noms pour indiquer des tâches ciblées dans chaque espace de noms spécifique à un domaine.
+
+  *Exemples :*
+  - La bibliothèque de Machine Learning Quantum publiée par Microsoft est en grande partie @"microsoft.quantum.machinelearning" placée dans l’espace de noms, mais des exemples @"microsoft.quantum.machinelearning.datasets" de jeux de données sont fournis par l’espace de noms.
+  - Les API de la chimie Quantum publiées par Microsoft dans le cadre du kit de développement Quantum doivent `Microsoft.Quantum.Chemistry`être mises en place. Les fonctionnalités spécifiques à l’implémentation de la décomposition Jordanie--Wigner peuvent `Microsoft.Quantum.Chemistry.JordanWigner`être placées dans, de sorte que l’interface principale pour la zone de domaine de chimie Quantum ne concerne pas les implémentations.
 
 **Principe clé :** Utilisez les espaces de noms et les modificateurs d’accès ensemble pour être intentionnel de la surface de l’API exposée aux utilisateurs et pour masquer les détails internes relatifs à l’implémentation et au test de vos API.
 
-- ✅ dans la mesure du possible, placez toutes les fonctions et toutes les opérations nécessaires pour implémenter une API dans le même espace de noms que l’API en cours d’implémentation, mais marquée avec les mots clés « Private » ou « Internal » pour indiquer qu' **ils ne font** pas partie de la surface d’API publique d’une bibliothèque. Utilisez un nom commençant par un trait de soulignement (`_`) pour distinguer visuellement les opérations et les fonctions privées et internes des callables publics.
+- ✅Chaque fois que **cela** est raisonnable, placez toutes les fonctions et toutes les opérations nécessaires pour implémenter une API dans le même espace de noms que l’API en cours d’implémentation, mais marquée avec les mots clés « Private » ou « Internal » pour indiquer qu’ils ne font pas partie de la surface d’API publique d’une bibliothèque. Utilisez un nom commençant par un trait de soulignement (`_`) pour distinguer visuellement les opérations et les fonctions privées et internes des callables publics.
 
   *Exemples :*
-  - Le nom de l’opération `_Features` indique une fonction qui est privée pour un espace de noms et un assembly donnés, et qui doit être accompagnée du mot clé `internal`.
+  - Le nom `_Features` de l’opération indique une fonction qui est privée pour un espace de noms et un assembly donnés, et `internal` qui doit être accompagnée du mot clé.
 
-- ✅ dans le cas rare où un ensemble complet de fonctions ou d’opérations privées est nécessaire pour implémenter l’API pour un espace de noms **donné, placez-les** dans un nouvel espace de noms correspondant à l’espace de noms implémenté et se terminant par `.Private`.
+- ✅Dans le cas rare où un ensemble complet de fonctions ou d’opérations privées est nécessaire pour implémenter l’API pour un espace **de noms donné, placez-** les dans un nouvel espace de noms correspondant à `.Private`l’espace de noms implémenté et se terminant par.
 
-- ✅ **Placez** tous les tests unitaires dans des espaces de noms correspondant à l’espace de noms testé et se terminant par `.Tests`.
+- ✅**Placez tous** les tests unitaires dans des espaces de noms correspondant à l’espace de `.Tests`noms testé et se terminant par.
 
 ## <a name="naming-conventions-and-vocabulary"></a>Conventions d’affectation des noms et vocabulaire
 
@@ -205,19 +205,19 @@ Cet article répertorie ces principes et donne des exemples pour vous aider à l
 
 - ⛔️ **n’utilisez pas** de noms d’identificateurs discriminés ou d’exclusion, ni de terminologie dans les commentaires de documentation d’API.
 
-- ✅ **Utilisez** les commentaires de documentation de l’API pour fournir un contexte, des exemples et des références pertinents, en particulier pour les concepts plus difficiles.
+- ✅**Utilisez les** commentaires de documentation de l’API pour fournir un contexte, des exemples et des références pertinents, en particulier pour les concepts plus difficiles.
 
 - ⛔️ **n’utilisez pas** les noms d’identificateur qui sont inutilement ésotériques ou qui nécessitent des algorithmes de Quantum significatifs à lire.
 
   *Exemples :*
   - Préférez « itération d’amplification d’amplitude » à « itération Grover ».
 
-- ✅ **Choisissez** des opérations et des noms de fonctions qui communiquent clairement l’effet prévu d’un appelable, et non son implémentation. Notez que l’implémentation peut et doit être
+- ✅**Choisissez des** opérations et des noms de fonctions qui communiquent clairement l’effet prévu d’un appelable, et non son implémentation. Notez que l’implémentation peut et doit être documentée dans les [Commentaires de documentation d’API](xref:microsoft.quantum.language.statements#documentation-comments).
 
   *Exemples :*
   - Préférez « chevauchement d’estimation » à « Hadarmard test », car ce dernier communique la manière dont le premier est implémenté.
 
-- ✅ **Utilisez** des mots de manière cohérente dans toutes les api Q\# :
+- ✅**Utilisez des** mots de manière cohérente dans toutes les\# API Q :
 
   - **Verbes**
 
@@ -242,7 +242,7 @@ Cet article répertorie ces principes et donne des exemples pour vous aider à l
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Appliquer**: appliquez une opération de Quantum ou une séquence d’opérations à un ou plusieurs qubits, ce qui entraîne la modification de l’état de ces qubits de manière cohérente. Ce verbe est le verbe le plus général dans Q\# nomenclature et ne **doit pas être** utilisé lorsqu’un verbe plus spécifique est plus directement pertinent.
+    - **Appliquer**: appliquez une opération de Quantum ou une séquence d’opérations à un ou plusieurs qubits, ce qui entraîne la modification de l’état de ces qubits de manière cohérente. Ce verbe est le verbe le plus général de\# la nomenclature Q et ne **doit pas être** utilisé lorsqu’un verbe plus spécifique est plus directement pertinent.
 
   - **Noms**:
 
@@ -254,18 +254,18 @@ Cet article répertorie ces principes et donne des exemples pour vous aider à l
     - **Options :** UDT contenant plusieurs éléments nommés qui peuvent agir comme des « arguments facultatifs » d’une fonction ou d’une opération. Par exemple :
 
       *Exemples :*
-      - L’UDT @"microsoft.quantum.machinelearning.trainingoptions" comprend des éléments nommés pour le taux d’apprentissage, la taille de minilot et d’autres paramètres configurables pour la formation ML.
+      - Le @"microsoft.quantum.machinelearning.trainingoptions" type défini par l’utilisateur comprend des éléments nommés pour le taux d’apprentissage, la taille de minilot et d’autres paramètres configurables pour la formation ml.
 
   - **Adjectifs**:
 
-    - ⛔️ **nouveau**: il ne **doit pas** être utilisé pour éviter toute confusion avec son utilisation en tant que verbe dans de nombreux langages de programmation (par C++exemple C#:,, Java, machine à écrire, PowerShell).
+    - ⛔️ **nouveau**: cet adjectif ne **doit pas** être utilisé, car cela évite toute confusion avec son utilisation en tant que verbe dans de nombreux langages de programmation (par exemple, C++, C#, Java, machine à écrire, PowerShell).
 
   - **Prépositions :** Dans certains cas, les prépositions peuvent être utilisées pour lever toute ambiguïté ou clarifier les rôles des noms et des verbes dans les noms de fonctions et d’opérations. Toutefois, il convient de veiller à ce que cela ne soit pas très prudent et cohérent.
 
     - **Comme :** Représente que l’entrée et la sortie d’une fonction représentent les mêmes informations, mais que la sortie représente ces informations **sous** la forme d’une *Croix (X* ) au lieu de la représentation d’origine. Cela est particulièrement courant pour les fonctions de conversion de type.
 
       *Exemples :*
-      - `IntAsDouble(2)` indique que l’entrée (`2`) et la sortie (`2.0`) représentent qualitativement les mêmes informations, mais en utilisant des types de données Q\# différents pour le faire.
+      - `IntAsDouble(2)`indique que l’entrée (`2`) et la sortie (`2.0`) représentent qualitativement les mêmes informations, mais qui utilisent différents types\# de données Q pour le faire.
 
     - **À partir de :** Pour garantir la cohérence, cette préposition ne **doit pas** être utilisée pour indiquer les fonctions de conversion de type ou tout autre cas où **,** si nécessaire.
 
