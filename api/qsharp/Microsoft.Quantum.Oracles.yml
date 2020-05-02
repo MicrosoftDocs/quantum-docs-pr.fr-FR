@@ -4,15 +4,15 @@ name: Microsoft.Quantum.Oracles
 summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms fournit des types définis par l’utilisateur pour décorer différents genres d’Oracle en fonction de leur utilisation prévue dans des algorithmes Quantum tels que l’estimation de phase et l’amplification d’amplitude."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: Convertit un Oracle de type `StateOracle` en `DeterministicStateOracle`.
+  summary: Convertit un Oracle de `StateOracle` type `DeterministicStateOracle`en.
 - uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: Combine les `DeterministicStateOracle` Oracle et les `ObliviousOracle`.
+  summary: Combine les Oracle `DeterministicStateOracle` et `ObliviousOracle`.
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: Dans le cas d’une opération qui représente une « boîte noire » Oracle, retourne une Oracle discrète qui représente la « boîte noire » Oracle répétée plusieurs fois.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
   summary: Construit une réflexion sur un État donné à partir d’un Oracle.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: Convertit un Oracle de type `DeterministicStateOracle` en `StateOracle`.
+  summary: Convertit un Oracle de `DeterministicStateOracle` type `StateOracle`en.
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: >-
@@ -45,7 +45,7 @@ newtypes:
 
     - Le registre Ancilla $a $ sur lequel $O $ agit.
 
-    - Le Registre du système $s $ sur lequel le $U unitaire souhaité $ est appliqué, après sélection du registre $a $ étant dans l’État $ \ket{t}\_a $.
+    - Le Registre du système $s $ sur lequel le $U unitaire souhaité est appliqué, après sélection du registre $a $ étant dans l’État $ \ket{t}\_a $.
 - uid: microsoft.quantum.oracles.reflectionoracle
   summary: >-
     Représente une réflexion Oracle.
@@ -69,9 +69,9 @@ newtypes:
 
     - Le registre système $s $ qui stocke l’État Quantum souhaité $ \ket{\Psi}\_s $.
 metadata:
-  ms.openlocfilehash: 7e582286b69563bc4baa856f5236e5c2bd292ae0
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: c1f364d74aab6d318e7b6db078d5532aeae57bcd
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870001"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673107"

@@ -6,7 +6,7 @@ functions:
   summary: >-
     Retourne l’opération de bits AND de deux entiers.
 
-    Cela effectue le même calcul que l’opérateur intégré `&&&`.
+    Cela effectue le même calcul que l' `&&&` opérateur intégré.
 - uid: microsoft.quantum.bitwise.leftshiftedi
   summary: Déplace la représentation au niveau du bit d’un nombre laissé par un nombre donné de bits.
 - uid: microsoft.quantum.bitwise.leftshiftedl
@@ -15,12 +15,12 @@ functions:
   summary: >-
     Retourne l’opérateur or au niveau du bit d’un entier.
 
-    Cela effectue le même calcul que l’opérateur intégré `~~~`.
+    Cela effectue le même calcul que l' `~~~` opérateur intégré.
 - uid: microsoft.quantum.bitwise.or
   summary: >-
     Retourne l’opération or au niveau du bit de deux entiers.
 
-    Cela effectue le même calcul que l’opérateur intégré `|||`.
+    Cela effectue le même calcul que l' `|||` opérateur intégré.
 - uid: microsoft.quantum.bitwise.parity
   summary: Retourne la parité au niveau du bit d’un entier (1 si sa représentation binaire contient un nombre impair de uns et 0 dans le cas contraire).
 - uid: microsoft.quantum.bitwise.rightshiftedi
@@ -33,14 +33,14 @@ functions:
   summary: >-
     Retourne l’opérateur OR exclusif au niveau du bit (XOR) de deux entiers.
 
-    Cela effectue le même calcul que l’opérateur intégré `^^^`.
+    Cela effectue le même calcul que l' `^^^` opérateur intégré.
 - uid: microsoft.quantum.bitwise.zbits
   summary: Retourne un entier représentant les bits Z d’un tableau d’opérateurs Pauli.
-summary: " # <a name=\"summary\"></a>summary\n Cet espace de noms contient des fonctions permettant d’agir sur la représentation au niveau du bit des types de données classiques."
+summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions permettant d’agir sur la représentation au niveau du bit des types de données classiques."
 metadata:
-  ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fb52d02d38d31b96b46dfc469ee07ee62e29a9d4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210948"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673375"
