@@ -3,12 +3,12 @@ uid: microsoft.quantum.errorcorrection.recoveryfn
 name: RecoveryFn
 type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Type pour la fonction qui mappe un syndrome d’erreur à une séquence de `Pauli[]` opérations qui corrigent l’erreur détectée.
+summary: Type pour la fonction qui mappe un syndrome d’erreur à une `Pauli[]` séquence d’opérations qui corrigent l’erreur détectée.
 syntax: newtype RecoveryFn = (Microsoft.Quantum.ErrorCorrection.Syndrome -> Pauli[]);
 metadata:
-  ms.openlocfilehash: 86d0c6444a3e822525f605f2c15978323b9e1caf
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 22e0388c451f81a9df4e446104987685bdd458c3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220315"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682259"

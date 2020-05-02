@@ -7,9 +7,9 @@ summary: >-
   Effectue une mesure conjointe d’un ou plusieurs qubits dans les bases Pauli spécifiées.
 
 
-  Le résultat obtenu est fourni par la distribution : \begin{align} \Pr (\texttt{Zero} | \ket{\Psi}) = \frac12 \braket{\Psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \Psi}, \end{align} où $P _i $ est le $i $ th élément de @no__ t_0_ et où $N = \texttt{Length} (\texttt{bases}) $.
+  Le résultat de la sortie est donné par la distribution : \begin{align} \Pr (\texttt{Zero} | \ket{\Psi}) = \frac12 \braket{\Psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \Psi}, \end{align} où $P _i $ est le $i élément $ `bases`Th de, et où $N = \texttt{length} (\texttt{bases}) $.
 
-  Autrement dit, la mesure retourne un `Result` $d $ de telle sorte que le eigenvalue de l’effet de mesure observé est $ (-1) ^ d $.
+  Autrement dit, la mesure retourne `Result` un $d $ de telle sorte que le eigenvalue de l’effet de mesure observé est $ (-1) ^ d $.
 remarks: Si le tableau de base et le tableau qubit ont des longueurs différentes, l’opération échoue.
 syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
 input:
@@ -28,13 +28,13 @@ input:
 output:
   content: Result
   types:
-  - summary: '`Zero` si le eigenvalue $ + $1 est observé et `One` si le eigenvalue $-$1 est observé.'
+  - summary: '`Zero`Si le eigenvalue $ + $1 est observé et `One` si le eigenvalue $-$1 est observé.'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a2f89d1eea48ac0a4dab7e35ef661d89a40ae84a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234102"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682852"
