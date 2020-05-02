@@ -3,13 +3,13 @@ uid: microsoft.quantum.chemistry
 name: Microsoft.Quantum.Chemistry
 functions:
 - uid: microsoft.quantum.chemistry.htermstogenidx
-  summary: Convertit un index en un terme Hamilton dans `HTerm[]` format de données en GeneratorIndex.
+  summary: Convertit un index en un terme de `HTerm[]` données au format de données en GeneratorIndex.
 - uid: microsoft.quantum.chemistry.htermstogensys
-  summary: Convertit un GeneratorSystem `HTerm[]` de l’un au format de données en.
+  summary: Convertit un GeneratorSystem de `HTerm[]` l’un au format de données en un.
 - uid: microsoft.quantum.chemistry.htermtogenidx
-  summary: Convertit un terme de Hamilton dans `HTerm` format de données en GeneratorIndex.
+  summary: Convertit un terme de la `HTerm` structure de données en GeneratorIndex.
 - uid: microsoft.quantum.chemistry.isnotzero
-  summary: Vérifie si un nombre de `Double` n’est pas approximativement égal à zéro.
+  summary: Vérifie si un `Double` nombre n’est pas approximativement égal à zéro.
 newtypes:
 - uid: microsoft.quantum.chemistry.hterm
   summary: >-
@@ -17,9 +17,9 @@ newtypes:
 
     La signification des données représentées est déterminée par l’algorithme qui la reçoit.
 metadata:
-  ms.openlocfilehash: 78d6e9f54c25f9d1a6af32c157d23069b8a4872b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fda6e5c8daebeae115046771e85e0e49d057e666
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210914"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677019"

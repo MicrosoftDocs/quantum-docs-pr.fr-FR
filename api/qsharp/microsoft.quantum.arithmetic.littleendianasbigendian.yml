@@ -3,23 +3,23 @@ uid: microsoft.quantum.arithmetic.littleendianasbigendian
 name: LittleEndianAsBigEndian
 type: function
 namespace: Microsoft.Quantum.Arithmetic
-summary: Convertit un registre `LittleEndian` qubit en un registre `BigEndian` qubit en inversant le classement qubit.
+summary: Convertit `LittleEndian` un registre qubit en `BigEndian` Registre qubit en inversant le classement qubit.
 syntax: 'function LittleEndianAsBigEndian (input : Microsoft.Quantum.Arithmetic.LittleEndian) : Microsoft.Quantum.Arithmetic.BigEndian'
 input:
   content: '(input : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: input
-    summary: Qubit Inscrivez-vous au format `LittleEndian`.
+    summary: Qubit s’inscrire `LittleEndian` au format.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Microsoft.Quantum.Arithmetic.BigEndian
   types:
-  - summary: Qubit Inscrivez-vous au format `BigEndian`.
+  - summary: Qubit s’inscrire `BigEndian` au format.
     uid: microsoft.quantum.arithmetic.bigendian
 metadata:
-  ms.openlocfilehash: 7f87c2a65bede0f77c2dbf360be0f052cc504eea
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 179ed8c442a92cee65cab540b83921a4dfb99002
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218785"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676818"

@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Crée un tableau de longueur donnée avec tous les éléments égaux à la valeur donnée.
 examples: >-
-  Le code suivant crée un tableau de 3 valeurs booléennes, chacune égale à `true`:
+  Le code suivant crée un tableau de 3 valeurs booléennes, chacune d' `true`elles étant égale à :
 
 
   ```qsharp
@@ -28,14 +28,14 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Nouveau tableau de longueur `length`, de telle sorte que chaque élément soit `value`.
+  - summary: Nouveau tableau de longueur `length`, de telle sorte que chaque élément `value`est.
     isArray: true
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: 3eb9380a9bf3c2229b936941d31041ef2adcce06
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: e989c80b27c3ce0d90a564181c0bcae2f892ada0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905418"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676529"

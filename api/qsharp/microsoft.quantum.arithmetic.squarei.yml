@@ -13,7 +13,7 @@ input:
     summary: $n le nombre de $ bits au carré (LittleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: résultat de $2n $-bit (LittleEndian), doit être dans l’État $ \ket{0}$ initialement.
+    summary: résultat de $2n $-bit (LittleEndian), doit être initialement à l'{0}État $ \ket $.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: ae55cd24a5dad065c010006f01484f7e903e76f6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: eedc2536da0fd75712929af44f5167d3fc73add3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218428"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676606"
