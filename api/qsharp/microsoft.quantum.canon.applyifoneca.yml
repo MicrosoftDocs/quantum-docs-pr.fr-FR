@@ -7,7 +7,7 @@ summary: >-
   Applique une opération unitaire conditionnée sur une valeur de résultat classique qui en est une.
 
 
-  Dans le cas d’une opération `op` et d’une valeur de résultat `result`, applique `op` au `target` si `result` est `One`. Si `Zero`, rien ne se passe au `target`.
+  Pour une opération `op` donnée et une valeur `result`de résultat `op` , s' `target` applique `result` à `One`si est. Si `Zero`, rien ne se passe `target`au.
 
   Le suffixe `CA` indique que l’opération à appliquer est unitaire (contrôlable et adjointable).
 syntax: "operation ApplyIfOneCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 9756dcc29853d41e1d2a9fee5816254afa5e5d73
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f8837e549ec1fc70b76e8151a211c4bf9f71168e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217391"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672647"

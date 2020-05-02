@@ -7,7 +7,7 @@ summary: >-
   Applique l’une des deux opérations unitaires, en fonction de la valeur d’un résultat classique.
 
 
-  À partir d’un `result`de résultats, applique l’opération `zeroOp` avec `zeroInput` comme entrée lorsque `result` est égal à `Zero`et s’applique `oneOp(oneInput)` lorsque `result == One`.
+  Avec un résultat `result`donné, applique l' `zeroOp` opération `zeroInput` avec comme entrée lorsque `result` est égal à `Zero`et s’applique `oneOp(oneInput)` quand `result == One`.
 syntax: "operation ApplyIfElseRCA (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U))"
@@ -31,7 +31,7 @@ input:
     - Adjoint
     - Controlled
   - name: zeroInput
-    summary: Entrée à fournir à `zeroOp` lorsque `result == Zero`.
+    summary: Entrée à fournir `zeroOp` lorsque `result == Zero`.
     uid: "'T"
     isLocal: true
   - name: oneOp
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: oneInput
-    summary: Entrée à fournir à `oneOp` lorsque `result == One`.
+    summary: Entrée à fournir `oneOp` lorsque `result == One`.
     uid: "'U"
     isLocal: true
 output:
@@ -59,9 +59,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Type d’entrée de l’opération `zeroOp` appliqué de manière conditionnelle.
+  summary: Type d’entrée de l’opération `zeroOp` à appliquer de façon conditionnelle.
 - uid: "'U"
-  summary: Type d’entrée de l’opération `oneOp` appliqué de manière conditionnelle.
+  summary: Type d’entrée de l’opération `oneOp` à appliquer de façon conditionnelle.
 functors:
 - Adjoint
 - Controlled
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 79fc62ca2c3525699deec6669e6b078408ede837
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a1182abedfbb4905ec65f5e720d82a1766aa5d65
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213719"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672724"

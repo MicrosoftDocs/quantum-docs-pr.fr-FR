@@ -7,7 +7,7 @@ summary: >-
   Applique l’une des deux opérations contrôlable, en fonction de la valeur d’un résultat classique.
 
 
-  À partir d’un `result`de résultats, applique l’opération `zeroOp` avec `zeroInput` comme entrée lorsque `result` est égal à `Zero`et s’applique `oneOp(oneInput)` lorsque `result == One`.
+  Avec un résultat `result`donné, applique l' `zeroOp` opération `zeroInput` avec comme entrée lorsque `result` est égal à `Zero`et s’applique `oneOp(oneInput)` quand `result == One`.
 syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
@@ -17,7 +17,7 @@ input:
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: Opération contrôlable à appliquer lors de la `result == Zero`.
+    summary: Opération contrôlable à appliquer lorsque `result == Zero`.
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: zeroInput
-    summary: Entrée à fournir à `zeroOp` lorsque `result == Zero`.
+    summary: Entrée à fournir `zeroOp` lorsque `result == Zero`.
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: Opération contrôlable à appliquer lors de la `result == One`.
+    summary: Opération contrôlable à appliquer lorsque `result == One`.
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: oneInput
-    summary: Entrée à fournir à `oneOp` lorsque `result == One`.
+    summary: Entrée à fournir `oneOp` lorsque `result == One`.
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Type d’entrée de l’opération `zeroOp` appliqué de manière conditionnelle.
+  summary: Type d’entrée de l’opération `zeroOp` à appliquer de façon conditionnelle.
 - uid: "'U"
-  summary: Type d’entrée de l’opération `oneOp` appliqué de manière conditionnelle.
+  summary: Type d’entrée de l’opération `oneOp` à appliquer de façon conditionnelle.
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: e2dd871aa42ed22ba088e6eaad9d9705dfb26254
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aeb4c7f86ac1f41140bb14436d9dee39b4c4d98b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220927"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672736"

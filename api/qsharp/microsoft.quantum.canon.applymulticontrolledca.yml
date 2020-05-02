@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   Applique une version contrôlée par multiplication d’une opération contrôlée de façon unique.
 
-  Le modificateur `CA` indique que l’opération à qubit unique est contrôlable et adjointable.
+  Le modificateur `CA` indique que l’opération de qubit simple est contrôlable et adjointable.
 remarks: >-
   Cette opération utilise uniquement Clean Ancilla qubits.
 
@@ -23,7 +23,7 @@ input:
 
       Le premier qubit de l’argument de l’opération est supposé être un contrôle et le reste est supposé être qubits cible.
 
-      `ApplyMultiControlled` appelle toujours `singlyControlledOp` avec un argument de longueur au moins égal à 1.
+      `ApplyMultiControlled`appelle `singlyControlledOp` toujours avec un argument de longueur au moins égal à 1.
     isOperation: true
     input:
       types:
@@ -41,7 +41,7 @@ input:
     uid: microsoft.quantum.canon.ccnotop
   - name: controls
     summary: >-
-      Qubits sur lequel `singlyControlledOp` doit être contrôlé.
+      Qubits `singlyControlledOp` à contrôler sur.
 
       La longueur de `controls` doit être au moins égale à 1.
     isArray: true
@@ -63,9 +63,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applymulticontrolledc
 metadata:
-  ms.openlocfilehash: d9b0f2b18d025d0ce60bbb02a9559546539eaecd
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1cb239c8c49ff4f4f8f991d6ad81374f0dd23f7f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220706"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672524"
