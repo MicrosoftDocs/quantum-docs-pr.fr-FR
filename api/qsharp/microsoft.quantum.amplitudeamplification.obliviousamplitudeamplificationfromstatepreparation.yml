@@ -7,11 +7,11 @@ summary: Amplification d’amplitude oublie par Oracle pour les réflexions part
 remarks: >-
   Cela impose des conditions plus strictes sur la forme des États de démarrage et cible auxiliaires que dans `AmpAmpObliviousByReflectionPhases`.
 
-  Il est supposé que $A \ket{0}\_f\ket{0}\_A = \ket{\text{Start}}\_{FA} $ prépare l’état de démarrage auxiliaire $ \ket{\text{Start}}\_{FA} $ à partir de la base de calcul $ \ket{0}\_f\ket{0}$.
+  Il est supposé que $A \ket{0}\_f\ket{0}\_A = \ket{\text{Start}}\_{FA} $ prépare l’état de démarrage auxiliaire $ \ket{\text{Start}}\_{FA} $ à partir de la base de{0}\_calcul{0}$ \ket f\ket $.
 
   Il est supposé que l’État cible est marqué par $ \ket{1}\_f $.
 
-  Il est supposé que \begin{align} O\ket {\ Text {Start}}\_{FA} \ket{\Psi}\_s = \lambda\ket{1}\_f\ket {\ Text {n’importe quoi}}\_a\ket {\ Text {target}}\_s U \ket{\Psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, \end{align} pour certaines $U unitaires $.
+  Il est supposé que \begin{align} O\ket {\ Text {Start}}\_{FA} \ket{\Psi}\_s = \lambda\ket{1}\_f\ket {\ Text {tout}}\_a\ket {\ Text {target}}\_s U \ket{\Psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, \end{align} pour some Unity $U $.
 syntax: 'function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
@@ -23,7 +23,7 @@ input:
     summary: $A Oracle unitaire $ qui prépare l’état de démarrage auxiliaire
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: Le $O d’Oracle unitaire $ de type `ObliviousOracle` qui agit conjointement sur le registre auxiliaire et le registre système
+    summary: Oracle $O $ unitaire `ObliviousOracle` qui agit conjointement sur les registres auxiliaires et système
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: idxFlagQubit
     summary: Enregistrement d’un indicateur d’index qubit unique
@@ -50,9 +50,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: fa44068c55a1bb92f8827095889f9c3b4d6f1011
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: adc6f48a5d335eb9dc92dcb13425de900b5c8563
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872442"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680139"

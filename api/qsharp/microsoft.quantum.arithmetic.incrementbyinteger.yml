@@ -7,7 +7,7 @@ summary: >-
   Incrémente un registre quantique non signé par un entier classique, à l’aide de rotations de phase.
 
 
-  Supposons que `target` encode un entier non signé $x $ dans un encodage Little endian et que `increment` est égal à $a $.
+  Supposons `target` que encode un entier non signé $x $ dans un encodage Little endian et qu' `increment` il est égal à $a $.
 
   Ensuite, cette opération implémente l’unité $ \ket{x} \mapsto \ket{x + a} $, où l’ajout est effectué modulo $2 ^ n $, où $n = \texttt{Length (target !)} $.
 syntax: 'operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
@@ -15,7 +15,7 @@ input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: increment
-    summary: Entier par lequel le `target` est incrémenté.
+    summary: Entier par lequel `target` est incrémenté.
     isPrimitive: true
     uid: Int
   - name: target
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d05ed867e62f4f7474319ffe23dcd23aa34675c5
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: c07015f69d9cab08b287c383230fe79b5d67d6a0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871156"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679557"

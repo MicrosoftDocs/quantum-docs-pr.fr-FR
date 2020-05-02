@@ -16,7 +16,7 @@ input:
     summary: Deuxième nombre à virgule fixe.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Le nombre à virgule fixe du résultat doit être dans l’État $ \ket{0}$ initialement.
+    summary: Nombre à virgule fixe du résultat, doit être initialement à l'{0}État $ \ket $.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 0623deedf7dca05832ec1edd7c5771d7bc10aa08
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b37ca00a41df323f2cab854eecd40c276696cbe4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214824"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679478"

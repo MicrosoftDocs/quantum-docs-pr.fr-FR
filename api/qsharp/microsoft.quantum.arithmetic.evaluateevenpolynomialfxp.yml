@@ -9,7 +9,7 @@ input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: Coefficients du polynôme pair sous forme de tableau double, c’est-à-dire le tableau $ [a_0, A_1,..., a_k] $ pour le polynôme pair $P (x) = a_0 + A_1 x ^ 2 + \cdots + a_k x ^ {2k} $.
+    summary: Coefficients du polynôme pair sous la forme d’un tableau double, c’est-à-dire le tableau $ [a_0, a_1,..., a_k] $ pour le $P polynomial pair (x) = a_0 + a_1 x ^ 2 + \cdots + a_k x ^ {2k} $.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -17,7 +17,7 @@ input:
     summary: Nombre à virgule fixe d’entrée pour lequel évaluer le polynôme.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Nombre à virgule fixe de sortie qui contiendra $P (x) $. Doit être dans l’État $ \ket{0}$ initialement.
+    summary: Nombre à virgule fixe de sortie qui contiendra $P (x) $. Doit être initialement à l’état{0}$ \ket $.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4b0979dd2a0758bbefbb4b0456051a38e040ab5a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dca40d385ca3f63d40e68db4e5cc8b4031990b9a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221029"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679680"
