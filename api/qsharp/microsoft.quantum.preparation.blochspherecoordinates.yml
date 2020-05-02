@@ -7,16 +7,16 @@ summary: >-
   Calcule les coordonnées de la sphère Bloch pour un État à qubit unique.
 
 
-  Deux nombres complexes $a 0, a1 $ qui représentent l’État qubit, calcule les coordonnées sur la sphère Bloch, de sorte que $a 0 \ket{0} + a1 \ket{1} = r e ^ {it} (e ^ {-i \Phi/2}\cos{(\ Theta/2)} \ket{0}+ e ^ {i \Phi/2}\sin{(\ Theta/2)} \ket{1}) $.
+  Étant donné deux nombres complexes $a 0, a1 $ qui représentent l’État qubit, calcule les coordonnées sur la sphère Bloch, de sorte{0} que $a 0{1} \ket + a1 \ket = r e ^ {it} (e ^ {-i \Phi/2}\cos{(\ Theta/{0}2)} \ket + e ^ {i \Phi/2}\sin{(\ Theta/{1}2)} \ket) $.
 syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar) : (Microsoft.Quantum.Math.ComplexPolar, Double, Double)'
 input:
   content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: a0
-    summary: Coefficient complexe de l’État $ \ket{0}$.
+    summary: Coefficient complexe de l’état ${0}\ket $.
     uid: microsoft.quantum.math.complexpolar
   - name: a1
-    summary: Coefficient complexe de l’État $ \ket{1}$.
+    summary: Coefficient complexe de l’état ${1}\ket $.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
@@ -29,9 +29,9 @@ output:
     - isPrimitive: true
       uid: Double
 metadata:
-  ms.openlocfilehash: fc9dbef764c9d95de2183b9b093e00f20dfb0697
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 98d543849be177941a0c346c1de6b5b6930e783e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228135"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683219"
