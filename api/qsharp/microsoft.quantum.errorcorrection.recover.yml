@@ -3,16 +3,16 @@ uid: microsoft.quantum.errorcorrection.recover
 name: Recover
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Effectue un seul arrondi de correction d’erreur par un code de Quantum décrit par un type de `QECC`.
+summary: Effectue un seul arrondi de correction d’erreur par un code de Quantum décrit `QECC` par un type.
 syntax: 'operation Recover (code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: Un code de correction des erreurs de Quantum empaqueté en tant que type de `QECC` décrit l’encodage et le décodage des données Quantum, ainsi que la mesure des syndromes des erreurs.
+    summary: Un code de correction des erreurs de Quantum empaqueté en `QECC` tant que type décrit l’encodage et le décodage des données Quantum, ainsi que la mesure des syndromes d’erreur.
     uid: microsoft.quantum.errorcorrection.qecc
   - name: fn
-    summary: '`RecoveryFn` qui mappe chaque syndrome d’erreur aux opérations de `Pauli[]` qui corrigent l’erreur détectée.'
+    summary: '`RecoveryFn` Qui mappe chaque syndrome d’erreur aux `Pauli[]` opérations qui corrigent l’erreur détectée.'
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: Tableau de qubits où le code stabilisant est défini.
@@ -27,9 +27,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: baaa5862dd189a04667081d762900931e6b5e766
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2a873e06c20bf62c998b1096d862d26ff89aa134
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220349"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682285"

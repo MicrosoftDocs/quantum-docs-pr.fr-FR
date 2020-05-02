@@ -16,14 +16,14 @@ input:
 output:
   content: Pauli[]
   types:
-  - summary: Tableau `paulis` d’opérateurs Pauli `Pauli[]` de la même longueur que `ints` de telle sorte que `paulis[idxPauli]` soit égal à l’élément de `[PauliI, PauliX, PauliY, PauliZ]` donné par `ints[idxPauli]`.
+  - summary: Tableau `paulis` d' `Pauli[]` opérateurs Pauli de la même longueur `ints` que celui qui `paulis[idxPauli]` est égal à l’élément de `[PauliI, PauliX, PauliY, PauliZ]` donné par `ints[idxPauli]`.
     isArray: true
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 407ad1481c220f390fffb5f1b59f0968d6d6570c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1159e3db02663b0588d12ea9d297e055be84ac4a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066980"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682614"

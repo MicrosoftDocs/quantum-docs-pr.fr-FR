@@ -22,7 +22,7 @@ input:
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: 'Un tuple où : `Int` est le nombre d’qubits alloués, `Double` est `1.0/trotterStepSize`et l’opération est l’étape trotter.'
+  - summary: 'Un tuple où : `Int` est le nombre d’qubits `Double` alloués `1.0/trotterStepSize`, est, et l’opération est l’étape trotter.'
     types:
     - isPrimitive: true
       uid: Int
@@ -43,9 +43,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: f8fe25db9eac627649601b1526e4c81eb13d9b99
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: defa30f488d64991bea7e005d18b9eafeb99f05a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066130"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683113"

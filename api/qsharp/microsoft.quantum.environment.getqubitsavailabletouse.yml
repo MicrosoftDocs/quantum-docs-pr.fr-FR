@@ -12,7 +12,7 @@ output:
   content: Int
   types:
   - summary: >-
-      Nombre de qubits qui peuvent être alloués dans une instruction `using`.
+      Nombre de qubits qui peuvent être alloués dans `using` une instruction.
 
       Si l’ordinateur cible utilisé ne fournit pas ces informations, `-1` est retourné.
     isPrimitive: true
@@ -20,9 +20,9 @@ output:
 seeAlso:
 - getqubitsavailabletoborrow
 metadata:
-  ms.openlocfilehash: 1cb1331aa26ec9755a9e379336f46387b61bb0ae
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 82d8c27064cbb234b32707aa31fb0869f66ce23c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230464"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682401"
