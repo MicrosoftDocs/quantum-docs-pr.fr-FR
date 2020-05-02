@@ -7,8 +7,8 @@ summary: >-
   Encode un opérateur d’intérêt dans un `BlockEncodingReflection`.
 
 
-  Cela construit une `BlockEncodingReflection` Unity $U = P\cdot V\cdot P ^ \dagger $ qui encode certains opérateurs $H = \sum_{j} | \alpha_j | U_j $ d’intérêt qui est une combinaison linéaire de divisions. En règle générale, $P $ est une unité de préparation de l’État, telle que $P \ket{0}\_a\sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ et $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
-remarks: Cette implémentation de `BlockEncoding` lui attribue les propriétés d’un `BlockEncodingReflection`.
+  Cela crée une unité `BlockEncodingReflection` de $U = P\cdot V\cdot P ^ \dagger $ qui encode un opérateur $H = \ sum_ {j} | \ alpha_j | U_j $ d’intérêt qui est une combinaison linéaire de divisions. En général, $P $ est une unité de préparation de l’État,{0}\_telle que $P \ket a \\|sum_j\|\_\sqrt{\ alpha_j/\_\vec\alpha 2} \ket{j} a $ et $V = \ sum_ {\_j} \ket{j}\bra{j} a\otimes U_j $.
+remarks: Cette `BlockEncoding` implémentation lui attribue les propriétés d' `BlockEncodingReflection`un.
 syntax: 'function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
 input:
   content: '(statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl))'
@@ -49,15 +49,15 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
-  - summary: Un $U unitaire $ agissant conjointement sur les registres `a` et `s` qui encodent le bloc $H $ et satisfont $U' ^{-1} = U $.
+  - summary: Une unité de $U $ agissant conjointement sur `a` les registres et `s` qui encode le bloc $H $ et satisfait $U' ^{-1} = U $.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: a092068a61d860074ace150b0c7872eb064a63b9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8fe23d346a09e245d41f2a0c242462b5300561e1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219159"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687096"
