@@ -13,9 +13,9 @@ summary: >-
   L’action de U sur un registre nouvellement alloué est donnée par $ $ \begin{align} U \ket{0\cdots 0} = \ket{\Psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}.
 
   \end{align} $ $
-remarks: Les coefficients d’entrée négatifs $ \ alpha_j < $0 sont traités comme s’ils étaient positifs avec la valeur $ | \ alpha_j | $. `coefficients` est rempli avec les éléments $ \ alpha_j = $0,0 si moins de $2 ^ n $ sont spécifiés.
+remarks: Les coefficients d’entrée négatifs $ \ alpha_j < $0 sont traités comme s’ils étaient positifs avec la valeur $ | \ alpha_j | $. `coefficients`sera complété avec les éléments $ \ alpha_j = $0,0 si moins de $2 ^ n $ sont spécifiés.
 examples: >-
-  L’extrait de code suivant prépare l’État Quantum $ \ket{\Psi} = \ sqrt {1/8} \ Ket{0}+ \ sqrt {7/8} \ Ket{2}$ dans le registre qubit `qubitsLE`.
+  L’extrait de code suivant prépare l’État Quantum $ \ket{\Psi} = \ sqrt {1/8} \{0}Ket + \ sqrt {7/8} \{2}Ket $ dans le Registre `qubitsLE`qubit.
 
 
   ```qsharp
@@ -55,9 +55,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 2a31449781d4b3bab1f2af40083df78bf6cc2083
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d419fd88ed037001cc51dbd354b5c89dbe334246
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226367"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686458"

@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907458"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686850"
 ---
 # <a name="opening-pull-requests"></a>Ouverture des demandes de tirage (pull requests) #
 
@@ -39,7 +39,7 @@ En ayant dit ce qui précède, il est utile de prendre quelques instants pour di
 Lorsque vous utilisez git, toutes les modifications sont représentées en tant que _validations_ qui décrivent comment ces modifications sont liées à l’état du dépôt avant ces modifications.
 Nous allons souvent dessiner des diagrammes dans lesquels les validations sont dessinées sous forme de cercles avec des flèches issues des validations précédentes.
 
-Supposons que vous avez commencé une contribution dans une _branche_ appelée `feature`.
+Supposons que vous avez commencé une contribution _branch_ dans une `feature`branche appelée.
 Votre fourche de **Microsoft/Quantum** peut se présenter comme suit :
 
 ![Une branche de travail dans GitHub](~/media/git-workflow-step0.png)
@@ -60,9 +60,9 @@ L’utilisation de ce processus nous aide à utiliser la fonctionnalité GitHub 
 
 ## <a name="how-to-make-a-pull-request"></a>Comment effectuer une requête de tirage (pull request) ##
 
-Il existe deux méthodes principales pour effectuer une demande de tirage (pull request).
-Pour les petites modifications qui n’affectent qu’un seul fichier, l’interface Web GitHub peut être utilisée pour effectuer une requête de tirage entièrement en ligne.
-Pour les contributions plus complexes, il est souvent plus facile d’utiliser votre ordinateur local pour préparer une demande de tirage.
+Il existe deux méthodes principales pour effectuer une demande de tirage (pull request).  
+Pour les petites modifications qui n’affectent qu’un seul fichier, l’interface Web GitHub peut être utilisée pour effectuer une requête de tirage entièrement en ligne. Accédez simplement au fichier que vous souhaitez modifier et utilisez l’icône de modification.  
+Pour les contributions plus compliquées, il est souvent plus facile de cloner le référentiel sur votre ordinateur local pour préparer une requête de tirage en premier.
 
 <!--
 ### Using the Web Interface ###
