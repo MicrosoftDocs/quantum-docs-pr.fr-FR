@@ -9,7 +9,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: Fonction de `'T` à la valeur booléenne qui est utilisée pour filtrer les éléments.
+    summary: Fonction de `'T` à Boolean qui est utilisée pour filtrer les éléments.
     isFunction: true
     input:
       types:
@@ -33,11 +33,11 @@ output:
     uid: Int
 typeParameters:
 - uid: "'T"
-  summary: Type des éléments de `array`.
+  summary: Type des `array` éléments.
 metadata:
-  ms.openlocfilehash: 89d6a279da57fc0b94f55a3f9f16486fee1c6064
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 2d62fcf97bcd72d2327aeb13db3600324ce6661f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908121"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680762"

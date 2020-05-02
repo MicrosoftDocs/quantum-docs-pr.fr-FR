@@ -4,7 +4,7 @@ name: LookupFunction
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: À partir d’un tableau, retourne une fonction qui retourne des éléments de ce tableau.
-remarks: Cette fonction est principalement utile pour l’interopérabilité avec les fonctions et les opérations qui prennent `Int -> 'T` fonctions comme arguments. Cela est courant, par exemple, dans la bibliothèque de représentation du générateur, où les fonctions sont utilisées pour éviter d’avoir à enregistrer un tableau entier dans la mémoire.
+remarks: Cette fonction est principalement utile pour l’interopérabilité avec les fonctions et les `Int -> 'T` opérations qui prennent des fonctions comme arguments. Cela est courant, par exemple, dans la bibliothèque de représentation du générateur, où les fonctions sont utilisées pour éviter d’avoir à enregistrer un tableau entier dans la mémoire.
 syntax: "function LookupFunction (array : 'T[]) : (Int -> 'T)"
 input:
   content: "(array : 'T[])"
@@ -17,7 +17,7 @@ input:
 output:
   content: (Int -> 'T)
   types:
-  - summary: Fonction `f` telle que `f(idx) == f[idx]`.
+  - summary: Fonction `f` de ce type `f(idx) == f[idx]`.
     isFunction: true
     input:
       types:
@@ -31,9 +31,9 @@ typeParameters:
 - uid: "'T"
   summary: Type des éléments du tableau qui est représenté comme fonction de recherche.
 metadata:
-  ms.openlocfilehash: b4f509de7137377465f1e76e59a04abfd9a22fd1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4d911a3952c273e050c75e4d785e6812d54f5fa1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218105"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680972"

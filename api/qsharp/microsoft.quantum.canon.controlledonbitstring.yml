@@ -7,22 +7,22 @@ summary: >-
   Retourne une opération unitaire qui applique un Oracle sur le registre cible si l’état du registre de contrôle correspond à un masque de bits spécifié.
 
 
-  La sortie de cette fonction est une opération qui peut être représentée par une transformation unitaire $U $ telle que \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\Psi} = \ket{b_0 B_1 \cdots b_ {n-1}} \otimes \begin{cases} V \ket{\Psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{bits} \\\\ \ket{\Psi} & \textrm{otherwise} \end{cases}, \end{align} où $V $ est une transformation unitaire qui représente l’action de l’opération `oracle`.
+  La sortie de cette fonction est une opération qui peut être représentée par une transformation unitaire $U $ telle que \begin{align} U \ket{b_0 B_1 \cdots b_ {n-1}} \ket{\Psi} = \ket{b_0 B_1 \cdots b_ {n-1}} \otimes \begin{cases} V \ket{\Psi} & \textrm{if} (b_0 B_1 \cdots b_ {n-1}) = \texttt{bits} \\ \\ \ket{\Psi} & \textrm{otherwise} \end{cases}, \end{align} où $V $ est une transformation unitaire qui représente l’action de l' `oracle` opération.
 remarks: >-
   La longueur de `bits` et `controlRegister` doit être égale.
 
 
-  Étant donné un tableau booléen `bits` et une opération unitaire `oracle`, la sortie de cette fonction est une opération qui effectue les étapes suivantes :
+  Avec un tableau `bits` booléen et une opération `oracle`unitaire, la sortie de cette fonction est une opération qui effectue les étapes suivantes :
 
 
-  * Appliquez une opération de `X` à chaque qubit du registre de contrôle qui correspond à `false` élément de l' `bits`;
+  * Appliquez une `X` opération à chaque qubit du registre de contrôle qui correspond à `false` l' `bits`élément de ;
 
-  * appliquer des `Controlled oracle` aux registres de contrôle et cibles ;
+  * appliquer `Controlled oracle` aux registres de contrôle et cibles ;
 
-  * Appliquez une opération de `X` à chaque qubit du registre de contrôle qui correspond à `false` élément du `bits` pour ramener le registre de contrôle à l’état d’origine.
+  * Appliquez une `X` opération à chaque qubit du registre de contrôle qui correspond à `false` l’élément de `bits` à nouveau pour ramener le registre de contrôle à l’état d’origine.
 
 
-  La sortie de l' `Controlled` functor est un cas spécial de `ControlledOnBitString` où `bits` est égal à `[true, ..., true]`.
+  `Controlled` La sortie du functor est un cas `ControlledOnBitString` particulier où `bits` est égal à. `[true, ..., true]`
 examples: >-
   Les extraits de code suivants sont équivalents :
 
@@ -48,7 +48,7 @@ examples: >-
   ```
 
 
-  Le code suivant prépare un État $ \frac{1}{2}(\ket{00}-\ket{01} + \ket{10} + \ket{11}) $ :
+  Le code suivant prépare un état{1}{2}$ \frac ({00} \ket-\ket{01} + \ket{10} + \ket{11}) $ :
 
 
   ```qsharp
@@ -85,7 +85,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Opération unitaire qui applique `oracle` sur le registre cible si l’état du registre de contrôle correspond au masque de bits `bits`.
+  - summary: Opération unitaire qui s’applique `oracle` au registre cible si l’état du registre de contrôle correspond au masque `bits`de bits.
     isOperation: true
     input:
       types:
@@ -102,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: e6f7f8980b2b9b8305df12da41e30fc563e54ad1
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: d5a6223c130150f42f83044aec19b1d5a875bb1d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77906523"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680355"

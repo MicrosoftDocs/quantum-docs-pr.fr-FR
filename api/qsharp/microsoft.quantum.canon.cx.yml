@@ -7,7 +7,7 @@ summary: >-
   Applique la porte contrôlée X (CX) à une paire de qubits.
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align}, $ $ où les lignes et les colonnes sont organisées comme dans le guide des concepts de Quantum.
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & \\ \\ 0 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{align}, $ $ où les lignes et les colonnes sont organisées comme dans le guide des concepts de Quantum.
 remarks: >-
   Équivalent à :
 
@@ -48,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 26cbc8dc2f22cdf8583d453b84e53b0151619f5d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d5a987001de638b9415a1d5ede1dc88aee7edf0f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067864"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680309"
