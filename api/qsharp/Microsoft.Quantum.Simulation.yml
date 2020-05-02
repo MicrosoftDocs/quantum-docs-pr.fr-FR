@@ -4,41 +4,41 @@ name: Microsoft.Quantum.Simulation
 summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions et des opérations permettant de simuler de façon cohérente la dynamique des systèmes quantiques."
 functions:
 - uid: microsoft.quantum.simulation.addgeneratorsystems
-  summary: Ajoute deux `GeneratorSystem`s pour créer un nouveau `GeneratorSystem`.
+  summary: Ajoute deux `GeneratorSystem`pour créer un nouveau `GeneratorSystem`.
 - uid: microsoft.quantum.simulation.blockencodingbylcu
   summary: >-
     Encode un opérateur d’intérêt dans un `BlockEncoding`.
 
 
-    Cela construit une `BlockEncoding` Unity $U = P\cdot V\cdot P ^ \dagger $ qui encode certains opérateurs $H = \ sum_ {j} | \ alpha_j | U_j $ d’intérêt qui est une combinaison linéaire de divisions. En règle générale, $P $ est une unité de préparation de l’État, telle que $P \ket{0}\_a = \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ et $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
+    Cela crée une unité `BlockEncoding` de $U = P\cdot V\cdot P ^ \dagger $ qui encode un opérateur $H = \ sum_ {j} | \ alpha_j | U_j $ d’intérêt qui est une combinaison linéaire de divisions. En règle générale, $P $ est une unité de préparation de l’état{0}\_, telle que $P \ket a =\|\\|\_sum_j \sqrt{\ alpha_j\_/\vec\alpha 2} \ket{j} a $ et $V = \ sum_\_{j} \ket{j}\bra{j} a\otimes U_j $.
 - uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
   summary: >-
     Encode un opérateur d’intérêt dans un `BlockEncodingReflection`.
 
 
-    Cela construit une `BlockEncodingReflection` Unity $U = P\cdot V\cdot P ^ \dagger $ qui encode certains opérateurs $H = \ sum_ {j} | \ alpha_j | U_j $ d’intérêt qui est une combinaison linéaire de divisions. En règle générale, $P $ est une unité de préparation de l’État, telle que $P \ket{0}\_a \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ et $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
+    Cela crée une unité `BlockEncodingReflection` de $U = P\cdot V\cdot P ^ \dagger $ qui encode un opérateur $H = \ sum_ {j} | \ alpha_j | U_j $ d’intérêt qui est une combinaison linéaire de divisions. En général, $P $ est une unité de préparation de l’État,{0}\_telle que $P \ket a \\|sum_j\|\_\sqrt{\ alpha_j/\_\vec\alpha 2} \ket{j} a $ et $V = \ sum_ {\_j} \ket{j}\bra{j} a\otimes U_j $.
 - uid: microsoft.quantum.simulation.blockencodingtoreflection
   summary: >-
-    Convertit une `BlockEncoding` en une `BLockEncodingReflection`équivalente.
+    Convertit `BlockEncoding` un en un `BLockEncodingReflection`équivalent.
 
 
-    Autrement dit, étant donné un `BlockEncoding` unitaire $U $ qui encode un opérateur $H $ d’intérêt, le convertit en un `BlockEncodingReflection` $U' $ qui encode le même opérateur, mais satisfait également $U' ^ \dagger = U' $.
+    Autrement dit, étant donné `BlockEncoding` un $U unitaire $ qui encode un opérateur $H $ d’intérêt, le convertit en un `BlockEncodingReflection` $U' $ qui encode le même opérateur, mais satisfait également $U' ^ \dagger = U' $.
 
     Cela augmente la taille du Registre auxiliaire de $U $ par un qubit.
 - uid: microsoft.quantum.simulation.getgeneratorsystemfunction
-  summary: Récupère la fonction `GeneratorIndex` dans un `GeneratorSystem`.
+  summary: Récupère la `GeneratorIndex` fonction dans un `GeneratorSystem`.
 - uid: microsoft.quantum.simulation.getgeneratorsystemnterms
   summary: Récupère le nombre de termes dans un `GeneratorSystem`.
 - uid: microsoft.quantum.simulation.identitygeneratorindex
-  summary: Retourne un index de générateur cohérent avec la valeur zéro, `H = 0`, qui correspond à l’opération d’évolution de l’identité.
+  summary: Retourne un index de générateur cohérent avec le zéro Hamilton, `H = 0`, qui correspond à l’opération d’évolution de l’identité.
 - uid: microsoft.quantum.simulation.identitygeneratorsystem
-  summary: Retourne un système de générateur cohérent avec la `H = 0`de zéro-Hamilton, qui correspond à l’opération d’évolution de l’identité.
+  summary: Retourne un système générateur cohérent avec la valeur zéro de `H = 0`la propriété, qui correspond à l’opération d’évolution de l’identité.
 - uid: microsoft.quantum.simulation.identitytimedependentgeneratorsystem
-  summary: Retourne un système de génération dépendant du temps cohérent avec le `H(s) = 0`de la Hamilton.
+  summary: Retourne un système de génération dépendant du temps cohérent avec le réseau `H(s) = 0`de la même-Hamilton.
 - uid: microsoft.quantum.simulation.interpolatedevolution
   summary: Effectue une interpolation entre deux générateurs avec une planification uniforme, en retournant une opération qui applique l’évolution simulée sous le générateur dépendant du temps à un registre qubit.
 - uid: microsoft.quantum.simulation.interpolategeneratorsystems
-  summary: Retourne une `TimeDependentGeneratorSystem` représentant l’interpolation linéaire entre deux `GeneratorSystem`s.
+  summary: Retourne un `TimeDependentGeneratorSystem` qui représente l’interpolation linéaire entre deux `GeneratorSystem`s.
 - uid: microsoft.quantum.simulation.intstopaulis
   summary: Convertit un tableau d’entiers en un tableau d’opérateurs Pauli qubit uniques.
 - uid: microsoft.quantum.simulation.inttopauli
@@ -46,7 +46,7 @@ functions:
 - uid: microsoft.quantum.simulation.multiplygeneratorindex
   summary: Multiplie le coefficient dans un `GeneratorIndex`.
 - uid: microsoft.quantum.simulation.multiplygeneratorsystem
-  summary: Multiplie le coefficient de tous les termes dans un `GeneratorSystem`.
+  summary: Multiplie le coefficient de tous les termes dans `GeneratorSystem`un.
 - uid: microsoft.quantum.simulation.pauliblockencoding
   summary: >-
     Crée un Unity d’encodage de bloc pour un produit Hamilton.
@@ -66,28 +66,28 @@ functions:
 - uid: microsoft.quantum.simulation.sumgeneratorsystems
   summary: Ajoute plusieurs `GeneratorSystem`s pour créer un nouveau GeneratorSystem.
 - uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
-  summary: '`TimeDependentSimulationAlgorithm` fonction qui utilise une décomposition Trotter – Suzuki pour rapprocher un opérateur unitaire qui résout l’équation Schrodinger qui dépend du temps.'
+  summary: '`TimeDependentSimulationAlgorithm`fonction qui utilise une décomposition Trotter – Suzuki pour rapprocher un opérateur unitaire qui résout l’équation Schrodinger qui dépend du temps.'
 - uid: microsoft.quantum.simulation.trottersimulationalgorithm
-  summary: '`SimulationAlgorithm` fonction qui utilise une décomposition Trotter – Suzuki pour rapprocher l’opérateur Time-Evolution _exp (-iHt)_.'
+  summary: '`SimulationAlgorithm`fonction qui utilise une décomposition Trotter – Suzuki pour rapprocher l’opérateur Time-Evolution _exp (-iHt)_.'
 - uid: microsoft.quantum.simulation.trotterstep
-  summary: Implémente une seule heure-étape de l’évolution du temps par le système décrit dans une `EvolutionGenerator` à l’aide d’une décomposition Trotter – Suzuki.
+  summary: Implémente une seule heure-étape de l’évolution du temps par le système décrit dans `EvolutionGenerator` à l’aide d’une décomposition Trotter – Suzuki.
 operations:
 - uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
-  summary: Effectue la préparation de l’État en appliquant un `statePrepUnitary` à l’état d’entrée, suivi de la préparation de l’état de adiabatic à l’aide d’un `adiabaticUnitary`et d’une estimation de la phase finale en ce qui concerne `qpeUnitary`sur l’état résultant à l’aide d’un `phaseEstAlgorithm`.
+  summary: Exécute la préparation de l’état `statePrepUnitary` en appliquant un à l’état d’entrée, suivi de `adiabaticUnitary`la préparation de l’état de adiabatic à `qpeUnitary`l’aide d’un et d' `phaseEstAlgorithm`une estimation de la phase finale en ce qui concerne l’état résultant à l’aide d’un.
 - uid: microsoft.quantum.simulation.estimateenergy
-  summary: Exécute la préparation de l’État en appliquant un `statePrepUnitary` sur une estimation de la phase d’état d’entrée allouée automatiquement par rapport à `qpeUnitary`sur l’état résultant à l’aide d’un `phaseEstAlgorithm`.
+  summary: Exécute la préparation de l’état `statePrepUnitary` en appliquant un sur une estimation de phase d’état `qpeUnitary`d’entrée allouée automatiquement `phaseEstAlgorithm`par rapport à l’état résultant à l’aide d’un.
 - uid: microsoft.quantum.simulation.estimateenergywithadiabaticevolution
-  summary: Effectue la préparation de l’État en appliquant un `statePrepUnitary` sur un état d’entrée alloué automatiquement, suivi de la préparation de l’État adiabatic à l’aide d’une `adiabaticUnitary`et d’une estimation de la phase finalisation en ce qui concerne `qpeUnitary`sur l’état résultant à l’aide d’un `phaseEstAlgorithm`.
+  summary: Exécute la préparation de l’état `statePrepUnitary` en appliquant un sur un état d’entrée alloué automatiquement, suivi de `adiabaticUnitary`la préparation de l’état de adiabatic à `qpeUnitary`l’aide d’un et d' `phaseEstAlgorithm`une estimation de la phase finale en ce qui concerne l’état résultant à l’aide d’un.
 newtypes:
 - uid: microsoft.quantum.simulation.blockencoding
   summary: >-
     Représente une unité où un opérateur arbitraire d’intérêt est encodé dans le bloc supérieur gauche.
 
 
-    Autrement dit, une `BlockEncoding` est une unité $U $ où un opérateur arbitraire $H $ d’intérêt qui agit sur le Registre du système `s` est encodé dans le bloc supérieur gauche correspondant à l’État auxiliaire $ \ket{0}_a $. C'est
+    Autrement dit, un `BlockEncoding` est un $U unitaire $ où un opérateur arbitraire $H $ d’intérêt qui agit sur le Registre `s` système est encodé dans le bloc supérieur gauche correspondant à l’état auxiliaire $ \ket{0}_A $. C'est
 
 
-    $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \otimes I_s) = H \end{align} $ $.
+    $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \Otimes I_s) = H \end{align} $ $.
 - uid: microsoft.quantum.simulation.blockencodingreflection
   summary: Représente un `BlockEncoding` qui est également une réflexion.
 - uid: microsoft.quantum.simulation.evolutiongenerator
@@ -101,13 +101,13 @@ newtypes:
     Représente un générateur dynamique dépendant du temps.
 
 
-    Le paramètre `Double` est une planification dans $ [0, 1] $.
+    Le `Double` paramètre est une planification dans $ [0, 1] $.
 - uid: microsoft.quantum.simulation.evolutionset
   summary: >-
     Représente un ensemble de portes qui peuvent être facilement implémentées et utilisées pour implémenter des algorithmes de simulation.
 
 
-    Les éléments de l’ensemble sont indexés par un <xref:microsoft.quantum.simulation.generatorindex>, et chaque ensemble est décrit par une fonction de `GeneratorIndex` à <xref:microsoft.quantum.simulation.evolutionunitary>, qui sont des opérations paramétrées par un nombre réel représentant l’heure
+    Les éléments du jeu sont indexés par un <xref:microsoft.quantum.simulation.generatorindex>, et chaque jeu est décrit par une fonction de `GeneratorIndex` à <xref:microsoft.quantum.simulation.evolutionunitary>, qui sont des opérations paramétrées par un nombre réel représentant l’heure
 - uid: microsoft.quantum.simulation.evolutionunitary
   summary: >-
     Représente un opérateur d’évolution temporelle.
@@ -116,13 +116,13 @@ newtypes:
     Le premier paramètre est la durée de l’évolution et le deuxième paramètre est le registre qubit traité par l’unité.
 - uid: microsoft.quantum.simulation.generatorindex
   summary: >-
-    Représente un terme primitif unique dans le jeu de tous les générateurs dynamiques, par exemple les opérateurs Hermitian, pour lesquels il existe un mappage de ce générateur à l’évolution temporelle par ce générateur, par le biais de `EvolutionSet`.
+    Représente un terme primitif unique dans le jeu de tous les générateurs dynamiques, par exemple les opérateurs Hermitian, pour lesquels il existe un mappage de ce générateur à l’évolution temporelle par ce générateur, `EvolutionSet`via.
 
 
     Le premier élément (int [], double []) est un index qui est un terme unique, par exemple, la chaîne Pauli XXY avec le coefficient 0,5 est indexée par ([1, 1, 2], [0,5]). Sinon, Hamiltonians paramétré par une variable continue, telle que X cos φ + Y Sin φ, peut être représenté par l’instance ([], [φ]). Le deuxième élément indexe le sous-système sur lequel le générateur agit.
 - uid: microsoft.quantum.simulation.generatorsystem
   summary: >-
-    Représente une collection d' `GeneratorIndex`es.
+    Représente une collection de `GeneratorIndex`es.
 
 
     Nous effectuons une itération sur cette collection à l’aide d’un entier à index unique, et la taille de la collection est supposée être connue.
@@ -131,7 +131,7 @@ newtypes:
     Représente un algorithme de simulation indépendant du temps.
 
 
-    Une technique de simulation indépendante du temps convertit une <xref:microsoft.quantum.simulation.evolutiongenerator>
+    Une technique de simulation indépendante du temps convertit un<xref:microsoft.quantum.simulation.evolutiongenerator>
 
     à l’évolution de l’heure unitaire pour un intervalle de temps donné.
 - uid: microsoft.quantum.simulation.timedependentblockencoding
@@ -139,7 +139,7 @@ newtypes:
     Représente un `BlockEncoding` contrôlé par un registre d’horloge.
 
 
-    Autrement dit, un `TimeDependentBlockEncoding` est un $U unitaire $ contrôlé par un État $ \ket{k} _d $ dans le registre d’horloge `d`, de telle sorte qu’un opérateur arbitraire $H _k $ d’intérêt qui agit sur le Registre du système `s` est encodé dans le bloc supérieur gauche correspondant à l’État auxiliaire $ \ket{0}_a $. C'est
+    Autrement dit, un `TimeDependentBlockEncoding` est un $U unitaire $ contrôlé par un État $ \ket{k} _D $ dans le Registre `d` d’horloge, de telle sorte qu’un opérateur arbitraire $H _K $ d’intérêt qui agit `s` sur le registre système est encodé dans le bloc supérieur gauche correspondant à l’État auxiliaire{0}$ \ket _A $. C'est
 
 
     $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k.
@@ -152,15 +152,15 @@ newtypes:
     Représente un algorithme de simulation dépendant du temps.
 
 
-    Une technique de simulation dépendante du temps convertit une <xref:microsoft.quantum.simulation.evolutionschedule>
+    Une technique de simulation dépendante du temps convertit un<xref:microsoft.quantum.simulation.evolutionschedule>
 
     à l’évolution temporelle pour un intervalle de temps donné.
 - uid: microsoft.quantum.simulation.unitary
   summary: Représente l’évolution sous un opérateur unitaire.
 metadata:
-  ms.openlocfilehash: 967c27e6c5c8f475e54f7e9d4f3a14594fb04cc5
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: cdcfc7e688b576d0e7941695ad0a63b030bb5692
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76869825"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675460"

@@ -4,13 +4,13 @@ name: Microsoft.Quantum.Arithmetic
 summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions et des opérations utilisées pour le calcul cohérent de l’arithmétique."
 functions:
 - uid: microsoft.quantum.arithmetic.bigendianaslittleendian
-  summary: Convertit un registre `BigEndian` qubit en un registre `LittleEndian` qubit en inversant le classement qubit.
+  summary: Convertit `BigEndian` un registre qubit en `LittleEndian` Registre qubit en inversant le classement qubit.
 - uid: microsoft.quantum.arithmetic.identicalformatfactfxp
   summary: Déclarez que tous les nombres à virgule fixe dans le tableau fourni ont des positions de points et des numéros qubit identiques.
 - uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
   summary: Déclarez que tous les nombres à virgule fixe dans le tableau fourni ont des positions de point identiques lors du comptage à partir du bit de poids faible. Par exemple, le nombre de bits moins la position du point doit être constant pour tous les nombres à virgule fixe dans le tableau.
 - uid: microsoft.quantum.arithmetic.littleendianasbigendian
-  summary: Convertit un registre `LittleEndian` qubit en un registre `BigEndian` qubit en inversant le classement qubit.
+  summary: Convertit `LittleEndian` un registre qubit en `BigEndian` Registre qubit en inversant le classement qubit.
 - uid: microsoft.quantum.arithmetic.reversedopbe
   summary: À partir d’une opération qui prend une entrée de poids fort, retourne une nouvelle opération qui prend une entrée de primauté des octets de poids faible.
 - uid: microsoft.quantum.arithmetic.reversedopbea
@@ -33,19 +33,19 @@ operations:
 - uid: microsoft.quantum.arithmetic.addfxp
   summary: Ajoute deux nombres à virgule fixe stockés dans des registres quantiques.
 - uid: microsoft.quantum.arithmetic.addi
-  summary: Choisit automatiquement l’ajout avec Carry et sans, selon la taille du registre de `ys`.
+  summary: Choisit automatiquement entre l’ajout avec Carry et sans, en fonction de la taille du `ys`Registre de.
 - uid: microsoft.quantum.arithmetic.applyleoperationonphasele
-  summary: Applique une opération qui accepte un registre <xref:microsoft.quantum.arithmetic.phaselittleendian> en tant qu’entrée dans un registre cible de type <xref:microsoft.quantum.arithmetic.littleendian>.
+  summary: Applique une opération qui prend un <xref:microsoft.quantum.arithmetic.phaselittleendian> Registre comme entrée sur un registre cible de type <xref:microsoft.quantum.arithmetic.littleendian>.
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
-  summary: Applique une opération qui accepte un registre <xref:microsoft.quantum.arithmetic.phaselittleendian> en tant qu’entrée dans un registre cible de type <xref:microsoft.quantum.arithmetic.littleendian>.
+  summary: Applique une opération qui prend un <xref:microsoft.quantum.arithmetic.phaselittleendian> Registre comme entrée sur un registre cible de type <xref:microsoft.quantum.arithmetic.littleendian>.
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
-  summary: Applique une opération qui accepte un registre <xref:microsoft.quantum.arithmetic.phaselittleendian> en tant qu’entrée dans un registre cible de type <xref:microsoft.quantum.arithmetic.littleendian>.
+  summary: Applique une opération qui prend un <xref:microsoft.quantum.arithmetic.phaselittleendian> Registre comme entrée sur un registre cible de type <xref:microsoft.quantum.arithmetic.littleendian>.
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaseleca
-  summary: Applique une opération qui accepte un registre <xref:microsoft.quantum.arithmetic.phaselittleendian> en tant qu’entrée dans un registre cible de type <xref:microsoft.quantum.arithmetic.littleendian>.
+  summary: Applique une opération qui prend un <xref:microsoft.quantum.arithmetic.phaselittleendian> Registre comme entrée sur un registre cible de type <xref:microsoft.quantum.arithmetic.littleendian>.
 - uid: microsoft.quantum.arithmetic.applymajorityinplace
   summary: Applique l’opération de qubit majoritaire sur place sur un registre de qubits.
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
-  summary: Applique une opération qui accepte un registre <xref:microsoft.quantum.arithmetic.littleendian> en tant qu’entrée dans un registre cible de type <xref:microsoft.quantum.arithmetic.phaselittleendian>.
+  summary: Applique une opération qui prend un <xref:microsoft.quantum.arithmetic.littleendian> Registre comme entrée sur un registre cible de type <xref:microsoft.quantum.arithmetic.phaselittleendian>.
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
   summary: ''
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlec
@@ -79,18 +79,18 @@ operations:
 - uid: microsoft.quantum.arithmetic.assertprobint
   summary: Déclare que la probabilité d’un état spécifique d’un registre Quantum a la valeur attendue.
 - uid: microsoft.quantum.arithmetic.carry
-  summary: Implémente une porte de transport réversible. À partir d’un bit de transport encodé dans qubit `carryIn` et de deux bits opérande encodés dans `summand1` et `summand2`, calcule l’opération de bits XOR de `carryIn`, `summand1` et `summand2` dans le `summand2` qubit et le report est XOR au `carryOut`qubit.
+  summary: Implémente une porte de transport réversible. Avec `carryIn` un bit de transport encodé dans qubit et deux bits opérande encodés dans `summand1` et `summand2`, calcule le XOR au niveau du bit de `carryIn` `summand1` et `summand2` dans le qubit `summand2` et le résultat est XOR au qubit. `carryOut`
 - uid: microsoft.quantum.arithmetic.cascadeccnot
   summary: >-
     Implémente une cascade de portes CCNOT contrôlées sur les bits correspondants de deux registres qubit, agissant sur la qubit suivante de l’un des registres.
 
-    À partir de qubits à la position 0 dans les deux registres en tant que contrôles, CCNOT est appliqué au qubit à la position 1 du Registre cible, puis contrôlé par le qubits à la position 1 agissant sur le qubit à la position 2 dans le registre cible, etc., se terminant par une action sur la qubit cible à la position `Length(nQubits)-1`.
+    À partir de qubits à la position 0 dans les deux registres en tant que contrôles, CCNOT est appliqué au qubit à la position 1 du Registre cible, puis contrôlé par le qubits à la position 1 agissant sur le qubit à la position 2 dans le registre cible, etc., se terminant par une action `Length(nQubits)-1`sur le qubit cible à la position 2.
 - uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
   summary: Compare deux nombres à virgule fixe stockés dans des registres quantiques et contrôle un retournement sur le résultat.
 - uid: microsoft.quantum.arithmetic.comparegti
-  summary: 'Wrapper pour une comparaison d’entiers : `result = x > y`.'
+  summary: Wrapper pour une comparaison d' `result = x > y`entiers :.
 - uid: microsoft.quantum.arithmetic.comparegtsi
-  summary: 'Wrapper pour la comparaison des entiers signés : `result = xs > ys`.'
+  summary: Wrapper pour comparaison d’entiers `result = xs > ys`signés :.
 - uid: microsoft.quantum.arithmetic.compareusingripplecarry
   summary: Cette opération vérifie si un entier représenté par un registre de qubits est supérieur à un autre entier, en appliquant un XOR du résultat dans un qubit de sortie.
 - uid: microsoft.quantum.arithmetic.computereciprocalfxp
@@ -98,7 +98,7 @@ operations:
 - uid: microsoft.quantum.arithmetic.computereciprocali
   summary: Calcule la valeur réciproque 1/x pour un entier non signé x à l’aide de la Division d’entiers. Le résultat, interprété comme un entier, sera `floor(2^(2*n-1) / x)`.
 - uid: microsoft.quantum.arithmetic.copymostsignificantbit
-  summary: Copie le bit le plus significatif d’un registre qubit `from` représentant un entier non signé dans le `target`qubit.
+  summary: Copie le bit le plus significatif d’un registre `from` qubit qui représente un entier non signé dans le `target`qubit.
 - uid: microsoft.quantum.arithmetic.dividei
   summary: Divise deux entiers quantiques.
 - uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
@@ -134,9 +134,9 @@ operations:
 - uid: microsoft.quantum.arithmetic.multiplyfxp
   summary: Multiplie deux nombres à virgule fixe dans des registres quantiques.
 - uid: microsoft.quantum.arithmetic.multiplyi
-  summary: Multipliez les `xs` entières par des `ys` entières et stockez le résultat dans `result`, qui doit être initialement zéro.
+  summary: Multipliez `xs` l’entier `ys` par un entier et stockez le résultat dans `result`, qui doit être initialement égal à zéro.
 - uid: microsoft.quantum.arithmetic.multiplysi
-  summary: Multipliez les `xs` entières signées par un entier signé `ys` et stockez le résultat dans `result`, qui doit être initialement zéro.
+  summary: Multiplie un `xs` entier signé par `ys` un entier signé et stocke le résultat dans, qui doit être initialement de `result`zéro.
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: Initialise un nombre à virgule fixe Quantum sur une constante classique.
 - uid: microsoft.quantum.arithmetic.reflectaboutinteger
@@ -147,29 +147,29 @@ operations:
   summary: >-
     Les ondulations réversibles, sur place, ajoutent deux entiers.
 
-    Deux $n entiers $ bits encodés dans LittleEndian s’inscrivent `xs` et `ys`, tandis qu’un qubit porte, l’opération calcule la somme des deux entiers où les bits $n les moins significatifs du résultat sont conservés dans `ys` et le bit d’exécution est XOR à la `carry`qubit.
+    Étant donné deux entiers $n $ bits encodés dans LittleEndian Registers `xs` et `ys`, et un qubit Carry, l’opération calcule la somme des deux entiers où les bits les plus significatifs du $n sont conservés `ys` et le bit d’exécution est XOR au qubit. `carry`
 - uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
   summary: Les ondulations réversibles, sur place, ajoutent deux entiers sans effectuer de réalisation.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   summary: >-
     Les ondulations réversibles, sur place, ajoutent deux entiers.
 
-    Deux $n entiers $ bits encodés dans LittleEndian s’inscrivent `xs` et `ys`, tandis qu’un qubit porte, l’opération calcule la somme des deux entiers où les bits $n les moins significatifs du résultat sont conservés dans `ys` et le bit d’exécution est XOR à la `carry`qubit.
+    Étant donné deux entiers $n $ bits encodés dans LittleEndian Registers `xs` et `ys`, et un qubit Carry, l’opération calcule la somme des deux entiers où les bits les plus significatifs du $n sont conservés `ys` et le bit d’exécution est XOR au qubit. `carry`
 - uid: microsoft.quantum.arithmetic.squarefxp
   summary: Élève un nombre à virgule fixe.
 - uid: microsoft.quantum.arithmetic.squarei
   summary: Calcule le carré de l’entier `xs` dans `result`, qui doit être initialement égal à zéro.
 - uid: microsoft.quantum.arithmetic.squaresi
-  summary: Entier signé carré `xs` et stocke le résultat dans `result`, qui doit être initialement égal à zéro.
+  summary: Entier `xs` signé carré et stocke le résultat `result`dans, qui doit être initialement de zéro.
 - uid: microsoft.quantum.arithmetic.sum
-  summary: Implémente une porte de somme réversible. À partir d’un bit de transport encodé dans qubit `carryIn` et de deux bits opérande encodés dans `summand1` et `summand2`, calcule l’opération de bits XOR de `carryIn`, `summand1` et `summand2` dans le `summand2`qubit.
+  summary: Implémente une porte de somme réversible. À partir d’un bit de transport encodé dans `carryIn` qubit et de deux bits opérande encodés dans `summand1` et `summand2`, calcule l’opération de bits `carryIn`XOR `summand1` de `summand2` et dans le `summand2`qubit.
 newtypes:
 - uid: microsoft.quantum.arithmetic.bigendian
-  summary: Inscrivez-vous pour encoder un entier non signé dans l’ordre Big-endian. Le qubit avec l’index `0` encode le bit le plus élevé d’un entier non signé.
+  summary: Inscrivez-vous pour encoder un entier non signé dans l’ordre Big-endian. Le qubit avec l' `0` index encode le bit le plus élevé d’un entier non signé.
 - uid: microsoft.quantum.arithmetic.fixedpoint
   summary: Représente un registre de qubits codant un nombre à virgule fixe. Se compose d’un entier qui est égal au nombre de qubits à gauche du point binaire, c’est-à-dire qubits de poids supérieur ou égal à 1, et d’un registre quantique.
 - uid: microsoft.quantum.arithmetic.littleendian
-  summary: Inscrivez-vous pour encoder un entier non signé dans l’ordre de primauté des octets de poids faible. Le qubit avec l’index `0` encode le bit le plus bas d’un entier non signé.
+  summary: Inscrivez-vous pour encoder un entier non signé dans l’ordre de primauté des octets de poids faible. Le qubit avec l' `0` index encode le bit le plus bas d’un entier non signé.
 - uid: microsoft.quantum.arithmetic.phaselittleendian
   summary: >-
     Entiers non signés avec primauté des octets de poids faible (Little-endian) dans QFT.
@@ -179,9 +179,9 @@ newtypes:
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Type d’un entier signé stocké en Little endian (voir LittleEndian).
 metadata:
-  ms.openlocfilehash: 905bac104c15881be6b2e600bd090ff650d63e0e
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: eda1d6d9037caecd7a2f0d91acdc0e59d34efe41
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77904551"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675491"

@@ -23,7 +23,7 @@ output:
       Tableau imbriqué dont la longueur correspond à tupleList.
 
 
-      ## <a name="example"></a>Lire
+      ## <a name="example"></a> Exemple
 
 
       ```qsharp
@@ -39,9 +39,9 @@ output:
       uid: "'T"
       isLocal: true
 metadata:
-  ms.openlocfilehash: edc939bc4ebfe093ec4a97eda24888f6d7810e82
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: b583defde468b808cf8b77347bcf37384577b0f9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74866459"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675106"
