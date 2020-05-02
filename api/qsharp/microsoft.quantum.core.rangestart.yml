@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Core
 summary: Retourne la valeur de début définie de la plage donnée.
 remarks: >-
-  Le premier élément d’une expression de plage est `start`, son deuxième élément est `start+step`, le troisième élément est `start+step+step`, etc., jusqu’à ce que `end` soit passé.
+  Le premier élément d’une expression de `start`plage est, son deuxième `start+step`élément est, le `start+step+step`troisième élément est, etc `end` ., jusqu’à ce que soit passé.
 
 
   Notez que la valeur de début définie d’une plage est identique à celle du premier élément de la séquence, à moins que la plage spécifie une séquence vide (par exemple, 2. 1).
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0d618a26d71a5b41e6ea6b73503e9f099b18f129
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5a5240da851b459e732c78f7be94b8a2d02b1f1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231756"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657252"
