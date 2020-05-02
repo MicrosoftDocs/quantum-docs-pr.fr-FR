@@ -4,18 +4,18 @@ name: GeneratorSystem
 type: newtype
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Représente une collection d' `GeneratorIndex`es.
+  Représente une collection de `GeneratorIndex`es.
 
 
   Nous effectuons une itération sur cette collection à l’aide d’un entier à index unique, et la taille de la collection est supposée être connue.
-remarks: Les instances de `GeneratorSystem` peuvent être définies facilement à l’aide de la fonction <xref:microsoft.quantum.arrays.lookupfunction>.
+remarks: Les instances `GeneratorSystem` de peuvent être définies facilement à <xref:microsoft.quantum.arrays.lookupfunction> l’aide de la fonction.
 syntax: newtype GeneratorSystem = (Int, (Int -> Microsoft.Quantum.Simulation.GeneratorIndex));
 seeAlso:
 - microsoft.quantum.canon.lookupfunction
 metadata:
-  ms.openlocfilehash: 61312eb42da1e9bb67b5d2a79350c39e23aa0dac
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: eaa4d1d30f34cc987857e2cec7f11ef313266cac
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067014"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655045"
