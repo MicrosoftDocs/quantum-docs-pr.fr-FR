@@ -11,10 +11,10 @@ summary: >-
 
   Cela peut être utile lorsqu’une entrée d’un type d’opération est attendue, mais qu’aucune action ne doit être effectuée.
 
-  Par exemple, si un syndrome de correction d’erreur particulier indique qu’aucune erreur ne s’est produite, `NoOp<Qubit[]>` peut être la procédure de récupération appropriée.
+  Par exemple, si un syndrome de correction d’erreur particulier indique qu’aucune erreur ne `NoOp<Qubit[]>` s’est produite, il peut s’agir de la bonne procédure de récupération.
 
-  De même, si une opération attend une procédure de préparation de l’État comme entrée, `NoOp<Qubit[]>` peut être utilisé pour préparer l’État $ \ket{0 \cdots 0} $.
-remarks: Dans presque tous les cas, le paramètre de type de `NoOp` doit être spécifié explicitement. Par exemple, `NoOp<Qubit>` est identique à <xref:microsoft.quantum.intrinsic.i>.
+  De même, si une opération attend une procédure de préparation d’État comme entrée `NoOp<Qubit[]>` , peut être utilisé pour préparer l’État $ \ket{0 \cdots 0} $.
+remarks: Dans presque tous les cas, le paramètre de `NoOp` type doit être spécifié explicitement. Par exemple, `NoOp<Qubit>` est identique à <xref:microsoft.quantum.intrinsic.i>.
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
@@ -34,9 +34,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.i
 metadata:
-  ms.openlocfilehash: 8752eb93c1fba59065518ffd4665ea6f110ce1cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 74c85340e065929feabb81d7e97339f80255c0f6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222678"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678714"
