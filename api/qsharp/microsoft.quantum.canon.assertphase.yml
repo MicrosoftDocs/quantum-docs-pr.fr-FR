@@ -7,21 +7,21 @@ summary: >-
   Déclare que la phase d’un état de superposition égal a la valeur attendue.
 
 
-  En particulier, déclare que la phase $ \Phi $ d’un État Quantum qui peut être exprimée sous la forme $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ Ket{0} + e ^ {-i\phi} \ Ket{1}) $ pour certains t réels arbitraires a la valeur attendue.
+  En particulier, déclare que la phase $ \Phi $ d’un État Quantum qui peut être exprimée sous la forme $ \frac{e ^ {i t}}{2}{\sqrt} (e ^ {i\phi}{0} \ Ket + e ^ {-i\phi}{1}\ Ket) $ pour certains t réels arbitraires a la valeur attendue.
 examples: >-
-  L’assertion suivante aboutit : `qubit` est dans l’État $ \ket{\Psi} = e ^ {i 0,5} \ sqrt {1/2} \ Ket{0}+ e ^ {i 0.5} \ sqrt {1/2} \ Ket{1}$;
+  L’assertion suivante aboutit : `qubit` est dans l’État $ \ket{\Psi} = e ^ {i 0,5} \ sqrt {1/2} \{0}Ket + e ^ {i 0.5} \ sqrt {1/2} \{1}Ket $;
 
 
   - `AssertPhase(0.0,qubit,10e-10);`
 
 
-  `qubit` est dans l’État $ \ket{\Psi} = e ^ {i 0,5} \ racine {1/2} \ Ket{0}+ e ^ {-i 0,5} \ racine {1/2} \ Ket{1}$;
+  `qubit`est dans l’État $ \ket{\Psi} = e ^ {i 0,5} \ racine {1/2} \{0}Ket + e ^ {-i 0,5} \ racine {1/2} \{1}Ket $;
 
 
   - `AssertPhase(0.5,qubit,10e-10);`
 
 
-  `qubit` est dans l’État $ \ket{\Psi} = e ^ {-i 2.2} \ sqrt {1/2} \ Ket{0}+ e ^ {i 0,2} \ sqrt {1/2} \ Ket{1}$;
+  `qubit`est dans l’État $ \ket{\Psi} = e ^ {-i 2.2} \ racine {1/2} \{0}Ket + e ^ {i 0,2} \ racine {1/2} \{1}Ket $;
 
 
   - `AssertPhase(-1.2,qubit,10e-10);`
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 2eaeb042f68a2a5c0cff65918653c37f26ab8d4b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ecfc39806fb1ffe504c76889fb36949b4fee2ed4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212240"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674313"
