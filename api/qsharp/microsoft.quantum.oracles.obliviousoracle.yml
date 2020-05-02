@@ -12,16 +12,16 @@ summary: >-
 
   - Le registre Ancilla $a $ sur lequel $O $ agit.
 
-  - Le Registre du système $s $ sur lequel le $U unitaire souhaité $ est appliqué, après sélection du registre $a $ étant dans l’État $ \ket{t}\_a $.
+  - Le Registre du système $s $ sur lequel le $U unitaire souhaité est appliqué, après sélection du registre $a $ étant dans l’État $ \ket{t}\_a $.
 remarks: >-
-  Cette Oracle définie par $ $ O\ket {s}\_a\ket {\ PSI}\_s = \lambda\ket{t}\_a \ket{\Psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ agit sur l’État Ancilla $ \ket{s}\_un $ pour implémenter le $U unitaire $ sur tout état système $ \ket{\Psi}\_s $ avec l’amplitude $ \lambda $ dans la base marquée par $ \ket{t}\_un $.
+  Ce Oracle défini par $ $ O\ket {s}\_a\ket {\ PSI}\_s = \lambda\ket{t}\_a U \ket{\Psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ agit sur l’état Ancilla $ \ket{s}\_a $ pour implémenter le $U unitaire $ sur tout état du système $\_\ket{\Psi} s $ avec l’amplitude $ \lambda $ dans la base marquée par $\_\ket{t} a $.
 
-  Le premier paramètre est le registre qubit de $ \ket{s}\_un $. Le deuxième paramètre est le registre qubit de $ \ket{\Psi}\_s $.
+  Le premier paramètre est le registre qubit de $ \ket{s}\_a $. Le deuxième paramètre est le registre qubit de $ \ket{\Psi}\_s $.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231059"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681254"

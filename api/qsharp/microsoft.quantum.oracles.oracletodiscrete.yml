@@ -4,7 +4,7 @@ name: OracleToDiscrete
 type: function
 namespace: Microsoft.Quantum.Oracles
 summary: Dans le cas d’une opération qui représente une « boîte noire » Oracle, retourne une Oracle discrète qui représente la « boîte noire » Oracle répétée plusieurs fois.
-examples: '`OracleToDiscrete(U)(3, target)` équivaut à `U(target)` répétées trois fois.'
+examples: '`OracleToDiscrete(U)(3, target)`équivaut à une `U(target)` répétition à trois reprises.'
 syntax: 'function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl)) : Microsoft.Quantum.Oracles.DiscreteOracle'
 input:
   content: '(blackBoxOracle : (Qubit[] => Unit is Adj + Ctl))'
@@ -30,9 +30,9 @@ output:
   - summary: Opération partiellement appliquée sur la « boîte noire » Oracle représentant le temps d’Oracle discret
     uid: microsoft.quantum.oracles.discreteoracle
 metadata:
-  ms.openlocfilehash: e82c2f3a9d606b1e5316c45aaceeff702d067258
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b7361693d14245fcb99be5fa36d20d2f332ded0a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230889"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681225"
