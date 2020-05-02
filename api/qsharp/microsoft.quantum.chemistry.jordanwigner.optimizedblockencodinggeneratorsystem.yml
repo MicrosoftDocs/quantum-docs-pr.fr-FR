@@ -3,23 +3,23 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsys
 name: OptimizedBlockEncodingGeneratorSystem
 type: function
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Convertit une `GeneratorSystem` de Hamilton décrite par `JWOptimizedHTerms` en exprimée en termes de la `GeneratorIndex`Pauli.
+summary: Convertit un sous-sein `JWOptimizedHTerms` de Hamilton `GeneratorSystem` décrit par en un exprimé en `GeneratorIndex`termes de Pauli.
 syntax: 'function OptimizedBlockEncodingGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms) : Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)'
   types:
   - name: data
-    summary: Description de la présentation de la structure de `JWOptimizedHTerms`.
+    summary: Description de la structure de `JWOptimizedHTerms` l’un au format.
     uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
 output:
   content: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem
   types:
-  - summary: Représentation de la sous-forme de la `GeneratorSystem`.
+  - summary: Représentation de Hamilton sous la `GeneratorSystem`forme.
     uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
 metadata:
-  ms.openlocfilehash: 85e34ffd430096873e9bdb9e15be9ebaf7127e94
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3a8354223ba4c5fe7c45d6b494f62aa5ceb41a38
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231926"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82665238"
