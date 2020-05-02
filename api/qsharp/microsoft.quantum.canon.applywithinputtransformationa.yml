@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: Dans le cas d’une opération qui accepte une entrée, une fonction qui retourne une sortie compatible avec cette opération, et une entrée à cette fonction, applique l’opération à l’aide de la fonction pour transformer l’entrée en un formulaire attendu par l’opération.
 examples: >-
-  L’appel suivant utilise @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" pour appliquer une opération conçue pour @"Microsoft.Quantum.Arithmetic.BigEndian" des entrées à une entrée de type @"Microsoft.Quantum.Arithmetic.LittleEndian":
+  L’appel suivant utilise @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" pour appliquer une opération conçue pour @"Microsoft.Quantum.Arithmetic.BigEndian" des entrées à une entrée de @"Microsoft.Quantum.Arithmetic.LittleEndian"type :
 
 
   ```qsharp
@@ -58,9 +58,9 @@ seeAlso:
 - applywithinputtransformationca
 - transformedoperation
 metadata:
-  ms.openlocfilehash: 29b22fdff94be068341e94ad4c5f67303011a298
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bf2e1c808b908ea5e1ad15014b5d7745708d6156
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212665"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676272"

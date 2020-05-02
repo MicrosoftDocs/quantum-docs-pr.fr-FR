@@ -7,7 +7,7 @@ summary: >-
   Effectue un incrément modulaire d’un registre qubit à l’aide d’une constante entière.
 
 
-  Laissez-nous `increment` par $a $, `modulus` par $N $ et entiers codés dans `target` par $y $.
+  Faites-nous part `increment` de $a $, `modulus` de $N $ et de l’entier encodé dans `target` par $y $.
 
   L’opération effectue ensuite la transformation suivante : \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} entiers sont encodés au format Little endian dans QFT.
 remarks: >-
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: 69240c9ecac0917f8f2a6d1f6a3554cc93269cbd
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871411"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676850"
