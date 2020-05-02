@@ -17,7 +17,7 @@ input:
     summary: Nombre à virgule fixe d’entrée pour lequel évaluer le polynôme.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Nombre à virgule fixe de sortie qui contiendra P (x). Doit être dans l’État $ \ket{0}$ initialement.
+    summary: Nombre à virgule fixe de sortie qui contiendra P (x). Doit être initialement à l’état{0}$ \ket $.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3ae6ab137b2c257a98b0ec777c19212d8732f619
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ae149fe3ef12b5384bd08b62daabd6368e130399
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219108"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679652"
