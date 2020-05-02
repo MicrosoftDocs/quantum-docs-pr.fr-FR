@@ -16,7 +16,7 @@ input:
     isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
   - name: options
-    summary: Configuration à utiliser lors de la formation ; Pour plus d’informations, consultez @"microsoft.quantum.machinelearning.trainingoptions" et @"microsoft.quantum.machinelearning.defaulttrainingoptions".
+    summary: Configuration à utiliser lors de la formation ; pour @"microsoft.quantum.machinelearning.trainingoptions" plus @"microsoft.quantum.machinelearning.defaulttrainingoptions" d’informations, consultez et.
     uid: microsoft.quantum.machinelearning.trainingoptions
   - name: trainingSchedule
     summary: Une planification d’échantillonnage à utiliser lors de la sélection d’exemples à partir des données d’apprentissage pendant les étapes de formation.
@@ -39,9 +39,9 @@ seeAlso:
 - microsoft.quantum.machinelearning.trainsequentialclassifier
 - microsoft.quantum.machinelearning.validatesequentialclassifier
 metadata:
-  ms.openlocfilehash: 5b574d72115518389124d850a96f9fbcd669bd4e
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: ab30be93a0a1e0b347d2adfe82dbcf07b12d6996
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77909039"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684289"
