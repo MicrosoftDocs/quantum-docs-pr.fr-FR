@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Math
 summary: Calcule un tuple $ (u, v) $ de sorte que $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, où $ \operatorname{GCD} $ est $a le plus grand diviseur commun de $a $ et $b $. Le GCD est toujours positif.
 syntax: 'function ExtendedGreatestCommonDivisorL (a : BigInt, b : BigInt) : (BigInt, BigInt)'
-references: '- Cette implémentation est conforme à https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
+references: '- Cette implémentation est conforme àhttps://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
 input:
   content: '(a : BigInt, b : BigInt)'
   types:
@@ -27,9 +27,9 @@ output:
     - isPrimitive: true
       uid: BigInt
 metadata:
-  ms.openlocfilehash: 0e3c6138d5efe03603338341e37a9cf7bc07fb47
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ade2f3451a273b69bcabaeae06ef7b234816291b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233014"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673832"
