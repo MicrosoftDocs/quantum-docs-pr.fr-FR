@@ -9,7 +9,7 @@ summary: >-
   Si l’opérateur d’identité est donné, le qubit est préparé dans l’état de la même façon.
 
 
-  Si le qubit a été initialement dans l’État $ \ket{0}$, cette opération prépare le qubit dans le eigenstate $ + $1 d’un opérateur Pauli donné, ou, pour `PauliI`, à la place dans l’état le plus mélangé (voir <xref:microsoft.quantum.preparation.preparesinglequbitidentity>).
+  Si le qubit a été initialement dans l’état{0}$ \ket $, cette opération prépare le qubit dans le eigenstate $ + $1 d’un opérateur Pauli donné, ou, pour `PauliI`, dans l’état le plus maximal mélangé à la <xref:microsoft.quantum.preparation.preparesinglequbitidentity>place (consultez).
 
 
   Si le qubit était dans un État autre que $ \ket{0}$, cette opération applique les portes suivantes : $H $ pour `PauliX`, $HS $ pour `PauliY`, $I $ pour `PauliZ` et <xref:microsoft.quantum.preparation.preparesinglequbitidentity> pour `PauliI`.
@@ -31,9 +31,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: be4eb730bebd00531aaa49302578b23f4a52237b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 70032bd9174bb987206e2084e2788e5ac7169ae7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226537"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681117"

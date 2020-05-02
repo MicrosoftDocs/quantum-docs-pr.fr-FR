@@ -4,13 +4,13 @@ name: ForEach
 type: operation
 namespace: Microsoft.Quantum.Arrays
 summary: À partir d’un tableau et d’une opération définie pour les éléments du tableau, retourne un nouveau tableau qui se compose des images du tableau d’origine sous l’opération.
-remarks: "L’opération est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons un tableau `'T[]` et une opération `action : 'T -> 'U` nous pouvons mapper les éléments du tableau et produire un nouveau tableau de type `'U[]`."
+remarks: "L’opération est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons `'T[]` un tableau et `action : 'T -> 'U` une opération, nous pouvons mapper les éléments du tableau et produire un nouveau tableau `'U[]`de type."
 syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
 input:
   content: "(action : ('T => 'U), array : 'T[])"
   types:
   - name: action
-    summary: Opération de `'T` à `'U` appliquée à chaque élément.
+    summary: Opération de `'T` à `'U` qui est appliquée à chaque élément.
     isOperation: true
     input:
       types:
@@ -28,19 +28,19 @@ input:
 output:
   content: "'U[]"
   types:
-  - summary: Tableau `'U[]` d’éléments mappés par l’opération de `action`.
+  - summary: Tableau `'U[]` d’éléments mappés par l' `action` opération.
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: Type des éléments de `array`.
+  summary: Type des `array` éléments.
 - uid: "'U"
-  summary: Type de résultat de l’opération de `action`.
+  summary: Type de résultat de l' `action` opération.
 metadata:
-  ms.openlocfilehash: 6f61c37fb7a62bcbcfe91768725173e9a919e987
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: af4b6b469017e4cee581a9bdd96ef6171d9b1deb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871020"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681033"
