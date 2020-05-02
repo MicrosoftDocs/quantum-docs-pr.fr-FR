@@ -3,14 +3,14 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
 name: OptimizedBEXY
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Une unité de $U $ qui applique la chaîne Pauli sur $ (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0 $ sur qubits $0.. p $ conditionné sur un index $z \Dans\{0, 1\}$ et $p $. Autrement dit, $ $ \begin{align} U\ket {z} \ Ket {p} \ Ket {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0\ket {\ PSI} \end{align} $ $
+summary: Une $U unitaire $ qui applique la chaîne Pauli sur $ (X ^ {z + 1}\_py ^ {z}\_p) z\_{p-1}... Z_0 $ sur qubits $0.. p $ conditionné sur un index $z \Dans\{0, 1\}$ et $p $. Autrement dit, $ $ \begin{align} U\ket {z} \ Ket {p} \ Ket {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1}\_py ^ {z}\_p) z\_{p-1}... Z_0 \ket{\Psi} \end{align} $ $
 syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
-references: '- Encodage des spectres électroniques dans des circuits quantiques avec une complexité T linéaire Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru pâle, Austin Fowler, Hartmut Neven https://arxiv.org/abs/1805.03662'
+references: '- Encodage des spectres électroniques dans des circuits quantiques avec une complexité T linéaire Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru pâle, Austin Fowler, Hartmut Nevenhttps://arxiv.org/abs/1805.03662'
 input:
   content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
   types:
   - name: pauliBasis
-    summary: Quand ce qubit est dans l’État $ \ket{0}$, $X $ est appliqué. Lorsqu’il est dans l’État $ \ket{1}$, $Y $ est appliqué.
+    summary: Quand ce qubit est dans l’état ${0}\ket $, $X $ est appliqué. Lorsqu’il est dans l’état ${1}\ket $, $Y $ est appliqué.
     isPrimitive: true
     uid: Qubit
   - name: indexRegister
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: e0ac3f2f050ed584053f7da7a310f1855e992141
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2208efefe094c472d4f179e3a75dae721c4ff211
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228458"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82665303"
