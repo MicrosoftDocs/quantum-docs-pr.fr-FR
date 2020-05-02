@@ -3,13 +3,13 @@ uid: microsoft.quantum.chemistry.htermtogenidx
 name: HTermToGenIdx
 type: function
 namespace: Microsoft.Quantum.Chemistry
-summary: Convertit un terme de Hamilton dans `HTerm` format de données en GeneratorIndex.
+summary: Convertit un terme de la `HTerm` structure de données en GeneratorIndex.
 syntax: 'function HTermToGenIdx (term : Microsoft.Quantum.Chemistry.HTerm, termType : Int[]) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(term : Microsoft.Quantum.Chemistry.HTerm, termType : Int[])'
   types:
   - name: term
-    summary: Données d’entrée au format `HTerm`.
+    summary: Données d’entrée `HTerm` au format.
     uid: microsoft.quantum.chemistry.hterm
   - name: termType
     summary: Informations supplémentaires ajoutées à GeneratorIndex.
@@ -22,9 +22,9 @@ output:
   - summary: GeneratorIndex représentant un terme de Hamilton représenté par `term`, ainsi que des informations supplémentaires ajoutées par `termType`.
     uid: microsoft.quantum.simulation.generatorindex
 metadata:
-  ms.openlocfilehash: edfd08b1e9f80a0f468d50a10a7ad3ff0187511c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cf8f527c6acf2762b5ce415b707358f1011997ef
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228866"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677511"

@@ -7,10 +7,10 @@ summary: Vide l’état de l’ordinateur cible actuel associé à l’qubits do
 remarks: >-
   Cette méthode vous permet de vider les informations associées à l’état du qubits donné dans un fichier ou un autre emplacement.
 
-  Les informations réelles générées et la sémantique des `location` sont spécifiques à chaque ordinateur cible. Toutefois, le fait de fournir un tuple vide en tant qu’emplacement (`()`) signifie généralement qu’il doit générer la sortie dans la console.
+  Les informations réelles générées et la sémantique de `location` sont spécifiques à chaque ordinateur cible. Toutefois, le fait de fournir un tuple vide comme`()`emplacement () signifie généralement que le résultat doit être généré dans la console.
 
 
-  Pour le simulateur d’état local distribué dans le cadre du kit de développement Quantum, cette méthode attend une chaîne avec le chemin d’accès à un fichier dans lequel elle écrira l’état du qubits donné (c.-à-d. la fonction Wave du sous-système correspondant) en tant qu’élément AR unidimensionnel. rayon de nombres complexes, dans lequel chaque élément représente les amplitudes de la probabilité de mesurer l’état correspondant.
+  Pour le simulateur d’état complet distribué dans le cadre du kit de développement quantique, cette méthode attend une chaîne avec le chemin d’accès à un fichier dans lequel elle écrira l’état du qubits donné (c.-à-d. la fonction Wave du sous-système correspondant) en tant que tableau unidimensionnel de nombres complexes, dans lequel chaque élément représente les amplitudes de la probabilité de mesure de l’état correspondant.
 
   Si le qubits donné est enchevêtré avec un autre qubit et que son état ne peut pas être séparé, il signale simplement que les qubits sont enchevêtrés.
 syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
@@ -33,9 +33,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 6d553a95bfa619d142b681e2830fc0375c6bcae5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3bf5302364b37cb1ccef651935833b966ff84464
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227030"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677225"

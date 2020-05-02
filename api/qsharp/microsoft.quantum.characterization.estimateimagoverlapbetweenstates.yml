@@ -4,7 +4,7 @@ name: EstimateImagOverlapBetweenStates
 type: operation
 namespace: Microsoft.Quantum.Characterization
 summary: À partir de deux opérations qui préparent les copies d’un État, évalue la partie imaginaire du chevauchement entre les États préparés par chaque opération.
-remarks: Cette opération utilise le test Hadarmard pour rechercher la partie imaginaire de $ $ \begin{align} \braket{\Psi | V ^ {\dagger} U | \Psi} \end{align} $ $ où $ \ket{\Psi} $ est l’état préparé par `commonPreparation`, $U $ est la représentation unitaire de l’action de `preparation1`et où $V $ correspond à `preparation2`.
+remarks: Cette opération utilise le test Hadarmard pour rechercher la partie imaginaire de $ $ \begin{align} \braket{\Psi | V ^ {\dagger} U | \Psi} \end{align} $ $ où $ \ket{\Psi} $ est l’état préparé par `commonPreparation`, $U $ est la représentation unitaire de l’action de `preparation1`, et où $V $ correspond à. `preparation2`
 syntax: 'operation EstimateImagOverlapBetweenStates (commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int) : Double'
 references: '- Aharonov *et al.* [quant-pH/0511096](https://arxiv.org/abs/quant-ph/0511096).'
 input:
@@ -55,7 +55,7 @@ input:
     - Adjoint
     - Controlled
   - name: nQubits
-    summary: Nombre de qubits sur lesquels `commonPreparation`, `preparation1`et `preparation2` tous agissent.
+    summary: Nombre de qubits sur lesquels `commonPreparation`, `preparation1`et `preparation2` agissent.
     isPrimitive: true
     uid: Int
   - name: nMeasurements
@@ -71,9 +71,9 @@ seeAlso:
 - microsoft.quantum.characterization.estimaterealoverlapbetweenstates
 - microsoft.quantum.characterization.estimateoverlapbetweenstates
 metadata:
-  ms.openlocfilehash: 8d15c55627cc3cdf9167c7834fe8a1f1e0864fc1
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 6885830a644da147b0e9fe4e9efd3b553b15885e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872850"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677719"

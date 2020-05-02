@@ -10,7 +10,7 @@ remarks: >-
   \end{align} $ $
 
 
-  À partir d’un tableau d’opérateurs Pauli `[P0, ..., Pn]`, cette fonction retourne un entier avec une expansion binaire formée en concaténant les mappages de chaque opérateur Pauli dans l’ordre Big-endian `bits(Pn) ... bits(P0)`.
+  À partir d’un tableau d' `[P0, ..., Pn]`opérateurs Pauli, cette fonction retourne un entier avec une expansion binaire formée en concaténant les mappages de chaque opérateur Pauli dans l' `bits(Pn) ... bits(P0)`ordre Big-endian.
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Entier qui identifie de façon unique `paulis`, comme décrit ci-dessous.
+  - summary: Entier qui identifie `paulis`de manière unique, comme décrit ci-dessous.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0c211075d07147b1c1392fe3f3e4ceb110364bb3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230753"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677390"
