@@ -7,9 +7,9 @@ summary: >-
   Applique une opération pour chaque index dans la puissance Cartésiente d’une plage d’entiers.
 
 
-  Applique de manière itérative une opération pour chaque élément d’une puissance cartésienne de la plage `0..(bound - 1)`.
+  Applique de manière itérative une opération pour chaque élément d’une puissance Cartésiene de `0..(bound - 1)`la plage.
 examples: >-
-  Étant donné une opération `op`, les deux extraits de code suivants sont équivalents :
+  Pour une opération `op`donnée, les deux extraits de code suivants sont équivalents :
 
 
   ```Q#
@@ -39,7 +39,7 @@ input:
   content: '(power : Int, bound : Int, op : (Int[] => Unit))'
   types:
   - name: power
-    summary: Puissance Cartésiene à laquelle la plage `0..(bound - 1)` doit être déclenchée.
+    summary: Puissance Cartésiene à laquelle la plage `0..(bound - 1)` doit être levée.
     isPrimitive: true
     uid: Int
   - name: bound
@@ -66,9 +66,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianproduct
 metadata:
-  ms.openlocfilehash: 4679e1b569dab167eecbb22947543ab993d7fa8d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: a6f2d0e1f99c6cf7038803271af974a1c5fca465
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870935"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679070"
