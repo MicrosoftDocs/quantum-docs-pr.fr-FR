@@ -17,15 +17,7 @@
     - name: Bien démarrer avec le QDK
       href: welcome.md
     - name: Installer le QDK
-      items:
-        - name: Vue d’ensemble de l’installation
-          href: install-guide/index.md
-        - name: 'Q# + C#'
-          href: install-guide/csinstall.md
-        - name: 'Q# + Python'
-          href: install-guide/pyinstall.md
-        - name: 'Notebooks Jupyter Q#'
-          href: install-guide/qjupyter.md
+      href: install-guide/toc.yml
     - name: Mettre à jour le QDK
       href: install-guide/update.md
     - name: 'Comment créer un projet Q#'
