@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 84e5db17ab8d963a75c72da38d3e4487b89abc9d
-ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
+ms.openlocfilehash: 91f12ef6bd15e27c8920471442c66ff3b1e71122
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82030597"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677086"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notes de publication de Microsoft Quantum Development Kit
 
@@ -20,6 +20,21 @@ Cet article contient des informations sur chaque version de Quantum Development 
 Pour obtenir des instructions d’installation, consultez le [Guide d’installation](xref:microsoft.quantum.install).
 
 Pour obtenir des instructions de mise à jour, consultez le [Guide de mise à jour](xref:microsoft.quantum.update).
+
+## <a name="version-01120042825"></a>Version 0.11.2004.2825
+
+*Date de publication : 30 avril 2020*
+
+Cette version contient ce qui suit :
+
+- Nouvelle prise en charge des applications en ligne de commande Q#, qui n’ont plus besoin d’un fichier hôte C# ou Python. Pour plus d’informations sur la prise en main des applications en ligne de commande Q#, rendez-vous [ici](xref:microsoft.quantum.install.standalone).
+- Mise à jour du démarrage rapide du générateur de nombres aléatoires quantique pour ne plus avoir besoin de fichier hôte Python ou C#. Voir le [Démarrage rapide](xref:microsoft.quantum.quickstarts.qrng) mis à jour
+- Améliorations des performances des images IQ# Docker
+
+> [!NOTE]
+> Actuellement, les applications en ligne de commande Q# qui utilisent le nouvel attribut [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) ne peuvent pas être appelées à partir de programmes hôtes Python ou .NET.
+> Pour plus d’informations, consultez les guides [Python](xref:microsoft.quantum.install.python) et [Interopérabilité .NET](xref:microsoft.quantum.install.cs).
+
 
 ## <a name="version-01120033107"></a>Version 0.11.2003.3107
 

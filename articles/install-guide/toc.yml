@@ -1,0 +1,13 @@
+items:
+  - name: Vue d’ensemble de l’installation
+    href: index.md
+  - name: 'Applications en ligne de commande Q#'
+    href: standalone.md
+  - name: 'Notebooks Jupyter Q#'
+    href: qjupyter.md
+  - name: 'Utilisation de Q# avec d’autres langages'
+    items:
+      - name: 'Utilisation de Q# avec Python'
+        href: pyinstall.md
+      - name: 'Utilisation de Q# avec .NET'
+        href: csinstall.md
