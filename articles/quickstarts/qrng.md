@@ -6,98 +6,114 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: b9c8592b1296a7de1b9ad5d0538ad1972ec25e31
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 5a433606f08f4c6a4ab7b5df67a7f0c30d2b3f0d
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906982"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82683004"
 ---
-# <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a><span data-ttu-id="6c0a2-103">Démarrage rapide : Implémenter un générateur de nombres aléatoires quantique en Q#</span><span class="sxs-lookup"><span data-stu-id="6c0a2-103">Quickstart: Implement a Quantum Random Number Generator in Q#</span></span>
-<span data-ttu-id="6c0a2-104">Un générateur de nombres aléatoires quantique est un exemple simple d’algorithme quantique écrit en Q#.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-104">A simple example of a quantum algorithm written in Q# is a quantum random number generator.</span></span> <span data-ttu-id="6c0a2-105">Cet algorithme exploite la nature de la mécanique quantique pour produire un nombre aléatoire.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-105">This algorithm leverages the nature of quantum mechanics to produce a random number.</span></span> 
+# <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a><span data-ttu-id="4f42b-103">Démarrage rapide : Implémenter un générateur de nombres aléatoires quantique en Q\#</span><span class="sxs-lookup"><span data-stu-id="4f42b-103">Quickstart: Implement a Quantum Random Number Generator in Q\#</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="6c0a2-106">Prérequis</span><span class="sxs-lookup"><span data-stu-id="6c0a2-106">Prerequisites</span></span>
+<span data-ttu-id="4f42b-104">Un générateur de nombres aléatoires quantique est un exemple simple d’algorithme quantique écrit en Q#.</span><span class="sxs-lookup"><span data-stu-id="4f42b-104">A simple example of a quantum algorithm written in Q# is a quantum random number generator.</span></span> <span data-ttu-id="4f42b-105">Cet algorithme exploite la nature de la mécanique quantique pour produire un nombre aléatoire.</span><span class="sxs-lookup"><span data-stu-id="4f42b-105">This algorithm leverages the nature of quantum mechanics to produce a random number.</span></span>
 
-- <span data-ttu-id="6c0a2-107">Le Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).</span><span class="sxs-lookup"><span data-stu-id="6c0a2-107">The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).</span></span>
-- [<span data-ttu-id="6c0a2-108">Créer un projet Q#</span><span class="sxs-lookup"><span data-stu-id="6c0a2-108">Create a Q# Project</span></span>](xref:microsoft.quantum.howto.createproject)
+## <a name="prerequisites"></a><span data-ttu-id="4f42b-106">Prérequis</span><span class="sxs-lookup"><span data-stu-id="4f42b-106">Prerequisites</span></span>
 
+- <span data-ttu-id="4f42b-107">Le Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).</span><span class="sxs-lookup"><span data-stu-id="4f42b-107">The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).</span></span>
+- [<span data-ttu-id="4f42b-108">Créer un projet Q#</span><span class="sxs-lookup"><span data-stu-id="4f42b-108">Create a Q# Project</span></span>](xref:microsoft.quantum.howto.createproject)
 
-## <a name="write-a-q-operation"></a><span data-ttu-id="6c0a2-109">Écrire une opération Q#</span><span class="sxs-lookup"><span data-stu-id="6c0a2-109">Write a Q# operation</span></span>
+## <a name="write-a-q-operation"></a><span data-ttu-id="4f42b-109">Écrire une opération Q#</span><span class="sxs-lookup"><span data-stu-id="4f42b-109">Write a Q# operation</span></span>
 
-### <a name="q-operation-code"></a><span data-ttu-id="6c0a2-110">Code d’opération Q#</span><span class="sxs-lookup"><span data-stu-id="6c0a2-110">Q# operation code</span></span>
+### <a name="q-operation-code"></a><span data-ttu-id="4f42b-110">Code d’opération Q#</span><span class="sxs-lookup"><span data-stu-id="4f42b-110">Q# operation code</span></span>
 
-1. <span data-ttu-id="6c0a2-111">Remplacez le contenu du fichier Operation.qs par le code suivant :</span><span class="sxs-lookup"><span data-stu-id="6c0a2-111">Replace the contents of the Operation.qs file with the following code:</span></span>
+1. <span data-ttu-id="4f42b-111">Remplacez le contenu du fichier Program.qs par le code suivant :</span><span class="sxs-lookup"><span data-stu-id="4f42b-111">Replace the contents of the Program.qs file with the following code:</span></span>
 
- :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-14":::
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-<span data-ttu-id="6c0a2-112">Comme mentionné dans notre article intitulé [Qu’est-ce que l’informatique quantique ?](xref:microsoft.quantum.overview.what), un qubit est une unité d’information quantique qui peut être dans une superposition.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-112">As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition.</span></span> <span data-ttu-id="6c0a2-113">Lorsqu’il est mesuré, un qubit peut uniquement avoir la valeur 0 ou 1.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-113">When measured, a qubit can only be either 0 or 1.</span></span> <span data-ttu-id="6c0a2-114">En revanche, pendant l’exécution, l’état du qubit représente la probabilité d’avoir la valeur 0 ou 1 avec une mesure.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-114">However, during execution the state of the qubit represents the probability of reading either a 0 or a 1 with a measurement.</span></span> <span data-ttu-id="6c0a2-115">Cet état probabiliste est appelé superposition.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-115">This probabilistic state is known as superposition.</span></span> <span data-ttu-id="6c0a2-116">Nous pouvons utiliser cette probabilité pour générer des nombres aléatoires.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-116">We can use this probability to generate random numbers.</span></span>
+<span data-ttu-id="4f42b-112">Comme mentionné dans notre article intitulé [Qu’est-ce que l’informatique quantique ?](xref:microsoft.quantum.overview.what), un qubit est une unité d’information quantique qui peut être dans une superposition.</span><span class="sxs-lookup"><span data-stu-id="4f42b-112">As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition.</span></span> <span data-ttu-id="4f42b-113">Lorsqu’il est mesuré, un qubit peut uniquement avoir la valeur 0 ou 1.</span><span class="sxs-lookup"><span data-stu-id="4f42b-113">When measured, a qubit can only be either 0 or 1.</span></span> <span data-ttu-id="4f42b-114">En revanche, pendant l’exécution, l’état du qubit représente la probabilité d’avoir la valeur 0 ou 1 avec une mesure.</span><span class="sxs-lookup"><span data-stu-id="4f42b-114">However, during execution the state of the qubit represents the probability of reading either a 0 or a 1 with a measurement.</span></span> <span data-ttu-id="4f42b-115">Cet état probabiliste est appelé superposition.</span><span class="sxs-lookup"><span data-stu-id="4f42b-115">This probabilistic state is known as superposition.</span></span> <span data-ttu-id="4f42b-116">Nous pouvons utiliser cette probabilité pour générer des nombres aléatoires.</span><span class="sxs-lookup"><span data-stu-id="4f42b-116">We can use this probability to generate random numbers.</span></span>
 
-<span data-ttu-id="6c0a2-117">Dans notre opération Q#, nous introduisons le type de données `Qubit`, natif en Q#.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-117">In our Q# operation, we introduce the `Qubit` datatype, native to Q#.</span></span> <span data-ttu-id="6c0a2-118">Nous pouvons uniquement allouer un `Qubit` avec une instruction `using`.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-118">We can only allocate a `Qubit` with a `using` statement.</span></span> <span data-ttu-id="6c0a2-119">Lorsqu’il est alloué, un qubit est toujours dans l’état `Zero`.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-119">When it gets allocated, a qubit is always in the `Zero`  state.</span></span> 
+<span data-ttu-id="4f42b-117">Dans notre opération Q#, nous introduisons le type de données `Qubit`, natif en Q#.</span><span class="sxs-lookup"><span data-stu-id="4f42b-117">In our Q# operation, we introduce the `Qubit` datatype, native to Q#.</span></span> <span data-ttu-id="4f42b-118">Nous pouvons uniquement allouer un `Qubit` avec une instruction `using`.</span><span class="sxs-lookup"><span data-stu-id="4f42b-118">We can only allocate a `Qubit` with a `using` statement.</span></span> <span data-ttu-id="4f42b-119">Lorsqu’il est alloué, un qubit est toujours dans l’état `Zero`.</span><span class="sxs-lookup"><span data-stu-id="4f42b-119">When it gets allocated, a qubit is always in the `Zero`  state.</span></span> 
 
-<span data-ttu-id="6c0a2-120">À l’aide de l’opération `H`, nous pouvons placer notre `Qubit` dans une superposition.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-120">Using the `H` operation, we are able to put our `Qubit` in superposition.</span></span> <span data-ttu-id="6c0a2-121">Pour mesurer un qubit et lire sa valeur, vous utilisez l’opération intrinsèque `M`.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-121">To measure a qubit and read its value, you use the `M` intrinsic operation.</span></span>
+<span data-ttu-id="4f42b-120">À l’aide de l’opération `H`, nous pouvons placer notre `Qubit` dans une superposition.</span><span class="sxs-lookup"><span data-stu-id="4f42b-120">Using the `H` operation, we are able to put our `Qubit` in superposition.</span></span> <span data-ttu-id="4f42b-121">Pour mesurer un qubit et lire sa valeur, vous utilisez l’opération intrinsèque `M`.</span><span class="sxs-lookup"><span data-stu-id="4f42b-121">To measure a qubit and read its value, you use the `M` intrinsic operation.</span></span>
 
-<span data-ttu-id="6c0a2-122">En plaçant notre `Qubit` dans une superposition et en le mesurant, notre résultat est une valeur différente à chaque fois que le code est appelé.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-122">By putting our `Qubit` in superposition and measuring it, our result will be a different value each time the code is invoked.</span></span> 
+<span data-ttu-id="4f42b-122">En plaçant notre `Qubit` dans une superposition et en le mesurant, notre résultat est une valeur différente à chaque fois que le code est appelé.</span><span class="sxs-lookup"><span data-stu-id="4f42b-122">By putting our `Qubit` in superposition and measuring it, our result will be a different value each time the code is invoked.</span></span>
 
-<span data-ttu-id="6c0a2-123">Quand un `Qubit` est désalloué, il doit être explicitement redéfini à l’état `Zero`. Sinon, le simulateur signale une erreur d’exécution.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-123">When a `Qubit` is de-allocated it must be explicitly set back to the `Zero` state, otherwise the simulator will report a runtime error.</span></span> <span data-ttu-id="6c0a2-124">Un moyen simple d’y parvenir consiste à appeler `Reset`.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-124">An easy way to achieve this is invoking `Reset`.</span></span>
+<span data-ttu-id="4f42b-123">Quand un `Qubit` est désalloué, il doit être explicitement redéfini à l’état `Zero`. Sinon, le simulateur signale une erreur d’exécution.</span><span class="sxs-lookup"><span data-stu-id="4f42b-123">When a `Qubit` is de-allocated it must be explicitly set back to the `Zero` state, otherwise the simulator will report a runtime error.</span></span> <span data-ttu-id="4f42b-124">Un moyen simple d’y parvenir consiste à appeler `Reset`.</span><span class="sxs-lookup"><span data-stu-id="4f42b-124">An easy way to achieve this is invoking `Reset`.</span></span>
 
-### <a name="visualizing-the-code-with-the-bloch-sphere"></a><span data-ttu-id="6c0a2-125">Visualisation du code avec la sphère de Bloch</span><span class="sxs-lookup"><span data-stu-id="6c0a2-125">Visualizing the code with the Bloch sphere</span></span>
+### <a name="visualizing-the-code-with-the-bloch-sphere"></a><span data-ttu-id="4f42b-125">Visualisation du code avec la sphère de Bloch</span><span class="sxs-lookup"><span data-stu-id="4f42b-125">Visualizing the code with the Bloch sphere</span></span>
 
-<span data-ttu-id="6c0a2-126">Dans la sphère de Bloch, le pôle nord représente la valeur classique **0** et le pôle sud représente la valeur classique **1**.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-126">In the Bloch sphere, the north pole represents the classical value **0** and the south pole represents the classical value **1**.</span></span> <span data-ttu-id="6c0a2-127">Toute superposition peut être représentée par un point sur la sphère (représentée par une flèche).</span><span class="sxs-lookup"><span data-stu-id="6c0a2-127">Any superposition can be represented by a point on the sphere (represented by an arrow).</span></span> <span data-ttu-id="6c0a2-128">Plus l’extrémité de la flèche est proche d’un pôle, plus la probabilité est élevée que le qubit soit réduit à la valeur classique attribuée à ce pôle lors de la mesure.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-128">The closer the end of the arrow to a pole the higher the probability the qubit collapses into the classical value assigned to that pole when measured.</span></span> <span data-ttu-id="6c0a2-129">Par exemple, l’état du qubit représenté par la flèche rouge ci-dessous a une probabilité plus élevée de donner la valeur **0** si nous le mesurons.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-129">For example, the qubit state represented by the red arrow below has a higher probability of giving the value **0** if we measure it.</span></span>
+<span data-ttu-id="4f42b-126">Dans la sphère de Bloch, le pôle nord représente la valeur classique **0** et le pôle sud représente la valeur classique **1**.</span><span class="sxs-lookup"><span data-stu-id="4f42b-126">In the Bloch sphere, the north pole represents the classical value **0** and the south pole represents the classical value **1**.</span></span> <span data-ttu-id="4f42b-127">Toute superposition peut être représentée par un point sur la sphère (représentée par une flèche).</span><span class="sxs-lookup"><span data-stu-id="4f42b-127">Any superposition can be represented by a point on the sphere (represented by an arrow).</span></span> <span data-ttu-id="4f42b-128">Plus l’extrémité de la flèche est proche d’un pôle, plus la probabilité est élevée que le qubit soit réduit à la valeur classique attribuée à ce pôle lors de la mesure.</span><span class="sxs-lookup"><span data-stu-id="4f42b-128">The closer the end of the arrow to a pole the higher the probability the qubit collapses into the classical value assigned to that pole when measured.</span></span> <span data-ttu-id="4f42b-129">Par exemple, l’état du qubit représenté par la flèche rouge ci-dessous a une probabilité plus élevée de donner la valeur **0** si nous le mesurons.</span><span class="sxs-lookup"><span data-stu-id="4f42b-129">For example, the qubit state represented by the red arrow below has a higher probability of giving the value **0** if we measure it.</span></span>
 
 <img src="~/media/qrng-Bloch.png" width="175" alt="A qubit state with a high probability of measuring zero">
 
-<span data-ttu-id="6c0a2-130">Nous pouvons utiliser cette représentation pour visualiser ce que fait le code :</span><span class="sxs-lookup"><span data-stu-id="6c0a2-130">We can use this representation to visualize what the code is doing:</span></span>
+<span data-ttu-id="4f42b-130">Nous pouvons utiliser cette représentation pour visualiser ce que fait le code :</span><span class="sxs-lookup"><span data-stu-id="4f42b-130">We can use this representation to visualize what the code is doing:</span></span>
 
-* <span data-ttu-id="6c0a2-131">Tout d’abord, nous commençons avec un qubit initialisé avec l’état **0** et nous appliquons `H` pour créer une superposition dans laquelle les probabilités d’obtenir **0** et **1** sont les mêmes.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-131">First we start with a qubit initialized in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.</span></span>
+* <span data-ttu-id="4f42b-131">Tout d’abord, nous commençons avec un qubit initialisé avec l’état **0** et nous appliquons `H` pour créer une superposition dans laquelle les probabilités d’obtenir **0** et **1** sont les mêmes.</span><span class="sxs-lookup"><span data-stu-id="4f42b-131">First we start with a qubit initialized in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.</span></span>
 
 <img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
 
-
-* <span data-ttu-id="6c0a2-132">Ensuite, nous mesurons le qubit et nous enregistrons la sortie :</span><span class="sxs-lookup"><span data-stu-id="6c0a2-132">Then we measure the qubit and save the output:</span></span>
+* <span data-ttu-id="4f42b-132">Ensuite, nous mesurons le qubit et nous enregistrons la sortie :</span><span class="sxs-lookup"><span data-stu-id="4f42b-132">Then we measure the qubit and save the output:</span></span>
 
 <img src="~/media/qrng-meas.png" width="450" alt="Measuring a qubit and saving the output">
 
-<span data-ttu-id="6c0a2-133">Étant donné que le résultat de la mesure est complètement aléatoire, nous avons obtenu un bit aléatoire.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-133">Since the outcome of the measurement is completely random, we have obtained a random bit.</span></span> <span data-ttu-id="6c0a2-134">Nous pouvons appeler cette opération plusieurs fois pour créer des entiers.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-134">We can call this operation several times to create integers.</span></span> <span data-ttu-id="6c0a2-135">Par exemple, si nous appelons l’opération trois fois pour obtenir trois bits aléatoires, nous pouvons générer des nombres de 3 bits aléatoires (c’est-à-dire un nombre aléatoire compris entre 0 et 7).</span><span class="sxs-lookup"><span data-stu-id="6c0a2-135">For example, if we call the operation three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).</span></span>
+<span data-ttu-id="4f42b-133">Étant donné que le résultat de la mesure est complètement aléatoire, nous avons obtenu un bit aléatoire.</span><span class="sxs-lookup"><span data-stu-id="4f42b-133">Since the outcome of the measurement is completely random, we have obtained a random bit.</span></span> <span data-ttu-id="4f42b-134">Nous pouvons appeler cette opération plusieurs fois pour créer des entiers.</span><span class="sxs-lookup"><span data-stu-id="4f42b-134">We can call this operation several times to create integers.</span></span> <span data-ttu-id="4f42b-135">Par exemple, si nous appelons l’opération trois fois pour obtenir trois bits aléatoires, nous pouvons générer des nombres de 3 bits aléatoires (c’est-à-dire un nombre aléatoire compris entre 0 et 7).</span><span class="sxs-lookup"><span data-stu-id="4f42b-135">For example, if we call the operation three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).</span></span>
 
-## <a name="creating-a-complete-random-number-generator-using-a-host-program"></a><span data-ttu-id="6c0a2-136">Création d’un générateur de nombres aléatoires complet en utilisant un programme hôte</span><span class="sxs-lookup"><span data-stu-id="6c0a2-136">Creating a complete random number generator using a host program</span></span>
 
-<span data-ttu-id="6c0a2-137">Maintenant que nous avons une opération Q# qui génère des bits aléatoires, nous pouvons l’utiliser pour créer un générateur de nombres aléatoires quantique complet avec un programme hôte.</span><span class="sxs-lookup"><span data-stu-id="6c0a2-137">Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator with a host program.</span></span>
+## <a name="creating-a-complete-random-number-generator"></a><span data-ttu-id="4f42b-136">Création d’un générateur de nombres aléatoires complet</span><span class="sxs-lookup"><span data-stu-id="4f42b-136">Creating a complete random number generator</span></span>
 
- ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[<span data-ttu-id="6c0a2-138">Python avec Visual Studio Code ou la ligne de commande</span><span class="sxs-lookup"><span data-stu-id="6c0a2-138">Python with Visual Studio Code or the Command Line</span></span>](#tab/tabid-python)
- 
- <span data-ttu-id="6c0a2-139">Pour exécuter votre nouveau programme Q# à partir de Python, enregistrez le code suivant sous le nom `host.py` :</span><span class="sxs-lookup"><span data-stu-id="6c0a2-139">To run your new Q# program from Python, save the following code as `host.py`:</span></span>
- 
-:::code language="python" source="~/quantum/samples/getting-started/qrng/host.py" range="11-30":::
+<span data-ttu-id="4f42b-137">Maintenant que nous avons une opération Q# qui génère des bits aléatoires, nous pouvons l’utiliser pour créer un générateur de nombres aléatoires quantique complet.</span><span class="sxs-lookup"><span data-stu-id="4f42b-137">Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator.</span></span> <span data-ttu-id="4f42b-138">Nous pouvons utiliser les applications de ligne de commande Q# ou utiliser un programme hôte.</span><span class="sxs-lookup"><span data-stu-id="4f42b-138">We can use the Q# command line applications or use a host program.</span></span>
 
- <span data-ttu-id="6c0a2-140">Vous pouvez ensuite exécuter votre programme hôte Python à partir de la ligne de commande :</span><span class="sxs-lookup"><span data-stu-id="6c0a2-140">You can then run your Python host program from the command line:</span></span>
- ```bash
- $ python host.py
- Preparing Q# environment...
- ..The random number generated is 42
- ```
- ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[<span data-ttu-id="6c0a2-141">C# avec Visual Studio Code ou la ligne de commande</span><span class="sxs-lookup"><span data-stu-id="6c0a2-141">C# with Visual Studio Code or the Command Line</span></span>](#tab/tabid-csharp)
- 
- <span data-ttu-id="6c0a2-142">Pour exécuter votre nouveau programme Q# à partir de C#, modifiez `Driver.cs` pour inclure le code C# suivant :</span><span class="sxs-lookup"><span data-stu-id="6c0a2-142">To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:</span></span>
- 
- :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
- 
- <span data-ttu-id="6c0a2-143">Vous pouvez ensuite exécuter votre programme hôte C# à partir de la ligne de commande :</span><span class="sxs-lookup"><span data-stu-id="6c0a2-143">You can then run your C# host program from the command line:</span></span>
- 
- ```bash
- $ dotnet run
- The random number generated is 42
- ```
 
- ### <a name="c-with-visual-studio-2019"></a>[<span data-ttu-id="6c0a2-144">C# avec Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="6c0a2-144">C# with Visual Studio 2019</span></span>](#tab/tabid-vs2019)
 
- <span data-ttu-id="6c0a2-145">Pour exécuter votre nouveau programme Q# à partir de C# dans Visual Studio, modifiez `Driver.cs` pour inclure le code C# suivant :</span><span class="sxs-lookup"><span data-stu-id="6c0a2-145">To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:</span></span>
+### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[<span data-ttu-id="4f42b-139">Applications de ligne de commande Q# avec Visual Studio ou Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="4f42b-139">Q# command line applications with Visual Studio or Visual Studio Code</span></span>](#tab/tabid-qsharp)
 
- :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+<span data-ttu-id="4f42b-140">Pour créer l’application de ligne de commande Q# complète, ajoutez le point d’entrée suivant à votre programme Q# :</span><span class="sxs-lookup"><span data-stu-id="4f42b-140">To create the full Q# command line application, add the following entry point to your Q# program:</span></span> 
 
- <span data-ttu-id="6c0a2-146">Appuyez ensuite sur F5, le programme démarre l’exécution et une nouvelle fenêtre s’affiche avec le nombre aléatoire généré :</span><span class="sxs-lookup"><span data-stu-id="6c0a2-146">Then press F5, the program will start execution and a new window will pop up with the random number generated:</span></span> 
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
- ```bash
- $ dotnet run
- The random number generated is 42
- ```
- ***
+<span data-ttu-id="4f42b-141">L’exécutable exécute l’opération ou la fonction marquée avec l’attribut `@EntryPoint()` sur un simulateur ou un estimateur de ressources, en fonction de la configuration du projet et des options de ligne de commande.</span><span class="sxs-lookup"><span data-stu-id="4f42b-141">The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.</span></span>
+
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
+
+<span data-ttu-id="4f42b-142">Dans Visual Studio, appuyez simplement sur CTRL + F5 pour exécuter le script.</span><span class="sxs-lookup"><span data-stu-id="4f42b-142">In Visual Studio, simply press Ctrl + F5 to execute the script.</span></span>
+
+<span data-ttu-id="4f42b-143">Dans VS Code, générez le Programme.qs pour la première fois en tapant le texte ci-dessous dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="4f42b-143">In VS Code, build the Program.qs the first time by typing the below in the terminal:</span></span>
+
+```dotnetcli
+dotnet build
+```
+
+<span data-ttu-id="4f42b-144">Pour les exécutions suivantes, il n’est pas nécessaire de le regénérer.</span><span class="sxs-lookup"><span data-stu-id="4f42b-144">For subsequent runs, there is no need to build it again.</span></span> <span data-ttu-id="4f42b-145">Pour l’exécuter, tapez la commande suivante et appuyez sur Entrée :</span><span class="sxs-lookup"><span data-stu-id="4f42b-145">To run it, type the following command and press enter:</span></span>
+
+```dotnetcli
+dotnet run --no-build
+```
+
+### <a name="python-with-visual-studio-code-or-the-command-line"></a>[<span data-ttu-id="4f42b-146">Python avec Visual Studio Code ou la ligne de commande</span><span class="sxs-lookup"><span data-stu-id="4f42b-146">Python with Visual Studio Code or the Command Line</span></span>](#tab/tabid-python)
+
+<span data-ttu-id="4f42b-147">Pour exécuter votre nouveau programme Q# à partir de Python, enregistrez le code suivant sous le nom `host.py` :</span><span class="sxs-lookup"><span data-stu-id="4f42b-147">To run your new Q# program from Python, save the following code as `host.py`:</span></span>
+
+:::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
+
+<span data-ttu-id="4f42b-148">Vous pouvez ensuite exécuter votre programme hôte Python à partir de la ligne de commande :</span><span class="sxs-lookup"><span data-stu-id="4f42b-148">You can then run your Python host program from the command line:</span></span>
+
+```bash
+$ python host.py
+Preparing Q# environment...
+..The random number generated is 42
+```
+
+### <a name="c-with-visual-studio-code-or-visual-studio"></a>[<span data-ttu-id="4f42b-149">C# avec Visual Studio Code ou Visual Studio</span><span class="sxs-lookup"><span data-stu-id="4f42b-149">C# with Visual Studio Code or Visual Studio</span></span>](#tab/tabid-csharp)
+
+<span data-ttu-id="4f42b-150">Pour exécuter votre nouveau programme Q# à partir de C#, modifiez `Driver.cs` pour inclure le code C# suivant :</span><span class="sxs-lookup"><span data-stu-id="4f42b-150">To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:</span></span>
+
+:::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
+
+<span data-ttu-id="4f42b-151">Vous pouvez ensuite exécuter votre programme hôte C# à partir de la ligne de commande (dans Visual Studio, vous devez appuyer sur F5) :</span><span class="sxs-lookup"><span data-stu-id="4f42b-151">You can then run your C# host program from the command line (in Visual Studio you should press F5):</span></span>
+
+```bash
+$ dotnet run
+The random number generated is 42
+```
+
+***
