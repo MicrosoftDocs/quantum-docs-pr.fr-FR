@@ -1,19 +1,19 @@
 ---
-title: Développer avec Q# + C#
+title: Développer avec Q# et .NET
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 155367dbb1373f00e2b0bd732a5319b32462c9f9
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680162"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426501"
 ---
-# <a name="using-q-with-c-and-f"></a>Utilisation de Q # avec\# C et F\#
+# <a name="develop-with-q-and-net"></a>Développer avec Q# et .NET
 
 Q # est conçu pour fonctionner correctement avec les langages .NET tels que C# et F #.
 Dans ce guide, nous allons montrer comment utiliser Q # avec un programme hôte écrit dans un langage .NET.
@@ -29,7 +29,7 @@ La première étape consiste à créer des projets pour votre bibliothèque Q #,
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 - Créer une nouvelle bibliothèque Q #
-  - Accéder au **fichier** -> **nouveau** -> **projet**
+  - Accéder au **fichier**  ->  **nouveau**  ->  **projet**
   - Tapez « Q # » dans la zone de recherche
   - Sélectionner la **bibliothèque Q #**
   - Sélectionnez **Suivant**.
@@ -84,7 +84,7 @@ Par exemple, l’exemple d' [interopérabilité .net](https://github.com/microso
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-Pour appeler cette opération à partir de .NET sur un simulateur Quantum, vous `Run` pouvez utiliser la `RunAlgorithm` méthode de la classe .net générée par le compilateur Q # :
+Pour appeler cette opération à partir de .NET sur un simulateur Quantum, vous pouvez utiliser la `Run` méthode de la `RunAlgorithm` classe .net générée par le compilateur Q # :
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
@@ -96,6 +96,6 @@ Pour appeler cette opération à partir de .NET sur un simulateur Quantum, vous 
 
 ***
     
-## <a name="whats-next"></a>Quelle est l’étape suivante ?
+## <a name="next-steps"></a>Étapes suivantes
 
-Maintenant que vous avez configuré le kit de développement Quantum pour les deux programmes de ligne de commande Q # et pour l’interopérabilité avec .NET, vous pouvez écrire et exécuter [votre premier programme Quantum](xref:microsoft.quantum.write-program).
+Maintenant que vous avez configuré le kit de développement Quantum pour les deux programmes de ligne de commande Q # et pour l’interopérabilité avec .NET, vous pouvez écrire et exécuter [votre premier programme Quantum](xref:microsoft.quantum.quickstarts.qrng).
