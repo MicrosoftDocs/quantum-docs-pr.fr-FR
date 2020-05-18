@@ -1,10 +1,10 @@
 - name: Vue d’ensemble
   href: index.md
-- name: Simulateur de quantum
+- name: Simulateur d’état complet
   href: full-state-simulator.md
 - name: Estimateur de ressources
   href: resources-estimator.md
-- name: Simulateur de traces d'ordinateur de quantum
+- name: Simulateur de trace
   topicHref: qc-trace-simulator/index.md
   href: qc-trace-simulator/toc.yml
 - name: Simulateur Toffoli

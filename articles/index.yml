@@ -9,35 +9,33 @@ metadata:
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
-  ms.date: 10/21/2019
-  ms.openlocfilehash: e21b191689c228fa3e7c0590ee2f79f625b3960d
-  ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+  ms.date: 5/10/2020
+  ms.openlocfilehash: 7c0fdf596c3409f0e1db7773b079a258d14a7d9c
+  ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 04/13/2020
-  ms.locfileid: "80320833"
+  ms.lasthandoff: 05/15/2020
+  ms.locfileid: "83426895"
 landingContent:
 - title: Informatique quantique
   linkLists:
   - linkListType: learn
     links:
-    - text: Qu’est-ce que l’informatique quantique ?
-      url: overview/what-is-quantum-computing.md
-    - text: Que sont capables de faire les ordinateurs quantiques ?
-      url: overview/quantum-computers.md
-    - text: Pourquoi apprendre l’informatique quantique ?
-      url: overview/why-learn-quantum-computing.md
+    - text: Fonctionnement de l’informatique quantique
+      url: overview/understanding-quantum-computing.md
+    - text: Ordinateurs quantiques et simulateurs quantiques
+      url: overview/quantum-computers-and-simulators.md
     - text: Présentation de Q# et du QDK
-      url: overview/what-is-qsharp.md
-    - text: Comment en savoir plus ?
-      url: overview/how-to-learn-quantum-computing.md
+      url: overview/what-is-qsharp-and-qdk.md
+    - text: Algèbre linéaire pour l’informatique quantique
+      url: overview/algebra-for-quantum-computing.md
   - linkListType: concept
     links:
     - text: Concepts de l’informatique quantique
       url: concepts/index.md
-- title: Obtenir le Quantum Development Kit
+- title: Démarrer avec le Quantum Development Kit
   linkLists:
-  - linkListType: overview
+  - linkListType: get-started
     links:
     - text: Quantum Development Kit
       url: welcome.md
@@ -49,19 +47,17 @@ landingContent:
       url: install-guide/update.md
 - title: Langage de programmation Q#
   linkLists:
-  - linkListType: overview
+  - linkListType: how-to-guide
     links:
-    - text: Présentation du langage Q#
-      url: language/index.md
-    - text: Techniques de développement Q#
-      url: techniques/index.md
+    - text: Guide de l'utilisateur Q#
+      url: user-guide/index.md
     - text: Simulateurs quantiques et applications hôtes
       url: machines/index.md
-  - linkListType: quickstart
+  - linkListType: tutorial
     links:
     - text: Créer un générateur de nombres aléatoires quantique
       url: quickstarts/qrng.md
-    - text: 'Exploration de l’intrication avec Q #'
+    - text: Explorer l’intrication avec Q#
       url: quickstart.md
     - text: 'Accélération quantique : algorithme de recherche de Grover'
       url: quickstarts/search.md
