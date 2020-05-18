@@ -1,3 +1,5 @@
+- name: Vue d’ensemble
+  href: index.md
 - name: Bibliothèques standard
   topicHref: standard/index.md
   href: standard/toc.yml
