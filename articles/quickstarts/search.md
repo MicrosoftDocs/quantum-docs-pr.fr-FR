@@ -6,16 +6,16 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: c67ccd16957ceef694552bdd9c073ba5a35d8aaf
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 9562e1937a2cac49d682cc0524d8fb29e276d95c
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82686824"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426803"
 ---
-# <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>Démarrage rapide : Implémenter l’algorithme de recherche de Grover en Q\#
+# <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Tutoriel : Implémenter l’algorithme de recherche de Grover en Q\#
 
-Dans ce guide de démarrage rapide, vous pouvez apprendre à créer et exécuter une recherche de Grover pour accélérer la recherche de données non structurées.  La recherche de Grover est l’un des algorithmes d’informatique quantique les plus connus. Cette implémentation Q# relativement petite vous donne une idée des avantages que représente la programmation de solutions quantiques en utilisant un langage de programmation Q# général pour exprimer des algorithmes quantiques.  À la fin de ce guide, la simulation vous montrera une recherche aboutie d’une chaîne spécifique parmi une liste d’entrées non organisées en une fraction du temps qu’il aurait fallu à un ordinateur classique pour le faire.
+Dans ce tutoriel, vous pouvez apprendre à créer et exécuter une recherche de Grover pour accélérer la recherche de données non structurées.  La recherche de Grover est l’un des algorithmes d’informatique quantique les plus connus. Cette implémentation Q# relativement petite vous donne une idée des avantages que représente la programmation de solutions quantiques en utilisant un langage de programmation Q# général pour exprimer des algorithmes quantiques.  À la fin de ce guide, la simulation vous montrera une recherche aboutie d’une chaîne spécifique parmi une liste d’entrées non organisées en une fraction du temps qu’il aurait fallu à un ordinateur classique pour le faire.
 
 L’algorithme de Grover recherche des éléments spécifiques dans une liste de données non structurées. Par exemple, il peut répondre à la question : Cette carte tirée d’un jeu de cartes est-elle un as de cœur ? Le libellé de l’élément spécifique est nommé _entrée marquée_.
 
@@ -104,7 +104,7 @@ Reflecting about marked state...
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous avez apprécié ce démarrage rapide, consultez certaines des ressources ci-dessous pour apprendre à utiliser le langage Q# pour écrire vos propres applications quantiques :
+Si ce tutoriel vous a plu, consultez certaines des ressources ci-dessous pour apprendre à utiliser le langage Q# afin d’écrire vos propres applications quantiques :
 
 - [Retour au guide de démarrage avec le QDK](xref:microsoft.quantum.welcome)
 - Essayer un [exemple](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search) d’algorithme de recherche de Grover plus général

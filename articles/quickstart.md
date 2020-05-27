@@ -1,23 +1,25 @@
 ---
-title: Notions de base sur l’informatique quantique avec Q#
+title: Explorer l’intrication avec Q#
 description: Apprenez à écrire un programme quantique en Q#. Développez une application pour le traitement des états de Bell à l’aide du Quantum Development kit (QDK)
 author: natke
 ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906727"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426842"
 ---
-# <a name="quantum-basics-with-q"></a>Notions de base sur l’informatique quantique avec Q#
+# <a name="tutorial-explore-entanglement-with-q"></a>Tutoriel : Explorer l’intrication avec Q\#
 
-Dans ce guide de démarrage rapide, nous vous montrons comment écrire un programme Q# qui manipule et mesure des qubits, puis montre les effets de la superposition et de l’intrication.  Vous êtes ainsi accompagné tout au long de l’installation du QDK, de la génération du programme et de son exécution sur un simulateur quantique.  
+Dans ce tutoriel, nous vous montrons comment écrire un programme Q# qui manipule et mesure des qubits, puis montre les effets de la superposition et de l’intrication.
+Vous êtes ainsi accompagné tout au long de l’installation du QDK, de la génération du programme et de son exécution sur un simulateur quantique.  
 
-Vous allez écrire une application appelée Bell pour démontrer l’intrication quantique.  Le nom Bell fait référence aux états de Bell, à savoir les états quantiques spécifiques de deux qubits utilisés pour représenter les exemples les plus simples de superposition et d’intrication quantique. 
+Vous allez écrire une application appelée Bell pour démontrer l’intrication quantique.
+Le nom Bell fait référence aux états de Bell, à savoir les états quantiques spécifiques de deux qubits utilisés pour représenter les exemples les plus simples de superposition et d’intrication quantique.
 
 ## <a name="pre-requisites"></a>Conditions préalables
 
@@ -30,7 +32,7 @@ Vous pouvez également suivre la narration sans installer le QDK, en consultant 
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Démonstration du comportement des qubits avec Q#
 
-Souvenez-vous de notre simple [définition d’un qubit](xref:microsoft.quantum.overview.what#the-qubit).  Alors que les bits classiques contiennent une seule valeur binaire comme 0 ou 1, l’état d’un qubit peut se trouver dans une **superposition** de 0 et de 1 simultanément.  D’un point de vue conceptuel, un qubit peut être considéré comme une direction dans l’espace (également appelée vecteur).  Un qubit peut être dans n’importe quelle direction possible. Les deux **états classiques** sont les deux directions ; représentant 100 % des chances de mesurer 0 et 100 % des chances de mesurer 1.  Cette représentation se visualise aussi de façon plus formelle par la [sphère de Bloch](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Souvenez-vous de notre simple [définition d’un qubit](xref:microsoft.quantum.overview.understanding).  Alors que les bits classiques contiennent une seule valeur binaire comme 0 ou 1, l’état d’un qubit peut se trouver dans une **superposition** de 0 et de 1 simultanément.  D’un point de vue conceptuel, un qubit peut être considéré comme une direction dans l’espace (également appelée vecteur).  Un qubit peut être dans n’importe quelle direction possible. Les deux **états classiques** sont les deux directions ; représentant 100 % des chances de mesurer 0 et 100 % des chances de mesurer 1.  Cette représentation se visualise aussi de façon plus formelle par la [sphère de Bloch](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 
 L’acte de mesure produit un résultat binaire et modifie un l’état d’un qubit. La mesure produit une valeur binaire, 0 ou 1.  Le qubit passe de la superposition (toute direction) à l’un des états classiques.  Par la suite, la répétition de la même mesure sans aucune opération intermédiaire produit le même résultat binaire.  
@@ -498,7 +500,7 @@ Félicitations, vous avez écrit votre premier programme quantique.
 
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
-Le guide de démarrage rapide sur [la recherche de Grover](xref:microsoft.quantum.quickstarts.search) vous montre comment créer et exécuter une recherche de Grover, à savoir l’un des algorithmes les plus connus en informatique quantique, et propose un exemple de programme Q# pouvant servir à résoudre des problèmes réels à l’aide de l’informatique quantique.  
+Le tutoriel sur la [recherche de Grover](xref:microsoft.quantum.quickstarts.search) vous montre comment créer et exécuter une recherche de Grover, à savoir l’un des algorithmes les plus connus en informatique quantique, et propose un exemple de programme Q# pouvant servir à résoudre de vrais problèmes avec l’informatique quantique.  
 
-[Bien démarrer avec le Quantum Development Kit](xref:microsoft.quantum.welcome) recommande d’autres moyens d’apprendre le langage Q# et la programmation quantique.
+[Bien démarrer avec le kit de développement Quantum](xref:microsoft.quantum.welcome) recommande d’autres moyens d’apprendre le langage Q# et la programmation quantique.
 
