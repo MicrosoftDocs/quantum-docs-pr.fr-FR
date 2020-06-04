@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 9f156a3cc092e295317061dda5e8aa29e9d5ca1e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430847"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327592"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Algèbre linéaire pour l’informatique quantique
 
@@ -67,7 +67,7 @@ $$
 
 Le résultat est une matrice à quatre dimensions, où chaque élément représente une probabilité. Par exemple, $ac$ représente la probabilité que les deux qubits soient réduits à 0 et 0, $ad$ est la probabilité qu’ils soient réduits à 0 et 1, et ainsi de suite. 
 
-De la même façon que l’état d’un seul qubit $\begin{bmatrix} a \\\\  b \end{bmatrix}$ doit satisfaire à l’exigence $|a|^2 + |b|^2 = 1$ afin de représenter un état quantique, l’état de deux qubits $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ doit satisfaire à l’exigence $|a|^2 + |b|^2 + |c|^2+ |d|^2 = 1$.
+De la même façon que l’état d’un seul qubit $\begin{bmatrix} a \\\\  b \end{bmatrix}$ doit satisfaire à l’exigence $|a|^2 + |b|^2 = 1$ afin de représenter un état quantique, l’état de deux qubits $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ doit satisfaire à l’exigence $|ac|^2 + |ad|^2 + |bc|^2+ |bd|^2 = 1$.
 
 ## <a name="summary"></a>Résumé
 
@@ -75,5 +75,4 @@ L’algèbre linéaire est le langage standard utilisé pour les représentation
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-> [!div class="nextstepaction"]
-> [Installer le QDK](xref:microsoft.quantum.install)
+[Installer le QDK](xref:microsoft.quantum.install)

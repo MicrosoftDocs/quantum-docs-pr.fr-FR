@@ -3,15 +3,15 @@ title: Explorer l’intrication avec Q#
 description: Apprenez à écrire un programme quantique en Q#. Développez une application pour le traitement des états de Bell à l’aide du Quantum Development kit (QDK)
 author: natke
 ms.author: nakersha
-ms.date: 10/07/2019
+ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 989080e7d9979bb87d14b2580d28732bb1092eb1
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426842"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327371"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutoriel : Explorer l’intrication avec Q\#
 
@@ -25,28 +25,27 @@ Le nom Bell fait référence aux états de Bell, à savoir les états quantiques
 
 Si vous êtes prêt à commencer à programmer, suivez ces étapes préalables : 
 
-* [Installez](xref:microsoft.quantum.install) le Quantum Development Kit (QDK) dans votre langue et votre environnement de développement préférés
+* Installez le kit de développement Quantum pour [Python](xref:microsoft.quantum.install.python) ou [.NET](xref:microsoft.quantum.install.cs).
 * Si le QDK est déjà installé, assurez-vous que vous l’avez [mis à jour](xref:microsoft.quantum.update) avec la dernière version
 
 Vous pouvez également suivre la narration sans installer le QDK, en consultant les vues d’ensemble du langage de programmation Q# et les premiers concepts de l’informatique quantique.
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Démonstration du comportement des qubits avec Q#
 
-Souvenez-vous de notre simple [définition d’un qubit](xref:microsoft.quantum.overview.understanding).  Alors que les bits classiques contiennent une seule valeur binaire comme 0 ou 1, l’état d’un qubit peut se trouver dans une **superposition** de 0 et de 1 simultanément.  D’un point de vue conceptuel, un qubit peut être considéré comme une direction dans l’espace (également appelée vecteur).  Un qubit peut être dans n’importe quelle direction possible. Les deux **états classiques** sont les deux directions ; représentant 100 % des chances de mesurer 0 et 100 % des chances de mesurer 1.  Cette représentation se visualise aussi de façon plus formelle par la [sphère de Bloch](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
-
+Souvenez-vous de notre simple [définition d’un qubit](xref:microsoft.quantum.overview.understanding).  Alors que les bits classiques contiennent une seule valeur binaire comme 0 ou 1, l’état d’un [qubit](xref:microsoft.quantum.glossary#qubit) peut se trouver dans une **superposition** de 0 et de 1.  D’un point de vue conceptuel, un qubit peut être considéré comme une direction dans l’espace (également appelée vecteur).  Un qubit peut être dans n’importe quelle direction possible. Les deux **états classiques** sont les deux directions ; représentant 100 % des chances de mesurer 0 et 100 % des chances de mesurer 1.  Cette représentation se visualise aussi de façon plus formelle par la [sphère de Bloch](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 L’acte de mesure produit un résultat binaire et modifie un l’état d’un qubit. La mesure produit une valeur binaire, 0 ou 1.  Le qubit passe de la superposition (toute direction) à l’un des états classiques.  Par la suite, la répétition de la même mesure sans aucune opération intermédiaire produit le même résultat binaire.  
 
-Plusieurs qubits peuvent être **intriqués**. Quand nous mesurons un seul qubit intriqué, notre connaissance de l’état des autres qubits est également mise à jour.
+Plusieurs qubits peuvent être [**intriqués**](xref:microsoft.quantum.glossary#entanglement). Quand nous mesurons un seul qubit intriqué, notre connaissance de l’état des autres qubits est également mise à jour.
 
 Maintenant, nous sommes prêts à démontrer comment Q# exprime ce comportement.  Vous commencez avec le programme le plus simple possible, puis développez celui-ci pour démontrer la superposition quantique et l’intrication quantique.
 
 ## <a name="setup"></a>Programme d’installation
 
-Les applications développées avec le QDK de Microsoft comprennent deux composantes :
+Ce tutoriel utilise un programme hôte et se compose de deux parties :
 
-1. Un ou plusieurs algorithmes quantiques, mis en œuvre à l’aide du langage de programmation quantique Q#.
-1. Un programme hôte, implémenté dans un langage de programmation tel que Python ou C#, qui sert de point d’entrée principal et appelle des opérations Q# pour exécuter un algorithme quantique.
+1. Une série d’algorithmes quantiques, implémentés avec le langage de programmation quantique Q#.
+1. Un programme hôte, implémenté en Python ou C#, qui sert de point d’entrée principal et appelle des opérations Q# pour exécuter les algorithmes quantiques.
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
 
@@ -498,9 +497,8 @@ Comme indiqué dans la vue d’ensemble, nos statistiques pour le premier qubit 
 
 Félicitations, vous avez écrit votre premier programme quantique.
 
-## <a name="whats-next"></a>Quelle est l’étape suivante ?
+## <a name="next-steps"></a>Étapes suivantes
 
 Le tutoriel sur la [recherche de Grover](xref:microsoft.quantum.quickstarts.search) vous montre comment créer et exécuter une recherche de Grover, à savoir l’un des algorithmes les plus connus en informatique quantique, et propose un exemple de programme Q# pouvant servir à résoudre de vrais problèmes avec l’informatique quantique.  
 
-[Bien démarrer avec le kit de développement Quantum](xref:microsoft.quantum.welcome) recommande d’autres moyens d’apprendre le langage Q# et la programmation quantique.
-
+[Bien démarrer avec le Quantum Development Kit](xref:microsoft.quantum.welcome) recommande d’autres moyens d’apprendre le langage Q# et la programmation quantique.
