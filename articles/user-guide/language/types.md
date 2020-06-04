@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
-ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
+ms.openlocfilehash: f7a3ac3813966c0ef695068297ce4d9949ead554
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609139"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327286"
 ---
 # <a name="types-in-q"></a>Types en Q#
 
@@ -63,7 +63,8 @@ Dans le deuxième exemple, Notez qu’il s’agit d’un tableau potentiellement
 Q # ne prend pas en charge les tableaux multidimensionnels rectangulaires.
 
 Une valeur de tableau peut être écrite dans le code source Q # en utilisant des crochets autour des éléments d’un tableau, comme dans `[PauliI, PauliX, PauliY, PauliZ]` .
-Le type d’un littéral de tableau est déterminé par le type de base commun de tous les éléments du tableau. 
+Le type d’un littéral de tableau est déterminé par le type de base commun de tous les éléments du tableau. Par conséquent, toute tentative de construction d’un tableau avec des éléments qui n’ont pas de type de base commun génère une erreur.  
+Pour obtenir un exemple, consultez [tableaux de callables](xref:microsoft.quantum.guide.expressions#arrays-of-callables) .
 
 > [!WARNING]
 > Les éléments d’un tableau ne peuvent pas être modifiés une fois le tableau créé.
@@ -291,7 +292,8 @@ Lors de l’appel d’un pouvant être appelé par un type paramétrable, tous l
 
 Q # ne fournit pas de mécanisme permettant de limiter les types possibles qui peuvent être remplacés par un paramètre de type.
 
-## <a name="whats-next"></a>Étape suivante
+## <a name="next-steps"></a>Étapes suivantes
+
 Maintenant que vous avez vu tous les types qui composent le langage Q #, vous pouvez accéder à des [expressions de type dans q #](xref:microsoft.quantum.guide.expressions) pour voir comment créer et manipuler des expressions de ces différents types.
 
 

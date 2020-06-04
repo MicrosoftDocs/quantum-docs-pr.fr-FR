@@ -6,6 +6,8 @@ functions:
   summary: Déclare que deux tableaux de valeurs booléennes sont égaux.
 - uid: microsoft.quantum.diagnostics.allequalityfacti
   summary: Déclare que deux tableaux de valeurs entières sont égaux.
+- uid: microsoft.quantum.diagnostics.contradiction
+  summary: Déclare qu’une condition classique est false.
 - uid: microsoft.quantum.diagnostics.dumpmachine
   summary: Vide l’état actuel de l’ordinateur cible.
 - uid: microsoft.quantum.diagnostics.dumpregister
@@ -34,15 +36,15 @@ functions:
   summary: Déclare qu’une valeur à virgule flottante classique a la valeur attendue jusqu’à une petite tolérance de 1e-10.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: Déclarez que les qubits donnés sont tous dans{0}l’État $ \ket $.
+  summary: Déclarez que les qubits donnés sont tous dans l’État $ \ket {0} $.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: Déclarez que le qubits donné se trouve tous{0}dans l’État $ \ket $ jusqu’à une tolérance donnée.
+  summary: Déclarez que le qubits donné se trouve tous dans l’État $ \ket {0} $ jusqu’à une tolérance donnée.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     À partir de deux opérations, déclare qu’elles agissent de la même manière pour tous les États d’entrée.
 
 
-    Cette assertion est implémentée en vérifiant l’action des opérations sur tous les États de la forme $V _0 \otimes... \otimes V_ {n-1} $, où $V _K $ est l’un des États{0}$ \ket $,{1}$ \ket $, $ \ket{+} $ et $ \ket{i} $ (+ 1 eigenstate de l’opérateur Y Pauli).
+    Cette assertion est implémentée en vérifiant l’action des opérations sur tous les États de la forme $V _0 \otimes... \otimes V_ {n-1} $, où $V _k $ est l’un des États $ \ket {0} $, $ \ket {1} $, $ \ket{+} $ et $ \ket{i} $ (+ 1 eigenstate de l’opérateur Y Pauli).
 
 
     Cette assertion utilise $n $ qubits et nécessite plusieurs appels des opérations comparées.
@@ -82,9 +84,9 @@ newtypes:
   summary: Attribut reconnu par le compilateur utilisé pour marquer un test unitaire.
 summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions et des opérations utiles à des fins de diagnostic, notamment des opérations d’assertion et des fonctions de revendication."
 metadata:
-  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676956"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326589"

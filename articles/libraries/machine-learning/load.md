@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
-ms.openlocfilehash: 15e63ced6223759a332ce22a43c133a7899f482a
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: efa4a65a489446cbef48507d0b02a932da74c71c
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909957"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327660"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Charger et classer vos propres jeux de données
 
@@ -25,7 +25,7 @@ En particulier, nous vous recommandons d’utiliser notre modèle pour le charge
 
 Supposons que nous disposons d’un jeu de données d’apprentissage $ (x, y) $ de taille $N = $2 où chaque instance $x _i $ de $x $ a trois fonctionnalités : $x _ {I1} $, $x _ {I2} $ et $x _ {i3} $.
 Le DataSet de validation a la même structure.
-Ces jeux peuvent être représentés par un fichier `data.json` similaire à ce qui suit :
+Ces jeux peuvent être représentés par un `data.json` fichier similaire à ce qui suit :
 
 ```json
 {
@@ -77,17 +77,17 @@ Supposons que nous ayons un petit jeu de données avec des hauteurs et des poids
 | 0,54      | 30         | Dog    |
 | 0.30      | 8          | Chats    |
 | 0,91      | 44         | Dog    |
-| 0,86      | 31          | Dog    |
+| 0.86      | 31          | Dog    |
 | 0.32      | 5         | Chats    |
 | 0,25      | 4          | Chats    |
 
 Le processus est le suivant :
 
 - Tout d’abord, nous devons séparer le jeu de données en formation et validation. Dans ce cas, nous pouvons simplement prendre les trois premiers exemples pour la formation et le reste des exemples à des fins de validation. En général, il est recommandé d’échantillonner de façon aléatoire le jeu de données de formation et de validation pour éviter les écarts indésirables dans les données d’apprentissage.
-- Deuxièmement, nous devons attribuer une étiquette numérique à chaque classe. Notez que, pour le moment, la bibliothèque QML admet uniquement les problèmes de classification binaire. Nous allons donc attribuer l’étiquette 0 à la classe `Dog` et le numéro 1 à la classe `Cat`.
+- Deuxièmement, nous devons attribuer une étiquette numérique à chaque classe. Notez que, pour le moment, la bibliothèque QML admet uniquement les problèmes de classification binaire. Nous allons donc attribuer l’étiquette 0 à la classe `Dog` et le numéro 1 à la classe `Cat` .
 - Enfin, nous remplissons le modèle à l’aide des données de notre jeu de données. Notez que pour les jeux de données volumineux, vous devez générer un petit script pour générer automatiquement le modèle à partir de votre jeu de données spécifique. Ce script dépend du format d’origine de votre jeu de données.
 
-Pour notre jeu de données, le fichier `data.json` est le suivant :
+Pour notre jeu de données, le `data.json` fichier est :
 
 ```json
 {
@@ -143,18 +143,18 @@ Une fois que vos données sont sérialisées sous la forme d’un fichier JSON, 
 
 ### <a name="python"></a>[Python](#tab/tabid-python)
 
-Python fournit le [package `json` intégré](https://docs.python.org/3.7/library/json.html) pour l’utilisation de données sérialisées JSON :
+Python fournit le [ `json` package intégré](https://docs.python.org/3.7/library/json.html) pour l’utilisation de données sérialisées JSON :
 
 :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="4-5,20-22":::
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
-La plateforme .NET Core fournit le [package`System.Text.Json`](https://www.nuget.org/packages/System.Text.Json) pour l’utilisation de données sérialisées JSON :
+La plateforme .NET Core fournit le [ `System.Text.Json` package](https://www.nuget.org/packages/System.Text.Json) pour l’utilisation de données sérialisées JSON :
 
 :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="10,64-82":::
 
 ***
 
-## <a name="whats-next"></a>Quelle est l’étape suivante ?
+## <a name="next-steps"></a>Étapes suivantes
 
 Vous êtes maintenant prêt à commencer à exécuter vos propres expériences avec vos propres jeux de données. Essayez différents classifieurs et jeux de données et contribuez à la communauté partageant vos résultats.

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: e89b9ccfe2a0796e01eedfc99f7ce71038d85f38
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 0deb0729a88c49798f32a22a943b935d383c570b
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430932"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327541"
 ---
 # <a name="working-with-qubits"></a>Utilisation des qubits
 
@@ -221,5 +221,6 @@ Cela est dû au fait que nous savons à partir de la structure du circuit commen
 
 Il est intéressant de comparer ce code avec une autre fonction Canon `MultiControlledXClean` qui atteint le même objectif de l’implémentation d’une opération à contrôle multiple `X` , mais qui utilise plusieurs qubits propres à l’aide du `using` mécanisme. 
 
-## <a name="whats-next"></a>Étape suivante
+## <a name="next-steps"></a>Étapes suivantes
+
 En savoir plus sur [le workflow de contrôle](xref:microsoft.quantum.guide.controlflow) dans Q #.

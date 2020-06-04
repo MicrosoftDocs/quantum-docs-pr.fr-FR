@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: c534e016fcb8b50e66c11ca29c253ba0512acc6e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430949"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84326538"
 ---
 # <a name="control-flow-in-q"></a>Workflow de contrôle dans Q #
 
@@ -54,7 +54,7 @@ if (result == One) {
 } 
 // n is not bound
 ```
-ou
+or
 ```qsharp
 if (i == 1) {
     X(target);
@@ -329,5 +329,6 @@ Les fonctionnalités de programmation notables présentées dans cette opératio
 Pour plus d’informations sur les opérations et, consultez également [test et débogage](xref:microsoft.quantum.guide.testingdebugging) [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) .
 
 
-## <a name="whats-next"></a>Étape suivante
+## <a name="next-steps"></a>Étapes suivantes
+
 En savoir plus sur le [test et le débogage](xref:microsoft.quantum.guide.testingdebugging) dans Q #.

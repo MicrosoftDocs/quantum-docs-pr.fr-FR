@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: À partir d’un tableau et d’un prédicat définis pour les éléments du tableau, retourne un tableau qui se compose des éléments qui satisfont au prédicat.
 - uid: microsoft.quantum.arrays.fold
-  summary: Itère une fonction `f` via un tableau `array`, en retournant. `f(f(f(initialState, array[0]), array[1]), ...)`
+  summary: Itère une fonction `f` via un tableau `array` , en retournant `f(f(f(initialState, array[0]), array[1]), ...)` .
 - uid: microsoft.quantum.arrays.head
   summary: Retourne le premier élément du tableau.
 - uid: microsoft.quantum.arrays.indexof
@@ -29,6 +29,8 @@ functions:
   summary: À partir d’un tableau, retourne une plage sur les index de ce tableau, pouvant être utilisée dans une boucle for.
 - uid: microsoft.quantum.arrays.isempty
   summary: Retourne la valeur true si et seulement si un tableau est vide.
+- uid: microsoft.quantum.arrays.ispermutation
+  summary: Génère la valeur true si et seulement si un tableau donné représente une permutation.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: À partir d’un tableau, retourne une fonction qui retourne des éléments de ce tableau.
 - uid: microsoft.quantum.arrays.mapped
@@ -69,9 +71,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: À partir d’un tableau et d’une opération définie pour les éléments du tableau, retourne un nouveau tableau qui se compose des images du tableau d’origine sous l’opération.
 metadata:
-  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673392"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326708"

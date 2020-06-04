@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 93432cef9711b6780192cd59e92b09647a264b5c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431204"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327303"
 ---
 # <a name="type-expressions-in-q"></a>Expressions de type dans Q #
 
@@ -221,7 +221,6 @@ let g = Foo(arg)!;      // Syntax error
 Un littéral de tableau est une séquence d’une ou plusieurs expressions d’élément, séparées par des virgules, placées entre `[` et `]` .
 Tous les éléments doivent être compatibles avec le même type.
 
-
 À partir de deux tableaux du même type, l' `+` opérateur binaire peut être utilisé pour former un nouveau tableau qui est la concaténation des deux tableaux.
 Par exemple, `[1,2,3] + [4,5,6]` est `[1,2,3,4,5,6]` .
 
@@ -229,6 +228,9 @@ Par exemple, `[1,2,3] + [4,5,6]` est `[1,2,3,4,5,6]` .
 
 À partir d’un type et d’une `Int` expression, l' `new` opérateur peut être utilisé pour allouer un nouveau tableau de la taille donnée.
 Par exemple, `new Int[i + 1]` allouerait un nouveau `Int` tableau avec des `i + 1` éléments.
+
+Les littéraux de tableaux vides, `[]` , ne sont pas autorisés.
+Au lieu d’utiliser `new ★[0]` , où `★` est l’espace réservé pour un type approprié, permet de créer le tableau souhaité de longueur zéro.
 
 Les éléments d’un nouveau tableau sont initialisés à une valeur par défaut dépendante du type.
 Dans la plupart des cas, il s’agit d’une variante de zéro.
@@ -373,8 +375,7 @@ Par exemple, si `Op1` , `Op2` et `Op3` sont tous des `Qubit[] => Unit` , mais pr
 - `[Op1, Op3]`est un tableau d' `(Qubit[] => Unit is Adj)` opérations.
 - `[Op2, Op3]`est un tableau d' `(Qubit[] => Unit is Ctl)` opérations.
 
-Les littéraux de tableaux vides, `[]` , ne sont pas autorisés.
-Au lieu d’utiliser `new ★[0]` , où `★` est l’espace réservé pour un type approprié, permet de créer le tableau souhaité de longueur zéro.
+Toutefois, tandis que `(Qubit[] => Unit is Adj)` `(Qubit[] => Unit is Ctl)` les opérations et ont le type de base commun de `(Qubit[] => Unit)` , Notez que les tableaux *de* ces opérateurs ne partagent pas un type de base commun. Par exemple, `[[Op1], [Op2]]` génère une erreur en raison d’une tentative de création d’un tableau des types de tableau incompatibles `(Qubit[] => Unit is Adj)[]` et de `(Qubit[] => Unit is Ctl)[]` .
 
 
 ## <a name="conditional-expressions"></a>Expressions conditionnelles
@@ -477,20 +478,21 @@ Opérateur | Arité | Description | Types d’opérandes
 ---------|----------|---------|---------------
  fin`!` | Unaire | Désencapsuler | Tout type défini par l’utilisateur
  `-`, `~~~`, `not` | Unaire | Valeur numérique négative, complément au niveau du bit, négation logique | `Int`, `BigInt` ou pour, `Double` ou pour `-` `Int` `BigInt` `~~~` , `Bool` pour`not`
- `^` | Binary | Puissance entière | `Int`ou `BigInt` pour la base, `Int` pour l’exposant
- `/`, `*`, `%` | Binary | Division, multiplication, modulo entier | `Int`, `BigInt` ou `Double` pour `/` et `*` , `Int` ou `BigInt` pour`%`
- `+`, `-` | Binary | Addition ou concaténation de chaînes et de tableaux, soustraction | `Int`, `BigInt` ou `Double` , en plus `String` ou n’importe quel type de tableau pour`+`
- `<<<`, `>>>` | Binary | Décalage vers la gauche, décalage vers la droite | `Int` ou `BigInt`
- `<`, `<=`, `>`, `>=` | Binary | Comparaisons « inférieur à », « inférieur à », « supérieur à », « supérieur à » ou « égal à » | `Int`, `BigInt` ou`Double`
- `==`, `!=` | Binary | comparaisons égales et non égales | tout type primitif
- `&&&` | Binary | ET au niveau du bit | `Int` ou `BigInt`
- `^^^` | Binary | Opération de bits XOR | `Int` ou `BigInt`
- <code>\|\|\|</code> | Binary | Opération de bits OR | `Int` ou `BigInt`
- `and` | Binary | ET logique | `Bool`
- `or` | Binary | OU logique | `Bool`
+ `^` | Binaire | Puissance entière | `Int`ou `BigInt` pour la base, `Int` pour l’exposant
+ `/`, `*`, `%` | Binaire | Division, multiplication, modulo entier | `Int`, `BigInt` ou `Double` pour `/` et `*` , `Int` ou `BigInt` pour`%`
+ `+`, `-` | Binaire | Addition ou concaténation de chaînes et de tableaux, soustraction | `Int`, `BigInt` ou `Double` , en plus `String` ou n’importe quel type de tableau pour`+`
+ `<<<`, `>>>` | Binaire | Décalage vers la gauche, décalage vers la droite | `Int` ou `BigInt`
+ `<`, `<=`, `>`, `>=` | Binaire | Comparaisons « inférieur à », « inférieur à », « supérieur à », « supérieur à » ou « égal à » | `Int`, `BigInt` ou`Double`
+ `==`, `!=` | Binaire | comparaisons égales et non égales | tout type primitif
+ `&&&` | Binaire | ET au niveau du bit | `Int` ou `BigInt`
+ `^^^` | Binaire | Opération de bits XOR | `Int` ou `BigInt`
+ <code>\|\|\|</code> | Binaire | Opération de bits OR | `Int` ou `BigInt`
+ `and` | Binaire | ET logique | `Bool`
+ `or` | Binaire | OU logique | `Bool`
  `..` | Binaire/ternaire | Opérateur de plage | `Int`
  `?` `|` | Gradient | Logique conditionnelle | `Bool`pour le côté gauche
 `w/` `<-` | Gradient | Copier et mettre à jour | Voir les [expressions copy-and-Update](#copy-and-update-expressions)
 
-## <a name="whats-next"></a>Étape suivante
+## <a name="next-steps"></a>Étapes suivantes
+
 Maintenant que vous pouvez utiliser des expressions dans Q #, vous pouvez voir les [opérations et les fonctions dans q #](xref:microsoft.quantum.guide.operationsfunctions) pour savoir comment définir et appeler des opérations et des fonctions.

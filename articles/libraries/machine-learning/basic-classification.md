@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: f42e3e4492f934d7a8f03d4fec6fa0de765401d7
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909923"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327643"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Classification de base : classer les données avec QDK
 
@@ -19,10 +19,10 @@ Dans ce guide de démarrage rapide, vous allez apprendre à exécuter un classif
 
 Dans ce guide, nous allons utiliser le jeu de données de la demi-lune, à l’aide d’une structure de classifieur définie dans Q #.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - Le Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- [Créer un projet Q#](xref:microsoft.quantum.howto.createproject)
+- Créez un projet Q # pour un [programme hôte python](xref:microsoft.quantum.install.python) ou un [programme hôte C#](xref:microsoft.quantum.install.cs).
 
 ## <a name="host-program"></a>Programme hôte
 
@@ -34,7 +34,7 @@ Votre programme hôte se compose de trois parties :
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python avec Visual Studio Code ou la ligne de commande](#tab/tabid-python)
 
-    Pour exécuter vous êtes le classificateur Q # de Python, enregistrez le code suivant en tant que `host.py`. N’oubliez pas que vous avez également besoin de la `Training.qs` de fichiers Q # qui est expliquée plus loin dans ce didacticiel.
+    Pour exécuter vous êtes le classificateur Q # de Python, enregistrez le code suivant sous `host.py` . N’oubliez pas que vous avez également besoin du fichier Q # `Training.qs` qui est expliqué plus loin dans ce didacticiel.
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
@@ -49,7 +49,7 @@ Votre programme hôte se compose de trois parties :
 
     ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[C# avec Visual Studio Code ou la ligne de commande](#tab/tabid-csharp)
 
-    Pour exécuter vous êtes le classificateur Q # de C#, enregistrez le code suivant en tant que `Host.cs`. N’oubliez pas que vous avez également besoin de la `Training.qs` de fichiers Q # qui est expliquée plus loin dans ce didacticiel.
+    Pour exécuter vous êtes le classificateur Q # à partir de C#, enregistrez le code suivant sous `Host.cs` . N’oubliez pas que vous avez également besoin du fichier Q # `Training.qs` qui est expliqué plus loin dans ce didacticiel.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -63,7 +63,7 @@ Votre programme hôte se compose de trois parties :
 
     ### <a name="c-with-visual-studio-2019"></a>[C# avec Visual Studio 2019](#tab/tabid-vs2019)
 
-    Pour exécuter votre nouveau programme Q # à C# partir de Visual Studio, modifiez `Host.cs` pour inclure le C# code suivant. N’oubliez pas que vous avez également besoin de la `Training.qs` de fichiers Q # qui est expliquée plus loin dans ce didacticiel.
+    Pour exécuter votre nouveau programme Q # à partir de C# dans Visual Studio, modifiez `Host.cs` pour inclure le code C# suivant. N’oubliez pas que vous avez également besoin du fichier Q # `Training.qs` qui est expliqué plus loin dans ce didacticiel.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -76,18 +76,18 @@ Votre programme hôte se compose de trois parties :
     ```
     ***
 
-## <a name="q-classifier-code"></a>Q\# le code de classifieur
+## <a name="q-classifier-code"></a>\#Code du classifieur Q
 
 Voyons maintenant comment les opérations appelées par le programme hôte sont définies dans Q #.
-Nous enregistrons le code suivant dans un fichier nommé `Training.qs`.
+Nous enregistrons le code suivant dans un fichier nommé `Training.qs` .
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::
 
 Les fonctions et opérations les plus importantes définies dans le code ci-dessus sont les suivantes :
 
-- `ClassifierStructure() : ControlledRotation[]` : dans cette fonction, nous définissons la structure de notre modèle de circuit en ajoutant les couches des portes contrôlées que nous considérons. Cette étape est analogue à la déclaration des couches de neurones dans un modèle d’apprentissage profond séquentiel.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)` : cette opération est la partie fondamentale du code et définit l’apprentissage. Ici, nous chargeons les exemples à partir du jeu de données inclus dans la bibliothèque, nous définissons les hyper paramètres et les paramètres initiaux pour l’apprentissage et nous commençons la formation en appelant l’opération `TrainSequentialClassifier` incluse dans la bibliothèque. Il génère les paramètres et le biais qui déterminent le classifieur.
-- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : cette opération définit le processus de validation pour évaluer le modèle. Ici, nous chargeons les exemples pour la validation, le nombre de mesures par échantillon et la tolérance. Il génère le nombre de déclassifications incorrectes sur le lot d’exemples choisi à des fins de validation.
+- `ClassifierStructure() : ControlledRotation[]`: dans cette fonction, nous définissons la structure de notre modèle de circuit en ajoutant les couches des portes contrôlées que nous considérons. Cette étape est analogue à la déclaration des couches de neurones dans un modèle d’apprentissage profond séquentiel.
+- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: cette opération est la partie fondamentale du code et définit l’apprentissage. Ici, nous chargeons les exemples à partir du jeu de données inclus dans la bibliothèque, nous définissons les hyper paramètres et les paramètres initiaux pour l’apprentissage et nous commençons l’apprentissage en appelant l’opération `TrainSequentialClassifier` incluse dans la bibliothèque. Il génère les paramètres et le biais qui déterminent le classifieur.
+- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: cette opération définit le processus de validation pour évaluer le modèle. Ici, nous chargeons les exemples pour la validation, le nombre de mesures par échantillon et la tolérance. Il génère le nombre de déclassifications incorrectes sur le lot d’exemples choisi à des fins de validation.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

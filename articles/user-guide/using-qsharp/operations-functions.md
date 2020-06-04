@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: bc9695b85b68807801225ccbc903a4622b450768
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431068"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327796"
 ---
 # <a name="operations-and-functions-in-q"></a>Opérations et fonctions dans Q #
 
@@ -426,7 +426,7 @@ function Square(x : Double) : (Double) {
 }
 ```
 
-ou 
+or 
 
 ```qsharp
 function DotProduct(a : Double[], b : Double[]) : Double {
@@ -670,5 +670,6 @@ Il existe toutefois deux commentaires importants sur l’utilisation de la récu
 - En cas d’exécution sur un appareil Quantum réel, l’espace de pile peut être limité et, par conséquent, une récurrence profonde peut entraîner une erreur d’exécution.
   En particulier, le compilateur et le runtime Q # n’identifient pas et n’optimisent pas la récurrence de la fin.
 
-## <a name="whats-next"></a>Étape suivante
+## <a name="next-steps"></a>Étapes suivantes
+
 En savoir plus sur les [variables](xref:microsoft.quantum.guide.variables) dans Q #.

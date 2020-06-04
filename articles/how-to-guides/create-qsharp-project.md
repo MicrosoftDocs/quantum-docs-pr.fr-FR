@@ -7,28 +7,28 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: c093284f1ea33b72d4d264992b0ba6bf6bc72782
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 8019b32a3290e2d45124ebb1eb75395f6cb758db
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036438"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327524"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Créer un projet Q # dans votre environnement de développement
 
 Découvrez comment créer un projet Q # avec QDK.
 
-Un projet Q # contient des fichiers Q # contenant du code Quantum, ainsi qu’un programme hôte pour exécuter le programme Quantum. Vous pouvez écrire le programme hôte dans des langages .NET C#tels que, ou dans Python. Vous pouvez également exécuter le code Q # dans un bloc-notes Jupyter à l’aide du noyau IQ #.
+Un projet Q # contient des fichiers Q # contenant du code Quantum, ainsi qu’un programme hôte pour exécuter le programme Quantum. Vous pouvez écrire le programme hôte dans des langages .NET tels que C# ou dans Python. Vous pouvez également exécuter le code Q # dans un Jupyter Notebook à l’aide du noyau IQ #.
 
 Choisissez votre environnement et votre langage de développement dans les sections ci-dessous :
 
 * [Python](#create-a-python-project)
-* [Q # bloc-notes Jupyter](#create-a-q-jupyter-notebook-project)
-* [C#avec Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
-* [C#avec VS Code](#create-a-c-project-using-vs-code)
-* [C#avec la ligne de commande](#create-a-c-project-using-the-dotnet-command-line-tool)
+* [Notebooks Jupyter Q#](#create-a-q-jupyter-notebook-project)
+* [C# avec Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
+* [C# avec VS Code](#create-a-c-project-using-vs-code)
+* [C# avec la ligne de commande](#create-a-c-project-using-the-dotnet-command-line-tool)
 
-## <a name="create-a-python-project"></a>Créer un projet python
+## <a name="create-a-python-project"></a>Créer un projet Python
 
 1. Conditions préalables
 
@@ -36,7 +36,7 @@ Choisissez votre environnement et votre langage de développement dans les secti
 
 1. Créez un dossier pour votre projet et accédez à ce dossier
 
-1. Créez un fichier Q # nommé `Operation.qs`et ajoutez-y votre code Q #. Par exemple :
+1. Créez un fichier Q # nommé `Operation.qs` et ajoutez-y votre code q #. Par exemple :
 
     ```qsharp
     namespace HelloWorld {
@@ -89,7 +89,7 @@ Vous pouvez maintenant continuer à développer votre programme Quantum.
 
 1. Accédez à l’URL affichée sur la ligne de commande. Par exemple : [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
-1. Une page Jupyter s’affiche dans le navigateur. Dans l’onglet **fichiers** , sélectionnez **nouveau** > **Q #** pour créer un bloc-notes Jupyter avec un noyau q #. Ajoutez le code suivant à la première cellule du bloc-notes :
+1. Une page Jupyter s’affiche dans le navigateur. Dans l’onglet **fichiers** , sélectionnez **nouveau**  >  **Q #** pour créer un Jupyter Notebook avec un noyau q #. Ajoutez le code suivant à la première cellule du bloc-notes :
 
     ```qsharp
     operation SayHello() : Unit {
@@ -97,21 +97,21 @@ Vous pouvez maintenant continuer à développer votre programme Quantum.
     }
     ```
 
-1. Sélectionnez **cellule** > **exécuter les cellules** pour exécuter le bloc-notes. `SayHello` s’affiche bientôt dans la sortie de la cellule :
+1. Sélectionnez **cellule**  >  **exécuter les cellules** pour exécuter le bloc-notes. `SayHello`s’affiche bientôt dans la sortie de la cellule :
 
-    ![Cellule de notebook Jupyter avec code Q#](~/media/install-guide-jupyter.png)
+    ![Jupyter Notebook cellule avec le code Q #](~/media/install-guide-jupyter.png)
 
     Lors de l’exécution dans des blocs-notes Jupyter, le code Q # est compilé et le bloc-notes renvoie le nom de la ou des opérations qu’il trouve.
 
 1. Dans une nouvelle cellule, simulez l’exécution sur un ordinateur quantique de l’opération que vous venez de créer à l’aide de la commande magic `%simulate` :
 
-    ![Cellule de notebook Jupyter avec commande magic %simulate](~/media/install-guide-jupyter-simulate.png)
+    ![Jupyter Notebook cellule avec% simulateur magique](~/media/install-guide-jupyter-simulate.png)
 
     Le message doit s’afficher à l’écran ainsi que le résultat de l’opération que vous avez appelée (vide dans ce cas).
 
 Vous pouvez maintenant ajouter d’autres opérations Q # pour poursuivre le développement de votre Quantum.
 
-## <a name="create-a-c-project-on-windows-using-visual-studio"></a>Créer un C# projet sur Windows à l’aide de Visual Studio
+## <a name="create-a-c-project-on-windows-using-visual-studio"></a>Créer un projet C# sur Windows à l’aide de Visual Studio
 
 1. Conditions préalables
 
@@ -119,7 +119,7 @@ Vous pouvez maintenant ajouter d’autres opérations Q # pour poursuivre le dé
 
 1. Créez une application en Q#
 
-    * Accédez à **Fichier** -> **Nouveau** -> **Projet**
+    * Accéder au **fichier**  ->  **nouveau**  ->  **projet**
     * Saisissez `Q#` dans la zone de recherche
     * Sélectionnez **Application Q#**
     * Sélectionnez **Suivant**.
@@ -132,7 +132,7 @@ Vous pouvez maintenant ajouter d’autres opérations Q # pour poursuivre le dé
 
 1. Exécution de l'application
 
-    * Sélectionnez **Débogage** -> **Démarrer sans débogage**
+    * Sélectionnez **Déboguer**  ->  **exécuter sans débogage**
     * Vous devriez voir le texte `Hello quantum world!` imprimé dans une fenêtre de la console.
 
 Vous pouvez maintenant continuer votre développement quantique à l’aide de Visual Studio
@@ -140,7 +140,7 @@ Vous pouvez maintenant continuer votre développement quantique à l’aide de V
 > [!NOTE]
 > * Si vous avez plusieurs projets dans une solution Visual Studio, tous les projets contenus dans la solution doivent se trouver dans le même dossier que la solution ou dans un de ses sous-dossiers.  
 
-## <a name="create-a-c-project-using-vs-code"></a>Créer un C# projet à l’aide de vs code
+## <a name="create-a-c-project-using-vs-code"></a>Créer un projet C#, à l’aide de VS Code
 
 1. Conditions préalables
 
@@ -148,7 +148,7 @@ Vous pouvez maintenant continuer votre développement quantique à l’aide de V
 
 1. Créer un projet :
 
-    * Accédez à **Affichage** -> **Palette de commandes**
+    * Accéder à **View**la  ->  **palette de commandes** de la vue
     * Sélectionnez **Q # : créer un projet**
     * Sélectionner une **application console autonome**
     * Accédez à l’emplacement du système de fichiers dans lequel vous souhaitez créer l’application
@@ -156,7 +156,7 @@ Vous pouvez maintenant continuer votre développement quantique à l’aide de V
 
 1. Exécutez l'application :
 
-    * Accéder au **terminal** -> **nouveau terminal**
+    * Accéder au **Terminal**  ->  **nouveau terminal**
     * Entrez `dotnet run`
     * Le texte suivant devrait apparaître dans la fenêtre de sortie `Hello quantum world!`
 
@@ -165,11 +165,11 @@ Vous pouvez maintenant continuer votre développement quantique à l’aide de V
 > [!NOTE]
 > * Les espaces de travail avec plusieurs dossiers racine ne sont actuellement pas pris en charge par l’extension Visual Studio Code. Si vous avez plusieurs projets dans un espace de travail VS Code, tous les projets doivent être contenus dans le même dossier racine.
 
-## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>Créer un C# projet à l’aide de l’outil en ligne de commande `dotnet`
+## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>Créer un projet C#, à l’aide de l' `dotnet` outil en ligne de commande
 
 1. Conditions préalables
 
-    * Installer le [Kit de développement Quantum pour la ligne de commande](xref:microsoft.quantum.install.cs)
+    * Installer le [Kit de développement Quantum pour la ligne de commande](xref:microsoft.quantum.install.standalone)
 
 1. Créer une application
 
@@ -195,6 +195,6 @@ Vous pouvez maintenant continuer votre développement quantique à l’aide de V
 
 Vous continuez maintenant votre développement Quantum, à l’aide d’outils en ligne de commande.
 
-## <a name="whats-next"></a>Quelle est l’étape suivante ?
+## <a name="next-steps"></a>Étapes suivantes
 
 Maintenant que vous avez créé un projet dans votre environnement préféré, vous pouvez continuer votre développement quantique.

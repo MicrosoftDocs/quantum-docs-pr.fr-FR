@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: cbee92c6d7e765237a7a42532dd7012b51421708
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: b8c24dae6cc8d8f37ad4f1f74017c05cabe3a4b4
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430966"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327456"
 ---
 # <a name="q-file-structure"></a>Structure de fichiers Q #
 
@@ -152,5 +152,6 @@ Les noms suivants sont reconnus en tant qu’en-têtes de commentaires de docume
 - **Voir aussi**: liste de noms qualifiés complets indiquant les fonctions connexes, les opérations ou les types définis par l’utilisateur.
 - **Références**: liste de références et de citations pour l’élément documenté.
 
-## <a name="whats-next"></a>Étape suivante
+## <a name="next-steps"></a>Étapes suivantes
+
 En savoir plus sur [les opérations et les fonctions](xref:microsoft.quantum.guide.operationsfunctions) dans Q #.
