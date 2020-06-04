@@ -2,6 +2,7 @@
 
 | Commande magique | Résumé |
 |---------------|---------|
+| [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata) | Vérifie l’implémentation de référence d’un seul test de kata. |
 | [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge) | Charge et retourne la représentation d’un problème de structure électronique Broombridge à partir d’un fichier .yaml donné. |
 | [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode) | Encode un fermion hamiltonien dans un format consommable par Q#. |
 | [`%chemistry.fh.add_terms`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms) | Ajoute des termes à un fermion hamiltonien. |
@@ -9,6 +10,7 @@
 | [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load) | Charge le problème de structure électronique Broombridge et retourne l’état d’entrée sélectionné. |
 | [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config) | Autorise la définition ou l’interrogation des options de configuration. |
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Exécute une fonction ou une opération donnée sur l’ordinateur cible ResourcesEstimator. |
+| [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Exécute un seul test. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Retourne une liste de toutes les commandes magiques actuellement disponibles. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Fournit la capacité à charger un package Nuget. Le package doit être disponible dans la liste des sources nuget, ce qui comprend généralement nuget.org |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Rapporte les métriques de performance actuelles pour ce noyau. |

@@ -1,21 +1,21 @@
 ---
 uid: microsoft.quantum.welcome
-title: Bien démarrer avec le kit de développement Quantum
+title: Bien démarrer avec le Quantum Development Kit (QDK)
 description: Découvrez comment commencer à programmer des projets quantiques en Q# avec le kit de développement Microsoft Quantum.
 author: natke
 ms.author: nakersha
 ms.date: 5/10/2020
 ms.topic: overview
-ms.openlocfilehash: 2356fee2333acb73f528fad6d9def68a7fe84083
-ms.sourcegitcommit: 4da99168479f96f408b984279a5a7eabcda752db
+ms.openlocfilehash: 5fea46e43d9a3739e4b058781e1b52dff20b7e21
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83708716"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327507"
 ---
-# <a name="get-started-with-the-quantum-development-kit"></a>Bien démarrer avec le kit de développement Quantum
+# <a name="get-started-with-the-quantum-development-kit-qdk"></a>Bien démarrer avec le Quantum Development Kit (QDK)
 
-Bienvenue dans le kit de développement Microsoft Quantum  
+Bienvenue dans le Microsoft Quantum Development kit  
 
 Le kit de développement Quantum (QDK, Quantum development kit) contient tous les outils dont vous aurez besoin pour créer vos propres expérimentations et programmes quantiques avec Q#, langage de programmation conçu spécifiquement pour le développement d’applications quantiques.
 
@@ -26,7 +26,7 @@ Si vous ne connaissez pas encore l’informatique quantique, lisez la section [V
 
 ## <a name="get-started-programming"></a>Prise en main de la programmation
 
-Le kit de développement Quantum vous offre de nombreuses façons d’apprendre à développer un programme quantique avec Q#.
+Le Quantum Development Kit vous offre de nombreuses façons d’apprendre à développer un programme quantique avec Q#.
 Pour débuter avec l’informatique quantique et être prêt à en exploiter toute la puissance, vous pouvez suivre nos tutoriels :
 
 * [Générateur de nombres aléatoires quantique](xref:microsoft.quantum.quickstarts.qrng) : commencez avec une application de style « Hello World Q# » qui fournit une brève introduction des concepts de l’informatique quantique tout en vous permettant de créer et d’exécuter une application quantique en seulement quelques minutes.
