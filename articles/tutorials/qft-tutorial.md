@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: f0b87936c9baf07555e76f295da58c0a6b9ecd17
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 05d3292e1c6e3c8c1163c460f2aaa51c591aa1d5
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84328593"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422238"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Didacticiel : écrire et simuler des programmes de niveau qubit dans Q\#
 
@@ -386,7 +386,7 @@ En détail pour la première ligne de notre état d’entrée $ \ket {000} $ :
 * **`    ---`**: Représentation graphique de la phase de l’amplitude.
 * **`[ 0.0000 rad ]`**: valeur numérique de la phase (en radians).
 
-L’amplitude et la phase sont toutes les deux affichées avec une représentation graphique. La représentation magnitude est simple : elle affiche une barre de `*` et plus la probabilité est élevée, plus la barre est grande. Pour la phase, consultez la section DumpMachine [ici](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) pour connaître les représentations de symboles possibles en fonction des plages angulaires.
+L’amplitude et la phase sont toutes les deux affichées avec une représentation graphique. La représentation magnitude est simple : elle affiche une barre de `*` et plus la probabilité est élevée, plus la barre est grande. Pour la phase, consultez [test et débogage : fonctions de vidage](xref:microsoft.quantum.guide.testingdebugging#dump-functions) pour les représentations de symboles possibles en fonction des plages angulaires.
 
 
 La sortie imprimée illustre donc que nos portes programmées ont transformé notre état à partir de

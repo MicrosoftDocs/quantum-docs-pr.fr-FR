@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327643"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422170"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Classification de base : classer les données avec QDK
 
@@ -86,7 +86,7 @@ Nous enregistrons le code suivant dans un fichier nommé `Training.qs` .
 Les fonctions et opérations les plus importantes définies dans le code ci-dessus sont les suivantes :
 
 - `ClassifierStructure() : ControlledRotation[]`: dans cette fonction, nous définissons la structure de notre modèle de circuit en ajoutant les couches des portes contrôlées que nous considérons. Cette étape est analogue à la déclaration des couches de neurones dans un modèle d’apprentissage profond séquentiel.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: cette opération est la partie fondamentale du code et définit l’apprentissage. Ici, nous chargeons les exemples à partir du jeu de données inclus dans la bibliothèque, nous définissons les hyper paramètres et les paramètres initiaux pour l’apprentissage et nous commençons l’apprentissage en appelant l’opération `TrainSequentialClassifier` incluse dans la bibliothèque. Il génère les paramètres et le biais qui déterminent le classifieur.
+- `TrainHalfMoonModel() : (Double[], Double)`: cette opération est la partie fondamentale du code et définit l’apprentissage. Ici, nous chargeons les exemples à partir du jeu de données inclus dans la bibliothèque, nous définissons les hyper paramètres et les paramètres initiaux pour l’apprentissage et nous commençons l’apprentissage en appelant l’opération `TrainSequentialClassifier` incluse dans la bibliothèque. Il génère les paramètres et le biais qui déterminent le classifieur.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: cette opération définit le processus de validation pour évaluer le modèle. Ici, nous chargeons les exemples pour la validation, le nombre de mesures par échantillon et la tolérance. Il génère le nombre de déclassifications incorrectes sur le lot d’exemples choisi à des fins de validation.
 
 ## <a name="next-steps"></a>Étapes suivantes
