@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 8019b32a3290e2d45124ebb1eb75395f6cb758db
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 8af8e3288aab731520ede984d5f89644de292385
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327524"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578209"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Créer un projet Q # dans votre environnement de développement
 
@@ -62,13 +62,13 @@ Choisissez votre environnement et votre langage de développement dans les secti
 
 1. Exécutez le programme :
 
-    ```bash
+    ```
     python host.py
     ```
 
 1. Vérifiez la sortie. Votre programme doit générer les lignes suivantes :
 
-    ```bash
+    ```
     Hello from quantum world!
     0
     ```
@@ -83,7 +83,7 @@ Vous pouvez maintenant continuer à développer votre programme Quantum.
 
 1. Exécutez la commande suivante pour démarrer le serveur notebook :
 
-    ```bash
+    ```
     jupyter notebook
     ```
 
@@ -179,7 +179,7 @@ Vous pouvez maintenant continuer votre développement quantique à l’aide de V
 
 1. Accédez au nouveau répertoire de l’application
 
-    ```bash
+    ```
     cd <project name>
     ```
 
