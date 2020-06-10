@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327303"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84629995"
 ---
 # <a name="type-expressions-in-q"></a>Expressions de type dans Q #
 
@@ -201,7 +201,7 @@ Par exemple, si `IntPair` est un type défini par l’utilisateur basé sur `(In
 Dans Q #, l’opérateur Unwrap est un point d’exclamation de fin `!` .
 Par exemple, si `IntPair` est un type défini par l’utilisateur avec le type sous-jacent et qu’il s’agit d' `(Int, Int)` `s` une variable avec une valeur `IntPair(2, 3)` , est alors `s!` `(2, 3)` .
 
-Pour les types définis par l’utilisateur définis en termes d’autres types définis par l’utilisateur. l’opérateur Unwrap peut être répété ; par exemple, `s!!` indique la valeur doublement désencapsulée de `s` .
+Pour les types définis par l’utilisateur définis en termes d’autres types définis par l’utilisateur, l’opérateur Unwrap peut être répété. par exemple, `s!!` indique la valeur doublement désencapsulée de `s` .
 Ainsi, si `WrappedPair` est un type défini par l’utilisateur avec le type sous-jacent `IntPair` , et `t` est une variable de valeur `WrappedPair(IntPair(1,2))` , est alors `t!!` `(1,2)` .
 
 L' `!` opérateur a une priorité plus élevée que tous les autres opérateurs autres que `[]` pour l’indexation et le découpage de tableau.
@@ -478,17 +478,17 @@ Opérateur | Arité | Description | Types d’opérandes
 ---------|----------|---------|---------------
  fin`!` | Unaire | Désencapsuler | Tout type défini par l’utilisateur
  `-`, `~~~`, `not` | Unaire | Valeur numérique négative, complément au niveau du bit, négation logique | `Int`, `BigInt` ou pour, `Double` ou pour `-` `Int` `BigInt` `~~~` , `Bool` pour`not`
- `^` | Binaire | Puissance entière | `Int`ou `BigInt` pour la base, `Int` pour l’exposant
- `/`, `*`, `%` | Binaire | Division, multiplication, modulo entier | `Int`, `BigInt` ou `Double` pour `/` et `*` , `Int` ou `BigInt` pour`%`
- `+`, `-` | Binaire | Addition ou concaténation de chaînes et de tableaux, soustraction | `Int`, `BigInt` ou `Double` , en plus `String` ou n’importe quel type de tableau pour`+`
- `<<<`, `>>>` | Binaire | Décalage vers la gauche, décalage vers la droite | `Int` ou `BigInt`
- `<`, `<=`, `>`, `>=` | Binaire | Comparaisons « inférieur à », « inférieur à », « supérieur à », « supérieur à » ou « égal à » | `Int`, `BigInt` ou`Double`
- `==`, `!=` | Binaire | comparaisons égales et non égales | tout type primitif
- `&&&` | Binaire | ET au niveau du bit | `Int` ou `BigInt`
- `^^^` | Binaire | Opération de bits XOR | `Int` ou `BigInt`
- <code>\|\|\|</code> | Binaire | Opération de bits OR | `Int` ou `BigInt`
- `and` | Binaire | ET logique | `Bool`
- `or` | Binaire | OU logique | `Bool`
+ `^` | Binary | Puissance entière | `Int`ou `BigInt` pour la base, `Int` pour l’exposant
+ `/`, `*`, `%` | Binary | Division, multiplication, modulo entier | `Int`, `BigInt` ou `Double` pour `/` et `*` , `Int` ou `BigInt` pour`%`
+ `+`, `-` | Binary | Addition ou concaténation de chaînes et de tableaux, soustraction | `Int`, `BigInt` ou `Double` , en plus `String` ou n’importe quel type de tableau pour`+`
+ `<<<`, `>>>` | Binary | Décalage vers la gauche, décalage vers la droite | `Int` ou `BigInt`
+ `<`, `<=`, `>`, `>=` | Binary | Comparaisons « inférieur à », « inférieur à », « supérieur à », « supérieur à » ou « égal à » | `Int`, `BigInt` ou`Double`
+ `==`, `!=` | Binary | comparaisons égales et non égales | tout type primitif
+ `&&&` | Binary | ET au niveau du bit | `Int` ou `BigInt`
+ `^^^` | Binary | Opération de bits XOR | `Int` ou `BigInt`
+ <code>\|\|\|</code> | Binary | Opération de bits OR | `Int` ou `BigInt`
+ `and` | Binary | ET logique | `Bool`
+ `or` | Binary | OU logique | `Bool`
  `..` | Binaire/ternaire | Opérateur de plage | `Int`
  `?` `|` | Gradient | Logique conditionnelle | `Bool`pour le côté gauche
 `w/` `<-` | Gradient | Copier et mettre à jour | Voir les [expressions copy-and-Update](#copy-and-update-expressions)

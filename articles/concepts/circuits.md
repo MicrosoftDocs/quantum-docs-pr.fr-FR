@@ -6,18 +6,89 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 43f14d67db76dabda34bf881ccbfae0bfd1784ff
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 745f0570bf62c5d98c2896cdc893ec385abd7115
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426625"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630402"
 ---
 # <a name="quantum-circuits"></a>Circuits quantiques
-Prenons un moment pour la transformation unitaire $ \text{CNOTIN} _ {01} (H\otimes 1) $.
+Prenons un moment pour la transformation unitaire $ \text { cnotin} _ {01 } (H \otimes 1) $.
 Cette séquence de porte-clés revêt une importance fondamentale pour l’informatique quantique, car elle crée un État à deux qubit enchevêtré au maximum :
 
-$ $ \mathrm{CNOT}_ {01} (H\otimes 1) \ket {00} = \frac {1} {\sqrt {2} } \left (\ket {00} + \ket {11} \right), $ $
+$ $ \mathrm{CNOT}_{01 } (H \otimes 1) \ket{00 } = \frac{1 } {\sqrt{2 } } \left (\ket{00 } + \ket{11 } \right), $ $
 
 Les opérations ayant cette complexité ou une complexité accrue sont omniprésentes dans les algorithmes Quantum et la correction des erreurs Quantum. il doit donc s’avérer très utile de disposer d’une méthode simple pour la visualisation appelée *diagramme de circuit quantique*.
 Le schéma de circuit pour la préparation de cet État Quantum enchevêtré de façon optimisée est le suivant :
@@ -31,7 +102,7 @@ Ce langage visuel pour les opérations de Quantum peut être plus facilement com
 Nous allons passer en revue les conventions ci-dessous.
 
 Dans un schéma de circuit, chaque ligne pleine représente un qubit ou plus généralement un registre qubit.
-Par Convention, la ligne supérieure est qubit Register $0 $ et le reste sont étiquetés de manière séquentielle. Le circuit d’exemple ci-dessus est représenté comme agissant sur deux qubits (ou deux registres équivalents composés d’un qubit).
+Par Convention, la ligne supérieure est qubit Register $0 $ et le reste est étiqueté de manière séquentielle. Le circuit d’exemple ci-dessus est représenté comme agissant sur deux qubits (ou deux registres équivalents composés d’un qubit).
 Les portes agissant sur un ou plusieurs registres qubit sont dénotées sous forme de zone.
 Par exemple, le symbole
 
@@ -49,7 +120,7 @@ Autrement dit,
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Diagramme des portes de Quantum appliquées de gauche à droite](~/media/3.svg)
 
-est la matrice d’unités $CBA $.
+est la matrice d’unités $CBA $ .
 La multiplication de matrice obéit à la Convention opposée : la matrice la plus à droite est appliquée en premier. Toutefois, dans les diagrammes de circuit Quantum, la porte la plus à gauche est appliquée en premier.
 Cette différence peut parfois entraîner une confusion. il est donc important de noter cette différence importante entre la notation algébrique linéaire et les diagrammes de circuit quantique.
 
@@ -61,7 +132,7 @@ S’ils n’ont pas le même nombre de sorties que les entrées, elles ne sont p
 Pour cette raison, toute zone dessinée dans un diagramme de circuit doit avoir exactement le même nombre de câbles qui l’entrent comme étant en cours de sortie.
 
 Les diagrammes de circuit à plusieurs qubit suivent des conventions similaires pour les qubit.
-En guise d’exemple de clarification, nous pouvons définir une opération unitaire à deux qubit $B $ pour être $ (H S\otimes X) $ et exprimer le circuit de façon équivalente
+En guise d’exemple de clarification, nous pouvons définir une opération unitaire à deux qubits $B $ être de $ (H S \otimes X) $ et exprimer le circuit de façon équivalente
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -72,16 +143,16 @@ Cela signifie que vous pouvez obtenir une intuition sur le workflow pour un gran
 
 ## <a name="controlled-gates"></a>Portes contrôlées
 L’autre construction intégrée aux diagrammes Quantum à plusieurs qubit est le contrôle.
-L’action d’une porte à contrôle quantique, dénotée $ \Lambda (G) $, où une valeur de qubit unique contrôle l’application de $G $, peut être comprise en examinant l’exemple suivant d’une entrée d’état de produit $ \Lambda (G) (\alpha \ket {0} + \beta \ket {1} ) \ket{\Psi} = \alpha \ket {0} \ket{\Psi} + \beta \ket G\ket {1} {\ psi} $.
-Autrement dit, la porte contrôlée applique $G $ au registre contenant $ \Psi $ si et seulement si le contrôle qubit prend la valeur $1 $.
+L’action d’une porte à contrôle quantique, dénotée $ \Lambda (G) $, où une valeur de qubit unique contrôle l’application de $G $ , peut être comprise en examinant l’exemple suivant d’une entrée d’état de produit $ \Lambda (g) (\alpha \ket{0 } + \beta \ket{1 } ) \ket { \Psi } = \alpha \ket{0 } \ket { \Psi } + \beta \ket{1 } G \ket { \Psi } $.
+Autrement dit, la porte contrôlée applique $G $ au registre contenant $ \Psi $ si et seulement si le contrôle qubit prend la valeur $1 $ .
 En général, nous décrivons ces opérations contrôlées dans des diagrammes de circuit comme
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Diagramme de circuit d’une porte contrôlée de façon unique](~/media/5.svg)
 
-Ici, le cercle noir désigne le bit Quantum sur lequel la porte est contrôlée et un câble vertical dénote l’unité qui est appliquée lorsque le contrôle qubit prend la valeur $1 $.
-Dans les cas spéciaux où $G = X $ et $G = Z $ nous introduisons la notation suivante pour décrire la version contrôlée des portes (Notez que la porte contrôlée-X est la [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)) :
+Ici, le cercle noir désigne le bit Quantum sur lequel la porte est contrôlée et un câble vertical dénote l’unité qui est appliquée lorsque le contrôle qubit prend la valeur $1 $ .
+Dans les cas spéciaux où $G = X $ et $G = Z, $ nous introduisons la notation suivante pour décrire la version contrôlée des portes (Notez que la porte contrôlée-X est [la $ porte $CNOT](xref:microsoft.quantum.intrinsic.cnot)) :
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -115,7 +186,7 @@ De même, le sous-circuit
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Diagramme de circuit représentant une opération contrôlée](~/media/8.svg)
 
-donne une porte contrôlée de façon classique, où $G $ est appliqué sur le bit de contrôle classique qui est la valeur $1 $.
+donne une porte contrôlée de façon classique, où $G $ est appliquée, le bit de contrôle classique étant la valeur $1 $ .
 
 ## <a name="teleportation-circuit-diagram"></a>Diagramme de circuit de téléportisation
 La téléportage quantique est peut-être le meilleur algorithme Quantum pour illustrer ces composants.

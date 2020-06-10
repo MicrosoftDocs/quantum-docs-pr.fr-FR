@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 9117794d6cf6f05fa34e05c21fad8977d0e76505
-ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
+ms.openlocfilehash: b80d95a160b5f46c1132d3428ba32ad6dcd5656e
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/09/2020
-ms.locfileid: "84577818"
+ms.locfileid: "84630333"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Développer avec Q# + Jupyter Notebook
 
@@ -24,7 +24,7 @@ IQ# (prononcé aïe-quiou-sharp) est une extension principalement utilisée par 
 > [!NOTE]
 > * Dans les blocs-notes Q # Jupyter, vous pouvez uniquement exécuter le code Q #, et les opérations ne peuvent pas être appelées à partir de programmes hôtes externes (par exemple, fichiers python ou C#). Cet environnement n’est pas approprié si votre objectif est de combiner un programme hôte classique externe avec le programme Quantum.
 
-1. Conditions préalables
+1. Prérequis
 
     - [Python](https://www.python.org/downloads/) 3,6 ou version ultérieure
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
@@ -36,6 +36,15 @@ IQ# (prononcé aïe-quiou-sharp) est une extension principalement utilisée par 
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > Si vous recevez une erreur lors de l' `dotnet iqsharp install` étape, ouvrez une nouvelle fenêtre de terminal, puis réessayez.
+    > Si cela ne fonctionne toujours pas, essayez de localiser l' `dotnet-iqsharp` outil installé (sur Windows `dotnet-iqsharp.exe` ) et d’exécuter :
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > où `/path/to/dotnet-iqsharp` doit être remplacé par le chemin d’accès absolu à l' `dotnet-iqsharp` outil dans votre système de fichiers.
+    > En général, il se trouve sous `.dotnet/tools` dans votre dossier de profil utilisateur.
 
 1. Vérifiez l’installation en créant une application `Hello World`
 

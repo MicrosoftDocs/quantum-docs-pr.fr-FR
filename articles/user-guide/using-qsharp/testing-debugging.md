@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: 374ac42255ab6b2c5eff8ab7879b3a5103181f7f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: dd6c7ae8a016423f26c37f3eedf0ae9c1d126b78
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430915"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630026"
 ---
 # <a name="testing-and-debugging"></a>Test et débogage
 
@@ -27,7 +27,7 @@ Q # prend en charge la création de tests unitaires pour les programmes Quantum,
 
 ### <a name="creating-a-test-project"></a>Création d’un projet de test
 
-#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Ouvrez Visual Studio 2019. Accédez au `File` menu et sélectionnez `New`  >  `Project...` .
 Dans l’angle supérieur droit, recherchez `Q#` et sélectionnez le `Q# Test Project` modèle.
@@ -71,7 +71,7 @@ Le compilateur Q # reconnaît les cibles intégrées « QuantumSimulator », �
 
 ### <a name="running-q-unit-tests"></a>Exécution de tests unitaires Q #
 
-#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Dans le cadre d’une configuration par solution unique, accédez au `Test` menu, puis sélectionnez `Test Settings`  >  `Default Processor Architecture`  >  `X64` .
 
@@ -123,7 +123,7 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 La fonction intrinsèque <xref:microsoft.quantum.intrinsic.message> a le type `(String -> Unit)` et permet la création de messages de diagnostic.
 
-#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Après avoir exécuté un test dans l’Explorateur de tests et cliqué sur le test, un panneau s’affiche avec des informations sur l’exécution des tests : état réussite/échec, temps écoulé et lien de sortie. Si vous cliquez sur le lien « sortie », la sortie de test s’ouvre dans une nouvelle fenêtre.
 
@@ -285,7 +285,7 @@ Les exemples suivants illustrent `DumpMachine` certains États courants :
   > L’ID d’un qubit est assigné au moment de l’exécution et n’est pas nécessairement aligné avec l’ordre dans lequel le qubit a été alloué ou sa position dans un registre qubit.
 
 
-#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
   > Vous pouvez déterminer un ID qubit dans Visual Studio en plaçant un point d’arrêt dans votre code et en inspectant la valeur d’une variable qubit, par exemple :

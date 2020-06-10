@@ -6,19 +6,19 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426872"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630133"
 ---
 # <a name="the-resources-estimator-target-machine"></a>Ordinateur cible de l’estimateur de ressources
 
 Comme son nom l’indique, le `ResourcesEstimator` estime les ressources requises pour exécuter une instance donnée d’une opération Q # sur un ordinateur Quantum.
 Pour ce faire, il exécute l’opération Quantum sans simuler réellement l’état d’un ordinateur quantique. pour cette raison, il peut estimer des ressources pour les opérations Q # qui utilisent des milliers de qubits, si la partie classique du code peut être exécutée dans un délai raisonnable.
 
-## <a name="usage"></a>Utilisation
+## <a name="usage"></a>Usage
 
 Le `ResourcesEstimator` n’est qu’un autre type d’ordinateur cible. il peut donc être utilisé pour exécuter n’importe quelle opération Q #. 
 
@@ -42,7 +42,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-Comme le montre l’exemple, le `ResourcesEstimator` fournit une `ToTSV()` méthode pour générer une table avec des valeurs séparées par des tabulations (TSV) qui peuvent être enregistrées dans un fichier ou écrites dans la console à des fins d’analyse. La sortie du programme ci-dessus doit ressembler à ceci :
+Comme le montre l’exemple, le `ResourcesEstimator` fournit une `ToTSV()` méthode pour générer une table avec des valeurs séparées par des tabulations (TSV) qui peuvent être enregistrées dans un fichier ou écrites dans la console pour l’analyse. La sortie du programme ci-dessus doit ressembler à ceci :
 
 ```Output
 Metric          Sum

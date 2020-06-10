@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 9a54c1d7a4403a98f945181fdad8ba8a7fdb1175
-ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
+ms.openlocfilehash: 6b24ebe9f0b5fd3318e8adfe1a62bafaf9d1961e
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84422221"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578132"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notes de publication de Microsoft Quantum Development Kit
 
@@ -25,6 +25,12 @@ Pour obtenir des instructions de mise à jour, consultez le [Guide de mise à jo
 
 *Date de publication : 4 juin 2020*
 
+Cette version corrige un bogue affectant la compilation des projets Q#.
+
+## <a name="version-0112006207"></a>Version 0.11.2006.207
+
+*Date de publication : 3 juin 2020*
+
 Cette version contient ce qui suit :
 
 - Les notebooks Q# et les programmes hôtes Python n’échoueront plus quand un point d’entrée Q# sera présent
@@ -33,6 +39,9 @@ Cette version contient ce qui suit :
 - Plusieurs fonctions et opérations obsolètes ont été supprimées conformément à la planification décrite dans nos [principes d’API](xref:microsoft.quantum.contributing.api-design). Les bibliothèques et les programmes Q# qui sont générés sans avertissement dans la version 0.11.2004.2825 continueront de fonctionner tels quels.
 
 Consultez la liste complète des PR fermées pour les [bibliothèques](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), le [compilateur](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), le [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), les [exemples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) et les [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
+> [!NOTE]
+> Cette version contient un bogue affectant la compilation des projets Q#. Nous vous recommandons d’effectuer une mise à niveau vers une version plus récente.
 
 ## <a name="version-01120042825"></a>Version 0.11.2004.2825
 
