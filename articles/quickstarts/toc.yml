@@ -1,0 +1,20 @@
+expanded: true
+items:
+  - name: Bien démarrer avec le QDK
+    href: get-started.md
+  - name: Installer le QDK
+    items:
+      - name: Vue d’ensemble de l’installation
+        href: index.md
+      - name: Applications en ligne de commande Q#
+        href: install-command-line.md
+      - name: Notebooks Jupyter Q#
+        href: install-jupyter.md
+      - name: Q# avec d’autres langages
+        items:
+          - name: Q# avec Python
+            href: install-python.md
+          - name: Q# avec .NET
+            href: install-cs.md
+  - name: Mettre à jour le QDK
+    href: update.md
