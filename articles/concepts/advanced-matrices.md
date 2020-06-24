@@ -9,6 +9,13 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
+- $$
+- $$
+- $$
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +84,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 8d3c646715f13c454e51b9295cbfdabf6a236ffc
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 71923247121eae6a1d4e26d2664d8e547370ba3a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630146"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269454"
 ---
 # <a name="advanced-matrix-concepts"></a>Concepts avancés de la matrice #
 
@@ -104,7 +114,7 @@ $$
 
 Les vecteurs
 
-$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end { bmatrix } et \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1 \end {bmatrix}$$
+$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end{bmatrix} et \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1\end{bmatrix}$$
 
 sont vecteurs propres de cette matrice avec valeurs propres $d _ 1 $ , $d _2 $ et $d _3 $ , respectivement. Si $d _ 1 $ , $d _2 $ et $d _3 $ sont des nombres distincts, ces vecteurs (et leurs multiples) sont les seuls vecteurs propres de la matrice $D $ . En général, pour une matrice diagonale, il est facile de lire les valeurs propres et les vecteurs propres. Les valeurs propres sont tous des nombres apparaissant sur la diagonale, et leurs vecteurs propres respectifs sont les vecteurs d’unité avec une entrée égale à $1 $ et les entrées restantes égales à $0 $ .
 

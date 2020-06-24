@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 6c09531cd8bee8f5efb472c95c575daed04d3040
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: f9d4e14742b7d06a6e90af0902b31fbdf17aedab
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630204"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269539"
 ---
 # <a name="vectors-and-matrices"></a>Vecteurs et matrices
 
@@ -189,9 +196,9 @@ Cette solution est mieux illustrée par des exemples :
 $ $ \begin{bmatrix}
         a \\ \\ b \end{ bmatrix } \otimes \begin{ bmatrix } c \\ \\ d \\ \\ e \end{ bmatrix } = \begin{bmatrix}
         \begin{ bmatrix } c \\ \\ d \\ \\ \end{bmatrix}
-        \\\\[1.5 em] b \begin{ bmatrix } c \\ \\ d \\ \\ e \end {bmatrix}
+        \\\\[1.5 em] b \begin{ bmatrix } c \\ \\ d \\ \\ e\end{bmatrix}
     effetbmatrix}
-    = \begin{ bmatrix } a c a \\ \\ d a \\ \\ e \\ \\ b c \\ \\ b is \\ \\ \end {bmatrix}
+    = \begin{ bmatrix } a c a \\ \\ d a \\ \\ e \\ \\ b c \\ \\ b \\ \\\end{bmatrix}
 $$
 
 et
@@ -201,13 +208,13 @@ $ $ \begin{bmatrix}
     \otimes \begin{bmatrix}
         e \ f \\ \\ v \ h \end{bmatrix}
      = \begin{bmatrix}
-    a \begin {bmatrix}
+    un\begin{bmatrix}
     e \ f \\\\ v \ h \end{bmatrix}
-    b \begin {bmatrix}
+    p\begin{bmatrix}
     e \ f \\\\ v \ h \end{bmatrix}
-    \\\\[1em] c \begin {bmatrix}
+    \\\\[1em] c\begin{bmatrix}
     e \ f \\\\ v \ h \end{bmatrix}
-    d \begin {bmatrix}
+    e\begin{bmatrix}
     e \ f \\\\ v \ h \end{bmatrix}
     effetbmatrix}
     = \begin{bmatrix}
@@ -217,5 +224,5 @@ $$
 La dernière convention de notation utile entourant les produits tenseur est que, pour n’importe quel vecteur $v $ ou $M de matrice $ , $v ^ {\otimes n } $ ou $M ^ {\otimes n } $ est la main pour un $ produit tenseur répété $n.  Par exemple :
 
 \begin{align}
-& \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } ^ {\otimes 1 } = \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } , \qquad \begin { bmatrix } 1 \\ \\ 0 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \qquad \begin { bmatrix } 1 \\ \\ -1 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 1 \\ \\ -1 \\ \\ -1 \\ \\ \end{ bmatrix } , \\ \\ & \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } ^ {\otimes 1 } = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } , \qquad \begin { bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 0 &0&0&1 0 &0&1&0 0 &\\ \\ \\ \\ 1&0&0 \\\\ 1 &0&0&0 \end { bmatrix } .
+& \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } ^ {\otimes 1 } = \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } , \qquad \begin{bmatrix} 1 \\ \\ 0 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \qquad \begin{bmatrix} 1 \\ \\ -1 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 1 \\ \\ -1 \\ \\ -1 \\ \\ 1 \end{ bmatrix } , \\ \\ & \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } ^ {\otimes 1 } = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } , \qquad \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 0 &0&0&1 \\ \\ 0 &0&1&0 0 &1&0 \\ \\&0 \\\\ 1 &0&0&0 \end{bmatrix} .
 \end{align}

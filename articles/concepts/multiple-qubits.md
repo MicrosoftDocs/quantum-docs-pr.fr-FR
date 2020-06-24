@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 224bd5165f508f6cd1fdb85fb5c14ba2e23e59ea
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 1ac235bef473efa82b096cae4159e2c724ba7c0e
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630363"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269488"
 ---
 # <a name="multiple-qubits"></a>Plusieurs qubits
 
@@ -138,7 +145,7 @@ $$
 
 Il est également possible de mesurer une seule qubit d’un État Quantum à deux qubit. Dans les cas où vous mesurez uniquement l’un des qubits, l’impact de la mesure est légèrement différent, car l’état entier n’est pas réduit à un état de base de calcul, au lieu d’être réduit à un seul sous-système.  En d’autres termes, dans de tels cas, la mesure d’un seul qubit réduit uniquement l’un des sous-systèmes, mais pas tous.  
 
-Pour voir cela, envisagez de mesurer le premier qubit de l’état suivant, qui est formé en appliquant la transformation hadarmard $H $ sur deux qubits initialement définie à l’État « 0 » : $ $ H ^ {\otimes 2 } \left (\begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \otimes \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \right) = \frac{1 } {2 } \begin{ bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 1 & 1 &-1 &-1 1 &-1 &- \\ \\ \\ \\ 1 & 1 \end{ bmatrix } \begin{ bmatrix } 1 \\\\ 0 0 \\\\ \\\\ 0 \end { bmatrix } = \frac{1 } {2 } \begin{} 1 1 1 1 bmatrix \\\\ \\\\ \\\\ \end { bmatrix } \mapsto \begin{cases } \text{Outcome} = 0 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 1 \\\\ 1 \\\\ 0 \\\\ 0 \end{ bmatrix } \\ \\ \text{Outcome} = 1 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \end{\end{cases bmatrix } \\ \\ } .
+Pour voir cela, envisagez de mesurer le premier qubit de l’état suivant, qui est formé en appliquant la transformation hadarmard $H $ sur deux qubits initialement définie à l’État « 0 » : $ $ H ^ {\otimes 2 } \left (\begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \otimes \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \right) = \frac{1 } {2 } \begin{ bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 \\ \\ 1 & 1 &-1 &-1 1 &-1 & \\ \\ -1 & 1 \end{ bmatrix } \begin{ bmatrix } 1 0 0 0 \\\\ \\\\ \\\\ \end{bmatrix} = \frac{1 } {2 } \begin{ bmatrix } 1 1 1 1 \\\\ \mapsto \begin{cases \\\\ \\\\ \end{bmatrix} } \text{Outcome} = 0 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 1 \\\\ 1 \\\\ 0 \\\\ 0 \end{ bmatrix } \\ \\ \text{Outcome} = 1 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \end{\end{cases \\\\ bmatrix } \\ \\ } .
 $ $ Les deux résultats ont une probabilité de 50%.  Le résultat d’une probabilité de 50% pour les deux peut être Intuit à partir du fait que le vecteur d’État Quantum initial est invariant sous échangeant $0 $ avec $1 $ sur le premier qubit.
 
 La règle mathématique pour mesurer la première ou la deuxième qubit est simple.  Si nous laissons $e _k $ être le } vecteur de base de calcul $k ^ {\rm Th $ et $S $ être l’ensemble de tous les $e _K de $ telle sorte que le qubit en question prenne la valeur $1 $ pour cette valeur de $k $ .  Par exemple, si nous nous intéressons à mesurer le premier qubit, $S $ serait composé de $e \equiv 1 $ et 10 $e _3 \equiv 11 $ .  De même, si nous sommes intéressés par le deuxième qubit $S $ se comporterait $e _2 \equiv 01 $ et $e _3 \equiv 11 $ .  La probabilité de mesurer le qubit choisi sur $1 est alors le $ vecteur d’État $ \Psi$
@@ -167,12 +174,12 @@ $$
 Notez qu’il s’agit simplement de la somme des deux probabilités attendues pour mesurer les résultats $10 $ et $11 $ tous les qubits à mesurer.
 Pour notre exemple, cette valeur est
 
-$ $ \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&1&0 \end { bmatrix } \begin{ bmatrix } 1 1 1 1 \\\\ \\\\ \\\\ \end { bmatrix } \right | ^ 2 + \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&0&1 \end { bmatrix } \begin{} 1 1 1 1 bmatrix \\\\ \\\\ \\\\ \end { bmatrix } \right | ^ 2 = \frac{1 } {2 } .
+$ $ \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&1&0 \end{bmatrix} \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end{bmatrix} \right | ^ 2 + \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&0&1 \end{bmatrix} \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end{bmatrix} \right | ^ 2 = \frac{1 } {2 } .
 $$
 
 ce qui correspond parfaitement à ce que notre intuition nous dit que la probabilité doit être.  De même, l’État peut être écrit comme
 
-$ $ \frac { \frac{e_1 } {2 } + \frac{e_3 } {2 } } {\sqrt { \frac{1 } {2 } }} = \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \end {bmatrix}
+$ $ \frac { \frac{e_1 } {2 } + \frac{e_3 } {2 } } {\sqrt { \frac{1 } {2 } }} = \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1\end{bmatrix}
 $$
 
 là encore, conformément à notre intuition.
