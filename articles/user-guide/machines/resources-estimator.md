@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274884"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415253"
 ---
 # <a name="the-resources-estimator-target-machine"></a>Ordinateur cible de l’estimateur de ressources
 
@@ -98,8 +98,8 @@ Voici la liste des métriques estimées par `ResourcesEstimator` :
 * __Mesure__: nombre de mesures exécutées.
 * __R__: nombre de rotations qubit uniques exécutées, à l’exception des portes T, Clifford et Pauli.
 * __T__: le nombre de portes t et leurs conjugués, y compris la porte t, T_x = H. T. H et T_y = Hy. t. HY, exécutés.
-* __Profondeur__: profondeur du circuit Quantum exécuté par l’opération Q #. Par défaut, seules les portes T sont comptées en profondeur. pour plus d’informations, consultez [compteur de profondeur](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
-* __Width__: nombre maximal de qubits alloués lors de l’exécution de l’opération Q #.
+* __Depth__: limite inférieure de la profondeur du circuit Quantum exécutée par l’opération Q #. Par défaut, seules les portes T sont comptées en profondeur. pour plus d’informations, consultez [compteur de profondeur](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
+* __Width__: limite inférieure pour le nombre maximal de qubits alloués lors de l’exécution de l’opération Q #. Il se peut qu’il ne soit pas possible d’atteindre simultanément les limites inférieures de __profondeur__ et de __largeur__ .
 * __BorrowedWidth__: nombre maximal de qubits empruntés à l’intérieur de l’opération Q #.
 
 

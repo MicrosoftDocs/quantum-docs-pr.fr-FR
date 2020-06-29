@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: e48f4157438fba063877b2b79fbc7629710fc9f3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274800"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415452"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notes de publication de Microsoft Quantum Development Kit
 
@@ -344,8 +344,6 @@ Si vous avez déjà installé l’extension, vous devez la réinstaller en accé
 
 Cette version corrige un bogue qui empêchait certains utilisateurs de charger correctement l’extension Visual Studio.
 
-Si vous effectuez une mise à niveau à partir d’une version 0.2 de Quantum Development Kit, découvrez plus d’informations sur les [modifications du langage Q# et la migration de votre programme Q#](xref:microsoft.quantum.relnotes.migration-0-3).
-
 ## <a name="version-031811203"></a>Version 0.3.1811.203
 
 *Date de publication : 2 novembre 2018*
@@ -356,8 +354,6 @@ Cette version inclut quelques correctifs de bogues, notamment :
 * Suppression des avertissements de compilation lors de la génération de projets avec une version de .NET Core antérieure à 2.1.403.
 * Toilettage de la documentation, en particulier les info-bulles affichées lors du pointage avec la souris dans VS Code ou Visual Studio.
 
-Si vous effectuez une mise à niveau à partir d’une version 0.2 de Quantum Development Kit, découvrez plus d’informations sur les [modifications du langage Q# et la migration de votre programme Q#](xref:microsoft.quantum.relnotes.migration-0-3).
-
 ## <a name="version-0318102508"></a>Version 0.3.1810.2508
 
 *Date de publication : 29 octobre 2018*
@@ -367,8 +363,6 @@ Cette version comprend de nouvelles fonctionnalités du langage et une expérien
 * Cette version comprend un serveur de langage pour Q# ainsi que les intégrations du client pour Visual Studio et Visual Studio Code. Ceci active un nouvel ensemble de fonctionnalités IntelliSense ainsi qu’un feedback en direct au moment de la frappe sous forme de soulignements ondulés des erreurs et des avertissements. 
 * Cette mise à jour améliore considérablement les messages de diagnostic en général, avec une navigation facile et des plages précises pour les diagnostics, et des détails supplémentaires dans les informations affichées dans les info-bulles.
 * Le langage Q# a été étendu de manière à unifier les façons dont les développeurs peuvent effectuer les opérations courantes, et à apporter de nouvelles améliorations aux fonctionnalités du langage pour exprimer les calculs quantiques de façon plus puissante.  Cette version apporte un certain nombre de changements cassants du langage Q#.   
-
-Découvrez plus d’informations sur les [modifications apportées au langage Q# et sur la migration de votre programme Q#](xref:microsoft.quantum.relnotes.migration-0-3).
 
 Cette version comprend également une nouvelle bibliothèque de chimie quantique :
 
