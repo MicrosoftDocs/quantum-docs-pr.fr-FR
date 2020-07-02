@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 4cf6cce870c7661a7fffc21dcb60dd53cf281ddd
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327592"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415438"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Algèbre linéaire pour l’informatique quantique
 
@@ -62,8 +62,7 @@ Dans les exemples ci-dessus, l’état d’un qubit était représenté par une 
 
 N’oubliez pas que chaque qubit est un espace vectoriel, et qu’il n’est donc pas possible d’effectuer une simple multiplication. À la place, vous utilisez un **produit tensoriel**. Il s’agit d’une opération associée qui crée un autre espace vectoriel à partir de plusieurs espaces vectoriels individuels et qui est représentée par le symbole $\otimes$. Par exemple, le produit tensoriel des deux états de qubits $\begin{bmatrix} a \\\\  b \end{bmatrix}$ et $\begin{bmatrix} c \\\\  d \end{bmatrix}$ se calcule ainsi :
 
-$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}.
-$$
+$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}. $$
 
 Le résultat est une matrice à quatre dimensions, où chaque élément représente une probabilité. Par exemple, $ac$ représente la probabilité que les deux qubits soient réduits à 0 et 0, $ad$ est la probabilité qu’ils soient réduits à 0 et 1, et ainsi de suite. 
 
