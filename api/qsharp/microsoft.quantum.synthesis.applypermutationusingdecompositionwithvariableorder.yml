@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
+name: ApplyPermutationUsingDecompositionWithVariableOrder
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: >-
+  Permute les amplitudes dans un État Quantum en fonction d’une permutation à l’aide d’une synthèse basée sur la décomposition.
+
+
+  Cette opération est une version plus générale de @"microsoft.quantum.synthesis.applypermutationusingdecomposition" dans laquelle l’ordre des variables peut être spécifié. Un ordre des variables différent modifie la séquence de décomposition et les tables de vérité utilisées pour les portes contrôlées @"microsoft.quantum.intrinsic.x" .  Par conséquent, la modification de l’ordre des variables modifie le nombre de portes globales utilisées pour réaliser la permutation.
+examples: >-
+  Pour synthétiser une `SWAP` opération :
+
+
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+    ApplyPermutationUsingDecompositionWithVariableOrder([0, 2, 1, 3], [1, 0], LittleEndian(qubits));
+  }
+
+  ```
+syntax: 'operation ApplyPermutationUsingDecompositionWithVariableOrder (perm : Int[], variableOrder : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(perm : Int[], variableOrder : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: perm
+    summary: Permutation de $2 ^ n $ Elements à partir de 0.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: variableOrder
+    summary: Permutation de $n $ Elements à partir de 0.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: Liste de $n $ qubits à laquelle la permutation est appliquée.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.synthesis.applypermutationusingdecomposition
+- microsoft.quantum.synthesis.applypermutationusingtransformation
+metadata:
+  ms.openlocfilehash: ef6b24fa5b9c010f01ade622f470aec7c0a25835
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886317"

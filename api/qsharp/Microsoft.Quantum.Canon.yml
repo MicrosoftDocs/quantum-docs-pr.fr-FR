@@ -198,6 +198,10 @@ operations:
   summary: Calcule la parité d’un registre de qubits sur place.
 - uid: microsoft.quantum.canon.applycnotchainwithtarget
   summary: Calcule la parité d’un tableau de qubits dans un qubit cible.
+- uid: microsoft.quantum.canon.applycontrolledonbitstring
+  summary: Applique une opération unitaire sur le registre cible, contrôlée sur un état spécifié par un masque de bits donné.
+- uid: microsoft.quantum.canon.applycontrolledonint
+  summary: Applique une opération unitaire sur le registre cible si l’état du registre de contrôle correspond à un entier positif spécifié.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: Applique un tableau de phases complexes aux États de base numériques d’un registre de qubits.
 - uid: microsoft.quantum.canon.applyfermionicswap
@@ -565,6 +569,14 @@ operations:
 
 
     $R = \boldone-(1-e ^ {i \Phi}) \ket{1\cdots 1} \bra{1\cdots 1} $.
+- uid: microsoft.quantum.canon.repeat
+  summary: Répète une opération un nombre de fois donné.
+- uid: microsoft.quantum.canon.repeata
+  summary: Répète une opération un nombre de fois donné.
+- uid: microsoft.quantum.canon.repeatc
+  summary: Répète une opération un nombre de fois donné.
+- uid: microsoft.quantum.canon.repeatca
+  summary: Répète une opération un nombre de fois donné.
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: Utilise des portes d’échange pour inverser l’ordre des qubits dans un registre.
 newtypes:
@@ -573,9 +585,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Déprécié\n\nResultStack est déconseillé."
 metadata:
-  ms.openlocfilehash: 97975236f3824d63c0cc75e5be847c5eef47485b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: ab6e8a58dd163e4a9b2ea299e544a4e487d61e23
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326674"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884675"

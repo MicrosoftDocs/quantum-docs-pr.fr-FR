@@ -3,42 +3,26 @@ uid: microsoft.quantum.intrinsic.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: Les assertions qui mesurent le qubits donné dans la base Pauli donnée auront le résultat donné avec la probabilité donnée, dans une certaine tolérance.
-remarks: Notez que les versions adjacentes et contrôlées de cette opération ne vérifient pas la condition.
-examples: >-
-  ```qsharp
-
-  using (register = Qubit()) {
-      H(register);
-      AssertProb([PauliZ], [register], One, 0.5,
-          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
-  }
-
-  ```
+summary: AssertProb est déconseillé. Utilisez plutôt @"microsoft.quantum.diagnostics.assertmeasurementprobability".
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
-    summary: Effet de mesure permettant de déclarer la probabilité de, exprimée sous la forme d’un opérateur qubit Pauli.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: Registre sur lequel effectuer l’assertion.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: Résultat attendu de `Measure(bases, qubits)`.
     isPrimitive: true
     uid: Result
   - name: prob
-    summary: Probabilité avec laquelle le résultat donné est attendu.
     isPrimitive: true
     uid: Double
   - name: msg
-    summary: Message à signaler si l’assertion échoue.
     isPrimitive: true
     uid: String
   - name: tol
@@ -52,12 +36,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- assert
 metadata:
-  ms.openlocfilehash: 6317476e89feb3a5fecac15afd52541859fc2f21
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: db29d52b79b1e7b5a980f3e3196c5b2547132103
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674160"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885730"
