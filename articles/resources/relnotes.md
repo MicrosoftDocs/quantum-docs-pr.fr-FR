@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415452"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885043"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notes de publication de Microsoft Quantum Development Kit
 
@@ -20,6 +20,27 @@ Cet article contient des informations sur chaque version de Quantum Development 
 Pour obtenir des instructions d’installation, consultez le [Guide d’installation](xref:microsoft.quantum.install).
 
 Pour obtenir des instructions de mise à jour, consultez le [Guide de mise à jour](xref:microsoft.quantum.update).
+
+## <a name="version-01220070124"></a>Version 0.12.20070124
+
+*Date de publication : 2e juillet, 2020*
+
+Cette version contient ce qui suit :
+
+- Nouvel `qdk-chem` outil pour la conversion des formats de sérialisation du problème de structure électronique hérité (par exemple, FCIDUMP) en [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)
+- Nouvelles fonctions et opérations dans l' [ `Microsoft.Quantum.Synthesis` espace de noms](xref:microsoft.quantum.synthesis) pour l’application cohérente d’Oracle classique à l’aide d’algorithmes de synthèse de transformation et de décomposition.
+- IQ # permet désormais d’effectuer des arguments pour `%simulate` , `%estimate` et d’autres commandes Magic. Pour plus d’informations, consultez les informations de référence sur les [ `%simulate` commandes Magic](xref:microsoft.quantum.iqsharp.magic-ref.simulate) .
+- Nouvelles options d’affichage de la phase dans IQ #. Pour plus d’informations, consultez les informations de référence sur les [ `%config` commandes Magic](xref:microsoft.quantum.iqsharp.magic-ref.config) .
+- IQ # et le `qsharp` package Python sont désormais fournis via Conda packages ([qsharp](https://anaconda.org/quantum-engineering/qsharp) et [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) pour simplifier l’installation locale des fonctionnalités Q # Jupyter et Python dans un environnement Conda. Pour plus d’informations, consultez les guides d’installation des [bloc-notes q # Jupyter](xref:microsoft.quantum.install.jupyter) et [q # avec Python](xref:microsoft.quantum.install.python) .
+- Lors de l’utilisation du simulateur, les qubits n’ont plus besoin d’être dans l’État | 0 ⟩ lors de la mise en sortie, mais peuvent être automatiquement réinitialisés s’ils ont été mesurés juste avant la libération.
+- Mises à jour pour faciliter l’utilisation par les utilisateurs d’IQ # des packages de bibliothèque avec différentes versions de QDK, nécessitant uniquement une correspondance des numéros de version mineure & plutôt que la même version
+- Suppression de l' `Microsoft.Quantum.Primitive.*` espace de noms déconseillé
+- Opérations déplacées :
+  - `Microsoft.Quantum.Intrinsic.Assert` est maintenant `Microsoft.Quantum.Diagnostics.AssertMeasurement`
+  - `Microsoft.Quantum.Intrinsic.AssertProb` est maintenant `Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
+- Résolution des bogues 
+
+Consultez la liste complète des PR fermées pour les [bibliothèques](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), le [compilateur](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), le [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), les [exemples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) et les [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-0112006403"></a>Version 0.11.2006.403
 

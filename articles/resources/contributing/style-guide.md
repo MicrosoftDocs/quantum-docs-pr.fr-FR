@@ -6,19 +6,19 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: f8e398b5c9932a5079222fed7ad20e54de814eb8
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274799"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884200"
 ---
 # <a name="q-style-guide"></a>Guide de style Q # #
 ## <a name="general-conventions"></a>Conventions générales ##
 
 Les conventions suggérées dans ce guide sont destinées à faciliter la lecture et la compréhension des programmes et des bibliothèques écrits dans Q #.
 
-## <a name="guidance"></a>Conseils
+## <a name="guidance"></a>Guidance
 
 Nous vous suggérons :
 
@@ -105,6 +105,31 @@ Nous vous suggérons :
 | ☑ | `newtype GeneratorTerm` | L’utilisation de l’expression nominale fait clairement référence au résultat de l’appel du constructeur UDT. |
 | ☒ | <s>`@Attribute() newtype RunOnce()`</s> | L’utilisation de l’expression verbale suggère que le constructeur UDT est une opération. |
 | ☑ | `@Attribute() newtype Deprecated(Reason : String)` | L’utilisation de l’expression substantif communique l’utilisation de l’attribut. |
+
+***
+
+### <a name="entry-points"></a>Points d’entrée
+
+Lors de la définition d’un point d’entrée dans un programme Q #, le compilateur Q # reconnaît l' [ `@EntryPoint()` attribut](xref:microsoft.quantum.core.entrypoint) plutôt que d’exiger que les points d’entrée aient un nom particulier (par exemple `main` ,, `Main` ou `__main__` ).
+Autrement dit, du point de vue d’un développeur Q #, les points d’entrée sont des opérations ordinaires annotées avec `@EntryPoint()` .
+En outre, les points d’entrée Q # peuvent être des points d’entrée pour une application entière (par exemple, dans les fichiers exécutables autonomes Q #) ou peuvent être une interface entre un programme Q # et le programme hôte d’une application (par exemple, lors de l’utilisation de Q # avec Python ou .NET), de sorte que le nom «main
+
+Nous vous suggérons d’utiliser des points d’entrée de nom pour refléter l’utilisation de l' `@EntryPoint()` attribut en utilisant les conseils généraux pour les opérations de nommage indiquées ci-dessus.
+
+
+# <a name="guidance"></a>[Assistance](#tab/guidance)
+
+Nous vous suggérons :
+
+- Ne nommez pas les opérations de point d’entrée comme « main ».
+- Nommez les opérations de point d’entrée comme des opérations ordinaires.
+
+# <a name="examples"></a>[Exemples](#tab/examples)
+
+|   | Nom | Description |
+|---|------|-------------|
+| ☑ | `@EntryPoint() operation RunSimulation` | Communique clairement l’objectif du point d’entrée par le biais du nom de l’opération. |
+| ☒ | <s>`@EntryPoint() operation Main`</s> | L’utilisation de `Main` ne communique pas clairement l’objectif du point d’entrée et est redondante avec l' `@EntryPoint()` attribut. |
 
 ***
 

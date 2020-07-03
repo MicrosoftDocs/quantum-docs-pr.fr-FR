@@ -6,12 +6,12 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: bcc26f66a4ba3e861800ceca122b38b8d3ef6ad5
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274792"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884149"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>Autres ressources de formation sur Quantum Computing
 
@@ -24,6 +24,14 @@ Cette section contient des références sélectionnées pour la couverture déta
 + Kitaev, A. Y, Shen, A., & Vyalyi, M. N. (2002). Calcul classique et Quantum (vol. 47). Fournit : American mathématique Society.
 + Kaye, P., Laflamme, R., & Mosca, M. (2007). Introduction à quantum computing. Université de l’Université d’Oxford.
 + Rieffel, E. G, & Polak, W. H. (2011). Quantum computing : présentation doucement. MIT Press.
++ Sarah C. Kaiser et Christopher E. Granade (le programme d’accès anticipé des effectifs a commencé la publication d’avril 2019 sur automne 2020). [Découvrez quantum computing avec Python et Q #-une approche pratique](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
+
+## <a name="online-courses"></a>Cours en ligne ##
+
++ [MS-Découvrez les modules quantum computing](https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r). Didacticiel de la Ste-étape des concepts et pratiques de quantum computing. 
++ [Quantum computing-cours brillant](https://brilliant.org/courses/quantum-computing/). Apprenez à créer des algorithmes Quantum de bout en bout avec un ordinateur quantique simulé dans votre navigateur.
++ [Présentation de quantum computing-LinkedIn Learning](https://www.linkedin.com/learning/introduction-to-quantum-computing). présentation de la vidéo 1h25m. 
++ L' [informatique Quantum par le biais de bandes dessinées](https://hackaday.io/project/168554-introduction-to-quantum-computing). Classe de communauté pratique de dimanche hebdomadaire. 
 
 ## <a name="elementary-techniques-for-building-controlled-gates"></a>Techniques élémentaires pour créer des portes contrôlées ##
 
