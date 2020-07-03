@@ -7,17 +7,17 @@ summary: >-
   Inverse un qubit cible donné si et seulement si les deux contrôles qubits sont dans l’État 1, à l’aide de mesures pour exécuter l’opération joint.
 
 
-  Inverse `target` si et seulement si les deux contrôles ont la valeur 1, mais suppose `target` que est dans l’État 0.  L’opération a T-Count 4, T-Depth 2 et ne nécessite aucune qubit d’assistance et peut donc être préférable à une opération CCNOT, si `target` est connu pour être 0.  Le voisin de cette opération est basé sur des mesures et ne nécessite pas de grille T.
+  Inverse `target` si et seulement si les deux contrôles ont la valeur 1, mais suppose que `target` est dans l’État 0.  L’opération a T-Count 4, T-Depth 2 et ne nécessite aucune qubit d’assistance et peut donc être préférable à une opération CCNOT, si `target` est connu pour être 0.  Le voisin de cette opération est basé sur des mesures et ne nécessite pas de grille T.
 
 
-  L’application contrôlée de cette opération ne nécessite pas de qubit d' `2^c` `Rz` assistance, de portails et n’est pas `c` optimisée pour plus de précision, où est le nombre de qubits `ApplyAnd` de contrôle globaux, y compris les deux contrôles de l’opération.  L’application contrôlée par l’application `2^c - 1` `Rz` voisine requiert des portes (avec un angle deux fois la taille de l’opération non voisine), aucune qubit d’assistance et n’est pas optimisée pour plus de profondeur.
+  L’application contrôlée de cette opération ne nécessite pas de qubit d’assistance, de `2^c` `Rz` portails et n’est pas optimisée pour plus de précision, où `c` est le nombre de qubits de contrôle globaux, y compris les deux contrôles de l' `ApplyAnd` opération.  L’application contrôlée par l’application voisine requiert des `2^c - 1` `Rz` portes (avec un angle deux fois la taille de l’opération non voisine), aucune qubit d’assistance et n’est pas optimisée pour plus de profondeur.
 syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Jones : « nouvelles constructions pour la porte Toffoli à tolérance de pannes », phys. Rev. A 87, 022328, 2013 [arXiv : 1212.5069](https://arxiv.org/abs/1212.5069) doi : 10.1103/PhysRevA. 87.022328
 
   - Craig Gidney : « diviser le coût de l’ajout quantique », Quantum 2, page 74, 2018 [arXiv : 1709.06648](https://arxiv.org/abs/1709.06648) doi : 10.1103/PhysRevA. 85.044302
 
-  - Mathias Soeken : « circuits Oracle Quantum et modèle d’arborescence de Noël », [article de blog de Decemer 19, 2019](https://msoeken.github.io/blog_qac.html) (Remarque : explique la construction à plusieurs contrôleurs)
+  - Mathias Soeken : « circuits Oracle Quantum et modèle d’arborescence de Noël », [article de blog du 19 décembre 2019](https://msoeken.github.io/blog_qac.html) (Remarque : explique la construction à plusieurs contrôleurs)
 input:
   content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
   types:
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 973f7f618154720396be0bb4a01b52d763ccdd1c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2f040fd932236547baecaba241d44a8b9842bbe2
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680540"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884581"

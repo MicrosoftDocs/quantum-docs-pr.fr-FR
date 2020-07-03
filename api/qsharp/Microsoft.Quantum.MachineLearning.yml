@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.machinelearning
 name: Microsoft.Quantum.MachineLearning
-summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms fournit des fonctions et des opérations utilisées dans les applications Quantum Machine Learning.\n\n # <a name=\"references\"></a>References\n - Maria Schuld, Alex Bocharov, Krysta Svore, Nathan Wiebe, \"classifieur Quantum Classifiers\", https://arxiv.org/abs/1804.00633."
+summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms fournit des fonctions et des opérations utilisées dans les applications Quantum Machine Learning.\n\n # <a name=\"references\"></a>Références\n - Maria Schuld, Alex Bocharov, Krysta Svore, Nathan Wiebe, \"classifieur Quantum Classifiers\", https://arxiv.org/abs/1804.00633 ."
 functions:
 - uid: microsoft.quantum.machinelearning.approximateinputencoder
   summary: À partir d’un ensemble de coefficients et d’une tolérance, retourne une opération de préparation de l’État qui prépare chaque coefficient comme amplitude correspondante d’un état de base de calcul, jusqu’à la tolérance donnée.
@@ -56,7 +56,7 @@ newtypes:
 - uid: microsoft.quantum.machinelearning.samplingschedule
   summary: Planification pour le dessin de lots à partir d’un ensemble d’exemples.
 - uid: microsoft.quantum.machinelearning.sequentialmodel
-  summary: Décrit un modèle de classifieur Quantum constitué d’une séquence de rotations paramétrées et contrôlées, d’une assignation d’angles de rotation et d’un décalage entre les deux classes reconnues par le modèle.
+  summary: Décrit un modèle de classifieur Quantum composé d’une séquence de rotations paramétrées et contrôlées, d’une assignation d’angles de rotation et d’un décalage entre les deux classes reconnues par le modèle.
 - uid: microsoft.quantum.machinelearning.stategenerator
   summary: Décrit une opération qui prépare une entrée donnée à un classifieur séquentiel.
 - uid: microsoft.quantum.machinelearning.trainingoptions
@@ -64,9 +64,9 @@ newtypes:
 - uid: microsoft.quantum.machinelearning.validationresults
   summary: Le résultat de l’utilisation d’un classifieur sur un ensemble d’exemples est validé.
 metadata:
-  ms.openlocfilehash: 43b40489e34a2483ff9331b34b6cd289e3a7bb56
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 85728552e323a640d5abd78f6a2bada5c37e6919
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673183"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885252"
