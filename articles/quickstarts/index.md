@@ -7,12 +7,12 @@ ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 6a52eb0a9cdf699e8bb37578ffa3d73fe96a990e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ee8d210d67a20cfea3bdc36162efc47f021a6dc6
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273485"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885461"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Installer le Microsoft Quantum Development Kit (QDK)
 
@@ -24,10 +24,11 @@ Découvrez comment installer le Microsoft Quantum Development Kit (QDK) afin 
 - Outils pour faciliter votre développement
 
 Les programmes Q# peuvent être exécutés en tant qu’applications autonomes à l’aide de Visual Studio Code ou Visual Studio, ou via des notebooks Jupyter avec le noyau Jupyter IQ#.
-
 Ils peuvent également être associés à un programme hôte écrit dans un langage .NET (généralement C#) ou Python, ce qui vous permet d’appeler des opérations quantiques à partir d’un programme classique.
 
-Le QDK est disponible pour plusieurs environnements de développement. Sélectionnez votre configuration préférée parmi les propositions suivantes :
+Le workflow de chacune de ces configurations est décrit et comparé aux autres dans [Méthodes d’exécution d’un programme Q#](xref:microsoft.quantum.guide.host-programs).
+
+Pour procéder à l’installation du QDK et à la création de projets Q#, sélectionnez votre configuration préférée :
 
 [Développer avec des applications en ligne de commande Q#](xref:microsoft.quantum.install.standalone) : choisissez cette approche pour utiliser Q# à partir de la ligne de commande. Vous n’avez pas besoin d’un pilote ni d’un programme hôte comme avec les options ci-dessous.
 
