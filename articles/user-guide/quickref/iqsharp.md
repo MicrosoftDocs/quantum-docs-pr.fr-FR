@@ -5,37 +5,47 @@ author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
-ms.openlocfilehash: 0cd1a2289132e2760a21fd9d4f4083696353e271
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 2fb542df8723fa437c82b4a1dfada77e22c1d6e4
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431017"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870536"
 ---
 # <a name="iq-magic-commands"></a>Commandes magiques IQ#
 
 ### <a name="general"></a>Général
 
-- `%config`: Définit ou obtient des préférences de configuration.
-- `%estimate`: Exécute une fonction ou une opération donnée sur l’ordinateur cible QuantumSimulator.
-- `%lsmagic`: Retourne une liste de toutes les commandes Magic actuellement disponibles.
-- `%package`: Permet de charger un package NuGet.
-- `%performance`: Signale les métriques de performances actuelles pour ce noyau.
-- `%simulate`: Exécute une fonction ou une opération donnée sur l’ordinateur cible QuantumSimulator.
-- `%toffoli`: Exécute une fonction ou une opération donnée sur l’ordinateur cible du simulateur ToffoliSimulator.
-- `%who`: Fournit des actions liées à l’espace de travail actuel.
-- `%workspace`: Retourne une liste de toutes les opérations et fonctions définies dans la session active, de manière interactive ou chargée à partir de l’espace de travail actuel.
+- [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config): Permet de définir ou d’interroger des options de configuration.
+- [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate): Exécute une fonction ou une opération donnée sur l’ordinateur cible ResourcesEstimator.
+- [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic): Retourne une liste de toutes les commandes Magic actuellement disponibles.
+- [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package): Permet de charger un package NuGet.
+- [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance): Signale les métriques de performances actuelles pour ce noyau.
+- [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate): Exécute une fonction ou une opération donnée sur l’ordinateur cible QuantumSimulator.
+- [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli): Exécute une fonction ou une opération donnée sur l’ordinateur cible ToffoliSimulator.
+- [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Répertorie les opérations Q # disponibles dans la session active.
+- [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace): Fournit des actions liées à l’espace de travail actuel.
 
-### <a name="chemistry"></a>Chimique
+### <a name="azure-quantum-integration"></a>Intégration d’Azure Quantum
 
-- `%chemistry.broombridge`: Charge et retourne la représentation du problème de structure électronique Broombridge à partir d’un fichier. YAML donné.
-- `%chemistry.encode`: Encode un fermion Hamilton dans un format utilisable par Q #.
-- `%chemistry.fh.add_terms`: Ajoute des termes à un fermion Hamilton.
-- `%chemistry.fh.load`: Charge le fermion Hamilton pour un problème de structure électronique. Le problème est chargé à partir d’un fichier ou passé comme argument.
-- `%chemistry.inputstate.load`: Charge le problème de structure électronique Broombridge et retourne l’état d’entrée sélectionné.
+- [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect): Se connecte à un espace de travail Quantum Azure ou affiche l’état actuel de la connexion.
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Exécute un travail dans un espace de travail Quantum Azure.
+- [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs): Affiche la liste des travaux dans l’espace de travail Quantum Azure actuel.
+- [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Affiche les résultats d’un travail dans l’espace de travail Quantum Azure actuel.
+- [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Affiche l’état d’un travail dans l’espace de travail Quantum Azure actuel.
+- [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Envoie un travail à un espace de travail Quantum Azure.
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Définit ou affiche la cible d’exécution active pour la soumission Q # Job dans un espace de travail Quantum Azure.
 
-### <a name="from-microsoftquantumkatas-package"></a>À partir du package Microsoft. Quantum. katas
+### <a name="chemistry-from-microsoftquantumchemistry-package"></a>Chimie (à partir du package Microsoft. Quantum. chimie)
 
-- `%kata`: Exécute un seul test et signale si le test a réussi.
-- `%check_kata`: Vérifie l’implémentation de référence pour un test de Kata unique.
+- [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge): Charge et retourne la représentation du problème de structure électronique Broombridge à partir d’un fichier. YAML donné.
+- [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode): Encode un fermion Hamilton dans un format utilisable par Q #.
+- [`%chemistry.fh.add_terms`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms): Ajoute des termes à un fermion Hamilton.
+- [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load): Charge le fermion Hamilton pour un problème de structure électronique. Le problème est chargé à partir d’un fichier ou passé comme argument.
+- [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load): Charge le problème de structure électronique Broombridge et retourne l’état d’entrée sélectionné.
+
+### <a name="katas-from-microsoftquantumkatas-package"></a>Katas (à partir du package Microsoft. Quantum. katas)
+
+- [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata): Exécute un seul test et signale si le test a réussi.
+- [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata): Vérifie l’implémentation de référence pour un test de Kata unique.
     En particulier, il substitue l’implémentation de référence pour une tâche unique dans la cellule et signale si le test a réussi.

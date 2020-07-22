@@ -1,21 +1,37 @@
 ---
-title: Compteur d’opérations primitifs
-description: Découvrez le compteur d’opérations primitives de Microsoft QDK, qui effectue le suivi du nombre d’exécutions de primitives utilisées par les opérations dans un programme Quantum.
+title: Compteur d’opérations primitives-Kit de développement Quantum
+description: 'Découvrez le compteur d’opérations primitives Microsoft QDK, qui utilise le simulateur de traces Quantum pour suivre les exécutions de primitives utilisées par les opérations dans un programme Q #.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: 8bdb0aed370e72b58b23025f1685ad7ce1a77a43
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ea022d499354f7cefd60da690466496e0ce7c336
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274893"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871023"
 ---
-# <a name="primitive-operations-counter"></a>Compteur d’opérations primitifs  
+# <a name="quantum-trace-simulator-primitive-operations-counter"></a>Simulateur de traces Quantum : compteur d’opérations primitives
 
-Le `Primitive Operations Counter` fait partie du [simulateur](xref:microsoft.quantum.machines.qc-trace-simulator.intro)Quantum Computer trace. Il compte le nombre d’exécutions de primitives utilisées par chaque opération appelée dans un programme Quantum. Toutes les opérations de `Microsoft.Quantum.Intrinsic` sont exprimées en termes de rotations à qubit unique, de grilles de T, de portes de qubit Clifford uniques, de portes cnotin et de mesures de plusieurs qubit Pauli observables. Les statistiques collectées sont agrégées sur les bords du graphique des appels d’opérations. Nous allons maintenant compter le nombre `T` de portes nécessaires pour implémenter l' `CCNOT` opération. 
+Le compteur d’opérations primitifs fait partie du [simulateur](xref:microsoft.quantum.machines.qc-trace-simulator.intro)Quantum Development Kit. Il compte le nombre d’exécutions de primitives utilisées par chaque opération appelée dans un programme Quantum. 
+
+Toutes les <xref:microsoft.quantum.intrinsic> opérations sont exprimées en termes de rotations à qubit unique, d’opérations T, d’opérations de Clifford qubit, d’opérations cnotin et de mesures de plusieurs qubit Pauli observables. Le compteur opérations primitives agrège et collecte des statistiques sur tous les bords du [graphique des appels](https://en.wikipedia.org/wiki/Call_graph)de l’opération.
+
+## <a name="invoking-the-primitive-operation-counter"></a>Appel du compteur d’opérations primitifs
+
+Pour exécuter le simulateur de trace Quantum avec le compteur d’opérations primitifs, vous devez créer une <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, affecter la `UsePrimitiveOperationsCounter` **valeur true**à la propriété, puis créer une nouvelle <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance avec le `QCTraceSimulatorConfiguration` comme paramètre.
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UsePrimitiveOperationsCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Utilisation du compteur d’opérations primitifs dans un programme hôte C#
+
+L’exemple C# qui suit dans cette section compte le nombre <xref:microsoft.quantum.intrinsic.t> d’opérations nécessaires pour implémenter l' <xref:microsoft.quantum.intrinsic.ccnot> opération, en fonction de l’exemple de code Q # suivant :
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -24,19 +40,17 @@ operation ApplySampleWithCCNOT() : Unit {
     using (qubits = Qubit[3]) {
         CCNOT(qubits[0], qubits[1], qubits[2]);
         T(qubits[0]);
-    } 
+    }
 }
 ```
 
-## <a name="using-the-primitive-operations-counter-within-a-c-program"></a>Utilisation du compteur d’opérations primitifs dans un programme C#
-
-Pour vérifier que `CCNOT` requiert 7 `T` portes et que `ApplySampleWithCCNOT` exécute 8 portes, `T` nous pouvons utiliser le code C# suivant :
+Pour vérifier que `CCNOT` requiert sept `T` opérations et qu' `ApplySampleWithCCNOT` elle exécute huit `T` opérations, utilisez le code C# suivant :
 
 ```csharp 
 // using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 // using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
-config.usePrimitiveOperationsCounter = true;
+config.UsePrimitiveOperationsCounter = true;
 var sim = new QCTraceSimulator(config);
 var res = ApplySampleWithCCNOT.Run(sim).Result;
 
@@ -44,25 +58,23 @@ double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroups
 double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
 ```
 
-La première partie du programme s’exécute `ApplySampleWithCCNOT` . Dans la deuxième partie, nous utilisons la méthode `QCTraceSimulator.GetMetric` pour récupérer le nombre de portes T exécutées par `ApplySampleWithCCNOT` : 
+La première partie du programme s’exécute `ApplySampleWithCCNOT` . La deuxième partie utilise la [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) méthode pour récupérer le nombre d' `T` opérations exécutées par `ApplySampleWithCCNOT` : 
 
-```csharp
-double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-```
+Quand vous appelez `GetMetric` avec deux paramètres de type, elle retourne la valeur de la métrique associée à un bord de graphique d’appel donné. Dans l’exemple précédent, le programme appelle l' `Primitive.CCNOT` opération dans `ApplySampleWithCCNOT` et, par conséquent, le graphique des appels contient le bord `<Primitive.CCNOT, ApplySampleWithCCNOT>` . 
 
-Lorsque `GetMetric` est appelé avec deux paramètres de type, il retourne la valeur de la métrique associée à un bord de graphique d’appel donné. Dans notre exemple, `Primitive.CCNOT` l’opération est appelée dans `ApplySampleWithCCNOT` et par conséquent, le graphique des appels contient le bord `<Primitive.CCNOT, ApplySampleWithCCNOT>` . 
-
-Pour connaître le nombre de `CNOT` portes utilisées, nous pouvons ajouter la ligne suivante :
+Pour récupérer le nombre d' `CNOT` opérations utilisées, ajoutez la ligne suivante :
 ```csharp
 double cxCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.CX);
 ```
 
-Enfin, pour afficher toutes les statistiques collectées par le compteur de porte au format CSV, nous pouvons utiliser ce qui suit :
+Enfin, vous pouvez générer toutes les statistiques collectées par le compteur d’opérations primitives au format CSV à l’aide des éléments suivants :
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Voir aussi ##
+## <a name="see-also"></a>Voir aussi
 
-- Présentation de Quantum Computer [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
+- Vue d’ensemble du [simulateur Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro) Development Kit.
+- Référence de l' <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API.
+- Référence de l' <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API.
+- Référence de l' <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.PrimitiveOperationsGroupsNames> API.

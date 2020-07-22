@@ -6,19 +6,19 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884200"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871380"
 ---
 # <a name="q-style-guide"></a>Guide de style Q # #
 ## <a name="general-conventions"></a>Conventions générales ##
 
 Les conventions suggérées dans ce guide sont destinées à faciliter la lecture et la compréhension des programmes et des bibliothèques écrits dans Q #.
 
-## <a name="guidance"></a>Guidance
+## <a name="guidance"></a>Assistance
 
 Nous vous suggérons :
 
@@ -386,9 +386,8 @@ Le compilateur fourni avec le kit de développement Quantum extrait ces commenta
 De même, le serveur de langage fourni avec le kit de développement quantum utilise ces commentaires pour fournir de l’aide aux utilisateurs lorsqu’ils pointent sur des symboles dans leur code Q #.
 L’utilisation de commentaires de documentation peut aider les utilisateurs à obtenir un sens du code en fournissant une référence utile pour les détails qui ne sont pas facilement exprimés à l’aide des autres conventions de ce document.
 
-<div class="nextstepaction">
-    [Référence de la syntaxe des commentaires de documentation](xref:microsoft.quantum.guide.filestructure#documentation-comments)
-</div>
+> [!div class="nextstepaction"]
+> [Référence de la syntaxe des commentaires de documentation](xref:microsoft.quantum.guide.filestructure#documentation-comments).
 
 Afin d’utiliser efficacement cette fonctionnalité pour aider les utilisateurs, nous vous recommandons de garder certaines choses à l’esprit lorsque vous écrivez des commentaires de documentation.
 
@@ -398,7 +397,7 @@ Nous vous suggérons :
 
 - Chaque fonction publique, opération et type défini par l’utilisateur doit être immédiatement précédé d’un commentaire de documentation.
 - Au minimum, chaque commentaire de documentation doit inclure les sections suivantes :
-    - Résumé
+    - Récapitulatif
     - Entrée
     - Sortie (le cas échéant)
 - Assurez-vous que tous les résumés sont au moins deux phrases. Si de l’espace supplémentaire est nécessaire, fournissez une `# Description` section immédiatement après `# Summary` les détails complets.

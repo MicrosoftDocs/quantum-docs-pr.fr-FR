@@ -1,157 +1,158 @@
 ---
-title: Oracles de quantum
-description: Découvrez comment utiliser et définir des opérations d’Oracle quantique et de boîte noire utilisées comme entrée d’un autre algorithme.
-author: cgranade
-uid: microsoft.quantum.concepts.oracles
-ms.author: Christopher.Granade@microsoft.com
-ms.date: 07/11/2018
-ms.topic: article
-no-loc:
-- $
-- $
-- $
-- $
-- $
-- $
-- '\cdots'
-- bmatrix
-- '\ddots'
-- '\equiv'
-- '\sum'
-- '\begin'
-- '\end'
-- '\sqrt'
-- '\otimes'
-- '{'
-- '}'
-- '\text'
-- '\phi'
-- '\kappa'
-- '\psi'
-- '\alpha'
-- '\beta'
-- '\gamma'
-- '\delta'
-- '\omega'
-- '\bra'
-- '\ket'
-- '\boldone'
-- '\\\\'
-- '\\'
-- =
-- '\frac'
-- '\text'
-- '\mapsto'
-- '\dagger'
-- '\to'
+title : description d’Oracle Quantum : Apprenez à utiliser et à définir des opérations de boîte noire à l’aide d’Oracle Quantum, qui sont utilisées comme entrée d’un autre algorithme.
+Auteur : cgranade UID : Microsoft. Quantum. concepts. Oracle ms. Author : Christopher.Granade@microsoft.com ms. Date : 07/11/2018 ms. topic : article No-Loc :
+- "$$"
+- "$$"
+- "$"
+- "$"
+- "$"
+- "$$"
+- "\cdots"
+- "bmatrix"
+- "\ddots"
+- "\equiv"
+- "\sum"
+- "\begin"
+- "\end"
+- "\sqrt"
+- "\otimes"
+- "{"
+- "}"
+- "\text"
+- "\phi"
+- "\kappa"
+- "\psi"
+- "\alpha"
+- "\beta"
+- "\gamma"
+- "\delta"
+- "\omega"
+- "\bra"
+- "\ket"
+- "\boldone"
+- "\\\\"
+- "\\"
+- "="
+- "\frac"
+- "\text"
+- "\mapsto"
+- "\dagger"
+- "\to"
 - "\begin{cases}"
 - "\end{cases}"
-- '\operatorname'
-- '\braket'
-- '\id'
-- '\expect'
-- '\defeq'
-- '\variance'
-- '\dd'
-- '&'
+- "\operatorname"
+- "\braket"
+- "\id"
+- "\expect"
+- "\defeq"
+- "\variance"
+- "\dd"
+- "&"
 - "\begin{align}"
 - "\end{align}"
-- '\Lambda'
-- '\lambda'
-- '\Omega'
-- '\mathrm'
-- '\left'
-- '\right'
-- '\qquad'
-- '\times'
-- '\big'
-- '\langle'
-- '\rangle'
-- '\bigg'
-- '\Big'
-- '|'
-- '\mathbb'
-- '\vec'
-- '\in'
-- '\texttt'
-- '\ne'
-- <
-- '>'
-- '\leq'
-- '\geq'
-- ~~
+- "\Lambda"
+- "\lambda"
+- "\Omega"
+- "\mathrm"
+- "\left"
+- "\right"
+- "\qquad"
+- "\times"
+- "\big"
+- "\langle"
+- "\rangle"
+- "\bigg"
+- "\Big"
+- "|"
+- "\mathbb"
+- "\vec"
+- "\in"
+- "\texttt"
+- "\ne"
+- "<"
+- ">"
+- "\leq"
+- "\geq"
+- "~~"
 - "~"
 - "\begin{bmatrix}"
 - "\end{bmatrix}"
-- '\_'
-ms.openlocfilehash: 747c08df110f1f10efe552628d15e3500509b690
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269556"
+- "\_"
+
 ---
 # <a name="quantum-oracles"></a>Oracle Quantum
 
-Une $O Oracle $ est une opération « boîte noire » utilisée comme entrée d’un autre algorithme.
-Ces opérations sont souvent définies à l’aide d’une fonction classique $f : \\ {0, 1 \\ } ^ n \To \\ {0, 1 \\ } ^ m $ qui prend une $ entrée binaire $n bits et produit une $ sortie binaire $m bits.
-Pour ce faire, considérez une entrée binaire particulière $x = (x_ {0 } , x_ {1 } , \dots, x_ {n-1 } ) $.
-Nous pouvons étiqueter les États qubit sous la forme $ \ket { \vec{x } } = \ket{x_ {0 } } \otimes \ket{x_ {1 } } \otimes \cdots \otimes \ket{x_ {n-1 } } $.
+Oracle $ O $ est une opération « boîte noire » utilisée comme entrée d’un autre algorithme.
+Ces opérations sont souvent définies à l’aide d’une fonction classique $ f : \\ { 0, 1 \\ } ^ n \to \\ { 0, 1 \\ } ^ m $ qui prend une $ $ entrée binaire n bits et produit $ une $ sortie binaire m bits.
+Pour ce faire, considérons une entrée binaire particulière $ x = (x_ { 0 } , x_ { 1 } , \dots, x_ { n-1 } ) $ .
+Nous pouvons étiqueter les États qubit sous la forme $ \ket { \vec { x } } = \ket { x_ { 0 } } \otimes \ket { x_ { 1 } } \otimes \cdots \otimes \ket { x_ { n-1 } } $ .
 
-Nous pouvons tenter d’abord de définir $O $ afin que $O \ket {x } = \ket{f (x)} $, mais cela pose quelques problèmes.
-Tout d’abord, $f $ pouvez avoir une taille différente d’entrée et de sortie ($n \ne m $ ), de sorte que l’application de $O $ modifie le nombre de qubits dans le registre.
-Deuxièmement, même si $n = m $ , la fonction ne peut pas être réversible : si $f (x) = f (y) $ pour certains $x \ne y $ , $O \ket {x } = O \ket {y } $ mais $O ^ \dagger o \ket {x } \ne o ^ \dagger o \ket {y } $.
-Cela signifie que nous ne pouvons pas construire l’opération joint $O ^ \dagger $ , et Oracle doivent avoir un voisin défini pour eux.
+Nous pouvons tenter d’abord de définir $ o $ afin que $ o \ket { x } = \ket { f (x) } $ , mais cela pose quelques problèmes.
+Premièrement, $ f $ peut avoir une taille différente d’entrée et de sortie ( $ n \ne m $ ), de sorte que l’application de $ O $ modifie le nombre de qubits dans le registre.
+Deuxièmement, même si $ n = m $ , la fonction ne peut pas être réversible : si $ f (x) = f (y) $ pour un $ x \ne y $ , puis $ o \ket { x } = o \ket { y } $ mais $ o ^ \dagger o \ket { x } \ne o ^ \dagger o \ket { y } $ .
+Cela signifie que nous ne pourrons pas construire l’opération voisine $ O ^ \dagger $ et qu’Oracle doit avoir un voisin défini pour eux.
 
 ## <a name="defining-an-oracle-by-its-effect-on-computational-basis-states"></a>Définition d’Oracle par son effet sur les États de base de calcul
-Nous pouvons traiter ces deux problèmes en introduisant un deuxième Registre de $m $ qubits pour conserver notre réponse.
-Nous allons ensuite définir l’effet d’Oracle sur tous les États de base de calcul : pour tous les $x \Dans \\ {0, 1 \\ } ^ n $ et $y \Dans \\ {0, 1 \\ } ^ m $ ,
+Nous pouvons traiter ces deux problèmes en introduisant un deuxième Registre de $ m $ qubits pour y répondre.
+Nous allons ensuite définir l’effet de l’Oracle sur tous les États de base de calcul : pour tous les États $ x \in \\ { 0, 1 \\ } ^ n $ et $ y \in \\ { 0, 1 \\ } ^ m $ ,
 
-$ $ \begin{align}
-    O (\ket{x } \otimes \ket{y } ) = \ket{x } \otimes \ket{y \oplus f (x)}.
+$$
+\begin{align}
+    O ( \ket { x } \otimes \ket { y } ) = \ket { x } \otimes \ket { y \oplus f (x) } .
 \end{align}
 $$
 
-Maintenant $O = O ^ \dagger $ par construction. nous avons donc résolu les deux problèmes précédents.
+Maintenant $ o = o ^ \dagger $ par construction, nous avons résolu les deux problèmes précédents.
 
 > [!TIP]
-> Pour voir que $O = O ^ {\dagger } $, Notez que $O ^ 2 = \boldone $ depuis $a \oplus b \oplus b = a $ pour tous les $a, b \Dans \{ 0,1 \} $.
-> Par conséquent, $O \ket{x } \ket{y \oplus f (x)} = \ket{x } \ket{y \oplus f (x) \oplus f (x)} = \ket{x } \ket{y } $.
+>Pour voir si $ o = o ^ { \dagger } $ , Notez que $ o ^ 2 = \boldone $ depuis $ un \oplus b \oplus b = a $ pour tous les $ a, b \in \[ ! Opérationnel. NO-LOC ({)] 0, 1 \[ ! Opérationnel. NO-LOC (})] $ .
+>Par conséquent, $ O \ket { x } \ket { y \oplus f (x) } = \ket { x } \ket { y \oplus f (x) \oplus f (x) } = \ket { x } \ket { y } $ .
 
-Plus important encore, la définition d’une Oracle de cette façon pour chaque État de base de calcul $ \ket{x } \ket{y } $ définit également la manière dont $O $ agit pour tout autre État.
-Cela vient immédiatement du fait que $O $ , comme toutes les opérations de Quantum, est linéaire dans l’État sur lequel il agit.
-Prenons l’opération Hadarmard, par exemple, qui est définie par $H \ket{0 } = \ket { +} $ et $H \ket{1 } = \ket { -} $.
-Si nous souhaitons savoir comment $H $ agit sur $ \ket { +} $, nous pouvons utiliser ce $H $ linéaire,
+Plus important encore, la définition d’une Oracle de cette façon pour chaque État de base de calcul $ \ket { x } \ket { y } $ définit également la manière dont $ O $ agit pour tout autre État.
+Cela vient immédiatement du fait que $ O $ , comme toutes les opérations de Quantum, est linéaire dans l’État sur lequel il agit.
+Examinez l’opération hadarmard, par exemple, qui est définie par $ h \ket { 0 } = \ket { + } $ et $ h \ket { 1 } = \ket { - } $ .
+Si nous souhaitons savoir comment $ h $ agit sur $ \ket { + } $ , nous pouvons utiliser le $ h comme $ linéaire,
 
-$ $ \begin{align}
-H \ket { +} & = \frac{1 } {\sqrt{2 } } h (\ket{0 } + \ket{1 } ) = \frac{1 } {\sqrt{2 } } (H \ket {0 } + h \ket {1 } ) \\ \\ & = \frac{1 } {\sqrt{2 } } (\ket { +} + \ket { -}) = \frac12 (\ket{0 } + \ket{1 } + \ket{0 } -\ket{1 } ) = \ket{0 } .
+$$
+\begin{align}
+H \ket { + } & = \frac { 1 } { \sqrt { 2 } } h ( \ket { 0 }  +  \ket { 1 } ) = \frac { 1 } { \sqrt { 2 } } (h \ket { 0 } + h \ket { 1 } )\\\\
+           &= \frac{ 1 } { \sqrt { 2 } } ( \ket { + }  +  \ket { - } ) = \frac 12 ( \ket { 0 }  +  \ket { 1 }  +  \ket { 0 }  -  \ket { 1 } ) = \ket { 0 } .
 \end{align}
 $$
 
-Dans le cas de la définition de notre $O Oracle $ , nous pouvons utiliser de la même façon que n’importe quel état $ \ket { \Psi } $ sur $n + m $ qubits peut être écrit comme
+Dans le cas de la définition de notre $ O Oracle $ , nous pouvons utiliser de la même façon que n’importe quel état $ \ket { \psi } $ sur $ n + m $ qubits peut être écrit comme
 
-$ $ \begin{align}
-\ket { \psi } & = \ sum_ {x \Dans \\ {0, 1 \\ } ^ n, y \Dans \\ {0, 1 \\ } ^ m } \alpha (x, y) \ket{x } \ket{y}
+$$
+\begin{align}
+\ket{\psi}& = \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y}
 \end{align}
 $$
 
-où $ \alpha : \\ {0, 1 \\ } ^ n \times \\ {0, 1 \\ } ^ m \To \mathbb{C } $ représente les coefficients de l’État $ \ket { \Psi } $. Donc
+où $ \alpha : \\ { 0, 1 \\ } ^ n \times \\ { 0, 1 \\ } ^ m \to \mathbb { C } $ représente les coefficients de l’état $ \ket { \psi } $ . Donc
 
-$ $ \begin{align}
-O \ket { \Psi } & = O \ sum_ {x \Dans \\ {0, 1 \\ } ^ n, y \Dans \\ {0, 1 \\ } ^ m } \alpha (x, y) \ket{x } \ket{y } \\ \\ & = \ sum_ {x \Dans \\ {0, 1 \\ } ^ n, y \Dans \\ {0, 1 \\ } ^ m } \alpha (x, y) O \ket{x } \ket{y } \\ \\ & = \ sum_ {x \Dans \\ {0, 1 \\ } ^ n, y \Dans \\ {0, 1 \\ } ^ m } \alpha (x, y) \ket{x } \ket{y \oplus f (x)}.
+$$
+\begin{align}
+O \ket { \psi } & = o \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+             &= \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y \oplus f (x) } .
 \end{align}
 $$
 
 ## <a name="phase-oracles"></a>Oracle phase
-Vous pouvez également Encoder $f $ dans un $O Oracle $ en appliquant une _phase_ basée sur l’entrée à $O $ .
-Par exemple, nous pouvons définir $O de $ manière à ce que $ $ \begin{align}
-    O \ket{x } = (-1) ^ {f (x)} \ket{x } .
+Vous pouvez également encoder $ f $ dans une $ O Oracle $ en appliquant une _phase_ basée sur l’entrée à $ o $ . Par exemple, nous pouvons définir $ O de $ telle sorte que$$
+\begin{align}
+    O \ket { x } = (-1) ^ { f (x) } \ket { x } .
 \end{align}
-$ $ Si une phase Oracle agit sur un registre initialement dans un état de base de calcul $ \ket{x } $, cette phase est une phase globale qui n’est donc pas observable.
+$$
+Si une phase Oracle agit sur un registre initialement dans un état de base de calcul $ \ket { x } $ , cette phase est une phase globale qui n’est donc pas observable.
 Toutefois, Oracle peut être une ressource très puissante si elle est appliquée à une superposition ou en tant qu’opération contrôlée.
-Par exemple, considérez une phase Orcale $O _f $ pour une fonction à qubit unique $f $ .
-Ensuite, $ $ \begin{align}
-    O_f \ket { +} & = O_f (\ket{0 } + \ket{1 } )/\sqrt{2 } \\ \\ & = ((-1) ^ {f (0)} \ket{0 } + (-1) ^ {f (1)} \ket{1 } )/\sqrt{2 } \\ \\ & = (-1) ^ {f (0)} (\ket{0 } + (-1) ^ {f (1)-f (0)} \ket{1 } )/\sqrt{2 } \\ \\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket { +}.
+Par exemple, considérez une phase Oracle $ O_f $ pour une fonction qubit unique $ $ .
+Cliquez$$
+\begin{align}
+    O_f\ket{+}
+        &=O_f ( \ket { 0 }  +  \ket { 1 } )/ \sqrt { 2 }\\\\
+        &=((-1) ^ { f (0) } \ket { 0 } + (-1) ^ { f (1) } \ket { 1 } )/ \sqrt { 2 }\\\\
+        &=(-1) ^ { f (0) } ( \ket { 0 } + (-1) ^ { f (1)-f (0) } \ket { 1 } )/ \sqrt { 2 }\\\\
+        &=(-1) ^ { f (0) } Z ^ { f (0)-f (1) } \ket { + } .
 \end{align}
 $$
 

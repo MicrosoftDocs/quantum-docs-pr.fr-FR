@@ -1,28 +1,33 @@
 ---
-title: Estimateur des ressources du kit de développement Quantum
-description: 'En savoir plus sur l’estimateur de ressources, qui estime les ressources requises pour exécuter une instance donnée d’une opération Q # sur un ordinateur Quantum.'
+title: Estimation des ressources de Quantum-Kit de développement quantique
+description: 'Découvrez l’estimateur des ressources Microsoft QDK, qui estime les ressources requises pour exécuter une instance donnée d’une opération Q # sur un ordinateur Quantum.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
-ms.date: 1/22/2019
+ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: 0909a050e89d6295664e54ab63cfda5d407a8f12
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415253"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870535"
 ---
-# <a name="the-resources-estimator-target-machine"></a>Ordinateur cible de l’estimateur de ressources
+# <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimation des ressources du kit de développement quantique (QDK)
 
-Comme son nom l’indique, le `ResourcesEstimator` estime les ressources requises pour exécuter une instance donnée d’une opération Q # sur un ordinateur Quantum.
-Pour ce faire, il exécute l’opération Quantum sans simuler réellement l’état d’un ordinateur quantique. pour cette raison, il peut estimer des ressources pour les opérations Q # qui utilisent des milliers de qubits, si la partie classique du code peut être exécutée dans un délai raisonnable.
+Comme son nom l’indique, la `ResourcesEstimator` classe estime les ressources requises pour exécuter une instance donnée d’une opération Q # sur un ordinateur Quantum. Pour ce faire, il exécute l’opération Quantum sans simuler réellement l’état d’un ordinateur quantique. pour cette raison, elle estime les ressources pour les opérations Q # qui utilisent des milliers de qubits, à condition que la partie classique du code s’exécute dans un délai raisonnable.
 
-## <a name="usage"></a>Usage
+L’estimateur de ressources repose sur le [simulateur Quantum trace](xref:microsoft.quantum.machines.qc-trace-simulator.intro), qui fournit un ensemble plus riche de métriques et d’outils pour déboguer les programmes Q #.
 
-Le `ResourcesEstimator` n’est qu’un autre type d’ordinateur cible. il peut donc être utilisé pour exécuter n’importe quelle opération Q #. 
+## <a name="invoking-and-running-the-resources-estimator"></a>Appel et exécution de l’estimateur de ressources
 
-Comme les autres ordinateurs cibles, pour l’utiliser sur un programme hôte C#, créez une instance et transmettez-la en tant que premier paramètre de la méthode de l’opération `Run` :
+Vous pouvez utiliser l’estimateur de ressources pour exécuter n’importe quelle opération Q #. Pour plus d’informations, consultez [méthodes d’exécution d’un programme Q #](xref:microsoft.quantum.guide.host-programs).
+
+### <a name="invoking-the-resources-estimator-from-c"></a>Appel de l’estimateur de ressources à partir de C # 
+
+Comme pour les autres ordinateurs cibles, vous créez d’abord une instance de la `ResourceEstimator` classe, puis vous la transmettez comme premier paramètre de la méthode d’une opération `Run` .
+
+Notez que, contrairement `QuantumSimulator` à la classe, la `ResourceEstimator` classe n’implémente pas l' <xref:System.IDisposable> interface, ce qui signifie que vous n’avez pas besoin de la placer dans une `using` instruction.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -42,9 +47,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-Comme le montre l’exemple, le `ResourcesEstimator` fournit une `ToTSV()` méthode pour générer une table avec des valeurs séparées par des tabulations (TSV) qui peuvent être enregistrées dans un fichier ou écrites dans la console pour l’analyse. La sortie du programme ci-dessus doit ressembler à ceci :
+Comme le montre l’exemple, `ResourcesEstimator` fournit la `ToTSV()` méthode, qui génère une table avec des valeurs séparées par des tabulations (TSV). Vous pouvez enregistrer la table dans un fichier ou l’afficher dans la console pour l’analyse. Voici un exemple de sortie du programme précédent :
 
-```Output
+```output
 Metric          Sum
 CNOT            1000
 QubitClifford   1000
@@ -57,15 +62,37 @@ BorrowedWidth   0
 ```
 
 > [!NOTE]
-> Le `ResourcesEstimator` ne réinitialise pas ses calculs à chaque exécution, si la même instance est utilisée pour exécuter une autre opération, il conserve le nombre d’agrégations en plus des résultats existants.
-> Si vous devez réinitialiser les calculs entre les exécutions, créez une nouvelle instance pour chaque exécution.
+> Une `ResourcesEstimator` instance ne réinitialise pas ses calculs à chaque exécution. Si vous utilisez la même instance pour exécuter une autre opération, elle agrège les nouveaux résultats avec les résultats existants. Si vous devez réinitialiser les calculs entre les exécutions, créez une nouvelle instance pour chaque exécution.
 
+### <a name="invoking-the-resources-estimator-from-python"></a>Appel de l’estimateur de ressources à partir de Python
+
+Utilisez la méthode [estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) à partir de la bibliothèque Python avec l’opération Q # importée :
+
+```python
+qubit_result = myOperation.estimate_resources()
+```
+
+### <a name="invoking-the-resources-estimator-from-the-command-line"></a>Appel de l’estimateur de ressources à partir de la ligne de commande
+
+Quand vous exécutez un programme Q # à partir de la ligne de commande, utilisez le paramètre **--simulateur** (ou **-s** shortcut) pour spécifier l' `ResourcesEstimator` ordinateur cible. La commande suivante exécute un programme à l’aide de l’estimateur de ressources : 
+
+```dotnetcli
+dotnet run -s ResourcesEstimator
+```
+
+### <a name="invoking-the-resources-estimator-from-juptyer-notebooks"></a>Appel de l’estimateur de ressources des blocs-notes Juptyer
+
+Utilisez la commande IQ # Magic [% estimate](xref:microsoft.quantum.iqsharp.magic-ref.simulate) pour exécuter l’opération Q #.
+
+```
+%estimate myOperation
+```
 
 ## <a name="programmatically-retrieving-the-estimated-data"></a>Récupération par programmation des données estimées
 
-En plus d’une table TSV, les ressources estimées peuvent être récupérées par programme par le biais de la `ResourcesEstimator` `Data` propriété de. `Data`fournit une `System.DataTable` instance de avec deux colonnes : `Metric` et `Sum` , indexées par les noms de métriques.
+En plus d’une table TSV, vous pouvez récupérer par programmation les ressources estimées lors de l’exécution via la `Data` propriété de l’estimateur de ressources. La `Data` propriété fournit une `System.DataTable` instance de avec deux colonnes : `Metric` et `Sum` , indexées par les noms de métriques.
 
-Le code suivant montre comment récupérer et imprimer le nombre total de `QubitClifford` , `T` ainsi que les `CNOT` portes utilisées par une opération Q # :
+Le code suivant montre comment récupérer et imprimer le nombre total d' `QubitClifford` opérations, `T` et `CNOT` utilisées par une opération Q # :
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -91,46 +118,25 @@ namespace Quantum.MyProgram
 
 ## <a name="metrics-reported"></a>Métriques signalées
 
-Voici la liste des métriques estimées par `ResourcesEstimator` :
+L’estimateur de ressources effectue le suivi des mesures suivantes :
 
-* __Cnotin__: le nombre de portes cnotin (également appelées portes Pauli X contrôlées) exécutées.
-* __QubitClifford__: nombre de toutes les passerelles qubit Clifford et Pauli exécutées.
-* __Mesure__: nombre de mesures exécutées.
-* __R__: nombre de rotations qubit uniques exécutées, à l’exception des portes T, Clifford et Pauli.
-* __T__: le nombre de portes t et leurs conjugués, y compris la porte t, T_x = H. T. H et T_y = Hy. t. HY, exécutés.
-* __Depth__: limite inférieure de la profondeur du circuit Quantum exécutée par l’opération Q #. Par défaut, seules les portes T sont comptées en profondeur. pour plus d’informations, consultez [compteur de profondeur](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
-* __Width__: limite inférieure pour le nombre maximal de qubits alloués lors de l’exécution de l’opération Q #. Il se peut qu’il ne soit pas possible d’atteindre simultanément les limites inférieures de __profondeur__ et de __largeur__ .
-* __BorrowedWidth__: nombre maximal de qubits empruntés à l’intérieur de l’opération Q #.
+|Métrique|Description|
+|----|----|
+|__CNOT__    |Nombre d’exécutions d' `CNOT` opérations (également appelées opérations Pauli X contrôlées).|
+|__QubitClifford__ |Nombre d’exécutions d’opérations qubit Clifford et Pauli uniques.|
+|__mesure__    |Nombre d’exécutions de mesures.  |
+|__R__    |Nombre d’exécutions de rotations à qubit unique, à l’exception des `T` opérations Clifford et Pauli.  |
+|__T__    |Nombre d’exécutions d' `T` opérations et de leurs conjugués, y compris les `T` opérations, T_x = H. T. H et T_y = Hy. t. hy.  |
+|__Profondeur__|Limite inférieure de la profondeur du circuit Quantum exécutée par l’opération Q #. Par défaut, la mesure de profondeur compte uniquement les `T` portes. Pour plus d’informations, consultez [compteur de profondeur](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Width__    |Limite inférieure pour le nombre maximal de qubits allouées pendant l’exécution de l’opération Q #. Il se peut qu’il ne soit pas possible d’atteindre simultanément les limites inférieures de __profondeur__ et de __largeur__ .  |
+|__BorrowedWidth__    |Nombre maximal de qubits empruntés dans l’opération Q #.  |
 
+## <a name="providing-the-probability-of-measurement-outcomes"></a>Fournir la probabilité des résultats de mesure
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>Génération de la probabilité des résultats de mesure
-
-<xref:microsoft.quantum.intrinsic.assertprob>à partir de l' <xref:microsoft.quantum.intrinsic> espace de noms peut être utilisé pour fournir des informations sur la probabilité attendue d’une mesure pour aider à piloter l’exécution du programme Q #. L'exemple suivant illustre ce mécanisme :
-
-```qsharp
-operation Teleport(source : Qubit, target : Qubit) : Unit {
-
-    using (qubit = Qubit()) {
-
-        H(q);
-        CNOT(qubit, target);
-
-        CNOT(source, qubit);
-        H(source);
-
-        AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-
-        if (M(source) == One)  { Z(target); X(source); }
-        if (M(qubit) == One) { X(target); X(qubit); }
-    }
-}
-```
-
-Quand le `ResourcesEstimator` rencontre, `AssertProb` il enregistre cette mesure `PauliZ` sur `source` et `q` doit recevoir un résultat de `Zero` avec une probabilité de 0,5. Lorsqu’il est exécuté `M` ultérieurement, il trouve les valeurs enregistrées des probabilités de résultat et `M` retourne `Zero` ou avec la `One` probabilité 0,5.
-
+Vous pouvez utiliser <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> à partir de l' <xref:microsoft.quantum.diagnostics> espace de noms pour fournir des informations sur la probabilité attendue d’une opération de mesure. Pour plus d’informations, consultez [Quantum trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
 ## <a name="see-also"></a>Voir aussi
 
-Le `ResourcesEstimator` repose sur le [simulateur](xref:microsoft.quantum.machines.qc-trace-simulator.intro)Quantum Computer trace, qui fournit un ensemble plus riche de métriques, la possibilité de rapporter des métriques sur le graphique d’appel complet et des fonctionnalités telles que l' [outil de vérification des entrées distinctes](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) pour faciliter la détection des bogues sur les programmes Q #. Pour plus d’informations, consultez la documentation de [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
-
+- [Simulateur de traces Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+- [Simulateur Quantum Toffoli](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Simulateur d’état complet du quantum](xref:microsoft.quantum.machines.full-state-simulator) 
