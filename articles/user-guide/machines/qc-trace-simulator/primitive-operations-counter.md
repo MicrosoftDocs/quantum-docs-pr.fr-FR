@@ -1,21 +1,37 @@
 ---
-title: Compteur d’opérations primitifs
-description: Découvrez le compteur d’opérations primitives de Microsoft QDK, qui effectue le suivi du nombre d’exécutions de primitives utilisées par les opérations dans un programme Quantum.
+title: Compteur d’opérations primitives-Kit de développement Quantum
+description: 'Découvrez le compteur d’opérations primitives Microsoft QDK, qui utilise le simulateur de traces Quantum pour suivre les exécutions de primitives utilisées par les opérations dans un programme Q #.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: 8bdb0aed370e72b58b23025f1685ad7ce1a77a43
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ea022d499354f7cefd60da690466496e0ce7c336
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274893"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871023"
 ---
-# <a name="primitive-operations-counter"></a><span data-ttu-id="0174f-103">Compteur d’opérations primitifs</span><span class="sxs-lookup"><span data-stu-id="0174f-103">Primitive Operations Counter</span></span>  
+# <a name="quantum-trace-simulator-primitive-operations-counter"></a><span data-ttu-id="ae3ce-103">Simulateur de traces Quantum : compteur d’opérations primitives</span><span class="sxs-lookup"><span data-stu-id="ae3ce-103">Quantum trace simulator: primitive operations counter</span></span>
 
-<span data-ttu-id="0174f-104">Le `Primitive Operations Counter` fait partie du [simulateur](xref:microsoft.quantum.machines.qc-trace-simulator.intro)Quantum Computer trace.</span><span class="sxs-lookup"><span data-stu-id="0174f-104">The `Primitive Operations Counter` is a part of the quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="0174f-105">Il compte le nombre d’exécutions de primitives utilisées par chaque opération appelée dans un programme Quantum.</span><span class="sxs-lookup"><span data-stu-id="0174f-105">It counts the number of primitive executions used by every operation invoked in a quantum program.</span></span> <span data-ttu-id="0174f-106">Toutes les opérations de `Microsoft.Quantum.Intrinsic` sont exprimées en termes de rotations à qubit unique, de grilles de T, de portes de qubit Clifford uniques, de portes cnotin et de mesures de plusieurs qubit Pauli observables.</span><span class="sxs-lookup"><span data-stu-id="0174f-106">All operations from `Microsoft.Quantum.Intrinsic` are expressed in terms of single qubit rotations, T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="0174f-107">Les statistiques collectées sont agrégées sur les bords du graphique des appels d’opérations.</span><span class="sxs-lookup"><span data-stu-id="0174f-107">Collected statistics are aggregated over the edges of the operations call graph.</span></span> <span data-ttu-id="0174f-108">Nous allons maintenant compter le nombre `T` de portes nécessaires pour implémenter l' `CCNOT` opération.</span><span class="sxs-lookup"><span data-stu-id="0174f-108">Let us now count how many `T` gates are needed to implement the `CCNOT` operation.</span></span> 
+<span data-ttu-id="ae3ce-104">Le compteur d’opérations primitifs fait partie du [simulateur](xref:microsoft.quantum.machines.qc-trace-simulator.intro)Quantum Development Kit.</span><span class="sxs-lookup"><span data-stu-id="ae3ce-104">The primitive operation counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="ae3ce-105">Il compte le nombre d’exécutions de primitives utilisées par chaque opération appelée dans un programme Quantum.</span><span class="sxs-lookup"><span data-stu-id="ae3ce-105">It counts the number of primitive executions used by every operation invoked in a quantum program.</span></span> 
+
+<span data-ttu-id="ae3ce-106">Toutes les <xref:microsoft.quantum.intrinsic> opérations sont exprimées en termes de rotations à qubit unique, d’opérations T, d’opérations de Clifford qubit, d’opérations cnotin et de mesures de plusieurs qubit Pauli observables.</span><span class="sxs-lookup"><span data-stu-id="ae3ce-106">All <xref:microsoft.quantum.intrinsic> operations are expressed in terms of single-qubit rotations, T operations, single-qubit Clifford operations, CNOT operations, and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="ae3ce-107">Le compteur opérations primitives agrège et collecte des statistiques sur tous les bords du [graphique des appels](https://en.wikipedia.org/wiki/Call_graph)de l’opération.</span><span class="sxs-lookup"><span data-stu-id="ae3ce-107">The Primitive Operations Counter aggregates and collects statistics over all the edges of the operation's [call graph](https://en.wikipedia.org/wiki/Call_graph).</span></span>
+
+## <a name="invoking-the-primitive-operation-counter"></a><span data-ttu-id="ae3ce-108">Appel du compteur d’opérations primitifs</span><span class="sxs-lookup"><span data-stu-id="ae3ce-108">Invoking the primitive operation counter</span></span>
+
+<span data-ttu-id="ae3ce-109">Pour exécuter le simulateur de trace Quantum avec le compteur d’opérations primitifs, vous devez créer une <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, affecter la `UsePrimitiveOperationsCounter` **valeur true**à la propriété, puis créer une nouvelle <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance avec le `QCTraceSimulatorConfiguration` comme paramètre.</span><span class="sxs-lookup"><span data-stu-id="ae3ce-109">To run the quantum trace simulator with the primitive operation counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UsePrimitiveOperationsCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with the `QCTraceSimulatorConfiguration` as the parameter.</span></span>
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UsePrimitiveOperationsCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a><span data-ttu-id="ae3ce-110">Utilisation du compteur d’opérations primitifs dans un programme hôte C#</span><span class="sxs-lookup"><span data-stu-id="ae3ce-110">Using the primitive operation counter in a C# host program</span></span>
+
+<span data-ttu-id="ae3ce-111">L’exemple C# qui suit dans cette section compte le nombre <xref:microsoft.quantum.intrinsic.t> d’opérations nécessaires pour implémenter l' <xref:microsoft.quantum.intrinsic.ccnot> opération, en fonction de l’exemple de code Q # suivant :</span><span class="sxs-lookup"><span data-stu-id="ae3ce-111">The C# example that follows in this section counts how many <xref:microsoft.quantum.intrinsic.t> operations are needed to implement the <xref:microsoft.quantum.intrinsic.ccnot> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -24,19 +40,17 @@ operation ApplySampleWithCCNOT() : Unit {
     using (qubits = Qubit[3]) {
         CCNOT(qubits[0], qubits[1], qubits[2]);
         T(qubits[0]);
-    } 
+    }
 }
 ```
 
-## <a name="using-the-primitive-operations-counter-within-a-c-program"></a><span data-ttu-id="0174f-109">Utilisation du compteur d’opérations primitifs dans un programme C#</span><span class="sxs-lookup"><span data-stu-id="0174f-109">Using the Primitive Operations Counter within a C# Program</span></span>
-
-<span data-ttu-id="0174f-110">Pour vérifier que `CCNOT` requiert 7 `T` portes et que `ApplySampleWithCCNOT` exécute 8 portes, `T` nous pouvons utiliser le code C# suivant :</span><span class="sxs-lookup"><span data-stu-id="0174f-110">To check that `CCNOT` indeed requires 7 `T` gates and that `ApplySampleWithCCNOT` executes 8 `T` gates we can use the following C# code:</span></span>
+<span data-ttu-id="ae3ce-112">Pour vérifier que `CCNOT` requiert sept `T` opérations et qu' `ApplySampleWithCCNOT` elle exécute huit `T` opérations, utilisez le code C# suivant :</span><span class="sxs-lookup"><span data-stu-id="ae3ce-112">To check that `CCNOT` requires seven `T` operations and that `ApplySampleWithCCNOT` runs eight `T` operations, use the following C# code:</span></span>
 
 ```csharp 
 // using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 // using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
-config.usePrimitiveOperationsCounter = true;
+config.UsePrimitiveOperationsCounter = true;
 var sim = new QCTraceSimulator(config);
 var res = ApplySampleWithCCNOT.Run(sim).Result;
 
@@ -44,25 +58,23 @@ double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroups
 double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
 ```
 
-<span data-ttu-id="0174f-111">La première partie du programme s’exécute `ApplySampleWithCCNOT` .</span><span class="sxs-lookup"><span data-stu-id="0174f-111">The first part of the program executes `ApplySampleWithCCNOT`.</span></span> <span data-ttu-id="0174f-112">Dans la deuxième partie, nous utilisons la méthode `QCTraceSimulator.GetMetric` pour récupérer le nombre de portes T exécutées par `ApplySampleWithCCNOT` :</span><span class="sxs-lookup"><span data-stu-id="0174f-112">In the second part, we use the method `QCTraceSimulator.GetMetric` to get the number of T gates executed by `ApplySampleWithCCNOT`:</span></span> 
+<span data-ttu-id="ae3ce-113">La première partie du programme s’exécute `ApplySampleWithCCNOT` .</span><span class="sxs-lookup"><span data-stu-id="ae3ce-113">The first part of the program runs `ApplySampleWithCCNOT`.</span></span> <span data-ttu-id="ae3ce-114">La deuxième partie utilise la [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) méthode pour récupérer le nombre d' `T` opérations exécutées par `ApplySampleWithCCNOT` :</span><span class="sxs-lookup"><span data-stu-id="ae3ce-114">The second part uses the [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the number of `T` operations run by `ApplySampleWithCCNOT`:</span></span> 
 
-```csharp
-double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-```
+<span data-ttu-id="ae3ce-115">Quand vous appelez `GetMetric` avec deux paramètres de type, elle retourne la valeur de la métrique associée à un bord de graphique d’appel donné.</span><span class="sxs-lookup"><span data-stu-id="ae3ce-115">When you call `GetMetric` with two type parameters, it returns the value of the metric associated with a given call graph edge.</span></span> <span data-ttu-id="ae3ce-116">Dans l’exemple précédent, le programme appelle l' `Primitive.CCNOT` opération dans `ApplySampleWithCCNOT` et, par conséquent, le graphique des appels contient le bord `<Primitive.CCNOT, ApplySampleWithCCNOT>` .</span><span class="sxs-lookup"><span data-stu-id="ae3ce-116">In the preceding example, the program calls the `Primitive.CCNOT` operation  within `ApplySampleWithCCNOT` and therefore the call graph contains the edge `<Primitive.CCNOT, ApplySampleWithCCNOT>`.</span></span> 
 
-<span data-ttu-id="0174f-113">Lorsque `GetMetric` est appelé avec deux paramètres de type, il retourne la valeur de la métrique associée à un bord de graphique d’appel donné.</span><span class="sxs-lookup"><span data-stu-id="0174f-113">When `GetMetric` is called with two type parameters it returns the value of the metric associated with a given call graph edge.</span></span> <span data-ttu-id="0174f-114">Dans notre exemple, `Primitive.CCNOT` l’opération est appelée dans `ApplySampleWithCCNOT` et par conséquent, le graphique des appels contient le bord `<Primitive.CCNOT, ApplySampleWithCCNOT>` .</span><span class="sxs-lookup"><span data-stu-id="0174f-114">In our example operation `Primitive.CCNOT` is called within `ApplySampleWithCCNOT` and therefore the call graph contains the edge `<Primitive.CCNOT, ApplySampleWithCCNOT>`.</span></span> 
-
-<span data-ttu-id="0174f-115">Pour connaître le nombre de `CNOT` portes utilisées, nous pouvons ajouter la ligne suivante :</span><span class="sxs-lookup"><span data-stu-id="0174f-115">To get the number of `CNOT` gates used, we can add the following line:</span></span>
+<span data-ttu-id="ae3ce-117">Pour récupérer le nombre d' `CNOT` opérations utilisées, ajoutez la ligne suivante :</span><span class="sxs-lookup"><span data-stu-id="ae3ce-117">To retrieve the number of `CNOT` operations used, add the following line:</span></span>
 ```csharp
 double cxCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.CX);
 ```
 
-<span data-ttu-id="0174f-116">Enfin, pour afficher toutes les statistiques collectées par le compteur de porte au format CSV, nous pouvons utiliser ce qui suit :</span><span class="sxs-lookup"><span data-stu-id="0174f-116">Finally, to output all the statistics collected by the gate counter in CSV format we can use the following:</span></span>
+<span data-ttu-id="ae3ce-118">Enfin, vous pouvez générer toutes les statistiques collectées par le compteur d’opérations primitives au format CSV à l’aide des éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="ae3ce-118">Finally, you can output all the statistics collected by the Primitive Operations Counter in CSV format using the following:</span></span>
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0174f-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0174f-117">See also</span></span> ##
+## <a name="see-also"></a><span data-ttu-id="ae3ce-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ae3ce-119">See also</span></span>
 
-- <span data-ttu-id="0174f-118">Présentation de Quantum Computer [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .</span><span class="sxs-lookup"><span data-stu-id="0174f-118">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="ae3ce-120">Vue d’ensemble du [simulateur Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro) Development Kit.</span><span class="sxs-lookup"><span data-stu-id="ae3ce-120">The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="ae3ce-121">Référence de l' <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API.</span><span class="sxs-lookup"><span data-stu-id="ae3ce-121">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.</span></span>
+- <span data-ttu-id="ae3ce-122">Référence de l' <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API.</span><span class="sxs-lookup"><span data-stu-id="ae3ce-122">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.</span></span>
+- <span data-ttu-id="ae3ce-123">Référence de l' <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.PrimitiveOperationsGroupsNames> API.</span><span class="sxs-lookup"><span data-stu-id="ae3ce-123">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.PrimitiveOperationsGroupsNames> API reference.</span></span>
