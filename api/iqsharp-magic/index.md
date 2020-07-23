@@ -1,5 +1,18 @@
+---
+title: Commandes magiques IQ#
+author: rmshaffer
+uid: microsoft.quantum.iqsharp.magic-ref.index
+ms.author: rmshaffer
+ms.date: 07/21/2020
+ms.topic: article
+ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870700"
+---
 # <a name="iq-magic-commands"></a>Commandes magiques IQ#
-
 | Commande magique | Résumé |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Permet de se connecter à un espace de travail Azure Quantum ou d’afficher l’état actuel de la connexion. |
@@ -19,6 +32,7 @@
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Exécute une fonction ou une opération donnée sur l’ordinateur cible ResourcesEstimator. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Exécute un seul test. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Retourne une liste de toutes les commandes magiques actuellement disponibles. |
+| [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | Liste les espaces de noms actuellement ouverts, ainsi que leurs alias. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Permet de charger un package NuGet. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Rapporte les métriques de performance actuelles pour ce noyau. |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | Exécute une fonction ou une opération donnée sur l’ordinateur cible QuantumSimulator. |
