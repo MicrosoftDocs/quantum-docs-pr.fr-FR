@@ -6,12 +6,12 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 15015d1673f47faf5a13dde516f834916b4319d6
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884272"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871431"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Développer avec des applications en ligne de commande Q#
 
@@ -23,7 +23,7 @@ Les programmes Q# peuvent être exécutés seuls et sans pilote dans un langage 
 
 ## <a name="installation"></a>Installation
 
-Bien que vous puissiez générer des applications en ligne de commande Q# dans n’importe quel IDE, nous vous recommandons d’utiliser Visual Studio Code (VS Code) ou Visual Studio IDE pour vos applications Q#. Lorsque vous développez dans ces environnements, vous pouvez tirer parti des nombreuses fonctionnalités de l’extension QDK, comme les avertissements, la coloration syntaxique, les modèles de projets, etc.
+Bien que vous puissiez générer des applications en ligne de commande Q# dans n’importe quel IDE, nous vous recommandons d’utiliser l’IDE Visual Studio Code (VS Code) ou Visual Studio pour développer vos applications Q# localement. Pour le développement dans le cloud via le navigateur web, nous vous recommandons Visual Studio Codespaces. Lorsque vous développez dans ces environnements, vous pouvez tirer parti des nombreuses fonctionnalités de l’extension QDK, comme les avertissements, la coloration syntaxique, les modèles de projets, etc. 
 
 Pour configurer VS Code :
 
@@ -34,6 +34,13 @@ Pour configurer Visual Studio :
 
 1. Téléchargez et installez [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 ou ultérieur avec la charge de travail de développement multiplateforme .NET Core activée.
 2. Téléchargez et installez le [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
+
+Pour configurer Visual Studio Codespaces :
+
+1. Créez un [compte Azure](https://azure.microsoft.com/free/).
+2. Créez un environnement Codespaces. Suivez le [guide de démarrage rapide](https://docs.microsoft.com/visualstudio/online/quickstarts/browser). Lorsque vous créez l’espace de code, nous vous recommandons d’entrer `microsoft/Quantum` dans le champ « Dépôt Git » pour charger les paramètres spécifiques au QDK.
+3. Vous pouvez maintenant lancer votre nouvel environnement et commencer à développer dans le navigateur via l’[IDE cloud VS Codespaces](https://online.visualstudio.com/environments). Il est également possible d’utiliser votre installation locale de VS Code et d’utiliser Codespaces comme [environnement distant](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
+
 
 Si vous souhaitez installer le QDK pour un autre environnement, entrez ceci sur la ligne de commande :
 
@@ -46,14 +53,6 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 Suivez les instructions situées sous l’onglet correspondant à votre environnement.
 
 ### <a name="vs-code"></a>[Code Visual Studio](#tab/tabid-vscode)
-
-Installez les modèles de projet Q# :
-
-1. Ouvrez Visual Studio Code.
-2. Cliquez sur **Affichage** -> **Palette de commandes**.
-3. Sélectionnez **Q# : Installer des modèles de projet**.
-
-Quand **Modèles de projet installés** s’affiche, le QDK est prêt à être utilisé avec vos propres applications et bibliothèques.
 
 Pour créer un projet :
 
@@ -96,24 +95,30 @@ Pour exécuter l’application :
 
 Vérifiez votre installation en créant une application `Hello World` Q#.
 
+1. Installez les modèles de projet.
+
+    ```dotnetcli
+    dotnet new -i Microsoft.Quantum.ProjectTemplates
+    ```
+
 1. Créez une application :
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
-2. Accédez au répertoire de l’application :
+1. Accédez au répertoire de l’application :
     ```dotnetcli
     cd runSayHello
     ```
 
     Ce répertoire doit maintenant contenir un fichier `Program.qs`. Il s’agit d’un programme Q# qui définit une opération simple pour afficher un message dans la console. Vous pouvez modifier ce modèle avec un éditeur de texte et le remplacer par vos propres applications quantiques. 
 
-3. Exécutez le programme :
+1. Exécutez le programme :
     ```dotnetcli
     dotnet run
     ```
 
-4. Le texte suivant doit s’afficher : `Hello quantum world!`
+1. Le texte suivant doit s’afficher : `Hello quantum world!`
 
 ***
 
