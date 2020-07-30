@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871414"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436563"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Contribution au Quantum Development Kit
 
@@ -19,7 +19,7 @@ Le Quantum Development Kit est plus qu’un ensemble d’outils permettant d�
 Il fait partie d’une vaste communauté de personnes qui découvrent l’informatique quantique, font de la recherche sur les algorithmes quantiques, développent de nouvelles applications pour les appareils quantiques ou encore travaillent à tirer le meilleur parti possible de la programmation quantique.
 En tant que membre de cette communauté, le Quantum Development Kit vise à offrir aux développeurs quantiques issus d’horizons très variés les fonctionnalités dont ils ont besoin.
 Vos contributions au Quantum Development Kit aident à la réalisation de cet objectif en améliorant les outils utilisés par d’autres développeurs quantiques et la façon dont ces outils sont documentés, et même en créant de nouvelles fonctions et fonctionnalités qui aident à faire de la communauté de programmation quantique un meilleur endroit pour découvrir et créer.
-Nous vous sommes très reconnaissants de votre aimable contribution et de l’occasion qui nous est donnée de travailler avec vous pour faire de notre communauté ce qu’elle peut être de mieux.
+Nous vous sommes très reconnaissants de votre aimable contribution et de l’occasion qui nous est donnée de travailler avec vous pour faire de notre communauté ce qu’elle peut être de mieux. 
 
 Dans ce guide, nous vous donnons quelques conseils sur la façon de rendre votre contribution aussi utile que possible à l’ensemble de la communauté de programmation quantique.
 

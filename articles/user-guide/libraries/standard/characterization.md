@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275023"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436531"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caractérisation quantique et statistiques #
 
@@ -96,7 +96,7 @@ L’inférence Bayésienne exacte est dans la pratique inversement.
 Pour voir cela, imaginez que nous souhaitons apprendre une variable de $n $-bit $x $.
 La distribution antérieure $ \Pr (x) $ prend en charge plus de $2 ^ n $ valeurs hypothétiques de $x $.
 Cela signifie que si nous avons besoin d’une estimation très précise de $x $, l’estimation de la phase Bayésiene peut nécessiter une mémoire et un temps de traitement prohibitifs.
-Bien que pour certaines applications, telles que la simulation de Quantum, la précision limitted requise n’exclut pas ces méthodes, d’autres applications, telles que l’algorithme de Shori, ne peuvent pas utiliser l’inférence Bayésienne exacte au cours de l’étape d’estimation de la phase.  Pour cette raison, nous fournissons également des implémentations pour des méthodes Bayésienles approximatives telles que l' [estimation de phase de parcours aléatoire (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) et également des approches non bayésienles telles que l' [estimation de phase fiable](xref:microsoft.quantum.characterization.robustphaseestimation).
+Bien que pour certaines applications, telles que la simulation de Quantum, la précision limitted requise n’exclut pas ces méthodes, d’autres applications, telles que l’algorithme de Shori, ne peuvent pas utiliser l’inférence Bayésienne exacte au cours de l’étape d’estimation de la phase.  Pour cette raison, nous fournissons également des implémentations pour des méthodes Bayésienles approximatives telles que l' [estimation de phase de parcours aléatoire (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) et également des approches non bayésienles telles que l' [estimation de phase fiable](xref:microsoft.quantum.characterization.robustphaseestimation).
 
 ### <a name="robust-phase-estimation"></a>Estimation de phase robuste ###
 
