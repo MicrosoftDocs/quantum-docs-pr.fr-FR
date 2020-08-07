@@ -6,12 +6,15 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436531"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868625"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caractérisation quantique et statistiques #
 
@@ -19,7 +22,7 @@ Il est essentiel de pouvoir caractériser les effets des opérations afin de dé
 Cela est difficile, car chaque mesure d’un système Quantum produit au plus un peu d’informations.
 Pour apprendre un eigenvalue, laisser un État Quantum autonome, les résultats de nombreuses mesures doivent être regroupés afin que l’utilisateur puisse glaner les nombreux éléments d’informations nécessaires pour représenter ces concepts.
 Les États quantiques sont particulièrement vexing, car le titre de [non-clonage](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) stipule qu’il n’existe aucun moyen d’apprendre un État Quantum arbitraire à partir d’une copie unique de l’État, car cela vous permet de créer des copies de l’État.
-Cet obscurcissement de l’État Quantum de l’utilisateur est reflété dans le fait que Q # n’expose pas ou *même ne définit pas l’état des* programmes quantiques.
+Cet obscurcissement de l’État Quantum de l’utilisateur est reflété dans le fait que Q# n’expose pas ou ne définit pas l’état *is* des programmes quantiques.
 Nous allons donc aborder la caractérisation quantique en traitant les opérations et les États comme une boîte noire. Cette approche partage en grande partie en commun avec la pratique expérimentale de la caractérisation quantique, la vérification et la validation (QCVV).
 
 La caractérisation est distincte de la plupart des autres bibliothèques présentées précédemment.
@@ -36,7 +39,7 @@ Cela présente l’avantage que nous n’avons besoin que d’un seul qubit supp
 Chacune des méthodes proposées ci-dessous utilise une stratégie différente pour concevoir des expériences et différentes méthodes de traitement des données pour apprendre la phase.  Ils ont chacun un avantage unique, allant de l’utilisation de limites d’erreurs rigoureuses, aux capacités d’incorporation d’informations antérieures, de tolérer des erreurs ou de s’exécuter sur des ordinateurs classiques limitteds de la mémoire.
 
 Dans le cadre de l’estimation itérative de la phase, nous allons considérer un $U unitaire $ donné comme une opération de boîte noire.
-Comme décrit dans la section sur oracles dans les [structures de données](xref:microsoft.quantum.libraries.data-structures), l’imprimante Q # Canon modélise ces opérations par le <xref:microsoft.quantum.oracles.discreteoracle> type défini par l’utilisateur, définie par le type de Tuple `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+Comme décrit dans la section sur oracles dans les [structures de données](xref:microsoft.quantum.libraries.data-structures), Q# Canon modélise ces opérations par le <xref:microsoft.quantum.oracles.discreteoracle> type défini par l’utilisateur, défini par le type de Tuple `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 Concrètement, si `U : DiscreteOracle` , `U(m)` implémente $U ^ m $ pour `m : Int` .
 
 Une fois cette définition en place, chaque étape de l’estimation de phase itérative se poursuit en préparant un qubit auxiliaire dans l’État $ \ket{+} $ avec l’état initial $ \ket{\Phi} $ dont nous supposons qu’il s’agit d’un [extraction](xref:microsoft.quantum.concepts.matrix-advanced) de $U (m) $, par exemple $U (m) \ket{\Phi} = e ^ {im\phi} \ Ket {\ Phi} $.  
@@ -47,7 +50,7 @@ Le qubit auxiliaire utilisé comme contrôle pour `U(m)` est ensuite mesuré dan
 
 À ce stade, la reconstruction de la phase à partir des `Result` valeurs obtenues par le biais d’une estimation de phase itérative est un problème d’inférence statistique classique.
 La recherche de la valeur de $m $ qui maximise les informations obtenues, en fonction d’une méthode d’inférence fixe, est simplement un problème dans les statistiques.
-Nous insistons sur cela en décrivant brièvement l’estimation de la phase itérative à un niveau théorique dans le paramètre bayésien du formalisme de l’estimation avant de continuer à décrire les algorithmes statistiques fournis dans Q # Canon pour résoudre ce problème d’inférence classique.
+Nous insistons sur cela en décrivant brièvement l’estimation de phase itérative à un niveau théorique dans le formalisme d’estimation du paramètre bayésien avant de continuer à décrire les algorithmes statistiques fournis dans Q# Canon pour résoudre ce problème d’inférence classique.
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Estimation itérative de la phase sans Eigenstates ###
 
@@ -127,7 +130,7 @@ Par conséquent, l’utilisation de la fonction d’estimation de phase avec des
 
 ### <a name="random-walk-phase-estimation"></a>Estimation de la phase de parcours aléatoire ###
 
-Q # fournit une approximation utile de l’estimation de la phase bayésien conçue pour une utilisation proche des appareils quantiques qui fonctionnent en conditionné un parcours aléatoire sur l’enregistrement de données obtenu à partir d’une estimation de la phase itérative.
+Q#fournit une approximation utile de l’estimation de la phase bayésien conçue pour une utilisation proche des appareils quantiques qui fonctionnent en conditionné un parcours aléatoire sur l’enregistrement de données obtenu à partir d’une estimation de la phase itérative.
 Cette méthode est à la fois adaptative et entièrement déterministe, ce qui permet une mise à l’échelle presque optimale des erreurs dans la phase estimée $ \hat{\Phi} $ avec des surcharges de mémoire très faibles.
 
 Le protocole utilise une méthode d’inférence Bayésienle approximative qui suppose que la distribution antérieure est gaussienne.
@@ -141,7 +144,7 @@ La possibilité de revenir en arrière permet également à l’algorithme d’a
 
 ## <a name="calling-phase-estimation-algorithms"></a>Appel d’algorithmes d’estimation de phase ##
 
-Chaque opération d’estimation de phase fournie avec Q # Canon prend un ensemble différent d’entrées paramétrant la qualité que nous demandons de l’estimation finale $ \hat{\Phi} $.
+Chaque opération d’estimation de phase fournie avec Q# Canon prend un ensemble différent d’entrées paramétrant la qualité que nous demandons de l’estimation finale $ \hat{\Phi} $.
 Ces différentes entrées, cependant, partagent toutes plusieurs entrées en commun, de telle sorte que l’application partielle sur les paramètres de qualité entraîne une signature commune.
 Par exemple, l' <xref:microsoft.quantum.characterization.robustphaseestimation> opération décrite dans la section suivante a la signature suivante :
 

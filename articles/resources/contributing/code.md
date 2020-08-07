@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274848"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866907"
 ---
 # <a name="contributing-code"></a>Code de contribution
 
@@ -28,10 +31,10 @@ Par conséquent, il est utile lorsque la fonctionnalité ajoutée par une contri
 
 ### <a name="unit-tests"></a>Tests unitaires
 
-Les fonctions Q #, les opérations et les types définis par l’utilisateur qui composent les bibliothèques comme Canon sont testés automatiquement dans le cadre du développement sur le référentiel [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) .
+Les Q# fonctions, les opérations et les types définis par l’utilisateur qui composent des bibliothèques comme Canon sont testés automatiquement dans le cadre du développement sur le référentiel [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) .
 Lors de l’ouverture d’une nouvelle demande de tirage (pull request), par exemple, notre configuration de [Azure pipelines](https://azure.microsoft.com/services/devops/pipelines/) vérifie que les modifications apportées à la requête de tirage n’interrompent pas les fonctionnalités existantes dont dépend la communauté de programmation quantique.
 
-Avec la dernière version de Q #, le test unitaire est défini à l’aide de l' `@Test("QuantumSimulator")` attribut. L’argument peut être soit « QuantumSimulator », « ToffoliSimulator », « TraceSimulator », soit un nom qualifié complet spécifiant la cible d’exécution. Plusieurs attributs définissant différentes cibles d’exécution peuvent être attachés au même appelable. Certains de nos tests utilisent toujours le package [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) déconseillé qui expose toutes les fonctions Q # et les opérations se terminant par `Test` à l’infrastructure [xUnit](https://xunit.github.io/) . Ce package n’est plus nécessaire pour définir des tests unitaires. 
+Avec la version la plus récente Q# , les tests unitaires sont définis à l’aide de l' `@Test("QuantumSimulator")` attribut. L’argument peut être soit « QuantumSimulator », « ToffoliSimulator », « TraceSimulator », soit un nom qualifié complet spécifiant la cible d’exécution. Plusieurs attributs définissant différentes cibles d’exécution peuvent être attachés au même appelable. Certains de nos tests utilisent toujours le package [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) déconseillé qui expose toutes les Q# fonctions et les opérations se terminant par `Test` à l’infrastructure [xUnit](https://xunit.github.io/) . Ce package n’est plus nécessaire pour définir des tests unitaires. 
 
 La fonction suivante est utilisée pour garantir que les <xref:microsoft.quantum.canon.fst> <xref:microsoft.quantum.canon.snd> fonctions et retournent les sorties de droite dans un exemple représentatif.
 Si la sortie de `Fst` ou `Snd` est incorrecte, l' `fail` instruction est utilisée pour provoquer l’échec du test.
@@ -92,7 +95,7 @@ Il peut être difficile de faire tout, donc nous prévoyons les fonctionnalités
 Il peut s’agir d’un autre cas dans lequel la publication d’une fonctionnalité en tant que bibliothèque tierce peut s’avérer très utile.
 Vous pouvez également demander de l’aide pour modifier une fonctionnalité afin qu’elle s’adapte mieux à notre feuille de route afin que nous puissions faire le meilleur travail possible.
 
-Nous vous demanderons également les modifications apportées à une demande de tirage (pull request) si elle nécessite davantage de documentation ou de tests unitaires pour nous aider à l’utiliser, ou si elle diffère du style des autres bibliothèques Q # qu’il est plus difficile pour les utilisateurs de trouver votre fonctionnalité.
+Nous vous demanderons également les modifications apportées à une demande de tirage (pull request) si elle nécessite davantage de documentation ou de tests unitaires pour nous aider à l’utiliser, ou si elle diffère d’un style du reste des bibliothèques par le fait qu’il Q# est plus difficile pour les utilisateurs de trouver votre fonctionnalité.
 Dans ces cas-là, nous allons essayer de proposer des avis de code sur les éléments qui peuvent être ajoutés ou modifiés pour faciliter l’inclusion de votre contribution.
 
 Enfin, nous ne pouvons pas accepter les contributions qui causent un préjudice à la communauté de quantum computing, comme indiqué dans le [Code de réalisation de Microsoft Open source](https://opensource.microsoft.com/codeofconduct/).
@@ -102,10 +105,10 @@ Nous apprécions votre aide pour la réalisation de cet objectif.
 ## <a name="next-steps"></a>Étapes suivantes
 
 Merci d’avoir aidé à faire de la communauté de développement quantique une formidable ressource pour l’ensemble de la communauté de programmation quantique !
-Pour plus d’informations, consultez le guide suivant sur le style Q #.
+Pour plus d’informations, consultez le guide suivant sur le Q# style.
 
 > [!div class="nextstepaction"]
-> [En savoir plus sur les directives de style Q #](xref:microsoft.quantum.contributing.style)
+> [En savoir plus sur Q# les règles de style](xref:microsoft.quantum.contributing.style)
 
 Selon le type de code que vous contribuez, il peut y avoir des éléments supplémentaires à garder à l’esprit qui peuvent vous aider à faire en sorte que votre contribution fasse autant de choses que possible pour la communauté.
 

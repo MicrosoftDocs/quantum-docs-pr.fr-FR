@@ -1,28 +1,31 @@
 ---
-title: 'Variables dans Q #'
+title: Variables dansQ#
 description: Description de remplissage
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885283"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867843"
 ---
-# <a name="variables-in-q"></a>Variables dans Q #
+# <a name="variables-in-no-locq"></a>Variables dansQ#
 
-Q # permet de faire la distinction entre les symboles mutables et immuables, ou les *variables*, qui sont liés/assignés à des expressions.
+Q#distingue les symboles mutables et immuables, ou les *variables*, qui sont liées/affectées aux expressions.
 En général, l’utilisation de symboles immuables est encouragée, car elle permet au compilateur d’effectuer des optimisations supplémentaires.
 
 La partie gauche d’une liaison se compose d’un tuple de symboles et de la partie droite d’une expression.
 
 ## <a name="immutable-variables"></a>Variables immuables
 
-Vous pouvez assigner une valeur de n’importe quel type dans Q # à une variable pour la réutiliser au sein d’une opération ou d’une fonction à l’aide du `let` mot clé. 
+Vous pouvez affecter une valeur de n’importe quel type dans Q# à une variable en vue de sa réutilisation au sein d’une opération ou d’une fonction à l’aide du `let` mot clé. 
 
 Une liaison immuable se compose du mot clé `let` , suivi d’un symbole ou d’un tuple de symbole, d’un signe égal `=` , d’une expression pour lier le ou des symboles à et d’un point-virgule de fin.
 
@@ -55,7 +58,7 @@ Voici quelques exemples de techniques d’instruction de reliaison.
 
 #### <a name="apply-and-reassign-statements"></a>Instructions Apply-and-réassign
 
-Un genre particulier d' `set` instruction, l’instruction *apply-and-réassign* , offre un moyen pratique de concaténer si le côté droit est constitué de l’application d’un opérateur binaire, et le résultat doit être relié à l’argument Left à l’opérateur. Par exemple,
+Un genre particulier d' `set` instruction, l’instruction *apply-and-réassign* , offre un moyen pratique de concaténer si le côté droit est constitué de l’application d’un opérateur binaire, et le résultat doit être relié à l’argument Left à l’opérateur. Par exemple :
 
 ```qsharp
 mutable counter = 0;
@@ -107,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-Dans le cas de tableaux, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) dans la bibliothèque standard Q # fournit les outils nécessaires pour de nombreux besoins d’initialisation et de manipulation de tableau communs, ce qui permet d’éviter d’avoir à mettre à jour les éléments de tableau en premier lieu. 
+Dans le cas de tableaux, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) dans la Q# bibliothèque standard fournit les outils nécessaires pour de nombreux besoins d’initialisation et de manipulation de tableau communs, ce qui permet d’éviter d’avoir à mettre à jour les éléments de tableau en premier lieu. 
 
 Les instructions Update-and-Assign fournissent une alternative si nécessaire :
 
@@ -198,7 +201,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-et
+and
 
 ```qsharp
 if (a == b) {
@@ -236,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-En savoir plus sur l' [utilisation de qubits](xref:microsoft.quantum.guide.qubits) dans Q #.
+En savoir plus sur l' [utilisation de qubits](xref:microsoft.quantum.guide.qubits) dans Q# .

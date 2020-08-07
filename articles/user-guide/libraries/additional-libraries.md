@@ -1,36 +1,39 @@
 ---
-title: 'Utilisation de bibliothèques Q # supplémentaires'
-description: 'Découvrez comment ajouter des bibliothèques Q # supplémentaires à vos applications Quantum.'
+title: Utilisation de Q# bibliothèques supplémentaires
+description: Découvrez comment ajouter des Q# bibliothèques supplémentaires à vos applications Quantum.
 author: cgranade
 ms.author: chgranad
 ms.date: 06/30/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.using
-ms.openlocfilehash: b82113b925870d07c8a28aecd50176e009826062
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ef88ca765a394a7092eb0a60bf6f3615c082ef6a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872620"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869577"
 ---
-# <a name="using-additional-q-libraries"></a>Utilisation de bibliothèques Q # supplémentaires
+# <a name="using-additional-no-locq-libraries"></a>Utilisation de Q# bibliothèques supplémentaires
 
-Le kit de développement quantum fournit des fonctionnalités supplémentaires spécifiques au domaine via des _packages NuGet_ qui peuvent être ajoutés à vos projets Q #.
+Le kit de développement quantum fournit des fonctionnalités supplémentaires spécifiques au domaine via des _packages NuGet_ qui peuvent être ajoutés à vos Q# projets.
 
-| Bibliothèque Q #  | Package NuGet | Remarques |
+| Q#Bibliothèque  | Package NuGet | Notes |
 |---------|---------|--------|
-| [Bibliothèque standard Q #](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. Quantum. standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Incluse par défaut |
+| [Q#bibliothèque standard](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. Quantum. standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Incluse par défaut |
 | [Bibliothèque de chimie de quantum](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
 | [Bibliothèque de valeurs numériques de quantum](xref:microsoft.quantum.numerics.intro) | [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) | |
 | [Bibliothèque de Machine Learning quantique](xref:microsoft.quantum.libraries.machine-learning.intro) | [**Microsoft.Quantum.MachineLearning**](https://www.nuget.org/packages/Microsoft.Quantum.MachineLearning) | |
 
-Une fois que vous avez installé le kit de développement Quantum pour une utilisation avec votre environnement et votre langue d’hôte préférés, vous pouvez facilement ajouter des bibliothèques à des projets Q # individuels sans aucune autre installation.
+Une fois que vous avez installé le kit de développement Quantum pour une utilisation avec votre environnement et votre langue d’hôte préférés, vous pouvez facilement ajouter des bibliothèques à des Q# projets individuels sans aucune autre installation.
 
 > [!NOTE]
-> Certaines bibliothèques Q # peuvent fonctionner correctement avec des outils supplémentaires qui fonctionnent avec vos programmes Q #, ou qui s’intègrent à vos applications hôtes.
+> Certaines Q# bibliothèques peuvent fonctionner correctement avec des outils supplémentaires qui fonctionnent Q# avec vos programmes ou qui s’intègrent à vos applications hôtes.
 > Par exemple, les [instructions d’installation de la bibliothèque chimie](xref:microsoft.quantum.chemistry.concepts.installation) décrivent comment utiliser le [package **Microsoft. Quantum. chimie** ](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) avec la plateforme de calcul de la chimie NWChem et comment installer les `qdk-chem` outils en ligne de commande pour l’utilisation des données de la chimie quantique.
 
-## <a name="q-command-line-applications-or-net-interopability"></a>[Q # applications en ligne de commande ou .NET Interop](#tab/tabid-csproj)
+## <a name="no-locq-command-line-applications-or-net-interopability"></a>[Q#applications en ligne de commande ou .NET Interop](#tab/tabid-csproj)
 
 **Ligne de commande ou Visual Studio code :** En utilisant la ligne de commande seule ou dans Visual Studio Code, vous pouvez utiliser la `dotnet` commande pour ajouter une référence de package NuGet à votre projet.
 Par exemple, pour ajouter le package [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) , exécutez la commande suivante :
@@ -39,7 +42,7 @@ Par exemple, pour ajouter le package [**Microsoft. Quantum. Numerics**](https://
 dotnet add package Microsoft.Quantum.Numerics
 ```
 
-**Visual Studio :** Si vous utilisez Visual Studio 2019 ou une version ultérieure, vous pouvez ajouter des packages Q # supplémentaires à l’aide du gestionnaire de package NuGet.
+**Visual Studio :** Si vous utilisez Visual Studio 2019 ou une version ultérieure, vous pouvez ajouter des Q# packages supplémentaires à l’aide du gestionnaire de package NuGet.
 Pour charger un package : 
 1. Avec un projet ouvert dans Visual Studio, sélectionnez **gérer les packages NuGet...** dans le menu **projet** .
 
@@ -61,17 +64,17 @@ Install-Package Microsoft.Quantum.Numerics
 
 Pour plus d’informations, consultez le Guide de la [console du gestionnaire de package](https://docs.microsoft.com/nuget/tools/package-manager-console).
 
-## <a name="iq-notebooks"></a>[Bloc-notes IQ #](#tab/tabid-notebook)
+## <a name="ino-locq-notebooks"></a>[Q#Blocs-notes](#tab/tabid-notebook)
 
-Vous pouvez rendre des packages supplémentaires disponibles pour une utilisation dans un bloc-notes IQ # à l’aide de la [ `%package` commande Magic](xref:microsoft.quantum.iqsharp.magic-ref.package).
-Par exemple, pour ajouter le package [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) à utiliser dans un bloc-notes IQ #, exécutez la commande suivante dans une cellule de bloc-notes :
+Vous pouvez rendre des packages supplémentaires disponibles pour une utilisation dans un Q# bloc-notes I à l’aide de la [ `%package` commande Magic](xref:microsoft.quantum.iqsharp.magic-ref.package).
+Par exemple, pour ajouter le package [**Microsoft. Quantum. Numeric**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) à utiliser dans un Q# bloc-notes I, exécutez la commande suivante dans une cellule de bloc-notes :
 
 ```
 %package Microsoft.Quantum.Numerics
 ```
 
 Après cette commande, le package est disponible pour toutes les cellules dans le bloc-notes.
-Pour rendre le package disponible à partir du code Q # dans l’espace de travail actuel, rechargez l’espace de travail après avoir ajouté votre package :
+Pour rendre le package disponible à partir du Q# Code de l’espace de travail actuel, rechargez l’espace de travail après avoir ajouté votre package :
 
 ```
 %workspace reload
@@ -81,15 +84,15 @@ Pour rendre le package disponible à partir du code Q # dans l’espace de trava
 
 
 Vous pouvez rendre des packages supplémentaires disponibles pour une utilisation dans un programme hôte Python à l’aide de la [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages) méthode.
-Par exemple, pour ajouter le package [**Microsoft. Quantum. Numeric**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) à utiliser dans un bloc-notes IQ #, exécutez le code python suivant :
+Par exemple, pour ajouter le package [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) à utiliser dans un Q# Notebook I, exécutez le code python suivant :
 
 ```python
 import qsharp
 qsharp.packages.add("Microsoft.Quantum.Numerics")
 ```
 
-Après cette commande, le package sera mis à la disposition de tout code Q # compilé à l’aide de `qsharp.compile` .
-Pour rendre le package disponible à partir du code Q # dans l’espace de travail actuel, rechargez l’espace de travail après avoir ajouté votre package :
+Après cette commande, le package sera mis à la disposition de tout Q# code compilé à l’aide de `qsharp.compile` .
+Pour rendre le package disponible à partir du Q# Code de l’espace de travail actuel, rechargez l’espace de travail après avoir ajouté votre package :
 
 ```python
 qsharp.reload()

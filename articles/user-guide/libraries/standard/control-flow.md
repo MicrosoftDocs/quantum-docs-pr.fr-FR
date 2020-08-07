@@ -1,22 +1,25 @@
 ---
-title: 'Contrôles de Flow dans le libararies Q # standard'
-description: 'En savoir plus sur les opérations et les fonctions de contrôle de Flow dans la bibliothèque Microsoft Q # standard.'
+title: Contrôles de Flow dans le Q# libararies standard
+description: En savoir plus sur les opérations et les fonctions de contrôle de Flow dans la Q# bibliothèque standard Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b41b3edd7a3e3ac13dbda106a869f4cba8183600
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275014"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868574"
 ---
 # <a name="higher-order-control-flow"></a>Contrôle de l’ordre supérieur #
 
 L’un des principaux rôles de la bibliothèque standard est de faciliter l’expression d’idées algorithmiques de haut niveau en tant que [programmes quantiques](https://en.wikipedia.org/wiki/Quantum_programming).
-Par conséquent, la commande Q # Canon fournit une variété de constructions de contrôle de Flow, chacune implémentée à l’aide d’une application partielle de fonctions et d’opérations.
+Par conséquent, Q# Canon fournit une variété de constructions de contrôle de Flow, chacune implémentée à l’aide d’une application partielle de fonctions et d’opérations.
 Si vous sautez immédiatement dans un exemple, considérez le cas dans lequel vous souhaitez construire une « échelle CNOTIN » sur un registre :
 
 ```qsharp
@@ -47,7 +50,7 @@ Dans le reste de cette section, nous vous fournirons un certain nombre d’exemp
 
 L’une des abstractions principales fournies par Canon est celle de l’itération.
 Par exemple, considérez une unité de la forme $U \otimes U \otimes \cdots \otimes U $ pour une $U unitaire $.
-Dans Q #, nous pouvons utiliser <xref:microsoft.quantum.arrays.indexrange> pour représenter cela comme une `for` boucle sur un registre :
+Dans Q# , nous pouvons utiliser <xref:microsoft.quantum.arrays.indexrange> pour représenter cela comme une `for` boucle sur un registre :
 
 ```qsharp
 /// # Summary
@@ -88,7 +91,7 @@ De même, <xref:microsoft.quantum.canon.applytoeachindex> est utile pour représ
 > Ensuite, `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` applique le code de correction des erreurs `code` et la fonction `recoveryFn` de récupération à chaque bloc indépendamment.
 > Cela est également valable pour les entrées classiques : `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` applique une rotation de $ \pi/$2 sur $X $ suivie d’une rotation de $pi/$3 sur $Y $.
 
-Le moteur Q # Canon fournit également la prise en charge des modèles d’énumération classiques familiers à la programmation fonctionnelle.
+Q#Canon prend également en charge les modèles d’énumération classiques familiers à la programmation fonctionnelle.
 Par exemple, <xref:microsoft.quantum.arrays.fold> implémente le modèle $f (f (f (s \_ {\text{initial}}, x \_ 0), x \_ 1), \dots) $ pour réduire une fonction sur une liste.
 Ce modèle peut être utilisé pour implémenter des sommes, des produits, des minima, des maxima et d’autres fonctions de ce type :
 
@@ -100,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-De même, les fonctions comme <xref:microsoft.quantum.arrays.mapped> et <xref:microsoft.quantum.arrays.mappedbyindex> peuvent être utilisées pour exprimer les concepts de programmation fonctionnelle dans Q #.
+De même, les fonctions comme <xref:microsoft.quantum.arrays.mapped> et <xref:microsoft.quantum.arrays.mappedbyindex> peuvent être utilisées pour exprimer les concepts de programmation fonctionnelle dans Q# .
 
 ## <a name="composing-operations-and-functions"></a>Composer des opérations et des fonctions ##
 
@@ -170,7 +173,7 @@ Ce modèle d’itération est implémenté par <xref:microsoft.quantum.canon.dec
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-La signature de `DecomposeIntoTimeStepsCA` suit un modèle courant dans Q #, où les collections qui peuvent être sauvegardées par tableau ou par un élément qui calcule des éléments à la volée sont représentées par des tuples dont les premiers éléments sont des `Int` valeurs indiquant leurs longueurs.
+La signature de `DecomposeIntoTimeStepsCA` suit un modèle commun dans Q# , où les collections qui peuvent être sauvegardées par des tableaux ou par un élément qui calcule des éléments à la volée sont représentées par des tuples dont les premiers éléments sont des `Int` valeurs indiquant leurs longueurs.
 
 ## <a name="putting-it-together-controlling-operations"></a>Ensemble : contrôle des opérations ##
 
@@ -215,7 +218,7 @@ Cela permet de mettre en place `ApplyWith` le registre de contrôle avec $P $, e
 
 À ce stade, nous avons pu le faire, mais cela ne suffit pas à ce que notre nouvelle opération ne semble pas être l’application de `Controlled` functor.
 Par conséquent, nous avons fini de définir notre nouveau concept de workflow en écrivant une fonction qui prend le contrôle Oracle et qui retourne une nouvelle opération.
-De cette façon, notre nouvelle fonction ressemble beaucoup `Controlled` à, illustrant que nous pouvons facilement définir de nouvelles constructions de contrôle de contrôle puissantes en utilisant Q # et Canon ensemble :
+De cette façon, notre nouvelle fonction ressemble beaucoup `Controlled` à, illustrant que nous pouvons facilement définir de nouvelles constructions de contrôle de contrôle puissantes à l’aide Q# de et de Canon :
 
 ```qsharp
 function ControlledOnBitString(

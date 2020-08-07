@@ -1,17 +1,20 @@
 ---
-title: 'Structures de données dans les bibliothèques standard Q #'
-description: 'En savoir plus sur les structures de données, les Oracle et les générateurs dynamiques dans les bibliothèques Microsoft Q # standard.'
+title: Structures de données dans les Q# bibliothèques standard
+description: En savoir plus sur les structures de données, les Oracle et les générateurs dynamiques dans les Q# bibliothèques standard Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275003"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868514"
 ---
 # <a name="data-structures-and-modeling"></a>Structures de données et modélisation #
 
@@ -34,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a>Tableaux ###
 
 Canon fournit plusieurs fonctions pour manipuler des tableaux.
-Ces fonctions sont paramétrées par type et peuvent donc être utilisées avec les tableaux de n’importe quel type Q #.
+Ces fonctions sont paramétrées par type et peuvent donc être utilisées avec les tableaux de tout Q# type.
 Par exemple, la <xref:microsoft.quantum.arrays.reversed> fonction retourne un nouveau tableau dont les éléments sont dans l’ordre inverse de son entrée.
 Cela peut être utilisé pour modifier la façon dont un registre Quantum est représenté lors de l’appel d’opérations :
 
@@ -72,7 +75,7 @@ Dans la documentation sur l' [estimation de phase](https://en.wikipedia.org/wiki
 Ici, le terme Oracle fait référence à une sous-routine Quantum Blackbox qui agit sur un ensemble de qubits et renvoie la réponse en tant que phase.
 Cette sous-routine peut souvent être considérée comme une entrée d’un algorithme Quantum qui accepte Oracle, en plus d’autres paramètres, et applique une série d’opérations de Quantum et traite un appel à cette sous-routine Quantum comme s’il s’agissait d’une porte fondamentale.
 Évidemment, pour implémenter réellement le plus grand algorithme, une décomposition concrète d’Oracle en portes fondamentales doit être fournie, mais une telle décomposition n’est pas nécessaire pour comprendre l’algorithme qui appelle Oracle.
-Dans Q #, cette abstraction est représentée à l’aide de ces opérations qui sont des valeurs de première classe, de telle sorte que les opérations peuvent être passées aux implémentations des algorithmes de Quantum en utilisant une boîte noire.
+Dans Q# , cette abstraction est représentée à l’aide de ces opérations qui sont des valeurs de première classe, de telle sorte que les opérations peuvent être passées aux implémentations d’algorithmes de Quantum en utilisant une boîte noire.
 En outre, les types définis par l’utilisateur sont utilisés pour étiqueter les différentes représentations Oracle d’une manière sécurisée, ce qui rend difficile la déflation accidentelle de différents genres d’opérations de boîte noire.
 
 Ces Oracle apparaissent dans plusieurs contextes différents, y compris des exemples célèbres, tels que les algorithmes [de recherche et de simulation de quantum de Grover](https://en.wikipedia.org/wiki/Grover%27s_algorithm) .
@@ -189,7 +192,7 @@ L’unité qui décrit cette dynamique quantique est $U (t) = R_z (2 \ Omega t) 
 Dans ce contexte, nous pouvons simuler $U (t) $ pour n’importe quel $t $ à l’aide d’une seule $R _z $ Gate et, par conséquent, n’ont pas besoin de se limiter à des requêtes discrètes à l’unité.
 Un tel modèle continu a également la propriété dont les fréquences supérieures à $2 \ pi $ peuvent être apprises dans les processus d’estimation de phase qui utilisent des requêtes continues, car les informations de phase qui seraient autrement masquées par les coupes de la fonction logarithmique peuvent être dévoilées à partir des résultats d’expériences effectuées sur des valeurs non proportionnées de $t $.
 Ainsi, pour les problèmes tels que les modèles de requête continues pour l’estimation de phase Oracle, ils sont non seulement appropriés, mais ils sont également préférables au modèle de requête discret.
-Pour cette raison, Q # a des fonctionnalités pour les deux formes de requêtes et laisse l’utilisateur décider d’un algorithme d’estimation de la phase en fonction de ses besoins et du type d’Oracle disponible.
+Pour cette raison Q# , a des fonctionnalités pour les deux types de requêtes et laisse l’utilisateur décider d’un algorithme d’estimation de phase en fonction de ses besoins et du type d’Oracle qui est disponible.
 
 ## <a name="dynamical-generator-modeling"></a>Modélisation de générateurs dynamiques ##
 

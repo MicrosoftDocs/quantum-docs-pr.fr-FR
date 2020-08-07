@@ -1,32 +1,35 @@
 ---
-title: 'Principes de conception de l’API Q #'
-description: 'Principes de conception de l’API Q #'
+title: Q#Principes de conception d’API
+description: Q#Principes de conception d’API
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: def6a9f12accfa399fd4db3783b9899fc743f025
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274855"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866891"
 ---
-# <a name="q-api-design-principles"></a>Principes de conception de l’API Q #
+# <a name="no-locq-api-design-principles"></a>Q#Principes de conception d’API
 
 ## <a name="introduction"></a>Introduction
 
-En tant que langage et en tant que plateforme, Q # permet aux utilisateurs d’écrire, d’exécuter, de comprendre et d’explorer les applications Quantum.
-Pour permettre aux utilisateurs, lorsque nous concevons des bibliothèques Q #, nous suivons un ensemble de principes de conception d’API pour guider nos conceptions et nous aider à créer des bibliothèques utilisables pour la communauté de développement quantique.
-Cet article répertorie ces principes et donne des exemples pour vous aider à les appliquer lors de la conception des API Q #.
+En tant que langage et en tant que plateforme, Q# permet aux utilisateurs d’écrire, d’exécuter, de comprendre et d’explorer les applications Quantum.
+Afin d’offrir aux utilisateurs, lorsque nous concevons Q# des bibliothèques, nous suivons un ensemble de principes de conception d’API pour guider nos conceptions et nous aider à créer des bibliothèques utilisables pour la communauté de développement quantique.
+Cet article répertorie ces principes et donne des exemples pour vous aider à les appliquer lors de la conception d' Q# API.
 
 > [!TIP]
 > Il s’agit d’un document assez détaillé destiné à guider le développement de bibliothèque et les contributions de bibliothèque approfondies.
-> Vous trouverez probablement plus utile si vous écrivez vos propres bibliothèques dans Q # ou si vous contribuez des fonctionnalités plus importantes au [référentiel q # Libraries](https://github.com/microsoft/QuantumLibraries).
+> Vous trouverez probablement plus utile si vous écrivez vos propres bibliothèques dans Q# , ou si vous contribuez des fonctionnalités plus importantes au [ Q# référentiel de bibliothèques](https://github.com/microsoft/QuantumLibraries).
 >
 > En revanche, si vous souhaitez apprendre à contribuer au kit de développement quantique plus généralement, nous vous suggérons de commencer par le Guide de [contribution](xref:microsoft.quantum.contributing).
-> Si vous recherchez des informations plus générales sur la façon dont nous vous recommandons de mettre en forme votre code Q #, vous souhaiterez peut-être consulter le [Guide de style](xref:microsoft.quantum.contributing.style).
+> Si vous recherchez des informations plus générales sur la façon dont nous vous recommandons de mettre en forme votre Q# code, vous souhaiterez peut-être consulter le [Guide de style](xref:microsoft.quantum.contributing.style).
 
 ## <a name="general-principles"></a>Principes généraux
 
@@ -81,7 +84,7 @@ Cet article répertorie ces principes et donne des exemples pour vous aider à l
 - ✅**Créez des** fonctions et des opérations pour composer correctement les autres fonctions et opérations, à la fois dans la même API et dans les bibliothèques existantes.
 
   *Exemples :*
-  - L' @"microsoft.quantum.canon.delay" opération fait des hypothèses minimes sur son entrée et peut donc être utilisée pour retarder les applications des deux opérations dans la bibliothèque standard Q # ou comme défini par les utilisateurs.
+  - L' @"microsoft.quantum.canon.delay" opération fait des hypothèses minimes sur son entrée et peut donc être utilisée pour retarder les applications des deux opérations dans la Q# bibliothèque standard ou comme défini par les utilisateurs.
     <!-- TODO: define bad example. -->
 
 - ✅**Exposez** la logique classique purement déterministe comme des fonctions plutôt que des opérations.

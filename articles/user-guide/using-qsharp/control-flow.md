@@ -1,19 +1,22 @@
 ---
-title: 'Workflow de contrôle dans Q #'
+title: Workflow de contrôle dansQ#
 description: Boucles, conditions, etc.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870989"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867945"
 ---
-# <a name="control-flow-in-q"></a>Workflow de contrôle dans Q #
+# <a name="control-flow-in-no-locq"></a>Workflow de contrôle dansQ#
 
 Au sein d’une opération ou d’une fonction, chaque instruction s’exécute dans l’ordre, de la même façon que d’autres langages classiques impératifs.
 Toutefois, vous pouvez modifier le déroulement du contrôle de trois façons distinctes :
@@ -42,7 +45,7 @@ Si la condition *If* d’origine et toutes les clauses Else-If ont la *valeur fa
 Notez que, quel que soit le bloc exécuté, il s’exécute dans sa propre portée.
 Les liaisons effectuées à l’intérieur d’un `if` `elif` bloc, ou ne `else` sont pas visibles après la fin du bloc.
 
-Par exemple,
+Par exemple :
 
 ```qsharp
 if (result == One) {
@@ -104,12 +107,12 @@ Notez qu’à la fin, nous avons utilisé l’opérateur binaire arithmétique-d
 
 ## <a name="repeat-until-success-loop"></a>Répéter jusqu’à la réussite de la boucle
 
-Le langage Q # permet au workflow de contrôle classique de dépendre des résultats de la mesure des qubits.
+Le Q# langage permet au workflow de contrôle classique de dépendre des résultats de la mesure de qubits.
 Cette fonctionnalité permet, à son tour, d’implémenter des gadgets probabilistes puissants qui peuvent réduire le coût de calcul de l’implémentation des unités.
-Voici des exemples de modèles de *répétition jusqu’à réussite* (RUS) dans Q #.
+Voici des exemples de modèles de *répétition jusqu’à réussite* (RUS) dans Q# .
 Ces modèles de RUS sont des programmes probabilistes qui ont un coût faible *attendu* en termes de portes élémentaires ; le coût encouru dépend de l’exécution réelle et de l’entrelacement des différentes branches possibles.
 
-Pour faciliter les modèles de répétition jusqu’à réussite (RUS), Q # prend en charge les constructions
+Pour faciliter les modèles de répétition jusqu’à réussite (RUS), Q# prend en charge les constructions
 
 ```qsharp
 repeat {
@@ -147,9 +150,9 @@ Pour obtenir plus d’exemples et de détails, consultez la section [exemples de
 
 ## <a name="while-loop"></a>Boucle while
 
-Les modèles de répétition jusqu’à réussite ont un connotation très spécifique au quantum. Elles sont largement utilisées dans des classes particulières d’algorithmes Quantum, donc la construction du langage dédié dans Q #. Toutefois, les boucles qui s’arrêtent en fonction d’une condition et dont la longueur d’exécution est donc inconnue au moment de la compilation sont gérées avec une attention particulière dans un Runtime Quantum. Toutefois, leur utilisation dans les fonctions ne pose pas de problème, car ces boucles contiennent uniquement du code qui s’exécute sur du matériel conventionnel (non Quantum). 
+Les modèles de répétition jusqu’à réussite ont un connotation très spécifique au quantum. Elles sont largement utilisées dans des classes particulières d’algorithmes Quantum, donc la construction du langage dédié dans Q# . Toutefois, les boucles qui s’arrêtent en fonction d’une condition et dont la longueur d’exécution est donc inconnue au moment de la compilation sont gérées avec une attention particulière dans un Runtime Quantum. Toutefois, leur utilisation dans les fonctions ne pose pas de problème, car ces boucles contiennent uniquement du code qui s’exécute sur du matériel conventionnel (non Quantum). 
 
-Q #, par conséquent, prend en charge l’utilisation de boucles While uniquement dans les fonctions. Une `while` instruction se compose du mot clé `while` , d’une expression booléenne entre parenthèses et d’un bloc d’instructions.
+Q#, par conséquent, prend en charge l’utilisation de boucles While uniquement dans les fonctions. Une `while` instruction se compose du mot clé `while` , d’une expression booléenne entre parenthèses et d’un bloc d’instructions.
 Le bloc d’instructions (corps de la boucle) s’exécute tant que la condition a la valeur `true` .
 
 ```qsharp
@@ -166,7 +169,7 @@ while (index < Length(arr) && item < 0) {
 L’instruction return termine l’exécution d’une opération ou d’une fonction et retourne une valeur à l’appelant.
 Il se compose du mot clé `return` , suivi d’une expression du type approprié et d’un point-virgule de fin.
 
-Par exemple,
+Par exemple :
 ```qsharp
 return 1;
 ```
@@ -191,7 +194,7 @@ L’instruction retourne la chaîne au pilote classique comme message d’erreur
 Il n’existe aucune restriction sur le nombre d’instructions d’échec au sein d’une opération.
 Le compilateur peut émettre un avertissement si les instructions suivent une instruction Fail dans un bloc.
 
-Par exemple,
+Par exemple :
 
 ```qsharp
 fail $"Impossible state reached";
@@ -205,7 +208,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>Modèle RUS pour la rotation d’un qubit sur un axe irrationnelle 
 
-Dans un cas d’usage courant, l’opération Q # suivante implémente une rotation autour d’un axe irrationnelle de $ (I + 2i Z)/\sqrt {5} $ sur la sphère Bloch. L’implémentation utilise un modèle de RUS connu :
+Dans un cas d’usage typique, l' Q# opération suivante implémente une rotation autour d’un axe irrationnelle de $ (I + 2i Z)/\sqrt {5} $ sur la sphère Bloch. L’implémentation utilise un modèle de RUS connu :
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -331,4 +334,4 @@ Pour plus d’informations, consultez [exemple de test unitaire fourni avec la b
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-En savoir plus sur le [test et le débogage](xref:microsoft.quantum.guide.testingdebugging) dans Q #.
+En savoir plus sur le [test et le débogage](xref:microsoft.quantum.guide.testingdebugging) dans Q# .

@@ -1,23 +1,26 @@
 ---
-title: 'Algorithmes Quantum dans Q #'
+title: Algorithmes Quantum dansQ#
 description: Découvrez les algorithmes de quantum computing fondamentaux, y compris l’amplification d’amplitude, les transformations de Fourier, les ajouts de Draper et de Beauregard et l’estimation de phase.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 7f4916353c53d6459356243098281ccb16b17278
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0b5972480061c460345057285bbfe53305acc122
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871312"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868812"
 ---
 # <a name="quantum-algorithms"></a>Algorithmes Quantum #
 
 ## <a name="amplitude-amplification"></a>Amplification d’amplitude ##
 
-L' *amplification d’amplitude* est l’un des outils fondamentaux de quantum computing. Il s’agit de l’idée fondamentale qui repose sur la recherche de Grover, l’estimation de l’amplitude et de nombreux algorithmes Quantum Machine Learning.  Il existe de nombreuses variantes, et dans Q #, nous fournissons une version générale basée sur l’amplification de l’amplitude oublie avec des réflexions partielles pour permettre le plus grand éventail d’applications.
+L' *amplification d’amplitude* est l’un des outils fondamentaux de quantum computing. Il s’agit de l’idée fondamentale qui repose sur la recherche de Grover, l’estimation de l’amplitude et de nombreux algorithmes Quantum Machine Learning.  Il existe de nombreuses variantes et, dans, Q# nous fournissons une version générale basée sur l’amplification de l’amplitude oublie avec des réflexions partielles pour permettre le plus grand éventail d’applications.
 
 L’idée centrale derrière l’amplification d’amplitude consiste à amplifier la probabilité qu’un résultat escompté se produise en effectuant une séquence de réflexions.  Ces réflexions font pivoter l’état initial vers un État cible souhaité, souvent appelé état marqué.  Plus précisément, si la probabilité de la mesure de l’état initial dans un État marqué est $ \sin ^ 2 (\Theta) $, après l’application de l’amplification d’amplitude $m $ fois la probabilité de réussite devient $ \sin ^ 2 ((2m + 1) \Theta) $.  Cela signifie que si $ \Theta = \ pi/[2 (2n + 1)] $ pour une valeur de $n $ Then amplification d’amplitude est capable d’augmenter la probabilité de succès à $100 \\ % $ après $n $ itérations d’amplification d’amplitude.  Depuis $ \Theta = \sin ^ {-1} (\sqrt{\Pr (Success)}) $, cela signifie que le nombre d’itérations nécessaires pour obtenir un succès déterministe est augmentera inférieur au nombre attendu requis pour trouver un État marqué non déterministe à l’aide d’un échantillonnage aléatoire.
 
@@ -27,7 +30,7 @@ La logique derrière l’amplification d’amplitude suit directement à partir 
 
 Une autre propriété utile est que le eigenvalue $ \Theta $ est directement lié à la probabilité que l’état initial soit marqué (dans le cas où $P _0 $ est un projecteur sur uniquement l’état initial).  Étant donné que le eigenphases de $Q $ est égal à $2 \ Theta = 2 \ Sin ^ {-1} (\sqrt{\Pr (Success)}), il suit ensuite que si nous appliquons l’estimation de phase à $Q $, nous pouvons apprendre la probabilité de réussite d’une procédure de Quantum unitaire.  Cela est utile, car il nécessite que augmentera moins d’applications de la procédure Quantum pour apprendre la probabilité de réussite que cela serait autrement nécessaire.
 
-Q # introduit l’amplification d’amplitude comme une spécialisation de l’amplification de l’amplitude oublie.  L’amplification oublie amplitude gagne ce moniker car le projecteur sur le eigenspace initial n’a pas besoin d’être un projecteur à l’état initial.  Dans ce sens, le protocole est oublie à l’état initial.  L’application clé de l’amplification de l’amplitude oublie est dans certaines *combinaisons linéaires de méthodes de simulation d’unités de* la même manière, où l’état initial est inconnu, mais qui est associé à un registre Ancilla dans le protocole de simulation.  Si ce registre Ancilla doit être mesuré comme une valeur fixe, par exemple, $0 $, ces méthodes de simulation appliquent la transformation d’unité souhaitée au qubits restant (appelé Registre système).  Toutefois, tous les autres résultats de mesure provoquent une défaillance.  L’amplification d’amplitude oublie permet de renforcer la probabilité de réussite de cette mesure à $100 \\ % $ en utilisant le raisonnement ci-dessus.  En outre, l’amplification d’amplitude ordinaire correspond au cas où le registre système est vide.  C’est pourquoi Q # utilise oublie amplitude amplification comme sous-routine d’amplification d’amplitude fondamentale.
+Q#introduit l’amplification d’amplitude comme une spécialisation de l’amplification de l’amplitude oublie.  L’amplification oublie amplitude gagne ce moniker car le projecteur sur le eigenspace initial n’a pas besoin d’être un projecteur à l’état initial.  Dans ce sens, le protocole est oublie à l’état initial.  L’application clé de l’amplification de l’amplitude oublie est dans certaines *combinaisons linéaires de méthodes de simulation d’unités de* la même manière, où l’état initial est inconnu, mais qui est associé à un registre Ancilla dans le protocole de simulation.  Si ce registre Ancilla doit être mesuré comme une valeur fixe, par exemple, $0 $, ces méthodes de simulation appliquent la transformation d’unité souhaitée au qubits restant (appelé Registre système).  Toutefois, tous les autres résultats de mesure provoquent une défaillance.  L’amplification d’amplitude oublie permet de renforcer la probabilité de réussite de cette mesure à $100 \\ % $ en utilisant le raisonnement ci-dessus.  En outre, l’amplification d’amplitude ordinaire correspond au cas où le registre système est vide.  C’est pourquoi Q# utilise l’amplification d’amplitude oublie comme sous-routine d’amplification d’amplitude fondamentale.
 
 La routine générale ( `AmpAmpObliviousByReflectionPhases` ) a deux registres que nous appelons `ancillaRegister` et `systemRegister` . Il accepte également deux Oracle pour les réflexions nécessaires. Le `ReflectionOracle` agit uniquement sur le `ancillaRegister` , tandis que le `ObliviousOracle` agit conjointement sur les deux registres. L’entrée de `ancillaRegister` doit être initialisée à-1 eigenstate du premier opérateur de réflexion $ \boldone-2P_1 $.
 
@@ -116,4 +119,4 @@ En continuant ainsi, nous pouvons obtenir un registre au format \begin{align} \k
 Si nous supposons que $ \Phi = 2 \pi p/2 ^ k $ pour un entier $p $, nous le reconnaissons comme $ \ket{\Psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n} $, où $p _J $ est le $j ^ {\textrm{th}} $ bit de $2 \pi \Phi $.
 En appliquant le voisin de la transformation de Fourier quantique, nous obtenons donc la représentation binaire de la phase encodée comme un État Quantum.
 
-Dans Q #, elle est implémentée par l' <xref:microsoft.quantum.characterization.quantumphaseestimation> opération, qui prend une <xref:microsoft.quantum.oracles.discreteoracle> application d’implémentation de $U ^ m $ comme fonction des entiers positifs $m $.
+Dans Q# , il est implémenté par l' <xref:microsoft.quantum.characterization.quantumphaseestimation> opération, qui prend une <xref:microsoft.quantum.oracles.discreteoracle> application d’implémentation de $U ^ m $ comme fonction des entiers positifs $m $.

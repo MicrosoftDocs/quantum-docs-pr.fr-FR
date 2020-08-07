@@ -6,12 +6,15 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
-ms.openlocfilehash: b304b9d1a15f164f4dfe758aaed31b7b2369b18c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275148"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868936"
 ---
 # <a name="design-your-own-classifier"></a>Concevoir votre propre classifieur
 
@@ -47,6 +50,8 @@ Voyons un exemple de classifieur. Dans l' [exemple de demi-lunes](https://github
 Nous définissons ici une fonction qui retourne un tableau d' `ControlledRotation` éléments, ainsi qu’un tableau de paramètres et un biais définit notre [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) . Ce type est fondamental dans la bibliothèque de Machine Learning Quantum et définit le classifieur. Le circuit défini dans la fonction ci-dessus fait partie d’un classifieur dans lequel chaque échantillon du jeu de données contient deux fonctionnalités. Par conséquent, nous avons uniquement besoin de deux qubits. La représentation graphique du circuit est la suivante :
 
  ![Exemple de modèle de circuit](~/media/circuit_model_1.PNG)
+
+Notez que, par défaut, les opérations de la bibliothèque de Machine Learning Quantum mesurent le dernier qubit du Registre pour estimer les probabilités de classification. Vous devez garder à l’esprit ce fait lors de la conception de votre circuit.
 
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>Utiliser les fonctions de bibliothèque pour écrire des couches de portes
 

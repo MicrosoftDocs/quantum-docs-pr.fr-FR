@@ -1,17 +1,20 @@
 ---
 title: Vérificateur d’entrées distinctes-Kit de développement quantique
-description: 'En savoir plus sur le vérificateur d’entrées distinct de Microsoft QDK, qui utilise le simulateur de traces Quantum pour vérifier votre code Q # en cas de conflit potentiel avec qubits partagé.'
+description: En savoir plus sur l’outil de vérification des entrées distinct de Microsoft QDK, qui utilise le simulateur de traces Quantum pour vérifier si votre Q# code présente des conflits potentiels avec les qubits partagés.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 49a1ccc5f37acfeaa1ee08bd974be45a40a76f93
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 750c94e7f861678d37f051619ff5b29bf4fd3d3e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871142"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868268"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>Simulateur de traces Quantum : vérificateur d’entrées distinct
 
@@ -19,7 +22,7 @@ L’outil de vérification des entrées distinct fait partie du [simulateur](xre
 
 ## <a name="conflicts-with-shared-qubits"></a>Conflits avec les qubits partagés
 
-Examinez l’élément suivant du code Q # pour illustrer les problèmes détectés par l’outil de vérification des entrées distinct :
+Considérez le morceau de Q# code suivant pour illustrer les problèmes détectés par l’outil de vérification des entrées distinct :
 
 ```qsharp
 operation ApplyBoth(
@@ -47,7 +50,7 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-Notez que `op1` et `op2` sont tous deux obtenus à l’aide de l’application partielle et partagent un qubit. Lorsque vous appelez `ApplyBoth` dans cet exemple, le résultat de l’opération dépend de l’ordre de `op1` et de l’intérieur, pas de ce que `op2` `ApplyBoth` vous attendez. Lorsque vous activez l’outil de vérification des entrées distinct, il détecte de telles situations et lève une `DistinctInputsCheckerException` . Pour plus d’informations, consultez <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> dans la bibliothèque d’API Q #.
+Notez que `op1` et `op2` sont tous deux obtenus à l’aide de l’application partielle et partagent un qubit. Lorsque vous appelez `ApplyBoth` dans cet exemple, le résultat de l’opération dépend de l’ordre de `op1` et de l’intérieur, pas de ce que `op2` `ApplyBoth` vous attendez. Lorsque vous activez l’outil de vérification des entrées distinct, il détecte de telles situations et lève une `DistinctInputsCheckerException` . Pour plus d’informations, consultez <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> dans la Q# bibliothèque d’API.
 
 ## <a name="invoking-the-distinct-inputs-checker"></a>Appel de l’outil d’analyse des entrées distinct
 

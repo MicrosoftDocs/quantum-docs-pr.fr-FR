@@ -1,17 +1,20 @@
 ---
 title: Vérificateur d’utilisation de qubits non valide-Kit de développement quantique
-description: 'En savoir plus sur l’outil de vérification de l’utilisation qubits Microsoft QDK invalidé, qui utilise le simulateur de traces Quantum pour vérifier votre code Q # pour des qubits potentiellement non valides.'
+description: En savoir plus sur l’outil de vérification de l’utilisation du qubits Microsoft QDK invalidé, qui utilise le simulateur de traces Quantum pour vérifier si votre Q# code comporte des qubits potentiellement non valides.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: fccf6d5784b587f4ad9b659e23027619acd06ffa
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871091"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868285"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Simulateur de traces Quantum : vérificateur d’utilisation qubits invalidé
 
@@ -19,7 +22,7 @@ L’outil de vérification de l’utilisation de qubits invalidée fait partie d
 
 ## <a name="invalid-qubits"></a>Qubits non valide
 
-Examinez l’élément suivant du code Q # pour illustrer les problèmes détectés par l’outil de vérification de l’utilisation des qubits invalidés :
+Considérez le morceau de Q# code suivant pour illustrer les problèmes détectés par l’outil Invalid qubits use Checker :
 
 ```qsharp
 operation UseReleasedQubit() : Unit {
@@ -31,7 +34,7 @@ operation UseReleasedQubit() : Unit {
 }
 ```
 
-Lorsque vous appliquez l' `H` opération à `q[0]` , elle pointe vers un qubit déjà publié, ce qui peut entraîner un comportement indéfini. Lorsque l’outil de vérification de l’utilisation de qubits invalidée est activé, il lève l’exception `InvalidatedQubitsUseCheckerException` si le programme applique une opération à un qubit déjà publié. Pour plus d’informations, consultez <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException>.
+Lorsque vous appliquez l' `H` opération à `q[0]` , elle pointe vers un qubit déjà publié, ce qui peut entraîner un comportement indéfini. Lorsque l’outil de vérification de l’utilisation de qubits invalidée est activé, il lève l’exception `InvalidatedQubitsUseCheckerException` si le programme applique une opération à un qubit déjà publié. Pour plus d'informations, consultez <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException>.
 
 ## <a name="invoking-the-invalidated-qubits-use-checker"></a>Appel de l’outil de vérification de l’utilisation des qubits invalidés
 

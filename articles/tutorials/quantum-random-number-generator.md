@@ -1,30 +1,33 @@
 ---
 title: Créer un générateur de nombres aléatoires quantique
-description: Générez un projet Q# qui démontre des concepts quantiques fondamentaux comme la superposition en créant un générateur de nombres aléatoires quantique.
+description: Générez un Q# projet qui illustre les concepts de Quantum fondamentaux comme les superpositions en créant un générateur de nombres aléatoires quantiques.
 author: bromeg
 ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 18e8975e513a87c0a67a6dbb5586cc7dab5a93fb
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274751"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869764"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutoriel : Implémenter un générateur de nombres aléatoires quantique en Q\#
 
-Un générateur de nombres aléatoires quantique est un exemple simple d’algorithme quantique écrit en Q#. Cet algorithme exploite la nature de la mécanique quantique pour produire un nombre aléatoire.
+Un exemple simple d’algorithme Quantum écrit dans Q# est un générateur de nombres aléatoires quantiques. Cet algorithme exploite la nature de la mécanique quantique pour produire un nombre aléatoire.
 
 ## <a name="prerequisites"></a>Prérequis
 
 - Le Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- Créez un projet Q# en [utilisant Q# à partir de la ligne de commande](xref:microsoft.quantum.install.standalone), ou avec un [programme hôte Python](xref:microsoft.quantum.install.python) ou un [programme hôte C#](xref:microsoft.quantum.install.cs).
+- Créez un Q# projet à [l’aide Q# de à partir de la ligne de commande](xref:microsoft.quantum.install.standalone), ou avec un [programme hôte python](xref:microsoft.quantum.install.python) ou un [programme hôte C#](xref:microsoft.quantum.install.cs).
 
-## <a name="write-a-q-operation"></a>Écrire une opération Q#
+## <a name="write-a-no-locq-operation"></a>Écrire une Q# opération
 
-### <a name="q-operation-code"></a>Code d’opération Q#
+### <a name="no-locq-operation-code"></a>Q#code d’opération
 
 1. Remplacez le contenu du fichier Program.qs par le code suivant :
 
@@ -32,7 +35,7 @@ Un générateur de nombres aléatoires quantique est un exemple simple d’algor
 
 Comme mentionné dans notre article intitulé [Fonctionnement de l’informatique quantique](xref:microsoft.quantum.overview.understanding), un qubit est une unité d’information quantique qui peut être dans une superposition. Lorsqu’il est mesuré, un qubit peut uniquement avoir la valeur 0 ou 1. En revanche, pendant l’exécution, l’état du qubit représente la probabilité d’avoir la valeur 0 ou 1 avec une mesure. Cet état probabiliste est appelé superposition. Nous pouvons utiliser cette probabilité pour générer des nombres aléatoires.
 
-Dans notre opération Q#, nous introduisons le type de données `Qubit`, natif en Q#. Nous pouvons uniquement allouer un `Qubit` avec une instruction `using`. Lorsqu’il est alloué, un qubit est toujours dans l’état `Zero`. 
+Dans le cadre de notre Q# opération, nous présentons le `Qubit` type de données, Native à Q# . Nous pouvons uniquement allouer un `Qubit` avec une instruction `using`. Lorsqu’il est alloué, un qubit est toujours dans l’état `Zero`. 
 
 À l’aide de l’opération `H`, nous pouvons placer notre `Qubit` dans une superposition. Pour mesurer un qubit et lire sa valeur, vous utilisez l’opération intrinsèque `M`.
 
@@ -61,13 +64,13 @@ Nous pouvons utiliser cette représentation pour visualiser ce que fait le code�
 
 ## <a name="creating-a-complete-random-number-generator"></a>Création d’un générateur de nombres aléatoires complet
 
-Maintenant que nous avons une opération Q# qui génère des bits aléatoires, nous pouvons l’utiliser pour créer un générateur de nombres aléatoires quantique complet. Nous pouvons utiliser les applications de ligne de commande Q# ou utiliser un programme hôte.
+Maintenant que nous avons une Q# opération qui génère des bits aléatoires, nous pouvons l’utiliser pour générer un générateur de nombres aléatoires quantum complet. Nous pouvons utiliser les Q# applications en ligne de commande ou utiliser un programme hôte.
 
 
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Applications de ligne de commande Q# avec Visual Studio ou Visual Studio Code](#tab/tabid-qsharp)
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#applications en ligne de commande avec Visual Studio ou Visual Studio Code](#tab/tabid-qsharp)
 
-Pour créer l’application de ligne de commande Q# complète, ajoutez le point d’entrée suivant à votre programme Q# : 
+Pour créer l' Q# application en ligne de commande complète, ajoutez le point d’entrée suivant à votre Q# programme : 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -91,7 +94,7 @@ dotnet run --no-build
 
 ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python avec Visual Studio Code ou la ligne de commande](#tab/tabid-python)
 
-Pour exécuter votre nouveau programme Q# à partir de Python, enregistrez le code suivant sous le nom `host.py` :
+Pour exécuter votre nouveau Q# programme à partir de Python, enregistrez le code suivant en tant que `host.py` :
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
@@ -105,7 +108,7 @@ Preparing Q# environment...
 
 ### <a name="c-with-visual-studio-code-or-visual-studio"></a>[C# avec Visual Studio Code ou Visual Studio](#tab/tabid-csharp)
 
-Pour exécuter votre nouveau programme Q# à partir de C#, modifiez `Driver.cs` pour inclure le code C# suivant :
+Pour exécuter votre nouveau Q# programme à partir de C#, modifiez `Driver.cs` pour inclure le code C# suivant :
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 

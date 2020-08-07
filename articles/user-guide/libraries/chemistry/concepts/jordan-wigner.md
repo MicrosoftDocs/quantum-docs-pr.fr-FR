@@ -6,12 +6,15 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 9f1455ebbecf6a3500ec11a5196e7662455c9a78
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275099"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869509"
 ---
 # <a name="jordan-wigner-representation"></a>Jordanie-représentation Wigner
 
@@ -28,7 +31,7 @@ Nous avons ensuite cette $a ^ \ dagger_j \ket {0} _J = \ket {1} _J $ et $a ^ \ d
 Il est facile de vérifier que \begin{align} a ^ \ dagger_j &= \begin{bmatrix}0 & 0 \\ \ 1 &0 \end{bmatrix} = \frac{X_j-iY_j} {2} , \nonumber \\ \\ a_j &= \begin{bmatrix}0 & 1 \\ \ 0 &0 \end{bmatrix} = \frac{X_j + iY_j} {2} , \end{align} où $X _J $ et $Y _J $ sont les opérateurs Pauli-$X $ et-$Y $ agissant sur qubit $j $.
 
 >[!NOTE]
-> Dans Q # l’État $ \ket {0} $ représente le + 1 eigenstate de l’opérateur $Z $. Dans certaines zones de physique, $ \ket {0} $ représente l’état de la terre faible-énergie et donc la-1 eigenstate de l' $Z $ Operator. Par conséquent, certaines formules peuvent différer de la documentation populaire.
+> Dans Q# l’État $ \ket {0} $, représente le + 1 eigenstate de l’opérateur $Z $. Dans certaines zones de physique, $ \ket {0} $ représente l’état de la terre faible-énergie et donc la-1 eigenstate de l' $Z $ Operator. Par conséquent, certaines formules peuvent différer de la documentation populaire.
 
 Dans la bibliothèque chimie, nous utilisons $ \ket {0} $ pour représenter un spin-orbital inoccupé.
 Cela montre que pour un seul spin orbital, il est facile de représenter des opérateurs de création et de annihilation en termes de matrices unitaires que les ordinateurs quantiques comprennent.

@@ -1,6 +1,8 @@
 ---
 title : description d’Oracle Quantum : Apprenez à utiliser et à définir des opérations de boîte noire à l’aide d’Oracle Quantum, qui sont utilisées comme entrée d’un autre algorithme.
 Auteur : cgranade UID : Microsoft. Quantum. concepts. Oracle ms. Author : Christopher.Granade@microsoft.com ms. Date : 07/11/2018 ms. topic : article No-Loc :
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -105,7 +107,7 @@ $$
 Maintenant $ o = o ^ \dagger $ par construction, nous avons résolu les deux problèmes précédents.
 
 > [!TIP]
->Pour voir si $ o = o ^ { \dagger } $ , Notez que $ o ^ 2 = \boldone $ depuis $ un \oplus b \oplus b = a $ pour tous les $ a, b \in \[ ! Opérationnel. NO-LOC ({)] 0, 1 \[ ! Opérationnel. NO-LOC (})] $ .
+>Pour voir si $ o = o ^ { \dagger } $ , Notez que $ o ^ 2 = \boldone $ depuis $ un \oplus b \oplus b = a $ pour tout $ a, b \in \: :: No-Loc ({) ::: 0, 1 \: :: No-Loc (}) ::: $ .
 >Par conséquent, $ O \ket { x } \ket { y \oplus f (x) } = \ket { x } \ket { y \oplus f (x) \oplus f (x) } = \ket { x } \ket { y } $ .
 
 Plus important encore, la définition d’une Oracle de cette façon pour chaque État de base de calcul $ \ket { x } \ket { y } $ définit également la manière dont $ O $ agit pour tout autre État.

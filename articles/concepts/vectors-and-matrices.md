@@ -1,6 +1,8 @@
 ---
 titre : vecteurs et matrices dans quantum computing Description : Découvrez les principes de base de l’utilisation des vecteurs et des matrices.
 Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. vectors ms. Author : nawiebe@microsoft.com ms. Date : 12/11/2017 ms. topic : article No-Loc :
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -87,7 +89,7 @@ Une certaine connaissance des vecteurs et des matrices est essentielle pour comp
 
 Un vecteur de colonne (ou simplement [*Vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ de dimension (ou taille) $ n $ est une collection de $ n $ nombres complexes $ (V_1, V_2, \ldots, V_n) $ organisés en tant que colonne :
 
-$$v=\begin{bmatrix}
+$$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\
@@ -215,7 +217,7 @@ $$
     =\begin{bmatrix}un c \\\\ a d \\\\ a e \\\\ b c \\\\ b \\\\ est\end{bmatrix}
 $$
 
-et
+and
 
 $$
     \begin{bmatrix}

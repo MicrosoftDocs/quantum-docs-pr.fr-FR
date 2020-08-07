@@ -1,21 +1,24 @@
 ---
-title: 'Structure de fichiers Q #'
-description: 'Décrit la structure et la syntaxe d’un fichier Q #.'
+title: Q#Structure de fichier
+description: Décrit la structure et la syntaxe d’un Q# fichier.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: 54efc2b9d6b7f1956cdf9a335c88620b29f7729d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884173"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867928"
 ---
-# <a name="q-file-structure"></a>Structure de fichiers Q #
+# <a name="no-locq-file-structure"></a>Q#Structure de fichier
 
-Un fichier Q # est constitué d’une séquence de *déclarations d’espaces de noms*.
+Un Q# fichier se compose d’une séquence de *déclarations d’espaces de noms*.
 Chaque déclaration d’espace de noms contient des déclarations pour les types, les opérations et les fonctions définis par l’utilisateur, et peut contenir n’importe quel nombre de chaque type de déclaration et dans n’importe quel ordre.
 Pour plus d’informations sur les déclarations au sein d’un espace de noms, consultez types, [opérations](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)et [fonctions](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions) [définis par l’utilisateur](xref:microsoft.quantum.guide.types#user-defined-types).
 
@@ -24,10 +27,10 @@ En particulier, les commentaires de documentation pour un espace de noms précè
 
 ## <a name="namespace-declarations"></a>Déclarations d'espace de noms
 
-Un fichier Q # n’a généralement qu’une seule déclaration d’espace de noms, mais il peut en avoir un (et être vide ou ne contenir que des commentaires) ou peut contenir plusieurs espaces de noms.
+Q#En général, un fichier n’a qu’une seule déclaration d’espace de noms, mais peut en avoir un (et être vide ou ne contenir que des commentaires) ou peut contenir plusieurs espaces de noms.
 Les déclarations d’espaces de noms ne peuvent pas être imbriquées.
 
-Vous pouvez déclarer le même espace de noms dans plusieurs fichiers Q # qui sont compilés ensemble, à condition qu’il n’y ait pas de déclaration de type, d’opération ou de fonction portant le même nom.
+Vous pouvez déclarer le même espace de noms dans plusieurs Q# fichiers qui sont compilés ensemble, à condition qu’il n’y ait pas de déclaration de type, d’opération ou de fonction portant le même nom.
 En particulier, il n’est pas valide de définir le même type dans le même espace de noms dans plusieurs fichiers, même si les déclarations sont identiques.
 
 Une déclaration d’espace de noms se compose du mot clé `namespace` , suivi du nom de l’espace de noms, et des déclarations contenues dans l’espace de noms, placées entre accolades `{ }` .
@@ -61,7 +64,7 @@ Si une opération déclarée utilise une opération `Op` de `Microsoft.Quantum.I
 Toutefois, pour appeler une certaine fonction `Fn` à partir de `Microsoft.Quantum.Math` , vous devez l’appeler à l’aide de `Math.Fn` .
 
 La `open` directive s’applique à l’intégralité du bloc d’espace de noms dans un fichier.
-Par conséquent, si vous définissez un espace de noms supplémentaire dans le même fichier Q # que `NS` précédemment, les opérations/fonctions/types définis dans le deuxième espace de noms n’ont pas accès à quoi que ce soit à partir de `Microsoft.Quantum.Intrinsic` ou `Microsoft.Quantum.Math` , sauf si vous avez répété les directives ouvertes dans celui-ci. 
+Par conséquent, si vous définissez un espace de noms supplémentaire dans le même Q# fichier que `NS` précédemment, les opérations/fonctions/types définis dans le deuxième espace de noms n’ont pas accès à quoi que ce soit à partir de `Microsoft.Quantum.Intrinsic` ou `Microsoft.Quantum.Math` , sauf si vous avez répété les directives ouvertes dans celui-ci. 
 
 Pour référencer un type ou un appelable défini dans un autre espace de noms qui n’est *pas* ouvert dans l’espace de noms actuel, vous devez le référencer par son nom complet.
 Prenons l’exemple d’une opération nommée `Op` à partir de l' `X.Y` espace de noms :
@@ -73,13 +76,13 @@ Prenons l’exemple d’une opération nommée `Op` à partir de l' `X.Y` espace
 Il est généralement préférable d’inclure un espace de noms à l’aide d’une `open` directive.
 L’utilisation d’un nom qualifié complet est requise si deux espaces de noms définissent des constructions portant le même nom, et la source actuelle utilise des constructions à partir des deux.
 
-Q # suit les mêmes règles d’affectation de noms que d’autres langages .NET.
-Toutefois, Q # ne prend pas en charge les références relatives aux espaces de noms.
+Q#suit les mêmes règles d’affectation de noms que d’autres langages .NET.
+Toutefois, Q# ne prend pas en charge les références relatives aux espaces de noms.
 Par exemple, si l’espace de noms `a.b` est ouvert, une référence à une opération nommée `c.d` n’est *pas* résolue en une opération portant le nom complet `a.b.c.d` .
 
 ## <a name="formatting"></a>Mise en forme
 
-La plupart des instructions et directives Q # se terminent par un point-virgule de fin, `;` .
+La plupart des Q# instructions et des directives se terminent par un point-virgule de fin, `;` .
 Les instructions et les déclarations telles que `for` et `operation` qui se terminent par un bloc d’instructions (voir la section suivante) ne nécessitent pas de point-virgule de fin.
 Chaque description d’instruction indique si le point-virgule de fin est obligatoire.
 
@@ -88,14 +91,14 @@ Les instructions, comme les expressions, les déclarations et les directives, pe
 
 ## <a name="statement-blocks"></a>Blocs d’instructions
 
-Les instructions Q # sont regroupées dans des blocs d’instructions, qui sont contenus avec des accolades `{ }` . Un bloc d’instructions commence par une ouverture `{` et se termine par une fermeture `}` .
+Q#les instructions sont regroupées dans des blocs d’instructions, qui sont contenus avec des accolades `{ }` . Un bloc d’instructions commence par une ouverture `{` et se termine par une fermeture `}` .
 
 Un bloc d’instructions placé lexicalement dans un autre bloc est considéré comme un sous-bloc du bloc conteneur. les blocs conteneur et secondaires sont également appelés blocs externes et internes.
 
 ## <a name="comments"></a>Commentaires
 
 Les commentaires commencent par deux barres obliques, `//` et continuent jusqu’à la fin de la ligne.
-Un commentaire peut apparaître n’importe où dans un fichier source Q #.
+Un commentaire peut apparaître n’importe où dans un Q# fichier source.
 
 ## <a name="documentation-comments"></a>Commentaires de documentation
 
@@ -103,7 +106,7 @@ Les commentaires qui commencent par trois barres obliques, `///` , sont traités
 Dans ce cas, le compilateur les traite comme une documentation pour le type pouvant être appelé par l’utilisateur ou défini par l’utilisateur, de la même façon que d’autres langages .NET.
 
 Dans `///` les commentaires, le texte à afficher dans le cadre de la documentation de l’API est mis en forme en tant que [démarque](https://daringfireball.net/projects/markdown/syntax), avec les différentes parties de la documentation indiquées par des en-têtes spécialement nommés.
-Dans démarque, utilisez l' `@"<ref target>"` extension pour les opérations de référence croisée, les fonctions et les types définis par l’utilisateur dans Q #. Remplacez `<ref target>` par le nom qualifié complet de l’objet de code référencé.
+Dans démarque, utilisez l' `@"<ref target>"` extension pour les opérations de référence croisée, les fonctions et les types définis par l’utilisateur dans Q# . Remplacez `<ref target>` par le nom qualifié complet de l’objet de code référencé.
 Des moteurs de documentation différents peuvent également prendre en charge des extensions de démarque supplémentaires.
 
 Par exemple :
@@ -153,4 +156,4 @@ Les noms suivants sont valides en tant qu’en-têtes de commentaires de documen
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-En savoir plus sur [les opérations et les fonctions](xref:microsoft.quantum.guide.operationsfunctions) dans Q #.
+En savoir plus sur [les opérations et les fonctions](xref:microsoft.quantum.guide.operationsfunctions) dans Q# .

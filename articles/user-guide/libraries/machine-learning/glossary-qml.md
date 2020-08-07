@@ -5,12 +5,15 @@ ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
-ms.openlocfilehash: f9b33a607a892179795d0700ba3080f9a24ab94a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 52c3f69fb99384270a27e57c4f32212d18bee1a4
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275227"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868897"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Glossaire Machine Learning Quantum
 
@@ -48,7 +51,7 @@ En règle générale, le nombre de mesures initiales peut être approximativemen
 
 ### <a name="training-threads"></a>Threads d’apprentissage
 
-La fonction de vraisemblance, qui est l’utilitaire de formation pour le classifieur, est très rarement convexe, ce qui signifie qu’elle a généralement une multitude de Optima locaux dans l’espace de paramètres qui peuvent varier considérablement selon la qualité. Étant donné que le processus SGD peut converger vers un seul optimal spécifique, il est important d’explorer plusieurs vecteurs de paramètres de démarrage. La pratique courante dans Machine Learning consiste à initialiser de tels vecteurs de démarrage de façon aléatoire. L’API de formation Q # accepte un tableau arbitraire de tels vecteurs de démarrage, mais le code sous-jacent les explore séquentiellement. Sur un ordinateur multicœur ou en fait sur une architecture informatique parallèle, il est recommandé d’effectuer plusieurs appels à l’API de formation Q # en parallèle avec des initialisations de paramètres différentes entre les appels.
+La fonction de vraisemblance, qui est l’utilitaire de formation pour le classifieur, est très rarement convexe, ce qui signifie qu’elle a généralement une multitude de Optima locaux dans l’espace de paramètres qui peuvent varier considérablement selon la qualité. Étant donné que le processus SGD peut converger vers un seul optimal spécifique, il est important d’explorer plusieurs vecteurs de paramètres de démarrage. La pratique courante dans Machine Learning consiste à initialiser de tels vecteurs de démarrage de façon aléatoire. L' Q# API d’apprentissage accepte un tableau arbitraire de tels vecteurs de démarrage, mais le code sous-jacent les explore séquentiellement. Sur un ordinateur multicœur ou en fait sur une architecture informatique parallèle, il est recommandé d’effectuer plusieurs appels à l' Q# API de formation en parallèle avec différentes initialisations de paramètres entre les appels.
 
 #### <a name="how-to-modify-the-hyperparameters"></a>Comment modifier les hyperparamètres
 

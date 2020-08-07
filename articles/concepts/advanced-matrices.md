@@ -1,6 +1,8 @@
 ---
 title : description des concepts avancés de la matrice : en savoir plus sur les fonctionnalités exponentielles de vecteurs propres, de valeurs propres et de matrice, les outils fondamentaux utilisés pour décrire et simuler des algorithmes Quantum.
 Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. Matrix-Advanced ms. Auteur : nawiebe@microsoft.com ms. Date : 12/11/2017 ms. topic : article No-Loc :
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -124,7 +126,7 @@ $$
 e ^ A = \boldone + a + \frac { a ^ 2 } { 2 ! } + \frac { Un ^ 3 } { 3 !}+\cdots
 $$
 
-Cela est important, car l’évolution du temps de Quantum mécanique est décrite par une matrice d’unités au format $ e ^ { IB } $ pour la matrice Hermitian $ B $ .  C’est la raison pour laquelle l’exécution de la matrice exponentielles est une partie fondamentale de l’informatique Quantum et, comme Q #, elle offre des routines intrinsèques pour décrire ces opérations.
+Cela est important, car l’évolution du temps de Quantum mécanique est décrite par une matrice d’unités au format $ e ^ { IB } $ pour la matrice Hermitian $ B $ .  C’est la raison pour laquelle l’exécution de la fonction exponentiels de matrice est une partie fondamentale de l’informatique Quantum et, en tant que telles, Q# offre des routines intrinsèques pour décrire ces opérations.
 Il existe de nombreuses façons de calculer un exponentiel de matrice sur un ordinateur classique, et en général, une approximation approximative d’un tel exponentiel est chargée avec les risques.  Consultez [*Cleve mole et Charles Van Loan. « Dix-neuf façons douteuse de calculer l’exponentiel d’une matrice. » SIAM révision 20,4 (1978) : 801-836*](https://doi.org/10.1137/S00361445024180) pour plus d’informations sur les défis impliqués.
 
 Le moyen le plus simple de comprendre comment calculer l’exponentiel d’une matrice consiste à utiliser les valeurs propres et les vecteurs propres de cette matrice.  Plus précisément, le point de vue spectral évoqué ci-dessus indique que, pour chaque Hermitian ou matrice unitaire $ a $ , il existe une matrice unitaire $ u $ et une matrice diagonale $ D $ telle qu' $ un u = ^ \dagger D u $ .  En raison des propriétés de unitarity, nous disposons d' $ un ^ 2 = u ^ \dagger d ^ 2 u $ et de la même façon pour toute alimentation $ p $ $ A ^ p = u ^ \dagger d ^ p u $ .  Si nous le remplaçons par la définition d’opérateur de l’opérateur exponentiel, nous obtenons :

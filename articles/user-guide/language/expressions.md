@@ -1,29 +1,32 @@
 ---
-title: 'Expressions de type dans Q #'
-description: 'Comprendre comment spécifier, référencer et combiner des constantes, des variables, des opérateurs, des opérations et des fonctions en tant qu’expressions dans Q #.'
+title: Expressions dansQ#
+description: Comprenez comment spécifier, référencer et combiner des constantes, des variables, des opérateurs, des opérations et des fonctions en tant qu’expressions dans Q# .
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415386"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869611"
 ---
-# <a name="type-expressions-in-q"></a>Expressions de type dans Q #
+# <a name="expressions-in-no-locq"></a>Expressions dansQ#
 
 ## <a name="numeric-expressions"></a>Expressions numériques
 
 Les expressions numériques sont des expressions de type `Int` , `BigInt` ou `Double` .
 Autrement dit, il s’agit de nombres entiers ou à virgule flottante.
 
-`Int`les littéraux dans Q # sont écrits sous la forme d’une séquence de chiffres.
+`Int`les littéraux dans Q# sont écrits sous la forme d’une séquence de chiffres.
 Les entiers hexadécimaux et binaires sont pris en charge et écrits avec un `0x` `0b` préfixe et, respectivement.
 
-`BigInt`les littéraux dans Q # ont un `l` suffixe ou de fin `L` .
+`BigInt`les littéraux dans Q# ont un `l` suffixe ou de fin `L` .
 Les entiers hexadécimaux Big sont pris en charge et écrits avec un préfixe « 0x ».
 Par conséquent, Voici toutes les utilisations valides des `BigInt` littéraux :
 
@@ -33,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`les littéraux dans Q # sont des nombres à virgule flottante écrits à l’aide de chiffres décimaux.
+`Double`les littéraux dans Q# sont des nombres à virgule flottante écrits à l’aide de chiffres décimaux.
 Elles peuvent être écrites avec ou sans virgule décimale, `.` , ou une partie exponentielle indiquée par « e » ou « e » (après quoi seuls un signe négatif et des chiffres décimaux possibles sont valides).
 Les littéraux valides sont les suivants `Double` : `0.0` , `1.2e5` , `1e-5` .
 
@@ -86,7 +89,7 @@ Les deux `Bool` valeurs littérales sont `true` et `false` .
 Compte tenu des deux expressions du même type primitif, les `==` `!=` opérateurs binaires et peuvent être utilisés pour construire une `Bool` expression.
 L’expression a la valeur true si les deux expressions sont égales et false dans le cas contraire.
 
-Les valeurs des types définis par l’utilisateur ne peuvent pas être comparées, seules leurs valeurs désencapsulées peuvent être comparées. Par exemple, à l’aide de l’opérateur « Unwrap » `!` (expliqué en détail dans les [types dans Q #](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),
+Les valeurs des types définis par l’utilisateur ne peuvent pas être comparées, seules leurs valeurs désencapsulées peuvent être comparées. Par exemple, à l’aide de l’opérateur « Unwrap » `!` (expliqué en détail dans les [types dans Q# ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -110,9 +113,9 @@ Compte tenu de deux expressions booléennes, utilisez l' `and` opérateur binair
 
 ## <a name="string-expressions"></a>Expressions de chaîne
 
-Q # permet d’utiliser des chaînes dans l' `fail` instruction (expliquée dans le [Workflow de contrôle](xref:microsoft.quantum.guide.controlflow#fail-statement)) et dans la [`Message`](xref:microsoft.quantum.intrinsic.message) fonction standard. Le comportement spécifique de ce dernier dépend du simulateur utilisé, mais écrit généralement un message dans la console hôte lorsqu’il est appelé pendant un programme Q #.
+Q#autorise l’utilisation de chaînes dans l' `fail` instruction (expliquée dans le [Workflow de contrôle](xref:microsoft.quantum.guide.controlflow#fail-statement)) et dans la [`Message`](xref:microsoft.quantum.intrinsic.message) fonction standard. Le comportement spécifique de ce dernier dépend du simulateur utilisé, mais écrit généralement un message dans la console hôte lorsqu’il est appelé pendant un Q# programme.
 
-Dans Q #, les chaînes sont des littéraux ou des chaînes interpolées.
+Les chaînes dans Q# sont des littéraux ou des chaînes interpolées.
 
 Les littéraux de chaîne sont similaires aux littéraux de chaîne simples dans la plupart des langues : une séquence de caractères Unicode placée entre guillemets doubles `" "` .
 À l’intérieur d’une chaîne, utilisez la barre oblique inverse `\` pour échapper un caractère de guillemet double ( `\"` ), ou pour insérer une nouvelle ligne ( `\n` ), un retour chariot ( `\r` ) ou un onglet ( `\t` ).
@@ -123,11 +126,11 @@ Par exemple :
 ```
 ### <a name="interpolated-strings"></a>Chaînes interpolées
 
-La syntaxe Q # pour les interpolations de chaînes est un sous-ensemble de la syntaxe C#. Voici les points clés qui se rapportent à Q # :
+La Q# syntaxe pour les interpolations de chaînes est un sous-ensemble de la syntaxe C#. Voici les points clés auxquels ils se rapportent Q# :
 
 * Pour identifier un littéral de chaîne comme chaîne interpolée, préfixez-la du symbole `$`. Il ne peut pas y avoir d’espace blanc entre le `$` et le `"` qui démarre un littéral de chaîne.
 
-* L’exemple suivant est un exemple de base [`Message`](xref:microsoft.quantum.intrinsic.message) qui utilise la fonction pour écrire le résultat d’une mesure dans la console, en même temps que d’autres expressions Q #.
+* L’exemple suivant est un exemple de base [`Message`](xref:microsoft.quantum.intrinsic.message) qui utilise la fonction pour écrire le résultat d’une mesure dans la console, en même temps que d’autres Q# expressions.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -135,9 +138,9 @@ La syntaxe Q # pour les interpolations de chaînes est un sous-ensemble de la sy
     Message($"Number: {num}, Result: {res}");
 ```
 
-* Toute expression Q # valide peut apparaître dans une chaîne interpolée.
+* Toute Q# expression valide peut apparaître dans une chaîne interpolée.
 
-* Les expressions à l’intérieur d’une chaîne interpolée suivent la syntaxe Q #, et non la syntaxe C#. La distinction la plus notable est que Q # ne prend pas en charge les chaînes interpolées textuelles (multiligne).
+* Les expressions à l’intérieur d’une chaîne interpolée suivent la Q# syntaxe, et non la syntaxe C#. La distinction la plus notable est que Q# ne prend pas en charge les chaînes interpolées textuelles (multiligne).
 
 Pour plus d’informations sur la syntaxe C#, consultez [*chaînes interpolées*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
 
@@ -197,7 +200,7 @@ Par exemple, si `IntPair` est un type défini par l’utilisateur basé sur `(In
 
 ## <a name="unwrap-expressions"></a>Désencapsuler les expressions
 
-Dans Q #, l’opérateur Unwrap est un point d’exclamation de fin `!` .
+Dans Q# , l’opérateur Unwrap est un point d’exclamation de fin `!` .
 Par exemple, si `IntPair` est un type défini par l’utilisateur avec le type sous-jacent `(Int, Int)` et qu' `s` il s’agit d’une variable de valeur `IntPair(2, 3)` , `s!` est `(2, 3)` .
 
 Pour les types définis par l’utilisateur définis en termes d’autres types définis par l’utilisateur, vous pouvez répéter l’opérateur Unwrap. Par exemple, `s!!` indique la valeur doublement désencapsulée de `s` .
@@ -270,7 +273,7 @@ Par exemple, si `a` et `b` sont tous deux des tableaux de type `Int` , un élém
 (a + b)[13]
 ```
 
-Tous les tableaux dans Q # sont de base zéro.
+Tous les tableaux dans Q# sont de base zéro.
 Autrement dit, le premier élément d’un tableau `a` est toujours `a[0]` .
 
 
@@ -318,7 +321,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>Expressions de copie et de mise à jour
 
-Étant donné que tous les types Q # sont des types valeur (avec le qubits qui prend un rôle un peu spécial), une « copie » est formellement créée lorsqu’une valeur est liée à un symbole ou lorsqu’un symbole est relié. Autrement dit, le comportement de Q # est le même que si une copie a été créée à l’aide d’un opérateur d’assignation. 
+Étant donné que tous les Q# types sont des types valeur (avec le qubits qui prend un rôle un peu spécial), une « copie » est formellement créée lorsqu’une valeur est liée à un symbole ou lorsqu’un symbole est relié. Autrement dit, le comportement de Q# est le même que si une copie a été créée à l’aide d’un opérateur d’assignation. 
 
 Bien entendu, dans la pratique, seuls les éléments pertinents sont recréés en fonction des besoins. Cela affecte la façon dont vous copiez les tableaux, car il n’est pas possible de mettre à jour les éléments du tableau. La modification d’un tableau existant requiert l’utilisation d’un mécanisme de *copie et de mise à jour* .
 
@@ -381,7 +384,7 @@ Toutefois, alors que les opérations `(Qubit[] => Unit is Adj)` et `(Qubit[] => 
 
 Par exemple, `[[Op1], [Op2]]` génère actuellement une erreur, car elle tente de créer un tableau des deux types de tableau incompatibles `(Qubit[] => Unit is Adj)[]` et `(Qubit[] => Unit is Ctl)[]` .
 
-Pour plus d’informations sur callables, consultez [expressions pouvant être appelées](#callable-expressions) sur cette page ou [opérations et fonctions dans Q #](xref:microsoft.quantum.guide.operationsfunctions).
+Pour plus d’informations sur callables, consultez [expressions pouvant être appelées](#callable-expressions) sur cette page ou [opérations Q# et fonctions dans ](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="conditional-expressions"></a>Expressions conditionnelles
 
@@ -446,7 +449,7 @@ Ainsi, pour appeler le résultat de l’appel `Builder` à partir du paragraphe 
 ```
 
 Lors de l’appel d’un pouvant être appelé [par un type paramétrable](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) , vous pouvez spécifier les paramètres de type réels entre crochets pointus `< >` après l’expression pouvant être appelée.
-Cette action n’est généralement pas nécessaire, car le compilateur Q # déduit les types réels.
+Cette action n’est généralement pas nécessaire, car le Q# compilateur déduit les types réels.
 Toutefois, elle *est* requise pour une [application partielle](xref:microsoft.quantum.guide.operationsfunctions#partial-application) si un argument de type paramétrable n’est pas spécifié.
 Elle est également utile lors du passage d’opérations avec des prises en charge de functor différentes à un pouvant être appelé.
 
@@ -469,7 +472,7 @@ La spécification de type est requise, car `Op3` et `Op1` ont des types différe
 
 * Les parenthèses pour l’appel de l’opération et de la fonction sont également liées avant tout opérateur, mais après l’indexation et les functors du tableau.
 
-Opérateurs Q # par ordre de priorité, du plus élevé au plus bas :
+Q#opérateurs par ordre de priorité, du plus élevé au plus bas :
 
 Opérateur | Arité | Description | Types d’opérandes
 ---------|----------|---------|---------------
@@ -492,4 +495,4 @@ Opérateur | Arité | Description | Types d’opérandes
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Maintenant que vous pouvez utiliser des expressions dans Q #, passez à [opérations et fonctions dans q #](xref:microsoft.quantum.guide.operationsfunctions) pour savoir comment définir et appeler des opérations et des fonctions.
+Maintenant que vous pouvez utiliser des expressions dans Q# , passez à [ Q# opérations et fonctions dans](xref:microsoft.quantum.guide.operationsfunctions) pour apprendre à définir et appeler des opérations et des fonctions.

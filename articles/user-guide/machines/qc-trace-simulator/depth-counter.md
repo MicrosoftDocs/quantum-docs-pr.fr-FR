@@ -1,17 +1,20 @@
 ---
 title: Compteur de profondeur-Kit de développement quantique
-description: 'En savoir plus sur le compteur de profondeur de Microsoft QDK, qui utilise le simulateur de traces Quantum pour collecter le nombre de niveaux de la profondeur de chaque opération appelée dans un programme Q #.'
+description: Découvrez le compteur de profondeur de Microsoft QDK, qui utilise le simulateur de traces Quantum pour rassembler le nombre de niveaux de la profondeur de chaque opération appelée dans un Q# programme.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: 811e387fedf547d2681518ae0bb525c13dc84ff4
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5c54f6fc479203d30c68c4958329605d4323f9ea
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871125"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868319"
 ---
 # <a name="quantum-trace-simulator-depth-counter"></a>Simulateur de traces Quantum : compteur de profondeur
 
@@ -36,7 +39,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-depth-counter-in-a-c-host-program"></a>Utilisation du compteur Depth dans un programme hôte C#
 
-L’exemple C# qui suit dans cette section calcule la `T` profondeur de l' `CCNOT` opération, en fonction de l’exemple de code Q # suivant :
+L’exemple C# qui suit dans cette section calcule la `T` profondeur de l' `CCNOT` opération, en fonction de l' Q# exemple de code suivant :
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

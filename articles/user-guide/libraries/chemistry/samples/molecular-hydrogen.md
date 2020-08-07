@@ -1,17 +1,20 @@
 ---
 title: Obtention d’estimations du niveau d’énergie
-description: 'Parcourez un exemple de programme Q # qui estime les valeurs de niveau d’énergie de l’hydrogène moléculaire.'
+description: Parcourez un exemple de Q# programme qui estime les valeurs de niveau d’énergie de l’hydrogène moléculaire.
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871566"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869203"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Obtention d’estimations du niveau d’énergie
 L’estimation des valeurs des niveaux énergétiques est l’une des principales applications de la chimie Quantum. Cet article décrit comment effectuer cette procédure pour l’exemple canonique d’hydrogène moléculaire. L’exemple référencé dans cette section se trouve [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) dans le référentiel d’exemples chimie. Un exemple visuel qui trace la sortie est la [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) démonstration.
@@ -121,7 +124,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-Vous pouvez maintenant appeler le code Q # à partir du programme hôte. Le code C# suivant crée un simulateur d’état complet et s’exécute `GetEnergyByTrotterization` pour obtenir l’énergie de l’état du sol.
+Vous pouvez maintenant appeler le Q# code à partir du programme hôte. Le code C# suivant crée un simulateur d’état complet et s’exécute `GetEnergyByTrotterization` pour obtenir l’énergie de l’état du sol.
 
 ```csharp
 using (var qsim = new QuantumSimulator())

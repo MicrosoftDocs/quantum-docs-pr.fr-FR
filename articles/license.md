@@ -4,12 +4,15 @@ description: Les termes du contrat de licence, les exclusions de responsabilité
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019
-ms.openlocfilehash: 0d3aa9ae9e4f232ba2403512ff6e2394ecedeb22
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 33b36e5619c62c9e2306441f55b244caa3214e98
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907118"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866721"
 ---
 # <a name="microsoft-software-license-terms"></a>TERMES DU CONTRAT DE LICENCE LOGICIEL MICROSOFT 
 ## <a name="microsoft-quantum-development-kit-preview"></a>KIT DE DÉVELOPPEMENT QUANTUM MICROSOFT (VERSION PRÉLIMINAIRE)
@@ -21,17 +24,17 @@ ms.locfileid: "77907118"
 
 * * *
 
-Les présents termes du contrat de licence ont valeur de contrat entre vous et Microsoft Corporation (ou l’une de ses filiales). Ils s’appliquent à la version préliminaire du logiciel nommé ci-dessus et aux services Microsoft ou mises à jour logicielles (sauf dans la mesure où ces services ou mises à jour sont accompagnés de conditions nouvelles ou supplémentaires, auquel cas ces différents termes s’appliquent de façon prospective et ne modifient pas votre ou les droits de Microsoft relatifs aux logiciels ou services préalablement mis à jour).
+Les présents termes du contrat de licence ont valeur de contrat entre vous et Microsoft Corporation (ou l’une de ses filiales). Ils s’appliquent à la version préliminaire du logiciel nommé ci-dessus et aux services Microsoft ou mises à jour logicielles (sauf dans la mesure où ces services ou mises à jour sont accompagnés de conditions nouvelles ou supplémentaires, auquel cas ces différents termes s’appliquent de façon prospective et ne modifient pas vos droits ou les droits de Microsoft concernant les logiciels ou services Prémis à jour).
 
 SI VOUS RESPECTEZ CES TERMES DU CONTRAT DE LICENCE, VOUS DISPOSEZ DES DROITS ÉNONCÉS CI-DESSOUS. EN UTILISANT LE LOGICIEL, VOUS ACCEPTEZ CES TERMES.
 
-1. **DROITS D’INSTALLATION ET D’UTILISATION.**
+1. **DROITS D'INSTALLATION ET D'UTILISATION**
 
      a. **Général**. Vous pouvez uniquement utiliser le logiciel Microsoft Quantum Development Kit (version préliminaire) pour vous aider à développer et à tester vos applications.
 
      b. **Third Party Software**. Le logiciel est susceptible d’inclure des applications tierces qui vous sont concédées sous licence dans le cadre de ce contrat ou selon leurs propres conditions. Les termes du contrat de licence, les mentions et les accusés de réception, le cas échéant, pour les applications tierces peuvent être accessibles en ligne auprès de [mentions de tiers](https://3rdpartysource.microsoft.com/) ou dans un fichier de mentions accompagnant. Même si ces applications sont régies par d’autres contrats, la clause de non-responsabilité, les limitations et les exclusions des dommages-intérêts ci-dessous s’appliquent également dans la mesure autorisée par la loi en vigueur. Noyau développé par ETH Zurich (Suisse), groupe of Prof. Troy.
  
-2. **LOGICIEL QUI RESPECTE LE TEMPS.**
+2. **LOGICIEL TEMPORAIRE.**
 
      a. **Période**. Le logiciel est sensible au temps et peut cesser de s’exécuter à une date définie dans le logiciel.
 
@@ -42,21 +45,21 @@ SI VOUS RESPECTEZ CES TERMES DU CONTRAT DE LICENCE, VOUS DISPOSEZ DES DROITS ÉN
 1. **logiciel en version préliminaire**. Le logiciel est en préversion. Il est possible qu’il ne fonctionne pas correctement. Il peut être différent de la version finale commercialisée.
 
 
-1. **Commentaires**. Si vous donnez votre avis sur le logiciel à Microsoft, vous accordez à Microsoft, sans contrepartie financière, le droit d'utiliser, de partager et de commercialiser vos commentaires, de quelque manière et pour quelque usage que ce soit. Vous n’enverrez pas de commentaires soumis à une licence obligeant Microsoft à accorder une licence sur son logiciel ou sa documentation à des tiers parce que Microsoft y inclut vos commentaires. Ces droits demeurent malgré ce contrat.
+1. **COMMENTAIRES**. Si vous donnez votre avis sur le logiciel à Microsoft, vous accordez à Microsoft, sans contrepartie financière, le droit d'utiliser, de partager et de commercialiser vos commentaires, de quelque manière et pour quelque usage que ce soit. Vous n’enverrez pas de commentaires soumis à une licence obligeant Microsoft à accorder une licence sur son logiciel ou sa documentation à des tiers parce que Microsoft y inclut vos commentaires. Ces droits demeurent malgré ce contrat.
 
-1. **collecte de données**. Le logiciel peut collecter des informations sur vous et votre utilisation du logiciel, et les envoyer à Microsoft. Microsoft peut utiliser ces informations pour fournir des services et améliorer ses produits et services. Vos droits de dérogation éventuels sont décrits dans la documentation du produit. Certaines fonctionnalités du logiciel peuvent activer la collecte de données d’utilisateurs de vos applications qui accèdent au logiciel ou utilisent celui-ci. Si vous utilisez ces fonctionnalités pour activer la collecte de données dans vos applications, vous devez respecter les lois applicables, dont l’obligation d’obtenir le consentement de l’utilisateur, et mettre en œuvre une politique de confidentialité claire informant précisément les utilisateurs de la manière dont vous utilisez, collectez et partagez leurs données. Pour plus d’informations sur la collecte et l’utilisation de données par Microsoft, consultez la documentation du produit et la déclaration de confidentialité Microsoft à l’adresse https://go.microsoft.com/fwlink/?LinkId=521839. Vous vous engagez à respecter toutes les dispositions applicables de la déclaration de confidentialité de Microsoft.
+1. **collecte de données**. Le logiciel peut collecter des informations sur vous et votre utilisation du logiciel, et les envoyer à Microsoft. Microsoft peut utiliser ces informations pour fournir des services et améliorer ses produits et services. Vos droits de dérogation éventuels sont décrits dans la documentation du produit. Certaines fonctionnalités du logiciel peuvent activer la collecte de données d’utilisateurs de vos applications qui accèdent au logiciel ou utilisent celui-ci. Si vous utilisez ces fonctionnalités pour activer la collecte de données dans vos applications, vous devez respecter les lois applicables, dont l’obligation d’obtenir le consentement de l’utilisateur, et mettre en œuvre une politique de confidentialité claire informant précisément les utilisateurs de la manière dont vous utilisez, collectez et partagez leurs données. Pour plus d’informations sur la collecte et l’utilisation de données par Microsoft, consultez la documentation du produit et la déclaration de confidentialité Microsoft à l’adresse https://go.microsoft.com/fwlink/?LinkId=521839. Vous acceptez de respecter toutes les dispositions applicables de la Déclaration de confidentialité Microsoft.
 
 1. **étendue de la licence** Le logiciel est concédé sous licence, et non vendu. Microsoft se réserve tous les autres droits. Sauf si la loi applicable vous confère davantage de droits nonobstant cette limitation, vous n’êtes pas autorisé à :
 
-    a. contourner les limitations techniques du logiciel qui vous permettent uniquement de l’utiliser de certaines façons ;
+    a. contourner les restrictions techniques contenues dans le logiciel qui restreignent les conditions de son utilisation ;
 
-    b. rétroconcevoir, décompiler ou désassembler le logiciel ;
+    b. reconstituer la logique du logiciel, le décompiler ou le désassembler ;
 
-    c. supprimer, réduire, bloquer ou modifier les notifications de Microsoft ou de ses fournisseurs dans le logiciel ;
+    c. supprimer, réduire, bloquer ou modifier des mentions de Microsoft ou de ses fournisseurs dans le logiciel ;
 
-    d. utiliser le logiciel de quelque manière que ce soit par rapport à la loi ou pour créer ou propager des programmes malveillants ; ni
+    d. utiliser le logiciel d'une manière contraire à la réglementation ou pour créer ou propager des programmes malveillants ; ou
     
-    e. partager, publier, distribuer ou prêter le logiciel, fournir le logiciel en tant que solution hébergée autonome pour les autres utilisateurs, ou transférer le logiciel ou le présent contrat à un tiers.
+    e. partager, publier, distribuer ou prêter le logiciel, fournir le logiciel sous forme de solution autonome hébergée afin que d'autres personnes puissent l'utiliser, ou transférer le logiciel ou le présent contrat à un tiers.
 
 1. **restrictions**à l’exportation. Vous devez respecter toutes les lois et réglementations nationales et internationales sur l’exportation applicables au logiciel, qui comprennent des restrictions concernant les destinations, les utilisateurs finals et les utilisations finales. Pour plus d’informations sur les restrictions à l’exportation, voir https://aka.ms/exporting.
 
@@ -82,7 +85,7 @@ SI VOUS RESPECTEZ CES TERMES DU CONTRAT DE LICENCE, VOUS DISPOSEZ DES DROITS ÉN
 <p style="margin-left: 60px">Sous réserve de la clause précédente ii., Microsoft ne pourra être tenue pour responsable d’une légère négligence que si celle-ci constitue une violation de ses obligations contractuelles importantes, dont le respect facilite l’exécution du présent contrat, dont la violation mettrait en péril l’objectif même du contrat et dont chaque partie est en droit d’attendre en toute confiance le respect (« devoirs fondamentaux »). Dans d’autres cas de négligence légère, Microsoft ne pourra pas être tenue pour responsable.</p>
 
 <blockquote>
-<p>14. <strong>exclusion de garantie. LE LOGICIEL EST CONCÉDÉ SOUS LICENCE « EN L’OR ». VOUS ASSUMEZ LES RISQUES LIÉS À SON UTILISATION. MICROSOFT N’OFFRE AUCUNE GARANTIE OU CONDITION EXPRESSE. DANS la mesure PERMISe par la loi APPLICABLE, MICROSOFT EXCLUt toutes les garanties IMPLICITes, y compris la qualité MARCHANDe, l’ADÉQUATion à un usage particulier et la NON-CONTREFAÇON.</strong>
+<p>14. <strong>EXCLUSION DE GARANTIE. LE LOGICIEL EST CONCÉDÉ SOUS LICENCE « EN L’OR ». VOUS ASSUMEZ LES RISQUES LIÉS À SON UTILISATION. MICROSOFT N’OFFRE AUCUNE GARANTIE OU CONDITION EXPRESSE. DANS LA MESURE PERMISE PAR LA LOI APPLICABLE, MICROSOFT EXCLUT TOUTES LES GARANTIES IMPLICITES, Y COMPRIS LA QUALITÉ MARCHANDE, L’ADÉQUATION À UN USAGE PARTICULIER ET LA NON-CONTREFAÇON.</strong>
 
 <p>15. <strong>LIMITATION ET EXCLUSION DES DOMMAGES. SI VOUS AVEZ DES BASES POUR LA RÉCUPÉRATION DES DOMMAGES EN DÉPIT DE L’EXCLUSION DE GARANTIE PRÉCÉDENTE, VOUS POUVEZ RÉCUPÉRER AUPRÈS DE MICROSOFT ET DE SES FOURNISSEURS UNIQUEMENT DES DOMMAGES DIRECTS ALLANT JUSQU’AUX ÉTATS-UNIS $5,00. VOUS NE POUVEZ PAS RÉCUPÉRER D’AUTRES DOMMAGES, Y COMPRIS LES DOMMAGES INDIRECTS, SPÉCIAUX, INDIRECTS OU ACCESSOIRES.</strong>
 

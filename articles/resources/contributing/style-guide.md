@@ -1,24 +1,27 @@
 ---
-title: 'Guide de style Microsoft Q #'
-description: 'Découvrez les conventions d’attribution de noms, d’entrée, de documentation et de mise en forme pour les programmes et les bibliothèques Q #.'
+title: Q#Guide de style Microsoft
+description: Découvrez les conventions d’attribution de noms, d’entrée, de documentation et de mise en forme pour les Q# programmes et les bibliothèques.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 27a2ae5ae9d00329fc369268edae24228a9a9d0d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871380"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867587"
 ---
-# <a name="q-style-guide"></a>Guide de style Q # #
+# <a name="no-locq-style-guide"></a>Q#Guide de style #
 ## <a name="general-conventions"></a>Conventions générales ##
 
-Les conventions suggérées dans ce guide sont destinées à faciliter la lecture et la compréhension des programmes et des bibliothèques écrits dans Q #.
+Les conventions suggérées dans ce guide sont destinées à faciliter la lecture et la compréhension des programmes et des bibliothèques Q# .
 
-## <a name="guidance"></a>Assistance
+## <a name="guidance"></a>Instructions
 
 Nous vous suggérons :
 
@@ -29,13 +32,13 @@ Nous vous suggérons :
 En proposant le kit de développement quantique, nous nous efforçons d’utiliser des noms de fonctions et d’opérations qui aident les développeurs de Quantum à écrire des programmes faciles à lire et qui réduisent la surprise.
 Une partie importante de cela est que lorsque nous choisissons des noms pour les fonctions, les opérations et les types, nous établissons le *vocabulaire* que les programmeurs utilisent pour exprimer les concepts quantiques. Grâce à nos choix, nous vous aidons ou les empêcherons à communiquer clairement.
 Cela pose une responsabilité pour nous assurer que les noms que nous introduisons offrent une clarté plutôt qu’une obscurité.
-Dans cette section, nous détaillerons la manière dont nous répondons à cette obligation en termes de conseils explicites qui nous aideront à faire le meilleur de la communauté de développement Q #.
+Dans cette section, nous détaillerons la manière dont nous répondons à cette obligation en termes de conseils explicites qui nous aideront à faire le meilleur de la Q# communauté de développement.
 
 ### <a name="operations-and-functions"></a>Opérations et fonctions ###
 
 L’une des premières choses qu’un nom doit établir est si un symbole donné représente une fonction ou une opération.
 La différence entre les fonctions et les opérations est essentielle pour comprendre le comportement d’un bloc de code.
-Pour communiquer la distinction entre les fonctions et les opérations aux utilisateurs, nous nous appuyons sur les opérations de quantum des modèles Q # par le biais de l’utilisation d’effets secondaires.
+Pour communiquer la distinction entre les fonctions et les opérations pour les utilisateurs, nous nous appuyons sur ces Q# modèles d’opérations de Quantum par le biais de l’utilisation d’effets secondaires.
 Autrement dit, une opération *effectue* une opération.
 
 En revanche, les fonctions décrivent les relations mathématiques entre les données.
@@ -97,8 +100,8 @@ Nous vous suggérons :
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Effacez l’utilisation d’un verbe (« réfléchir ») pour indiquer l’effet de l’opération. |
 | ☒ | <s>`operation XRotation`</s> | L’utilisation de l’expression nominale suggère une fonction plutôt que l’opération. |
-| ☒ | <s>`operation search_oracle`</s> | L’utilisation de `snake_case` transgresse la notation Q #. |
-| ☒ | <s>`operation Search_Oracle`</s> | L’utilisation de traits de soulignement internes au nom de l’opération contrevient à la notation Q #. |
+| ☒ | <s>`operation search_oracle`</s> | L’utilisation de `snake_case` transgresse la Q# notation. |
+| ☒ | <s>`operation Search_Oracle`</s> | L’utilisation de traits de soulignement internes au nom de l’opération contrevient à la Q# notation. |
 | ☑ | `function StatePreparationOracle` | L’utilisation de l’expression nominale suggère que la fonction retourne une opération. |
 | ☑ | `function EqualityFact` | Effacez l’utilisation du nom (« FACT ») pour indiquer qu’il s’agit d’une fonction, tandis que le adjectif. |
 | ☒ | <s>`function GetRotationAngles`</s> | L’utilisation du verbe (« obten ») suggère qu’il s’agit d’une opération. |
@@ -110,9 +113,9 @@ Nous vous suggérons :
 
 ### <a name="entry-points"></a>Points d’entrée
 
-Lors de la définition d’un point d’entrée dans un programme Q #, le compilateur Q # reconnaît l' [ `@EntryPoint()` attribut](xref:microsoft.quantum.core.entrypoint) plutôt que d’exiger que les points d’entrée aient un nom particulier (par exemple `main` ,, `Main` ou `__main__` ).
-Autrement dit, du point de vue d’un développeur Q #, les points d’entrée sont des opérations ordinaires annotées avec `@EntryPoint()` .
-En outre, les points d’entrée Q # peuvent être des points d’entrée pour une application entière (par exemple, dans les fichiers exécutables autonomes Q #) ou peuvent être une interface entre un programme Q # et le programme hôte d’une application (par exemple, lors de l’utilisation de Q # avec Python ou .NET), de sorte que le nom «main
+Lors de la définition d’un point d’entrée dans un Q# programme, le Q# compilateur reconnaît l' [ `@EntryPoint()` attribut](xref:microsoft.quantum.core.entrypoint) au lieu d’exiger que les points d’entrée aient un nom particulier (par exemple : `main` , `Main` ou `__main__` ).
+Autrement dit, du point de vue d’un Q# développeur, les points d’entrée sont des opérations ordinaires annotées avec `@EntryPoint()` .
+En outre, les Q# points d’entrée peuvent être des points d’entrée pour une application entière (c’est-à-dire dans des Q# exécutables autonomes), ou peuvent être une interface entre un Q# programme et le programme hôte d’une application (par exemple, lors de l’utilisation de Q# avec Python ou .net), de sorte que le nom « main » peut être trompeur lorsqu’il est appliqué à un Q# point d’entrée.
 
 Nous vous suggérons d’utiliser des points d’entrée de nom pour refléter l’utilisation de l' `@EntryPoint()` attribut en utilisant les conseils généraux pour les opérations de nommage indiquées ci-dessus.
 
@@ -190,11 +193,11 @@ Especially in a field such as quantum computing that is rich with domain experti
 In naming code symbols, one way that this cognizance expresses itself is as an awareness of the convention from physics of adopting as the names of algorithms and operations the names of their original publishers.
 While we must maintain the history and intellectual provenance of concepts in quantum computing, demanding that all users be versed in this history to use even the most basic of functions and operations places a barrier to entry that is in most cases severe enough to even present an ethical compromise. -->
 Par conséquent, nous vous recommandons d’adopter, à chaque fois que cela est raisonnable, des noms communs qui décrivent un concept en privilégiant les noms appropriés qui décrivent l’historique de publication d’un concept.
-En guise d’exemple particulier, les opérations d’échange contrôlé unique et non contrôlé doublement sont souvent appelées les opérations « Fredkin » et « Toffoli » dans la documentation académique, mais elles sont identifiées dans Q # principalement comme `CSWAP` et `CCNOT` .
+En guise d’exemple particulier, les opérations d’échange à contrôle unique et les opérations NOT contrôlées doublement sont souvent appelées les opérations « Fredkin » et « Toffoli » dans la documentation académique, mais sont identifiées dans Q# principalement comme `CSWAP` et `CCNOT` .
 Dans les deux cas, les commentaires de documentation de l’API fournissent des noms synonymes basés sur des noms appropriés, ainsi que toutes les citations appropriées.
 
-Cette préférence est particulièrement importante, étant donné que certaines utilisations des noms corrects sont toujours nécessaires : Q # suit la tradition définie par de nombreuses langues classiques, par exemple, et fait référence aux `Bool` types en référence à la logique booléenne, qui est à son tour nommée en respectant George bool.
-De même, quelques concepts quantiques sont nommés de la même façon, y compris le `Pauli` type intégré au langage Q #.
+Cette préférence est particulièrement importante, étant donné que certaines utilisations des noms corrects sont toujours nécessaires ( Q# suit la tradition définie par de nombreuses langues classiques, par exemple) et fait référence aux `Bool` types en référence à la logique booléenne, qui est à son tour nommée en respectant George bool.
+De même, quelques concepts quantiques sont nommés de la même façon, y compris le `Pauli` type intégré dans le Q# langage.
 En réduisant l’utilisation des noms appropriés dans lesquels ce type d’utilisation n’est pas essentiel, nous réduisons l’impact que les noms appropriés ne peuvent pas être raisonnablement évités.
 
 # <a name="guidance"></a>[Assistance](#tab/guidance) 
@@ -209,9 +212,9 @@ Nous vous suggérons :
 
 ### <a name="type-conversions"></a>Conversions de type ###
 
-Comme Q # est un langage fortement et statiquement typé, une valeur d’un type ne peut être utilisée qu’en tant que valeur d’un autre type à l’aide d’un appel explicite à une fonction de conversion de type.
+Étant donné que Q# est un langage fortement et statiquement typé, une valeur d’un type ne peut être utilisée qu’en tant que valeur d’un autre type à l’aide d’un appel explicite à une fonction de conversion de type.
 Cela diffère des langages qui permettent aux valeurs de changer les types implicitement (par exemple, la promotion de type) ou en effectuant une conversion.
-Par conséquent, les fonctions de conversion de type jouent un rôle important dans le développement de bibliothèque Q #, et constituent l’une des décisions les plus fréquemment rencontrées sur l’affectation de noms.
+Par conséquent, les fonctions de conversion de type jouent un rôle important dans Q# le développement de bibliothèque, et constituent l’une des décisions les plus fréquemment rencontrées sur l’affectation de noms.
 Toutefois, étant donné que les conversions de type sont toujours _déterministes_, elles peuvent être écrites en tant que fonctions et, par conséquent, tomber sous les conseils ci-dessus.
 En particulier, nous suggérons que les fonctions de conversion de type ne doivent jamais être nommées en tant que verbes (par exemple, `ConvertToX` ) ou des expressions prépositionnelles adverbes ( `ToX` ), mais doivent être nommées en tant qu’expressions prépositionnelles avec adjectif qui indiquent les types source et de destination ( `XAsY` ).
 Lors de la liste des types de tableau dans les noms de fonctions de conversion de type, nous vous recommandons le raccourci `Arr` .
@@ -244,7 +247,7 @@ Si une opération ou une fonction n’est pas destinée à une utilisation direc
 
 Nous vous suggérons :
 
-- Lorsqu’une fonction, une opération ou un type défini par l’utilisateur ne fait pas partie de l’API publique d’une bibliothèque ou d’un programme Q #, assurez-vous qu’elle est marquée comme étant interne en plaçant le `internal` mot clé avant la `function` `operation` déclaration, ou `newtype` .
+- Lorsqu’une fonction, une opération ou un type défini par l’utilisateur ne fait pas partie de l’API publique d’une Q# bibliothèque ou d’un programme, assurez-vous qu’elle est marquée comme étant interne en plaçant le `internal` mot clé avant la `function` `operation` déclaration, ou `newtype` .
 
 # <a name="examples"></a>[Exemples](#tab/examples)
 
@@ -256,7 +259,7 @@ Nous vous suggérons :
 ***
 ### <a name="variants"></a>Variantes ###
 
-Bien que cette limitation puisse ne pas persister dans les versions ultérieures de Q #, c’est pour l’instant le cas qu’il y aura souvent des groupes d’opérations ou de fonctions connexes qui se distinguent par les functors pris en charge par leurs entrées, ou par les types concrets de leurs arguments.
+Bien que cette limitation puisse ne pas persister dans les versions ultérieures de Q# , il s’agit actuellement de groupes d’opérations ou de fonctions connexes qui se distinguent par les functors pris en charge par leurs entrées, ou par les types concrets de leurs arguments.
 Ces groupes peuvent être distingués à l’aide du même nom racine, suivi d’une ou de deux lettres indiquant sa variante.
 
 | Suffixe | Signification |
@@ -281,7 +284,7 @@ Nous vous suggérons :
 
 ### <a name="arguments-and-variables"></a>Arguments et variables ###
 
-L’un des objectifs clés du code Q # pour une fonction ou une opération est qu’il soit facile à lire et à comprendre.
+L’un des objectifs clés du Q# code pour une fonction ou une opération est qu’il soit facile à lire et à comprendre.
 De même, les noms des entrées et des arguments de type doivent indiquer comment une fonction ou un argument sera utilisé une fois fourni.
 
 
@@ -380,10 +383,10 @@ Nous vous suggérons :
 
 ## <a name="documentation-conventions"></a>Conventions de documentation ##
 
-Le langage Q # permet d’attacher une documentation à des opérations, des fonctions et des types définis par l’utilisateur à l’aide de commentaires de documentation spécialement mis en forme.
+Le Q# langage permet l’attachement de la documentation aux opérations, aux fonctions et aux types définis par l’utilisateur à l’aide de commentaires de documentation spécialement mis en forme.
 Dénotés par des barres obliques ( `///` ), ces commentaires de documentation sont de petits documents de [démarque DocFX](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) qui peuvent être utilisés pour décrire l’objectif de chaque opération, fonction et type défini par l’utilisateur, les entrées attendues et ainsi de suite.
 Le compilateur fourni avec le kit de développement Quantum extrait ces commentaires et les utilise pour aider composer documentation similaire à celle de https://docs.microsoft.com/quantum .
-De même, le serveur de langage fourni avec le kit de développement quantum utilise ces commentaires pour fournir de l’aide aux utilisateurs lorsqu’ils pointent sur des symboles dans leur code Q #.
+De même, le serveur de langage fourni avec le kit de développement quantum utilise ces commentaires pour fournir de l’aide aux utilisateurs lorsqu’ils pointent sur des symboles dans leur Q# code.
 L’utilisation de commentaires de documentation peut aider les utilisateurs à obtenir un sens du code en fournissant une référence utile pour les détails qui ne sont pas facilement exprimés à l’aide des autres conventions de ce document.
 
 > [!div class="nextstepaction"]
@@ -454,8 +457,8 @@ is Adj + Ctl {
 
 Outre les suggestions précédentes, il est utile de rendre le code aussi lisible que possible afin d’utiliser des règles de mise en forme cohérentes.
 Ces règles de mise en forme par nature ont tendance à être quelque peu arbitraires et se caractérisent par des esthétiques personnelles.
-Néanmoins, nous vous recommandons de conserver un ensemble cohérent de conventions de mise en forme au sein d’un groupe de collaborateurs, et en particulier pour les grands projets Q # tels que le kit de développement quantique lui-même.
-Ces règles peuvent être appliquées automatiquement à l’aide de l’outil de mise en forme intégré au compilateur Q #.
+Néanmoins, nous vous recommandons de conserver un ensemble cohérent de conventions de mise en forme au sein d’un groupe de collaborateurs, et en particulier pour Q# les grands projets tels que le kit de développement quantique lui-même.
+Ces règles peuvent être appliquées automatiquement à l’aide de l’outil de mise en forme intégré au Q# compilateur.
 
 # <a name="guidance"></a>[Assistance](#tab/guidance) 
 

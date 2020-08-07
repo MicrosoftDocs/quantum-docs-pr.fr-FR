@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274856"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866874"
 ---
 # <a name="improving-documentation"></a>Amélioration de la documentation
 
@@ -25,7 +28,7 @@ Nous adoptons de la même manière la bibliothèque [MathJax](https://www.mathja
 Cela dit, chaque forme de documentation varie quelque peu dans les détails :
 
 - La **documentation conceptuelle** se compose d’un ensemble d’articles publiés dans https://docs.microsoft.com/quantum et qui décrivent tous les éléments de base de quantum computing aux spécifications techniques des formats d’échange. Ces articles sont écrits en [DocFX (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), une variante de démarque utilisée pour créer des ensembles de documentation enrichis.
-- La **référence d’API** est un ensemble de pages pour chaque fonction Q #, opération et type défini par l’utilisateur, publié sur https://docs.microsoft.com/qsharp/api/ . Ces pages documentent les entrées et les opérations à chaque appel, ainsi que des exemples et des liens vers des informations supplémentaires. La référence d’API est automatiquement extraite des petits documents DFM dans le code source Q # dans le cadre de chaque version.
+- La **référence d’API** est un ensemble de pages pour chaque Q# fonction, opération et type défini par l’utilisateur, publié sur https://docs.microsoft.com/qsharp/api/ . Ces pages documentent les entrées et les opérations à chaque appel, ainsi que des exemples et des liens vers des informations supplémentaires. La référence d’API est automatiquement extraite des petits documents DFM dans le Q# code source dans le cadre de chaque version.
 - Les fichiers **Readme <!----> . MD** inclus avec chaque exemple et Kata décrivent comment utiliser cet exemple ou Kata sont utilisés, ce qu’il couvre et comment il se réfère au reste du kit de développement quantique. Ces fichiers sont écrits à l’aide de la [démarque GitHub (GFM)](https://github.github.com/gfm/), une alternative plus légère à DFM qui est populaire pour l’attachement de la documentation directement aux dépôts de code.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>Contribution à la documentation conceptuelle
@@ -49,7 +52,7 @@ Si vous souhaitez inclure du code à partir du [référentiel d’exemples](http
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-Cette commande importera les lignes 4 à 8 du [ `Game.qs` fichier à partir de l' `chsh-game` exemple](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs), en les marquant comme Q # code en vue de la mise en surbrillance de la syntaxe.
+Cette commande importera les lignes 4 à 8 du [ `Game.qs` fichier de l' `chsh-game` exemple](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs), en les marquant comme Q# code à des fins de mise en surbrillance de la syntaxe.
 À l’aide de cette commande, vous pouvez éviter de dupliquer le code entre des articles conceptuels et le référentiel d’exemples, afin que l’exemple de code dans la documentation soit toujours aussi à jour que possible.
 
 ## <a name="contributing-to-the-api-references"></a>Contribution aux références d’API
@@ -64,7 +67,7 @@ Lorsque nous compilerons chaque version du kit de développement Quantum, ces co
 
 Par exemple, considérez la fonction `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)` .
 Un commentaire de documentation doit aider un utilisateur à apprendre à interpréter `bits` et `oracle` et à quoi la fonction est destinée.
-Chacun de ces éléments d’information peut être fourni au compilateur Q # par une section de démarque spéciale dans le commentaire de la documentation.
+Chacun de ces différents éléments d’information peut être fourni au Q# compilateur par une section de démarque spéciale dans le commentaire de la documentation.
 Pour l’exemple de `ControlledOnBitString` , nous pouvons écrire une commande semblable à la suivante :
 
 ```qsharp
@@ -139,7 +142,7 @@ Vous pouvez voir la version rendue du code ci-dessus dans la [documentation de l
 
 En plus de la pratique générale de la rédaction de documentation, l’écriture de commentaires de documentation API permet de garder à l’esprit les points suivants :
 
-- Le format de chaque commentaire de documentation doit correspondre à ce que le compilateur Q # attend pour que votre documentation apparaisse correctement. Certaines sections, telles que `/// # Remarks` allow pour le contenu de forme libre, les sections telles que la `/// # See Also` section sont plus restrictives.
+- Le format de chaque commentaire de documentation doit correspondre à ce que le Q# compilateur s’attend à ce que votre documentation apparaisse correctement. Certaines sections, telles que `/// # Remarks` allow pour le contenu de forme libre, les sections telles que la `/// # See Also` section sont plus restrictives.
 - Un lecteur peut lire la documentation de votre API sur le site principal de référence des API, sur le résumé de chaque espace de noms, ou même à partir de l’environnement de développement intégré (IDE) à l’aide des informations de pointage. En veillant à ce qu' `/// # Summary` il ne s’agisse pas d’une phrase plus longue, vous pouvez faire rapidement en sorte que votre lecteur effectue rapidement une recherche dans les résumés d’espaces de noms.
 - Votre documentation peut s’allonger bien plus longtemps que le code lui-même, mais ce n’est pas tout ! Même un petit morceau de code peut avoir des effets inattendus pour les utilisateurs qui ne connaissent pas le contexte dans lequel ce code existe. En fournissant des exemples concrets et des explications claires, vous pouvez aider les utilisateurs à tirer le meilleur parti du code qui leur est accessible.
 

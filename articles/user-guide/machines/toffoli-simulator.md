@@ -6,12 +6,15 @@ ms.author: ageller@microsoft.com
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: a6ceee592e628215511ec83475d9e25bf54674f7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870615"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868098"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>QDK (Quantum Development Kit) Toffoli Simulator
 
@@ -21,13 +24,13 @@ Alors que le simulateur Toffoli est plus limité en termes de fonctionnalités q
 
 ## <a name="invoking-the-toffoli-simulator"></a>Appel du simulateur Toffoli
 
-Vous exposez le simulateur Toffoli par le biais de la `ToffoliSimulator` classe. Pour plus d’informations, consultez [méthodes d’exécution d’un programme Q #](xref:microsoft.quantum.guide.host-programs).
+Vous exposez le simulateur Toffoli par le biais de la `ToffoliSimulator` classe. Pour plus d’informations, consultez [méthodes d’exécution d’un Q# programme](xref:microsoft.quantum.guide.host-programs).
 
 ### <a name="invoking-the-toffoli-simulator-from-c"></a>Appel du simulateur Toffoli à partir de C #
 
-Comme pour les autres ordinateurs cibles, vous créez d’abord une instance de la `ToffoliSimulator` classe, puis vous la transmettez comme premier paramètre de la méthode d’une opération `Run` .
+Comme pour les autres ordinateurs cibles, vous devez d’abord créer une instance de la classe `ToffoliSimulator`, puis la passer en tant que premier paramètre de la méthode `Run` d’une opération.
 
-Notez que, contrairement `QuantumSimulator` à la classe, la `ToffoliSimulator` classe n’implémente pas l' <xref:System.IDisposable> interface, ce qui signifie que vous n’avez pas besoin de la placer dans une `using` instruction.
+Notez que, contrairement à la classe `QuantumSimulator`, la classe `ToffoliSimulator` n’implémente pas l’interface <xref:System.IDisposable>. Vous n’avez donc pas besoin de la placer dans une instruction `using`.
 
 ```csharp
     var sim = new ToffoliSimulator();
@@ -37,7 +40,7 @@ Notez que, contrairement `QuantumSimulator` à la classe, la `ToffoliSimulator` 
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>Appel du simulateur Toffoli à partir de Python
 
-Utilisez la méthode [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) à partir de la bibliothèque Python avec l’opération Q # importée :
+Utilisez la méthode [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) à partir de la bibliothèque Python avec l’opération importée Q# :
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -45,7 +48,7 @@ qubit_result = myOperation.toffoli_simulate()
 
 ### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a>Appel du simulateur Toffoli à partir de la ligne de commande
 
-Quand vous exécutez un programme Q # à partir de la ligne de commande, utilisez le paramètre **--simulateur** (ou **-s** raccourci) pour spécifier l’ordinateur cible du simulateur Toffoli. La commande suivante exécute un programme à l’aide de l’estimateur de ressources : 
+Quand vous exécutez un Q# programme à partir de la ligne de commande, utilisez le paramètre **--simulateur** (ou **-s** raccourci) pour spécifier l’ordinateur cible du simulateur Toffoli. La commande suivante exécute un programme à l’aide de l’estimateur de ressources : 
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
@@ -53,7 +56,7 @@ dotnet run -s ToffoliSimulator
 
 ### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a>Appel du simulateur Toffoli à partir de blocs-notes Juptyer
 
-Utilisez la commande IQ # Magic [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) pour exécuter l’opération Q #.
+Utilisez la Q# commande magique [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) pour exécuter l' Q# opération.
 
 ```
 %toffoli myOperation

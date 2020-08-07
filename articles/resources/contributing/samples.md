@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.samples
-ms.openlocfilehash: 3bd0de04a448c74eea6c3e8e3a15dcbb19f9d705
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274807"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867506"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>Contribution des exemples au kit de développement quantique
 
@@ -47,8 +50,8 @@ En examinant les fichiers qui composent chaque dossier, observons l' [`algorithm
 
 | Fichier              | Description                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Q # projet utilisé pour générer l’exemple avec le kit SDK .NET Core |
-| `Game.qs`         | Opérations et fonctions Q # pour l’exemple                 |
+| `CHSHGame.csproj` | Q#projet utilisé pour générer l’exemple avec le kit SDK .NET Core |
+| `Game.qs`         | Q#opérations et fonctions pour l’exemple                 |
 | `Host.cs`         | Programme hôte C# utilisé pour exécuter l’exemple                     |
 | `host.py`         | Programme hôte python utilisé pour exécuter l’exemple                 |
 | `README.md`       | Documentation sur ce que fait l’exemple et comment l’utiliser    |
