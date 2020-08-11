@@ -6,23 +6,26 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871448"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866806"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Développer avec des notebooks Jupyter Q#
+# <a name="develop-with-no-locq-jupyter-notebooks"></a>Développer avec des notebooks Jupyter Q#
 
-Installez le QDK pour le développement d’opérations Q# sur des notebooks Jupyter Q#
+Installez le QDK pour le développement d’opérations Q# sur des notebooks Jupyter Q#.
 
 Les notebooks Jupyter permettent l’exécution de code sur place aux côtés d’instructions, de notes et d’autres contenus. Cet environnement est idéal pour écrire du code Q# avec des explications incorporées ou des tutoriels interactifs sur l’informatique quantique. Voici ce que vous devez faire pour commencer à créer vos propres notebooks Q#.
 
 > [!NOTE]
 > * Dans les notebooks Jupyter Q#, vous pouvez uniquement exécuter du code Q#, et les opérations ne peuvent pas être appelées à partir de programmes hôtes externes (par exemple, des fichiers Python ou C#). Cet environnement n’est pas approprié si votre objectif est de combiner un programme hôte classique externe avec le programme quantique.
 
-## <a name="install-the-iq-jupyter-kernel"></a>Installer le noyau Jupyter IQ#
+## <a name="install-the-ino-locq-jupyter-kernel"></a>Installer le noyau Jupyter IQ#
 
 IQ# (prononcé aïe-quiou-sharp) est une extension principalement utilisée par Jupyter et Python avec le SDK .NET Core qui offre les fonctionnalités de base nécessaires à la compilation et à la simulation des opérations Q#.
 
@@ -72,9 +75,9 @@ IQ# (prononcé aïe-quiou-sharp) est une extension principalement utilisée par 
 
 Et voilà ! Vous disposez maintenant du noyau IQ# pour Jupyter, qui fournit les fonctionnalités de base pour la compilation et l’exécution des opérations Q# à partir des notebooks Jupyter Q#.
 
-## <a name="create-your-first-q-notebook"></a>Créer votre premier notebook Q#
+## <a name="create-your-first-no-locq-notebook"></a>Créer votre premier notebook Q#
 
-Vous êtes maintenant prêt à vérifier l’installation du notebook Jupyter Q# en écrivant et en exécutant une simple opération Q#.
+Vous êtes maintenant prêt à vérifier l’installation de Jupyter Notebook Q# en écrivant et en exécutant une simple opération Q#.
 
 1. À partir de l’environnement que vous avez créé lors de l’installation (c’est-à-dire, soit l’environnement conda que vous avez créé, soit l’environnement Python dans lequel vous avez installé Jupyter), exécutez la commande suivante pour démarrer le serveur Jupyter Notebook :
 
@@ -84,15 +87,15 @@ Vous êtes maintenant prêt à vérifier l’installation du notebook Jupyter Q
 
     - Si le notebook Jupyter ne s’ouvre pas automatiquement dans votre navigateur, copiez et collez l’URL fournie par la ligne de commande dans votre navigateur.
 
-1. Choisissez Nouveau → Q# pour créer un notebook Jupyter avec un noyau Q#, puis ajoutez le code suivant à la première cellule du notebook :
+1. Choisissez Nouveau → Q# pour créer un Jupyter Notebook avec un noyau Q#, puis ajoutez le code suivant à la première cellule du notebook :
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 
 1. Exécutez cette cellule du notebook :
 
-    ![Cellule de notebook Jupyter avec code Q#](~/media/install-guide-jupyter.png)
+    ![Cellule de Jupyter Notebook avec code Q#](~/media/install-guide-jupyter.png)
 
-    Vous devriez voir `SampleQuantumRandomNumberGenerator` dans la sortie de la cellule. Lorsqu’il est exécuté dans un notebook Jupyter, le code Q# est compilé et la cellule affiche le nom des opérations qu’il trouve.
+    Vous devriez voir `SampleQuantumRandomNumberGenerator` dans la sortie de la cellule. Lorsqu’il est exécuté dans Jupyter Notebook, le code Q# est compilé et la cellule affiche le nom des opérations qu’il trouve.
 
 1. Dans une nouvelle cellule, exécutez l’opération que vous venez de créer (dans un simulateur) à l’aide de la commande `%simulate` :
 

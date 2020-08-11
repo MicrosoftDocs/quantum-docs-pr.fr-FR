@@ -6,14 +6,17 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871431"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867605"
 ---
-# <a name="develop-with-q-command-line-applications"></a>Développer avec des applications en ligne de commande Q#
+# <a name="develop-with-no-locq-command-line-applications"></a>Développer avec des applications en ligne de commande Q#
 
 Les programmes Q# peuvent être exécutés seuls et sans pilote dans un langage hôte comme C#, F# ou Python.
 
@@ -48,7 +51,7 @@ Si vous souhaitez installer le QDK pour un autre environnement, entrez ceci sur 
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
-## <a name="develop-with-q"></a>Développer avec Q#
+## <a name="develop-with-no-locq"></a>Développer avec Q#
 
 Suivez les instructions situées sous l’onglet correspondant à votre environnement.
 
@@ -93,7 +96,7 @@ Pour exécuter l’application :
 
 ### <a name="other-editors-with-the-command-line"></a>[Autres éditeurs avec la ligne de commande](#tab/tabid-cmdline)
 
-Vérifiez votre installation en créant une application `Hello World` Q#.
+Vérifiez votre installation en créant une application Q# `Hello World`.
 
 1. Installez les modèles de projet.
 
@@ -111,7 +114,7 @@ Vérifiez votre installation en créant une application `Hello World` Q#.
     cd runSayHello
     ```
 
-    Ce répertoire doit maintenant contenir un fichier `Program.qs`. Il s’agit d’un programme Q# qui définit une opération simple pour afficher un message dans la console. Vous pouvez modifier ce modèle avec un éditeur de texte et le remplacer par vos propres applications quantiques. 
+    Ce répertoire doit maintenant contenir un fichier `Program.qs`. Il s’agit d’un programme Q# qui définit une opération simple pour afficher un message dans la console. Vous pouvez modifier ce modèle avec un éditeur de texte et le remplacer par vos propres applications quantiques. 
 
 1. Exécutez le programme :
     ```dotnetcli

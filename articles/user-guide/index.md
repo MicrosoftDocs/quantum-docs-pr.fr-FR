@@ -1,19 +1,22 @@
 ---
-title: Guide de l’utilisateur Q#
+title: Guide de l’utilisateurQ#
 description: Vue d’ensemble de l’objectif et du contenu du Guide de l’utilisateur
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: 078d86c808b26c7f0b7b2577020cd9cef9491a9d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885006"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869628"
 ---
-# <a name="the-q-user-guide"></a>Guide de l’utilisateur Q#
+# <a name="the-no-locq-user-guide"></a>Guide de l’utilisateurQ#
 
 Bienvenue dans le Guide de l’utilisateur Q# ! 
 
@@ -21,19 +24,19 @@ Dans les différentes rubriques de ce guide, nous allons détailler les concepts
 
 ## <a name="user-guide-contents"></a>Contenu du Guide de l’utilisateur
 
-- [Concepts Q# de base](xref:microsoft.quantum.guide.basics) : présentation de l’objectif et des fonctionnalités du langage de programmation Q#. 
+- [Concepts de base Q#](xref:microsoft.quantum.guide.basics) : présentation de l’objectif et des fonctionnalités du langage de programmation Q#. 
 
 - [Méthodes d’exécution d’un programme Q#](xref:microsoft.quantum.guide.host-programs) : explique comment est exécuté un programme Q# et présente les différentes façons d’appeler le programme, à savoir, à partir de la ligne de commande, dans les notebooks Jupyter Q# ou à partir d’un programme hôte classique écrit en Python ou en langage .NET.
 
-### <a name="q-language"></a>Langage Q#
+### <a name="no-locq-language"></a>Language Q#
 
-- [Types en Q#](xref:microsoft.quantum.guide.types) : présente le modèle de type Q# et décrit la syntaxe permettant de spécifier et d’utiliser les types.
+- [Types dans Q#](xref:microsoft.quantum.guide.types) : présente le modèle de type Q# et décrit la syntaxe permettant de spécifier et d’utiliser les types.
 
 - [Expressions de type](xref:microsoft.quantum.guide.expressions) : explique comment spécifier, référencer, combiner et utiliser les valeurs de chaque type en Q#. 
 
-### <a name="using-q"></a>Utilisation de Q#
+### <a name="using-no-locq"></a>Utilisation de Q#
 
-- [Structure de fichier Q#](xref:microsoft.quantum.guide.filestructure) : décrit la structure et la syntaxe d’un fichier Q# `*.qs`.
+- [Structure de fichiers Q#](xref:microsoft.quantum.guide.filestructure) : décrit la structure et la syntaxe d’un fichier `*.qs` Q#.
 
 - [Opérations et fonctions](xref:microsoft.quantum.guide.operationsfunctions) détaille les deux types pouvant être appelés du langage Q# : les *opérations* (qui incluent une action sur les registres qubit) et les *fonctions* (qui fonctionnent strictement avec des informations classiques). 
     Vous voyez ici comment les définir et les appeler, notamment les versions adjacentes et contrôlées des opérations quantiques.
@@ -64,4 +67,4 @@ Dans les différentes rubriques de ce guide, nous allons détailler les concepts
 
 ### <a name="quick-reference-pages"></a>Pages de référence rapide
 
-- [Commandes IQ# Magic](xref:microsoft.quantum.guide.quickref.iqsharp) : page de référence rapide pour les commandes IQ# Magic dans les notebooks Jupyter Q#.
+- [Commandes magic IQ#](xref:microsoft.quantum.guide.quickref.iqsharp) : page de référence rapide pour les commandes IQ# magic dans les notebooks Jupyter Q#.

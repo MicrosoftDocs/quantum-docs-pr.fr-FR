@@ -6,22 +6,25 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
-ms.openlocfilehash: ede4ad005090e4ac8ffd9b05d27edfa91f8c50ab
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327700"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866942"
 ---
-# <a name="what-are-the-q-programming-language-and-qdk"></a>Présentation du langage de programmation Q# et du QDK
+# <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Présentation du langage de programmation Q# et du QDK
 
-Q# est le langage de programmation open source conçu par Microsoft pour le développement et l’exécution d’algorithmes quantiques. Il fait partie du kit de développement Quantum (QDK) qui comprend des [bibliothèques Q#](xref:microsoft.quantum.libraries), des [simulateurs quantiques](xref:microsoft.quantum.machines), des [extensions pour d’autres environnements de programmation](xref:microsoft.quantum.install) et la [documentation des API](xref:microsoft.quantum.standardlibsintro). En plus de la bibliothèque Q# standard, le QDK contient des bibliothèques de données numériques, de chimie et de Machine Learning.
+Q# est le langage de programmation open source conçu par Microsoft pour le développement et l’exécution d’algorithmes quantiques. Il fait partie du kit de développement Quantum (QDK) qui comprend des [bibliothèquesQ#](xref:microsoft.quantum.libraries) , des [simulateurs quantiques](xref:microsoft.quantum.machines), des [extensions pour d’autres environnements de programmation](xref:microsoft.quantum.install) et la [documentation des API](xref:microsoft.quantum.standardlibsintro). En plus de la bibliothèque Q# standard, le QDK contient des bibliothèques de données numériques, de chimie et de Machine Learning.
 
 Le langage de programmation Q# utilise des éléments connus des langages Python, C# et F#. Il prend en charge un modèle de procédure de base permettant l’écriture de programmes avec des boucles, des instructions if/then ainsi que des types de données courants. Il introduit également de nouvelles structures de données et opérations propres à l’informatique quantique.
 
 ## <a name="what-can-i-do-with-the-qdk"></a>À quoi sert le QDK ?
 
-Le QDK est un kit de développement complet pour Q#. Vous pouvez l’utiliser avec des outils et des langages courants pour développer des applications quantiques exécutables dans divers environnements. Les programmes Q# peuvent s’exécuter en tant qu’application en ligne de commande, via les notebooks Jupyter, ou utiliser un programme hôte Python ou .NET.
+Le QDK est un kit de développement complet pour Q#. Vous pouvez l’utiliser avec des outils et des langages courants pour développer des applications quantiques exécutables dans divers environnements. Les programmes Q# peuvent s’exécuter en tant qu’application en ligne de commande, via les notebooks Jupyter, ou utiliser un programme hôte Python ou .NET.
 
 ### <a name="develop-in-common-tools-and-environments"></a>Développer dans des environnements et outils courants
 
@@ -41,9 +44,9 @@ Exécutez vos programmes quantiques sur un simulateur quantique d’état comple
 | ---- | ---- |
 | **Je débute avec l’informatique quantique** | Découvrez quelques-uns des concepts fondamentaux de la physique quantique et de l’informatique quantique dans [Concepts clés](xref:microsoft.quantum.overview.understanding).|
 | **Je souhaite approfondir mes connaissances du langage Q#** | Explorez les types, les expressions, les variables ainsi que la structure des programmes quantiques dans le [Guide de l’utilisateur Q#](xref:microsoft.quantum.guide).|
-| **Je souhaite commencer directement à écrire des programmes quantiques** | Configurez votre environnement Q# et commencez à écrire des programmes quantiques en vous aidant des [tutoriels](xref:microsoft.quantum.install).|
+| **Je souhaite commencer directement à écrire des programmes quantiques** | Configurez votre environnement Q# et commencez à écrire des programmes quantiques en vous aidant des [démarrages rapides](xref:microsoft.quantum.install).|
 
-## <a name="how-does-q-work"></a>Comment fonctionne Q# ?
+## <a name="how-does-no-locq-work"></a>Comment Q# fonctionne-t-il ?
 
 Un programme Q# peut être compilé dans une application en ligne de commande autonome, ou être appelé par un programme hôte écrit en Python ou dans un langage .NET.
 
@@ -59,11 +62,11 @@ Tous les éléments dont vous avez besoin pour écrire et exécuter des programm
 
 - Le moyen le plus rapide de commencer est d’exécuter [Q# à partir de la ligne de commande](xref:microsoft.quantum.install.standalone).
 
-- Vous pouvez opter pour une exécution autonome des [notebooks Jupyter avec IQ#](xref:microsoft.quantum.install.jupyter), une extension Jupyter conçue pour la compilation, la simulation et la visualisation des programmes Q#.
+- Vous pouvez opter pour une exécution autonome des [notebooks Jupyter avec IQ#](xref:microsoft.quantum.install.jupyter), une extension Jupyter conçue pour la compilation, la simulation et la visualisation des programmes Q#.
 
 - Si vous êtes familiarisé avec [Python](xref:microsoft.quantum.install.python), vous pouvez l’utiliser comme plateforme de programmation hôte pour commencer. Python est largement utilisé, non seulement parmi les développeurs, mais aussi par les scientifiques, les chercheurs et les enseignants.
 
-- Si vous avez déjà utilisé [C#, F# ou VB.NET](xref:microsoft.quantum.install.cs) et que vous êtes familiarisé avec l’environnement de développement Visual Studio, il vous suffit d’ajouter quelques extensions à Visual Studio afin de le préparer pour Q#.  
+- Si vous avez déjà utilisé [C#, F# ou VB.NET](xref:microsoft.quantum.install.cs) et que vous êtes familiarisé avec l’environnement de développement Visual Studio, il vous suffit d’ajouter quelques extensions à Visual Studio afin de le préparer pour Q#.  
 
 ## <a name="summary"></a>Résumé
 

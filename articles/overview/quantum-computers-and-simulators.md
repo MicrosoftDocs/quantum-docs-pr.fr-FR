@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
-ms.openlocfilehash: 2f5345504ba31211c97493e78af1563d575881e4
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 299baea75865a4f0ece6b490cef3301dd2a672ac
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327745"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867707"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>Ordinateurs quantiques et simulateurs quantiques
 
@@ -40,7 +43,7 @@ Les qubits topologiques se caractérisent par une stabilité accrue et une rési
 
 ## <a name="microsoft-and-quantum-hardware-partnerships"></a>Partenariats entre Microsoft et des fabricants de matériel quantique
 
-Microsoft travaille en partenariat avec les fabricants de matériel quantique IonQ, Honeywell et QCI en vue de rendre les ordinateurs quantiques accessibles aux développeurs dans le futur. En exploitant la plateforme Azure Quantum, les développeurs pourront utiliser le langage Q# et le kit de développement Quantum (QDK) de Microsoft pour écrire des programmes quantiques et les exécuter à distance.
+Microsoft travaille en partenariat avec les fabricants de matériel quantique IonQ, Honeywell et QCI en vue de rendre les ordinateurs quantiques accessibles aux développeurs dans le futur. En exploitant la plateforme Azure Quantum, les développeurs pourront utiliser le langage Q# et le kit de développement Quantum (QDK) de Microsoft pour écrire des programmes quantiques et les exécuter à distance.
 
 ## <a name="quantum-computations"></a>Calculs quantiques
 

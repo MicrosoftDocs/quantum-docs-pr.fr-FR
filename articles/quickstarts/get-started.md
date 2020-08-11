@@ -6,12 +6,15 @@ author: bradben
 ms.author: bradben
 ms.date: 5/10/2020
 ms.topic: overview
-ms.openlocfilehash: ff4a3dc829423525e18d89d5ed3d621079d1a524
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274128"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867511"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Bien démarrer avec le Quantum Development Kit (QDK)
 
@@ -54,12 +57,12 @@ Si vous êtes novice en développement quantique, nous savons que cette matière
 
 La documentation actuelle contient les sujets supplémentaires suivants.
 
-### <a name="q-developer-guides"></a>Guides du développeur Q#
+### <a name="no-locq-developer-guides"></a>Guides du développeur Q#
 
-* Le [Guide de l’utilisateur Q#](xref:microsoft.quantum.guide) détaille les concepts de base utilisés pour la création de programmes quantiques en Q#.
-* L’article [Simulateurs quantiques et applications hôtes](xref:microsoft.quantum.machines) décrit l’exécution des algorithmes quantiques, les machines quantiques disponibles et l’écriture d’un pilote non-Q# pour le programme quantique.
+* [Le Guide de l’utilisateur Q#](xref:microsoft.quantum.guide) détaille les concepts de base utilisés pour la création de programmes quantiques en Q#.
+* L’article [Simulateurs quantiques et applications hôtes](xref:microsoft.quantum.machines) décrit l’exécution des algorithmes quantiques, les machines quantiques disponibles et l’écriture d’un pilote non Q# pour le programme quantique.
 
-### <a name="q-libraries"></a>Bibliothèques Q#
+### <a name="no-locq-libraries"></a>Bibliothèques Q#
 
 * L’article [Bibliothèques standard Q#](xref:microsoft.quantum.libraries.standard.intro) décrit les opérations et les fonctions qui prennent en charge à la fois la spécification du contrôle de langage classique et les algorithmes quantiques Q#. 
     Les sujets abordés incluent le flux de contrôle, les structures de données, la correction des erreurs, le test et le débogage. 
@@ -79,7 +82,7 @@ La documentation actuelle contient les sujets supplémentaires suivants.
 * [Notes de publication de Microsoft Quantum Development Kit](xref:microsoft.quantum.relnotes).
 
 
-## <a name="be-a-part-of-the-q-open-source-community"></a>Faire partie de la communauté open source Q#
+## <a name="be-a-part-of-the-no-locq-open-source-community"></a>Faire partie de la communauté open source Q#
 
 Le Quantum Development Kit est un kit de développement open source qui permet aux développeurs de rendre l’informatique quantique plus accessible à tous afin que nous puissions relever certains des défis les plus pressants au monde.  Les institutions académiques qui nécessitent des logiciels open source pourront déployer Q# pour mettre en œuvre l’apprentissage de l’informatique quantique et le développement de projets quantiques. Le fait que le kit de développement soit open source permet également aux développeurs et aux experts du domaine de contribuer aux améliorations et aux idées par le biais de leur code.
 

@@ -6,16 +6,19 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436549"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866738"
 ---
-# <a name="develop-with-q-and-python"></a>Développer en Q# et Python
+# <a name="develop-with-no-locq-and-python"></a>Développer en Q# et Python
 
-Installez le QDK pour développer des programmes hôtes Python afin d’appeler des opérations Q#.
+Installez le QDK pour développer des programmes hôtes Python afin d’appeler des opérations en Q#.
 
 ## <a name="install-the-qsharp-python-package"></a>Installer le package Python `qsharp`
 
@@ -83,7 +86,7 @@ Si vous souhaitez utiliser VS Code :
 
 Si vous souhaitez utiliser un autre éditeur, les instructions ci-dessus vous indiqueront tout ce que vous avez besoin de savoir.
 
-## <a name="write-your-first-q-program"></a>Écrire votre premier programme Q#
+## <a name="write-your-first-no-locq-program"></a>Écrire votre premier programme Q#
 
 Vous êtes maintenant prêt à vérifier l’installation de votre package Python `qsharp` en écrivant et en exécutant un programme Q# simple.
 
