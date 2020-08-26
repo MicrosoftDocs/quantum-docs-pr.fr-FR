@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.drawcategorical
+name: DrawCategorical
+type: operation
+namespace: Microsoft.Quantum.Random
+summary: >-
+  Dessine un échantillon aléatoire à partir d’une distribution catégorique spécifiée par une liste d’probablities.
+
+
+  La probabilité de sélectionner un index spécifique est proportionnelle à la valeur de l’élément de tableau au niveau de cet index.
+
+  Les éléments de tableau qui sont égaux à zéro sont ignorés et leurs index ne sont jamais retournés. Si un élément de tableau est inférieur à zéro, ou si aucun élément de tableau n’est supérieur à zéro, l’opération échoue.
+syntax: 'operation DrawCategorical (probs : Double[]) : Int'
+input:
+  content: '(probs : Double[])'
+  types:
+  - name: probs
+    summary: Tableau de nombres à virgule flottante proportionnel à la probabilité de sélectionner chaque index.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Int
+  types:
+  - summary: Entier $i $ avec la probabilité $ \Pr (i) = p_i/\ sum_i p_i $, où $p _i $ est le $i élément $ Th de `probs` .
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- microsoft.quantum.random.categoricaldistribution
+metadata:
+  ms.openlocfilehash: 1389b62eb1e5e1749abbb605cd7be8ef3925b167
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864074"

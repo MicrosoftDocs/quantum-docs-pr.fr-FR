@@ -1,0 +1,45 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.random
+name: Microsoft.Quantum.Random
+functions:
+- uid: microsoft.quantum.random.categoricaldistribution
+  summary: Retourne une distribution catégorique discrète, dans laquelle la probabilité pour chaque liste finie de résultats donnés est explicitement spécifiée.
+- uid: microsoft.quantum.random.continuousuniformdistribution
+  summary: Retourne une distribution uniforme sur un intervalle inclusif donné.
+- uid: microsoft.quantum.random.discreteuniformdistribution
+  summary: Retourne une distribution uniforme sur une plage inclusive donnée.
+- uid: microsoft.quantum.random.normaldistribution
+  summary: Retourne une distribution normale avec une moyenne et une variance données.
+- uid: microsoft.quantum.random.standardnormaldistribution
+  summary: Retourne une distribution normale avec la moyenne 0 et la variance 1.
+- uid: microsoft.quantum.random.transformedcontinuousdistribution
+  summary: À partir d’une distribution continue, retourne une nouvelle distribution qui transforme l’original par une fonction donnée.
+operations:
+- uid: microsoft.quantum.random.drawcategorical
+  summary: Dessine un échantillon aléatoire à partir d’une distribution catégorique spécifiée par une liste d’probablities.
+- uid: microsoft.quantum.random.drawrandombool
+  summary: Pour une probabilité de réussite donnée, retourne une seule version d’essai de Bernoulli qui est vraie avec la probabilité donnée.
+- uid: microsoft.quantum.random.drawrandomdouble
+  summary: Dessine un nombre réel aléatoire dans un intervalle inclusif donné.
+- uid: microsoft.quantum.random.drawrandomint
+  summary: Dessine un entier aléatoire dans une plage inclusive donnée.
+- uid: microsoft.quantum.random.drawrandompauli
+  summary: Dessine une valeur Pauli aléatoire.
+- uid: microsoft.quantum.random.maybechooseelement
+  summary: À partir d’un tableau de données et d’une distribution sur ses index, tente de choisir un élément au hasard.
+newtypes:
+- uid: microsoft.quantum.random.bigdiscretedistribution
+  summary: Représente une distribution de probabilité Student sur des entiers de taille arbitraire.
+- uid: microsoft.quantum.random.complexdistribution
+  summary: Représente une distribution de probabilité Student sur des nombres complexes.
+- uid: microsoft.quantum.random.continuousdistribution
+  summary: Représente une distribution de probabilité Student sur des nombres réels.
+- uid: microsoft.quantum.random.discretedistribution
+  summary: Représente une distribution de probabilité Student sur des entiers.
+metadata:
+  ms.openlocfilehash: 04ceecba6c304e33452dd5eac014f59522a76e91
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864005"

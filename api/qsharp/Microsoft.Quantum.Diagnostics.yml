@@ -1,6 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.diagnostics
 name: Microsoft.Quantum.Diagnostics
+summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions et des opérations utiles à des fins de diagnostic, notamment des opérations d’assertion et des fonctions de revendication."
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: Déclare que deux tableaux de valeurs booléennes sont égaux.
@@ -35,6 +36,10 @@ functions:
 - uid: microsoft.quantum.diagnostics.nearequalityfactd
   summary: Déclare qu’une valeur à virgule flottante classique a la valeur attendue jusqu’à une petite tolérance de 1e-10.
 operations:
+- uid: microsoft.quantum.diagnostics.allowatmostncallsca
+  summary: Entre un appel à cette opération et son voisin, déclare qu’une opération donnée est appelée au plus un certain nombre de fois.
+- uid: microsoft.quantum.diagnostics.allowatmostnqubits
+  summary: Entre un appel à cette opération et son voisin, déclare qu’au plus un nombre donné de qubits supplémentaires sont alloués avec des instructions using.
 - uid: microsoft.quantum.diagnostics.assertallzero
   summary: Déclarez que les qubits donnés sont tous dans l’État $ \ket {0} $.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
@@ -67,6 +72,8 @@ operations:
     Par conséquent, cette opération n’a besoin que d’un seul appel à chaque opération en cours de test, mais nécessite deux fois plus de qubits à allouer.
 
     Cette assertion peut être utilisée pour s’assurer, par exemple, qu’une version optimisée d’une opération agit de la même manière que son implémentation naïve, ou qu’une opération qui agit sur une plage d’entrées non quantiques accepte les cas connus.
+- uid: microsoft.quantum.diagnostics.assertphase
+  summary: Déclare que la phase d’un état de superposition égal a la valeur attendue.
 - uid: microsoft.quantum.diagnostics.assertqubit
   summary: Déclare que qubit `q` se trouve dans le eigenstate attendu de l’opérateur Pauli Z.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
@@ -74,23 +81,24 @@ operations:
     Déclare qu’un qubit dans l’État attendu.
 
 
-    `expected`représente un vecteur complexe, $ \ket{\Psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+    `expected` représente un vecteur complexe, $ \ket{\Psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
     Le premier élément des tuples représentant chacun des $a $, $b $ est la partie réelle du nombre complexe, tandis que le deuxième est la partie imaginaire.
 
     Le dernier argument définit la tolérance avec laquelle l’assertion est faite.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: Déclare que qubit `q` se trouve dans le eigenstate attendu de l’opérateur Z Pauli jusqu’à une tolérance donnée.
+- uid: microsoft.quantum.diagnostics.dumpoperation
+  summary: Pour une opération donnée, affiche des diagnostics sur l’opération qui sont rendues disponibles par la cible d’exécution actuelle.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: Attribut reconnu par le compilateur via lequel un autre nom peut être défini qui peut être utilisé lors du chargement d’un type ou pouvant être appelé à des fins de test.
 - uid: microsoft.quantum.diagnostics.test
   summary: Attribut reconnu par le compilateur utilisé pour marquer un test unitaire.
-summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms contient des fonctions et des opérations utiles à des fins de diagnostic, notamment des opérations d’assertion et des fonctions de revendication."
 metadata:
-  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 16c457188160a3e0d2b4d04b40af0dabbbdc0f0a
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884575"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863045"
