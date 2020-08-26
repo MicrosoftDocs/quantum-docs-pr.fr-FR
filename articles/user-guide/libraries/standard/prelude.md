@@ -2,19 +2,19 @@
 title: Opérations et fonctions intrinsèques dans QDK
 description: En savoir plus sur les opérations et les fonctions intrinsèques dans le QDK, y compris les fonctions classiques et les opérations d’unité, de rotation et de mesure.
 author: QuantumWriter
-uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868438"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863723"
 ---
 # <a name="the-prelude"></a>Préambule destiné à #
 
@@ -128,7 +128,7 @@ L' <xref:microsoft.quantum.intrinsic.rfrac> opération implémente une rotation 
 Il diffère de <xref:microsoft.quantum.intrinsic.r> en ce que l’angle de rotation est spécifié sous la forme de deux entrées de type `Int` , interprétées comme une fraction dyadic.
 Par conséquent, `RFrac` possède une signature `((Pauli, Int, Int, Qubit) => Unit is Adj + Ctl)` .
 Il implémente le qubit unitaire $ \exp (i \pi k \sigma/2 ^ n) $, où $ \sigma $ est la matrice Pauli correspondant au premier argument, $k $ est le deuxième argument et $n $ est le troisième argument.
-`RFrac(_,k,n,_)`est le même que `R(_,-πk/2^n,_)` ; Notez que l’angle est la valeur *négative* de la fraction.
+`RFrac(_,k,n,_)` est le même que `R(_,-πk/2^n,_)` ; Notez que l’angle est la valeur *négative* de la fraction.
 
 L' <xref:microsoft.quantum.intrinsic.rx> opération implémente une rotation autour de Pauli $X $ Axis.
 Il possède une signature `((Double, Qubit) => Unit is Adj + Ctl)` .
@@ -144,11 +144,11 @@ Il possède une signature `((Double, Qubit) => Unit is Adj + Ctl)` .
 
 L' <xref:microsoft.quantum.intrinsic.r1> opération implémente une rotation par le montant donné autour de $ \ket {1} $, le eigenstate $-$1 de $Z $.
 Il possède une signature `((Double, Qubit) => Unit is Adj + Ctl)` .
-`R1(phi,_)`est le même que celui `R(PauliZ,phi,_)` suivi par `R(PauliI,-phi,_)` .
+`R1(phi,_)` est le même que celui `R(PauliZ,phi,_)` suivi par `R(PauliI,-phi,_)` .
 
 L' <xref:microsoft.quantum.intrinsic.r1frac> opération implémente une rotation fractionnaire en fonction de la valeur indiquée autour de Z = 1 eigenstate.
 Il possède une signature `((Int,Int, Qubit) => Unit is Adj + Ctl)` .
-`R1Frac(k,n,_)`est le même que celui `RFrac(PauliZ,-k.n+1,_)` suivi par `RFrac(PauliI,k,n+1,_)` .
+`R1Frac(k,n,_)` est le même que celui `RFrac(PauliZ,-k.n+1,_)` suivi par `RFrac(PauliI,k,n+1,_)` .
 
 Voici un exemple d’opération de rotation (autour du Pauli $Z $ AXIS, dans cette instance) mappée sur la sphère Bloch :
 
@@ -170,7 +170,7 @@ Il possède une signature `((Qubit, Qubit, Qubit) => Unit is Adj + Ctl)` .
 L' <xref:microsoft.quantum.intrinsic.swap> opération permute les États de quantum de deux qubits.
 Autrement dit, il implémente la matrice \begin{Equation} \operatorname{SWAP} \mathrel{ : =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}.
 \end{Equation} possède une signature `((Qubit, Qubit) => Unit is Adj + Ctl)` .
-`SWAP(q1,q2)`est équivalent à `CNOT(q1, q2)` suivi de `CNOT(q2, q1)` , puis `CNOT(q1, q2)` .
+`SWAP(q1,q2)` est équivalent à `CNOT(q1, q2)` suivi de `CNOT(q2, q1)` , puis `CNOT(q1, q2)` .
 
 > [!NOTE]
 > La porte d’échange n’est *pas* la même que la réorganisation des éléments d’une variable de type `Qubit[]` .
@@ -202,7 +202,7 @@ Les opérations de mesure ne prennent en charge ni le `Adjoint` functor ni le `C
 
 L' <xref:microsoft.quantum.intrinsic.measure> opération effectue une mesure conjointe d’un ou plusieurs qubits dans le produit spécifié des opérateurs Pauli.
 Si le tableau Pauli et le tableau qubit ont des longueurs différentes, l’opération échoue.
-`Measure`a une signature `((Pauli[], Qubit[]) => Result)` .
+`Measure` a une signature `((Pauli[], Qubit[]) => Result)` .
 
 Notez qu’une mesure conjointe n’est pas identique à la mesure individuelle de chaque qubit.
 Par exemple, considérez l’État $ \ket {11} = \ket {1} \otimes \Ket {1} = X\otimes X \ket {00} $.
@@ -219,7 +219,7 @@ L' <xref:microsoft.quantum.intrinsic.m> opération mesure l’opérateur Pauli $
 
 Le <xref:microsoft.quantum.measurement.multim> mesure le Pauli $Z $ Operator *séparément* sur chacun d’un tableau de qubits, en retournant le *tableau* de `Result` valeurs obtenues pour chaque qubit.
 Dans certains cas, cela peut être optimisé. Il possède une signature ( `Qubit[] => Result[])` .
-`MultiM(qs)`équivaut à :
+`MultiM(qs)` équivaut à :
 
 ```qsharp
 mutable rs = new Result[Length(qs)];

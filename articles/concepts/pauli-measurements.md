@@ -91,8 +91,8 @@ En fait, il existe d’autres mesures courantes qui se produisent dans quantum c
 Dans ce cas, il est courant d’examiner la mesure d’un opérateur Pauli, en général un opérateur tel que $ X, Y, z $ ou $ z \otimes z, x \otimes x, x \otimes Y $ , etc.
 
 > [!TIP]
->Dans Q# , les opérateurs Pauli multi-qubit sont généralement représentés par des tableaux de type `Pauli[]` .
->Par exemple, pour représenter $ X \otimes Z \otimes Y $ , vous pouvez utiliser le tableau `[PauliX, PauliZ, PauliY]` .
+> Dans Q# , les opérateurs Pauli multi-qubit sont généralement représentés par des tableaux de type `Pauli[]` .
+> Par exemple, pour représenter $ X \otimes Z \otimes Y $ , vous pouvez utiliser le tableau `[PauliX, PauliZ, PauliY]` .
 
 L’étude des mesures en termes d’opérateurs Pauli est particulièrement courante dans le sous-champ de la correction des erreurs Quantum.
 Dans Q# , nous suivons une convention similaire. nous expliquons maintenant cette vue alternative des mesures.
@@ -168,20 +168,20 @@ $$
 Ainsi, les produits tenseur de deux opérateurs Pauli- $ Z $ forment une matrice composée de deux espaces composés de $ + 1 $ et $ -1 $ valeurs propres.
 Comme avec le cas qubit, les deux constituent un demi-espace, ce qui signifie que la moitié de l’espace de vecteur accessible appartient au $ + 1 $ eigenspace et la moitié restante à la $ eigenspace-1 $ .
 En général, il est facile de voir à partir de la définition du produit tenseur que tout produit tenseur d’opérateurs Pauli- $ Z $ et l’identité en obéissent également.
-Par exemple :
+Par exemple,
 
 $$
 \begin{align}
     \otimes \boldone Z =\begin{bmatrix}
         1 & 0 & 0 0 &\\\\
-        0 & 1 & 0 & 0\\\\
+        0 &  1 &  0 &  0 \\\\
         0 & & -1 0 &\\\\
         0 0 0 & & & -1 \end{bmatrix} .
 \end{align}
 $$
 
 Comme précédemment, toute transformation unitaire de ces matrices décrit également deux demi-espaces étiquetés par $ \pm 1 $ valeurs propres.
-Par exemple, $ x \otimes x = h \otimes h (z \otimes z) h \otimes h $ à partir de l’identité $ Z = HxH $ .
+Par exemple, $ x \otimes x = h \otimes h (z \otimes z) h \otimes h $  à partir de l’identité $ Z = HxH $ .
 Comme dans le cas d’une qubit, toutes les mesures Pauli à deux qubit peuvent être écrites en u $ ^ \dagger (Z \otimes \id ) u $ pour $ 4 \times 4 $ matrices unitaires $ u $ . Nous énumérons les transformations dans le tableau suivant.
 
 > [!NOTE]
@@ -190,15 +190,14 @@ Comme dans le cas d’une qubit, toutes les mesures Pauli à deux qubit peuvent 
 >     \operatorname{ÉCHANGE } &=
 >     \left( \begin { matrice}
 >1 & 0 & 0 0 &\\\\
->0 & 0 & 1 & 0\\\\
->0 & 1 & 0 & 0\\\\
+>         0 & 0 & 1 & 0 \\\\
+>         0 & 1 & 0 & 0 \\\\
 >0 0 0 & & & 1 > \end { matrice } \right ) >     \end{align}
 > $$
->utilisé pour simuler l’opération intrinsèque [`SWAP`](xref:microsoft.quantum.intrinsic) .
+> utilisé pour simuler l’opération intrinsèque [`SWAP`](xref:microsoft.quantum.intrinsic) .
 
 |Transformation d’unité de mesure Pauli ||
 |----------------------|------------------------|
-|$ \otimes \boldone Z $ | $\boldone \otimes \boldone$|
 |$ \otimes \boldone Z $ | $\boldone\otimes \boldone$|
 |$ \otimes \boldone X $ | $ \otimes \boldone H $|
 |$ \otimes \boldone Y $ | $ HS \dagger \otimes \boldone ^ $|
@@ -240,7 +239,7 @@ Ils coïncident donc avec les exigences indiquées ci-dessus.
 Dans Q# , ces mesures retournent $ j $ si la mesure produit un résultat dans le eigenspace du signe $ (-1) ^ j $ .
 Avoir des mesures Pauli comme fonctionnalité intégrée dans Q# est utile, car la mesure de ces opérateurs nécessite des chaînes longues de transformations de base et non contrôlées pour décrire le $ portail U de diagonale $ nécessaire pour exprimer l’opération en tant que produit tenseur de $ Z $ et $ \id $ .
 En étant en mesure de spécifier que vous souhaitez effectuer une de ces mesures prédéfinies, vous n’avez pas besoin de vous soucier de la façon de transformer votre base de manière à ce qu’une mesure de base de calcul fournisse les informations nécessaires.
-Q#gère automatiquement toutes les transformations de base nécessaires.
+Q# gère automatiquement toutes les transformations de base nécessaires.
 Pour plus d’informations, consultez [`Measure`](xref:microsoft.quantum.intrinsic.measure) les [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) opérations et.
 
 ## <a name="the-no-cloning-theorem"></a>Le pas de clonage
@@ -257,7 +256,7 @@ Bien qu’une preuve complète de l’qubits de non-clonage soit un peu trop tec
 
 Pour un tel ordinateur Quantum, l’opération de clonage doit être décrite par une matrice d’unités.
 Nous interdisent la mesure, car cela corromprait l’État Quantum que nous essayons de cloner.
-Pour simuler l’opération de clonage, nous voulons que la matrice d’unités utilise la propriété qui$$
+Pour simuler l’opération de clonage, nous voulons que la matrice d’unités utilise la propriété qui $$
   U \ket { \psi } \ket { 0 } = \ket { \psi }\ket{\psi}
 $$
 pour n’importe quel état $ \ket { \psi } $ .

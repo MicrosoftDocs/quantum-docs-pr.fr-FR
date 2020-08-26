@@ -1,5 +1,5 @@
 ---
-title: Explorez l’enchevêtrement avecQ#
+title: Explorez l’enchevêtrement avec Q#
 description: Découvrez comment écrire un programme Quantum dans Q# . Développez une application pour le traitement des états de Bell à l’aide du Quantum Development kit (QDK)
 author: geduardo
 ms.author: v-edsanc@microsoft.com
@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c66d26b5ea253d6fc2633fbe52fa35ba703d185d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869696"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863438"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutoriel : Explorer l’intrication avec Q\#
 
@@ -32,7 +32,7 @@ Si vous êtes prêt à commencer à programmer, suivez ces étapes préalables 
 
 Vous pouvez également suivre la narration sans installer le QDK, en examinant les vues d’ensemble du Q# langage de programmation et les premiers concepts de quantum computing.
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>Dans ce tutoriel, vous apprendrez à :
+## <a name="in-this-tutorial-youll-learn-how-to"></a>Ce didacticiel vous montre comment effectuer les opérations suivantes :
 
 > [!div class="checklist"]
 > * Créer et combiner des opérations dans Q\#
@@ -52,11 +52,11 @@ Maintenant, nous sommes prêts à montrer comment Q# exprime ce comportement.  V
 
 ## <a name="creating-a-no-locq-project"></a>Création d’un Q# projet
 
-La première chose à faire est de créer un nouveau Q# projet. Dans ce didacticiel, nous allons utiliser l’environnement basé sur des [applications en ligne de commande avec vs code](xref:microsoft.quantum.install.standalone).
+La première chose à faire est de créer un nouveau Q# projet. Dans ce didacticiel, nous allons utiliser l’environnement basé sur des [ Q# applications avec vs code](xref:microsoft.quantum.install.standalone).
 
 Pour créer un nouveau projet, dans VS Code : 
 
-1. Cliquez sur **Afficher**la  ->  **palette de commandes** et sélectionnez ** Q# : créer un projet**.
+1. Cliquez sur **Affichage** -> **Palette de commandes** et sélectionnez **Q# : Créer un projet**.
 2. Cliquez sur **Application console autonome**.
 3. Accédez à l’emplacement où vous souhaitez enregistrer le projet, puis cliquez sur **Créer le projet**.
 4. Une fois le projet créé, cliquez sur **Ouvrir le nouveau projet...** dans le coin inférieur droit.
@@ -125,7 +125,7 @@ Une opération quantique transforme l’état d’un qubit. Il arrive que les op
 
 Pour démontrer l’effet de l’opération de `SetQubitState`, une opération de `TestBellState` est ensuite ajoutée. Cette opération prend comme entrée un `Zero` ou un `One`, puis appelle l’opération `SetQubitState` un certain nombre de fois avec cette entrée, puis compte le nombre de fois où `Zero` a été retourné par la mesure du qubit et le nombre de fois où `One` a été retourné. Bien entendu, dans cette première simulation de l’opération `TestBellState`, nous nous attendons à ce que la sortie indique que toutes les mesures du qubit défini avec `Zero` comme entrée de paramètre retournent `Zero` et que toutes les mesures d’un qubit défini avec `One` comme entrée de paramètre retournent `One`. En outre, nous ajouterons du code à `TestBellState` pour illustrer la superposition et l’enchevêtrement.
 
-Ajoutez l’opération suivante au fichier `Bell.qs`, à l’intérieur de l’espace de noms, une fois l’opération `SetQubitState` terminée :
+Ajoutez l’opération suivante au fichier `Program.qs`, à l’intérieur de l’espace de noms, une fois l’opération `SetQubitState` terminée :
 
 ```qsharp
    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
@@ -161,13 +161,13 @@ Par défaut, les variables dans Q# sont immuables ; leur valeur ne peut pas êt
 
 Si vous avez besoin d’une variable dont la valeur puisse changer, telle que `numOnes` dans l’exemple, vous pouvez la déclarer avec le mot clé `mutable`. Il est possible de modifier la valeur d’une variable muable à l’aide d’une instruction `setQubitState`.
 
-Dans les deux cas, le type d’une variable est inféré par le compilateur. Q#ne requiert pas d’annotations de type pour les variables.
+Dans les deux cas, le type d’une variable est inféré par le compilateur. Q# ne requiert pas d’annotations de type pour les variables.
 
 #### <a name="about-using-statements-in-q"></a>À propos `using` des instructions dans Q\#
 
 L' `using` instruction est également spéciale à Q# . Elle permet d’allouer des qubits à utiliser dans un bloc de code. Dans Q# , tous les qubits sont alloués et libérés dynamiquement, au lieu d’être des ressources fixes qui s’y trouvent pour toute la durée de vie d’un algorithme complexe. Une instruction `using` alloue un ensemble de qubits au début, puis libère ces qubits à la fin du bloc.
 
-## <a name="execute-the-code-from-the-command-line"></a>Exécuter le code à partir de la ligne de commande
+## <a name="run-the-code-from-the-command-prompt"></a>Exécuter le code à partir de l’invite de commandes
 
 Pour exécuter le code, nous devons spécifier le compilateur *qui* peut être appelé pour s’exécuter quand nous fournissons la `dotnet run` commande. Pour ce faire, il suffit de modifier le Q# fichier en ajoutant une ligne qui `@EntryPoint()` précède directement l’appelable : l' `TestBellState` opération dans ce cas. Le code complet doit être :
 
@@ -208,7 +208,7 @@ namespace Bell {
 }
 ```
 
-Pour exécuter le programme, vous devez spécifier `count` les `initial` arguments et à partir de la ligne de commande. Nous allons choisir exemple `count = 1000` et `initial = One` . Entrez la commande suivante :
+Pour exécuter le programme, vous devez spécifier `count` les `initial` arguments et à partir de l’invite de commandes. Nous allons choisir exemple `count = 1000` et `initial = One` . Entrez la commande suivante :
 
 ```dotnetcli
 dotnet run --count 1000 --initial One
@@ -235,7 +235,7 @@ Test results (# of 0s, # of 1s):
 
 Voyons maintenant comment Q# exprime les moyens de mettre qubits en superposition.  Rappelez-vous que l’état d’un qubit peut être dans une superposition de 0 et de 1.  Nous allons utiliser l’opération `Hadamard` dans ce but. Si le qubit est dans l’un des états classiques (quand une mesure retourne toujours `Zero` ou toujours `One`), alors l’opération `Hadamard` ou `H` le place dans un état où une mesure du qubit retourne `Zero` dans 50 % des cas et `One` dans 50 % des cas.  D’un point de vue conceptuel, le qubit peut être considéré à mi-chemin entre `Zero` et `One`.  Maintenant, quand nous simulons l’opération `TestBellState`, nous voyons que les résultats retournent grosso modo un nombre égal de `Zero` et de `One` après la mesure.  
 
-### <a name="x-flips-qubit-state"></a>`X`retourne l’État qubit
+### <a name="x-flips-qubit-state"></a>`X` retourne l’État qubit
 
 Nous allons d’abord nous contenter d’essayer d’inverser le qubit (si le qubit est à l’état `Zero`, il passe à `One` et vice versa). Pour cela, une opération `X` est nécessaire avant d’effectuer la mesure dans `TestBellState` :
 
@@ -265,7 +265,7 @@ Test results (# of 0s, # of 1s):
 
 À présent, nous allons explorer les propriétés Quantum du qubits.
 
-### <a name="h-prepares-superposition"></a>`H`prépare la superposition
+### <a name="h-prepares-superposition"></a>`H` prépare la superposition
 
 Il nous suffit de remplacer l’opération `X` dans l’exécution précédente par une opération `H` ou Hadamard. Au lieu d’inverser entièrement le qubit de 0 à 1, nous allons ne l’inverser qu’à moitié. Les lignes remplacées dans `TestBellState` ressemblent maintenant à ce qui suit :
 

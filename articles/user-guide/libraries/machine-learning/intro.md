@@ -8,18 +8,18 @@ uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9a24d0b4145d0db2fd8c4e16be807165fff5fb32
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 65b0aa6a7f385765933d4d89ce34901f77cf76ec
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868914"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863100"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Présentation des Machine Learning Quantum
 
 ## <a name="framework-and-goals"></a>Infrastructure et objectifs
 
-L’encodage et le traitement des informations Quantum constituent une alternative puissante aux classifieurs Quantum Machine Learning classiques, en particulier à coder les données dans des registres quantiques concis par rapport au nombre de fonctionnalités, à employer systématiquement l’enchevêtrement quantique comme ressource de calcul et à utiliser la mesure quantique pour l’inférence de classe.
+L’encodage et le traitement des informations Quantum constituent une alternative puissante aux classifieurs Quantum Machine Learning classiques. En particulier, il nous permet d’encoder des données dans des registres quantiques concis par rapport au nombre de fonctionnalités, en employant systématiquement l’enchevêtrement quantique comme ressource de calcul et en employant une mesure de Quantum pour l’inférence de classe.
 Le classifieur Quantum axé sur les circuits est une solution Quantum relativement simple qui associe l’encodage des données à un circuit Quantum démêler la rapide suivi d’une mesure pour déduire les étiquettes de classe des exemples de données.
 L’objectif est de garantir la caractérisation et le stockage classiques des circuits de sujet, ainsi que la formation hybride Quantum/classique des paramètres de circuit, même pour les espaces de fonctionnalités extrêmement volumineux.
 
@@ -29,14 +29,18 @@ La classification est une tâche de Machine Learning supervisée, où l’object
 À l’instar des méthodes traditionnelles, la classification Quantum se compose de trois étapes :
 - encodage des données
 - préparation d’un état de classifieur
-- mesure en raison de la nature probabiliste de la mesure, ces trois étapes doivent être répétées plusieurs fois. La mesure peut être considérée comme un équivalent quantique de l’activation non linéaire.
-L’encodage et le calcul de l’état du classifieur sont effectués au moyen de *circuits quantiques*. Alors que le circuit d’encodage est généralement piloté par les données et sans paramètre, le circuit de classifieur contient un ensemble suffisant de paramètres en cours d’apprentissage. 
+- mesure en raison de la nature probabiliste de la mesure, ces trois étapes doivent être répétées plusieurs fois. L’encodage et le calcul de l’état du classifieur sont effectués au moyen de *circuits quantiques*. Alors que le circuit d’encodage est généralement piloté par les données et sans paramètre, le circuit de classifieur contient un ensemble suffisant de paramètres en cours d’apprentissage. 
 
 Dans la solution proposée, le circuit de classifieur est composé de rotations à qubit unique et de rotations contrôlées à deux qubit. Les paramètres en apprentissage ici sont les angles de rotation. Les portes de rotation et de rotation contrôlée sont connues pour être *universelles* pour le calcul Quantum, ce qui signifie que toute matrice de poids unitaire peut être décomposée en un circuit suffisamment long constitué de ces portes.
 
+Dans la version proposée, un seul circuit suivi d’une seule estimation de fréquence est pris en charge.
+Par conséquent, la solution est une analogie quantique d’une machine à vecteurs de support avec un noyau polynomial à faible degré.
+
 ![Perceptron multicouches et classificateur centré sur les circuits](~/media/DLvsQCC.png)
 
-Nous pouvons comparer ce modèle à un perceptron multicouche pour obtenir une meilleure compréhension de la structure de base. Dans le Perceptron, le prédiction $p (y | x, \Theta) $ est paramétrée par l’ensemble des poids $ \Theta $ qui déterminent les fonctions linéaires qui connectent les fonctions d’activation non linéaires (neurones). Ces paramètres peuvent être formés pour créer le modèle. Au niveau de la couche de sortie, nous pouvons obtenir la probabilité d’un échantillon appartenant à une classe en utilisant des fonctions d’activation non linéaires comme SoftMax. Dans le classifieur de circuit centré sur les circuits, le prédiction est paramétrée par les angles de rotation des rotations à qubit et à deux qubit contrôlées du circuit du modèle. De la même façon, ces paramètres peuvent être formés par une version hybride Quantum/classique de l’algorithme de descente de dégradé. Pour calculer la sortie, au lieu d’utiliser des fonctions d’activation non linéaires, la probabilité de la classe est obtenue en lisant des mesures répétées sur un qubit spécifique après les rotations contrôlées. Pour encoder les données classiques dans un État Quantum, nous utilisons un circuit de codage contrôlable pour la préparation de l’État.
+Une conception de classifieur Quantum simple peut être comparée à une solution SVM (support vector machine) classique. L’inférence pour un exemple de données $x $ dans le cas de SVM est effectuée à l’aide d’une forme de noyau optimale $ \sum \ alpha_j k (x_j, x) $ où $k $ est une fonction de noyau spécifique.
+
+En revanche, un classifieur quantum utilise le $p de prédiction (o x, U (\Theta)) = 〈 U (\Theta) x | M | U (\Theta) x 〉 $, qui est similaire dans l’esprit, mais techniquement très différent. Ainsi, lorsqu’un encodage d’amplitude simple est utilisé, $p (o x, U (\Theta)) $ est une forme quadratique dans les amplitudes de $x $, mais les coefficients de ce formulaire ne sont plus appris de manière indépendante. ils sont à la place regroupés à partir des éléments de matrice du circuit $U (\Theta) $, qui a généralement beaucoup moins de paramètres d’apprentissage $ \Theta $ que la dimension du vecteur $x $. Le degré polynomial de $p (y x │ x, U (\Theta)) $ dans les fonctionnalités d’origine peut être augmenté jusqu’à $2 ^ l $ en utilisant un encodage de produit Quantum sur $l $ copies de $x $.
 
 Notre architecture explore des circuits relativement superficiels, qui doivent donc être *rapidement emmêlants* afin de capturer toutes les corrélations entre les fonctionnalités de données de toutes les plages. La figure ci-dessous montre un exemple du composant de circuit le plus rapide et le plus utile. Même si un circuit avec cette géométrie se compose uniquement de $3 n + 1 $ portes, la matrice de poids unitaire qu’il calcule assure une communication croisée importante entre les fonctionnalités de $2 ^ n $.
 
@@ -66,6 +70,8 @@ Clairement $b $ doit être dans l’intervalle $ (-0.5, + 0,5) $ pour être sign
 
 Un cas d’apprentissage $ (x, y) \Dans \mathcal{D} $ est considéré comme une *classification* incorrecte en raison de l’écart $b $ si l’étiquette déduite pour $x $ comme par Rule1 est en fait différente de $y $. Le nombre global de classifications incorrectes est le *score d’apprentissage* du classifieur en fonction de l’écart $b $. L’écart *optimal* du classifieur $b $ minimise le score de formation. Il est facile de le voir, étant donné les estimations de probabilité précalculées $ \{ P (M = y_2 | U (\Theta) x) | (x, *) \in\mathcal{D} \} $, l’écart optimal du classifieur peut être trouvé par la recherche binaire dans Interval $ (-0.5, + 0.5) $ en effectuant au maximum $ \ Log_2 (| \mathcal{D} |) $ étapes.
 
-### <a name="reference"></a>Informations de référence
+### <a name="reference"></a>Référence
 
 Ces informations doivent être suffisantes pour commencer à utiliser le code. Toutefois, si vous souhaitez en savoir plus sur ce modèle, veuillez lire la proposition d’origine : [ *« classificateurs quantiques centrés sur le circuit », Maria Schuld, Alex Bocharov, Krysta Svore et Nathan Wiebe*](https://arxiv.org/abs/1804.00633)
+
+En plus de l’exemple de code que vous verrez dans les étapes suivantes, vous pouvez également commencer à explorer la classification quantique dans [ce didacticiel](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification) . 

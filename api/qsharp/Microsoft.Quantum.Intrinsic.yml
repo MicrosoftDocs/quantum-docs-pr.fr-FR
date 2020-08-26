@@ -86,12 +86,7 @@ operations:
 
     > Cette opération utilise la Convention de signe **opposée** de @"microsoft.quantum.intrinsic.r" et n’inclut pas le facteur de $1/2 $ inclus par @"microsoft.quantum.intrinsic.r1" .
 - uid: microsoft.quantum.intrinsic.random
-  summary: >-
-    L’opération aléatoire prend un tableau de doubles comme entrée et retourne un index sélectionné de façon aléatoire dans le tableau en tant que `Int` .
-
-    La probabilité de sélectionner un index spécifique est proportionnelle à la valeur de l’élément de tableau au niveau de cet index.
-
-    Les éléments de tableau qui sont égaux à zéro sont ignorés et leurs index ne sont jamais retournés. Si un élément de tableau est inférieur à zéro, ou si aucun élément de tableau n’est supérieur à zéro, l’opération échoue.
+  summary: "\n> [!WARNING]\n> Déprécié\n\nRandom est déconseillé. Utilisez plutôt @\"microsoft.quantum.random.drawcategorical\"."
 - uid: microsoft.quantum.intrinsic.reset
   summary: Étant donné un qubit unique, le mesure et s’assure qu’il est dans l’État | 0 ⟩, de sorte qu’il peut être libéré en toute sécurité.
 - uid: microsoft.quantum.intrinsic.resetall
@@ -157,9 +152,9 @@ operations:
 
     \end{align}
 metadata:
-  ms.openlocfilehash: c0be1da035393f32fa2949214d79ecb8a4c5ccb3
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 87002c73fd66a4b05e690daec1bed37d09708118
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885228"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88862706"
