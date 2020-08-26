@@ -6,7 +6,7 @@ items:
     items:
       - name: Vue d’ensemble de l’installation
         href: index.md
-      - name: Applications en ligne de commande Q#
+      - name: Applications Q#
         href: install-command-line.md
       - name: Notebooks Jupyter Q#
         href: install-jupyter.md
