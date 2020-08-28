@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d5338eb740716d9d7f408703347f572688bbccb2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1892431c3e332385a5bcefa357eb64a9fac3f381
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868183"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992239"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimation des ressources du kit de développement quantique (QDK)
 
@@ -69,7 +69,7 @@ BorrowedWidth   0
 
 ### <a name="invoking-the-resources-estimator-from-python"></a>Appel de l’estimateur de ressources à partir de Python
 
-Utilisez la méthode [estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) à partir de la bibliothèque Python avec l’opération importée Q# :
+Utilisez la méthode [estimate_resources ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) à partir de la bibliothèque Python avec l’opération importée Q# :
 
 ```python
 qubit_result = myOperation.estimate_resources()
@@ -127,7 +127,7 @@ L’estimateur de ressources effectue le suivi des mesures suivantes :
 |----|----|
 |__CNOT__    |Nombre d’exécutions d' `CNOT` opérations (également appelées opérations Pauli X contrôlées).|
 |__QubitClifford__ |Nombre d’exécutions d’opérations qubit Clifford et Pauli uniques.|
-|__mesure__    |Nombre d’exécutions de mesures.  |
+|__Measure__    |Nombre d’exécutions de mesures.  |
 |__R__    |Nombre d’exécutions de rotations à qubit unique, à l’exception des `T` opérations Clifford et Pauli.  |
 |__T__    |Nombre d’exécutions d' `T` opérations et de leurs conjugués, y compris les `T` opérations, T_x = H. T. H et T_y = Hy. t. hy.  |
 |__Profondeur__|Limite inférieure de la profondeur du circuit Quantum exécutée par l' Q# opération. Par défaut, la mesure de profondeur compte uniquement les `T` portes. Pour plus d’informations, consultez [compteur de profondeur](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |

@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e44a366b7eea133499beb44dbb338a02174c0073
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: f1eca44dabd72cd107d72d3b9e3ad1081c19c27d
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863186"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992188"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Méthodes d’exécution d’un Q# programme
 
@@ -32,7 +32,7 @@ Pour mieux comprendre ces processus et leurs différences, nous envisageons un Q
 
 ## <a name="basic-no-locq-program"></a>Programme de base Q#
 
-Un programme Quantum de base peut consister à préparer un qubit dans une superposition égale des États $ \ket {0} $ et $ \ket {1} $, à le mesurer et à retourner le résultat, qui sera, de manière aléatoire, l’un de ces deux États avec une probabilité égale.
+Un programme Quantum de base peut consister à préparer un qubit dans une superposition égale des États $ \ Ket {0} $ et $ \ Ket {1} $, à le mesurer et à retourner le résultat, qui sera, de manière aléatoire, l’un de ces deux États avec une probabilité égale.
 En effet, ce processus est au cœur du démarrage rapide du [Générateur de nombres aléatoires quantiques](xref:microsoft.quantum.quickstarts.qrng) .
 
 Dans Q# , cette opération est effectuée par le code suivant :
@@ -346,7 +346,7 @@ Multiple qubits:
 
 Par défaut, la `import qsharp` commande charge tous les `.qs` fichiers dans le dossier actif et rend leurs Q# opérations et fonctions disponibles à l’intérieur du script Python.
 
-Pour charger du Q# code à partir d’un autre dossier, l' [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) peut être utilisée pour ajouter une référence à un `.csproj` fichier pour un Q# projet (autrement dit, un projet qui référence `Microsoft.Quantum.Sdk` ).
+Pour charger du Q# code à partir d’un autre dossier, l' [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) peut être utilisée pour ajouter une référence à un `.csproj` fichier pour un Q# projet (autrement dit, un projet qui référence `Microsoft.Quantum.Sdk` ).
 Cette commande permet de compiler tous les `.qs` fichiers du dossier contenant le `.csproj` et ses sous-dossiers. Il charge également de manière récursive tous les packages référencés via `PackageReference` ou les Q# projets référencés via `ProjectReference` dans ce `.csproj` fichier.
 
 Par exemple, le code python suivant importe un projet externe, en référençant son chemin d’accès relatif au dossier actif, et appelle l’une de ses Q# opérations :
@@ -365,7 +365,7 @@ Adding reference to project: ../qrng/Qrng.csproj
 Qrng result: 0
 ```
 
-Pour charger des packages externes contenant Q# du code, utilisez l' [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages).
+Pour charger des packages externes contenant Q# du code, utilisez l' [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages).
 
 Si le Q# Code du dossier actif dépend de projets ou de packages externes, vous risquez de rencontrer des erreurs lors de l’exécution de `import qsharp` , puisque les dépendances n’ont pas encore été chargées.
 Pour charger des packages ou Q# des projets externes requis au cours de la `import qsharp` commande, assurez-vous que le dossier contenant le script Python contient un `.csproj` fichier qui fait référence à `Microsoft.Quantum.Sdk` . Dans cela `.csproj` , ajoutez la propriété `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` à `<PropertyGroup>` . Cela indique à I Q# de charger de manière récursive tous `ProjectReference` les `PackageReference` éléments ou trouvés dans celui-ci `.csproj` au cours de la `import qsharp` commande.
