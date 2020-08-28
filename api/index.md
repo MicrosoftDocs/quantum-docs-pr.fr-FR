@@ -6,12 +6,12 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
-ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+ms.openlocfilehash: e6ae75ef66a82dd1d0c0b07f52694974e86b4406
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79022509"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992273"
 ---
 # <a name="q-api-reference"></a>Informations de référence sur l’API Q# #
 
@@ -19,6 +19,6 @@ Ces informations de référence sur l’API comprennent la bibliothèque standar
 
 - [Bibliothèques Q#](xref:microsoft.quantum.qsharplibintro)
 - [Bibliothèques .NET](xref:microsoft.quantum.dotnetlibsintro)
-- [Bibliothèques Python](https://docs.microsoft.com/python/qsharp)
+- [Bibliothèques Python](https://docs.microsoft.com/python/qsharp-core/qsharp)
 
 Pour plus d’informations sur les bibliothèques Q#, consultez <xref:microsoft.quantum.libraries>.
