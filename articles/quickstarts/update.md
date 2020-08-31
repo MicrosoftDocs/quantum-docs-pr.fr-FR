@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866755"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863639"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Mettre à jour le Microsoft Quantum Development Kit (QDK)
 
@@ -37,7 +37,7 @@ Que vous utilisiez C# ou Python pour héberger des opérations Q#, suivez ces in
     dotnet --version
     ```
 
-    Vérifiez que la sortie est `3.1.100` ou ultérieure. Si ce n’est pas le cas, installez la [dernière version](https://dotnet.microsoft.com/download) et revérifiez. Suivez ensuite les instructions ci-dessous en fonction de votre configuration (Visual Studio, Visual Studio Code ou directement à la ligne de commande).
+    Vérifiez que la sortie est `3.1.100` ou ultérieure. Si ce n’est pas le cas, installez la [dernière version](https://dotnet.microsoft.com/download) et revérifiez. Suivez ensuite les instructions ci-dessous en fonction de votre configuration (Visual Studio, Visual Studio Code ou directement à l’invite de commandes).
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>Mettre à jour des projets Q# dans Visual Studio
  
@@ -84,9 +84,9 @@ Vous pouvez maintenant passer directement à la [mise à jour de votre extension
 
 1. Dans Visual Studio Code, ouvrez le dossier contenant le projet à mettre à jour.
 2. Sélectionnez **Terminal** -> **Nouveau terminal**.
-3. Suivez les instructions de mise à jour à l’aide de la ligne de commande (directement ci-dessous).
+3. Suivez les instructions de mise à jour en utilisant l’invite de commandes (directement ci-dessous).
 
-### <a name="update-no-locq-projects-using-the-command-line"></a>Mettre à jour des projets Q# à l’aide de la ligne de commande
+### <a name="update-no-locq-projects-using-the-command-prompt"></a>Mettre à jour des projets Q# en utilisant l’invite de commandes
 
 1. Accédez au dossier contenant votre fichier projet principal.
 
@@ -309,7 +309,7 @@ Vous pouvez maintenant utiliser le noyau IQ# mis à jour pour exécuter vos not
 
 1. Mettez à jour les modèles de projet Quantum pour .NET.
 
-    Depuis la ligne de commande :
+    À partir de l’invite de commandes :
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates

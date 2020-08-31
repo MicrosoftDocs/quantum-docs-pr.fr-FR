@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 24318380e0e63957a51961762a33446fe0121b21
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867554"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863672"
 ---
 # <a name="develop-with-no-locq-and-net"></a>Développer avec Q# et .NET
 
@@ -25,16 +25,16 @@ Tout d’abord, nous allons créer l’application Q# et l’hôte .NET, puis n
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Installez le kit de développement Quantum [pour une utilisation avec les projets en ligne de commande Q#](xref:microsoft.quantum.install.standalone).
+- Installez le kit de développement Quantum [pour l’utiliser avec les projets Q#](xref:microsoft.quantum.install.standalone).
 
 ## <a name="creating-a-no-locq-library-and-a-net-host"></a>Création d’une bibliothèque Q# et d’un hôte .NET
 
 La première étape consiste à créer des projets pour votre bibliothèque Q# et pour l’hôte .NET qui appellera les opérations et les fonctions définies dans votre bibliothèque Q#.
 
 Suivez les instructions situées sous l’onglet correspondant à votre environnement de développement.
-Si vous utilisez un éditeur autre que Visual Studio ou VS Code, suivez les étapes pour la ligne de commande.
+Si vous utilisez un éditeur autre que Visual Studio ou VS Code, suivez les étapes de l’invite de commandes.
 
-### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code ou ligne de commande](#tab/tabid-cmdline)
+### <a name="visual-studio-code-or-command-prompt"></a>[Visual Studio Code ou invite de commandes](#tab/tabid-cmdline)
 
 - Créer une bibliothèque Q#
 
@@ -106,4 +106,4 @@ Pour appeler cette opération à partir de .NET sur un simulateur quantique, vou
     
 ## <a name="next-steps"></a>Étapes suivantes
 
-Maintenant que vous avez configuré le kit de développement Quantum pour les deux programmes en ligne de commande Q# et pour l’interopérabilité avec .NET, vous pouvez écrire et [exécuter votre premier programme quantique](xref:microsoft.quantum.quickstarts.qrng).
+Maintenant que vous avez configuré le kit de développement Quantum pour les deux applications Q# et pour l’interopérabilité avec .NET, vous pouvez écrire et exécuter [votre premier programme quantique](xref:microsoft.quantum.quickstarts.qrng).

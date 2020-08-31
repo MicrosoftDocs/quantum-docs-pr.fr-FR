@@ -9,12 +9,12 @@ ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867511"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863752"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Bien démarrer avec le Quantum Development Kit (QDK)
 
@@ -36,7 +36,7 @@ Pour débuter avec l’informatique quantique et être prêt à en exploiter tou
 * [Explorer l’intrication avec Q#](xref:microsoft.quantum.write-program) : ce tutoriel vous guide pour écrire un programme Q# qui illustre certains des concepts fondamentaux de la programmation quantique.
     Si vous n’êtes pas prêt à commencer à écrire du code, vous pouvez quand même suivre le tutoriel sans installer le QDK afin d’avoir une vue d’ensemble du langage de programmation Q# et des concepts cardinaux de l’informatique quantique.
 * [Algorithme de recherche de Grover](xref:microsoft.quantum.quickstarts.search) : consultez cet exemple de programme Q# qui donne une idée de la puissance du langage Q# pour exprimer l’algorithme quantique en effectuant l’abstraction des opérations quantiques de bas niveau.
-    Ce tutoriel vous guide dans le développement du programme sous forme d’application en ligne de commande Q#, dans Visual Studio ou Visual Studio Code.
+    Ce tutoriel vous guide dans le développement du programme sous forme d’application Q# dans Visual Studio ou Visual Studio Code.
 
 ### <a name="learning-further"></a>En savoir plus
 * Les [modules Microsoft Learn sur l’informatique quantique](https://docs.microsoft.com/learn/browse/?term=quantum) vous permettent d’apprendre les concepts fondamentaux à votre rythme et selon votre planning. Notre [premier module](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/) vous fait découvrir les principes de base de la création de programmes quantiques avec le QDK.
