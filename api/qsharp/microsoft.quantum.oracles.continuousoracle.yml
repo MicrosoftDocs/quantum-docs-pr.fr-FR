@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.continuousoracle
 name: ContinuousOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   Représente une Oracle à temps continu.
 
@@ -10,9 +10,9 @@ summary: >-
   Il s’agit d’un Oracle qui implémente $U (\delta t) : \ket{\Psi (t)} \mapsto \ket{\Psi (t + \delta t)} $ pour toutes les heures $t $, où $U $ est une opération fixe et où $ \delta t $ est un nombre réel non négatif.
 syntax: newtype ContinuousOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 9c5776dfa2ec4cfbd128a6e20158f1be23680f11
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0fb357af013d37aeb9576085a6e977a36ac90074
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681319"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332144"

@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applyifelseb
 name: ApplyIfElseB
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Applique l’une des deux opérations, en fonction de la valeur d’un bit classique.
 
 
-  À partir d' `bit`un bit, applique `trueOp` l' `trueInput` opération avec comme entrée `bit` lorsque `true`est et s' `falseOp(falseInput)` applique `bit` lorsque `false`est.
+  À partir d’un bit `bit` , applique l’opération `trueOp` avec `trueInput` comme entrée lorsque `bit` est `true` et s’applique `falseOp(falseInput)` lorsque `bit` est `false` .
 syntax: "operation ApplyIfElseB (bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U))"
@@ -17,7 +17,7 @@ input:
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: Opération à appliquer lorsque `bit` a la valeur `true`.
+    summary: Opération à appliquer lorsque a la `bit` valeur `true` .
     isOperation: true
     input:
       types:
@@ -28,11 +28,11 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: trueInput
-    summary: Entrée à fournir `trueOp` lorsque `bit` a `true`la valeur.
+    summary: Entrée à fournir `trueOp` lorsque a la valeur `bit` `true` .
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: Opération à appliquer lorsque `bit` a la valeur `false`.
+    summary: Opération à appliquer lorsque a la `bit` valeur `false` .
     isOperation: true
     input:
       types:
@@ -43,7 +43,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: falseInput
-    summary: Entrée à fournir `falseOp` lorsque `bit` a `false`la valeur.
+    summary: Entrée à fournir `falseOp` lorsque a la valeur `bit` `false` .
     uid: "'U"
     isLocal: true
 output:
@@ -63,9 +63,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: cce5dba2473874f5af7c8cbb41a69ed6ba62e7c7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 756cfb829ce29e658641e9e7a4e42c626bce4798
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675029"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350419"
