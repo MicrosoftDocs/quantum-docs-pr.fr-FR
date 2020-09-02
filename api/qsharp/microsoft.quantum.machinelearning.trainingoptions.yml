@@ -2,10 +2,10 @@
 uid: microsoft.quantum.machinelearning.trainingoptions
 name: TrainingOptions
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Collection d’options à utiliser pour l’apprentissage des classifieurs Quantum.
 remarks: >-
-  Ce type défini par l’utilisateur ne doit pas être créé directement, mais il @"microsoft.quantum.machinelearning.defaulttrainingoptions" doit être spécifié en `w/` appelant, puis en utilisant l’opérateur pour remplacer des valeurs par défaut différentes.
+  Ce type défini par l’utilisateur ne doit pas être créé directement, mais il doit être spécifié en appelant @"microsoft.quantum.machinelearning.defaulttrainingoptions" , puis en utilisant l' `w/` opérateur pour remplacer des valeurs par défaut différentes.
 
 
   Par exemple, pour utiliser les mesures 100 000 et au plus 8 époques de formation :
@@ -20,9 +20,9 @@ remarks: >-
 syntax: newtype TrainingOptions = (Double, Double, Int, Int, Int, Int, Double, Int, (String -> Unit));
 references: '- [arXiv:1804.00633](https://arxiv.org/abs/1804.00633)'
 metadata:
-  ms.openlocfilehash: b8a24b0a9e036c0a6c1eea229ca76d62e400fde8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e9020ee77dbad438c06e6504416303968ec5bba3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684333"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335510"
