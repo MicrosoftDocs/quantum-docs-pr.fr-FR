@@ -8,9 +8,9 @@ operations:
 - uid: microsoft.quantum.characterization.discretephaseestimationiteration
   summary: Exécute une seule itération d’un algorithme d’estimation de phase itérative (contrôlée de manière classique) à l’aide des puissances de nombre entier d’une entité Oracle.
 - uid: microsoft.quantum.characterization.estimatefrequency
-  summary: À partir d’une préparation et d’une mesure, évalue la fréquence à laquelle cette `Zero`mesure s’est déroulée (retourne) en effectuant un nombre donné d’essais.
+  summary: À partir d’une préparation et d’une mesure, évalue la fréquence à laquelle cette mesure s’est déroulée (retourne `Zero` ) en effectuant un nombre donné d’essais.
 - uid: microsoft.quantum.characterization.estimatefrequencya
-  summary: Étant donné une préparation qui est adjointable et mesure, évalue la fréquence à laquelle cette mesure s’est `Zero`déroulée (retourne) en effectuant un nombre donné d’essais.
+  summary: Étant donné une préparation qui est adjointable et mesure, évalue la fréquence à laquelle cette mesure s’est déroulée (retourne `Zero` ) en effectuant un nombre donné d’essais.
 - uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
   summary: À partir de deux opérations qui préparent les copies d’un État, évalue la partie imaginaire du chevauchement entre les États préparés par chaque opération.
 - uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
@@ -22,15 +22,15 @@ operations:
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Mesure l’opérateur d’identité sur un registre de qubits.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
-  summary: Exécute l’algorithme d’estimation de phase quantique pour `U` un `targetState`Oracle donné et, en lisant la phase dans un registre quantique Big-endian.
+  summary: Exécute l’algorithme d’estimation de phase quantique pour un Oracle donné `U` et `targetState` , en lisant la phase dans un registre quantique Big-endian.
 - uid: microsoft.quantum.characterization.robustphaseestimation
-  summary: Exécute l’algorithme d’estimation de phase quantique non itérative fiable pour un `U` serveur Oracle et eigenstate donné, et fournit une estimation réelle de la phase avec la mise à l’échelle des écarts à la limite Heisenberg.
+  summary: Exécute l’algorithme d’estimation de phase quantique non itérative fiable pour un serveur Oracle `U` et eigenstate donné, et fournit une estimation réelle de la phase avec la mise à l’échelle des écarts à la limite Heisenberg.
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: Effectue une mesure de tomographie de processus qubit unique dans la base de Pauli, en fonction d’un canal d’intérêt particulier.
 metadata:
-  ms.openlocfilehash: 2ae4ee28cf6e87a3fde1f8107194760c388b462c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b8b7c1b7e6fc3dad00e62d7722ef4cb38b96b82f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673357"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341477"
