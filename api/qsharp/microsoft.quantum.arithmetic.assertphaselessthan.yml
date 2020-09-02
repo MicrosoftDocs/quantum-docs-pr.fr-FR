@@ -2,19 +2,19 @@
 uid: microsoft.quantum.arithmetic.assertphaselessthan
 name: AssertPhaseLessThan
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Déclare que le `number` encodé dans PhaseLittleEndian est inférieur à `value`.
+namespace: microsoft.quantum.arithmetic
+summary: Déclare que le `number` encodé dans PhaseLittleEndian est inférieur à `value` .
 remarks: La version contrôlée de cette opération ignore les contrôles.
 syntax: 'operation AssertPhaseLessThan (value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: value
-    summary: '`number`doit être inférieur à ce.'
+    summary: '`number` doit être inférieur à ce.'
     isPrimitive: true
     uid: Int
   - name: number
-    summary: Entier non signé qui est comparé à `value`.
+    summary: Entier non signé qui est comparé à `value` .
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -25,9 +25,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: f5943bf2275cf3e94037113595686dd04f12b38e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5046e1e5cfb4359f5fa03727fa8da904dde34598
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679884"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342463"
