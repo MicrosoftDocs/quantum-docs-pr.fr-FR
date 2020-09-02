@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.all
 name: All
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: À partir d’un tableau et d’un prédicat définis pour les éléments du tableau, et vérifie si tous les éléments du tableau répondent au prédicat.
-remarks: "La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons `'T[]` un tableau et `predicate: 'T -> Bool` une fonction, nous `Bool` pouvons produire une valeur qui indique si `predicate`tous les éléments répondent."
+remarks: "La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons un tableau `'T[]` et une fonction, `predicate: 'T -> Bool` nous pouvons produire une `Bool` valeur qui indique si tous les éléments répondent `predicate` ."
 examples: >-
   Le code suivant vérifie si tous les éléments du tableau sont non nuls :
 
@@ -39,23 +39,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Tableau d’éléments sur `'T`.
+    summary: Tableau d’éléments sur `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: '`Bool` Valeur de la fonction et du prédicat appliquée à tous les éléments.'
+  - summary: '`Bool`Valeur de la fonction et du prédicat appliquée à tous les éléments.'
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
   summary: Type des `array` éléments.
 metadata:
-  ms.openlocfilehash: 116a2a537c4712c968187785873c0546ec236762
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 515dcb29844277e626158e44da4202fae0e7fd61
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676576"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352646"

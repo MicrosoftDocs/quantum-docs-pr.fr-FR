@@ -2,7 +2,7 @@
 uid: microsoft.quantum.random.categoricaldistribution
 name: CategoricalDistribution
 type: function
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: Retourne une distribution catégorique discrète, dans laquelle la probabilité pour chaque liste finie de résultats donnés est explicitement spécifiée.
 examples: >-
   Le code Q # suivant affiche 0 avec une probabilité de 30% et 1 avec une probabilité de 70% :
@@ -33,9 +33,9 @@ output:
   - summary: Index `i` avec la probabilité `probs[i] / sum` , où `sum` est la somme de `probs` donnée par `Fold(PlusD, 0.0, probs)` .
     uid: microsoft.quantum.random.discretedistribution
 metadata:
-  ms.openlocfilehash: e81b286a1268e9ad1819a8f77bb375760f95af71
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: a298d84d177c15d67d9d1ec24c8f6a9c11f1cd8b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88864121"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331107"
