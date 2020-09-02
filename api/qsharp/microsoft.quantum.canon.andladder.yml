@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.andladder
 name: AndLadder
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Effectue une « échelle » contrôlée sur un registre de qubits cibles.
 
 
-  Cette opération applique une transformation décrite par le mappage suivant de la base de calcul, $ $ \begin{align}\_\ket{x 1, \dots,\_x n}\_\ket{y 1, \dots,\_y {n-1}} \mapsto\_\ket{x 1, \dots,\_x n} \ket{\_y 1 \oplus (\_x 1 \land\_x 2), \dots,\_y {n-1} \oplus (\_x 1 \land\_x 2 \land \cdots \land\_x {n-1}}, \end{align} $ $ where $\_\ket{x 1, \dots,\_x n} $ fait référence aux États de base `controls`de calcul de, et\_où $ \ket{y 1,\_\dots, y {n-1}} $ fait référence aux États `targets`de base de calcul de.
+  Cette opération applique une transformation décrite par le mappage suivant de la base de calcul, $ $ \begin{align} \ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1, \dots, y \_ {n-1}} \mapsto \ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1 \oplus (x \_ 1 \land x \_ 2), \dots, y \_ {n-1} \oplus (x \_ 1 \land x \_ 2 \land \cdots \land x \_ {n-1}}, \end{align} $ $ WHERE $ \ket{x \_ 1, \dots, x \_ n} $ fait référence aux États de base de calcul de `controls` , et où $ \ket{y \_ 1, \dots, y \_ {n-1}} $ fait référence aux États de base de calcul de `targets` .
 remarks: >-
-  - Utilisé dans le cadre de <xref:microsoft.quantum.canon.applymulticontrolledc> et <xref:microsoft.quantum.canon.applymulticontrolledca>de.
+  - Utilisé dans le cadre de <xref:microsoft.quantum.canon.applymulticontrolledc> et de <xref:microsoft.quantum.canon.applymulticontrolledca> .
 
   - Pour le diagramme explication et circuit, voir la figure 4,10, section 4,3 dans Nielsen & Chuang.
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
@@ -24,14 +24,14 @@ input:
     summary: >-
       Un registre de qubits à utiliser comme contrôles pour l’échelle et.
 
-      Cette opération laisse les États de base `controls` de calcul invariants.
+      Cette opération laisse les États de base de calcul `controls` invariants.
 
-      La longueur de `controls` doit être au moins égale à 2, et doit être égale à un plus la `targets`longueur de.
+      La longueur de `controls` doit être au moins égale à 2, et doit être égale à un plus la longueur de `targets` .
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: La longueur de `targets` doit être au moins égale à 1 et égale à la `controls` longueur de moins un.
+    summary: La longueur de `targets` doit être au moins égale à 1 et égale à la longueur de `controls` moins un.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 194e562588a7ea244b39795ea1c489a07a7fbfba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676393"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350878"

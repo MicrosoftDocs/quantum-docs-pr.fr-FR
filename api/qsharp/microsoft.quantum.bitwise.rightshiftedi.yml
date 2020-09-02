@@ -2,7 +2,7 @@
 uid: microsoft.quantum.bitwise.rightshiftedi
 name: RightShiftedI
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Déplace la représentation au niveau du bit d’un nombre vers la droite d’un nombre donné de bits.
 remarks: >-
   Les éléments suivants sont équivalents :
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: Int
   - name: amount
-    summary: Nombre de bits par lequel `value` doit être décalé vers la droite.
+    summary: Nombre de bits par lequel doit `value` être décalé vers la droite.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: Valeur de `value`, décalée vers la droite `amount` par bits.
+  - summary: Valeur de `value` , décalée vers la droite par `amount` bits.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 9bf08ce00efc1bc93397c25c1a3ddd4d2432721d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c7dc84cff910e641747327ef3cd6fd86e506041a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680615"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351150"
