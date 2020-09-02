@@ -2,15 +2,15 @@
 uid: microsoft.quantum.arrays.mapped
 name: Mapped
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: À partir d’un tableau et d’une fonction définis pour les éléments du tableau, retourne un nouveau tableau qui se compose des images du tableau d’origine sous la fonction.
-remarks: "La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons `'T[]` un tableau et `mapper: 'T -> 'U` une fonction, nous pouvons mapper les éléments du tableau et produire un nouveau tableau `'U[]`de type."
+remarks: "La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons un tableau `'T[]` et une fonction, `mapper: 'T -> 'U` nous pouvons mapper les éléments du tableau et produire un nouveau tableau de type `'U[]` ."
 syntax: "function Mapped (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ('T -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: Fonction de à `'T` `'U` qui est utilisée pour mapper des éléments.
+    summary: Fonction de `'T` à `'U` qui est utilisée pour mapper des éléments.
     isFunction: true
     input:
       types:
@@ -21,7 +21,7 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Tableau d’éléments sur `'T`.
+    summary: Tableau d’éléments sur `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -38,9 +38,9 @@ typeParameters:
 - uid: "'U"
   summary: Type de résultat de la `mapper` fonction.
 metadata:
-  ms.openlocfilehash: 877899dad82374281090e189c727c2a662f12b7b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8f2b2c741bf9052032e37b830d9d6871bccf724a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680945"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351966"

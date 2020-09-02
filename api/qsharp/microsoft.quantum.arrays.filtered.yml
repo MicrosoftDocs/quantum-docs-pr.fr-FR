@@ -2,13 +2,13 @@
 uid: microsoft.quantum.arrays.filtered
 name: Filtered
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: À partir d’un tableau et d’un prédicat définis pour les éléments du tableau, retourne un tableau qui se compose des éléments qui satisfont au prédicat.
-remarks: La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons `'T[]` un tableau et un `'T -> Bool` prédicat, nous pouvons filtrer les éléments.
+remarks: La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons un tableau `'T[]` et un prédicat, `'T -> Bool` nous pouvons filtrer les éléments.
 examples: >-
   Le code suivant illustre la fonction « filtrée ».
 
-  Un prédicat est défini à l’aide @"microsoft.quantum.logical.greaterthani" de la fonction :
+  Un prédicat est défini à l’aide de la @"microsoft.quantum.logical.greaterthani" fonction :
 
 
   ```qsharp
@@ -44,7 +44,7 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Tableau d’éléments sur `'T`.
+    summary: Tableau d’éléments sur `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -59,9 +59,9 @@ typeParameters:
 - uid: "'T"
   summary: Type des `array` éléments.
 metadata:
-  ms.openlocfilehash: 6aa19a279425672675182f3c8098e7c47fb5cce6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3b586b356e18c71f1721fbce0ec26e2ea37bfd73
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676462"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352289"

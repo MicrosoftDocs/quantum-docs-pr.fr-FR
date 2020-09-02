@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.equala
 name: EqualA
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: À partir de deux tableaux du même type et d’un prédicat qui est défini pour les paires d’éléments des tableaux, vérifie si les tableaux sont égaux.
 remarks: >-
-  Cette fonction est définie pour les types génériques ; autrement dit, chaque fois que nous avons deux `'T[]` tableaux et une `equal: ('T, 'T) -> Bool`fonction, cette fonction retourne `Bool` une valeur qui indique si les tableaux sont égaux.
+  Cette fonction est définie pour les types génériques ; autrement dit, chaque fois que nous avons deux tableaux `'T[]` et une fonction `equal: ('T, 'T) -> Bool` , cette fonction retourne une `Bool` valeur qui indique si les tableaux sont égaux.
 
   Pour que deux tableaux soient considérés comme égaux, ils doivent avoir une longueur égale et les éléments des mêmes positions dans les tableaux doivent être égaux.
 examples: >-
@@ -61,16 +61,16 @@ output:
   - summary: >-
       Valeur `true` si et uniquement si `array1` et `array2` sont égaux.
 
-      Autrement dit, si les deux tableaux ont la même longueur et que tous les éléments sont égaux comme défini `equal`par.
+      Autrement dit, si les deux tableaux ont la même longueur et que tous les éléments sont égaux comme défini par `equal` .
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
   summary: Type des éléments de chaque tableau.
 metadata:
-  ms.openlocfilehash: d2af5ff8e2d66e6162c73c3854670451a00dcf50
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9f3083483b7720efb4f8eda89d2de224543c236e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676497"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352374"

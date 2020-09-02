@@ -2,12 +2,12 @@
 uid: microsoft.quantum.diagnostics.dumpregister
 name: DumpRegister
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Vide l’état de l’ordinateur cible actuel associé à l’qubits donné.
 remarks: >-
   Cette méthode vous permet de vider les informations associées à l’état du qubits donné dans un fichier ou un autre emplacement.
 
-  Les informations réelles générées et la sémantique de `location` sont spécifiques à chaque ordinateur cible. Toutefois, le fait de fournir un tuple vide comme`()`emplacement () signifie généralement que le résultat doit être généré dans la console.
+  Les informations réelles générées et la sémantique de `location` sont spécifiques à chaque ordinateur cible. Toutefois, le fait de fournir un tuple vide comme emplacement ( `()` ) signifie généralement que le résultat doit être généré dans la console.
 
 
   Pour le simulateur d’état complet distribué dans le cadre du kit de développement quantique, cette méthode attend une chaîne avec le chemin d’accès à un fichier dans lequel elle écrira l’état du qubits donné (c.-à-d. la fonction Wave du sous-système correspondant) en tant que tableau unidimensionnel de nombres complexes, dans lequel chaque élément représente les amplitudes de la probabilité de mesure de l’état correspondant.
@@ -33,9 +33,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 3bf5302364b37cb1ccef651935833b966ff84464
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 384ce2373081545129c569ea6acc6b01733587fc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677225"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337295"

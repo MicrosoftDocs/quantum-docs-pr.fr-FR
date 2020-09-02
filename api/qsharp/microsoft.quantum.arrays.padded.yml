@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.padded
 name: Padded
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Retourne un tableau rempli à l’aide des valeurs spécifiées jusqu’à une longueur spécifiée.
 examples: >-
   ```qsharp
@@ -38,7 +38,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Tableau `output` qui est le `inputArray` remplissage de l’en-tête avec `defaultElement`s jusqu' `output` à ce que ait une longueur`nElementsTotal`
+  - summary: Tableau `output` qui est le `inputArray` remplissage de l’en-tête avec `defaultElement` s jusqu’à ce que `output` ait une longueur `nElementsTotal`
     isArray: true
     uid: "'T"
     isLocal: true
@@ -46,9 +46,9 @@ typeParameters:
 - uid: "'T"
   summary: Type des éléments du tableau.
 metadata:
-  ms.openlocfilehash: 6fafc015026ca9b369e23fda702af172867444ca
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 37b2f4bae9b5f055762ac1d84fef30d13f35a741
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680903"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351915"
