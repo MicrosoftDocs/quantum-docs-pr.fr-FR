@@ -2,13 +2,13 @@
 uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
 name: RandomWalkPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Research.Characterization
+namespace: microsoft.quantum.research.characterization
 summary: Effectue une estimation de phase itérative à l’aide d’un parcours aléatoire pour rapprocher l’inférence Bayésienne sur les résultats de mesure classiques d’un Oracle et d’un eigenstate donnés.
 remarks: >-
   ### <a name="iterative-phase-estimation-and-eigenstates"></a>Estimation de phase itérative et Eigenstates
 
 
-  En général, le Registre `eigenstate` d’entrée n’a pas besoin d’être un eigenstate $ \ket{\Phi} $ de $U $, mais il peut s’agir d’une superposition sur eigenstates. Supposons que l’état d’entrée soit donné par \begin{align} \ket{\Psi} &\_= \sum {j\_} \alpha\_j \ket{\Phi j}, \end{align}\{où\_$\}\alpha j $ est un coefficient complexe, de\_sorte que $\_\sum j | \alpha j | ^ 2 = $1\_et où $U \ket{\Phi\_j} = \Phi\_j\ket {\ Phi j} $.
+  En général, le registre d’entrée `eigenstate` n’a pas besoin d’être un eigenstate $ \ket{\Phi} $ de $U $, mais il peut s’agir d’une superposition sur eigenstates. Supposons que l’état d’entrée soit donné par \begin{align} \ket{\Psi} & = \sum \_ {j} \alpha \_ j \ket{\Phi \_ j}, \end{align} où $ \{ \alpha \_ j \} $ est un coefficient complexe, de sorte que $ \sum \_ j | \alpha \_ j | ^ 2 = $1 et où $U \ket{\Phi \_ j} = \Phi \_ j\ket {\ Phi \_ j} $.
 
 
   Ensuite, l’estimation de la phase itérative finit par converger vers un eigenstate unique, comme décrit dans le [Guide de développement](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates).
@@ -17,7 +17,7 @@ remarks: >-
   ### <a name="experiment-design"></a>Conception d’expérimentation
 
 
-  Les temps de mesure $t $ et les angles d’inversion $ `oracle` \Theta $ passés à sont choisis en fonction de l’heuristique de l’estimation de la *particule*, \begin{align} \Theta \sim{1}\Pr (\Phi), \quad t \approx \frac {\variance{\Phi}}.
+  Les temps de mesure $t $ et les angles d’inversion $ \Theta $ passés à `oracle` sont choisis en fonction de l' *heuristique*de l’estimation de la particule, \Begin{align} \Theta \sim \Pr (\Phi), \quad t \approx \frac {1} {\variance{\Phi}}.
 
   \end{align} cette heuristique est optimale pour réduire la variance POSTERIEURE attendue dans l’estimation de la phase itérative en supposant une normale avant.
 
@@ -74,9 +74,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 719c8583cb0fe7f0c9c0f7fa617fa469080a9588
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 27841784ec8961f7a5a78c425411fcf0ae8e8f15
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82706735"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330580"
