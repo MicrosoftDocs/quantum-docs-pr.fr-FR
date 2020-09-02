@@ -2,7 +2,7 @@
 uid: microsoft.quantum.errorcorrection.bitfliprecoveryfn
 name: BitFlipRecoveryFn
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: Fonction pour les opérations de récupération Pauli pour une mesure de syndrome donnée par recherche de table pour le code de retournement ⟦ 3, 1 ⟧ bits.
 syntax: 'function BitFlipRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
@@ -11,14 +11,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: Fonction de type `RecoveryFn` qui prend une mesure `Result[]` de syndrome et retourne `Pauli[]` les opérations qui corrigent l’erreur détectée.
+  - summary: Fonction de type `RecoveryFn` qui prend une mesure de syndrome `Result[]` et retourne les `Pauli[]` opérations qui corrigent l’erreur détectée.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - microsoft.quantum.canon.recoveryfn
 metadata:
-  ms.openlocfilehash: aeb20fcef86b26fd61f3bbe2594547f1ae212b4c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fc6b353eaa67d82b2c49f8c795acd0dd11ab921b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683884"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336649"
