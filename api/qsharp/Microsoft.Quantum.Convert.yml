@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: Dans le cas d’une chaîne binaire, retourne un opérateur Pauli qubit multiple représenté sous la forme d’un tableau d’opérateurs Pauli qubit uniques.
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: Convertit `Bool[]` un type en `Result[]` un type, `true` où est mappé à `One` et `false` est mappé à `Zero`.
+  summary: Convertit un `Bool[]` type en un `Result[]` type, où `true` est mappé à `One` et `false` est mappé à `Zero` .
 - uid: microsoft.quantum.convert.boolasresult
-  summary: Convertit `Bool` un type en `Result` un type, `true` où est mappé à `One` et `false` est mappé à `Zero`.
+  summary: Convertit un `Bool` type en un `Result` type, où `true` est mappé à `One` et `false` est mappé à `Zero` .
 - uid: microsoft.quantum.convert.boolasstring
   summary: Convertit une valeur booléenne donnée en une représentation sous forme de chaîne équivalente.
 - uid: microsoft.quantum.convert.doubleasstring
@@ -49,18 +49,18 @@ functions:
 - uid: microsoft.quantum.convert.rangeasintarray
   summary: Crée un tableau `arr` d’entiers énumérés par Start.. étape.. effet.
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: Convertit `Result[]` un type en `Bool[]` un type, `One` où est mappé à `true` et `Zero` est mappé à `false`.
+  summary: Convertit un `Result[]` type en un `Bool[]` type, où `One` est mappé à `true` et `Zero` est mappé à `false` .
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: Produit un entier positif à partir d’une chaîne de résultats au format Little endian.
 - uid: microsoft.quantum.convert.resultasbool
-  summary: Convertit `Result` un type en `Bool` un type, `One` où est mappé à `true` et `Zero` est mappé à `false`.
+  summary: Convertit un `Result` type en un `Bool` type, où `One` est mappé à `true` et `Zero` est mappé à `false` .
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Appelle une fonction avec une entrée donnée.
 metadata:
-  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7ab5e02631823dcf4dee36f98c14212b43381b74
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676999"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341358"

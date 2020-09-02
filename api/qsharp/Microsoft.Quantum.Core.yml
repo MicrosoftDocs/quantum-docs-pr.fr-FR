@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
-summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms comprend des fonctions et des opérations de base Q #.\n\n # <a name=\"remarks\"></a>Remarques\n Cet espace de noms est ouvert automatiquement par le compilateur Q #, donc tous les éléments de cet espace de noms sont toujours disponibles."
+summary: " # <a name=\"summary\"></a>Résumé\n Cet espace de noms comprend des fonctions et des opérations de base Q #.\n\n # <a name=\"remarks\"></a>Notes\n Cet espace de noms est ouvert automatiquement par le compilateur Q #, donc tous les éléments de cet espace de noms sont toujours disponibles."
 functions:
 - uid: microsoft.quantum.core.default
   summary: Retourne une instance par défaut du type spécifié.
@@ -23,9 +23,9 @@ newtypes:
 - uid: microsoft.quantum.core.entrypoint
   summary: Attribut reconnu par le compilateur utilisé pour marquer le point d’entrée d’un exécutable.
 metadata:
-  ms.openlocfilehash: 7533708473cff8902745ed67c235244ea9b2234b
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 354a8e2c221007f27ff409dc4b75b0d5953d9f67
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885262"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341256"
