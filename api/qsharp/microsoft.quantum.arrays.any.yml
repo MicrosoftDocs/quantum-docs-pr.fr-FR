@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.any
 name: Any
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: À partir d’un tableau et d’un prédicat définis pour les éléments du tableau, vérifie si au moins un élément du tableau est conforme au prédicat.
-remarks: "La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons `'T[]` un tableau et `predicate: 'T -> Bool` une fonction, nous `Bool` pouvons produire une valeur qui indique si un `predicate`élément satisfait."
+remarks: "La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons un tableau `'T[]` et une fonction, `predicate: 'T -> Bool` nous pouvons produire une `Bool` valeur qui indique si un élément satisfait `predicate` ."
 examples: >-
   ```qsharp
 
@@ -41,23 +41,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Tableau d’éléments sur `'T`.
+    summary: Tableau d’éléments sur `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: '`Bool` Valeur de la fonction ou du prédicat appliquée à tous les éléments.'
+  - summary: '`Bool`Valeur de la fonction ou du prédicat appliquée à tous les éléments.'
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
   summary: Type des `array` éléments.
 metadata:
-  ms.openlocfilehash: 4e80b5c39c83bc5d5b26d4df9ca86b8cbc796aeb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: eb61be88ccba6392ca70c75f6c506b9b6c1c8bbd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676562"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352595"
