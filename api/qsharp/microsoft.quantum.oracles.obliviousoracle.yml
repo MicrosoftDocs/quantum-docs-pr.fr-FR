@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.obliviousoracle
 name: ObliviousOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   Représente une amplification d’amplitude Oracle for oublie.
 
@@ -12,16 +12,16 @@ summary: >-
 
   - Le registre Ancilla $a $ sur lequel $O $ agit.
 
-  - Le Registre du système $s $ sur lequel le $U unitaire souhaité est appliqué, après sélection du registre $a $ étant dans l’État $ \ket{t}\_a $.
+  - Le Registre du système $s $ sur lequel le $U unitaire souhaité est appliqué, après sélection du registre $a $ étant dans l’État $ \ket{t} \_ a $.
 remarks: >-
-  Ce Oracle défini par $ $ O\ket {s}\_a\ket {\ PSI}\_s = \lambda\ket{t}\_a U \ket{\Psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ agit sur l’état Ancilla $ \ket{s}\_a $ pour implémenter le $U unitaire $ sur tout état du système $\_\ket{\Psi} s $ avec l’amplitude $ \lambda $ dans la base marquée par $\_\ket{t} a $.
+  Ce Oracle défini par $ $ O\ket {s} \_ a\ket {\ PSI} \_ s = \Lambda\ket{t} \_ a U \ket{\Psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp} \_ a\cdots $ $ agit sur l’État Ancilla $ \ket{s} \_ a $ pour implémenter le $U unitaire $ sur tout état du système $ \ket{\Psi} \_ s $ avec l’amplitude $ \lambda $ dans la base marquée par $ \ket{t} \_ a $.
 
-  Le premier paramètre est le registre qubit de $ \ket{s}\_a $. Le deuxième paramètre est le registre qubit de $ \ket{\Psi}\_s $.
+  Le premier paramètre est le registre qubit de $ \ket{s} \_ a $. Le deuxième paramètre est le registre qubit de $ \ket{\Psi} \_ s $.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c88ad3b0a4fe6067a0e52972c23587d5835c779e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681254"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332008"
