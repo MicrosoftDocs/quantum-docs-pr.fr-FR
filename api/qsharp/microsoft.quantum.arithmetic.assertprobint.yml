@@ -2,16 +2,16 @@
 uid: microsoft.quantum.arithmetic.assertprobint
 name: AssertProbInt
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Déclare que la probabilité d’un état spécifique d’un registre Quantum a la valeur attendue.
 
 
   À partir d’un $n $-qubit Quantum State $ \ket{\Psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ alpha_j \ket{j} $, déclare que la probabilité $ | \ alpha_j | ^ 2 $ de l’État $ \ket{j} $ indexée par $j $ a la valeur attendue.
 examples: >-
-  Supposons que `qubits` le registre encode un État Quantum 3-qubit $ \ket{\Psi} = \ sqrt {1/8} \ Ket{0}+ \ sqrt {7/8} \ Ket{6}$ dans un format avec primauté des octets de poids faible (Little-endian).
+  Supposons que le `qubits` Registre encode un État Quantum 3-qubit $ \ket{\Psi} = \ sqrt {1/8} \ Ket {0} + \ sqrt {7/8} \ Ket {6} $ dans un format avec primauté des octets de poids faible (Little-endian).
 
-  Cela signifie que le nombre indique $ \ket{0}\equiv\ket{0}\ket{0}\ket{0}$ et $ \ket{6}{0}{1}\equiv\ket \ket{1}$. Les affirmations suivantes ont ensuite été effectuées :
+  Cela signifie que le nombre indique $ \ket {0} \equiv\ket {0} \ket {0} \ket {0} $ et $ \ket \equiv\ket \ket {6} {0} {1} {1} $. Les affirmations suivantes ont ensuite été effectuées :
 
 
   - `AssertProbInt(0,0.125,qubits,10e-10);`
@@ -42,9 +42,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 247dcb78921bfe5df96c56b74e251d0413cfab3d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e5269b46849da17602447491e77e756e999cb3d9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675246"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342327"
