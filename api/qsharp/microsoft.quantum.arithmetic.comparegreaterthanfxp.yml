@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
 name: CompareGreaterThanFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Compare deux nombres à virgule fixe stockés dans des registres quantiques et contrôle un retournement sur le résultat.
 remarks: L’implémentation actuelle requiert que les deux nombres à virgule fixe aient la même position de point et le même nombre d’qubits.
 syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
@@ -16,7 +16,7 @@ input:
     summary: Deuxième nombre à virgule fixe à comparer.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Résultat de la comparaison. Est retourné si `fp1 > fp2`.
+    summary: Résultat de la comparaison. Est retourné si `fp1 > fp2` .
     isPrimitive: true
     uid: Qubit
 output:
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 851baa02ebf746966b5534a96f1c1bc285632bc2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 68b23de42a62a20d33cc713649df8714706dc592
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679817"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327406"
