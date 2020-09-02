@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applyifelserca
 name: ApplyIfElseRCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Applique l’une des deux opérations unitaires, en fonction de la valeur d’un résultat classique.
 
 
-  Avec un résultat `result`donné, applique l' `zeroOp` opération `zeroInput` avec comme entrée lorsque `result` est égal à `Zero`et s’applique `oneOp(oneInput)` quand `result == One`.
+  Avec un résultat donné `result` , applique l’opération `zeroOp` avec `zeroInput` comme entrée lorsque `result` est égal à `Zero` et s’applique `oneOp(oneInput)` quand `result == One` .
 syntax: "operation ApplyIfElseRCA (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U))"
@@ -17,7 +17,7 @@ input:
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: Opération unitaire à appliquer lorsque `result == Zero`.
+    summary: Opération unitaire à appliquer lorsque `result == Zero` .
     isOperation: true
     input:
       types:
@@ -31,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: zeroInput
-    summary: Entrée à fournir `zeroOp` lorsque `result == Zero`.
+    summary: Entrée à fournir `zeroOp` lorsque `result == Zero` .
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: Opération unitaire à appliquer lorsque `result == One`.
+    summary: Opération unitaire à appliquer lorsque `result == One` .
     isOperation: true
     input:
       types:
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: oneInput
-    summary: Entrée à fournir `oneOp` lorsque `result == One`.
+    summary: Entrée à fournir `oneOp` lorsque `result == One` .
     uid: "'U"
     isLocal: true
 output:
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: a1182abedfbb4905ec65f5e720d82a1766aa5d65
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bc9f0b3b1504adf1a3ea435a7a4440c6509dd547
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672724"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350181"
