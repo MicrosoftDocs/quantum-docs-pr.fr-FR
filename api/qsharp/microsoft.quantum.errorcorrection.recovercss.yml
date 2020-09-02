@@ -2,20 +2,20 @@
 uid: microsoft.quantum.errorcorrection.recovercss
 name: RecoverCSS
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: Effectue un seul arrondi de correction d’erreur par un code de Quantum décrit `CSS` par un type.
+namespace: microsoft.quantum.errorcorrection
+summary: Effectue un seul arrondi de correction d’erreur par un code de Quantum décrit par un `CSS` type.
 syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: Un code de correction des erreurs CSS de Quantum sous la `CSS` forme d’un type décrit l’encodage et le décodage des données Quantum, ainsi que la mesure des syndromes des erreurs.
+    summary: Un code de correction des erreurs CSS de Quantum sous la forme d’un `CSS` type décrit l’encodage et le décodage des données Quantum, ainsi que la mesure des syndromes des erreurs.
     uid: microsoft.quantum.errorcorrection.css
   - name: fnX
-    summary: '`RecoveryFn` Qui mappe chaque $X $ Error syndrome aux `Pauli[]` opérations qui corrigent l’erreur détectée.'
+    summary: '`RecoveryFn`Qui mappe chaque $X $ Error syndrome aux `Pauli[]` opérations qui corrigent l’erreur détectée.'
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: fnZ
-    summary: '`RecoveryFn` Qui mappe chaque $Z $ Error syndrome aux `Pauli[]` opérations qui corrigent l’erreur détectée.'
+    summary: '`RecoveryFn`Qui mappe chaque $Z $ Error syndrome aux `Pauli[]` opérations qui corrigent l’erreur détectée.'
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: Tableau de qubits où le code stabilisant est défini.
@@ -30,9 +30,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 8c9504e985b224421d3eb66b0d7e9bc0ef8f2e96
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cb3a6bf49913b340545e3659f078adc244356246
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682274"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349892"

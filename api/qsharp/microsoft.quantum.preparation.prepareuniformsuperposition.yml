@@ -2,16 +2,16 @@
 uid: microsoft.quantum.preparation.prepareuniformsuperposition
 name: PrepareUniformSuperposition
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  Crée une superposition uniforme sur les États qui encodent 0 à `nIndices`.
+  Crée une superposition uniforme sur les États qui encodent 0 à `nIndices` .
 
 
-  Autrement dit, ce $U unitaire $ crée une superposition uniforme sur tous les États numériques $0 $ à $M-$1, étant donné un état d’entrée $ \ket{0\cdots 0} $. En d’autres termes, $ $ \begin{align}{0}U\ket ={1}\frac {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
+  Autrement dit, ce $U unitaire $ crée une superposition uniforme sur tous les États numériques $0 $ à $M-$1, étant donné un état d’entrée $ \ket{0\cdots 0} $. En d’autres termes, $ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
 examples: >-
-  L’exemple suivant prépare l’État $ \frac{1}{\sqrt{6}} \ sum_ {j = 0} ^{5}\ket{j} $ sur $3 $ qubits.
+  L’exemple suivant prépare l’État $ \frac {1} {\sqrt {6} } \ sum_ {j = 0} ^ {5} \ket{j} $ sur $3 $ qubits.
 
 
   ```Q#
@@ -33,7 +33,7 @@ input:
     uid: Int
   - name: indexRegister
     summary: >-
-      Registre qubit qui stocke les États du nombre `LittleEndian` au format.
+      Registre qubit qui stocke les États du nombre au `LittleEndian` format.
 
       Ce registre doit être en mesure de stocker le nombre $M-$1, et est supposé être initialisé à l’État $ \ket{0\cdots 0} $.
     uid: microsoft.quantum.arithmetic.littleendian
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 442daa4affb6b59191af9117a8094f7bfbf71302
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686524"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331328"
