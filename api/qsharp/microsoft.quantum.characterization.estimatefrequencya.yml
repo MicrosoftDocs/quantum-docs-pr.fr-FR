@@ -2,8 +2,8 @@
 uid: microsoft.quantum.characterization.estimatefrequencya
 name: EstimateFrequencyA
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: Étant donné une préparation qui est adjointable et mesure, évalue la fréquence à laquelle cette mesure s’est `Zero`déroulée (retourne) en effectuant un nombre donné d’essais.
+namespace: microsoft.quantum.characterization
+summary: Étant donné une préparation qui est adjointable et mesure, évalue la fréquence à laquelle cette mesure s’est déroulée (retourne `Zero` ) en effectuant un nombre donné d’essais.
 remarks: Pour les opérations adjointable, certaines hypothèses peuvent être apportées telles que l’appel de l’opération prépare le qubits à exactement le même État, ce qui permet aux ordinateurs cibles d’effectuer des optimisations de performances.
 syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
@@ -46,13 +46,13 @@ input:
 output:
   content: Double
   types:
-  - summary: Estimation de $ \hat{p} $ de la fréquence avec laquelle $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourne `Zero`, obtenue à l’aide de l’estimateur binomiale non biaisé $ \hat{p}\_= n {\uparrow}\_/n {\text{Measurements}} $,\_où $n {\uparrow} $ est le `Zero` nombre de résultats observés.
+  - summary: Estimation de $ \hat{p} $ de la fréquence avec laquelle $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retourne `Zero` , obtenue à l’aide de l’estimateur binomiale non biaisé $ \hat{p} = n \_ {\uparrow}/n \_ {\text{Measurements}} $, où $n \_ {\uparrow} $ est le nombre de `Zero` résultats observés.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 064f6d3cf9c075d635ed27ac4192b5aa4045e4d8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 00d54b9dec4e2b57002b04dda4072b9d186baba4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677701"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354533"

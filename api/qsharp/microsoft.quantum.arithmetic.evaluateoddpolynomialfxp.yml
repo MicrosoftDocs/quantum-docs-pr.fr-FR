@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
 name: EvaluateOddPolynomialFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Évalue un polynomial impair dans une représentation à virgule fixe.
 syntax: 'operation EvaluateOddPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
@@ -17,7 +17,7 @@ input:
     summary: Nombre à virgule fixe d’entrée pour lequel évaluer le polynôme.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Nombre à virgule fixe de sortie qui contiendra P (x). Doit être initialement à l’état{0}$ \ket $.
+    summary: Nombre à virgule fixe de sortie qui contiendra P (x). Doit être initialement à l’État $ \ket {0} $.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: ae149fe3ef12b5384bd08b62daabd6368e130399
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a35b2141757e7d18d8eddb48843541c1b73de7b4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679652"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342123"
