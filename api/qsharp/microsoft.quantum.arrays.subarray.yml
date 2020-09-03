@@ -2,17 +2,17 @@
 uid: microsoft.quantum.arrays.subarray
 name: Subarray
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Prend un tableau et une liste d’emplacements et produit un nouveau tableau formé à partir des éléments du tableau d’origine qui correspondent aux emplacements donnés.
 remarks: >-
-  La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons `'T[]` un tableau et une liste `Int[]` d’emplacements définissant le sous-tableau.
+  La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons un tableau `'T[]` et une liste d’emplacements `Int[]` définissant le sous-tableau.
 
   La construction du sous-tableau est basée sur la génération d’une nouvelle copie complète du tableau donné au lieu de conserver les références.
 
 
-  Si `Length(indices) < Length(array)`la condition est, cette fonction retourne un `array`sous-ensemble de. En revanche, si `indices` contient des éléments répétés, les éléments correspondants de `array` sont de la même façon répétés.
+  Si `Length(indices) < Length(array)` la condition est, cette fonction retourne un sous-ensemble de `array` . En revanche, si contient des `indices` éléments répétés, les éléments correspondants de `array` sont de la même façon répétés.
 
-  Si `indices` et `array` sont de la même longueur, cette fonction fournit des permutations de `array`.
+  Si `indices` et `array` sont de la même longueur, cette fonction fournit des permutations de `array` .
 syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
 input:
   content: "(indices : Int[], array : 'T[])"
@@ -23,14 +23,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: array
-    summary: Tableau d’éléments sur `'T`.
+    summary: Tableau d’éléments sur `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Tableau `out` d’éléments dont les index correspondent au sous-tableau, de telle sorte que `out[idx] == array[indices[idx]]`.
+  - summary: Tableau `out` d’éléments dont les index correspondent au sous-tableau, de telle sorte que `out[idx] == array[indices[idx]]` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -38,9 +38,9 @@ typeParameters:
 - uid: "'T"
   summary: Type des `array` éléments.
 metadata:
-  ms.openlocfilehash: 2740a39d1b7c1c56aed4f9107c65d339c5fb4c1a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1d5739f49e32ec4548cb24df2106dec0866a94cb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675114"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351626"

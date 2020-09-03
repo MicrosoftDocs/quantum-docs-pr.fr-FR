@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.sequencel
 name: SequenceL
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Obtient un tableau d’entiers dans un intervalle donné.
 remarks: La différence entre `from` et `to` doit tenir dans une `Int` valeur.
 examples: >-
@@ -24,20 +24,20 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: to
-    summary: Index de fin inclusif de l’intervalle qui n’est pas `from`inférieur à.
+    summary: Index de fin inclusif de l’intervalle qui n’est pas inférieur à `from` .
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt[]
   types:
-  - summary: Tableau contenant la séquence de nombres `from`, `from + 1`,...,. `to`
+  - summary: Tableau contenant la séquence de nombres `from` , `from + 1` ,..., `to` .
     isArray: true
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 7271856286009cfd1651f19f69f932e79d79c2bf
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c39259d5c39ff523464b1defc3c29c7dca6551ee
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680809"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351660"
