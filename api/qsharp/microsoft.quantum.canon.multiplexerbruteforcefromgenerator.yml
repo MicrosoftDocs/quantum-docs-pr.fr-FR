@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
 name: MultiplexerBruteForceFromGenerator
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Retourne une opération unitaire contrôlée par multiplication $U $ qui applique une $V unitaire _j $ lorsqu’elle est contrôlée par le numéro d’État n-qubit $ \ket{j} $.
 
@@ -40,7 +40,7 @@ input:
 output:
   content: ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: Une opération unitaire à contrôle multiple $U $ qui applique des unités de commande décrites `unitaryGenerator`par.
+  - summary: Une opération unitaire à contrôle multiple $U $ qui applique des unités de commande décrites par `unitaryGenerator` .
     isOperation: true
     input:
       types:
@@ -58,9 +58,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.multiplexerbruteforcefromgenerator
 metadata:
-  ms.openlocfilehash: cfd415245dd96508b015f8d6fa3dfe0c90fa9c0e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e8770ec676bbe0b94a9fd0675ef2784c061af0ad
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678854"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356029"
