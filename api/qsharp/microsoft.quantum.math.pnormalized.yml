@@ -2,12 +2,12 @@
 uid: microsoft.quantum.math.pnormalized
 name: PNormalized
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  Normalise un vecteur de `Double`s dans la `L(p)` norme.
+  Normalise un vecteur de `Double` s dans la `L(p)` norme.
 
 
-  Autrement dit, étant donné un tableau $x $ de `Double[]`type, retourne un tableau où tous les éléments sont divisés par le $p $-\|normal\|$ x _p $.
+  Autrement dit, étant donné un tableau $x $ de type `Double[]` , retourne un tableau où tous les éléments sont divisés par le $p $-normal $ \| x \| _p $.
 syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
 input:
   content: '(p : Double, array : Double[])'
@@ -23,16 +23,16 @@ input:
 output:
   content: Double[]
   types:
-  - summary: Le tableau $x $ normalized par la $p $-Normalize\|$\|x _p $.
+  - summary: Le tableau $x $ normalized par la $p $-Normalize $ \| x \| _p $.
     isArray: true
     isPrimitive: true
     uid: Double
 seeAlso:
 - pnorm
 metadata:
-  ms.openlocfilehash: 68697fe159fecfeed0078f95de8d91f825125f41
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4605ad867b02b240bd5c11bd8a5137b089b5265e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684024"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333470"
