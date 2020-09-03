@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.zip
 name: Zip
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: À partir de deux tableaux, retourne un nouveau tableau de paires de sorte que chaque paire contient un élément de chaque tableau d’origine.
 examples: >-
   ```qsharp
@@ -31,7 +31,7 @@ input:
 output:
   content: ('T, 'U)[]
   types:
-  - summary: Tableau contenant des paires de la forme `(left[idx], right[idx])` pour chacune `idx`. Si les deux tableaux ne sont pas de longueur égale, la sortie sera aussi longue que la plus petite des entrées.
+  - summary: Tableau contenant des paires de la forme `(left[idx], right[idx])` pour chacune `idx` . Si les deux tableaux ne sont pas de longueur égale, la sortie sera aussi longue que la plus petite des entrées.
     isArray: true
     types:
     - uid: "'T"
@@ -47,9 +47,9 @@ seeAlso:
 - zip3
 - zip4
 metadata:
-  ms.openlocfilehash: ae3a66ee226cdc0e26ec0cc0e87b1822bad45579
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 448a5f66cbb8d927f357d83420c593ee80555705
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675082"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351456"
