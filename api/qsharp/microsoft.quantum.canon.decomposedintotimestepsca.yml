@@ -2,18 +2,18 @@
 uid: microsoft.quantum.canon.decomposedintotimestepsca
 name: DecomposedIntoTimeStepsCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Retourne une opération implémentant l’intégrateur Trotter – Suzuki pour une opération donnée.
 remarks: >-
-  Quand elle est `order` appelée avec `1`égal à, cette fonction retourne une opération qui peut être simulée par l’intégrateur Trotter – Suzuki integrator $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}, \end{align} $ $ où nous avons suivi la notation de [quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139) et laissons à $ \lambda $ le temps d’évolution (représenté par la première entrée de l’opération renvoyée). et\{que\}la valeur de $ H_j _ {j = 1} ^ {m} $ soit le jeu de générateurs dynamiques (skew-Hermitian) `op(j, lambda, _)` qui est intégré, ce qui est simulé par l’opérateur unitaire $e ^ {H_j \lambda} $.
+  Quand `order` elle est appelée avec égal à `1` , cette fonction retourne une opération qui peut être simulée par l’intégrateur Trotter – Suzuki Integrator $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}, \end{align} $ $ où nous avons suivi la notation de [quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139) et laissons à $ \lambda $ le temps d’évolution (représenté par la première entrée de l’opération renvoyée). et \{ que \} la valeur de $ H_j _ {j = 1} ^ {m} $ soit le jeu de générateurs dynamiques (skew-Hermitian) qui est intégré, ce qui `op(j, lambda, _)` est simulé par l’opérateur unitaire $e ^ {H_j \lambda} $.
 
 
-  De même, un `order` de `2` retourne l’Trotter symétrique de deuxième ordre, Suzuki integrator $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j' = m} ^{1} e ^ {H_ {j'} \lambda/2}.
+  De même, un `order` de `2` retourne l’Trotter symétrique de deuxième ordre, Suzuki Integrator $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j' = m} ^ {1} e ^ {H_ {j'} \lambda/2}.
 
   \end{align} $ $
 
 
-  Les valeurs paires les `order` plus élevées de sont implémentées à l’aide de la construction récursive de [quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139).
+  Les valeurs paires les plus élevées de `order` sont implémentées à l’aide de la construction récursive de [quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139).
 syntax: "function DecomposedIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 references: '- [*D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders*](https://arxiv.org/abs/quant-ph/0508139)'
 input:
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: op
-    summary: Opération qui accepte une entrée d’index (type `Int`) et une entrée de temps ( `Double`type) pour la décomposition.
+    summary: Opération qui accepte une entrée d’index (type `Int` ) et une entrée de temps (type `Double` ) pour la décomposition.
     isOperation: true
     input:
       types:
@@ -68,11 +68,11 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: Type sur lequel chaque étape doit agir ; en général, `Qubit[]` ou `Qubit`.
+  summary: Type sur lequel chaque étape doit agir ; en général, `Qubit[]` ou `Qubit` .
 metadata:
-  ms.openlocfilehash: 1fdb15e9a28c24ac58f026a89779951b982edb27
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e3febe45478ca86a36844d6af75884872cb12680
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680248"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356539"
