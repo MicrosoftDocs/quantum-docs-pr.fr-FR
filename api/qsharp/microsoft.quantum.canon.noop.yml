@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.noop
 name: NoOp
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Exécute l’opération d’identité (no-op) sur un argument.
 
@@ -11,10 +11,10 @@ summary: >-
 
   Cela peut être utile lorsqu’une entrée d’un type d’opération est attendue, mais qu’aucune action ne doit être effectuée.
 
-  Par exemple, si un syndrome de correction d’erreur particulier indique qu’aucune erreur ne `NoOp<Qubit[]>` s’est produite, il peut s’agir de la bonne procédure de récupération.
+  Par exemple, si un syndrome de correction d’erreur particulier indique qu’aucune erreur ne s’est produite, `NoOp<Qubit[]>` il peut s’agir de la bonne procédure de récupération.
 
-  De même, si une opération attend une procédure de préparation d’État comme entrée `NoOp<Qubit[]>` , peut être utilisé pour préparer l’État $ \ket{0 \cdots 0} $.
-remarks: Dans presque tous les cas, le paramètre de `NoOp` type doit être spécifié explicitement. Par exemple, `NoOp<Qubit>` est identique à <xref:microsoft.quantum.intrinsic.i>.
+  De même, si une opération attend une procédure de préparation d’État comme entrée, `NoOp<Qubit[]>` peut être utilisé pour préparer l’État $ \ket{0 \cdots 0} $.
+remarks: Dans presque tous les cas, le paramètre de type `NoOp` doit être spécifié explicitement. Par exemple, `NoOp<Qubit>` est identique à <xref:microsoft.quantum.intrinsic.i> .
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
@@ -34,9 +34,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.i
 metadata:
-  ms.openlocfilehash: 74c85340e065929feabb81d7e97339f80255c0f6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9af76ff7f2c559aef0f940ff3c56e6f8d8cdbb60
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678714"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355978"

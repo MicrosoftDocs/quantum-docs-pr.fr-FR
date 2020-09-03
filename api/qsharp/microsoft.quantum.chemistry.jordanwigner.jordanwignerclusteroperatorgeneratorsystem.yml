@@ -2,25 +2,25 @@
 uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
 name: JordanWignerClusterOperatorGeneratorSystem
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Convertit un de Hamilton décrit `JWOptimizedHTerms` par en `GeneratorSystem` un exprimé en termes de `GeneratorIndex` la Convention définie dans ce fichier.
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: Convertit un de Hamilton décrit par en `JWOptimizedHTerms` un `GeneratorSystem` exprimé en termes de la `GeneratorIndex` Convention définie dans ce fichier.
 syntax: 'function JordanWignerClusterOperatorGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[])'
   types:
   - name: data
-    summary: Description de la structure de `JWOptimizedHTerms` l’un au format.
+    summary: Description de la structure de l’un au `JWOptimizedHTerms` format.
     isArray: true
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: Représentation de Hamilton sous la `GeneratorSystem`forme.
+  - summary: Représentation de Hamilton sous la forme `GeneratorSystem` .
     uid: microsoft.quantum.simulation.generatorsystem
 metadata:
-  ms.openlocfilehash: f9e635e746efda5aaaacc563a645ab494df33171
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bd02b879792187356d20c91243fc2389916b9cf6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82667514"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353921"

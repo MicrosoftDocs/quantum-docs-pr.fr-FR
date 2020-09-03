@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.iteratethroughcartesianpower
 name: IterateThroughCartesianPower
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Applique une opération pour chaque index dans la puissance Cartésiente d’une plage d’entiers.
 
 
-  Applique de manière itérative une opération pour chaque élément d’une puissance Cartésiene de `0..(bound - 1)`la plage.
+  Applique de manière itérative une opération pour chaque élément d’une puissance Cartésiene de la plage `0..(bound - 1)` .
 examples: >-
-  Pour une opération `op`donnée, les deux extraits de code suivants sont équivalents :
+  Pour une opération donnée `op` , les deux extraits de code suivants sont équivalents :
 
 
   ```Q#
@@ -66,9 +66,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianproduct
 metadata:
-  ms.openlocfilehash: a6f2d0e1f99c6cf7038803271af974a1c5fca465
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ed106ae6d6b84b2b00644709751e57153aec91fb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679070"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356165"
