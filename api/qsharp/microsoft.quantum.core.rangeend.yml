@@ -2,10 +2,10 @@
 uid: microsoft.quantum.core.rangeend
 name: RangeEnd
 type: function
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: Retourne la valeur de fin définie de la plage donnée, qui n’est pas nécessairement le dernier élément de la séquence.
 remarks: >-
-  Le premier élément d’une expression de `start`plage est, son deuxième `start+step`élément est, le `start+step+step`troisième élément est, etc `end` ., jusqu’à ce que soit passé.
+  Le premier élément d’une expression de plage est `start` , son deuxième élément est `start+step` , le troisième élément est `start+step+step` , etc., jusqu’à ce que `end` soit passé.
 
 
   Notez que la valeur de fin définie d’une plage peut être différente de celle du dernier élément de la séquence spécifiée par la plage ; par exemple, dans une plage 0.. 2.. 5 le dernier élément est 4, mais la valeur de fin est 5.
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 85e9006f73cd5f7b5a78b57148cbd7ad5b764878
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 08a7e70a8e12ef85902f03d7e24f99d3b5082f38
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82657637"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337992"

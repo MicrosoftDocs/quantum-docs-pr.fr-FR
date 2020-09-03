@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.modulusl
 name: ModulusL
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Calcule le résidu canonique du `value` modulo `modulus`.
-remarks: "Cette fonction se comporte différemment de la façon dont l' `%` opérateur se comporte en C# et Q # comme dans le résultat est toujours un entier positif compris entre 0 `modulus - 1`et, même si la valeur est négative."
+namespace: microsoft.quantum.math
+summary: Calcule le résidu canonique du `value` modulo `modulus` .
+remarks: 'Cette fonction se comporte différemment de la façon dont l’opérateur `%` se comporte en C# et Q # comme dans le résultat est toujours un entier positif compris entre 0 et `modulus - 1` , même si la valeur est négative.'
 syntax: 'function ModulusL (value : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(value : BigInt, modulus : BigInt)'
@@ -24,9 +24,9 @@ output:
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: c4a9403cc5c2bf62e43b5cc248fb9502f15818e8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 04dfee46752af759bc7d686b58bb6e9c3793c8d4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686628"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89334014"
