@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
+ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863438"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90063238"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutoriel : Explorer l’intrication avec Q\#
 
@@ -112,7 +112,7 @@ Une Q# opération est une sous-routine Quantum. Autrement dit, il s’agit d’u
 
 Les arguments pour une opération sont spécifiés sous forme de tuples, entre parenthèses.
 
-Le type de retour de l’opération est spécifié après un signe deux points. Dans ce cas, l’opération `SetQubitState` ne reçoit pas de retour et est marquée comme renvoyant `Unit`. Il s’agit Q# de l’équivalent de `unit` en F #, qui est à peu près similaire à `void` en C#, et d’un tuple vide ( `Tuple[()]` ) dans Python.
+Le type de retour de l’opération est spécifié après un signe deux points. Dans ce cas, l’opération `SetQubitState` ne reçoit pas de retour et est marquée comme renvoyant `Unit`. Il s’agit Q# de l’équivalent de `unit` en F #, qui est à peu près similaire à `void` en C#, et d’un tuple vide dans Python ( `()` , représenté par l’indicateur de type `Tuple[()]` ).
 
 Vous avez utilisé deux opérations de Quantum dans votre première Q# opération :
 
