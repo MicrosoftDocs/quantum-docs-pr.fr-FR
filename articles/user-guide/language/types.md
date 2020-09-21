@@ -1,31 +1,31 @@
 ---
-title: Types dansQ#
+title: Types dans Q#
 description: En savoir plus sur les différents types utilisés dans le Q# langage de programmation.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b034af0b1d3b967b5680403341813407e4412f93
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869594"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835823"
 ---
-# <a name="types-in-no-locq"></a>Types dansQ#
+# <a name="types-in-no-locq"></a>Types dans Q#
 
 Cet article décrit le Q# modèle de type et la syntaxe permettant de spécifier et d’utiliser des types. Pour plus d’informations sur la création et l’utilisation d’expressions de ces types, consultez [expressions de type](xref:microsoft.quantum.guide.expressions).
 
 Nous constatons que Q# est un langage *fortement typé* , de sorte que l’utilisation prudente de ces types peut aider le compilateur à fournir des garanties fortes sur les Q# programmes au moment de la compilation.
 Pour fournir les garanties les plus fortes possibles, les conversions entre Q# les types dans doivent être explicites à l’aide d’appels à des fonctions qui expriment cette conversion. 
-Q#fournit une variété de ces fonctions dans le cadre de l' <xref:microsoft.quantum.convert> espace de noms.
+Q# fournit une variété de ces fonctions dans le cadre de l' <xref:microsoft.quantum.convert> espace de noms.
 Les casts en types compatibles, en revanche, se produisent implicitement. 
 
-Q#fournit les deux types primitifs, qui sont utilisés directement, et diverses façons de produire de nouveaux types à partir d’autres types.
+Q# fournit les deux types primitifs, qui sont utilisés directement, et diverses façons de produire de nouveaux types à partir d’autres types.
 Nous décrivons chacun d’entre eux dans le reste de cet article.
 
 ## <a name="primitive-types"></a>Types primitifs
@@ -34,7 +34,7 @@ Le Q# langage fournit les *types primitifs*suivants, que vous pouvez utiliser di
 
 - Le `Int` type représente un entier signé 64 bits, par exemple,, `2` , `107` `-5` .
 - Le `BigInt` type représente un entier signé de taille arbitraire, par exemple,,, `2L` `107L` `-5L` .
-   Ce type est basé sur .NET<xref:System.Numerics.BigInteger>
+   Ce type est basé sur .NET <xref:System.Numerics.BigInteger>
    entrer.
 
 - Le `Double` type représente un nombre à virgule flottante double précision, par exemple,,, `0.0` `-1.3` `4e-7` .
@@ -53,7 +53,7 @@ Le Q# langage fournit les *types primitifs*suivants, que vous pouvez utiliser di
    Il s’agit d’un type énuméré qui a quatre valeurs possibles : `PauliI` , `PauliX` , `PauliY` et `PauliZ` , qui sont des constantes de type `Pauli` .
 - Le `Result` type représente le résultat d’une mesure.
    Il s’agit d’un type énuméré avec deux valeurs possibles : `One` et `Zero` , qui sont des constantes de type `Result` .
-   `Zero`indique que le eigenvalue + 1 a été mesuré ; `One`indique que le eigenvalue-1 a été mesuré.
+   `Zero` indique que le eigenvalue + 1 a été mesuré ; `One` indique que le eigenvalue-1 a été mesuré.
 
 Les constantes,,,,,, `true` `false` `PauliI` `PauliX` `PauliY` `PauliZ` `One` et `Zero` sont tous des symboles réservés dans Q# .
 
@@ -65,7 +65,7 @@ Les constantes,,,,,, `true` `false` `PauliI` `PauliX` `PauliY` `PauliZ` `One` et
 * Un tableau de tableaux est également valide. En développant l’exemple précédent, un tableau de `(Bool, Pauli)` tableaux est indiqué `(Bool, Pauli)[][]` .
 
 > [!NOTE] 
-> Cet exemple, `(Bool, Pauli)[][]` , représente un tableau potentiellement irrégulier de tableaux et non un tableau rectangulaire à deux dimensions. Q#ne prend pas en charge les tableaux multidimensionnels rectangulaires.
+> Cet exemple, `(Bool, Pauli)[][]` , représente un tableau potentiellement irrégulier de tableaux et non un tableau rectangulaire à deux dimensions. Q# ne prend pas en charge les tableaux multidimensionnels rectangulaires.
 
 * Une valeur de tableau peut être écrite dans Q# le code source à l’aide de crochets autour des éléments d’un tableau, comme dans `[PauliI, PauliX, PauliY, PauliZ]` .
 Le type de base commun de tous les éléments du tableau détermine le type d’un littéral de tableau. Par conséquent, la construction d’un tableau avec des éléments qui n’ont pas de type de base commun génère une erreur.  
@@ -98,7 +98,7 @@ Les indices de tableaux sont de base zéro et doivent être de type `Int` ou de 
 Les tuples sont un concept puissant utilisé dans l’ensemble Q# pour collecter des valeurs dans une valeur unique, ce qui facilite leur transmission.
 En particulier, en utilisant la notation de tuple, vous pouvez exprimer que chaque opération et pouvant être appelée accepte exactement une entrée et retourne une seule sortie.
 
-* À partir de zéro, un ou plusieurs types différents `T0` , `T1` ,..., `Tn` , vous pouvez désigner un nouveau *type de tuple* comme `(T0, T1, ..., Tn)` .
+* À partir de zéro, un ou plusieurs types différents `T0` , `T1` ,..., `Tn` , vous pouvez désigner un nouveau  *type de tuple* comme `(T0, T1, ..., Tn)` .
 Les types utilisés pour construire un nouveau type de tuple peuvent eux-mêmes être des tuples, comme dans `(Int, (Qubit, Qubit))` .
 Toutefois, cette imbrication est toujours finie, car les types de tuple ne peuvent en aucun cas contenir eux-mêmes.
 
@@ -109,7 +109,7 @@ Il est possible de créer des tableaux de tuples, des tuples de tableaux, des tu
 * À partir de Q# 0,3, `Unit` est le nom du *type* du tuple vide ; `()` est utilisé pour la *valeur* du tuple vide.
 
 * Les instances de tuple sont immuables.
-Q#ne fournit pas de mécanisme permettant de modifier le contenu d’un tuple une fois créé.
+Q# ne fournit pas de mécanisme permettant de modifier le contenu d’un tuple une fois créé.
 
 
 
@@ -155,10 +155,10 @@ newtype Complex = (Double, Double);
 ```
 Cette instruction crée un nouveau type avec deux éléments anonymes de type `Double` .   
 
-Outre les éléments anonymes, les types définis par l’utilisateur prennent également en charge les *éléments nommés* à la Q# version 0,7 ou une version ultérieure. Par exemple, vous pouvez nommer les éléments en `Re` pour le double représentant la partie réelle d’un nombre complexe et `Im` pour la partie imaginaire : 
+Outre les éléments anonymes, les types définis par l’utilisateur prennent également en charge les *éléments nommés* à la Q# version 0,7 ou une version ultérieure. Par exemple, vous pouvez nommer les éléments en `Real` pour le double représentant la partie réelle d’un nombre complexe et `Imag` pour la partie imaginaire : 
 
 ```qsharp
-newtype Complex = (Re : Double, Im : Double);
+newtype Complex = (Real : Double, Imag : Double);
 ```
 L’attribution d’un nom à un élément dans un type défini par l’utilisateur n’implique pas que tous les éléments doivent être nommés-toute combinaison d’éléments nommés et sans nom est prise en charge. En outre, les éléments internes peuvent également être nommés.
 Le type `Nested` , tel que défini ci-dessous, a un type sous-jacent `(Double, (Int, String))` dont seul l’élément de type `Int` est nommé et tous les autres éléments sont anonymes. 
@@ -171,18 +171,18 @@ Les éléments nommés présentent l’avantage de pouvoir accéder directement 
 
 ```qsharp
 function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
-    return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
+    return Complex(c1::Real + c2::Real, c1::Imag + c2::Imag);
 }
 ```
 
 En plus de fournir des alias courts pour les types de tuple potentiellement compliqués, un avantage significatif de la définition de ces types est qu’ils peuvent documenter l’intention d’une valeur particulière.
-En revenant à l’exemple de `Complex` , vous pouvez également définir des coordonnées polaires 2D comme type défini par l’utilisateur :
+En revenant à l’exemple de `Complex` , il est possible de définir une coordonnée polaire représentation comme type défini par l’utilisateur :
 
 ```qsharp
-newtype Polar = (Radius : Double, Phase : Double);
+newtype ComplexPolar = (Magnitude : Double, Argument : Double);
 ```
 
-Même si `Complex` et `Polar` les deux ont un type sous-jacent `(Double, Double)` , les deux types sont entièrement incompatibles dans, ce qui Q# réduit le risque d’appeler accidentellement une fonction mathématique complexe avec des coordonnées polaires, et vice versa.
+Même si `Complex` et `ComplexPolar` les deux ont un type sous-jacent `(Double, Double)` , les deux types sont entièrement incompatibles dans, ce qui Q# réduit le risque d’appeler accidentellement une fonction mathématique complexe avec des coordonnées polaires, et vice versa.
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a>Accéder aux éléments anonymes avec l’opérateur Unwrap
 
@@ -259,8 +259,8 @@ Plus généralement, les types définis par l’utilisateur ne peuvent pas avoir
 
 Selon les types `'Tinput` et `'Tresult` :
 
-* `('Tinput => 'Tresult)`est le type de base pour toute *opération*, par exemple `((Qubit, Pauli) => Result)` .
-* `('Tinput -> 'Tresult)`est le type de base pour n’importe quelle *fonction*, par exemple `(Int -> Int)` . 
+* `('Tinput => 'Tresult)` est le type de base pour toute *opération*, par exemple `((Qubit, Pauli) => Result)` .
+* `('Tinput -> 'Tresult)` est le type de base pour n’importe quelle *fonction*, par exemple `(Int -> Int)` . 
 
 Il s’agit de la *signature* de l’appelable.
 
@@ -298,7 +298,7 @@ De même, une fonction qui retourne la composition de deux opérations possède 
 
 Quand vous appelez un type paramétrable pouvant être appelé, tous les arguments qui ont le même paramètre de type doivent être du même type.
 
-Q#ne fournit pas de mécanisme permettant de limiter les types possibles qu’un utilisateur peut remplacer par un paramètre de type.
+Q# ne fournit pas de mécanisme permettant de limiter les types possibles qu’un utilisateur peut remplacer par un paramètre de type.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

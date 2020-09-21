@@ -1,6 +1,6 @@
 ---
 titre : Glossaire quantum computing Description : Glossaire des termes, actions et objets les plus courants utilisés dans quantum computing.
-Auteur : QuantumWriter ms. Author : Alan.Geller@microsoft.com ms. Date : 12/11/2017 ms. topic : article UID : Microsoft. Quantum. Glossaire No-Loc :
+Auteur : bradben ms. Author : v-benbra ms. Date : 9/1/2020 ms. topic : article UID : Microsoft. Quantum. Glossaire No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -99,7 +99,7 @@ L’un des quatre [entangled](xref:microsoft.quantum.glossary#entanglement) [Ét
 
 ## <a name="bloch-sphere"></a>Sphère Bloch
 
-Représentation graphique d’un [État Quantum](xref:microsoft.quantum.glossary#quantum-state) à[qubit](xref:microsoft.quantum.glossary#qubit) unique comme point dans une sphère d’unité en trois dimensions. Pour plus d’informations, consultez [visualisation des qubits et des transformations à l’aide de la sphère Bloch](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Représentation graphique d’un [État Quantum](xref:microsoft.quantum.glossary#quantum-state) à[qubit](xref:microsoft.quantum.glossary#qubit) unique comme point dans une sphère d’unité en trois dimensions. Pour plus d’informations, consultez  [visualisation des qubits et des transformations à l’aide de la sphère Bloch](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 ## <a name="callable"></a>Pouvant être appelé
 
@@ -170,7 +170,7 @@ Variable dont la valeur peut être modifiée après sa création. Une variable m
 
 ## <a name="operation"></a>Opération
 
-Unité de base de l’exécution de Quantum dans Q# . Elle est à peu près équivalente à une fonction en C, C++ ou python, ou une méthode statique en C# ou en Java. Pour plus d’informations, consultez [opérations et fonctions](xref:microsoft.quantum.guide.operationsfunctions).
+Unité de base du calcul Quantum dans Q# . Elle est à peu près équivalente à une fonction en C, C++ ou python, ou une méthode statique en C# ou en Java. Pour plus d’informations, consultez [opérations et fonctions](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="operator-application"></a>Application opérateur
 

@@ -1,6 +1,6 @@
 ---
 title : description des concepts avancés de la matrice : en savoir plus sur les fonctionnalités exponentielles de vecteurs propres, de valeurs propres et de matrice, les outils fondamentaux utilisés pour décrire et simuler des algorithmes Quantum.
-Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. Matrix-Advanced ms. Auteur : nawiebe@microsoft.com ms. Date : 12/11/2017 ms. topic : article No-Loc :
+Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. Matrix-Advanced ms. Auteur : v-benbra ms. Date : 12/11/2017 ms. topic : article No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ Nous étendons maintenant notre manipulation de matrices à [*valeurs propres, v
 
 Supposons $ que M est $ une matrice carrée et $ $ que v soit un vecteur qui n’est pas le vecteur de zéros tous (c’est-à-dire, le vecteur avec toutes les entrées égales à $ 0 $ ).
 
-Nous disons que $ v $ est un [*extraction*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) de $ M $ si $ MV = CV $ pour un nombre $ c $ . Nous disons que $ c $ est le [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) correspondant à extraction $ v $ . En général, une matrice $ M $ peut transformer un vecteur en un autre vecteur, mais un extraction est spécial, car il reste inchangé, sauf s’il est multiplié par un nombre. Notez que si $ v $ est un extraction avec eigenvalue $ c $ , $ l’AV $ est également un extraction (pour toute valeur différente $ de zéro $ ) avec le même eigenvalue.
+Nous disons que $ v $ est un [*extraction*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) de  $ M $ si $ MV = CV $ pour un nombre $ c $ . Nous disons que $ c $ est le [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) correspondant à extraction $ v $ . En général, une matrice $ M $ peut transformer un vecteur en un autre vecteur, mais un extraction est spécial, car il reste inchangé, sauf s’il est multiplié par un nombre. Notez que si $ v $ est un extraction avec eigenvalue $ c $ , $ l’AV $ est également un extraction (pour toute valeur différente $ de zéro $ ) avec le même eigenvalue.
 
 Par exemple, pour la matrice d’identité, chaque vecteur $ v $ est un extraction avec eigenvalue $ 1 $ .
 
@@ -108,7 +108,7 @@ Les vecteurs
 
 $$\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix} , \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix} et \begin{bmatrix} 0 \\\\ 0 \\\\ 1\end{bmatrix}$$
 
-sont vecteurs propres de cette matrice avec valeurs propres $ d_1 $ , $ d_2 $ et $ D_3 $ , respectivement. Si $ d_1 $ , $ d_2 $ et $ D_3 $ sont des nombres distincts, ces vecteurs (et leurs multiples) sont les seuls vecteurs propres de la matrice $ d $ . En général, pour une matrice diagonale, il est facile de lire les valeurs propres et les vecteurs propres. Les valeurs propres sont tous des nombres apparaissant sur la diagonale, et leurs vecteurs propres respectifs sont les vecteurs d’unité avec une entrée égale à $ 1 $ et les entrées restantes égales à $ 0 $ .
+sont vecteurs propres de cette matrice avec valeurs propres  $ d_1 $ , $ d_2 $ et $ D_3 $ , respectivement. Si $ d_1 $ , $ d_2 $ et $ D_3 $ sont des nombres distincts, ces vecteurs (et leurs multiples) sont les seuls vecteurs propres de la matrice $ d $ . En général, pour une matrice diagonale, il est facile de lire les valeurs propres et les vecteurs propres. Les valeurs propres sont tous des nombres apparaissant sur la diagonale, et leurs vecteurs propres respectifs sont les vecteurs d’unité avec une entrée égale à $ 1 $ et les entrées restantes égales à $ 0 $ .
 
 Notez dans l’exemple ci-dessus que le vecteurs propres de $ D $ constitue une base pour les $ $ vecteurs à trois dimensions. Une base est un ensemble de vecteurs, de sorte que tout vecteur peut être écrit comme une combinaison linéaire de ces vecteurs. Plus explicitement, $ V_1 $ , $ V_2 $ et $ V_3 $ forment une base si un vecteur $ v $ peut être écrit sous la forme $ v = A_1 v_1 + a_2 V_2 + A_3 V_3 $ pour certains nombres $ A_1 $ , $ a_2 $ et $ A_3 $ .
 

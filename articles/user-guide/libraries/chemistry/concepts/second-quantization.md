@@ -1,20 +1,20 @@
 ---
 title: Deuxième quantification
 description: Découvrez la deuxième approche de quantification de la modélisation des structures électroniques dans la programmation quantique.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ba77c499d6830b1f78bba39e20b15c4ebe9433fc
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869458"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835806"
 ---
 # <a name="second-quantization"></a>Deuxième quantification
 
@@ -77,7 +77,7 @@ La bibliothèque de chimie quantique peut utiliser ces conventions, et les orbit
 ```
 
 Pour les systèmes fermionic, le principe d’exclusion Pauli empêche la présence de plusieurs électrons dans n’importe quel spin-orbital en même temps.
-Cela signifie que nous pouvons écrire les deux États légaux pour $ \ psi_1 $ As \begin{Equation} \ psi_1 \rightarrow \begin{cases} \ket _ 1 {0} & \text{if $ \ psi_1 $ n’est pas occupé,}\\\
+Cela signifie que nous pouvons écrire les deux États légaux pour $ \ psi_1 $ As \begin{Equation} \ psi_1 \rightarrow \begin{cases} \ket _ 1 {0} & \text{if $ \ psi_1 $ n’est pas occupé,} \\\
 \ket _ 1 {1} & _ \text{if $ \ psi_1 $ est occupé.} \end{cases} \end{Equation} cet encodage est parfait pour les ordinateurs Quantum, car cela signifie que nous pouvons stocker l’occupation électronique comme un bit Quantum unique.
 
 Les États de la profession pour les orbites de type « $ 2N $ » peuvent être stockés de la même façon dans $2N $ qubits.

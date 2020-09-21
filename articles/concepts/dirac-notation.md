@@ -1,6 +1,6 @@
 ---
 titre : description de la notation Dirac : en savoir plus sur l’utilisation de la notation Dirac pour représenter les États quantiques et pour simuler des opérations de Quantum.
-Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. Dirac ms. Author : nawiebe@microsoft.com ms. Date : 12/11/2017 ms. topic : article No-Loc :
+Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. Dirac ms. Author : v-benbra ms. Date : 12/11/2017 ms. topic : article No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -230,5 +230,5 @@ Ce concept de représentation de l’État sous la forme d’une matrice, plutô
 Les opérateurs d’État Quantum généraux, plutôt que les vecteurs, sont omniprésents dans certains domaines de l’informatique Quantum, mais ils ne sont pas nécessaires pour comprendre les principes de base du champ.
 Pour le lecteur intéressé, nous vous recommandons de lire l’un des ouvrages de référence fournis dans [pour plus d’informations](xref:microsoft.quantum.more-information).
 
-## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q#séquences de la porte équivalentes aux États quantiques
+## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q# séquences de la porte équivalentes aux États quantiques
 Un dernier point intéressant la notation quantique et le Q# langage de programmation : au début de ce document, nous avons mentionné que l’État Quantum est l’objet fondamental des informations dans quantum computing.  Il peut alors s’avérer surprenant qu’il n' Q# y ait pas de notion d’État Quantum.  Au lieu de cela, tous les États sont décrits uniquement par les opérations utilisées pour les préparer.  L’exemple précédent est une excellente illustration.  Au lieu d’exprimer une superposition uniforme sur chaque chaîne de bits quantique dans un registre, nous pouvons représenter le résultat sous la forme $ H ^ { \otimes n } \ket { 0 } $ .  Cette description exponentiellement plus concise de l’état présente non seulement l’avantage que nous pouvons en raison de la raison classique, mais elle définit également de manière concise les opérations nécessaires pour être propagées via la pile de logiciels pour implémenter l’algorithme.  Pour cette raison, Q# est conçu pour émettre des séquences de grille plutôt que des États quantiques. Toutefois, à un niveau théorique, les deux perspectives sont équivalentes.

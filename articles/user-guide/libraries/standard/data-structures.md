@@ -3,18 +3,18 @@ title: Structures de données dans les Q# bibliothèques standard
 description: En savoir plus sur les structures de données, les Oracle et les générateurs dynamiques dans les Q# bibliothèques standard Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868514"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835585"
 ---
 # <a name="data-structures-and-modeling"></a>Structures de données et modélisation #
 
@@ -160,8 +160,8 @@ Cette unité est habituellement décrite par l’un des deux types d’Oracle.
 
 > [!TIP]
 > Les deux types Oracle décrits ci-dessous sont traités dans les exemples.
-> Pour en savoir plus sur les requêtes Oracle continues, consultez l' [exemple **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation).
-> Pour en savoir plus sur les requêtes discrètes Oracle, consultez l' [exemple **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> Pour en savoir plus sur les requêtes Oracle continues, consultez l' [exemple **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
+> Pour en savoir plus sur les requêtes discrètes Oracle, consultez l' [exemple **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
 Le premier type d’Oracle, que nous appelons une requête discrète Oracle et qui représentent le type défini par l’utilisateur <xref:microsoft.quantum.oracles.discreteoracle> , implique simplement une matrice d’unités.
 Si $U $ est l’unité de valeurs propres que nous souhaitons estimer, alors Oracle for $U $ est simplement une solution de secours pour une sous-routine qui implémente $U $.
@@ -211,8 +211,8 @@ où l’entier $r > $0 contrôle l’erreur d’approximation.
 La bibliothèque de modélisation de générateurs dynamiques fournit une infrastructure pour l’encodage systématique des générateurs complexes en termes de générateurs plus simples. Une telle description peut ensuite être transmise à, par exemple, la bibliothèque de simulation pour implémenter l’évolution du temps par un algorithme de simulation de choix, avec de nombreux détails automatiquement pris en charge.
 
 > [!TIP]
-> La bibliothèque de générateurs dynamiques décrite ci-dessous est traitée dans les exemples. Pour obtenir un exemple basé sur le modèle Ising, consultez l' [exemple **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
-> Pour obtenir un exemple basé sur l’hydrogène moléculaire, consultez les exemples [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) et [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) .
+> La bibliothèque de générateurs dynamiques décrite ci-dessous est traitée dans les exemples. Pour obtenir un exemple basé sur le modèle Ising, consultez l' [exemple **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
+> Pour obtenir un exemple basé sur l’hydrogène moléculaire, consultez les exemples [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) et [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) .
 
 ### <a name="complete-description-of-a-generator"></a>Description complète d’un générateur ###
 

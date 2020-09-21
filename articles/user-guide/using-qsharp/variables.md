@@ -1,24 +1,24 @@
 ---
-title: Variables dansQ#
-description: Description de remplissage
+title: Variables dans Q#
+description: En savoir plus sur l’utilisation de différentes variables dans Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867843"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835874"
 ---
-# <a name="variables-in-no-locq"></a>Variables dansQ#
+# <a name="variables-in-no-locq"></a>Variables dans Q#
 
-Q#distingue les symboles mutables et immuables, ou les *variables*, qui sont liées/affectées aux expressions.
+Q# distingue les symboles mutables et immuables, ou les *variables*, qui sont liées/affectées aux expressions.
 En général, l’utilisation de symboles immuables est encouragée, car elle permet au compilateur d’effectuer des optimisations supplémentaires.
 
 La partie gauche d’une liaison se compose d’un tuple de symboles et de la partie droite d’une expression.
@@ -58,7 +58,7 @@ Voici quelques exemples de techniques d’instruction de reliaison.
 
 #### <a name="apply-and-reassign-statements"></a>Instructions Apply-and-réassign
 
-Un genre particulier d' `set` instruction, l’instruction *apply-and-réassign* , offre un moyen pratique de concaténer si le côté droit est constitué de l’application d’un opérateur binaire, et le résultat doit être relié à l’argument Left à l’opérateur. Par exemple :
+Un genre particulier d' `set` instruction, l’instruction *apply-and-réassign* , offre un moyen pratique de concaténer si le côté droit est constitué de l’application d’un opérateur binaire, et le résultat doit être relié à l’argument Left à l’opérateur. Par exemple,
 
 ```qsharp
 mutable counter = 0;
@@ -201,7 +201,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-and
+et
 
 ```qsharp
 if (a == b) {

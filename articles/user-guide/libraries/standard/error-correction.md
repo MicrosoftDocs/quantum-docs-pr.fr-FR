@@ -3,18 +3,18 @@ title: Correction des erreurs dans les Q# bibliothèques standard
 description: Découvrez comment utiliser les codes de correction des erreurs dans vos Q# programmes tout en protégeant l’état du qubits.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868489"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835551"
 ---
 # <a name="error-correction"></a>Correction des erreurs #
 
@@ -78,7 +78,7 @@ Dans cette section, nous décrivons cette infrastructure et son application à q
 > Une introduction complète au formalisme du stabilisateur dépasse le cadre de cette section.
 > Nous faisons référence aux lecteurs qui souhaitent en savoir plus sur [Gottesman 2009](https://arxiv.org/abs/0904.2557).
 
-## <a name="representing-error-correcting-codes-in-no-locq"></a>Représentation des codes de correction des erreurs dansQ# ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>Représentation des codes de correction des erreurs dans Q# ##
 
 Pour vous aider à spécifier les codes de correction des erreurs, Q# Canon fournit plusieurs types définis par l’utilisateur distincts :
 
@@ -120,6 +120,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-Nous explorons ceci plus en détail dans l' [exemple de code de symétrie de bit](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
+Nous explorons ceci plus en détail dans l' [exemple de code de symétrie de bit](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code).
 
 Outre le code d’inversion de bits, Q# Canon est fourni avec les implémentations du [code parfait qubit](https://arxiv.org/abs/quant-ph/9602019)et du code de [sept qubit](https://arxiv.org/abs/quant-ph/9705052), qui peuvent corriger une erreur arbitraire qubit.

@@ -2,19 +2,19 @@
 title: Estimation des ressources de Quantum-Kit de développement quantique
 description: Découvrez l’estimateur des ressources Microsoft QDK, qui estime les ressources requises pour exécuter une instance donnée d’une Q# opération sur un ordinateur Quantum.
 author: anpaz-msft
-ms.author: anpaz@microsoft.com
+ms.author: anpaz
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1892431c3e332385a5bcefa357eb64a9fac3f381
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992239"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835925"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimation des ressources du kit de développement quantique (QDK)
 
@@ -127,7 +127,7 @@ L’estimateur de ressources effectue le suivi des mesures suivantes :
 |----|----|
 |__CNOT__    |Nombre d’exécutions d' `CNOT` opérations (également appelées opérations Pauli X contrôlées).|
 |__QubitClifford__ |Nombre d’exécutions d’opérations qubit Clifford et Pauli uniques.|
-|__Measure__    |Nombre d’exécutions de mesures.  |
+|__Unité__ :    |Nombre d’exécutions de mesures.  |
 |__R__    |Nombre d’exécutions de rotations à qubit unique, à l’exception des `T` opérations Clifford et Pauli.  |
 |__T__    |Nombre d’exécutions d' `T` opérations et de leurs conjugués, y compris les `T` opérations, T_x = H. T. H et T_y = Hy. t. hy.  |
 |__Profondeur__|Limite inférieure de la profondeur du circuit Quantum exécutée par l' Q# opération. Par défaut, la mesure de profondeur compte uniquement les `T` portes. Pour plus d’informations, consultez [compteur de profondeur](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |

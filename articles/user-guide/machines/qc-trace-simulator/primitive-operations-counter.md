@@ -1,24 +1,24 @@
 ---
 title: Compteur d’opérations primitives-Kit de développement Quantum
-description: Découvrez le compteur d’opérations primitives Microsoft QDK, qui utilise le simulateur de traces Quantum pour suivre les exécutions de primitives utilisées par les opérations dans un Q# programme.
+description: Découvrez le compteur d’opérations primitives Microsoft QDK, qui utilise le simulateur de traces Quantum pour suivre les processus primitifs utilisés par les opérations dans un Q# programme.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868234"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835976"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Simulateur de traces Quantum : compteur d’opérations primitives
 
-Le compteur d’opérations primitifs fait partie du [simulateur](xref:microsoft.quantum.machines.qc-trace-simulator.intro)Quantum Development Kit. Il compte le nombre d’exécutions de primitives utilisées par chaque opération appelée dans un programme Quantum. 
+Le compteur d’opérations primitifs fait partie du [simulateur](xref:microsoft.quantum.machines.qc-trace-simulator.intro)Quantum Development Kit. Il compte le nombre de processus primitifs utilisés par chaque opération appelée dans un programme Quantum. 
 
 Toutes les <xref:microsoft.quantum.intrinsic> opérations sont exprimées en termes de rotations à qubit unique, d’opérations T, d’opérations de Clifford qubit, d’opérations cnotin et de mesures de plusieurs qubit Pauli observables. Le compteur opérations primitives agrège et collecte des statistiques sur tous les bords du [graphique des appels](https://en.wikipedia.org/wiki/Call_graph)de l’opération.
 

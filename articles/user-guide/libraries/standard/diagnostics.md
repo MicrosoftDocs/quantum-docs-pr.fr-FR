@@ -3,17 +3,17 @@ title: Diagnostics dans les Q# bibliothèques standard
 description: Découvrez les fonctions et opérations de diagnostic dans les Q# bibliothèques standard utilisées pour détecter les erreurs ou les erreurs dans les programmes Quantum.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868540"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835568"
 ---
 # <a name="diagnostics"></a>Diagnostics #
 
@@ -33,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`possède `(String -> Unit)` une signature, indiquant de nouveau que l’émission d’un message du journal de débogage ne peut pas être observée à partir de Q# .
+> `Message` possède `(String -> Unit)` une signature, indiquant de nouveau que l’émission d’un message du journal de débogage ne peut pas être observée à partir de Q# .
 
 Les <xref:microsoft.quantum.diagnostics.dumpmachine> <xref:microsoft.quantum.diagnostics.dumpregister> callables et indiquent aux machines cibles de fournir des informations de diagnostic sur tous les qubits actuellement alloués ou sur un registre spécifique de qubits, respectivement.
 Chaque ordinateur cible varie selon les informations de diagnostic fournies en réponse à une instruction de vidage.
@@ -69,14 +69,14 @@ Sur les ordinateurs cibles qui n’autorisent pas l’évaluation des assertions
 Plus généralement, l' <xref:microsoft.quantum.diagnostics.assertmeasurement> opération déclare que la mesure de la qubits donnée dans la base Pauli donnée aura toujours le résultat donné.
 Si l’assertion échoue, l’exécution se termine en appelant `fail` avec le message donné.
 Par défaut, cette opération n’est pas implémentée. les simulateurs qui peuvent prendre en charge le service informatique doivent fournir une implémentation qui effectue la vérification de l’exécution.
-`AssertMeasurement`a une signature `((Pauli[], Qubit[], Result, String) -> ())` .
+`AssertMeasurement` a une signature `((Pauli[], Qubit[], Result, String) -> ())` .
 Étant donné que `AssertMeasurement` est une fonction avec un tuple vide comme type de sortie, aucun effet à partir de n' `AssertMeasurement` est observable dans un Q# programme.
 
 La <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> fonction d’opération déclare que la mesure du qubits donné dans la base Pauli donnée aura le résultat donné avec la probabilité donnée, dans une certaine tolérance.
-La tolérance est additive (par exemple `abs(expected-actual) < tol` ,).
+La tolérance est additive (par exemple, `abs(expected-actual) < tol` ).
 Si l’assertion échoue, l’exécution se termine en appelant `fail` avec le message donné.
 Par défaut, cette opération n’est pas implémentée. les simulateurs qui peuvent prendre en charge le service informatique doivent fournir une implémentation qui effectue la vérification de l’exécution.
-`AssertMeasurementProbability`a une signature `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . Le premier `Double` paramètre donne la probabilité souhaitée du résultat, et le deuxième la tolérance.
+`AssertMeasurementProbability` a une signature `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . Le premier `Double` paramètre donne la probabilité souhaitée du résultat, et le deuxième la tolérance.
 
 Nous pouvons faire plus que déclarer une mesure unique, en utilisant le fait que les informations classiques utilisées par un simulateur pour représenter l’état interne d’un qubit sont susceptibles d’être copiées, de sorte que nous n’avons pas besoin d’effectuer une mesure pour tester notre assertion.
 En particulier, cela nous permet d’obtenir des informations sur les mesures *incompatibles* qui seraient impossibles sur le matériel réel.

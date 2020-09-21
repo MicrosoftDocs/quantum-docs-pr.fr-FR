@@ -1,32 +1,32 @@
 ---
-title: Expressions dansQ#
+title: Expressions dans Q#
 description: Comprenez comment spécifier, référencer et combiner des constantes, des variables, des opérateurs, des opérations et des fonctions en tant qu’expressions dans Q# .
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869611"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835840"
 ---
-# <a name="expressions-in-no-locq"></a>Expressions dansQ#
+# <a name="expressions-in-no-locq"></a>Expressions dans Q#
 
 ## <a name="numeric-expressions"></a>Expressions numériques
 
 Les expressions numériques sont des expressions de type `Int` , `BigInt` ou `Double` .
 Autrement dit, il s’agit de nombres entiers ou à virgule flottante.
 
-`Int`les littéraux dans Q# sont écrits sous la forme d’une séquence de chiffres.
+`Int` les littéraux dans Q# sont écrits sous la forme d’une séquence de chiffres.
 Les entiers hexadécimaux et binaires sont pris en charge et écrits avec un `0x` `0b` préfixe et, respectivement.
 
-`BigInt`les littéraux dans Q# ont un `l` suffixe ou de fin `L` .
+`BigInt` les littéraux dans Q# ont un `l` suffixe ou de fin `L` .
 Les entiers hexadécimaux Big sont pris en charge et écrits avec un préfixe « 0x ».
 Par conséquent, Voici toutes les utilisations valides des `BigInt` littéraux :
 
@@ -36,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`les littéraux dans Q# sont des nombres à virgule flottante écrits à l’aide de chiffres décimaux.
+`Double` les littéraux dans Q# sont des nombres à virgule flottante écrits à l’aide de chiffres décimaux.
 Elles peuvent être écrites avec ou sans virgule décimale, `.` , ou une partie exponentielle indiquée par « e » ou « e » (après quoi seuls un signe négatif et des chiffres décimaux possibles sont valides).
 Les littéraux valides sont les suivants `Double` : `0.0` , `1.2e5` , `1e-5` .
 
@@ -64,16 +64,14 @@ Pour les valeurs entières et de type entier Big, les décalages sont arithméti
 Le décalage d’une valeur négative à gauche ou à droite produit un nombre négatif.
 Autrement dit, le décalage d’une étape vers la gauche ou vers la droite est identique à la multiplication ou à la division par 2, respectivement.
 
-Le modulo de la division entière et de l’entier suit le même comportement pour les nombres négatifs que C#.
-Autrement dit, `a % b` a toujours le même signe que `a` et est `b * (a / b) + a % b` toujours égal à `a` .
-Par exemple :
+Le modulo de la division entière et de l’entier suit le même comportement pour les nombres négatifs que C#. Autrement dit, `a % b` a toujours le même signe que `a` et est `b * (a / b) + a % b` toujours égal à `a` . Par exemple :
 
- `A` | `B` | `A / B` | `A % B`
----------|----------|---------|---------
- 5 | 2 | 2 | 1
- 5 | -2 | -2 | 1
- -5 | 2 | -2 | -1
- -5 | -2 | 2 | -1
+|`A` | `B` | `A / B` | `A % B`|
+|:---------:|:----------:|:---------:|:---------:|
+| 5 | 2 | 2 | 1 |
+| 5 | -2 | -2 | 1 |
+| -5 | 2 | -2 | -1 |
+| -5 | -2 | 2 | -1 |
 
 Les opérations de division d’entiers et de modulo fonctionnent de la même façon.
 
@@ -113,7 +111,7 @@ Compte tenu de deux expressions booléennes, utilisez l' `and` opérateur binair
 
 ## <a name="string-expressions"></a>Expressions de chaîne
 
-Q#autorise l’utilisation de chaînes dans l' `fail` instruction (expliquée dans le [Workflow de contrôle](xref:microsoft.quantum.guide.controlflow#fail-statement)) et dans la [`Message`](xref:microsoft.quantum.intrinsic.message) fonction standard. Le comportement spécifique de ce dernier dépend du simulateur utilisé, mais écrit généralement un message dans la console hôte lorsqu’il est appelé pendant un Q# programme.
+Q# autorise l’utilisation de chaînes dans l' `fail` instruction (expliquée dans le [Workflow de contrôle](xref:microsoft.quantum.guide.controlflow#fail-statement)) et dans la [`Message`](xref:microsoft.quantum.intrinsic.message) fonction standard. Le comportement spécifique de ce dernier dépend du simulateur utilisé, mais écrit généralement un message dans la console hôte lorsqu’il est appelé pendant un Q# programme.
 
 Les chaînes dans Q# sont des littéraux ou des chaînes interpolées.
 
@@ -156,14 +154,14 @@ Notez que le implicite `step` est + 1 même si `stop` est inférieur à `start` 
 
 Voici quelques exemples de plages :
 
-- `1..3`est la plage 1, 2, 3.
-- `2..2..5`est la plage 2, 4.
-- `2..2..6`est la plage 2, 4, 6.
-- `6..-2..2`est la plage 6, 4, 2.
-- `2..1`est la plage vide.
-- `2..6..7`est la plage 2.
-- `2..2..1`est la plage vide.
-- `1..-1..2`est la plage vide.
+- `1..3` est la plage 1, 2, 3.
+- `2..2..5` est la plage 2, 4.
+- `2..2..6` est la plage 2, 4, 6.
+- `6..-2..2` est la plage 6, 4, 2.
+- `2..1` est la plage vide.
+- `2..6..7` est la plage 2.
+- `2..2..1` est la plage vide.
+- `1..-1..2` est la plage vide.
 
 ## <a name="qubit-expressions"></a>Expressions qubit
 
@@ -207,7 +205,7 @@ Pour les types définis par l’utilisateur définis en termes d’autres types 
 Ainsi, si `WrappedPair` est un type défini par l’utilisateur avec le type sous-jacent `IntPair` , et `t` est une variable avec la valeur `WrappedPair(IntPair(1,2))` , `t!!` est alors `(1,2)` .
 
 L' `!` opérateur a une priorité plus élevée que tous les autres opérateurs autres que `[]` pour l’indexation et le découpage de tableau.
-`!`et `[]` lient la position. autrement dit, `a[i]![3]` est lu comme `((a[i])!)[3]` : prenez le `i` th élément de `a` , Désencapsulez-le, puis récupérez le troisième élément de la valeur désencapsulée (qui doit être un tableau).
+`!` et `[]` lient la position. autrement dit, `a[i]![3]` est lu comme `((a[i])!)[3]` : prenez le `i` th élément de `a` , Désencapsulez-le, puis récupérez le troisième élément de la valeur désencapsulée (qui doit être un tableau).
 
 La priorité de l' `!` opérateur a un impact qui peut ne pas être évident.
 Si une fonction ou une opération retourne une valeur qui est ensuite désencapsulée, l’appel de fonction ou d’opération doit être mis entre parenthèses afin que le tuple d’argument soit lié à l’appel plutôt qu’à la désencapsulation.
@@ -253,7 +251,7 @@ Type | Default
  `Qubit` | _qubit non valide_
  `Pauli` | `PauliI`
  `Result` | `Zero`
- `Range` | La plage vide,`1..1..0`
+ `Range` | La plage vide, `1..1..0`
  `Callable` | _appelable non valide_
  `Array['T]` | `'T[0]`
 
@@ -328,17 +326,17 @@ Bien entendu, dans la pratique, seuls les éléments pertinents sont recréés e
 Vous pouvez créer un nouveau tableau à partir d’un tableau existant à l’aide d’expressions de *copie et de mise à jour* , qui utilisent les opérateurs `w/` et `<-` .
 Une expression de copie et de mise à jour est une expression de la forme `expression1 w/ expression2 <- expression3` , où
 
-* `expression1`doit être `T[]` de type pour un certain type `T` .
-* `expression2`définit les index dans le tableau spécifié dans `expression1` à modifier. `expression2`doit être de type `Int` ou `Range` .
-* `expression3`valeur (s) utilisée (s) pour mettre à jour les éléments dans `expression1` , en fonction des index spécifiés dans `expression2` . Si `expression2` est `Int` de type, `expression3` doit être de type `T` . Si `expression2` est `Range` de type, `expression3` doit être de type `T[]` .
+* `expression1` doit être `T[]` de type pour un certain type `T` .
+* `expression2` définit les index dans le tableau spécifié dans `expression1` à modifier. `expression2` doit être de type `Int` ou `Range` .
+* `expression3` valeur (s) utilisée (s) pour mettre à jour les éléments dans `expression1` , en fonction des index spécifiés dans `expression2` . Si `expression2` est `Int` de type, `expression3` doit être de type `T` . Si `expression2` est `Range` de type, `expression3` doit être de type `T[]` .
 
 Par exemple, l’expression copy-and-Update `arr w/ idx <- value` construit un nouveau tableau avec tous les éléments définis sur les éléments correspondants dans `arr` , à l’exception des éléments spécifiés par `idx` , qui est défini sur la ou les valeurs dans `value` . 
 
 Indiqué `arr` contient le tableau `[0,1,2,3]` , puis 
 
-- `arr w/ 0 <- 10`est le tableau `[10,1,2,3]` .
-- `arr w/ 2 <- 10`est le tableau `[0,1,10,3]` .
-- `arr w/ 0..2..3 <- [10,12]`est le tableau `[10,1,12,3]` .
+- `arr w/ 0 <- 10` est le tableau `[10,1,2,3]` .
+- `arr w/ 2 <- 10` est le tableau `[0,1,10,3]` .
+- `arr w/ 0..2..3 <- [10,12]` est le tableau `[10,1,12,3]` .
 
 #### <a name="copy-and-update-expressions-for-named-items"></a>Expressions de copie et de mise à jour pour les éléments nommés
 
@@ -376,11 +374,11 @@ Vous pouvez également créer un tableau de callables.
 * Si le type d’élément commun est un type d’opération ou de fonction, tous les éléments doivent avoir les mêmes types d’entrée et de sortie.
 * Le type d’élément du tableau prend en charge tous les [functors](xref:microsoft.quantum.guide.operationsfunctions) pris en charge par tous les éléments.
 Par exemple, si `Op1` , `Op2` et `Op3` sont tous des `Qubit[] => Unit` opérations, mais `Op1` prend en charge `Adjoint` , `Op2` prend en charge `Controlled` et `Op3` prend en charge les deux :
-  * `[Op1, Op2]`est un tableau d' `(Qubit[] => Unit)` opérations.
-  * `[Op1, Op3]`est un tableau d' `(Qubit[] => Unit is Adj)` opérations.
-  * `[Op2, Op3]`est un tableau d' `(Qubit[] => Unit is Ctl)` opérations.
+  * `[Op1, Op2]` est un tableau d' `(Qubit[] => Unit)` opérations.
+  * `[Op1, Op3]` est un tableau d' `(Qubit[] => Unit is Adj)` opérations.
+  * `[Op2, Op3]` est un tableau d' `(Qubit[] => Unit is Ctl)` opérations.
 
-Toutefois, alors que les opérations `(Qubit[] => Unit is Adj)` et `(Qubit[] => Unit is Ctl)` ont le type de base commun de `(Qubit[] => Unit)` , les *tableaux* de ces opérations ne partagent pas un type de base commun.
+Toutefois, alors que les opérations `(Qubit[] => Unit is Adj)` et  `(Qubit[] => Unit is Ctl)` ont le type de base commun de `(Qubit[] => Unit)` , les *tableaux* de ces opérations ne partagent pas un type de base commun.
 
 Par exemple, `[[Op1], [Op2]]` génère actuellement une erreur, car elle tente de créer un tableau des deux types de tableau incompatibles `(Qubit[] => Unit is Adj)[]` et `(Qubit[] => Unit is Ctl)[]` .
 
@@ -395,9 +393,9 @@ Pour plus d’informations sur callables, consultez [expressions pouvant être a
 Les expressions conditionnelles peuvent correspondre à des opérations qui ont les mêmes entrées et sorties, mais prennent en charge différents functors. Dans ce cas, le type de l’expression conditionnelle est une opération avec des entrées et des sorties qui prennent en charge tous les functors pris en charge par les deux expressions.
 Par exemple, si `Op1` , `Op2` et `Op3` sont tous des `Qubit[]=>Unit` , mais prend en charge, prend en charge `Op1` `Adjoint` `Op2` `Controlled` et `Op3` prend en charge les deux :
 
-- `flag ? Op1 | Op2`est une `(Qubit[] => Unit)` opération.
-- `flag ? Op1 | Op3`est une `(Qubit[] => Unit is Adj)` opération.
-- `flag ? Op2 | Op3`est une `(Qubit[] => Unit is Ctl)` opération.
+- `flag ? Op1 | Op2` est une `(Qubit[] => Unit)` opération.
+- `flag ? Op1 | Op3` est une `(Qubit[] => Unit is Adj)` opération.
+- `flag ? Op2 | Op3` est une `(Qubit[] => Unit is Ctl)` opération.
 
 Si l’une des deux expressions de résultat possibles inclut une fonction ou un appel d’opération, cet appel a lieu uniquement si le résultat est celui qui correspond à la valeur de l’appel. Par exemple, dans le cas `a==b ? C(qs) | D(qs)` , si `a==b` a la valeur true, l' `C` opération est appelée, et si elle a la valeur false, seule l' `D` opération est appelée. Cette approche est similaire à *un court-circuit* dans d’autres langages.
 
@@ -472,17 +470,17 @@ La spécification de type est requise, car `Op3` et `Op1` ont des types différe
 
 * Les parenthèses pour l’appel de l’opération et de la fonction sont également liées avant tout opérateur, mais après l’indexation et les functors du tableau.
 
-Q#opérateurs par ordre de priorité, du plus élevé au plus bas :
+Q# opérateurs par ordre de priorité, du plus élevé au plus bas :
 
 Opérateur | Arité | Description | Types d’opérandes
 ---------|----------|---------|---------------
- fin`!` | Unaire | Désencapsuler | Tout type défini par l’utilisateur
- `-`, `~~~`, `not` | Unaire | Valeur numérique négative, complément au niveau du bit, négation logique | `Int`, `BigInt` ou pour, `Double` ou pour `-` `Int` `BigInt` `~~~` , `Bool` pour`not`
- `^` | Binary | Puissance entière | `Int`ou `BigInt` pour la base, `Int` pour l’exposant
- `/`, `*`, `%` | Binary | Division, multiplication, modulo entier | `Int`, `BigInt` ou `Double` pour `/` et `*` , `Int` ou `BigInt` pour`%`
- `+`, `-` | Binary | Addition ou concaténation de chaînes et de tableaux, soustraction | `Int`, `BigInt` ou `Double` , en plus `String` ou n’importe quel type de tableau pour`+`
+ fin `!` | Unaire | Désencapsuler | Tout type défini par l’utilisateur
+ `-`, `~~~`, `not` | Unaire | Valeur numérique négative, complément au niveau du bit, négation logique | `Int`, `BigInt` ou pour, `Double` ou pour `-` `Int` `BigInt` `~~~` , `Bool` pour `not`
+ `^` | Binary | Puissance entière | `Int` ou `BigInt` pour la base, `Int` pour l’exposant
+ `/`, `*`, `%` | Binary | Division, multiplication, modulo entier | `Int`, `BigInt` ou `Double` pour `/` et `*` , `Int` ou `BigInt` pour `%`
+ `+`, `-` | Binary | Addition ou concaténation de chaînes et de tableaux, soustraction | `Int`, `BigInt` ou `Double` , en plus `String` ou n’importe quel type de tableau pour `+`
  `<<<`, `>>>` | Binary | Décalage vers la gauche, décalage vers la droite | `Int` ou `BigInt`
- `<`, `<=`, `>`, `>=` | Binary | Comparaisons « inférieur à », « inférieur à », « supérieur à », « supérieur à » ou « égal à » | `Int`, `BigInt` ou`Double`
+ `<`, `<=`, `>`, `>=` | Binary | Comparaisons « inférieur à », « inférieur à », « supérieur à », « supérieur à » ou « égal à » | `Int`, `BigInt` ou `Double`
  `==`, `!=` | Binary | comparaisons égales et non égales | tout type primitif
  `&&&` | Binary | ET au niveau du bit | `Int` ou `BigInt`
  `^^^` | Binary | Opération de bits XOR | `Int` ou `BigInt`
@@ -490,7 +488,7 @@ Opérateur | Arité | Description | Types d’opérandes
  `and` | Binary | ET logique | `Bool`
  `or` | Binary | OU logique | `Bool`
  `..` | Binaire/ternaire | Opérateur de plage | `Int`
- `?` `|` | Gradient | Logique conditionnelle | `Bool`pour le côté gauche
+ `?` `|` | Gradient | Logique conditionnelle | `Bool` pour le côté gauche
 `w/` `<-` | Gradient | Copier et mettre à jour | Voir les [expressions copy-and-Update](#copy-and-update-expressions)
 
 ## <a name="next-steps"></a>Étapes suivantes

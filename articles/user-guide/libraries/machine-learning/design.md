@@ -2,19 +2,19 @@
 title: Concevoir votre propre classifieur avec QDK
 description: Découvrez les concepts de base de la conception de modèles de circuits pour le classifieur de circuit quantique.
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c87a84654cda04f81115a83684f0e125d23a77bc
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 3515279dd4d03b2a512035af0b13e084dd91f9dc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759219"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835704"
 ---
 # <a name="design-your-own-classifier"></a>Concevoir votre propre classifieur
 

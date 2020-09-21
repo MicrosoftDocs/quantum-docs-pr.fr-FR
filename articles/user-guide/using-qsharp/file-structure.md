@@ -1,22 +1,22 @@
 ---
-title: Q#Structure de fichier
+title: Q# Structure de fichier
 description: Décrit la structure et la syntaxe d’un Q# fichier.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 98b3a2e35186989b8191cc566a5d5310bc26eafc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867928"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833305"
 ---
-# <a name="no-locq-file-structure"></a>Q#Structure de fichier
+# <a name="no-locq-file-structure"></a>Q# Structure de fichier
 
 Un Q# fichier se compose d’une séquence de *déclarations d’espaces de noms*.
 Chaque déclaration d’espace de noms contient des déclarations pour les types, les opérations et les fonctions définis par l’utilisateur, et peut contenir n’importe quel nombre de chaque type de déclaration et dans n’importe quel ordre.
@@ -76,7 +76,7 @@ Prenons l’exemple d’une opération nommée `Op` à partir de l' `X.Y` espace
 Il est généralement préférable d’inclure un espace de noms à l’aide d’une `open` directive.
 L’utilisation d’un nom qualifié complet est requise si deux espaces de noms définissent des constructions portant le même nom, et la source actuelle utilise des constructions à partir des deux.
 
-Q#suit les mêmes règles d’affectation de noms que d’autres langages .NET.
+Q# suit les mêmes règles d’affectation de noms que d’autres langages .NET.
 Toutefois, Q# ne prend pas en charge les références relatives aux espaces de noms.
 Par exemple, si l’espace de noms `a.b` est ouvert, une référence à une opération nommée `c.d` n’est *pas* résolue en une opération portant le nom complet `a.b.c.d` .
 
@@ -91,7 +91,7 @@ Les instructions, comme les expressions, les déclarations et les directives, pe
 
 ## <a name="statement-blocks"></a>Blocs d’instructions
 
-Q#les instructions sont regroupées dans des blocs d’instructions, qui sont contenus avec des accolades `{ }` . Un bloc d’instructions commence par une ouverture `{` et se termine par une fermeture `}` .
+Q# les instructions sont regroupées dans des blocs d’instructions, qui sont contenus avec des accolades `{ }` . Un bloc d’instructions commence par une ouverture `{` et se termine par une fermeture `}` .
 
 Un bloc d’instructions placé lexicalement dans un autre bloc est considéré comme un sous-bloc du bloc conteneur. les blocs conteneur et secondaires sont également appelés blocs externes et internes.
 

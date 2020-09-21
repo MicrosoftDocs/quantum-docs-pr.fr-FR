@@ -3,18 +3,18 @@ title: Contrôles de Flow dans le Q# libararies standard
 description: En savoir plus sur les opérations et les fonctions de contrôle de Flow dans la Q# bibliothèque standard Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868574"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835619"
 ---
 # <a name="higher-order-control-flow"></a>Contrôle de l’ordre supérieur #
 
@@ -86,7 +86,7 @@ En particulier, cela signifie que les appels à `ApplyToEachCA` peuvent apparaî
 De même, <xref:microsoft.quantum.canon.applytoeachindex> est utile pour représenter les modèles du formulaire `U(0, targets[0]); U(1, targets[1]); ...` et offre des versions pour chaque combinaison d’functors prise en charge par son entrée.
 
 > [!TIP]
-> `ApplyToEach`est paramétrable de type de sorte qu’il puisse être utilisé avec des opérations qui prennent des entrées autres que `Qubit` .
+> `ApplyToEach` est paramétrable de type de sorte qu’il puisse être utilisé avec des opérations qui prennent des entrées autres que `Qubit` .
 > Par exemple, supposons qu' `codeBlocks` il s’agit d’un tableau de <xref:microsoft.quantum.errorcorrection.logicalregister> valeurs qui doivent être récupérées.
 > Ensuite, `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` applique le code de correction des erreurs `code` et la fonction `recoveryFn` de récupération à chaque bloc indépendamment.
 > Cela est également valable pour les entrées classiques : `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` applique une rotation de $ \pi/$2 sur $X $ suivie d’une rotation de $pi/$3 sur $Y $.
@@ -120,7 +120,7 @@ Autrement dit, $c (UVU ^ \dagger) = U c (V) U ^ \dagger $.
 
 > [!NOTE]
 > Une autre conséquence de la factorisation $U $ est que nous n’avons même pas besoin de savoir comment appliquer le `Controlled` functor à `U` .
-> `ApplyWithCA`par conséquent, la signature est plus faible que celle qui est attendue :
+> `ApplyWithCA` par conséquent, la signature est plus faible que celle qui est attendue :
 > ```qsharp
 > ApplyWithCA<'T> : (('T => Unit is Adj),
 >     ('T => Unit is Adj + Ctl), 'T) => Unit

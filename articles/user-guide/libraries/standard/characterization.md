@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b226f355771f2b65399ebe00cc3de9429a3cebb0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868625"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759907"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caractérisation quantique et statistiques #
 
@@ -74,7 +74,7 @@ L’estimation de la phase pour cette raison s’affiche dans un certain nombre 
 ### <a name="bayesian-phase-estimation"></a>Estimation de la phase bayésienne ###
 
 > [!TIP]
-> Pour plus d’informations sur l’estimation de la phase bayésien dans la pratique, consultez l’exemple [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) .
+> Pour plus d’informations sur l’estimation de la phase bayésien dans la pratique, consultez l’exemple [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation) .
 
 L’estimation de la phase bayésienne est simple.
 Vous recueillez des statistiques de mesure à partir du protocole d’estimation de phase, puis vous traitez les résultats à l’aide de l’inférence Bayésienne et fournissez une estimation du paramètre.
@@ -112,7 +112,7 @@ La fonctionnalité la plus importante de l’estimation de phase fiable, qui est
 D’autres informations pertinentes incluent, par exemple, la surcharge de petite taille de seulement $1 $ Ancilla qubit, ou la procédure n’est pas adaptative, ce qui signifie que la séquence requise des expérimentations de Quantum est indépendante des résultats de mesure intermédiaires. Dans cet exemple et les prochains exemples où le choix de l’algorithme d’estimation de la phase est important, il est préférable de faire référence à la documentation telle que @"microsoft.quantum.characterization.robustphaseestimation" et les publications référencées dans ce document pour obtenir plus d’informations et pour leur implémentation.
 
 > [!TIP]
-> Il existe de nombreux exemples dans lesquels l’estimation de phase robuste est utilisée. Pour l’estimation de phase dans l’extraction de l’énergie d’État du sol de divers systèmes physiques, consultez l’exemple de [ **simulation H2** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), l' [exemple **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)et l’exemple de [ **modèle Hubbard** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
+> Il existe de nombreux exemples dans lesquels l’estimation de phase robuste est utilisée. Pour l’estimation de phase dans l’extraction de l’énergie d’État du sol de divers systèmes physiques, consultez l’exemple de [ **simulation H2** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), l' [exemple **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)et l’exemple de [ **modèle Hubbard** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 
 ### <a name="continuous-oracles"></a>Oracle continue ###
@@ -130,7 +130,7 @@ Par conséquent, l’utilisation de la fonction d’estimation de phase avec des
 
 ### <a name="random-walk-phase-estimation"></a>Estimation de la phase de parcours aléatoire ###
 
-Q#fournit une approximation utile de l’estimation de la phase bayésien conçue pour une utilisation proche des appareils quantiques qui fonctionnent en conditionné un parcours aléatoire sur l’enregistrement de données obtenu à partir d’une estimation de la phase itérative.
+Q# fournit une approximation utile de l’estimation de la phase bayésien conçue pour une utilisation proche des appareils quantiques qui fonctionnent en conditionné un parcours aléatoire sur l’enregistrement de données obtenu à partir d’une estimation de la phase itérative.
 Cette méthode est à la fois adaptative et entièrement déterministe, ce qui permet une mise à l’échelle presque optimale des erreurs dans la phase estimée $ \hat{\Phi} $ avec des surcharges de mémoire très faibles.
 
 Le protocole utilise une méthode d’inférence Bayésienle approximative qui suppose que la distribution antérieure est gaussienne.

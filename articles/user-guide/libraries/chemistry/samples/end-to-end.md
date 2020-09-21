@@ -2,18 +2,18 @@
 title: Exemple de programme Quantum NWChem
 description: À l’aide d’un pont d’entrée NWChem, passez en revue un exemple d’obtention du nombre de portes pour la simulation de chimie quantique.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 986ff2c2ff144c57bd01ddeea0467d0168fd9334
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759713"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835755"
 ---
 # <a name="end-to-end-with-nwchem"></a>De bout en bout avec NWChem #
 
@@ -47,13 +47,13 @@ Import-Module InvokeNWChem.psm1
 
 > [!NOTE]
 > Par défaut, Windows empêche l’exécution de scripts ou de modules comme mesure de sécurité.
-> Pour autoriser les modules tels que `Invoke-NWChem.psm1` à s’exécuter sous Windows, vous devrez peut-être modifier la stratégie d’exécution.
+> Pour autoriser les modules tels que `Invoke-NWChem.psm1` à s’exécuter sous Windows, vous devrez peut-être modifier la stratégie.
 > Pour ce faire, exécutez la `Set-ExecutionPolicy` commande :
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope Process
 > ```
-> La stratégie d’exécution est ensuite rétablie lorsque vous quittez PowerShell.
-> Si vous souhaitez enregistrer la stratégie d’exécution, utilisez une valeur différente pour `-Scope` :
+> La stratégie est restaurée lorsque vous quittez PowerShell.
+> Si vous souhaitez enregistrer la stratégie, utilisez une autre valeur pour `-Scope` :
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```

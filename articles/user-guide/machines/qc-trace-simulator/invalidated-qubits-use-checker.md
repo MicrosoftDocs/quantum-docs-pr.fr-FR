@@ -2,19 +2,19 @@
 title: Vérificateur d’utilisation de qubits non valide-Kit de développement quantique
 description: En savoir plus sur l’outil de vérification de l’utilisation du qubits Microsoft QDK invalidé, qui utilise le simulateur de traces Quantum pour vérifier si votre Q# code comporte des qubits potentiellement non valides.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 18371b3798d0eaa12d4e7107f58f44379594619f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868285"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835993"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Simulateur de traces Quantum : vérificateur d’utilisation qubits invalidé
 
