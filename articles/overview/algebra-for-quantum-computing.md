@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b06eba9cadce84aca6f87e4451026ca2ffc794f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d7a8dff8d491a9ce6451148d2d27121f1c190ed0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867639"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759320"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Algèbre linéaire pour l’informatique quantique
 
@@ -22,8 +22,8 @@ L’algèbre linéaire est le langage de l’informatique quantique. Vous n’av
 
 Tout comme avoir une certaine connaissance des [concepts fondamentaux de la physique quantique](xref:microsoft.quantum.overview.understanding) peut vous aider à comprendre l’informatique quantique, avoir quelques notions de base sur l’algèbre linéaire est utile pour mieux comprendre le fonctionnement des algorithmes quantiques. Vous devez au moins être familiarisé avec les **vecteurs** et la **multiplication des matrices**. Si vous souhaitez rafraîchir vos connaissances de ces concepts algébriques, consultez ces tutoriels qui expliquent les principes de base :
 
-- [Tutoriel de notebook Jupyter sur l’algèbre linéaire](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
-- [Tutoriel de notebook Jupyter sur l’arithmétique complexe](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+- [Tutoriel de notebook Jupyter sur l’algèbre linéaire](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
+- [Tutoriel de notebook Jupyter sur l’arithmétique complexe](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
 - [Algèbre linéaire pour le calcul quantique](https://cds.cern.ch/record/1522001/files/978-1-4614-6336-8_BookBackMatter.pdf)
 - [Principes de base de l’algèbre linéaire](https://www.math.ubc.ca/~carrell/NB.pdf)
 - [Initiation au calcul quantique](https://www.codeproject.com/Articles/5155638/Quantum-Computation-Primer-Part-1#exploring-quantum-superposition)

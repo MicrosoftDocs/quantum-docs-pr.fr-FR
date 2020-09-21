@@ -1,6 +1,6 @@
 ---
 titre : Pauli mesures Description : Apprenez à utiliser des opérations de mesure Pauli à qubit unique et à plusieurs.
-Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. Pauli ms. Author : nawiebe@microsoft.com ms. Date : 12/11/2017 ms. topic : article No-Loc :
+Auteur : bradben UID : Microsoft. Quantum. concepts. Pauli ms. Author : v-benbra ms. Date : 12/11/2017 ms. topic : article No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -143,8 +143,8 @@ Cela équivaut également à appliquer $ HS ^ \dagger $ au vecteur d’État Qua
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }
@@ -230,7 +230,7 @@ Alors que les deux types de mesures sont tout aussi utiles dans Quantum Computin
 Il révèle que, dans Quantum Computing, les informations que vous souhaitez apprendre ne sont pas stockées dans un qubit unique mais plutôt stockées non localement dans toutes les qubits en même temps, et par conséquent uniquement en les examinant par une mesure conjointe (p. ex. $ z \otimes z $ ). ces informations deviennent manifestes.
 
 Par exemple, dans la correction des erreurs, nous souhaitons souvent savoir quelle erreur s’est produite lors de l’apprentissage de l’état que nous tentons de protéger.
-L' [exemple de code de retournement de bits](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) montre un exemple de la façon dont vous pouvez effectuer cette opération à l’aide de mesures telles que $ z z et z \otimes \otimes \id $ $ \id \otimes \otimes z $ . < --TODO : remplacez ceci par un lien vers le navigateur Samples dès que l’exemple de code de retournement de bits est intégré. -->
+L' [exemple de code de retournement de bits](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) montre un exemple de la façon dont vous pouvez effectuer cette opération à l’aide de mesures telles que $ z z et z \otimes \otimes \id $ $ \id \otimes \otimes z $ . < --TODO : remplacez ceci par un lien vers le navigateur Samples dès que l’exemple de code de retournement de bits est intégré. -->
 
 Les opérateurs Pauli arbitraires tels que $ X \otimes Y \otimes Z \otimes \boldone $ peuvent également être mesurés.
 Tous les produits tenseur des opérateurs Pauli n’ont que deux valeurs propres $ \pm 1 $ et les deux eigenspaces constituent des demi-espaces de l’ensemble de l’espace de vecteur.

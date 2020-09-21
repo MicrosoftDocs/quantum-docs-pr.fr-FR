@@ -1,6 +1,6 @@
 ---
 title : description d’Oracle Quantum : Apprenez à utiliser et à définir des opérations de boîte noire à l’aide d’Oracle Quantum, qui sont utilisées comme entrée d’un autre algorithme.
-Auteur : cgranade UID : Microsoft. Quantum. concepts. Oracle ms. Author : Christopher.Granade@microsoft.com ms. Date : 07/11/2018 ms. topic : article No-Loc :
+Auteur : cgranade UID : Microsoft. Quantum. concepts. oracles ms. Auteur : chgranad ms. Date : 07/11/2018 ms. topic : article No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -140,7 +140,7 @@ O \ket { \psi } & = o \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ 
 $$
 
 ## <a name="phase-oracles"></a>Oracle phase
-Vous pouvez également encoder $ f $ dans une $ O Oracle $ en appliquant une _phase_ basée sur l’entrée à $ o $ . Par exemple, nous pouvons définir $ O de $ telle sorte que$$
+Vous pouvez également encoder $ f $ dans une $ O Oracle $ en appliquant une _phase_ basée sur l’entrée à $ o $ . Par exemple, nous pouvons définir $ O de $ telle sorte que $$
 \begin{align}
     O \ket { x } = (-1) ^ { f (x) } \ket { x } .
 \end{align}
@@ -148,9 +148,9 @@ $$
 Si une phase Oracle agit sur un registre initialement dans un état de base de calcul $ \ket { x } $ , cette phase est une phase globale qui n’est donc pas observable.
 Toutefois, Oracle peut être une ressource très puissante si elle est appliquée à une superposition ou en tant qu’opération contrôlée.
 Par exemple, considérez une phase Oracle $ O_f $ pour une fonction qubit unique $ $ .
-Cliquez$$
+Cliquez $$
 \begin{align}
-    O_f\ket{+}
+    O_f \ket{+}
         &=O_f ( \ket { 0 }  +  \ket { 1 } )/ \sqrt { 2 }\\\\
         &=((-1) ^ { f (0) } \ket { 0 } + (-1) ^ { f (1) } \ket { 1 } )/ \sqrt { 2 }\\\\
         &=(-1) ^ { f (0) } ( \ket { 0 } + (-1) ^ { f (1)-f (0) } \ket { 1 } )/ \sqrt { 2 }\\\\

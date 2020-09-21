@@ -2,19 +2,19 @@
 title: Créer un générateur de nombres aléatoires quantique
 description: Générez un Q# projet qui illustre les concepts de Quantum fondamentaux comme les superpositions en créant un générateur de nombres aléatoires quantiques.
 author: bromeg
-ms.author: megbrow@microsoft.com
+ms.author: megbrow
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863628"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834038"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutoriel : Implémenter un générateur de nombres aléatoires quantique en Q\#
 
@@ -33,7 +33,7 @@ Un exemple simple d’algorithme Quantum écrit dans Q# est un générateur de n
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-Comme mentionné dans notre article intitulé [Fonctionnement de l’informatique quantique](xref:microsoft.quantum.overview.understanding), un qubit est une unité d’information quantique qui peut être dans une superposition. Lorsqu’il est mesuré, un qubit peut uniquement avoir la valeur 0 ou 1. En revanche, pendant l’exécution, l’état du qubit représente la probabilité d’avoir la valeur 0 ou 1 avec une mesure. Cet état probabiliste est appelé superposition. Nous pouvons utiliser cette probabilité pour générer des nombres aléatoires.
+Comme mentionné dans notre article intitulé [Fonctionnement de l’informatique quantique](xref:microsoft.quantum.overview.understanding), un qubit est une unité d’information quantique qui peut être dans une superposition. Lorsqu’il est mesuré, un qubit peut uniquement avoir la valeur 0 ou 1. Toutefois, lorsqu’une opération est en cours d’exécution, l’état du qubit représente la probabilité de lire une valeur 0 ou 1 avec une mesure. Cet état probabiliste est appelé superposition. Nous pouvons utiliser cette probabilité pour générer des nombres aléatoires.
 
 Dans le cadre de notre Q# opération, nous présentons le `Qubit` type de données, Native à Q# . Nous pouvons uniquement allouer un `Qubit` avec une instruction `using`. Lorsqu’il est alloué, un qubit est toujours dans l’état `Zero`. 
 
@@ -74,7 +74,7 @@ Pour créer l' Q# application complète, ajoutez le point d’entrée suivant à
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
-L’exécutable exécute l’opération ou la fonction marquée avec l’attribut `@EntryPoint()` sur un simulateur ou un estimateur de ressources, en fonction de la configuration du projet et des options de ligne de commande.
+Le programme exécutera l’opération ou la fonction marquée avec l' `@EntryPoint()` attribut sur un simulateur ou un estimateur de ressources, en fonction de la configuration du projet et des options de ligne de commande.
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
 

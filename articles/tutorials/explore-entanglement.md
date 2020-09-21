@@ -2,19 +2,19 @@
 title: Explorez l’enchevêtrement avec Q#
 description: Découvrez comment écrire un programme Quantum dans Q# . Développez une application pour le traitement des états de Bell à l’aide du Quantum Development kit (QDK)
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
-ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
+ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90063238"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834021"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutoriel : Explorer l’intrication avec Q\#
 
@@ -104,7 +104,7 @@ Remplacez le contenu de `Program.qs` par le code suivant :
 Cette opération peut maintenant être appelée pour définir un qubit dans un état classique, en retournant soit `Zero` dans 100 % des cas, soit `One` dans 100 % des cas.
 `Zero` et `One` sont des constantes qui représentent les deux seuls résultats possibles d’une mesure de qubit.
 
-L’opération `SetQubitState` mesure le qubit. Si le qubit est dans l’état souhaité, `SetQubitState` le laisse tranquille ; dans le cas contraire, en exécutant l’opération `X`, nous remplaçons l’état du qubit par l’état souhaité.
+L’opération `SetQubitState` mesure le qubit. Si le qubit est dans l’état souhaité, le `SetQubitState` laisse seul ; sinon, en exécutant l' `X` opération, nous modifions l’état de qubit à l’état souhaité.
 
 #### <a name="about-no-locq-operations"></a>À propos des Q# opérations
 
@@ -300,7 +300,7 @@ C’est ce qu’on appelle une **superposition**, qui nous donne une première v
 ## <a name="prepare-entanglement"></a>Préparer l’intrication
 
 Voyons maintenant comment Q# exprime les méthodes de qubits.
-Tout d’abord, nous définissons le premier qubit sur l’état initial, puis nous utilisons l’opération `H` pour le placer en superposition.  Ensuite, avant de mesurer le premier qubit, nous utilisons une nouvelle opération ( `CNOT` ), qui signifie contrôlé-not.  Le résultat de l’exécution de cette opération sur deux qubits consiste à inverser le second qubit si le premier correspond à `One`.  À présent, les deux qubits sont intriqués.  Nos statistiques pour le premier qubit n’ont pas changé (autant de `Zero` que de `One` après la mesure). En revanche, quand nous mesurons le second qubit, le résultat est __toujours__ identique à celui obtenu pour le premier. Notre `CNOT` a intriqué les deux qubits de sorte que ce qui arrive à l’un arrive également à l’autre. Si vous inversiez les mesures (deuxième qubit avant le premier), la même chose se produirait. La première mesure serait aléatoire et la seconde irait de pair avec la première.
+Tout d’abord, nous définissons le premier qubit sur l’état initial, puis nous utilisons l’opération `H` pour le placer en superposition.  Ensuite, avant de mesurer le premier qubit, nous utilisons une nouvelle opération ( `CNOT` ), qui signifie *contrôlé-not*.  Le résultat de l’exécution de cette opération sur deux qubits consiste à retourner le deuxième qubit si le premier qubit est `One` .  À présent, les deux qubits sont intriqués.  Nos statistiques pour le premier qubit n’ont pas changé (autant de `Zero` que de `One` après la mesure). En revanche, quand nous mesurons le second qubit, le résultat est __toujours__ identique à celui obtenu pour le premier. Notre `CNOT` a intriqué les deux qubits de sorte que ce qui arrive à l’un arrive également à l’autre. Si vous inversiez les mesures (deuxième qubit avant le premier), la même chose se produirait. La première mesure serait aléatoire et la seconde irait de pair avec la première.
 
 La première chose à faire est d’allouer deux qubits au lieu d’un dans `TestBellState` :
 

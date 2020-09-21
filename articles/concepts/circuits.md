@@ -1,6 +1,6 @@
 ---
 title : description des circuits quantiques : Découvrez comment représenter visuellement des opérations quantiques simples et complexes avec des diagrammes de circuit quantique.
-Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. circuits ms. Author : nawiebe@microsoft.com ms. Date : 12/11/2017 ms. topic : article No-Loc :
+Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. circuits ms. Author : v-benbra ms. Date : 12/11/2017 ms. topic : article No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -156,7 +156,7 @@ Dans les cas particuliers où $ g = X $ et $ g = Z, $ nous introduisons la notat
 <!--Ne trouve pas de moyen de facilement le centrer... une extension est probablement nécessaire :-->
 ![Diagramme de circuit pour des cas spéciaux de portes contrôlées](~/media/6.svg)
 
-Q#fournit des méthodes pour générer automatiquement la version contrôlée d’une opération, ce qui évite au programmeur d’avoir à coder manuellement ces opérations. Un exemple est illustré ci-dessous :
+Q# fournit des méthodes pour générer automatiquement la version contrôlée d’une opération, ce qui évite au programmeur d’avoir à coder manuellement ces opérations. Un exemple est illustré ci-dessous :
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -175,7 +175,7 @@ Plus précisément, un sous-circuit similaire à ce qui suit :
 <!--Ne trouve pas de moyen de facilement le centrer... une extension est probablement nécessaire :-->
 ![Symbole représentant une opération de mesure](~/media/7.svg)
 
-Q#implémente un [opérateur de mesure](xref:microsoft.quantum.intrinsic.measure) à cet effet.
+Q# implémente un [opérateur de mesure](xref:microsoft.quantum.intrinsic.measure) à cet effet.
 Pour plus d’informations, consultez la [section sur les mesures](xref:microsoft.quantum.libraries.standard.prelude#measurements) .
 
 De même, le sous-circuit

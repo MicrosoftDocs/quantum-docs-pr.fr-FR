@@ -1,6 +1,6 @@
 ---
 title : plusieurs qubits Description : Apprenez à effectuer des opérations sur deux qubits ou plus.
-Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. multiple-qubits ms. Auteur : nawiebe@microsoft.com ms. Date : 12/11/2017 ms. topic : article No-Loc :
+Auteur : bradben UID : Microsoft. Quantum. concepts. multiple-qubits ms. Auteur : v-benbra ms. Date : 12/11/2017 ms. topic : article No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -97,7 +97,7 @@ Ces outils sont absolument nécessaires pour comprendre les jeux de portes coura
 
 ## <a name="representing-two-qubits"></a>Représentant deux qubits
 La principale différence entre les États à un et deux qubit est que les États de deux qubit sont à quatre dimensions plutôt qu’en deux dimensions.
-Cela est dû au fait que la base de calcul pour les États de deux qubit est formée par les produits tenseur de l’un des États qubit.  Par exemple, nous avons\begin{align}
+Cela est dû au fait que la base de calcul pour les États de deux qubit est formée par les produits tenseur de l’un des États qubit.  Par exemple, nous avons \begin{align}
 00 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} , \qquad 01 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} = \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} 0 1 0 0,\\\\
 10 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\\\ 0 \end{bmatrix} , \qquad 11 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 0 0 0 \end{bmatrix} = \begin{bmatrix} \\\\ \\\\ \\\\ 1 \end{bmatrix} .
 \end{align}
@@ -122,7 +122,7 @@ Par exemple, il n’y a pas d’États $ \psi = \begin{bmatrix} \alpha \\\\ \bet
 
 $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt { 2 } \end{bmatrix} .$$ 
 
-Un tel État à deux qubit, qui ne peut pas être écrit en tant que produit tenseur d’États de qubit unique, est appelé « état enchevêtré ». les deux qubits sont considérés comme étant [*enchevêtrés*](https://en.wikipedia.org/wiki/Quantum_entanglement).  En fait, comme l’État Quantum ne peut pas être considéré comme un produit tenseur d’États qubit uniques, les informations que l’état contient ne sont pas limitées à l’un ou l’autre des qubits individuellement.  Au lieu de cela, les informations sont stockées non localement dans les corrélations entre les deux États.  Cette non-localité d’informations est l’une des principales fonctionnalités distinctives de quantum computing par rapport à l’informatique classique et est essentielle pour un certain nombre de protocoles quantiques, y compris la [téléportage quantique](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/teleportation) et la [Correction d’Erreurs quantique](xref:microsoft.quantum.libraries.error-correction).
+Un tel État à deux qubit, qui ne peut pas être écrit en tant que produit tenseur d’États de qubit unique, est appelé « état enchevêtré ». les deux qubits sont considérés comme étant [*enchevêtrés*](https://en.wikipedia.org/wiki/Quantum_entanglement).  En fait, comme l’État Quantum ne peut pas être considéré comme un produit tenseur d’États qubit uniques, les informations que l’état contient ne sont pas limitées à l’un ou l’autre des qubits individuellement.  Au lieu de cela, les informations sont stockées non localement dans les corrélations entre les deux États.  Cette non-localité d’informations est l’une des principales fonctionnalités distinctives de quantum computing par rapport à l’informatique classique et est essentielle pour un certain nombre de protocoles quantiques, y compris la [téléportage quantique](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) et la [Correction d’Erreurs quantique](xref:microsoft.quantum.libraries.error-correction).
 
 ## <a name="measuring-two-qubit-states"></a>Mesure de deux États qubit ##
 La mesure de deux États qubit est très similaire aux mesures à qubit unique. Mesure de l’État
@@ -137,29 +137,29 @@ $$
 donne $ 00 $ avec la probabilité $ | \alpha _ { 00 } | ^ 2 $ , $ 01 $ avec la $ | probabilité \alpha _ { 01 } | ^ 2 $ , $ 10 avec la $ probabilité $ | \alpha _ { 10 } | ^ 2 $ et $ 11 avec la $ probabilité $ 11 | ^ 2 \alpha _ { } | $ . Les variables $ \alpha _ { 00 } , \alpha _ { 01 } , \alpha _ { 10 } $ et $ 11 \alpha _ { } $ ont été délibérément nommées pour rendre cette connexion claire. Après la mesure, si le résultat est $ 00, $ alors l’État Quantum du système à deux qubit est réduit et est maintenant
 
 $$
-    producteurs\equiv
+    producteurs \equiv
     \begin{bmatrix}
-        1,0\\\\ 
-        entre\\\\ 
-        entre\\\\ 
+        1,0 \\\\ 
+        entre \\\\ 
+        entre \\\\ 
         0 \end{bmatrix} .
 $$
 
 Il est également possible de mesurer une seule qubit d’un État Quantum à deux qubit. Dans les cas où vous mesurez uniquement l’un des qubits, l’impact de la mesure est légèrement différent, car l’état entier n’est pas réduit à un état de base de calcul, au lieu d’être réduit à un seul sous-système.  En d’autres termes, dans de tels cas, la mesure d’un seul qubit réduit uniquement l’un des sous-systèmes, mais pas tous.  
 
-Pour voir cela, envisagez de mesurer le premier qubit de l’état suivant, qui est formé en appliquant la transformation Hadarmard $ H $ sur deux qubits initialement définie à l’État « 0 » :$$
+Pour voir cela, envisagez de mesurer le premier qubit de l’état suivant, qui est formé en appliquant la transformation Hadarmard $ H $ sur deux qubits initialement définie à l’État « 0 » : $$
 H ^ { \otimes 2 } \left ( \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \right ) = \frac { 1 2 1 1 1 1 } { } \begin{bmatrix} & & & \\\\ 1 & -1 & 1 & -1 1 1- \\\\ & & 1 & -1 \\\\ 1 & -1 & -1 & 1 \end{bmatrix} \begin{bmatrix} 1 \\\\ 0 \\\\ 0 0 1 2 \\\\ \end{bmatrix} 1 = \frac { } { } \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} \mapsto \begin{cases} \text { } = & \frac { } { \sqrt { } } \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} \\\\ \text { } = & \frac { } { \sqrt { } } \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} \\\\ \end{cases} 1 1 1-1 1 1 2 1 1 0 0 résultat 1 1 2 0 0 1 1.  
 $$
 Les deux résultats ont une probabilité de 50%.  Le résultat d’une probabilité de 50% pour les deux peut être Intuit à partir du fait que le vecteur d’État Quantum initial est indifférent sous l’échange de $ 0 $ avec $ 1 $ sur le premier qubit.
 
-La règle mathématique pour mesurer la première ou la deuxième qubit est simple.  Si nous laissons $ e_k $ être le $ { vecteur de calcul k ^ \rm th } $ et que vous recherchiez $ $ le jeu de tous les $ e_k, de $ sorte que le qubit en question prend la valeur $ 1 $ pour cette valeur de $ k $ .  Par exemple, si nous nous intéressons à mesurer le premier qubit, les $ S $ se comporteront de $ e_1 \equiv 10 $ et $ e_3 \equiv 11 $ .  De même, si nous sommes intéressés par le deuxième qubit $ S $ se compose de $ e_2 \equiv 01 $ et $ e_3 \equiv 11 $ .  La probabilité de mesurer le qubit choisi sur $ 1 est alors le $ vecteur d’État$\psi$
+La règle mathématique pour mesurer la première ou la deuxième qubit est simple.  Si nous laissons $ e_k $ être le $ { vecteur de calcul k ^ \rm th } $ et que vous recherchiez $ $ le jeu de tous les $ e_k, de $ sorte que le qubit en question prend la valeur $ 1 $ pour cette valeur de $ k $ .  Par exemple, si nous nous intéressons à mesurer le premier qubit, les $ S $ se comporteront de $ e_1 \equiv 10 $ et $ e_3 \equiv 11 $ .  De même, si nous sommes intéressés par le deuxième qubit $ S $ se compose de $ e_2 \equiv 01 $ et $ e_3 \equiv 11 $ .  La probabilité de mesurer le qubit choisi sur $ 1 est alors le $ vecteur d’État $\psi$
 
 $$
 P ( \text { résultat } = 1) = \sum _ { e_k \text { dans le jeu } de } \psi ^ \dagger e_k e_k ^ \dagger \psi .
 $$
 
 > [!NOTE]
->Dans ce document, nous utilisons le format avec primauté des octets de poids faible (Little-endian) pour étiqueter la base de calcul. Au format Little endian, les bits les moins significatifs sont placés en premier. Par exemple, le nombre quatre au format Little endian est représenté par la chaîne de bits 001.
+> Dans ce document, nous utilisons le format avec primauté des octets de poids faible (Little-endian) pour étiqueter la base de calcul. Au format Little endian, les bits les moins significatifs sont placés en premier. Par exemple, le nombre quatre au format Little endian est représenté par la chaîne de bits 001.
 
 Étant donné que chaque mesure qubit peut générer uniquement $ 0 $ ou $ 1 $ , la probabilité de la mesure $ 0 $ est simplement $ 1-P ( \text { résultat } = 1) $ .  C’est la raison pour laquelle nous fournissons explicitement une formule pour la probabilité de la mesure $ 1 $ .
 
@@ -198,37 +198,37 @@ Comme dans le cas d’une qubit, toute transformation unitaire est une opératio
 Par exemple, la porte CNOTIN (contrôlée-NOT) est une porte à deux qubit couramment utilisée et est représentée par la matrice d’unités suivante :
 
 $$
-\operatorname{CNOTIN 1 \ 0 \ 0 \ 0 0 \ 1 \ 0 \ 0 \ 0 \ 0 \ 0 \ 0 \ } = \begin{bmatrix} \\\\ \\\\ 1 \\\\ 0 \ 0 \ 1 \ 0\end{bmatrix}
+\operatorname{CNOTIN 1 \ 0 \ 0 \ 0 0 \ 1 \ 0 \ 0 \ 0 \ 0 \ 0 \ 0 \ } = \begin{bmatrix}  \\\\ \\\\  1 \\\\  0 \ 0 \ 1 \ 0 \end{bmatrix}
 $$
 
 Nous pouvons également former des portes à deux qubit en appliquant des portes à qubit unique sur les deux qubits. Par exemple, si nous appliquons les portes 
 
 $$
 \begin{bmatrix}
-a \ b \\\\ c \ d\end{bmatrix}
+a \ b \\\\ c \ d \end{bmatrix}
 $$
 
-and
+et
 
 $$\begin{bmatrix}
-e \ f \\\\ g \ h\end{bmatrix}
+e \ f \\\\ g \ h \end{bmatrix}
 $$
 
-pour le premier et le deuxième qubits, respectivement, cela revient à appliquer l’unité qubit fournie par le produit tenseur :$$\begin{bmatrix}
-a \ b \\\\ c \ d\end{bmatrix}
+pour le premier et le deuxième qubits, respectivement, cela revient à appliquer l’unité qubit fournie par le produit tenseur : $$\begin{bmatrix}
+a \ b \\\\ c \ d \end{bmatrix}
 \otimes 
 \begin{bmatrix}
-e \ f \\\\ g \ h\end{bmatrix}=
+e \ f \\\\ g \ h \end{bmatrix}=
     \begin{bmatrix}
-    AE \ AF \ est \ BF\\\\
-    AG \ Ah \ BG \ BH\\\\
-    ce \ CF \ de \ DF\\\\
+    AE \ AF \ est \ BF \\\\
+    AG \ Ah \ BG \ BH \\\\
+    ce \ CF \ de \ DF \\\\
     CG \ ch \ DG \ DH \end{bmatrix} .$$
 Nous pouvons donc former les portes à deux qubit en acceptant le produit tenseur de certaines portes connues. Voici quelques exemples de portes à deux qubit $ : \otimes h $ , $ x \otimes \boldone $ et $ x \otimes Z $ .
 
 Notez que si deux portes à qubit unique définissent une porte à deux qubit en prenant leur produit tenseur, la réciproque n’est pas vraie. Les portes à deux qubit ne peuvent pas être écrites en tant que produit tenseur de portes à qubit unique.  Une porte de ce type est appelée porte *emmêlante* . La porte CNOTIN en est un exemple.
 
-L’intuition derrière une porte contrôlée ne peut pas être généralisée à des portes arbitraires.  Une porte contrôlée en général est une porte qui agit comme identité (c’est-à-dire qu’elle n’a aucune action), à moins qu’un qubit spécifique ne soit $ 1 $ .  Nous indiquons un appareil contrôlé, contrôlé dans ce cas sur le qubit libellé $ x $ , par un $ \Lambda \_ x (U) $ .  Par exemple $ \Lambda , _0 (u) e 1 e 1 \_ { } \otimes { \psi } = \_ { } \otimes u { \psi } $ et $ \Lambda \_ 0 (u) e \_ { 0 } \otimes { \psi } = e 0 \_ { } \otimes { \psi } $ , où $ e \_ 0 $ et $ e \_ 1 $ sont les vecteurs de base de calcul pour un qubit unique correspondant aux valeurs $ 0 $ et $ 1 $ .  Par exemple, considérons le portail Z contrôlé suivant, $ $ puis nous pouvons l’exprimer comme suit :$$
+L’intuition derrière une porte contrôlée ne peut pas être généralisée à des portes arbitraires.  Une porte contrôlée en général est une porte qui agit comme identité (c’est-à-dire qu’elle n’a aucune action), à moins qu’un qubit spécifique ne soit $ 1 $ .  Nous indiquons un appareil contrôlé, contrôlé dans ce cas sur le qubit libellé $ x $ , par un $ \Lambda \_ x (U) $ .  Par exemple $ \Lambda , _0 (u) e 1 e 1 \_ { } \otimes { \psi } = \_ { } \otimes u { \psi } $ et $ \Lambda \_ 0 (u) e \_ { 0 } \otimes { \psi } = e 0 \_ { } \otimes { \psi } $ , où $ e \_ 0 $ et $ e \_ 1 $ sont les vecteurs de base de calcul pour un qubit unique correspondant aux valeurs $ 0 $ et $ 1 $ .  Par exemple, considérons le portail Z contrôlé suivant, $ $ puis nous pouvons l’exprimer comme suit : $$
 \Lambda\_0 (Z) 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 = \begin{bmatrix} & & & \\\\ & & & \\\\ & & & \\\\ & & & -1 \end{bmatrix} = ( \boldone \otimes h) \operatorname { cnotin } ( \boldone \otimes h).
 $$
 
@@ -251,7 +251,7 @@ Les portes Quantum fonctionnent exactement de la même façon.  Par exemple, si 
 
 \begin{align}
 &(X \otimes \operatorname { cnotin } _ { 12 } \otimes \boldone \otimes \boldone \otimes \boldone \otimes \boldone ) \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 0 \end{bmatrix} \otimes \begin{bmatrix} \\\\ 1\end{bmatrix}\\\\
-&\qquad\qquad\equiv0011001.\end{align}
+&\qquad\qquad\equiv 0011001. \end{align}
 
 Dans de nombreux systèmes qubit, il est souvent nécessaire d’allouer et de libérer des qubits qui servent de mémoire temporaire pour l’ordinateur Quantum.  Un qubit de ce type est appelé Ancilla.  Par défaut, nous supposons que l’État qubit est initialisé à $ e_0 lors de l' $ allocation.  Nous partons du principe qu’il est renvoyé à $ e_0 $ avant la désallocation.  Cette hypothèse est importante, car si un qubit Ancilla est associé à un autre registre qubit lorsqu’il est libéré, le processus de désallocation endommage le Ancilla.  Pour cette raison, nous partons toujours du principe que ces qubits sont rétablies à leur état initial avant d’être libérées.
 

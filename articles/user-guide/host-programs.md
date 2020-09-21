@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1eca44dabd72cd107d72d3b9e3ad1081c19c27d
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: f24c608ffc6522cb50f512de1a02b3db4b290e83
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992188"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759814"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Méthodes d’exécution d’un Q# programme
 
@@ -32,7 +32,7 @@ Pour mieux comprendre ces processus et leurs différences, nous envisageons un Q
 
 ## <a name="basic-no-locq-program"></a>Programme de base Q#
 
-Un programme Quantum de base peut consister à préparer un qubit dans une superposition égale des États $ \ Ket {0} $ et $ \ Ket {1} $, à le mesurer et à retourner le résultat, qui sera, de manière aléatoire, l’un de ces deux États avec une probabilité égale.
+Un programme Quantum de base peut consister à préparer un qubit dans une superposition égale des États $ \ket {0} $ et $ \ket {1} $, à le mesurer et à retourner le résultat, qui sera, de manière aléatoire, l’un de ces deux États avec une probabilité égale.
 En effet, ce processus est au cœur du démarrage rapide du [Générateur de nombres aléatoires quantiques](xref:microsoft.quantum.quickstarts.qrng) .
 
 Dans Q# , cette opération est effectuée par le code suivant :
@@ -250,7 +250,7 @@ Le noyau de l’interopérabilité est basé sur le Q# compilateur qui rend le c
 L’un des principaux avantages de l’utilisation d’un programme hôte est que les données classiques renvoyées par le Q# programme peuvent ensuite être traitées plus en détail dans la langue de l’hôte.
 Cela peut se composer d’un traitement de données avancé (par exemple, un processus qui ne peut pas être effectué en interne dans Q# ), puis de l’appel d' Q# actions supplémentaires en fonction de ces résultats, ou d’une opération aussi simple que le traçage des Q# résultats.
 
-Le schéma général est présenté ici et nous aborderons les implémentations spécifiques de Python et C# ci-dessous. Vous trouverez un exemple d’utilisation d’un programme hôte F # dans les [exemples d’interopérabilité .net](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet).
+Le schéma général est présenté ici et nous aborderons les implémentations spécifiques de Python et C# ci-dessous. Vous trouverez un exemple d’utilisation d’un programme hôte F # dans les [exemples d’interopérabilité .net](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet).
 
 <br/>
 <img src="../media/hostprograms_host_program_diagram.png" alt="Q# program from a host program" width="700">
@@ -409,7 +409,7 @@ using NamespaceName;                              // make the Q# namespace avail
 ```
 
 Ensuite, nous déclarons notre espace de noms C#, quelques autres bits et éléments (consultez le bloc de code complet ci-dessous), puis toute programmation classique que nous aimerions (par exemple, le calcul d’arguments pour le Q# callables).
-Ce dernier n’est pas nécessaire dans notre cas, mais un exemple d’utilisation de ce type est disponible dans l'  [exemple d’interopérabilité .net](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet).
+Ce dernier n’est pas nécessaire dans notre cas, mais un exemple d’utilisation de ce type est disponible dans l'  [exemple d’interopérabilité .net](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet).
 
 #### <a name="target-machines"></a>Ordinateurs cibles
 
@@ -580,7 +580,7 @@ BorrowedWidth   0
 Q# Les blocs-notes Jupyter utilisent le Q# noyau I, qui vous permet de définir, compiler et exécuter des Q# callables dans un seul bloc-notes---à côté des instructions, des notes et d’autres contenus.
 Cela signifie que, bien qu’il soit possible d’importer et d’utiliser le contenu de `*.qs` Q# fichiers, ils ne sont pas nécessaires dans le modèle d’exécution.
 
-Ici, nous allons expliquer en détail comment exécuter les Q# opérations définies ci-dessus, mais une introduction plus étendue à l’utilisation des Q# blocs-notes Jupyter est fournie à l' [Introduction à Q# et aux blocs-notes Jupyter](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb).
+Ici, nous allons expliquer en détail comment exécuter les Q# opérations définies ci-dessus, mais une introduction plus étendue à l’utilisation des Q# blocs-notes Jupyter est fournie à l' [Introduction à Q# et aux blocs-notes Jupyter](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb).
 
 ### <a name="defining-operations"></a>Définition des opérations
 
@@ -591,7 +591,7 @@ Lors de l’exécution d’une cellule avec une telle instruction, les définiti
 
 > [!NOTE]
 > Callables de [Microsoft. Quantum. Intrinsic](xref:microsoft.quantum.intrinsic) et [Microsoft. Quantum. Canon](xref:microsoft.quantum.canon) (par exemple [`H`](xref:microsoft.quantum.intrinsic.h) , et [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) ) sont automatiquement disponibles pour les opérations définies dans les cellules des Q# blocs-notes Jupyter.
-> Toutefois, cela n’est pas le cas pour le code provenant de Q# fichiers sources externes (processus présenté à l' [Introduction à Q# et les blocs-notes Jupyter](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)). 
+> Toutefois, cela n’est pas le cas pour le code provenant de Q# fichiers sources externes (processus présenté à l' [Introduction à Q# et les blocs-notes Jupyter](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)). 
 > 
 
 De même, la définition d’opérations requiert uniquement l’écriture du Q# code et l’exécution de la cellule.

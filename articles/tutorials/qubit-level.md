@@ -2,19 +2,19 @@
 title: Écrire et simuler des programmes de niveau qubit dans Q#
 description: Didacticiel pas à pas sur l’écriture et la simulation d’un programme Quantum fonctionnant au niveau qubit individuel
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863331"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834956"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Didacticiel : écrire et simuler des programmes de niveau qubit dans Q\#
 
@@ -244,7 +244,7 @@ namespace NamespaceQFT {
 
 Une fois le Q# fichier et l’opération terminés, notre programme Quantum est prêt à être appelé et simulé.
 
-## <a name="execute-the-program"></a>Exécuter le programme
+## <a name="run-the-program"></a>Exécuter le programme
 
 Après avoir défini notre Q# opération dans un `.qs` fichier, nous devons maintenant appeler cette opération et observer toutes les données classiques retournées.
 Pour le moment, aucun résultat n’est renvoyé (Rappelez-vous que notre opération définie ci-dessus retourne `Unit` ), mais lorsque nous modifions ultérieurement l' Q# opération pour retourner un tableau de résultats de mesure ( `Result[]` ), nous allons résoudre ce cas.
@@ -269,7 +269,7 @@ Pour exécuter le programme, ouvrez le terminal dans le dossier de votre projet 
 dotnet run
 ```
 
-Lors de l’exécution, vous devez voir les `Message` `DumpMachine` sorties et ci-dessous imprimées dans votre console.
+Une fois l’opération terminée, vous devriez voir les `Message` `DumpMachine` sorties et ci-dessous imprimées sur votre console.
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
@@ -314,8 +314,8 @@ L’hôte C# se compose de quatre parties :
     Il n’y en a aucun dans cet exemple.
 3. Exécuter l’algorithme quantique. 
     Chaque Q# opération génère une classe C# portant le même nom. 
-    Cette classe a une méthode `Run` qui exécute l’opération **de façon asynchrone** .
-    L’exécution est asynchrone parce que l’exécution sur du matériel réel sera asynchrone. 
+    Cette classe a une `Run` méthode qui exécute l’opération de **façon asynchrone**.
+    L’exécution est asynchrone car son exécution sur le matériel réel sera asynchrone. 
     Étant donné que la `Run` méthode est asynchrone, nous appelons la `Wait()` méthode, ce qui bloque l’exécution jusqu’à ce que la tâche se termine et retourne le résultat de façon synchrone. 
 4. Traitez le résultat retourné de l’opération.
     Pour le moment, l’opération ne retourne rien.
@@ -396,7 +396,7 @@ La sortie imprimée illustre donc que nos portes programmées ont transformé no
 
 $ $ \ket{\Psi} \_ {initial} = \ket {000} $ $
 
-to 
+par 
 
 $ $ \begin{align} \ket{\Psi} \_ {final} &= \frac {1} {\sqrt {8} } \left (\ket {000} + \ket {001} + \ket {010} + \ket {011} + \ket {100} + \ket {101} + \ket {110} + \ket {111} \right) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}, \end{align} $ $
 
@@ -499,7 +499,7 @@ Le code d’opération final doit ressembler à ceci :
 }
 ```
 
-Si vous travaillez à partir de l’invite de commandes, le tableau retourné sera simplement imprimé directement sur la console à la fin de l’exécution.
+Si vous travaillez à partir de l’invite de commandes, le tableau retourné sera simplement affiché directement sur la console à la fin de l’exécution.
 Dans le cas contraire, mettez à jour votre programme hôte pour traiter le tableau retourné.
 
 #### <a name="command-prompt"></a>[Invite de commandes](#tab/tabid-cmdline)

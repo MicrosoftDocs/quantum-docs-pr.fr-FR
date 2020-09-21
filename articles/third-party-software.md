@@ -4,18 +4,18 @@ description: Microsoft Quantum Development Kit des avis et des informations sur 
 services: service-name-with-dashes-AZURE-ONLY
 keywords: N’ajoutez pas ou ne modifiez pas de mots clés sans consulter votre expert SEO.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 939dc681d6b9a89f02fd1f392b7fd84067d98e8f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869747"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834123"
 ---
 # <a name="third-party-software-notices-and-information"></a>INFORMATIONS ET MENTIONS RELATIVES AUX LOGICIELS TIERS
 
@@ -268,7 +268,7 @@ LE LOGICIEL EST FOURNI « TEL QUEL », SANS GARANTIE D’AUCUNE SORTE, EXPRESSE
 
 Sauf mention contraire, la bibliothèque FParsec sous forme source et binaire est distribuée sous la licence BSD simplifiée. La licence BSD simplifiée (également appelée « 2 ‐ clause BSD license ») est une licence simple et permissive qui est conforme à OSI ‐. 
 
-FParsec incorpore les données dérivées de la base de données de caractères Unicode v. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., qui est distribué dans les conditions suivantes :http://www.unicode.org/terms_of_use.html#Exhibit1 
+FParsec incorpore les données dérivées de la base de données de caractères Unicode v. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., qui est distribué dans les conditions suivantes : http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 La documentation du dossier doc est concédée sous licence dans le cadre de la licence Creative ‐ invendue 3,0 non portée. Cette licence Creative-du ne vous permet pas d’utiliser la documentation à des fins commerciales sans autorisation. Cela signifie, par exemple, que vous ne pouvez pas vendre la documentation sous forme de livre pour des bénéfices ou la placer sur une batterie de serveurs de contenu Web afin de gagner de l’argent avec des publicités. Toutefois, vous pouvez bien sûr utiliser la documentation dans un contexte commercial (par exemple, la placer sur l’intranet d’une société commerciale), à condition que vous n’essayiez pas d’obtenir directement de l’argent à partir du texte de la documentation. 
 
@@ -284,6 +284,6 @@ Ce logiciel est fourni par les titulaires de droits d’auteur « en l’État�
 
 2,2 licence d’attribution ‐ incommerciale 3,0
 
-Têtehttps://creativecommons.org/licenses/by-nc/3.0/
+Tête https://creativecommons.org/licenses/by-nc/3.0/
 
-Le texte complet de la licence :https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+Le texte complet de la licence : https://creativecommons.org/licenses/by-nc/3.0/legalcode 

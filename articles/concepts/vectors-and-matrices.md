@@ -1,6 +1,6 @@
 ---
 titre : vecteurs et matrices dans quantum computing Description : Découvrez les principes de base de l’utilisation des vecteurs et des matrices.
-Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. vectors ms. Author : nawiebe@microsoft.com ms. Date : 12/11/2017 ms. topic : article No-Loc :
+Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. vectors ms. Author : v-benbra ms. Date : 12/11/2017 ms. topic : article No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ $$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\
-v_n\end{bmatrix}$$
+v_n \end{bmatrix}$$
 
 La norme d’un vecteur $ v $ est définie comme $ \sqrt { \sum \_ i | v \_ | ^ 2 } $ . Un vecteur est considéré comme une norme d’unité (ou il est également appelé vecteur d' [*unité*](https://en.wikipedia.org/wiki/Unit_vector)) si sa norme est $ 1 $ . Le [*voisin d’un vecteur*](https://en.wikipedia.org/wiki/Adjoint_matrix) $ v $ est désigné $ v ^ \dagger $ et est défini comme étant le vecteur de ligne suivant, où désigne $ \* $ le conjugué complexe.
 
@@ -114,12 +114,12 @@ u_1\\\\
 u_2\\\\
 \vdots\\\\
 u_n \end{bmatrix} ~ \mathrm { et}~
-v=\begin{bmatrix}
+v =\begin{bmatrix}
     v_1\\\\
     v_2\\\\
     \vdots\\\\
     V_n \end{bmatrix} , ~ \mathrm { puis}~
-au + BV=\begin{bmatrix}
+au + BV =\begin{bmatrix}
 au_1 + bv_1\\\\
 au_2 + bv_2\\\\
 \vdots\\\\
@@ -128,7 +128,7 @@ $$
 
 Une [*matrice*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) de taille $ m \times n $ est une collection de $ mn $ nombres complexes organisés en $ m $ lignes et $ n $ colonnes, comme indiqué ci-dessous :
 
-$$Lecteur= 
+$$Lecteur = 
 \begin{bmatrix}
 M_ { 11 } ~~ m_ { 12 } ~~ \cdots ~~ m_ { 1N}\\\\
 M_ { 21 } ~~ m_ { 22 } ~~ \cdots ~~ m_ { 2n}\\\\
@@ -183,7 +183,7 @@ Une matrice $ m $ est dite [*Hermitian*](https://en.wikipedia.org/wiki/Hermitian
 Enfin, le [*produit tenseur*](https://en.wikipedia.org/wiki/Tensor_product) (ou le produit Kronecker) de deux matrices $ m $ de taille $ m \times n $ et $ n $ de taille $ p \times q $ est une matrice plus grande $ p = m \otimes n $ de taille $ MP \times NQ $ et est obtenue à partir de $ M $ et $ n $ comme suit :
 
 \begin{align}
-    M \otimes N&=
+    M \otimes N &=
     \begin{bmatrix}
         M_ { 11 } ~~ \cdots ~~ m_ { 1N }\\\\
         \ddots\\\\
@@ -217,30 +217,30 @@ $$
     =\begin{bmatrix}un c \\\\ a d \\\\ a e \\\\ b c \\\\ b \\\\ est\end{bmatrix}
 $$
 
-and
+et
 
 $$
     \begin{bmatrix}
-        a \ b \\\\ c \ d\end{bmatrix}
+        a \ b \\\\ c \ d \end{bmatrix}
     \otimes 
     \begin{bmatrix}
-        e \ f \\\\ g \ h\end{bmatrix}
+        e \ f \\\\ g \ h \end{bmatrix}
      =
     \begin{bmatrix}
     un\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     p\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \\\\[1em] c\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     e\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \end{bmatrix}
     =
     \begin{bmatrix}
-    AE \ AF \ est \ BF\\\\
-    AG \ Ah \ BG \ BH\\\\
-    ce \ CF \ de \ DF\\\\
+    AE \ AF \ est \ BF \\\\
+    AG \ Ah \ BG \ BH \\\\
+    ce \ CF \ de \ DF \\\\
     CG \ ch \ DG \ DH \end{bmatrix} .
 $$
 

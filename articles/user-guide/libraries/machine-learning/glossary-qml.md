@@ -1,19 +1,20 @@
 ---
 title: Glossaire de la bibliothèque de Machine Learning Quantum
+description: Glossaire des termes du Machine Learning Quantum
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 068fc61d0d7c066df1270384679e13a3b3a8c878
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863024"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833901"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Glossaire Machine Learning Quantum
 
@@ -42,7 +43,7 @@ Définit le nombre d’échantillons de données utilisés pour une seule estima
 ### <a name="training-epochs-tolerance-gridlocks"></a>Époques de formation, tolérance, gridlocks
 
 « Époque » signifie qu’une passe complète est effectuée sur les données d’apprentissage planifiées.
-Le nombre maximal d’époques par thread d’apprentissage (voir ci-dessous) doit être limité. Le thread d’apprentissage est défini pour se terminer (avec les meilleurs paramètres candidats connus) lorsque le nombre maximal d’époques a été exécuté. Toutefois, cette formation se terminerait plus tôt lorsque la tarification incorrecte du calendrier de validation passe sous une tolérance choisie. Supposons, par exemple, que la tolérance de la classification incorrecte est de 0,01 (1%); si, dans le cas d’un jeu de validation d’exemples 2000, nous observons moins de 20 incorrections de classifications, le niveau de tolérance a été atteint. Un thread d’apprentissage se termine également prématurément si le score de validation du modèle candidat n’a pas montré d’amélioration par rapport à plusieurs époques consécutives (un Gridlock). La logique de l’arrêt de Gridlock est actuellement codée en dur.
+Le nombre maximal d’époques par thread d’apprentissage (voir ci-dessous) doit être limité. Le thread d’apprentissage est défini pour s’arrêter (avec les meilleurs paramètres candidats connus) lorsque le nombre maximal d’époques a été atteint. Toutefois, cette formation se terminerait plus tôt lorsque la tarification incorrecte du calendrier de validation passe sous une tolérance choisie. Supposons, par exemple, que la tolérance de la classification incorrecte est de 0,01 (1%); si, dans le cas d’un jeu de validation d’exemples 2000, nous observons moins de 20 incorrections de classifications, le niveau de tolérance a été atteint. Un thread d’apprentissage se termine également prématurément si le score de validation du modèle candidat n’a pas montré d’amélioration par rapport à plusieurs époques consécutives (un Gridlock). La logique de l’arrêt de Gridlock est actuellement codée en dur.
 
 ### <a name="measurements-count"></a>Nombre de mesures
 

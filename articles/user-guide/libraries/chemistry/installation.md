@@ -9,16 +9,16 @@ uid: microsoft.quantum.chemistry.concepts.installation
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5fe973d24ceffd413cdbd3c543013dcc7ee379c0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f1a7d1d041dab73980d8debc179d6c79acac6d33
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869339"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759797"
 ---
 # <a name="chemistry-library-installation"></a>Installation de la bibliothèque chimie
 
-L' [exemple **MolecularHydrogen** ](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) utilise des données d’entrée moléculaires configurées manuellement.
+L' [exemple **MolecularHydrogen** ](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) utilise des données d’entrée moléculaires configurées manuellement.
 Bien que cela soit parfait pour les petits exemples, la chimie Quantum à l’échelle requiert Hamiltonians avec des millions ou des milliards de termes.
 Ces Hamiltonians, générés par des packages de chimie de calcul évolutif, sont trop volumineux pour être importés manuellement.
 
@@ -33,7 +33,7 @@ Cette section explique en détail comment utiliser le kit de développement quan
 
 Pour vous familiariser avec NWChem avec le kit de développement quantique, utilisez l’une des méthodes suivantes :
 
-- Commencez à utiliser les fichiers Broombridge existants fournis avec les exemples sur [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML).
+- Commencez à utiliser les fichiers Broombridge existants fournis avec les exemples sur [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML).
 - Utilisez le [Générateur de flèches EMSL pour le Microsoft Quantum Development Kit](https://arrows.emsl.pnnl.gov/api/qsharp_chem) qui est un serveur frontal Web à NWChem pour générer de nouveaux fichiers d’entrée moléculaire avec format Broombridge.  
 - Utilisez l' [image de l’arrimeur](https://hub.docker.com/r/nwchemorg/nwchem-qc/) fournie par PNNL pour exécuter NWChem, ou
 - [Compilez NWChem](http://www.nwchem-sw.org/index.php/Compiling_NWChem) pour votre plateforme.
@@ -42,9 +42,9 @@ Pour plus d’informations sur l’utilisation de NWChem sur des modèles chimiq
 
 ### <a name="getting-started-using-broombridge-files-provided-with-the-samples"></a>Prise en main des fichiers Broombridge fournis avec les exemples
 
-Le dossier [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML) du référentiel d’exemples du kit de développement Quantum contient des fichiers de données de molécule en format Broombridge.  
+Le dossier [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML) du référentiel d’exemples du kit de développement Quantum contient des fichiers de données de molécule en format Broombridge.  
 
-En guise d’exemple simple, utilisez l’exemple de bibliothèque chimie [GetGateCount](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/GetGateCount) pour charger le modèle Hamilton à partir de l’un des fichiers Broombridge et effectuer des estimations de la porte de la simulation de Quantum algorigthms :
+En guise d’exemple simple, utilisez l’exemple de bibliothèque chimie [GetGateCount](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/GetGateCount) pour charger le modèle Hamilton à partir de l’un des fichiers Broombridge et effectuer des estimations de la porte de la simulation de Quantum algorigthms :
 
 ```bash
 cd Quantum/Chemistry/GetGateCount
@@ -124,7 +124,7 @@ Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
 ```
 
-## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>Utilisation du kit de développement quantique avec`qdk-chem`
+## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>Utilisation du kit de développement quantique avec `qdk-chem`
 
 Pour installer `qdk-chem` , vous pouvez utiliser la kit SDK .net Core sur la ligne de commande :
 

@@ -1,6 +1,6 @@
 ---
 titre : qubit dans quantum computing Description : en savoir plus sur qubits, l’unité fondamentale des informations dans quantum computing.
-Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. qubit ms. Author : nawiebe@microsoft.com ms. Date : 12/11/2017 ms. topic : article No-Loc :
+Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. qubit ms. Author : v-benbra ms. Date : 12/11/2017 ms. topic : article No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -100,7 +100,7 @@ Les vecteurs d’État Quantum $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ et $ \
 
 Nous prenons ces deux États Quantum pour correspondre aux deux États d’un bit classique, à savoir $ 0 $ et $ 1 $ . La Convention standard consiste à choisir
 
-$$0 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} ,$$
+$$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix} ,$$
 
 Bien que le choix opposé puisse également être pris. Ainsi, en dehors du nombre infini de vecteurs d’État Quantum uniques possibles, seuls deux correspondent aux États des bits classiques ; ce n’est pas le cas de tous les autres États Quantum.
 
@@ -120,7 +120,7 @@ Qubits peut également être représenté en $ 3 $ D à l’aide de la représen
 ![Sphère Bloch](~/media/concepts_bloch.png)
 
 Les flèches de ce diagramme affichent la direction dans laquelle le vecteur d’État Quantum pointe et chaque transformation de la flèche peut être considérée comme une rotation autour de l’un des axes Cardinal.
-Tout en pensant à un calcul de Quantum comme une séquence de rotations est un outil d’intuition puissant, il est difficile d’utiliser cette intuition pour concevoir et décrire des algorithmes. Q#atténue ce problème en fournissant un langage pour décrire de telles rotations.
+Tout en pensant à un calcul de Quantum comme une séquence de rotations est un outil d’intuition puissant, il est difficile d’utiliser cette intuition pour concevoir et décrire des algorithmes. Q# atténue ce problème en fournissant un langage pour décrire de telles rotations.
 
 ## <a name="single-qubit-operations"></a>Opérations à qubit unique
 
@@ -128,7 +128,7 @@ Les ordinateurs quantiques traitent les données en appliquant un ensemble unive
 Cette notion d’universalité est similaire à la notion d’universalité pour le calcul traditionnel (c’est-à-dire classique) où un ensemble de portes est considéré comme universel si chaque transformation des bits d’entrée peut être effectuée à l’aide d’un circuit de longueur finie.
 Dans Quantum Computing, les transformations valides que nous sommes autorisés à effectuer sur un qubit sont des transformations et des mesures unitaires.
 L' *opération joint* ou le TransType de conjugué complexe revêt une importance capitale pour le quantum computing car il est nécessaire d’inverser les transformations de Quantum.
-Q#reflète cela en fournissant des méthodes pour compiler automatiquement les séquences de la porte à leur voisine, ce qui évite au programmeur d’avoir à adjoints le code à la main dans de nombreux cas. Un exemple est illustré ci-dessous :
+Q# reflète cela en fournissant des méthodes pour compiler automatiquement les séquences de la porte à leur voisine, ce qui évite au programmeur d’avoir à adjoints le code à la main dans de nombreux cas. Un exemple est illustré ci-dessous :
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -145,7 +145,7 @@ Pour l’universalité, nous exigeons qu’un ordinateur quantique se *rapproche
 En d’autres termes, un ensemble de portes est un ensemble de portes universelles si une transformation unitaire peut être approximativement écrite en tant que produit de portes à partir de cet ensemble. Nous avons besoin que pour toute erreur liée, il existe des portes $ g_ { 1 } , g_ { 2 } , \ldots, G_N $ à partir de l’ensemble de portes,
 
 $$
-G_N G_ { N-1 } \cdots G_2 G_1 \approx U.$$
+G_N G_ { N-1 } \cdots G_2 G_1 \approx U. $$
 
 Notez que, étant donné que la Convention pour la multiplication de matrice est de multiplier de droite à gauche la première opération de porte de cette séquence, $ G_N $ , est en fait le dernier appliqué au vecteur d’État Quantum. Plus formellement, nous disons qu’un tel ensemble de portes est universel si pour chaque tolérance d’erreur $ \epsilon > 0 $ il existe $ G_1, \ldots, G_N de $ telle sorte que la distance entre $ G_N \ldots G_1 $ et $ U $ est au plus $ \epsilon $ . Dans l’idéal, la valeur de $ N $ nécessaire pour atteindre cette distance de \epsilon doit mettre à l' $ échelle le $ poly-logarithmique avec $ 1/\ Epsilon $ .
 

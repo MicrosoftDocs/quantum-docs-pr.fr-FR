@@ -1,5 +1,5 @@
 ---
-title: Workflow de contrôle dansQ#
+title: Workflow de contrôle dans Q#
 description: Boucles, conditions, etc.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,23 +9,23 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: e8c873868d6f697fc90b23a38c11f35e46b40c4f
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867945"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759660"
 ---
-# <a name="control-flow-in-no-locq"></a>Workflow de contrôle dansQ#
+# <a name="control-flow-in-no-locq"></a>Workflow de contrôle dans Q#
 
 Au sein d’une opération ou d’une fonction, chaque instruction s’exécute dans l’ordre, de la même façon que d’autres langages classiques impératifs.
 Toutefois, vous pouvez modifier le déroulement du contrôle de trois façons distinctes :
 
-* `if`publication
-* `for`boucles
-* `repeat-until-success`boucles
+* `if` publication
+* `for` boucles
+* `repeat-until-success` boucles
 
-Les `if` `for` constructions de workflow et de contrôle se poursuivent de manière familière à la plupart des langages de programmation classiques. [`Repeat-until-success`](#repeat-until-success-loop)les boucles sont abordées plus loin dans cet article.
+Les `if` `for` constructions de workflow et de contrôle se poursuivent de manière familière à la plupart des langages de programmation classiques. [`Repeat-until-success`](#repeat-until-success-loop) les boucles sont abordées plus loin dans cet article.
 
 Important, les `for` boucles et les `if` instructions peuvent être utilisées dans les opérations pour lesquelles les [spécialisations](xref:microsoft.quantum.guide.operationsfunctions) sont générées automatiquement. Dans ce scénario, le voisint d’une `for` boucle inverse la direction et prend le voisin de chaque itération.
 Cette action suit le principe « chaussures-and-Socks » : Si vous souhaitez annuler la pose sur SOCKS, puis sur chaussures, vous devez annuler la pose des chaussures, puis annuler l’introduction sur Socks. 
@@ -55,7 +55,7 @@ if (result == One) {
 } 
 // n is not bound
 ```
-or
+ou
 ```qsharp
 if (i == 1) {
     X(target);
@@ -68,7 +68,7 @@ if (i == 1) {
 }
 ```
 
-## <a name="for-loop"></a>Boucle for
+## <a name="for-loop"></a>Boucle For
 
 L' `for` instruction prend en charge l’itération sur une plage d’entiers ou un tableau.
 L’instruction se compose du mot clé `for` , suivi d’un symbole ou d’un tuple de symbole, du mot clé et d’une `in` expression de type `Range` ou tableau, tous entre parenthèses et un bloc d’instructions.
@@ -173,7 +173,7 @@ Par exemple :
 ```qsharp
 return 1;
 ```
-or
+ou
 ```qsharp
 return (results, qubits);
 ```
@@ -248,7 +248,7 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a>RUS sans`fixup`
+### <a name="rus-without-fixup"></a>RUS sans `fixup`
 
 Cet exemple montre une boucle de RUS sans l’étape de correction. Le code est un circuit probabiliste qui implémente une porte de rotation importante $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ à l’aide des `H` `T` portes et.
 La boucle se termine dans les répétitions de $ \frac {8} {5} $ en moyenne.
@@ -330,7 +330,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Pour plus d’informations, consultez [exemple de test unitaire fourni avec la bibliothèque standard](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+Pour plus d’informations, consultez [exemple de test unitaire fourni avec la bibliothèque standard](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## <a name="next-steps"></a>Étapes suivantes
 

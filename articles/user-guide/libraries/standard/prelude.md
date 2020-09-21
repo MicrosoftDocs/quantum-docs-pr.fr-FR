@@ -2,19 +2,19 @@
 title: Opérations et fonctions intrinsèques dans QDK
 description: En savoir plus sur les opérations et les fonctions intrinsèques dans le QDK, y compris les fonctions classiques et les opérations d’unité, de rotation et de mesure.
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: dd507d0c644ae711a5e5a1dff9156f571cb0fa92
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863723"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833540"
 ---
 # <a name="the-prelude"></a>Préambule destiné à #
 
@@ -240,7 +240,7 @@ Cela dit, un ordinateur cible individuel peut atténuer cet impact sur les perfo
 
 ### <a name="math"></a>Math ###
 
-L' <xref:microsoft.quantum.math> espace de noms fournit de nombreuses fonctions utiles à partir de la [ `System.Math` classe](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)de la bibliothèque de classes de base .net.
+L' <xref:microsoft.quantum.math> espace de noms fournit de nombreuses fonctions utiles à partir de la [ `System.Math` classe](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)de la bibliothèque de classes de base .net.
 Ces fonctions peuvent être utilisées de la même façon que toute autre Q# fonction :
 
 ```qsharp

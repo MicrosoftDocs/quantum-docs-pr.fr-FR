@@ -8,12 +8,12 @@ uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 78d6488ed5e3972f85f1e6cf1ba2d197596c4cc3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869305"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759713"
 ---
 # <a name="end-to-end-with-nwchem"></a>De bout en bout avec NWChem #
 
@@ -22,7 +22,7 @@ Avant de poursuivre avec cet exemple, assurez-vous que vous avez installé l’a
 
 Pour plus d'informations :
 - [Structure des ponts d’entrée NWChem](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
-    - [Commandes de pont d’entrée à utiliser avec le kit de développement quantique](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
+    - [Commandes de pont d’entrée à utiliser avec le kit de développement quantique](https://github.com/nwchemgit/nwchem/tree/main/contrib/quasar)
 - [Installation de la bibliothèque chimie et des dépendances](xref:microsoft.quantum.chemistry.concepts.installation)
 - [Comptage des ressources](xref:microsoft.quantum.chemistry.examples.resourcecounts)
 
@@ -65,7 +65,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Ensuite, nous allons importer la `Get-GateCount` commande fournie avec l’exemple **GetGateCount** .
-Pour plus d’informations, consultez les [instructions fournies avec l’exemple](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount).
+Pour plus d’informations, consultez les [instructions fournies avec l’exemple](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/GetGateCount).
 Ensuite, exécutez la commande suivante, en remplaçant `<runtime>` par `win10-x64` , `osx-x64` ou `linux-x64` , selon votre système d’exploitation :
 
 ```powershell
@@ -95,7 +95,7 @@ Tout d’abord, clonez le [référentiel nwchemgit/nwchem](https://github.com/nw
 git clone https://github.com/nwchemgit/nwchem --depth 1
 ```
 
-Le `nwchemgit/nwchem` référentiel est fourni avec une série de jeux d’entrée destinés à être utilisés avec le kit de développement quantique, listé dans le [ `QA/chem_library_tests` dossier](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests).
+Le `nwchemgit/nwchem` référentiel est fourni avec une série de jeux d’entrée destinés à être utilisés avec le kit de développement quantique, listé dans le [ `QA/chem_library_tests` dossier](https://github.com/nwchemgit/nwchem/tree/main/QA/chem_library_tests).
 Pour cet exemple, nous allons utiliser le `H4` jeu d’entrée :
 
 ```powershell
@@ -167,7 +167,7 @@ Il y a beaucoup de choses à faire à partir d’ici :
 - Essayez différents jeux d’entrée prédéfinis, par exemple, en faisant varier le paramètre `alpha` dans `h4_sto6g_alpha.nw` , 
 - Essayez de modifier les ponts en modifiant directement les jeux NWChem, par exemple, en explorant les `STO-nG` modèles pour différents choix de n, 
 - Essayez d’autres jeux d’entrée NWChem prédéfinis qui sont disponibles à l’adresse `nwchem/qa/chem_library_tests` ,
-- Essayez une suite de tests d’évaluation Broombridge YAML prédéfinis qui ont été générés à partir de NWChem et qui sont disponibles dans le cadre du [référentiel Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML). Ces tests d’évaluation sont les suivants : 
+- Essayez une suite de tests d’évaluation Broombridge YAML prédéfinis qui ont été générés à partir de NWChem et qui sont disponibles dans le cadre du [référentiel Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML). Ces tests d’évaluation sont les suivants : 
     - petites molécules telles que l’hydrogène moléculaire (H2), le beryllium (a), le lithium-hydrure (LiH),
     - des molécules plus grandes telles que l’ozone (O3), bêta-carotène, cytosine et bien d’autres. 
 - Essayez les flèches graphiques frontales [EMSL](https://arrows.emsl.pnnl.gov/api/qsharp_chem) qui intègrent une interface au Microsoft Quantum Development Kit. 
@@ -180,7 +180,7 @@ Pour vous familiariser avec les flèches EMSL front end basées sur le Web, acc�
 > [!NOTE]
 > L’exécution des flèches EMSL dans un navigateur Web requiert l’activation de JavaScript. Pour plus d’informations sur l’activation de JavaScript dans votre navigateur, reportez-vous à ces [instructions](https://www.enable-javascript.com/) . 
 
-Tout d’abord, entrez une molécule dans la zone de requête qui indique``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
+Tout d’abord, entrez une molécule dans la zone de requête qui indique ``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
 
 Vous pouvez entrer de nombreuses molécules par leur nom commun, tel que « caféine » au lieu de « 1, 3, 7-Trimethylxanthine ». 
 

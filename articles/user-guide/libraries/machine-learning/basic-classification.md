@@ -1,20 +1,20 @@
 ---
 title: Classification de base avec la bibliothèque de Machine Learning Quantum
-description: Découvrez comment exécuter un classifieur séquentiel Quantum écrit dans Q# à l’aide de la bibliothèque quantum machine learning de Microsoft QDK.
+description: Découvrez comment exécuter un classificateur séquentiel Quantum écrit dans Q# à l’aide de la bibliothèque quantum machine learning de Microsoft QDK.
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868965"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833722"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Classification de base : classer les données avec QDK
 
@@ -70,7 +70,7 @@ Votre programme hôte se compose de trois parties :
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
-    Appuyez ensuite sur F5, le programme démarre l’exécution et une nouvelle fenêtre s’affiche avec les résultats suivants : 
+    Appuyez sur F5 pour que le programme commence à s’exécuter. Une nouvelle fenêtre affiche les résultats suivants : 
 
     ```bash
     $ dotnet run
@@ -88,9 +88,9 @@ Nous enregistrons le code suivant dans un fichier nommé `Training.qs` .
 
 Les fonctions et opérations les plus importantes définies dans le code ci-dessus sont les suivantes :
 
-- `ClassifierStructure() : ControlledRotation[]`: dans cette fonction, nous définissons la structure de notre modèle de circuit en ajoutant les couches des portes contrôlées que nous considérons. Cette étape est analogue à la déclaration des couches de neurones dans un modèle d’apprentissage profond séquentiel.
-- `TrainHalfMoonModel() : (Double[], Double)`: cette opération est la partie fondamentale du code et définit l’apprentissage. Ici, nous chargeons les exemples à partir du jeu de données inclus dans la bibliothèque, nous définissons les hyper paramètres et les paramètres initiaux pour l’apprentissage et nous commençons l’apprentissage en appelant l’opération `TrainSequentialClassifier` incluse dans la bibliothèque. Il génère les paramètres et le biais qui déterminent le classifieur.
-- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: cette opération définit le processus de validation pour évaluer le modèle. Ici, nous chargeons les exemples pour la validation, le nombre de mesures par échantillon et la tolérance. Il génère le nombre de déclassifications incorrectes sur le lot d’exemples choisi à des fins de validation.
+- `ClassifierStructure() : ControlledRotation[]` : dans cette fonction, nous définissons la structure de notre modèle de circuit en ajoutant les couches des portes contrôlées que nous considérons. Cette étape est analogue à la déclaration des couches de neurones dans un modèle d’apprentissage profond séquentiel.
+- `TrainHalfMoonModel() : (Double[], Double)` : cette opération est la partie fondamentale du code et définit l’apprentissage. Ici, nous chargeons les exemples à partir du jeu de données inclus dans la bibliothèque, nous définissons les hyper paramètres et les paramètres initiaux pour l’apprentissage et nous commençons l’apprentissage en appelant l’opération `TrainSequentialClassifier` incluse dans la bibliothèque. Il génère les paramètres et le biais qui déterminent le classifieur.
+- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : cette opération définit le processus de validation pour évaluer le modèle. Ici, nous chargeons les exemples pour la validation, le nombre de mesures par échantillon et la tolérance. Il génère le nombre de déclassifications incorrectes sur le lot d’exemples choisi à des fins de validation.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
