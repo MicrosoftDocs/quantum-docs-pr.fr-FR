@@ -2,19 +2,19 @@
 title: Simulateur de traces quantiques - Kit de développement Microsoft Quantum
 description: Découvrez comment utiliser le simulateur de traces d’ordinateur quantiques de Microsoft pour déboguer du code classique et estimer les besoins en ressources d’un programme Q#.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868217"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833369"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Simulateur de traces quantiques - Kit de développement Microsoft Quantum (QDK)
 
@@ -86,7 +86,7 @@ Le QDK comprend cinq outils que vous pouvez utiliser avec le simulateur de trac
 |-----| -----|
 |[Vérificateur d’entrées distinctes](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |Recherche les conflits potentiels avec les qubits partagés |
 |[Vérificateur d’utilisation de qubits non valides](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Vérifie si le programme applique une opération sur un qubit déjà publié |
-|[Compteur d’opérations primitives](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Compte le nombre d’exécutions primitives utilisées par chaque opération appelée dans un programme quantique  |
+|[Compteur d’opérations primitives](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Compte le nombre de processus primitifs utilisés par chaque opération appelée dans un programme quantique  |
 |[Compteur de profondeur](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Rassemble les nombres qui représentent la limite inférieure de la profondeur de chaque opération appelée dans un programme quantique   |
 |[Compteur de largeur](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Compte le nombre de qubits alloués et empruntés par chaque opération dans un programme quantique |
 

@@ -2,19 +2,19 @@
 title: Guide de l’utilisateurQ#
 description: Vue d’ensemble de l’objectif et du contenu du Guide de l’utilisateur
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869628"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834752"
 ---
 # <a name="the-no-locq-user-guide"></a>Guide de l’utilisateurQ#
 
@@ -46,7 +46,7 @@ Dans les différentes rubriques de ce guide, nous allons détailler les concepts
 
 - [Utilisation des qubits](xref:microsoft.quantum.guide.qubits) : décrit les fonctionnalités de Q# qui permettent de traiter des qubits individuels et des systèmes de qubits. Plus précisément, vous apprendrez à les allouer, à leur appliquer des opérations et à les mesurer. 
 
-- [Flux de contrôle](xref:microsoft.quantum.guide.controlflow) : décrit les modèles de flux de contrôle de programmation disponibles dans Q#, notamment de nombreuses techniques standard (comme l’exécution conditionnelle, les boucles for et les boucles while) ainsi que le modèle « répéter jusqu’à réussite » spécifique au domaine quantique.
+- [Flux de contrôle](xref:microsoft.quantum.guide.controlflow) : décrit les modèles de flux de contrôle de programmation disponibles dans Q#, notamment de nombreuses techniques standard (comme le traitement conditionnel, les boucles *for* et les boucles *while*) ainsi que le modèle *Répéter jusqu’à réussir* spécifique au domaine quantique.
 
 - [Test et débogage](xref:microsoft.quantum.guide.testingdebugging) : présente en détail certaines techniques vous permettant de vérifier que votre code fait ce qu’il est censé faire. 
     En raison de l’opacité générale des informations quantiques, le débogage d’un programme quantique peut nécessiter des techniques spécialisées. 

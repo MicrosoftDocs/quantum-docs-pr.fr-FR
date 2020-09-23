@@ -2,19 +2,19 @@
 title: Simulateurs quantiques et programmes Q#
 description: Décrit les simulateurs quantiques qui sont disponibles en tant qu’ordinateurs cibles pour les programmes Q#.
 author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com
+ms.author: v-benbra
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868302"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833427"
 ---
 # <a name="quantum-simulators"></a>Simulateurs quantiques
 
@@ -31,7 +31,7 @@ Chaque type de simulateur quantique peut fournir des implémentations différent
 
 ### <a name="quantum-machine-classes"></a>Classes d’ordinateurs quantiques
 
-À l’avenir, le QDK définira des classes d’ordinateurs quantiques supplémentaires permettant de prendre en charge d’autres types de simulation, ainsi que leur exécution sur du matériel quantique. Permettre à l’algorithme de rester constant tout en modifiant l’implémentation de la machine sous-jacente facilite le test et le débogage d’un algorithme en simulation, puis son exécution sur du matériel réel avec la certitude que l’algorithme n’a pas changé.
+À l’avenir, le QDK définira d’autres classes d’ordinateurs quantiques permettant de prendre en charge d’autres types de simulation, ainsi que leur exécution sur du matériel quantique. Permettre à l’algorithme de rester constant tout en modifiant l’implémentation de la machine sous-jacente facilite le test et le débogage d’un algorithme en simulation, puis son exécution sur du matériel réel avec la certitude que l’algorithme n’a pas changé.
 
 Le QDK comprend plusieurs classes d’ordinateurs quantiques, toutes définies dans l’espace de noms `Microsoft.Quantum.Simulation.Simulators`.
 
