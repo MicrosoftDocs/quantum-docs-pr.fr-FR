@@ -27,9 +27,9 @@ output:
   - summary: GeneratorIndex représentant un terme de Hamilton représenté par `data[idx]` , ainsi que des informations supplémentaires ajoutées par `termType` .
     uid: microsoft.quantum.simulation.generatorindex
 metadata:
-  ms.openlocfilehash: 451332a2ad0ade4871920a7da34d8af0afd990c9
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: a50de0244822de2ed095f778fbebdd4597fc82f2
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89354210"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91478662"
