@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.excluding
+name: Excluding
+type: function
+namespace: microsoft.quantum.arrays
+summary: Retourne un tableau contenant les éléments d’un autre tableau, en excluant les éléments d’une liste donnée d’index.
+examples: >-
+  ```qsharp
+
+  let array = [10, 11, 12, 13, 14, 15];
+
+  // The following line returns [10, 12, 15].
+
+  let subarray = Excluding([1, 3, 4], array);
+
+  ```
+syntax: "function Excluding (remove : Int[], array : 'T[]) : 'T[]"
+input:
+  content: "(remove : Int[], array : 'T[])"
+  types:
+  - name: remove
+    summary: Tableau d’index indiquant les éléments qui doivent être exclus de la sortie.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: array
+    summary: Tableau dont les valeurs du tableau de sortie sont prises.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Tableau `output` de type qui `output[0]` est le premier élément de `array` dont l’index n’apparaît pas dans, de sorte `remove` qu’il `output[1]` s’agit du deuxième élément de ce type, et ainsi de suite.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Type des éléments du tableau.
+metadata:
+  ms.openlocfilehash: 4d11c4578b91eac6d59574900887dcb265f66898
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493788"

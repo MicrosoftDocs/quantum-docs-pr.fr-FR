@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.count
+name: Count
+type: function
+namespace: microsoft.quantum.arrays
+summary: À partir d’un tableau et d’un prédicat définis pour les éléments du tableau, retourne le nombre d’éléments d’un tableau qui se compose des éléments qui satisfont au prédicat.
+remarks: La fonction est définie pour les types génériques, c’est-à-dire, chaque fois que nous avons un tableau `'T[]` et un prédicat, `'T -> Bool` nous pouvons filtrer les éléments.
+examples: >-
+  Le code suivant illustre la fonction « count ».
+
+  Un prédicat est défini à l’aide de la @"microsoft.quantum.logical.greaterthani" fonction :
+
+
+  ```Q#
+   let predicate = GreaterThanI(_, 5);
+   let count = Count(predicate, [2, 5, 9, 1, 8]);
+   // count = 2
+  ```
+syntax: "function Count (predicate : ('T -> Bool), array : 'T[]) : Int"
+input:
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: predicate
+    summary: Fonction de `'T` à Boolean qui est utilisée pour filtrer les éléments.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: Tableau d’éléments sur `'T` .
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Int
+  types:
+  - summary: Nombre d’éléments dans `array` qui satisfont le prédicat.
+    isPrimitive: true
+    uid: Int
+typeParameters:
+- uid: "'T"
+  summary: Type des `array` éléments.
+metadata:
+  ms.openlocfilehash: cac44615a0b871cdb33de827d2ff9bc0c08935d3
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493823"

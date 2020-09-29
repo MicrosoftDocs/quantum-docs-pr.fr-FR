@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.windows
+name: Windows
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  Retourne tous les sous-tableaux consécutifs de longueur `size` .
+
+
+  Cette fonction retourne tous les `n - size + 1` sous-tableaux de longueur `size` dans l’ordre, où `n` est la longueur de `arr` .
+
+  Les premiers sous-tableaux sont `arr[0..size - 1], arr[1..size], arr[2..size + 1]` jusqu’au dernier sous-tableau `arr[n - size..n - 1]` .
+
+
+  Si `size <= 0` ou `size > n` , un tableau vide est retourné.
+examples: >-
+  ```Q#
+
+  // same as [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
+
+  let windows = Windows(3, [1, 2, 3, 4, 5]);
+
+  ```
+syntax: "function Windows (size : Int, array : 'T[]) : 'T[][]"
+input:
+  content: "(size : Int, array : 'T[])"
+  types:
+  - name: size
+    summary: Longueur des sous-tableaux.
+    isPrimitive: true
+    uid: Int
+  - name: array
+    summary: Tableau d’éléments.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[][]"
+  types:
+  - isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Type des `array` éléments.
+metadata:
+  ms.openlocfilehash: 5b16c24f608e8df853f8bdf141b45ab8cd4b3469
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493698"

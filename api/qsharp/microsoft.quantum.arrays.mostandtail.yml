@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.mostandtail
+name: MostAndTail
+type: function
+namespace: microsoft.quantum.arrays
+summary: Retourne un tuple de tous les éléments sauf un et du dernier élément du tableau.
+syntax: "function MostAndTail (array : 'A[]) : ('A[], 'A)"
+input:
+  content: "(array : 'A[])"
+  types:
+  - name: array
+    summary: Tableau avec au moins un élément.
+    isArray: true
+    uid: "'A"
+    isLocal: true
+output:
+  content: ('A[], 'A)
+  types:
+  - summary: Tuple de tous les éléments sauf un et du dernier élément du tableau.
+    types:
+    - isArray: true
+      uid: "'A"
+      isLocal: true
+    - uid: "'A"
+      isLocal: true
+typeParameters:
+- uid: "'A"
+  summary: Type des éléments du tableau.
+metadata:
+  ms.openlocfilehash: e8a8f21bef51af60339c4178873b52439516bf37
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493746"
