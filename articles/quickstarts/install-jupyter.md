@@ -1,29 +1,27 @@
 ---
 title: Développer avec des notebooks Jupyter Q#
+description: Découvrez comment créer une application Q# à l’aide de Jupyter Notebook.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866806"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834310"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Développer avec des notebooks Jupyter Q#
 
 Installez le QDK pour le développement d’opérations Q# sur des notebooks Jupyter Q#.
 
-Les notebooks Jupyter permettent l’exécution de code sur place aux côtés d’instructions, de notes et d’autres contenus. Cet environnement est idéal pour écrire du code Q# avec des explications incorporées ou des tutoriels interactifs sur l’informatique quantique. Voici ce que vous devez faire pour commencer à créer vos propres notebooks Q#.
-
-> [!NOTE]
-> * Dans les notebooks Jupyter Q#, vous pouvez uniquement exécuter du code Q#, et les opérations ne peuvent pas être appelées à partir de programmes hôtes externes (par exemple, des fichiers Python ou C#). Cet environnement n’est pas approprié si votre objectif est de combiner un programme hôte classique externe avec le programme quantique.
+Les notebooks Jupyter permettent le calcul de code sur place aux côtés d’instructions, de notes et d’autres contenus. Cet environnement est idéal pour écrire du code Q# avec des explications incorporées ou des tutoriels interactifs sur l’informatique quantique. Voici ce que vous devez faire pour commencer à créer vos propres notebooks Q#.
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>Installer le noyau Jupyter IQ#
 
@@ -62,14 +60,14 @@ IQ# (prononcé aïe-quiou-sharp) est une extension principalement utilisée par 
     dotnet iqsharp install
     ```
 
-    > [!NOTE]
-    > Si vous recevez une erreur durant l’étape `dotnet iqsharp install`, ouvrez une nouvelle fenêtre de terminal et réessayez.
-    > Si cela ne fonctionne toujours pas, essayez de localiser l’outil `dotnet-iqsharp` installé (sur Windows, `dotnet-iqsharp.exe`) et d’exécuter ce qui suit :
-    > ```
-    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
-    > ```
-    > où `/path/to/dotnet-iqsharp` doit être remplacé par le chemin absolu à l’outil `dotnet-iqsharp` dans votre système de fichiers.
-    > En général, il se trouve sous `.dotnet/tools` dans le dossier de votre profil utilisateur.
+> [!NOTE]
+> Si vous recevez une erreur durant l’étape `dotnet iqsharp install`, ouvrez une nouvelle fenêtre de terminal et réessayez.
+> Si cela ne fonctionne toujours pas, essayez de localiser l’outil `dotnet-iqsharp` installé (sur Windows, `dotnet-iqsharp.exe`) et d’exécuter ce qui suit :
+> ```
+> /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+> ```
+> où `/path/to/dotnet-iqsharp` doit être remplacé par le chemin absolu à l’outil `dotnet-iqsharp` dans votre système de fichiers.
+> En général, il se trouve sous `.dotnet/tools` dans le dossier de votre profil utilisateur.
     
 ***
 
@@ -87,7 +85,7 @@ Vous êtes maintenant prêt à vérifier l’installation de Jupyter Notebook Q#
 
     - Si le notebook Jupyter ne s’ouvre pas automatiquement dans votre navigateur, copiez et collez l’URL fournie par la ligne de commande dans votre navigateur.
 
-1. Choisissez Nouveau → Q# pour créer un Jupyter Notebook avec un noyau Q#, puis ajoutez le code suivant à la première cellule du notebook :
+1. Choisissez **Nouveau → Q#** pour créer un Jupyter Notebook avec un noyau Q#, puis ajoutez le code suivant à la première cellule du notebook :
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 

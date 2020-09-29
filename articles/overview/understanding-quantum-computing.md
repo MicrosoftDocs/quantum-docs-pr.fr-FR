@@ -2,23 +2,23 @@
 title: Fonctionnement de l’informatique quantique
 description: Que sont les ordinateurs quantiques et comment utilisent-ils les principes de la mécanique quantique ?
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 214fe809aaeba759005fa76ba3615f376d402bc9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866959"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834990"
 ---
 # <a name="understanding-quantum-computing"></a>Fonctionnement de l’informatique quantique
 
-L’informatique quantique utilise les principes de la mécanique quantique pour traiter les informations. C’est la raison pour laquelle l’informatique quantique nécessite une approche différente de l’informatique classique.  L’une des différences est le processeur qui équipe les ordinateurs quantiques.  Alors que les ordinateurs classiques utilisent les puces en silicium habituelles, les ordinateurs quantiques utilisent des matériaux quantiques tels que des atomes, des ions, des photons ou des électrons.  
+L’informatique quantique utilise les principes de la mécanique quantique pour traiter les informations. C’est la raison pour laquelle l’informatique quantique nécessite une approche différente de l’informatique classique. L’une des différences est le processeur qui équipe les ordinateurs quantiques. Alors que les ordinateurs classiques utilisent les puces en silicium habituelles, les ordinateurs quantiques utilisent des systèmes quantiques tels que des atomes, des ions, des photons ou des électrons. Ils utilisent leurs propriétés quantiques pour représenter les bits qui peuvent être préparés selon différentes superpositions quantiques de 1 et 0.  
 
 Le matériel quantique se comporte selon les lois de la mécanique quantique, en appliquant des concepts tels que le calcul probabiliste, la superposition et l’intrication. Ces concepts sont à la base des algorithmes quantiques qui exploitent la puissance de l’informatique quantique pour résoudre des problèmes complexes. Cet article décrit quelques-uns des concepts fondamentaux de la mécanique quantique sur laquelle repose l’informatique quantique.
 

@@ -2,23 +2,23 @@
 title: Présentation du langage de programmation Q# et du QDK
 description: Découvrez le kit de développement Quantum (QDK) et le langage de programmation Q# de Microsoft, et comment les utiliser pour créer des programmes quantiques.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 21adfcc1c5321d87665adb39a3c838bbda0b8861
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863775"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834565"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Présentation du langage de programmation Q# et du QDK
 
-Q# est le langage de programmation open source conçu par Microsoft pour le développement et l’exécution d’algorithmes quantiques. Il fait partie du kit de développement Quantum (QDK) qui comprend des [bibliothèquesQ#](xref:microsoft.quantum.libraries) , des [simulateurs quantiques](xref:microsoft.quantum.machines), des [extensions pour d’autres environnements de programmation](xref:microsoft.quantum.install) et la [documentation des API](xref:microsoft.quantum.standardlibsintro). En plus de la bibliothèque Q# standard, le QDK contient des bibliothèques de données numériques, de chimie et de Machine Learning.
+Q# est le langage de programmation open source conçu par Microsoft pour le développement et l’exécution d’algorithmes quantiques. Il fait partie du kit de développement Quantum (QDK) qui comprend des [bibliothèquesQ#](xref:microsoft.quantum.libraries) , des [simulateurs quantiques](xref:microsoft.quantum.machines), des [extensions pour d’autres environnements de programmation](xref:microsoft.quantum.install) et la [documentation des API](xref:microsoft.quantum.apiref-intro). En plus de la bibliothèque Q# standard, le QDK contient des bibliothèques de données numériques, de chimie et de Machine Learning.
 
 Le langage de programmation Q# utilise des éléments connus des langages Python, C# et F#. Il prend en charge un modèle de procédure de base permettant l’écriture de programmes avec des boucles, des instructions if/then ainsi que des types de données courants. Il introduit également de nouvelles structures de données et opérations propres à l’informatique quantique.
 
@@ -54,7 +54,7 @@ Quand vous compilez et exécutez le programme, celui-ci crée une instance du si
 
 L’isolation du code Q# dans le simulateur garantit que les algorithmes suivent les lois de la physique quantique et s’exécutent correctement sur les ordinateurs quantiques.
 
-![qsharp-code-flow](~/media/qsharp-code-flow.png)
+![Flux de code Qsharp](~/media/qsharp-code-flow.png)
 
 ## <a name="how-do-i-use-the-qdk"></a>Comment utiliser le QDK ?
 
