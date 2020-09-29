@@ -21,9 +21,9 @@ output:
   - summary: Objet de type `RecoveryFn` , c’est-à-dire un mappage `Syndrome -> Pauli[]` qui associe à un tableau de syndrome donné une opération de correction Pauli correspondante.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 metadata:
-  ms.openlocfilehash: 25f9fbf5890c28d52552ba7fdc89ab6bb1506f37
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 6c71552207bbb830d170b703b58d934a96557034
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89349603"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91486635"
