@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.flatmapped
+name: FlatMapped
+type: function
+namespace: microsoft.quantum.arrays
+summary: À partir d’un tableau et d’une fonction qui mappent un élément de tableau à un tableau de sortie, retourne les tableaux de sortie concaténés pour chaque élément de tableau.
+examples: >-
+  ```Q#
+
+  let Numbers = SequenceI(1, _); // generates numbers starting from 1
+
+  let values = FlatMapped(Numbers, [1, 2, 3]);
+
+  // values = [1, 1, 2, 1, 2, 3]
+
+  ```
+syntax: "function FlatMapped (mapper : ('TInput -> 'TOutput[]), array : 'TInput[]) : 'TOutput[]"
+input:
+  content: "(mapper : ('TInput -> 'TOutput[]), array : 'TInput[])"
+  types:
+  - name: mapper
+    summary: Fonction de `'TInput` à `'TOutput[]` qui est utilisée pour mapper des éléments de tableau.
+    isFunction: true
+    input:
+      types:
+      - uid: "'TInput"
+        isLocal: true
+    output:
+      types:
+      - isArray: true
+        uid: "'TOutput"
+        isLocal: true
+  - name: array
+    summary: Tableau d’éléments.
+    isArray: true
+    uid: "'TInput"
+    isLocal: true
+output:
+  content: "'TOutput[]"
+  types:
+  - summary: Tableau de `'TOutput[]` qui est la concaténation de tous les tableaux générés par la fonction de mappage.
+    isArray: true
+    uid: "'TOutput"
+    isLocal: true
+typeParameters:
+- uid: "'TInput"
+  summary: Type des `array` éléments.
+- uid: "'TOutput"
+  summary: La `mapper` fonction retourne des tableaux de ce type.
+metadata:
+  ms.openlocfilehash: 358e45ce25825b333def906411ff3b27607b1195
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493782"
