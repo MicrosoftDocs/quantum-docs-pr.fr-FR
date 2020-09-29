@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834888"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91489763"
 ---
 # <a name="contributing-code"></a>Code de contribution
 
@@ -82,6 +82,10 @@ Localement, les tests unitaires peuvent être exécutés à l’aide de l’Expl
 
 ### Citations and References ### -->
 
+## <a name="pull-requests"></a>Demandes de tirage
+
+Lorsque vous êtes prêt à contribuer à votre travail, envoyez une demande de tirage via GitHub au référentiel correspondant.
+L’équipe examinera et fournira des commentaires. Tous les commentaires doivent être traités et résolus, et tous les contrôles doivent réussir avant que le code ne soit fusionné à la `main` branche.
 
 ## <a name="when-well-reject-a-pull-request"></a>Lors du rejet d’une requête de tirage
 
