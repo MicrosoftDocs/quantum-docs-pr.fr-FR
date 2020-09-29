@@ -387,6 +387,22 @@ operations:
     Applique une opération aux deux premiers qubits dans le registre.
 
     Le modificateur `CA` indique que l’opération est contrôlable et adjointable.
+- uid: microsoft.quantum.canon.applytohead
+  summary: Applique une opération au premier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytoheada
+  summary: Applique une opération au premier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytoheadc
+  summary: Applique une opération au premier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytoheadca
+  summary: Applique une opération au premier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytomost
+  summary: Applique une opération à tous les éléments à l’exception du dernier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytomosta
+  summary: Applique une opération à tous les éléments à l’exception du dernier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytomostc
+  summary: Applique une opération à tous les éléments à l’exception du dernier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytomostca
+  summary: Applique une opération à tous les éléments à l’exception du dernier élément d’un tableau.
 - uid: microsoft.quantum.canon.applytopartition
   summary: Applique une paire d’opérations à une partition donnée d’un registre en deux parties.
 - uid: microsoft.quantum.canon.applytopartitiona
@@ -404,6 +420,14 @@ operations:
     Applique une paire d’opérations à une partition donnée d’un registre en deux parties.
 
     Le modificateur `CA` indique que l’opération est contrôlable et adjointable.
+- uid: microsoft.quantum.canon.applytorest
+  summary: Applique une opération à tous les éléments à l’exception du premier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytoresta
+  summary: Applique une opération à tous les éléments à l’exception du premier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytorestc
+  summary: Applique une opération à tous les éléments à l’exception du premier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytorestca
+  summary: Applique une opération à tous les éléments à l’exception du premier élément d’un tableau.
 - uid: microsoft.quantum.canon.applytosubregister
   summary: Applique une opération à un sous-registre d’un registre, avec qubits spécifié par un tableau de leurs index.
 - uid: microsoft.quantum.canon.applytosubregistera
@@ -421,6 +445,14 @@ operations:
     Applique une opération à un sous-registre d’un registre, avec qubits spécifié par un tableau de leurs index.
 
     Le modificateur `CA` indique que l’opération est contrôlable et adjointable.
+- uid: microsoft.quantum.canon.applytotail
+  summary: Applique une opération au dernier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytotaila
+  summary: Applique une opération au dernier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytotailc
+  summary: Applique une opération au dernier élément d’un tableau.
+- uid: microsoft.quantum.canon.applytotailca
+  summary: Applique une opération au dernier élément d’un tableau.
 - uid: microsoft.quantum.canon.applywith
   summary: À partir de deux opérations, applique une telle que conjuguée à l’autre.
 - uid: microsoft.quantum.canon.applywitha
@@ -581,9 +613,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Déprécié\n\nResultStack est déconseillé."
 metadata:
-  ms.openlocfilehash: 969eec6767f3323e0470b0e968051bafb92d29ae
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 7346d86d3ff9db2146f37a3f402b60faebe442b7
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89341562"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464434"
