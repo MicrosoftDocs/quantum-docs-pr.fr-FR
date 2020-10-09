@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f40c63eed60379aa46a0cd9cfdd7d8de8c22c079
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833427"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771317"
 ---
 # <a name="quantum-simulators"></a>Simulateurs quantiques
 
@@ -24,7 +24,7 @@ Les simulateurs quantiques sont des programmes logiciels que vous pouvez exécut
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>Les simulateurs quantiques du kit de développement Quantum (QDK)
 
-Le simulateur quantique est chargé de fournir des implémentations de primitives quantiques pour un algorithme. Cela comprend les opérations primitives telles que `H`, `CNOT` et `Measure`, ainsi que la gestion et le suivi des qubits. Le QDK comprend différentes classes de simulateurs quantiques, qui représentent différents modèles d’exécution pour un même algorithme quantique. 
+Le simulateur quantique est chargé de fournir des implémentations de primitives quantiques pour un algorithme. Cela comprend les opérations primitives telles que `H`, `CNOT` et `Measure`, ainsi que la gestion et le suivi des qubits. Le QDK comprend différentes classes de simulateurs quantiques, qui constituent différents moyens de simuler le même algorithme quantique. 
 
 
 Chaque type de simulateur quantique peut fournir des implémentations différentes de ces primitives. Par exemple, le [simulateur d’état complet](xref:microsoft.quantum.machines.full-state-simulator) exécute l’algorithme quantique en simulant entièrement le [vecteur d’état quantique](xref:microsoft.quantum.glossary#quantum-state), alors que le [simulateur de traces d’ordinateur quantiques](xref:microsoft.quantum.machines.qc-trace-simulator.intro) ne prend pas du tout en compte l’état quantique réel. Au lieu de cela, il permet de suivre l’utilisation des portes, des qubits et d’autres ressources de l’algorithme.
