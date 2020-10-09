@@ -1,3 +1,5 @@
+- name: Développer vos compétences avec MS Learn
+  href: 'https://docs.microsoft.com/learn/paths/quantum-computing-fundamentals/'
 - name: Glossaire
   href: glossary.md
 - name: Contribution au QDK
