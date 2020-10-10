@@ -10,18 +10,18 @@ uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: b34d89ab33a4644c1dd4342949685f9bf84babd8
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834310"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771402"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Développer avec des notebooks Jupyter Q#
 
 Installez le QDK pour le développement d’opérations Q# sur des notebooks Jupyter Q#.
 
-Les notebooks Jupyter permettent le calcul de code sur place aux côtés d’instructions, de notes et d’autres contenus. Cet environnement est idéal pour écrire du code Q# avec des explications incorporées ou des tutoriels interactifs sur l’informatique quantique. Voici ce que vous devez faire pour commencer à créer vos propres notebooks Q#.
+Les notebooks Jupyter permettent l’exécution de code sur place avec les instructions, les notes et autre contenu. Cet environnement est idéal pour écrire du code Q# avec des explications incorporées ou des tutoriels interactifs sur l’informatique quantique. Voici ce que vous devez faire pour commencer à créer vos propres notebooks Q#.
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>Installer le noyau Jupyter IQ#
 
