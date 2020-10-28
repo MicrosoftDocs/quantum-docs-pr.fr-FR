@@ -9,21 +9,21 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835585"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692237"
 ---
 # <a name="data-structures-and-modeling"></a>Structures de données et modélisation #
 
 ## <a name="classical-data-structures"></a>Structures de données classiques ##
 
 Outre les types définis par l’utilisateur pour représenter les concepts de Quantum, Canon fournit également des opérations, des fonctions et des types pour l’utilisation des données classiques utilisées dans le contrôle des systèmes quantiques.
-Par exemple, la <xref:microsoft.quantum.arrays.reversed> fonction prend un tableau comme entrée et retourne le même tableau dans l’ordre inverse.
+Par exemple, la <xref:Microsoft.Quantum.Arrays.Reversed> fonction prend un tableau comme entrée et retourne le même tableau dans l’ordre inverse.
 Il peut ensuite être utilisé sur un tableau de type `Qubit[]` pour éviter d’avoir à appliquer des portes $ \operatorname{swap} $ inutiles lors de la conversion entre des représentations Quantum d’entiers.
-De même, nous avons vu dans la section précédente que les types de formulaire `(Int, Int -> T)` peuvent être utiles pour représenter des collections d’accès aléatoires, donc la <xref:microsoft.quantum.arrays.lookupfunction> fonction fournit un moyen pratique de construire de tels types à partir de types de tableau.
+De même, nous avons vu dans la section précédente que les types de formulaire `(Int, Int -> T)` peuvent être utiles pour représenter des collections d’accès aléatoires, donc la <xref:Microsoft.Quantum.Arrays.LookupFunction> fonction fournit un moyen pratique de construire de tels types à partir de types de tableau.
 
 ### <a name="pairs"></a>Correspondre ###
 
@@ -38,7 +38,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 
 Canon fournit plusieurs fonctions pour manipuler des tableaux.
 Ces fonctions sont paramétrées par type et peuvent donc être utilisées avec les tableaux de tout Q# type.
-Par exemple, la <xref:microsoft.quantum.arrays.reversed> fonction retourne un nouveau tableau dont les éléments sont dans l’ordre inverse de son entrée.
+Par exemple, la <xref:Microsoft.Quantum.Arrays.Reversed> fonction retourne un nouveau tableau dont les éléments sont dans l’ordre inverse de son entrée.
 Cela peut être utilisé pour modifier la façon dont un registre Quantum est représenté lors de l’appel d’opérations :
 
 ```qsharp
@@ -49,14 +49,14 @@ QFT(BigEndian(Reversed(leRegister!)));
 QFT(LittleEndianAsBigEndian(leRegister));
 ```
 
-De même, la <xref:microsoft.quantum.arrays.subarray> fonction peut être utilisée pour réorganiser ou prendre des sous-ensembles des éléments d’un tableau :
+De même, la <xref:Microsoft.Quantum.Arrays.Subarray> fonction peut être utilisée pour réorganiser ou prendre des sous-ensembles des éléments d’un tableau :
 
 ```qsharp
 // Applies H to qubits 2 and 5.
 ApplyToEach(H, Subarray([2, 5], register));
 ```
 
-Lorsqu’il est associé à un contrôle de Flow, les fonctions de manipulation de tableau telles que <xref:microsoft.quantum.arrays.zip> peuvent offrir un moyen puissant d’exprimer des programmes Quantum :
+Lorsqu’il est associé à un contrôle de Flow, les fonctions de manipulation de tableau telles que <xref:Microsoft.Quantum.Arrays.Zipped> peuvent offrir un moyen puissant d’exprimer des programmes Quantum :
 
 ```qsharp
 // Applies X₃ Y₁ Z₇ to a register of any size.
@@ -64,7 +64,7 @@ ApplyToEach(
     ApplyPauli(_, register),
     Map(
         EmbedPauli(_, _, Length(register)),
-        Zip([PauliX, PauliY, PauliZ], [3, 1, 7])
+        Zipped([PauliX, PauliY, PauliZ], [3, 1, 7])
     )
 );
 ```
@@ -127,8 +127,8 @@ is Adj + Ctl {
 }
 ```
 
-Ce Oracle est ensuite un cas particulier de l' <xref:microsoft.quantum.canon.rall1> opération, qui permet une rotation par une phase arbitraire au lieu du cas de réflexion $ \Phi = \pi $.
-Dans ce cas, `RAll1` est similaire à l' <xref:microsoft.quantum.intrinsic.r1> opération préambule destiné à, car il pivote à propos de $ \ket{11\cdots1} $ au lieu de l’État qubit $ \ket {1} $.
+Ce Oracle est ensuite un cas particulier de l' <xref:Microsoft.Quantum.Canon.RAll1> opération, qui permet une rotation par une phase arbitraire au lieu du cas de réflexion $ \Phi = \pi $.
+Dans ce cas, `RAll1` est similaire à l' <xref:Microsoft.Quantum.Intrinsic.R1> opération préambule destiné à, car il pivote à propos de $ \ket{11\cdots1} $ au lieu de l’État qubit $ \ket {1} $.
 
 L’Oracle qui marque le sous-espace initial peut être construit de la même manière.
 En pseudo-code :
@@ -139,7 +139,7 @@ En pseudo-code :
 4. Appliquez $X $ Gates à chaque qubit.
 5. Appliquez $H $ Gates à chaque qubit.
 
-Cette fois-ci, Nous illustrerons l’utilisation <xref:microsoft.quantum.canon.applywith> conjointe avec l' <xref:microsoft.quantum.canon.rall1> opération décrite ci-dessus :
+Cette fois-ci, Nous illustrerons l’utilisation <xref:Microsoft.Quantum.Canon.ApplyWith> conjointe avec l' <xref:Microsoft.Quantum.Canon.RAll1> opération décrite ci-dessus :
 
 ```qsharp
 operation ReflectAboutInitial(register : Qubit[]) : Unit
@@ -160,10 +160,10 @@ Cette unité est habituellement décrite par l’un des deux types d’Oracle.
 
 > [!TIP]
 > Les deux types Oracle décrits ci-dessous sont traités dans les exemples.
-> Pour en savoir plus sur les requêtes Oracle continues, consultez l' [exemple **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
-> Pour en savoir plus sur les requêtes discrètes Oracle, consultez l' [exemple **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
+> Pour en savoir plus sur les requêtes Oracle continues, consultez l' [exemple **PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
+> Pour en savoir plus sur les requêtes discrètes Oracle, consultez l' [exemple **IsingPhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
-Le premier type d’Oracle, que nous appelons une requête discrète Oracle et qui représentent le type défini par l’utilisateur <xref:microsoft.quantum.oracles.discreteoracle> , implique simplement une matrice d’unités.
+Le premier type d’Oracle, que nous appelons une requête discrète Oracle et qui représentent le type défini par l’utilisateur <xref:Microsoft.Quantum.Oracles.DiscreteOracle> , implique simplement une matrice d’unités.
 Si $U $ est l’unité de valeurs propres que nous souhaitons estimer, alors Oracle for $U $ est simplement une solution de secours pour une sous-routine qui implémente $U $.
 Par exemple, il peut s’agir $U $ comme Oracle $Q $ défini ci-dessus pour l’estimation de l’amplitude.
 Le valeurs propres de cette matrice peut être utilisé pour estimer le chevauchement entre les États initial et cible, $ \sin ^ 2 (\Theta) $, en utilisant augmentera moins d’échantillons que l’un d’eux n’en aurait besoin autrement.
@@ -173,7 +173,7 @@ En d’autres termes, nous souhaitons estimer $ \Theta $ pour une porte de rotat
 Dans ce cas, la sous-routine avec laquelle nous interagissons afin d’obtenir cette valeur fixe de $ \Theta $ pour la porte est $ $ \begin{align} U & = R_z (\Theta) \\ \\ & = \begin{bmatrix} e ^ {-i \Theta/2} & 0 \\ \\ 0 & e ^ {i \ Theta/2} \end{bmatrix}.
 \end{align} $ $
 
-Le deuxième type d’Oracle utilisé dans l’estimation de la phase est la requête continue Oracle, représentée par le <xref:microsoft.quantum.oracles.continuousoracle> type.
+Le deuxième type d’Oracle utilisé dans l’estimation de la phase est la requête continue Oracle, représentée par le <xref:Microsoft.Quantum.Oracles.ContinuousOracle> type.
 Une requête continue Oracle for phase estimation prend la forme $U (t) $ où $t $ est un nombre réel connu.
 Si nous laissons $U $ être une unité fixe, la requête continue Oracle prend la forme $U (t) = U ^ t $.
 Cela nous permet d’interroger des matrices telles que $ \sqrt{U} $, qui n’ont pas pu être implémentées directement dans le modèle de requête discret.
@@ -211,7 +211,7 @@ où l’entier $r > $0 contrôle l’erreur d’approximation.
 La bibliothèque de modélisation de générateurs dynamiques fournit une infrastructure pour l’encodage systématique des générateurs complexes en termes de générateurs plus simples. Une telle description peut ensuite être transmise à, par exemple, la bibliothèque de simulation pour implémenter l’évolution du temps par un algorithme de simulation de choix, avec de nombreux détails automatiquement pris en charge.
 
 > [!TIP]
-> La bibliothèque de générateurs dynamiques décrite ci-dessous est traitée dans les exemples. Pour obtenir un exemple basé sur le modèle Ising, consultez l' [exemple **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
+> La bibliothèque de générateurs dynamiques décrite ci-dessous est traitée dans les exemples. Pour obtenir un exemple basé sur le modèle Ising, consultez l' [exemple **IsingGenerators**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
 > Pour obtenir un exemple basé sur l’hydrogène moléculaire, consultez les exemples [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) et [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) .
 
 ### <a name="complete-description-of-a-generator"></a>Description complète d’un générateur ###
@@ -261,7 +261,7 @@ newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 
 Le premier paramètre représente une durée, qui sera multiplié par le coefficient dans le `GeneratorIndex` , de l’évolution unitaire. Le deuxième paramètre est le qubit inscrit sur lequel agit l’unité. 
 
-### <a name="time-dependent-generators"></a>Générateurs dépendants du temps ###
+### <a name="time-dependent-generators"></a>Générateurs de Time-Dependent ###
 
 Dans de nombreux cas, nous sommes également intéressés par la modélisation des générateurs dépendants du temps, comme cela peut se produire dans l’équation Schrödinger $ $ \begin{align} i\frac {d \ket{\Psi (t)}} {d t} & = \hat H (t) \ket{\Psi (t)}, \end{align} $ $ où le générateur $ \hat H (t) $ est désormais dépendant du temps. L’extension des générateurs indépendants du temps ci-dessus à ce cas est simple. Plutôt que de devoir corriger `GeneratorSystem` la description de la Hamilton pour toutes les heures $t $, nous avons plutôt le `GeneratorSystemTimeDependent` type défini par l’utilisateur.
 
