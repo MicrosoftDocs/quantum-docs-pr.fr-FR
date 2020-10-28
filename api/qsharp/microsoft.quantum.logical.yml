@@ -1,0 +1,84 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Retourne la combinaison booléenne de deux valeurs.
+  uid: Microsoft.Quantum.Logical.And
+- summary: Retourne l’une des deux valeurs, en fonction de la valeur d’une condition booléenne.
+  uid: Microsoft.Quantum.Logical.Conditioned
+- summary: Retourne la valeur true si et seulement si deux entrées sont égales.
+  uid: Microsoft.Quantum.Logical.EqualB
+- summary: Retourne la valeur true si et seulement si deux entrées sont égales.
+  uid: Microsoft.Quantum.Logical.EqualC
+- summary: Retourne la valeur true si et seulement si deux entrées sont égales.
+  uid: Microsoft.Quantum.Logical.EqualCP
+- summary: Retourne la valeur true si et seulement si deux entrées sont égales.
+  uid: Microsoft.Quantum.Logical.EqualD
+- summary: Retourne la valeur true si et seulement si deux entrées sont égales.
+  uid: Microsoft.Quantum.Logical.EqualI
+- summary: Retourne la valeur true si et seulement si deux entrées sont égales.
+  uid: Microsoft.Quantum.Logical.EqualL
+- summary: Retourne la valeur true si et seulement si deux entrées sont égales.
+  uid: Microsoft.Quantum.Logical.EqualR
+- summary: Retourne la valeur true si et seulement si un nombre est supérieur à un autre nombre.
+  uid: Microsoft.Quantum.Logical.GreaterThanD
+- summary: Retourne la valeur true si et seulement si un nombre est supérieur à un autre nombre.
+  uid: Microsoft.Quantum.Logical.GreaterThanI
+- summary: Retourne la valeur true si et seulement si un nombre est supérieur à un autre nombre.
+  uid: Microsoft.Quantum.Logical.GreaterThanL
+- summary: Retourne la valeur true si et seulement si un nombre est supérieur ou égal à un autre nombre.
+  uid: Microsoft.Quantum.Logical.GreaterThanOrEqualD
+- summary: Retourne la valeur true si et seulement si un nombre est supérieur ou égal à un autre nombre.
+  uid: Microsoft.Quantum.Logical.GreaterThanOrEqualI
+- summary: Retourne la valeur true si et seulement si un nombre est supérieur ou égal à un autre nombre.
+  uid: Microsoft.Quantum.Logical.GreaterThanOrEqualL
+- summary: Retourne la valeur true si et seulement si un nombre est inférieur à un autre nombre.
+  uid: Microsoft.Quantum.Logical.LessThanD
+- summary: Retourne la valeur true si et seulement si un nombre est inférieur à un autre nombre.
+  uid: Microsoft.Quantum.Logical.LessThanI
+- summary: Retourne la valeur true si et seulement si un nombre est inférieur à un autre nombre.
+  uid: Microsoft.Quantum.Logical.LessThanL
+- summary: Utilisé pour implémenter `LexographicComparison` .
+  uid: Microsoft.Quantum.Logical.LessThanLexographic
+- summary: Retourne true si et seulement si un nombre est inférieur ou égal à un autre nombre.
+  uid: Microsoft.Quantum.Logical.LessThanOrEqualD
+- summary: Retourne true si et seulement si un nombre est inférieur ou égal à un autre nombre.
+  uid: Microsoft.Quantum.Logical.LessThanOrEqualI
+- summary: Retourne true si et seulement si un nombre est inférieur ou égal à un autre nombre.
+  uid: Microsoft.Quantum.Logical.LessThanOrEqualL
+- summary: À partir d’une fonction de comparaison, retourne une nouvelle fonction que lexographically compare deux tableaux.
+  uid: Microsoft.Quantum.Logical.LexographicComparison
+- summary: Retourne true si et seulement si deux entrées sont presque égales (autrement dit, dans une tolérance de 1e-12).
+  uid: Microsoft.Quantum.Logical.NearlyEqualD
+- summary: Retourne la négation booléenne d’une valeur.
+  uid: Microsoft.Quantum.Logical.Not
+- summary: Retourne la valeur true si et seulement si deux entrées ne sont pas égales.
+  uid: Microsoft.Quantum.Logical.NotEqualB
+- summary: Retourne la valeur true si et seulement si deux entrées ne sont pas égales.
+  uid: Microsoft.Quantum.Logical.NotEqualC
+- summary: Retourne la valeur true si et seulement si deux entrées ne sont pas égales.
+  uid: Microsoft.Quantum.Logical.NotEqualCP
+- summary: Retourne la valeur true si et seulement si deux entrées ne sont pas égales.
+  uid: Microsoft.Quantum.Logical.NotEqualD
+- summary: Retourne la valeur true si et seulement si deux entrées ne sont pas égales.
+  uid: Microsoft.Quantum.Logical.NotEqualI
+- summary: Retourne la valeur true si et seulement si deux entrées ne sont pas égales.
+  uid: Microsoft.Quantum.Logical.NotEqualL
+- summary: Retourne la valeur true si et seulement si deux entrées ne sont pas égales.
+  uid: Microsoft.Quantum.Logical.NotEqualR
+- summary: Retourne true si et seulement si deux entrées ne sont pas presque égales (autrement dit, qu’elles ne sont pas comprises dans une tolérance de 1e-12).
+  uid: Microsoft.Quantum.Logical.NotNearlyEqualD
+- summary: Retourne la disjonction booléenne de deux valeurs.
+  uid: Microsoft.Quantum.Logical.Or
+- summary: Retourne la disjonction exclusive booléenne de deux valeurs.
+  uid: Microsoft.Quantum.Logical.Xor
+name: Microsoft.Quantum.Logical
+newtypes: []
+operations: []
+summary: Contient des fonctions permettant d’utiliser des expressions logiques et une logique booléenne.
+uid: Microsoft.Quantum.Logical
+metadata:
+  ms.openlocfilehash: 7ee678bc83ab0273142fd8c0a7a66388b3a4034a
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92708753"
