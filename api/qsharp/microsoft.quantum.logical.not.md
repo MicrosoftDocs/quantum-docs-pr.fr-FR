@@ -1,0 +1,50 @@
+---
+uid: Microsoft.Quantum.Logical.Not
+title: Not, fonction
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.Logical
+qsharp.name: Not
+qsharp.summary: Returns the Boolean negation of a value.
+ms.openlocfilehash: 3a688aac0178a2f4127496c1009fe7d5ee7ae198
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92701422"
+---
+# <a name="not-function"></a>Not, fonction
+
+Espace de noms : [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)
+
+Packages [](https://nuget.org/packages/)
+
+
+Retourne la négation booléenne d’une valeur.
+
+```qsharp
+function Not (value : Bool) : Bool
+```
+
+
+## <a name="input"></a>Entrée
+
+### <a name="value--bool"></a>valeur : [bool](xref:microsoft.quantum.lang-ref.bool)
+
+Valeur à rendre négative.
+
+
+
+## <a name="output--bool"></a>Sortie : [bool](xref:microsoft.quantum.lang-ref.bool)
+
+`true` Si et seulement si `value` est `false` .
+
+## <a name="remarks"></a>Notes
+
+Les éléments suivants sont équivalents :
+
+```Q#
+let x = not value;
+let x = Not(value);
+```
