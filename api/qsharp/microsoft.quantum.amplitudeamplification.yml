@@ -1,0 +1,139 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpByOracle est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByOracle
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpByOraclePhases est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromStatePreparation>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByOraclePhases
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpByReflectionPhases est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromPartialReflections>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByReflectionPhases
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpObliviousByOraclePhases est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpObliviousByOraclePhases
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpObliviousByReflectionPhases est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpObliviousByReflectionPhases
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpPhasesFixedPoint est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpPhasesFixedPoint
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpPhasesStandard est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.AmplitudeAmplification.StandardReflectionPhases>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.amplitudeamplification.standardreflectionphases".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpPhasesStandard
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpRotationToReflectionPhases est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpRotationToReflectionPhases
+- summary: Amplification de l’amplitude par réflexions partielles.
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromPartialReflections
+- summary: Amplification d’amplitude par Oracle pour les réflexions partielles.
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromStatePreparation
+- summary: Calcule les phases de réflexion partielle pour l’amplification de l’amplitude à virgule fixe.
+  uid: Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases
+- summary: Retourne un Unity qui implémente l’amplification de l’amplitude oublie en spécifiant pour les réflexions partielles.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections
+- summary: Amplification d’amplitude oublie par Oracle pour les réflexions partielles.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation
+- summary: Construit une réflexion à propos de la chaîne All-Zero | 0... 0 〉, qui est l’état d’entrée typique de l’amplification d’amplitude.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ReflectionStart
+- summary: Convertit les phases spécifiées sous forme de rotations de qubit simple en phases spécifiées comme réflexions partielles.
+  uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases
+- summary: Algorithme d’amplification d’amplitude standard
+  uid: Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification
+- summary: Calcule les phases de réflexion partielle pour l’amplification de l’amplitude standard.
+  uid: Microsoft.Quantum.AmplitudeAmplification.StandardReflectionPhases
+- summary: >-
+    Construit un `ReflectionOracle` à propos de l’État cible marqué de manière unique par l’indicateur qubit.
+
+    L’État cible a un seul qubit défini sur 1, et tous les autres 0 : $ \ket {1} _f $.
+  uid: Microsoft.Quantum.AmplitudeAmplification.TargetStateReflectionOracle
+name: Microsoft.Quantum.AmplitudeAmplification
+newtypes:
+- summary: Phases pour une séquence de réflexions partielles dans l’amplification d’amplitude.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+- summary: Phases pour une séquence de rotations à qubit unique dans l’amplification d’amplitude.
+  uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhases
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpRUSByOracle est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.AmplitudeAmplification.ApplyFixedPointAmplification>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.amplitudeamplification.applyfixedpointamplification".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpRUSByOracle
+- summary: Applique l’amplification d’amplitude sur un registre donné, à l’aide d’un ensemble donné de phases et d’Oracle pour refléter les États initiaux et finaux.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyAmplitudeAmplification
+- summary: Algorithme d’amplification d’amplitude Fixed-Point
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyFixedPointAmplification
+- summary: Amplification d’amplitude oublie en spécifiant des réflexions partielles.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyObliviousAmplitudeAmplification
+- summary: Implémentation de <xref:microsoft.quantum.canon.targetstatereflectionoracle>.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyTargetStateReflectionOracle
+summary: Cet espace de noms contient des fonctions et des opérations pour effectuer une amplification d’amplitude.
+uid: Microsoft.Quantum.AmplitudeAmplification
+metadata:
+  ms.openlocfilehash: 7b95624eba1215e6b8be8f247c25a3931336b5fb
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92707985"

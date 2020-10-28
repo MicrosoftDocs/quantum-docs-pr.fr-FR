@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Retourne la valeur minimale locale pour une fonction Student sur un intervalle délimité, à l’aide d’une recherche d’intervalle d’or.
+  uid: Microsoft.Quantum.Optimization.LocalUnivariateMinimum
+- summary: Retourne le milieu d’un intervalle.
+  uid: Microsoft.Quantum.Optimization.Midpoint
+- summary: À partir d’un intervalle donné, retourne un intervalle de sondage qui contracte l’intervalle donné en fonction d’un facteur du coefficient de référence.
+  uid: Microsoft.Quantum.Optimization.Probe
+- summary: Retourne la largeur d’un intervalle.
+  uid: Microsoft.Quantum.Optimization.Width
+name: Microsoft.Quantum.Optimization
+newtypes:
+- summary: Représente le résultat de l’optimisation d’une fonction Student.
+  uid: Microsoft.Quantum.Optimization.UnivariateOptimizationResult
+operations: []
+summary: Contient des fonctions et des optimisations pour la recherche de minimaux.
+uid: Microsoft.Quantum.Optimization
+metadata:
+  ms.openlocfilehash: 0271a658d625f9781b12a9659c80495200a9ba54
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92708390"
