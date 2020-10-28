@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8280783adfcc2867c3a598a6f57d827125aadcfd
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 89d8a2c9f2ecd5c5332215cd4307bcf4a6422036
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833440"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692107"
 ---
 # <a name="quantum-trace-simulator-depth-counter"></a>Simulateur de traces Quantum : compteur de profondeur
 
@@ -23,13 +23,13 @@ Vous pouvez l’utiliser pour rassembler des nombres qui représentent la limite
 
 ## <a name="depth-values"></a>Valeurs de profondeur
 
-Par défaut, toutes les opérations ont une profondeur égale à **0** , à l’exception de l' `T` opération, dont la profondeur est égale à **1**. Cela signifie que, par défaut, seule la `T` profondeur des opérations est calculée (ce qui est souvent souhaitable). Le compteur de profondeur agrège et collecte des statistiques sur tous les bords du [graphique des appels](https://en.wikipedia.org/wiki/Call_graph)de l’opération.
+Par défaut, toutes les opérations ont une profondeur égale à **0** , à l’exception de l' `T` opération, dont la profondeur est égale à **1** . Cela signifie que, par défaut, seule la `T` profondeur des opérations est calculée (ce qui est souvent souhaitable). Le compteur de profondeur agrège et collecte des statistiques sur tous les bords du [graphique des appels](https://en.wikipedia.org/wiki/Call_graph)de l’opération.
 
-Toutes les <xref:microsoft.quantum.intrinsic> opérations sont exprimées en termes de rotations à qubit unique, d' <xref:microsoft.quantum.intrinsic.t> opérations, d’opérations de Clifford à qubit unique, <xref:microsoft.quantum.intrinsic.cnot> d’opérations et de mesures de plusieurs qubit Pauli observables. Les utilisateurs peuvent définir la profondeur de chacune des opérations primitives via le `gateTimes` champ de <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
+Toutes les <xref:Microsoft.Quantum.Intrinsic> opérations sont exprimées en termes de rotations à qubit unique, d' <xref:Microsoft.Quantum.Intrinsic.T> opérations, d’opérations de Clifford à qubit unique, <xref:Microsoft.Quantum.Intrinsic.CNOT> d’opérations et de mesures de plusieurs qubit Pauli observables. Les utilisateurs peuvent définir la profondeur de chacune des opérations primitives via le `gateTimes` champ de <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
 
 ## <a name="invoking-the-depth-counter"></a>Appel du compteur de profondeur
 
-Pour exécuter le simulateur de trace Quantum avec le compteur Depth, vous devez créer une <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, affecter la `UseDepthCounter` **valeur true**à sa propriété, puis créer une nouvelle <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance avec `QCTraceSimulatorConfiguration` comme paramètre. 
+Pour exécuter le simulateur de trace Quantum avec le compteur Depth, vous devez créer une <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, affecter la `UseDepthCounter` **valeur true** à sa propriété, puis créer une nouvelle <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance avec `QCTraceSimulatorConfiguration` comme paramètre. 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -52,7 +52,7 @@ operation ApplySampleWithCCNOT() : Unit {
 }
 ```
 
-Pour vérifier que `CCNOT` a `T` la profondeur **5** et `ApplySampleWithCCNOT` a une `T` profondeur **6**, utilisez le code C# suivant :
+Pour vérifier que `CCNOT` a `T` la profondeur **5** et `ApplySampleWithCCNOT` a une `T` profondeur **6** , utilisez le code C# suivant :
 
 ```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;

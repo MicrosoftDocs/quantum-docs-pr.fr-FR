@@ -8,18 +8,18 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 55b1ef70eed1eb47ab0c6b30e2b8203c38c9a67a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6de1574341d67c569cd2f040ec533e263fdd386e
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833603"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692055"
 ---
 # <a name="classical-mathematical-functions"></a>Fonctions mathématiques classiques #
 
 Ces fonctions sont principalement utilisées pour travailler avec les Q# types de données intégrés `Int` , `Double` et `Range` .
 
-L' <xref:microsoft.quantum.intrinsic.random> opération a une signature `(Double[] => Int)` .
+L' <xref:Microsoft.Quantum.Intrinsic.Random> opération a une signature `(Double[] => Int)` .
 Il prend un tableau de doubles comme entrée et retourne un index sélectionné de façon aléatoire dans le tableau en tant que `Int` .
 La probabilité de sélectionner un index spécifique est proportionnelle à la valeur de l’élément de tableau au niveau de cet index. n éléments de tableau égaux à zéro sont ignorés et leurs index ne sont jamais retournés.
 Si un élément de tableau est inférieur à zéro, ou si aucun élément de tableau n’est supérieur à zéro, l’opération échoue.
