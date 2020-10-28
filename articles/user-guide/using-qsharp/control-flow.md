@@ -1,5 +1,5 @@
 ---
-title: Workflow de contrôle dans Q#
+title: 'Workflow de contrôle dans :::no-loc(Q#):::'
 description: Boucles, conditions, etc.
 author: gillenhaalb
 ms.author: a-gibec
@@ -7,46 +7,46 @@ ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
-- Q#
-- $$v
-ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+- ':::no-loc(Q#):::'
+- ':::no-loc($$v):::'
+ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833518"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691083"
 ---
-# <a name="control-flow-in-no-locq"></a><span data-ttu-id="704bf-103">Workflow de contrôle dans Q#</span><span class="sxs-lookup"><span data-stu-id="704bf-103">Control flow in Q#</span></span>
+# <a name="control-flow-in-no-locq"></a><span data-ttu-id="2e8db-103">Workflow de contrôle dans :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="2e8db-103">Control flow in :::no-loc(Q#):::</span></span>
 
-<span data-ttu-id="704bf-104">Au sein d’une opération ou d’une fonction, chaque instruction s’exécute dans l’ordre, de la même façon que d’autres langages classiques impératifs.</span><span class="sxs-lookup"><span data-stu-id="704bf-104">Within an operation or function, each statement runs in order, similar to other common imperative classical languages.</span></span>
-<span data-ttu-id="704bf-105">Toutefois, vous pouvez modifier le déroulement du contrôle de trois façons distinctes :</span><span class="sxs-lookup"><span data-stu-id="704bf-105">However, you can modify the flow of control in three distinct ways:</span></span>
+<span data-ttu-id="2e8db-104">Au sein d’une opération ou d’une fonction, chaque instruction s’exécute dans l’ordre, de la même façon que d’autres langages classiques impératifs.</span><span class="sxs-lookup"><span data-stu-id="2e8db-104">Within an operation or function, each statement runs in order, similar to other common imperative classical languages.</span></span>
+<span data-ttu-id="2e8db-105">Toutefois, vous pouvez modifier le déroulement du contrôle de trois façons distinctes :</span><span class="sxs-lookup"><span data-stu-id="2e8db-105">However, you can modify the flow of control in three distinct ways:</span></span>
 
-* <span data-ttu-id="704bf-106">`if` publication</span><span class="sxs-lookup"><span data-stu-id="704bf-106">`if` statements</span></span>
-* <span data-ttu-id="704bf-107">`for` boucles</span><span class="sxs-lookup"><span data-stu-id="704bf-107">`for` loops</span></span>
-* <span data-ttu-id="704bf-108">`repeat-until-success` boucles</span><span class="sxs-lookup"><span data-stu-id="704bf-108">`repeat-until-success` loops</span></span>
-* <span data-ttu-id="704bf-109">conjugués ( `apply-within` instructions)</span><span class="sxs-lookup"><span data-stu-id="704bf-109">conjugations (`apply-within` statements)</span></span>
+* <span data-ttu-id="2e8db-106">`if` publication</span><span class="sxs-lookup"><span data-stu-id="2e8db-106">`if` statements</span></span>
+* <span data-ttu-id="2e8db-107">`for` boucles</span><span class="sxs-lookup"><span data-stu-id="2e8db-107">`for` loops</span></span>
+* <span data-ttu-id="2e8db-108">`repeat-until-success` boucles</span><span class="sxs-lookup"><span data-stu-id="2e8db-108">`repeat-until-success` loops</span></span>
+* <span data-ttu-id="2e8db-109">conjugués ( `apply-within` instructions)</span><span class="sxs-lookup"><span data-stu-id="2e8db-109">conjugations (`apply-within` statements)</span></span>
 
-<span data-ttu-id="704bf-110">Les `if` `for` constructions de workflow et de contrôle se poursuivent de manière familière à la plupart des langages de programmation classiques.</span><span class="sxs-lookup"><span data-stu-id="704bf-110">The `if` and `for` control flow constructs proceed in a familiar sense to most classical programming languages.</span></span> <span data-ttu-id="704bf-111">[`Repeat-until-success`](#repeat-until-success-loop) les boucles et les [conjugués](#conjugations) sont abordés plus loin dans cet article.</span><span class="sxs-lookup"><span data-stu-id="704bf-111">[`Repeat-until-success`](#repeat-until-success-loop) loops and [conjugations](#conjugations) are discussed later in this article.</span></span>
+<span data-ttu-id="2e8db-110">Les `if` `for` constructions de workflow et de contrôle se poursuivent de manière familière à la plupart des langages de programmation classiques.</span><span class="sxs-lookup"><span data-stu-id="2e8db-110">The `if` and `for` control flow constructs proceed in a familiar sense to most classical programming languages.</span></span> <span data-ttu-id="2e8db-111">[`Repeat-until-success`](#repeat-until-success-loop) les boucles et les [conjugués](#conjugations) sont abordés plus loin dans cet article.</span><span class="sxs-lookup"><span data-stu-id="2e8db-111">[`Repeat-until-success`](#repeat-until-success-loop) loops and [conjugations](#conjugations) are discussed later in this article.</span></span>
 
-<span data-ttu-id="704bf-112">Important, les `for` boucles et les `if` instructions peuvent être utilisées dans les opérations pour lesquelles les [spécialisations](xref:microsoft.quantum.guide.operationsfunctions) sont générées automatiquement.</span><span class="sxs-lookup"><span data-stu-id="704bf-112">Importantly, `for` loops and `if` statements can be used in operations for which [specializations](xref:microsoft.quantum.guide.operationsfunctions) are auto-generated.</span></span> <span data-ttu-id="704bf-113">Dans ce scénario, le voisint d’une `for` boucle inverse la direction et prend le voisin de chaque itération.</span><span class="sxs-lookup"><span data-stu-id="704bf-113">In that scenario, the adjoint of a `for` loop reverses the direction and takes the adjoint of each iteration.</span></span>
-<span data-ttu-id="704bf-114">Cette action suit le principe « chaussures-and-Socks » : Si vous souhaitez annuler la pose sur SOCKS, puis sur chaussures, vous devez annuler la pose des chaussures, puis annuler l’introduction sur Socks.</span><span class="sxs-lookup"><span data-stu-id="704bf-114">This action follows the "shoes-and-socks" principle: if you wish to undo putting on socks and then shoes, you must undo putting on shoes and then undo putting on socks.</span></span> 
+<span data-ttu-id="2e8db-112">Important, les `for` boucles et les `if` instructions peuvent être utilisées dans les opérations pour lesquelles les [spécialisations](xref:microsoft.quantum.guide.operationsfunctions) sont générées automatiquement.</span><span class="sxs-lookup"><span data-stu-id="2e8db-112">Importantly, `for` loops and `if` statements can be used in operations for which [specializations](xref:microsoft.quantum.guide.operationsfunctions) are auto-generated.</span></span> <span data-ttu-id="2e8db-113">Dans ce scénario, le voisint d’une `for` boucle inverse la direction et prend le voisin de chaque itération.</span><span class="sxs-lookup"><span data-stu-id="2e8db-113">In that scenario, the adjoint of a `for` loop reverses the direction and takes the adjoint of each iteration.</span></span>
+<span data-ttu-id="2e8db-114">Cette action suit le principe « chaussures-and-Socks » : Si vous souhaitez annuler la pose sur SOCKS, puis sur chaussures, vous devez annuler la pose des chaussures, puis annuler l’introduction sur Socks.</span><span class="sxs-lookup"><span data-stu-id="2e8db-114">This action follows the "shoes-and-socks" principle: if you wish to undo putting on socks and then shoes, you must undo putting on shoes and then undo putting on socks.</span></span> 
 
-## <a name="if-else-if-else"></a><span data-ttu-id="704bf-115">If, else-if, sinon</span><span class="sxs-lookup"><span data-stu-id="704bf-115">If, Else-if, Else</span></span>
+## <a name="if-else-if-else"></a><span data-ttu-id="2e8db-115">If, else-if, sinon</span><span class="sxs-lookup"><span data-stu-id="2e8db-115">If, Else-if, Else</span></span>
 
-<span data-ttu-id="704bf-116">L' `if` instruction prend en charge le traitement conditionnel.</span><span class="sxs-lookup"><span data-stu-id="704bf-116">The `if` statement supports conditional processing.</span></span>
-<span data-ttu-id="704bf-117">Il se compose du mot clé `if` , d’une expression booléenne entre parenthèses et d’un bloc d’instructions (bloc _Then_ ).</span><span class="sxs-lookup"><span data-stu-id="704bf-117">It consists of the keyword `if`, a Boolean expression in parentheses, and a statement block (the _then_ block).</span></span>
-<span data-ttu-id="704bf-118">Si vous le souhaitez, un nombre quelconque de clauses Else-If peuvent suivre, chacune comprenant le mot clé `elif` , une expression booléenne entre parenthèses et un bloc d’instructions (le bloc _else-if_ ).</span><span class="sxs-lookup"><span data-stu-id="704bf-118">Optionally, any number of else-if clauses can follow, each of which consists of the keyword `elif`, a Boolean expression in parentheses, and a statement block (the _else-if_ block).</span></span>
-<span data-ttu-id="704bf-119">Enfin, l’instruction peut éventuellement se terminer par une clause Else, qui se compose du mot clé `else` suivi d’un autre bloc d’instructions (le bloc _else_ ).</span><span class="sxs-lookup"><span data-stu-id="704bf-119">Finally, the statement can optionally finish with an else clause, which consists of the keyword `else` followed by another statement block (the _else_ block).</span></span>
+<span data-ttu-id="2e8db-116">L' `if` instruction prend en charge le traitement conditionnel.</span><span class="sxs-lookup"><span data-stu-id="2e8db-116">The `if` statement supports conditional processing.</span></span>
+<span data-ttu-id="2e8db-117">Il se compose du mot clé `if` , d’une expression booléenne entre parenthèses et d’un bloc d’instructions (bloc _Then_ ).</span><span class="sxs-lookup"><span data-stu-id="2e8db-117">It consists of the keyword `if`, a Boolean expression in parentheses, and a statement block (the _then_ block).</span></span>
+<span data-ttu-id="2e8db-118">Si vous le souhaitez, un nombre quelconque de clauses Else-If peuvent suivre, chacune comprenant le mot clé `elif` , une expression booléenne entre parenthèses et un bloc d’instructions (le bloc _else-if_ ).</span><span class="sxs-lookup"><span data-stu-id="2e8db-118">Optionally, any number of else-if clauses can follow, each of which consists of the keyword `elif`, a Boolean expression in parentheses, and a statement block (the _else-if_ block).</span></span>
+<span data-ttu-id="2e8db-119">Enfin, l’instruction peut éventuellement se terminer par une clause Else, qui se compose du mot clé `else` suivi d’un autre bloc d’instructions (le bloc _else_ ).</span><span class="sxs-lookup"><span data-stu-id="2e8db-119">Finally, the statement can optionally finish with an else clause, which consists of the keyword `else` followed by another statement block (the _else_ block).</span></span>
 
-<span data-ttu-id="704bf-120">La `if` condition est évaluée, et si elle a la *valeur true*, le bloc *Then* est exécuté.</span><span class="sxs-lookup"><span data-stu-id="704bf-120">The `if` condition is evaluated, and if it is *true*, the *then* block is run.</span></span>
-<span data-ttu-id="704bf-121">Si la condition est *false*, la première condition else-if est évaluée ; Si la valeur est true, le bloc *else-if* est exécuté.</span><span class="sxs-lookup"><span data-stu-id="704bf-121">If the condition is *false*, then the first else-if condition is evaluated; if that is true, then the *else-if* block is run.</span></span>
-<span data-ttu-id="704bf-122">Dans le cas contraire, le deuxième bloc Else-If prend la valeur, puis le troisième, et ainsi de suite jusqu’à ce qu’une clause avec une condition true soit rencontrée ou qu’il n’y ait plus aucune clause else-if.</span><span class="sxs-lookup"><span data-stu-id="704bf-122">Otherwise, the second else-if block evaluates, and then the third, and so on until either a clause with a true condition is encountered or there are no more else-if clauses.</span></span>
-<span data-ttu-id="704bf-123">Si la condition *If* d’origine et toutes les clauses Else-If ont la *valeur false*, le bloc *else* est exécuté, s’il est fourni.</span><span class="sxs-lookup"><span data-stu-id="704bf-123">If the original *if* condition and all the else-if clauses evaluate to *false*, the *else* block is run, if provided.</span></span>
+<span data-ttu-id="2e8db-120">La `if` condition est évaluée, et si elle a la *valeur true* , le bloc *Then* est exécuté.</span><span class="sxs-lookup"><span data-stu-id="2e8db-120">The `if` condition is evaluated, and if it is *true* , the *then* block is run.</span></span>
+<span data-ttu-id="2e8db-121">Si la condition est *false* , la première condition else-if est évaluée ; Si la valeur est true, le bloc *else-if* est exécuté.</span><span class="sxs-lookup"><span data-stu-id="2e8db-121">If the condition is *false* , then the first else-if condition is evaluated; if that is true, then the *else-if* block is run.</span></span>
+<span data-ttu-id="2e8db-122">Dans le cas contraire, le deuxième bloc Else-If prend la valeur, puis le troisième, et ainsi de suite jusqu’à ce qu’une clause avec une condition true soit rencontrée ou qu’il n’y ait plus aucune clause else-if.</span><span class="sxs-lookup"><span data-stu-id="2e8db-122">Otherwise, the second else-if block evaluates, and then the third, and so on until either a clause with a true condition is encountered or there are no more else-if clauses.</span></span>
+<span data-ttu-id="2e8db-123">Si la condition *If* d’origine et toutes les clauses Else-If ont la *valeur false* , le bloc *else* est exécuté, s’il est fourni.</span><span class="sxs-lookup"><span data-stu-id="2e8db-123">If the original *if* condition and all the else-if clauses evaluate to *false* , the *else* block is run, if provided.</span></span>
 
-<span data-ttu-id="704bf-124">Notez que, quel que soit le bloc exécuté, il s’exécute dans sa propre portée.</span><span class="sxs-lookup"><span data-stu-id="704bf-124">Note that whichever block runs, it runs within its own scope.</span></span>
-<span data-ttu-id="704bf-125">Les liaisons effectuées à l’intérieur d’un `if` `elif` bloc, ou ne `else` sont pas visibles après la fin du bloc.</span><span class="sxs-lookup"><span data-stu-id="704bf-125">Bindings made inside of an `if`, `elif`, or `else` block are not visible after the block ends.</span></span>
+<span data-ttu-id="2e8db-124">Notez que, quel que soit le bloc exécuté, il s’exécute dans sa propre portée.</span><span class="sxs-lookup"><span data-stu-id="2e8db-124">Note that whichever block runs, it runs within its own scope.</span></span>
+<span data-ttu-id="2e8db-125">Les liaisons effectuées à l’intérieur d’un `if` `elif` bloc, ou ne `else` sont pas visibles après la fin du bloc.</span><span class="sxs-lookup"><span data-stu-id="2e8db-125">Bindings made inside of an `if`, `elif`, or `else` block are not visible after the block ends.</span></span>
 
-<span data-ttu-id="704bf-126">Par exemple,</span><span class="sxs-lookup"><span data-stu-id="704bf-126">For example,</span></span>
+<span data-ttu-id="2e8db-126">Par exemple,</span><span class="sxs-lookup"><span data-stu-id="2e8db-126">For example,</span></span>
 
 ```qsharp
 if (result == One) {
@@ -56,7 +56,7 @@ if (result == One) {
 } 
 // n is not bound
 ```
-<span data-ttu-id="704bf-127">or</span><span class="sxs-lookup"><span data-stu-id="704bf-127">or</span></span>
+<span data-ttu-id="2e8db-127">or</span><span class="sxs-lookup"><span data-stu-id="2e8db-127">or</span></span>
 ```qsharp
 if (i == 1) {
     X(target);
@@ -69,20 +69,20 @@ if (i == 1) {
 }
 ```
 
-## <a name="for-loop"></a><span data-ttu-id="704bf-128">Boucle for</span><span class="sxs-lookup"><span data-stu-id="704bf-128">For loop</span></span>
+## <a name="for-loop"></a><span data-ttu-id="2e8db-128">Boucle For</span><span class="sxs-lookup"><span data-stu-id="2e8db-128">For loop</span></span>
 
-<span data-ttu-id="704bf-129">L' `for` instruction prend en charge l’itération sur une plage d’entiers ou un tableau.</span><span class="sxs-lookup"><span data-stu-id="704bf-129">The `for` statement supports iteration over an integer range or an array.</span></span>
-<span data-ttu-id="704bf-130">L’instruction se compose du mot clé `for` , suivi d’un symbole ou d’un tuple de symbole, du mot clé et d’une `in` expression de type `Range` ou tableau, tous entre parenthèses et un bloc d’instructions.</span><span class="sxs-lookup"><span data-stu-id="704bf-130">The statement consists of the keyword `for`, followed by a symbol or symbol tuple, the keyword `in`, and an expression of type `Range` or array, all in parentheses, and a statement block.</span></span>
+<span data-ttu-id="2e8db-129">L' `for` instruction prend en charge l’itération sur une plage d’entiers ou un tableau.</span><span class="sxs-lookup"><span data-stu-id="2e8db-129">The `for` statement supports iteration over an integer range or an array.</span></span>
+<span data-ttu-id="2e8db-130">L’instruction se compose du mot clé `for` , suivi d’un symbole ou d’un tuple de symbole, du mot clé et d’une `in` expression de type `Range` ou tableau, tous entre parenthèses et un bloc d’instructions.</span><span class="sxs-lookup"><span data-stu-id="2e8db-130">The statement consists of the keyword `for`, followed by a symbol or symbol tuple, the keyword `in`, and an expression of type `Range` or array, all in parentheses, and a statement block.</span></span>
 
-<span data-ttu-id="704bf-131">Le bloc d’instructions (le corps de la boucle) s’exécute à plusieurs reprises, avec le symbole défini (la variable de boucle) lié à chaque valeur dans la plage ou le tableau.</span><span class="sxs-lookup"><span data-stu-id="704bf-131">The statement block (the body of the loop) runs repeatedly, with the defined symbol (the loop variable) bound to each value in the range or array.</span></span>
-<span data-ttu-id="704bf-132">Notez que si l’expression de plage prend la valeur d’une plage ou d’un tableau vide, le corps ne s’exécute pas du tout.</span><span class="sxs-lookup"><span data-stu-id="704bf-132">Note that if the range expression evaluates to an empty range or array, the body does not run at all.</span></span>
-<span data-ttu-id="704bf-133">L’expression est entièrement évaluée avant d’entrer dans la boucle et ne change pas pendant l’exécution de la boucle.</span><span class="sxs-lookup"><span data-stu-id="704bf-133">The expression is fully evaluated before entering the loop, and does not change while the loop is running.</span></span>
+<span data-ttu-id="2e8db-131">Le bloc d’instructions (le corps de la boucle) s’exécute à plusieurs reprises, avec le symbole défini (la variable de boucle) lié à chaque valeur dans la plage ou le tableau.</span><span class="sxs-lookup"><span data-stu-id="2e8db-131">The statement block (the body of the loop) runs repeatedly, with the defined symbol (the loop variable) bound to each value in the range or array.</span></span>
+<span data-ttu-id="2e8db-132">Notez que si l’expression de plage prend la valeur d’une plage ou d’un tableau vide, le corps ne s’exécute pas du tout.</span><span class="sxs-lookup"><span data-stu-id="2e8db-132">Note that if the range expression evaluates to an empty range or array, the body does not run at all.</span></span>
+<span data-ttu-id="2e8db-133">L’expression est entièrement évaluée avant d’entrer dans la boucle et ne change pas pendant l’exécution de la boucle.</span><span class="sxs-lookup"><span data-stu-id="2e8db-133">The expression is fully evaluated before entering the loop, and does not change while the loop is running.</span></span>
 
-<span data-ttu-id="704bf-134">La variable de boucle est liée à chaque entrée dans le corps de la boucle et est détachée à la fin du corps.</span><span class="sxs-lookup"><span data-stu-id="704bf-134">The loop variable is bound at each entrance to the loop body, and is unbound at the end of the body.</span></span>
-<span data-ttu-id="704bf-135">La variable de boucle n’est pas liée après la fin de la boucle for.</span><span class="sxs-lookup"><span data-stu-id="704bf-135">The loop variable is not bound after the for loop is completed.</span></span>
-<span data-ttu-id="704bf-136">La liaison de la variable de boucle est immuable et suit les mêmes règles que les autres liaisons de variables.</span><span class="sxs-lookup"><span data-stu-id="704bf-136">The binding of the loop variable is immutable and follows the same rules as other variable bindings.</span></span> 
+<span data-ttu-id="2e8db-134">La variable de boucle est liée à chaque entrée dans le corps de la boucle et est détachée à la fin du corps.</span><span class="sxs-lookup"><span data-stu-id="2e8db-134">The loop variable is bound at each entrance to the loop body, and is unbound at the end of the body.</span></span>
+<span data-ttu-id="2e8db-135">La variable de boucle n’est pas liée après la fin de la boucle for.</span><span class="sxs-lookup"><span data-stu-id="2e8db-135">The loop variable is not bound after the for loop is completed.</span></span>
+<span data-ttu-id="2e8db-136">La liaison de la variable de boucle est immuable et suit les mêmes règles que les autres liaisons de variables.</span><span class="sxs-lookup"><span data-stu-id="2e8db-136">The binding of the loop variable is immutable and follows the same rules as other variable bindings.</span></span> 
 
-<span data-ttu-id="704bf-137">Dans ces exemples, `qubits` est un registre de qubits (c’est-à-dire de type `Qubit[]` ).</span><span class="sxs-lookup"><span data-stu-id="704bf-137">In these examples, `qubits` is a register of qubits (i.e. of type `Qubit[]`),</span></span> 
+<span data-ttu-id="2e8db-137">Dans ces exemples, `qubits` est un registre de qubits (c’est-à-dire de type `Qubit[]` ).</span><span class="sxs-lookup"><span data-stu-id="2e8db-137">In these examples, `qubits` is a register of qubits (i.e. of type `Qubit[]`),</span></span> 
 
 ```qsharp
 // ...
@@ -104,16 +104,16 @@ for ((index, measured) in results) { // iterates over the tuple values in result
 }
 ```
 
-<span data-ttu-id="704bf-138">Notez qu’à la fin, nous avons utilisé l’opérateur binaire arithmétique-décalage-gauche, `<<<` .</span><span class="sxs-lookup"><span data-stu-id="704bf-138">Note that at the end, we utilized the arithmetic-shift-left binary operator, `<<<`.</span></span> <span data-ttu-id="704bf-139">Pour plus d’informations, consultez [expressions numériques](xref:microsoft.quantum.guide.expressions#numeric-expressions).</span><span class="sxs-lookup"><span data-stu-id="704bf-139">For more information, see [Numeric Expressions](xref:microsoft.quantum.guide.expressions#numeric-expressions).</span></span>
+<span data-ttu-id="2e8db-138">Notez qu’à la fin, nous avons utilisé l’opérateur binaire arithmétique-décalage-gauche, `<<<` .</span><span class="sxs-lookup"><span data-stu-id="2e8db-138">Note that at the end, we utilized the arithmetic-shift-left binary operator, `<<<`.</span></span> <span data-ttu-id="2e8db-139">Pour plus d’informations, consultez [expressions numériques](xref:microsoft.quantum.guide.expressions#numeric-expressions).</span><span class="sxs-lookup"><span data-stu-id="2e8db-139">For more information, see [Numeric Expressions](xref:microsoft.quantum.guide.expressions#numeric-expressions).</span></span>
 
-## <a name="repeat-until-success-loop"></a><span data-ttu-id="704bf-140">Répéter jusqu’à la réussite de la boucle</span><span class="sxs-lookup"><span data-stu-id="704bf-140">Repeat-until-success loop</span></span>
+## <a name="repeat-until-success-loop"></a><span data-ttu-id="2e8db-140">Répéter jusqu’à la réussite de la boucle</span><span class="sxs-lookup"><span data-stu-id="2e8db-140">Repeat-until-success loop</span></span>
 
-<span data-ttu-id="704bf-141">Le Q# langage permet au workflow de contrôle classique de dépendre des résultats de la mesure de qubits.</span><span class="sxs-lookup"><span data-stu-id="704bf-141">The Q# language allows classical control flow to depend on the results of measuring qubits.</span></span>
-<span data-ttu-id="704bf-142">Cette fonctionnalité permet, à son tour, d’implémenter des gadgets probabilistes puissants qui peuvent réduire le coût de calcul de l’implémentation des unités.</span><span class="sxs-lookup"><span data-stu-id="704bf-142">This capability, in turn, enables implementing powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries.</span></span>
-<span data-ttu-id="704bf-143">Voici des exemples de modèles de *répétition jusqu’à réussite* (RUS) dans Q# .</span><span class="sxs-lookup"><span data-stu-id="704bf-143">Examples of this are the *repeat-until-success* (RUS) patterns in Q#.</span></span>
-<span data-ttu-id="704bf-144">Ces modèles de RUS sont des programmes probabilistes qui ont un coût faible *attendu* en termes de portes élémentaires ; le coût encouru dépend de l’exécution réelle et de l’entrelacement des différentes branches possibles.</span><span class="sxs-lookup"><span data-stu-id="704bf-144">These RUS patterns are probabilistic programs that have an *expected* low cost in terms of elementary gates; the incurred cost depends on the actual run and the interleaving of the multiple possible branchings.</span></span>
+<span data-ttu-id="2e8db-141">Le :::no-loc(Q#)::: langage permet au workflow de contrôle classique de dépendre des résultats de la mesure de qubits.</span><span class="sxs-lookup"><span data-stu-id="2e8db-141">The :::no-loc(Q#)::: language allows classical control flow to depend on the results of measuring qubits.</span></span>
+<span data-ttu-id="2e8db-142">Cette fonctionnalité permet, à son tour, d’implémenter des gadgets probabilistes puissants qui peuvent réduire le coût de calcul de l’implémentation des unités.</span><span class="sxs-lookup"><span data-stu-id="2e8db-142">This capability, in turn, enables implementing powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries.</span></span>
+<span data-ttu-id="2e8db-143">Voici des exemples de modèles de *répétition jusqu’à réussite* (RUS) dans :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="2e8db-143">Examples of this are the *repeat-until-success* (RUS) patterns in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="2e8db-144">Ces modèles de RUS sont des programmes probabilistes qui ont un coût faible *attendu* en termes de portes élémentaires ; le coût encouru dépend de l’exécution réelle et de l’entrelacement des différentes branches possibles.</span><span class="sxs-lookup"><span data-stu-id="2e8db-144">These RUS patterns are probabilistic programs that have an *expected* low cost in terms of elementary gates; the incurred cost depends on the actual run and the interleaving of the multiple possible branchings.</span></span>
 
-<span data-ttu-id="704bf-145">Pour faciliter les modèles de répétition jusqu’à réussite (RUS), Q# prend en charge les constructions</span><span class="sxs-lookup"><span data-stu-id="704bf-145">To facilitate repeat-until-success (RUS) patterns, Q# supports the constructs</span></span>
+<span data-ttu-id="2e8db-145">Pour faciliter les modèles de répétition jusqu’à réussite (RUS), :::no-loc(Q#)::: prend en charge les constructions</span><span class="sxs-lookup"><span data-stu-id="2e8db-145">To facilitate repeat-until-success (RUS) patterns, :::no-loc(Q#)::: supports the constructs</span></span>
 
 ```qsharp
 repeat {
@@ -125,15 +125,15 @@ fixup {
 }
 ```
 
-<span data-ttu-id="704bf-146">où `expression` est une expression valide qui correspond à une valeur de type `Bool` .</span><span class="sxs-lookup"><span data-stu-id="704bf-146">where `expression` is any valid expression that evaluates to a value of type `Bool`.</span></span>
-<span data-ttu-id="704bf-147">Le corps de la boucle s’exécute, puis la condition est évaluée.</span><span class="sxs-lookup"><span data-stu-id="704bf-147">The loop body runs, and then the condition is evaluated.</span></span>
-<span data-ttu-id="704bf-148">Si la condition est true, l’instruction est terminée ; dans le cas contraire, la correction s’exécute et l’instruction s’exécute à nouveau, en commençant par le corps de la boucle.</span><span class="sxs-lookup"><span data-stu-id="704bf-148">If the condition is true, then the statement is completed; otherwise, the fixup runs, and the statement runs again, starting with the loop body.</span></span>
+<span data-ttu-id="2e8db-146">où `expression` est une expression valide qui correspond à une valeur de type `Bool` .</span><span class="sxs-lookup"><span data-stu-id="2e8db-146">where `expression` is any valid expression that evaluates to a value of type `Bool`.</span></span>
+<span data-ttu-id="2e8db-147">Le corps de la boucle s’exécute, puis la condition est évaluée.</span><span class="sxs-lookup"><span data-stu-id="2e8db-147">The loop body runs, and then the condition is evaluated.</span></span>
+<span data-ttu-id="2e8db-148">Si la condition est true, l’instruction est terminée ; dans le cas contraire, la correction s’exécute et l’instruction s’exécute à nouveau, en commençant par le corps de la boucle.</span><span class="sxs-lookup"><span data-stu-id="2e8db-148">If the condition is true, then the statement is completed; otherwise, the fixup runs, and the statement runs again, starting with the loop body.</span></span>
 
-<span data-ttu-id="704bf-149">Les trois parties d’une boucle de service de contrôle d’accès (corps, test et correction) sont traitées comme une seule étendue *pour chaque répétition*, de sorte que les symboles liés dans le corps sont disponibles à la fois dans le test et dans la correction.</span><span class="sxs-lookup"><span data-stu-id="704bf-149">All three portions of an RUS loop (the body, the test, and the fixup) are treated as a single scope *for each repetition*, so symbols that are bound in the body are available in both the test and the fixup.</span></span>
-<span data-ttu-id="704bf-150">Toutefois, l’exécution de la correction met fin à l’étendue de l’instruction, de sorte que les liaisons de symboles effectuées pendant le corps ou la correction ne sont pas disponibles dans les répétitions suivantes.</span><span class="sxs-lookup"><span data-stu-id="704bf-150">However, completing the run of the fixup ends the scope for the statement, so that symbol bindings made during the body or fixup are not available in subsequent repetitions.</span></span>
+<span data-ttu-id="2e8db-149">Les trois parties d’une boucle de service de contrôle d’accès (corps, test et correction) sont traitées comme une seule étendue *pour chaque répétition* , de sorte que les symboles liés dans le corps sont disponibles à la fois dans le test et dans la correction.</span><span class="sxs-lookup"><span data-stu-id="2e8db-149">All three portions of an RUS loop (the body, the test, and the fixup) are treated as a single scope *for each repetition* , so symbols that are bound in the body are available in both the test and the fixup.</span></span>
+<span data-ttu-id="2e8db-150">Toutefois, l’exécution de la correction met fin à l’étendue de l’instruction, de sorte que les liaisons de symboles effectuées pendant le corps ou la correction ne sont pas disponibles dans les répétitions suivantes.</span><span class="sxs-lookup"><span data-stu-id="2e8db-150">However, completing the run of the fixup ends the scope for the statement, so that symbol bindings made during the body or fixup are not available in subsequent repetitions.</span></span>
 
-<span data-ttu-id="704bf-151">En outre, l' `fixup` instruction est souvent utile, mais pas toujours nécessaire.</span><span class="sxs-lookup"><span data-stu-id="704bf-151">Further, the `fixup` statement is often useful but not always necessary.</span></span>
-<span data-ttu-id="704bf-152">Dans les cas où il n’est pas nécessaire, la construction</span><span class="sxs-lookup"><span data-stu-id="704bf-152">In cases that it is not needed, the construct</span></span>
+<span data-ttu-id="2e8db-151">En outre, l' `fixup` instruction est souvent utile, mais pas toujours nécessaire.</span><span class="sxs-lookup"><span data-stu-id="2e8db-151">Further, the `fixup` statement is often useful but not always necessary.</span></span>
+<span data-ttu-id="2e8db-152">Dans les cas où il n’est pas nécessaire, la construction</span><span class="sxs-lookup"><span data-stu-id="2e8db-152">In cases that it is not needed, the construct</span></span>
 
 ```qsharp
 repeat {
@@ -142,20 +142,20 @@ repeat {
 until (expression);
 ```
 
-<span data-ttu-id="704bf-153">est également un modèle de RUS valide.</span><span class="sxs-lookup"><span data-stu-id="704bf-153">is also a valid RUS pattern.</span></span>
+<span data-ttu-id="2e8db-153">est également un modèle de RUS valide.</span><span class="sxs-lookup"><span data-stu-id="2e8db-153">is also a valid RUS pattern.</span></span>
 
-<span data-ttu-id="704bf-154">Pour obtenir plus d’exemples et de détails, consultez la section [exemples de répétition jusqu’à réussite](#repeat-until-success-examples) dans cet article.</span><span class="sxs-lookup"><span data-stu-id="704bf-154">For more examples and details, see [Repeat-until-success examples](#repeat-until-success-examples) in this article.</span></span>
+<span data-ttu-id="2e8db-154">Pour obtenir plus d’exemples et de détails, consultez la section [exemples de répétition jusqu’à réussite](#repeat-until-success-examples) dans cet article.</span><span class="sxs-lookup"><span data-stu-id="2e8db-154">For more examples and details, see [Repeat-until-success examples](#repeat-until-success-examples) in this article.</span></span>
 
 > [!TIP]   
-> <span data-ttu-id="704bf-155">Évitez d’utiliser des boucles de répétition jusqu’à réussite dans les fonctions.</span><span class="sxs-lookup"><span data-stu-id="704bf-155">Avoid using repeat-until-success loops inside functions.</span></span> <span data-ttu-id="704bf-156">Utilisez des boucles *while* pour fournir la fonctionnalité correspondante à l’intérieur des fonctions.</span><span class="sxs-lookup"><span data-stu-id="704bf-156">Use *while* loops to provide the corresponding functionality inside functions.</span></span> 
+> <span data-ttu-id="2e8db-155">Évitez d’utiliser des boucles de répétition jusqu’à réussite dans les fonctions.</span><span class="sxs-lookup"><span data-stu-id="2e8db-155">Avoid using repeat-until-success loops inside functions.</span></span> <span data-ttu-id="2e8db-156">Utilisez des boucles *while* pour fournir la fonctionnalité correspondante à l’intérieur des fonctions.</span><span class="sxs-lookup"><span data-stu-id="2e8db-156">Use *while* loops to provide the corresponding functionality inside functions.</span></span> 
 
-## <a name="while-loop"></a><span data-ttu-id="704bf-157">Boucle while</span><span class="sxs-lookup"><span data-stu-id="704bf-157">While loop</span></span>
+## <a name="while-loop"></a><span data-ttu-id="2e8db-157">Boucle while</span><span class="sxs-lookup"><span data-stu-id="2e8db-157">While loop</span></span>
 
-<span data-ttu-id="704bf-158">Les modèles de répétition jusqu’à réussite ont un connotation très spécifique au quantum.</span><span class="sxs-lookup"><span data-stu-id="704bf-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="704bf-159">Elles sont largement utilisées dans des classes particulières d’algorithmes Quantum, donc la construction du langage dédié dans Q# .</span><span class="sxs-lookup"><span data-stu-id="704bf-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#.</span></span> <span data-ttu-id="704bf-160">Toutefois, les boucles qui s’arrêtent en fonction d’une condition et dont la longueur d’exécution est donc inconnue au moment de la compilation sont gérées avec une attention particulière dans un Runtime Quantum.</span><span class="sxs-lookup"><span data-stu-id="704bf-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="704bf-161">Toutefois, leur utilisation dans les fonctions ne pose pas de problème, car ces boucles contiennent uniquement du code qui s’exécute sur du matériel conventionnel (non Quantum).</span><span class="sxs-lookup"><span data-stu-id="704bf-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
+<span data-ttu-id="2e8db-158">Les modèles de répétition jusqu’à réussite ont un connotation très spécifique au quantum.</span><span class="sxs-lookup"><span data-stu-id="2e8db-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="2e8db-159">Elles sont largement utilisées dans des classes particulières d’algorithmes Quantum, donc la construction du langage dédié dans :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="2e8db-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in :::no-loc(Q#):::.</span></span> <span data-ttu-id="2e8db-160">Toutefois, les boucles qui s’arrêtent en fonction d’une condition et dont la longueur d’exécution est donc inconnue au moment de la compilation sont gérées avec une attention particulière dans un Runtime Quantum.</span><span class="sxs-lookup"><span data-stu-id="2e8db-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="2e8db-161">Toutefois, leur utilisation dans les fonctions ne pose pas de problème, car ces boucles contiennent uniquement du code qui s’exécute sur du matériel conventionnel (non Quantum).</span><span class="sxs-lookup"><span data-stu-id="2e8db-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
 
-<span data-ttu-id="704bf-162">Q#, par conséquent, prend en charge l’utilisation de boucles While uniquement dans les fonctions.</span><span class="sxs-lookup"><span data-stu-id="704bf-162">Q#, therefore, supports to use of while loops within functions only.</span></span>
-<span data-ttu-id="704bf-163">Une `while` instruction se compose du mot clé `while` , d’une expression booléenne entre parenthèses et d’un bloc d’instructions.</span><span class="sxs-lookup"><span data-stu-id="704bf-163">A `while` statement consists of the keyword `while`, a Boolean expression in parentheses, and a statement block.</span></span>
-<span data-ttu-id="704bf-164">Le bloc d’instructions (corps de la boucle) s’exécute tant que la condition a la valeur `true` .</span><span class="sxs-lookup"><span data-stu-id="704bf-164">The statement block (the body of the loop) runs as long as the condition evaluates to `true`.</span></span>
+<span data-ttu-id="2e8db-162">:::no-loc(Q#):::, par conséquent, prend en charge l’utilisation de boucles While uniquement dans les fonctions.</span><span class="sxs-lookup"><span data-stu-id="2e8db-162">:::no-loc(Q#):::, therefore, supports to use of while loops within functions only.</span></span>
+<span data-ttu-id="2e8db-163">Une `while` instruction se compose du mot clé `while` , d’une expression booléenne entre parenthèses et d’un bloc d’instructions.</span><span class="sxs-lookup"><span data-stu-id="2e8db-163">A `while` statement consists of the keyword `while`, a Boolean expression in parentheses, and a statement block.</span></span>
+<span data-ttu-id="2e8db-164">Le bloc d’instructions (corps de la boucle) s’exécute tant que la condition a la valeur `true` .</span><span class="sxs-lookup"><span data-stu-id="2e8db-164">The statement block (the body of the loop) runs as long as the condition evaluates to `true`.</span></span>
 
 ```qsharp
 // ...
@@ -166,9 +166,9 @@ while (index < Length(arr) && item < 0) {
 }
 ```
 
-## <a name="conjugations"></a><span data-ttu-id="704bf-165">Conjugaisons</span><span class="sxs-lookup"><span data-stu-id="704bf-165">Conjugations</span></span>
+## <a name="conjugations"></a><span data-ttu-id="2e8db-165">Conjugaisons</span><span class="sxs-lookup"><span data-stu-id="2e8db-165">Conjugations</span></span>
 
-<span data-ttu-id="704bf-166">Contrairement aux bits classiques, la libération de la mémoire Quantum est un peu plus complexe, car la réinitialisation aveugle de qubits peut avoir des effets indésirables sur le calcul restant si les qubits sont toujours pris en compte.</span><span class="sxs-lookup"><span data-stu-id="704bf-166">In contrast to classical bits, releasing quantum memory is slightly more involved since blindly resetting qubits can have undesired effects on the remaining computation if the qubits are still entangled.</span></span> <span data-ttu-id="704bf-167">Ces effets peuvent être évités en « annulant » les calculs effectués avant la libération de la mémoire.</span><span class="sxs-lookup"><span data-stu-id="704bf-167">These effects can be avoided by properly "undoing" performed computations prior to releasing the memory.</span></span> <span data-ttu-id="704bf-168">Un modèle courant dans quantum computing est donc le suivant :</span><span class="sxs-lookup"><span data-stu-id="704bf-168">A common pattern in quantum computing is hence the following:</span></span> 
+<span data-ttu-id="2e8db-166">Contrairement aux bits classiques, la libération de la mémoire Quantum est un peu plus complexe, car la réinitialisation aveugle de qubits peut avoir des effets indésirables sur le calcul restant si les qubits sont toujours pris en compte.</span><span class="sxs-lookup"><span data-stu-id="2e8db-166">In contrast to classical bits, releasing quantum memory is slightly more involved since blindly resetting qubits can have undesired effects on the remaining computation if the qubits are still entangled.</span></span> <span data-ttu-id="2e8db-167">Ces effets peuvent être évités en « annulant » les calculs effectués avant la libération de la mémoire.</span><span class="sxs-lookup"><span data-stu-id="2e8db-167">These effects can be avoided by properly "undoing" performed computations prior to releasing the memory.</span></span> <span data-ttu-id="2e8db-168">Un modèle courant dans quantum computing est donc le suivant :</span><span class="sxs-lookup"><span data-stu-id="2e8db-168">A common pattern in quantum computing is hence the following:</span></span> 
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -183,7 +183,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-<span data-ttu-id="704bf-169">Q# prend en charge une instruction de conjugaison qui implémente la transformation précédente.</span><span class="sxs-lookup"><span data-stu-id="704bf-169">Q# supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="704bf-170">À l’aide de cette instruction, l’opération `ApplyWith` peut être implémentée de la façon suivante :</span><span class="sxs-lookup"><span data-stu-id="704bf-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
+<span data-ttu-id="2e8db-169">:::no-loc(Q#)::: prend en charge une instruction de conjugaison qui implémente la transformation précédente.</span><span class="sxs-lookup"><span data-stu-id="2e8db-169">:::no-loc(Q#)::: supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="2e8db-170">À l’aide de cette instruction, l’opération `ApplyWith` peut être implémentée de la façon suivante :</span><span class="sxs-lookup"><span data-stu-id="2e8db-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -200,56 +200,56 @@ operation ApplyWith<'T>(
     }
 }
 ```
-<span data-ttu-id="704bf-171">Une telle instruction de conjugaison devient utile si les transformations externes et internes ne sont pas facilement disponibles en tant qu’opérations, mais sont plutôt plus pratiques à décrire par un bloc composé de plusieurs instructions.</span><span class="sxs-lookup"><span data-stu-id="704bf-171">Such a conjugation statement becomes useful if the outer and inner transformations are not readily available as operations but are instead more convenient to describe by a block consisting of several statements.</span></span> 
+<span data-ttu-id="2e8db-171">Une telle instruction de conjugaison devient utile si les transformations externes et internes ne sont pas facilement disponibles en tant qu’opérations, mais sont plutôt plus pratiques à décrire par un bloc composé de plusieurs instructions.</span><span class="sxs-lookup"><span data-stu-id="2e8db-171">Such a conjugation statement becomes useful if the outer and inner transformations are not readily available as operations but are instead more convenient to describe by a block consisting of several statements.</span></span> 
 
-<span data-ttu-id="704bf-172">La transformation inverse pour les instructions définies dans le bloc intérieur est générée automatiquement par le compilateur et exécutée après la fin du bloc apply.</span><span class="sxs-lookup"><span data-stu-id="704bf-172">The inverse transformation for the statements defined in the within-block is automatically generated by the compiler and run after the apply-block completes.</span></span>
-<span data-ttu-id="704bf-173">Étant donné que toutes les variables mutables utilisées dans le cadre du bloc within ne peuvent pas être reliées dans le bloc Apply, il est garanti que la transformation générée est le voisin du calcul dans le bloc intérieur.</span><span class="sxs-lookup"><span data-stu-id="704bf-173">Since any mutable variables used as part of the within-block cannot be rebound in the apply-block, the generated transformation is guaranteed to be the adjoint of the computation in the within-block.</span></span> 
+<span data-ttu-id="2e8db-172">La transformation inverse pour les instructions définies dans le bloc intérieur est générée automatiquement par le compilateur et exécutée après la fin du bloc apply.</span><span class="sxs-lookup"><span data-stu-id="2e8db-172">The inverse transformation for the statements defined in the within-block is automatically generated by the compiler and run after the apply-block completes.</span></span>
+<span data-ttu-id="2e8db-173">Étant donné que toutes les variables mutables utilisées dans le cadre du bloc within ne peuvent pas être reliées dans le bloc Apply, il est garanti que la transformation générée est le voisin du calcul dans le bloc intérieur.</span><span class="sxs-lookup"><span data-stu-id="2e8db-173">Since any mutable variables used as part of the within-block cannot be rebound in the apply-block, the generated transformation is guaranteed to be the adjoint of the computation in the within-block.</span></span> 
 
-## <a name="return-statement"></a><span data-ttu-id="704bf-174">Return (instruction)</span><span class="sxs-lookup"><span data-stu-id="704bf-174">Return Statement</span></span>
+## <a name="return-statement"></a><span data-ttu-id="2e8db-174">Return (instruction)</span><span class="sxs-lookup"><span data-stu-id="2e8db-174">Return Statement</span></span>
 
-<span data-ttu-id="704bf-175">L’instruction return termine l’exécution d’une opération ou d’une fonction et retourne une valeur à l’appelant.</span><span class="sxs-lookup"><span data-stu-id="704bf-175">The return statement ends the run of an operation or function and returns a value to the caller.</span></span>
-<span data-ttu-id="704bf-176">Il se compose du mot clé `return` , suivi d’une expression du type approprié et d’un point-virgule de fin.</span><span class="sxs-lookup"><span data-stu-id="704bf-176">It consists of the keyword `return`, followed by an expression of the appropriate type, and a terminating semicolon.</span></span>
+<span data-ttu-id="2e8db-175">L’instruction return termine l’exécution d’une opération ou d’une fonction et retourne une valeur à l’appelant.</span><span class="sxs-lookup"><span data-stu-id="2e8db-175">The return statement ends the run of an operation or function and returns a value to the caller.</span></span>
+<span data-ttu-id="2e8db-176">Il se compose du mot clé `return` , suivi d’une expression du type approprié et d’un point-virgule de fin.</span><span class="sxs-lookup"><span data-stu-id="2e8db-176">It consists of the keyword `return`, followed by an expression of the appropriate type, and a terminating semicolon.</span></span>
 
-<span data-ttu-id="704bf-177">Par exemple,</span><span class="sxs-lookup"><span data-stu-id="704bf-177">For example,</span></span>
+<span data-ttu-id="2e8db-177">Par exemple,</span><span class="sxs-lookup"><span data-stu-id="2e8db-177">For example,</span></span>
 ```qsharp
 return 1;
 ```
-<span data-ttu-id="704bf-178">or</span><span class="sxs-lookup"><span data-stu-id="704bf-178">or</span></span>
+<span data-ttu-id="2e8db-178">or</span><span class="sxs-lookup"><span data-stu-id="2e8db-178">or</span></span>
 ```qsharp
 return (results, qubits);
 ```
 
-* <span data-ttu-id="704bf-179">Un pouvant être appelé qui retourne un tuple vide, `()` , ne requiert pas d’instruction return.</span><span class="sxs-lookup"><span data-stu-id="704bf-179">A callable that returns an empty tuple, `()`, does not require a return statement.</span></span>
-* <span data-ttu-id="704bf-180">Pour spécifier une sortie précoce de l’opération ou de la fonction, utilisez `return ();` .</span><span class="sxs-lookup"><span data-stu-id="704bf-180">To specify an early exit from the operation or function, use `return ();`.</span></span>
-<span data-ttu-id="704bf-181">Les callables qui retournent tout autre type requièrent une instruction return finale.</span><span class="sxs-lookup"><span data-stu-id="704bf-181">Callables that return any other type require a final return statement.</span></span>
-* <span data-ttu-id="704bf-182">Il n’y a pas de nombre maximal d’instructions return dans une opération.</span><span class="sxs-lookup"><span data-stu-id="704bf-182">There is no maximum number of return statements within an operation.</span></span>
-<span data-ttu-id="704bf-183">Le compilateur peut émettre un avertissement si les instructions suivent une instruction return dans un bloc.</span><span class="sxs-lookup"><span data-stu-id="704bf-183">The compiler may emit a warning if statements follow a return statement within a block.</span></span>
+* <span data-ttu-id="2e8db-179">Un pouvant être appelé qui retourne un tuple vide, `()` , ne requiert pas d’instruction return.</span><span class="sxs-lookup"><span data-stu-id="2e8db-179">A callable that returns an empty tuple, `()`, does not require a return statement.</span></span>
+* <span data-ttu-id="2e8db-180">Pour spécifier une sortie précoce de l’opération ou de la fonction, utilisez `return ();` .</span><span class="sxs-lookup"><span data-stu-id="2e8db-180">To specify an early exit from the operation or function, use `return ();`.</span></span>
+<span data-ttu-id="2e8db-181">Les callables qui retournent tout autre type requièrent une instruction return finale.</span><span class="sxs-lookup"><span data-stu-id="2e8db-181">Callables that return any other type require a final return statement.</span></span>
+* <span data-ttu-id="2e8db-182">Il n’y a pas de nombre maximal d’instructions return dans une opération.</span><span class="sxs-lookup"><span data-stu-id="2e8db-182">There is no maximum number of return statements within an operation.</span></span>
+<span data-ttu-id="2e8db-183">Le compilateur peut émettre un avertissement si les instructions suivent une instruction return dans un bloc.</span><span class="sxs-lookup"><span data-stu-id="2e8db-183">The compiler may emit a warning if statements follow a return statement within a block.</span></span>
 
    
-## <a name="fail-statement"></a><span data-ttu-id="704bf-184">Fail (instruction)</span><span class="sxs-lookup"><span data-stu-id="704bf-184">Fail statement</span></span>
+## <a name="fail-statement"></a><span data-ttu-id="2e8db-184">Fail (instruction)</span><span class="sxs-lookup"><span data-stu-id="2e8db-184">Fail statement</span></span>
 
-<span data-ttu-id="704bf-185">L’instruction Fail met fin à l’exécution d’une opération et retourne une valeur d’erreur à l’appelant.</span><span class="sxs-lookup"><span data-stu-id="704bf-185">The fail statement ends the run of an operation and returns an error value to the caller.</span></span>
-<span data-ttu-id="704bf-186">Il se compose du mot clé `fail` , suivi d’une chaîne et d’un point-virgule de fin.</span><span class="sxs-lookup"><span data-stu-id="704bf-186">It consists of the keyword `fail`, followed by a string and a terminating semicolon.</span></span>
-<span data-ttu-id="704bf-187">L’instruction retourne la chaîne au pilote classique comme message d’erreur.</span><span class="sxs-lookup"><span data-stu-id="704bf-187">The statement returns the string to the classical driver as the error message.</span></span>
+<span data-ttu-id="2e8db-185">L’instruction Fail met fin à l’exécution d’une opération et retourne une valeur d’erreur à l’appelant.</span><span class="sxs-lookup"><span data-stu-id="2e8db-185">The fail statement ends the run of an operation and returns an error value to the caller.</span></span>
+<span data-ttu-id="2e8db-186">Il se compose du mot clé `fail` , suivi d’une chaîne et d’un point-virgule de fin.</span><span class="sxs-lookup"><span data-stu-id="2e8db-186">It consists of the keyword `fail`, followed by a string and a terminating semicolon.</span></span>
+<span data-ttu-id="2e8db-187">L’instruction retourne la chaîne au pilote classique comme message d’erreur.</span><span class="sxs-lookup"><span data-stu-id="2e8db-187">The statement returns the string to the classical driver as the error message.</span></span>
 
-<span data-ttu-id="704bf-188">Il n’existe aucune restriction sur le nombre d’instructions d’échec au sein d’une opération.</span><span class="sxs-lookup"><span data-stu-id="704bf-188">There is no restriction on the number of fail statements within an operation.</span></span>
-<span data-ttu-id="704bf-189">Le compilateur peut émettre un avertissement si les instructions suivent une instruction Fail dans un bloc.</span><span class="sxs-lookup"><span data-stu-id="704bf-189">The compiler may emit a warning if statements follow a fail statement within a block.</span></span>
+<span data-ttu-id="2e8db-188">Il n’existe aucune restriction sur le nombre d’instructions d’échec au sein d’une opération.</span><span class="sxs-lookup"><span data-stu-id="2e8db-188">There is no restriction on the number of fail statements within an operation.</span></span>
+<span data-ttu-id="2e8db-189">Le compilateur peut émettre un avertissement si les instructions suivent une instruction Fail dans un bloc.</span><span class="sxs-lookup"><span data-stu-id="2e8db-189">The compiler may emit a warning if statements follow a fail statement within a block.</span></span>
 
-<span data-ttu-id="704bf-190">Par exemple,</span><span class="sxs-lookup"><span data-stu-id="704bf-190">For example,</span></span>
+<span data-ttu-id="2e8db-190">Par exemple,</span><span class="sxs-lookup"><span data-stu-id="2e8db-190">For example,</span></span>
 
 ```qsharp
 fail $"Impossible state reached";
 ```
-<span data-ttu-id="704bf-191">ou, à l’aide de [chaînes interpolées](xref:microsoft.quantum.guide.expressions#interpolated-strings),</span><span class="sxs-lookup"><span data-stu-id="704bf-191">or, using [interpolated strings](xref:microsoft.quantum.guide.expressions#interpolated-strings),</span></span>
+<span data-ttu-id="2e8db-191">ou, à l’aide de [chaînes interpolées](xref:microsoft.quantum.guide.expressions#interpolated-strings),</span><span class="sxs-lookup"><span data-stu-id="2e8db-191">or, using [interpolated strings](xref:microsoft.quantum.guide.expressions#interpolated-strings),</span></span>
 ```qsharp
 fail $"Syndrome {syn} is incorrect";
 ```
 
-## <a name="repeat-until-success-examples"></a><span data-ttu-id="704bf-192">Exemples de répétition jusqu’à réussite</span><span class="sxs-lookup"><span data-stu-id="704bf-192">Repeat-until-success examples</span></span>
+## <a name="repeat-until-success-examples"></a><span data-ttu-id="2e8db-192">Exemples de répétition jusqu’à réussite</span><span class="sxs-lookup"><span data-stu-id="2e8db-192">Repeat-until-success examples</span></span>
 
-### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a><span data-ttu-id="704bf-193">Modèle RUS pour la rotation d’un qubit sur un axe irrationnelle</span><span class="sxs-lookup"><span data-stu-id="704bf-193">RUS pattern for single-qubit rotation about an irrational axis</span></span> 
+### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a><span data-ttu-id="2e8db-193">Modèle RUS pour la rotation d’un qubit sur un axe irrationnelle</span><span class="sxs-lookup"><span data-stu-id="2e8db-193">RUS pattern for single-qubit rotation about an irrational axis</span></span> 
 
-<span data-ttu-id="704bf-194">Dans un cas d’usage typique, l' Q# opération suivante implémente une rotation autour d’un axe irrationnelle de $ (I + 2i Z)/\sqrt {5} $ sur la sphère Bloch.</span><span class="sxs-lookup"><span data-stu-id="704bf-194">In a typical use case, the following Q# operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="704bf-195">L’implémentation utilise un modèle de RUS connu :</span><span class="sxs-lookup"><span data-stu-id="704bf-195">The implementation uses a known RUS pattern:</span></span>
+<span data-ttu-id="2e8db-194">Dans un cas d’usage typique, l' :::no-loc(Q#)::: opération suivante implémente une rotation autour d’un axe irrationnelle de $ (I + 2i Z)/\sqrt {5} $ sur la sphère Bloch.</span><span class="sxs-lookup"><span data-stu-id="2e8db-194">In a typical use case, the following :::no-loc(Q#)::: operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="2e8db-195">L’implémentation utilise un modèle de RUS connu :</span><span class="sxs-lookup"><span data-stu-id="2e8db-195">The implementation uses a known RUS pattern:</span></span>
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -272,9 +272,9 @@ operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
 }
 ```
 
-### <a name="rus-loop-with-a-mutable-variable-in-scope"></a><span data-ttu-id="704bf-196">Boucle de RUS avec une variable mutable dans l’étendue</span><span class="sxs-lookup"><span data-stu-id="704bf-196">RUS loop with a mutable variable in scope</span></span>
+### <a name="rus-loop-with-a-mutable-variable-in-scope"></a><span data-ttu-id="2e8db-196">Boucle de RUS avec une variable mutable dans l’étendue</span><span class="sxs-lookup"><span data-stu-id="2e8db-196">RUS loop with a mutable variable in scope</span></span>
 
-<span data-ttu-id="704bf-197">Cet exemple illustre l’utilisation d’une variable mutable, `finished` , qui se trouve dans l’étendue de la boucle REPEAT-UNTIL-Fixup entière et qui est initialisée avant la boucle et mise à jour à l’étape de correction.</span><span class="sxs-lookup"><span data-stu-id="704bf-197">This example shows the use of a mutable variable, `finished`, which is within the scope of the entire repeat-until-fixup loop and which gets initialized before the loop and updated in the fixup step.</span></span>
+<span data-ttu-id="2e8db-197">Cet exemple illustre l’utilisation d’une variable mutable, `finished` , qui se trouve dans l’étendue de la boucle REPEAT-UNTIL-Fixup entière et qui est initialisée avant la boucle et mise à jour à l’étape de correction.</span><span class="sxs-lookup"><span data-stu-id="2e8db-197">This example shows the use of a mutable variable, `finished`, which is within the scope of the entire repeat-until-fixup loop and which gets initialized before the loop and updated in the fixup step.</span></span>
 
 ```qsharp
 mutable iter = 1;
@@ -289,11 +289,11 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a><span data-ttu-id="704bf-198">RUS sans `fixup`</span><span class="sxs-lookup"><span data-stu-id="704bf-198">RUS without `fixup`</span></span>
+### <a name="rus-without-fixup"></a><span data-ttu-id="2e8db-198">RUS sans `fixup`</span><span class="sxs-lookup"><span data-stu-id="2e8db-198">RUS without `fixup`</span></span>
 
-<span data-ttu-id="704bf-199">Cet exemple montre une boucle de RUS sans l’étape de correction.</span><span class="sxs-lookup"><span data-stu-id="704bf-199">This example shows an RUS loop without the fixup step.</span></span> <span data-ttu-id="704bf-200">Le code est un circuit probabiliste qui implémente une porte de rotation importante $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ à l’aide des `H` `T` portes et.</span><span class="sxs-lookup"><span data-stu-id="704bf-200">The code is a probabilistic circuit that implements an important rotation gate $V_3 = (\boldone + 2 i Z) / \sqrt{5}$ using the `H` and `T` gates.</span></span>
-<span data-ttu-id="704bf-201">La boucle se termine dans les répétitions de $ \frac {8} {5} $ en moyenne.</span><span class="sxs-lookup"><span data-stu-id="704bf-201">The loop terminates in $\frac{8}{5}$ repetitions on average.</span></span>
-<span data-ttu-id="704bf-202">Pour plus d’informations, consultez [*répéter jusqu’à la réussite : décomposition non déterministe des unités de qubit de données uniques*](https://arxiv.org/abs/1311.1074) (Paetznick et Svore, 2014).</span><span class="sxs-lookup"><span data-stu-id="704bf-202">See [*Repeat-Until-Success: Non-deterministic decomposition of single-qubit unitaries*](https://arxiv.org/abs/1311.1074) (Paetznick and Svore, 2014) for more details.</span></span>
+<span data-ttu-id="2e8db-199">Cet exemple montre une boucle de RUS sans l’étape de correction.</span><span class="sxs-lookup"><span data-stu-id="2e8db-199">This example shows an RUS loop without the fixup step.</span></span> <span data-ttu-id="2e8db-200">Le code est un circuit probabiliste qui implémente une porte de rotation importante $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ à l’aide des `H` `T` portes et.</span><span class="sxs-lookup"><span data-stu-id="2e8db-200">The code is a probabilistic circuit that implements an important rotation gate $V_3 = (\boldone + 2 i Z) / \sqrt{5}$ using the `H` and `T` gates.</span></span>
+<span data-ttu-id="2e8db-201">La boucle se termine dans les répétitions de $ \frac {8} {5} $ en moyenne.</span><span class="sxs-lookup"><span data-stu-id="2e8db-201">The loop terminates in $\frac{8}{5}$ repetitions on average.</span></span>
+<span data-ttu-id="2e8db-202">Pour plus d’informations, consultez [*répéter jusqu’à la réussite : décomposition non déterministe des unités de qubit de données uniques*](https://arxiv.org/abs/1311.1074) (Paetznick et Svore, 2014).</span><span class="sxs-lookup"><span data-stu-id="2e8db-202">See [*Repeat-Until-Success: Non-deterministic decomposition of single-qubit unitaries*](https://arxiv.org/abs/1311.1074) (Paetznick and Svore, 2014) for more details.</span></span>
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -315,16 +315,16 @@ using (qubit = Qubit()) {
 }
 ```
 
-### <a name="rus-to-prepare-a-quantum-state"></a><span data-ttu-id="704bf-203">RUS pour préparer un État Quantum</span><span class="sxs-lookup"><span data-stu-id="704bf-203">RUS to prepare a quantum state</span></span>
+### <a name="rus-to-prepare-a-quantum-state"></a><span data-ttu-id="2e8db-203">RUS pour préparer un État Quantum</span><span class="sxs-lookup"><span data-stu-id="2e8db-203">RUS to prepare a quantum state</span></span>
 
-<span data-ttu-id="704bf-204">Enfin, voici un exemple de modèle de RUS pour préparer un État Quantum $ \frac {1} {\sqrt {3} } \left (\sqrt {2} \ket {0} + \ket {1} \right) $, à partir de l’État $ \ket{+} $.</span><span class="sxs-lookup"><span data-stu-id="704bf-204">Finally, here is an example of an RUS pattern to prepare a quantum state $\frac{1}{\sqrt{3}}\left(\sqrt{2}\ket{0}+\ket{1}\right)$, starting from the $\ket{+}$ state.</span></span>
+<span data-ttu-id="2e8db-204">Enfin, voici un exemple de modèle de RUS pour préparer un État Quantum $ \frac {1} {\sqrt {3} } \left (\sqrt {2} \ket {0} + \ket {1} \right) $, à partir de l’État $ \ket{+} $.</span><span class="sxs-lookup"><span data-stu-id="2e8db-204">Finally, here is an example of an RUS pattern to prepare a quantum state $\frac{1}{\sqrt{3}}\left(\sqrt{2}\ket{0}+\ket{1}\right)$, starting from the $\ket{+}$ state.</span></span>
 
-<span data-ttu-id="704bf-205">Les fonctionnalités de programmation notables présentées dans cette opération sont les suivantes :</span><span class="sxs-lookup"><span data-stu-id="704bf-205">Notable programmatic features shown in this operation are:</span></span>
+<span data-ttu-id="2e8db-205">Les fonctionnalités de programmation notables présentées dans cette opération sont les suivantes :</span><span class="sxs-lookup"><span data-stu-id="2e8db-205">Notable programmatic features shown in this operation are:</span></span>
 
-* <span data-ttu-id="704bf-206">Une partie plus complexe `fixup` de la boucle, qui implique des opérations Quantum.</span><span class="sxs-lookup"><span data-stu-id="704bf-206">A more complex `fixup` part of the loop, which involves quantum operations.</span></span> 
-* <span data-ttu-id="704bf-207">L’utilisation d' `AssertMeasurementProbability` instructions pour déterminer la probabilité de mesurer l’État Quantum à certains points spécifiés dans le programme.</span><span class="sxs-lookup"><span data-stu-id="704bf-207">The use of `AssertMeasurementProbability` statements to ascertain the probability of measuring the quantum state at certain specified points in the program.</span></span>
+* <span data-ttu-id="2e8db-206">Une partie plus complexe `fixup` de la boucle, qui implique des opérations Quantum.</span><span class="sxs-lookup"><span data-stu-id="2e8db-206">A more complex `fixup` part of the loop, which involves quantum operations.</span></span> 
+* <span data-ttu-id="2e8db-207">L’utilisation d' `AssertMeasurementProbability` instructions pour déterminer la probabilité de mesurer l’État Quantum à certains points spécifiés dans le programme.</span><span class="sxs-lookup"><span data-stu-id="2e8db-207">The use of `AssertMeasurementProbability` statements to ascertain the probability of measuring the quantum state at certain specified points in the program.</span></span>
 
-<span data-ttu-id="704bf-208">Pour plus d’informations sur [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) les [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) opérations et, consultez [test et débogage](xref:microsoft.quantum.guide.testingdebugging).</span><span class="sxs-lookup"><span data-stu-id="704bf-208">For more information about the [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) and [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) operations, see [Testing and debugging](xref:microsoft.quantum.guide.testingdebugging).</span></span>
+<span data-ttu-id="2e8db-208">Pour plus d’informations sur [`AssertMeasurement`](xref:Microsoft.Quantum.Diagnostics.assertmeasurement) les [`AssertMeasurementProbability`](xref:Microsoft.Quantum.Diagnostics.assertmeasurementprobability) opérations et, consultez [test et débogage](xref:microsoft.quantum.guide.testingdebugging).</span><span class="sxs-lookup"><span data-stu-id="2e8db-208">For more information about the [`AssertMeasurement`](xref:Microsoft.Quantum.Diagnostics.assertmeasurement) and [`AssertMeasurementProbability`](xref:Microsoft.Quantum.Diagnostics.assertmeasurementprobability) operations, see [Testing and debugging](xref:microsoft.quantum.guide.testingdebugging).</span></span>
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -371,8 +371,8 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-<span data-ttu-id="704bf-209">Pour plus d’informations, consultez [exemple de test unitaire fourni avec la bibliothèque standard](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):</span><span class="sxs-lookup"><span data-stu-id="704bf-209">For more information, see [unit testing sample provided with the standard library](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):</span></span>
+<span data-ttu-id="2e8db-209">Pour plus d’informations, consultez [exemple de test unitaire fourni avec la bibliothèque standard](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):</span><span class="sxs-lookup"><span data-stu-id="2e8db-209">For more information, see [unit testing sample provided with the standard library](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="704bf-210">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="704bf-210">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="2e8db-210">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="2e8db-210">Next steps</span></span>
 
-<span data-ttu-id="704bf-211">En savoir plus sur le [test et le débogage](xref:microsoft.quantum.guide.testingdebugging) dans Q# .</span><span class="sxs-lookup"><span data-stu-id="704bf-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in Q#.</span></span>
+<span data-ttu-id="2e8db-211">En savoir plus sur le [test et le débogage](xref:microsoft.quantum.guide.testingdebugging) dans :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="2e8db-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in :::no-loc(Q#):::.</span></span>
