@@ -1,0 +1,36 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Retourne l’opération de bits AND de deux entiers. Cela effectue le même calcul que l' `&&&` opérateur intégré.
+  uid: Microsoft.Quantum.Bitwise.And
+- summary: Déplace la représentation au niveau du bit d’un nombre laissé par un nombre donné de bits.
+  uid: Microsoft.Quantum.Bitwise.LeftShiftedI
+- summary: Déplace la représentation au niveau du bit d’un nombre laissé par un nombre donné de bits.
+  uid: Microsoft.Quantum.Bitwise.LeftShiftedL
+- summary: Retourne l’opérateur or au niveau du bit d’un entier. Cela effectue le même calcul que l' `~~~` opérateur intégré.
+  uid: Microsoft.Quantum.Bitwise.Not
+- summary: Retourne l’opération or au niveau du bit de deux entiers. Cela effectue le même calcul que l' `|||` opérateur intégré.
+  uid: Microsoft.Quantum.Bitwise.Or
+- summary: Retourne la parité au niveau du bit d’un entier (1 si sa représentation binaire contient un nombre impair de uns et 0 dans le cas contraire).
+  uid: Microsoft.Quantum.Bitwise.Parity
+- summary: Déplace la représentation au niveau du bit d’un nombre vers la droite d’un nombre donné de bits.
+  uid: Microsoft.Quantum.Bitwise.RightShiftedI
+- summary: Déplace la représentation au niveau du bit d’un nombre vers la droite d’un nombre donné de bits.
+  uid: Microsoft.Quantum.Bitwise.RightShiftedL
+- summary: Retourne un entier représentant les X bits d’un tableau d’opérateurs Pauli.
+  uid: Microsoft.Quantum.Bitwise.XBits
+- summary: Retourne l’opérateur OR exclusif au niveau du bit (XOR) de deux entiers. Cela effectue le même calcul que l' `^^^` opérateur intégré.
+  uid: Microsoft.Quantum.Bitwise.Xor
+- summary: Retourne un entier représentant les bits Z d’un tableau d’opérateurs Pauli.
+  uid: Microsoft.Quantum.Bitwise.ZBits
+name: Microsoft.Quantum.Bitwise
+newtypes: []
+operations: []
+summary: Cet espace de noms contient des fonctions permettant d’agir sur la représentation au niveau du bit des types de données classiques.
+uid: Microsoft.Quantum.Bitwise
+metadata:
+  ms.openlocfilehash: 6730a0350f56c2356b9c0851b37de1cd277da90f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92706006"
