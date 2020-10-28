@@ -1,0 +1,57 @@
+---
+uid: Microsoft.Quantum.Diagnostics._flipToBasis
+title: opération de _flipToBasis
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Diagnostics
+qsharp.name: _flipToBasis
+qsharp.summary: >-
+  Applies unitaries that map $\ket{0}\otimes\cdots\ket{0}$ to $\ket{\psi_0} \otimes \ket{\psi_{n - 1}}$, where $\ket{\psi_k}$ depends on `basis[k]`.
+
+  The correspondence between value of `basis[k]` and $\ket{\psi_k}$ is the following:
+
+  - `basis[k]=0` $\rightarrow \ket{0}$. - `basis[k]=1` $\rightarrow \ket{1}$. - `basis[k]=2` $\rightarrow \ket{+}$. - `basis[k]=3` $\rightarrow \ket{i}$ ( +1 eigenstate of Pauli Y ).
+ms.openlocfilehash: e074ed2ae259f6aef49a8d327ce518a9e2caebfa
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92702829"
+---
+# <a name="_fliptobasis-operation"></a>opération de _flipToBasis
+
+Espace de noms : [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
+
+Packages [](https://nuget.org/packages/)
+
+
+Applique les unités qui mappent $ \ket {0} \otimes\cdots\ket {0} $ à $ \ket{\ psi_0} \otimes \ket{\ psi_ {n-1}} $, où $ \ket{\ psi_k} $ dépend `basis[k]` .
+
+La correspondance entre la valeur de `basis[k]` et $ \ket{\ psi_k} $ est la suivante :
+
+- `basis[k]=0` $ \rightarrow \ket {0} $.
+- `basis[k]=1` $ \rightarrow \ket {1} $.
+- `basis[k]=2` $ \rightarrow \ket{+} $.
+- `basis[k]=3` $ \rightarrow \ket{i} $ (+ 1 eigenstate de Pauli Y).
+
+```qsharp
+operation _flipToBasis (basis : Int[], qubits : Qubit[]) : Unit
+```
+
+
+## <a name="input"></a>Entrée
+
+### <a name="basis--int"></a>base : [int](xref:microsoft.quantum.lang-ref.int)[]
+
+Tableau d’ID d’état de base à qubit unique (0 <= ID <= 3), un pour chaque élément de qubits.
+
+
+### <a name="qubits--qubit"></a>qubits : [qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+
+Qubit à utiliser.
+
+
+
+## <a name="output--unit"></a>Sortie : [unité](xref:microsoft.quantum.lang-ref.unit)
+

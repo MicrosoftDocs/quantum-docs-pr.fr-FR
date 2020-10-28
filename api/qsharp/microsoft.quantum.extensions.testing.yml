@@ -1,0 +1,100 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Extensions.Testing
+newtypes: []
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > AssertAllZero est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Diagnostics.AssertAllZero>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.diagnostics.assertallzero".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZero
+- summary: >+
+    > [!WARNING]
+
+    > AssertAllZeroTol est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.diagnostics.assertallzerowithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZeroTol
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualInPlace est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
+
+    > Notez que l’ordre des arguments pour cette opération a changé.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlace
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualInPlaceCompBasis est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis".
+
+    > Notez que l’ordre des arguments pour cette opération a changé.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlaceCompBasis
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualReferenced est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.diagnostics.assertoperationsequalreferenced".
+
+    > Notez que l’ordre des arguments pour cette opération a changé.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualReferenced
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubit est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Diagnostics.AssertQubit>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.diagnostics.assertqubit".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubit
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubitState est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitState
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubitTol est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitTol
+summary: ''
+uid: Microsoft.Quantum.Extensions.Testing
+metadata:
+  ms.openlocfilehash: 717665e821b4e56b01664e6e0ed940cacd2a485c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92702379"
