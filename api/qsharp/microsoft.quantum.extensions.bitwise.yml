@@ -1,0 +1,84 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > Et est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Bitwise.And>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.bitwise.and".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.And
+- summary: >+
+    > [!WARNING]
+
+    > N’a pas été déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Bitwise.Not>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.bitwise.not".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Not
+- summary: >+
+    > [!WARNING]
+
+    > Ou est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Bitwise.Or>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.bitwise.or".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Or
+- summary: >+
+    > [!WARNING]
+
+    > La parité est dépréciée. Utilisez plutôt <xref:Microsoft.Quantum.Bitwise.Parity>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.bitwise.parity".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Parity
+- summary: >+
+    > [!WARNING]
+
+    > XBits est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Bitwise.XBits>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.bitwise.xbits".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.XBits
+- summary: >+
+    > [!WARNING]
+
+    > XOR est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Bitwise.Xor>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.bitwise.xor".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Xor
+- summary: >+
+    > [!WARNING]
+
+    > ZBits est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Bitwise.ZBits>.
+
+    >
+
+    > Utilisez @"microsoft.quantum.bitwise.zbits".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.ZBits
+name: Microsoft.Quantum.Extensions.Bitwise
+newtypes: []
+operations: []
+summary: ''
+uid: Microsoft.Quantum.Extensions.Bitwise
+metadata:
+  ms.openlocfilehash: 4ae65fda1f41159bc876efbdade906c24892172c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92702523"
