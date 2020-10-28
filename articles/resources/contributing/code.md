@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91489763"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691801"
 ---
 # <a name="contributing-code"></a>Code de contribution
 
@@ -36,7 +36,7 @@ Lors de l’ouverture d’une nouvelle demande de tirage (pull request), par exe
 
 Avec la version la plus récente Q# , les tests unitaires sont définis à l’aide de l' `@Test("QuantumSimulator")` attribut. L’argument peut être soit « QuantumSimulator », « ToffoliSimulator », « TraceSimulator », soit un nom qualifié complet spécifiant la cible d’exécution. Plusieurs attributs définissant différentes cibles d’exécution peuvent être attachés au même appelable. Certains de nos tests utilisent toujours le package [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) déconseillé qui expose toutes les Q# fonctions et les opérations se terminant par `Test` à l’infrastructure [xUnit](https://xunit.github.io/) . Ce package n’est plus nécessaire pour définir des tests unitaires. 
 
-La fonction suivante est utilisée pour garantir que les <xref:microsoft.quantum.canon.fst> <xref:microsoft.quantum.canon.snd> fonctions et retournent les sorties de droite dans un exemple représentatif.
+La fonction suivante est utilisée pour garantir que les <xref:Microsoft.Quantum.Canon.Fst> <xref:Microsoft.Quantum.Canon.Snd> fonctions et retournent les sorties de droite dans un exemple représentatif.
 Si la sortie de `Fst` ou `Snd` est incorrecte, l' `fail` instruction est utilisée pour provoquer l’échec du test.
 
 ```qsharp
@@ -57,7 +57,7 @@ function PairTest () : Unit {
 ```
 
 Des conditions plus complexes peuvent être vérifiées à l’aide des techniques décrites dans la [section Test](xref:microsoft.quantum.libraries.diagnostics) du Guide des bibliothèques standard.
-Par exemple, le test suivant vérifie que `H(q); X(q); H(q);` , comme appelé par, <xref:microsoft.quantum.canon.applywith> fait la même chose que `Z(q)` .
+Par exemple, le test suivant vérifie que `H(q); X(q); H(q);` , comme appelé par, <xref:Microsoft.Quantum.Canon.ApplyWith> fait la même chose que `Z(q)` .
 
 ```Q#
 @Test("QuantumSimulator")

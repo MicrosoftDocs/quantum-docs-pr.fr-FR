@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 701c36dd8c8b087a2728cd935aee0c2ffc4f59f9
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835942"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691121"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>Simulateur de traces Quantum : compteur de largeur
 
@@ -22,7 +22,7 @@ Le compteur de largeur fait partie du [simulateur de traces Quantum](xref:micros
 
 ## <a name="invoking-the-width-counter"></a>Appel du compteur de largeur
 
-Pour exécuter le simulateur de traces de Quantum avec le compteur de largeur, vous devez créer une <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, affecter la `UseWidthCounter` **valeur true**à la propriété, puis créer une nouvelle <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance avec le `QCTraceSimulatorConfiguration` comme paramètre. 
+Pour exécuter le simulateur de traces de Quantum avec le compteur de largeur, vous devez créer une <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, affecter la `UseWidthCounter` **valeur true** à la propriété, puis créer une nouvelle <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance avec le `QCTraceSimulatorConfiguration` comme paramètre. 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -32,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a>Utilisation du compteur de largeur dans un programme hôte C#
 
-L’exemple C# qui suit dans cette section calcule le nombre de qubits supplémentaires alloués par l’implémentation d’une opération contrôlée par multiplication <xref:microsoft.quantum.intrinsic.x> , en fonction de l' Q# exemple de code suivant :
+L’exemple C# qui suit dans cette section calcule le nombre de qubits supplémentaires alloués par l’implémentation d’une opération contrôlée par multiplication <xref:Microsoft.Quantum.Intrinsic.X> , en fonction de l' Q# exemple de code suivant :
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -44,7 +44,7 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-L’opération contrôlée <xref:microsoft.quantum.intrinsic.x> par multiplication agit sur un total de cinq qubits, alloue deux [qubits accessoires](xref:microsoft.quantum.glossary#ancilla)et a une largeur d’entrée de **5**. Utilisez le programme C# suivant pour vérifier les nombres :
+L’opération contrôlée <xref:Microsoft.Quantum.Intrinsic.X> par multiplication agit sur un total de cinq qubits, alloue deux [qubits accessoires](xref:microsoft.quantum.glossary#ancilla)et a une largeur d’entrée de **5** . Utilisez le programme C# suivant pour vérifier les nombres :
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();

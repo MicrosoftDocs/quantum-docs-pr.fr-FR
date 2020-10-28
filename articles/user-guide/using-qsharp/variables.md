@@ -9,16 +9,16 @@ uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835874"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690939"
 ---
 # <a name="variables-in-no-locq"></a>Variables dans Q#
 
-Q# distingue les symboles mutables et immuables, ou les *variables*, qui sont liées/affectées aux expressions.
+Q# distingue les symboles mutables et immuables, ou les *variables* , qui sont liées/affectées aux expressions.
 En général, l’utilisation de symboles immuables est encouragée, car elle permet au compilateur d’effectuer des optimisations supplémentaires.
 
 La partie gauche d’une liaison se compose d’un tuple de symboles et de la partie droite d’une expression.
@@ -40,7 +40,7 @@ Cela affecte un tableau particulier d’opérateurs Pauli au nom de la variable 
 > [!NOTE]
 > Dans l’exemple précédent, il n’est pas nécessaire de spécifier explicitement le type de la nouvelle variable, car l’expression sur le côté droit de l' `let` instruction n’est pas ambiguë et le compilateur déduit le type correct. 
 
-Les variables définies à l’aide de `let` sont *immuables*, ce qui signifie qu’une fois que vous l’avez définie, vous ne pouvez plus la modifier.
+Les variables définies à l’aide de `let` sont *immuables* , ce qui signifie qu’une fois que vous l’avez définie, vous ne pouvez plus la modifier.
 Cela permet d’effectuer plusieurs optimisations bénéfiques, notamment l’optimisation de la logique classique qui agit sur les variables à réorganiser pour l’application `Adjoint` de la variante d’une opération.
 
 ## <a name="mutable-variables"></a>Variables mutables
@@ -92,7 +92,7 @@ for (q in qubits) {
 #### <a name="update-and-reassign-statements"></a>Instructions Update-and-Assign
 
 Une concaténation similaire existe pour les [expressions de copie et de mise à jour](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) sur le côté droit.
-En conséquence, les instructions *Update-and-Assign* existent pour les *éléments nommés* dans les types définis par l’utilisateur, ainsi que pour les *éléments de tableau*.  
+En conséquence, les instructions *Update-and-Assign* existent pour les *éléments nommés* dans les types définis par l’utilisateur, ainsi que pour les *éléments de tableau* .  
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-Dans le cas de tableaux, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) dans la Q# bibliothèque standard fournit les outils nécessaires pour de nombreux besoins d’initialisation et de manipulation de tableau communs, ce qui permet d’éviter d’avoir à mettre à jour les éléments de tableau en premier lieu. 
+Dans le cas de tableaux, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) dans la Q# bibliothèque standard fournit les outils nécessaires pour de nombreux besoins d’initialisation et de manipulation de tableau communs, ce qui permet d’éviter d’avoir à mettre à jour les éléments de tableau en premier lieu. 
 
 Les instructions Update-and-Assign fournissent une alternative si nécessaire :
 
@@ -135,7 +135,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-À l’aide des outils de bibliothèque pour les tableaux fournis dans [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) , vous pouvez, par exemple, définir facilement une fonction qui retourne un tableau de `Pauli` types où l’élément à l’index `i` prend une `Pauli` valeur donnée, et toutes les autres entrées sont l’identité ( `PauliI` ).
+À l’aide des outils de bibliothèque pour les tableaux fournis dans [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) , vous pouvez, par exemple, définir facilement une fonction qui retourne un tableau de `Pauli` types où l’élément à l’index `i` prend une `Pauli` valeur donnée, et toutes les autres entrées sont l’identité ( `PauliI` ).
 
 Voici deux définitions d’une telle fonction, avec la seconde tirant parti des outils de notre disposition.
 
@@ -150,7 +150,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 }
 ```
 
-Au lieu d’effectuer une itération au sein de chaque index du tableau, et de le définir de manière conditionnelle sur `PauliI` ou sur le donné `pauli` , vous pouvez utiliser à la place de `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) pour créer un tableau de `PauliI` types, puis simplement retourner une expression de copie et de mise à jour dans laquelle vous avez modifié la valeur spécifique au niveau de l’index `location` :
+Au lieu d’effectuer une itération au sein de chaque index du tableau, et de le définir de manière conditionnelle sur `PauliI` ou sur le donné `pauli` , vous pouvez utiliser à la place de `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) pour créer un tableau de `PauliI` types, puis simplement retourner une expression de copie et de mise à jour dans laquelle vous avez modifié la valeur spécifique au niveau de l’index `location` :
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {

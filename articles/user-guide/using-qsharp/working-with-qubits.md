@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 9a3d7e03016332a04ac9d1610428b6fcd546d1f6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835857"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691580"
 ---
 # <a name="working-with-qubits"></a>Utilisation des qubits
 
@@ -29,14 +29,14 @@ Cet article explore l’utilisation de et de l’utilisation de qubits dans un Q
 
 Étant donné que les qubits physiques sont une ressource précieuse dans un ordinateur quantique, une partie du travail du compilateur consiste à s’assurer qu’ils sont utilisés aussi efficacement que possible.
 Par conséquent, vous devez demander Q# à d' *allouer* qubits pour une utilisation dans un bloc d’instructions particulier.
-Vous pouvez allouer qubits comme un qubit unique, ou comme un tableau de qubits, connu sous le nom de *Registre*. 
+Vous pouvez allouer qubits comme un qubit unique, ou comme un tableau de qubits, connu sous le nom de *Registre* . 
 
 ### <a name="clean-qubits"></a>Nettoyer qubits
 
 Utilisez l' `using` instruction pour allouer de nouvelles qubits à utiliser au cours d’un bloc d’instructions.
 
 L’instruction se compose du mot clé `using` , suivi d’une liaison placée entre parenthèses `( )` et du bloc d’instructions dans lequel les qubits sont disponibles.
-La liaison suit le même modèle que les `let` instructions : un symbole unique ou un tuple de symboles, suivi d’un signe égal `=` et d’une valeur unique ou d’un tuple correspondant d' *initialiseurs*.
+La liaison suit le même modèle que les `let` instructions : un symbole unique ou un tuple de symboles, suivi d’un signe égal `=` et d’une valeur unique ou d’un tuple correspondant d' *initialiseurs* .
 
 Les initialiseurs sont disponibles pour un qubit unique, indiqué comme `Qubit()` , ou un tableau de qubits, `Qubit[n]` , où `n` est une `Int` expression.
 Par exemple,
@@ -95,7 +95,7 @@ Dans certains cas, il s’agit de tout ce qu’un Q# programme peut faire avec u
 Cet article présente quelques Q# opérations utiles que vous pouvez utiliser pour interagir avec qubits.
 Pour plus d’informations sur ces éléments et d’autres, consultez [fonctions et opérations intrinsèques](xref:microsoft.quantum.libraries.standard.prelude). 
 
-Tout d’abord, les opérateurs Pauli à qubit unique $X $, $Y $ et $Z $ sont représentés Q# par les opérations intrinsèques [`X`](xref:microsoft.quantum.intrinsic.x) , [`Y`](xref:microsoft.quantum.intrinsic.y) et [`Z`](xref:microsoft.quantum.intrinsic.z) , chacune d’elles ayant le type `(Qubit => Unit is Adj + Ctl)` .
+Tout d’abord, les opérateurs Pauli à qubit unique $X $, $Y $ et $Z $ sont représentés Q# par les opérations intrinsèques [`X`](xref:Microsoft.Quantum.Intrinsic.X) , [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) et [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) , chacune d’elles ayant le type `(Qubit => Unit is Adj + Ctl)` .
 
 Comme décrit dans [opérations et fonctions intrinsèques](xref:microsoft.quantum.libraries.standard.prelude), imaginez $X $ et, par conséquent, `X` une opération de retournement de bits ou pas de porte.
 Vous pouvez utiliser l' `X` opération pour préparer les États de la forme $ \ket{s_0 s_1 \dots S_N} $ pour certaines chaînes de bits classiques $s $ :
@@ -127,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Plus tard, vous verrez des méthodes plus compactes pour l’écriture de cette opération qui ne nécessitent pas de contrôle manuel.
 
-Vous pouvez également préparer des États tels que $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ et $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\Sqrt {2} $ en utilisant la transformation hadarmard $H $, qui est représentée Q# par l’opération intrinsèque [`H`](xref:microsoft.quantum.intrinsic.h) (également de type (qubit => unité est Adj + CTL) ') :
+Vous pouvez également préparer des États tels que $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ et $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\Sqrt {2} $ en utilisant la transformation hadarmard $H $, qui est représentée Q# par l’opération intrinsèque [`H`](xref:Microsoft.Quantum.Intrinsic.H) (également de type (qubit => unité est Adj + CTL) ') :
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -149,7 +149,7 @@ La base de *calcul* fait référence à la base `PauliZ` et est la base la plus 
 
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Mesure d’un qubit unique dans la `PauliZ` base
 
-Utilisez l' [`M`](xref:microsoft.quantum.intrinsic.m) opération, qui est une opération intrinsèque non unitaire intégrée, pour mesurer un qubit unique dans la `PauliZ` base et assigner une valeur classique au résultat.
+Utilisez l' [`M`](xref:Microsoft.Quantum.Intrinsic.M) opération, qui est une opération intrinsèque non unitaire intégrée, pour mesurer un qubit unique dans la `PauliZ` base et assigner une valeur classique au résultat.
 `M` a un type de retour réservé, `Result` , qui peut uniquement prendre des valeurs `Zero` ou `One` correspond aux États mesurés $ \ket {0} $ ou $ \ket {1} $-indiquant que le résultat n’est plus un État Quantum.
 
 Un exemple simple est l’opération suivante, qui alloue un qubit dans l’État $ \ket {0} $, puis lui applique une opération hadarmard `H` et mesure le résultat dans la `PauliZ` base.
@@ -175,7 +175,7 @@ operation MeasureOneQubit() : Result {
 
 ### <a name="measure-one-or-more-qubits-in-specific-bases"></a>Mesure d’un ou plusieurs qubits dans des bases spécifiques
 
-Pour mesurer un tableau d’un ou plusieurs qubits dans des bases spécifiques, vous pouvez utiliser l' [`Measure`](xref:microsoft.quantum.intrinsic.measure) opération.
+Pour mesurer un tableau d’un ou plusieurs qubits dans des bases spécifiques, vous pouvez utiliser l' [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) opération.
 
 Les entrées de `Measure` sont un tableau de `Pauli` types (par exemple, `[PauliX, PauliZ, PauliZ]` ) et un tableau de qubits.
 

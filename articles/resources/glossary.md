@@ -107,7 +107,7 @@ Une [opération](xref:microsoft.quantum.glossary#operation) ou une [fonction](xr
 
 ## <a name="clifford-group"></a>Groupe Clifford
 
-L’ensemble des opérations qui occupent le octants de la [sphère Bloch](xref:microsoft.quantum.glossary#bloch-sphere) et les permutations d’effet des [opérateurs Pauli](xref:microsoft.quantum.glossary#pauli-operators). Celles-ci incluent les opérations [ $ X $ ](xref:microsoft.quantum.intrinsic.x), [ $ Y $ ](xref:microsoft.quantum.intrinsic.y), [ $ Z $ ](xref:microsoft.quantum.intrinsic.z), [ $ H $ ](xref:microsoft.quantum.intrinsic.h) et [ $ S $ ](xref:microsoft.quantum.intrinsic.s).
+L’ensemble des opérations qui occupent le octants de la [sphère Bloch](xref:microsoft.quantum.glossary#bloch-sphere) et les permutations d’effet des [opérateurs Pauli](xref:microsoft.quantum.glossary#pauli-operators). Celles-ci incluent les opérations [ $ X $ ](xref:Microsoft.Quantum.Intrinsic.X), [ $ Y $ ](xref:Microsoft.Quantum.Intrinsic.Y), [ $ Z $ ](xref:Microsoft.Quantum.Intrinsic.Z), [ $ H $ ](xref:Microsoft.Quantum.Intrinsic.H) et [ $ S $ ](xref:Microsoft.Quantum.Intrinsic.S).
 
 ## <a name="controlled"></a>Contrôl
 
@@ -150,7 +150,7 @@ Lorsque deux [États](xref:microsoft.quantum.glossary#quantum-state) sont identi
 
 ## <a name="hadamard"></a>Hadamard
 
-L’opération hadarmard (également appelée porte ou transformation hadarmard) agit sur un seul [qubit](xref:microsoft.quantum.glossary#qubit) et la place dans une [superposition](xref:microsoft.quantum.glossary#superposition) égale à $ \ket { 0 } $ ou $ \ket { 1 } $ si le qubit est initialement dans l' $ \ket { } $ État 0. Dans Q# , cette opération est appliquée par l’opération prédéfinie [`H`](xref:microsoft.quantum.intrinsic.h) .
+L’opération hadarmard (également appelée porte ou transformation hadarmard) agit sur un seul [qubit](xref:microsoft.quantum.glossary#qubit) et la place dans une [superposition](xref:microsoft.quantum.glossary#superposition) égale à $ \ket { 0 } $ ou $ \ket { 1 } $ si le qubit est initialement dans l' $ \ket { } $ État 0. Dans Q# , cette opération est appliquée par l’opération prédéfinie [`H`](xref:Microsoft.Quantum.Intrinsic.H) .
 
 ## <a name="immutable"></a>Non modifiable
 
@@ -182,11 +182,11 @@ Sous-routine qui fournit des informations dépendantes aux données à un algori
 
 ## <a name="partial-application"></a>Application partielle
 
-Appel d’une [fonction](xref:microsoft.quantum.glossary#function) ou d’une [opération](xref:microsoft.quantum.glossary#operation) sans toutes les entrées requises. Cela retourne un nouvel [appelable](xref:microsoft.quantum.glossary#callable) qui n’a besoin que des paramètres manquants (indiqués par un trait de soulignement) à fournir au cours d’une prochaine application. Par exemple, étant donné la fonction, `MyFunc(x : int, y : int) : int {return x + y;}` vous pouvez l’appliquer partiellement à une nouvelle fonction `let NewFunc = MyFunc(_, 3)` . Vous pouvez ensuite appeler la nouvelle fonction ultérieurement avec le paramètre manquant `NewFunc(2)` qui retourne la valeur *5*.  Pour plus d’informations, consultez [application partielle](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
+Appel d’une [fonction](xref:microsoft.quantum.glossary#function) ou d’une [opération](xref:microsoft.quantum.glossary#operation) sans toutes les entrées requises. Cela retourne un nouvel [appelable](xref:microsoft.quantum.glossary#callable) qui n’a besoin que des paramètres manquants (indiqués par un trait de soulignement) à fournir au cours d’une prochaine application. Par exemple, étant donné la fonction, `MyFunc(x : int, y : int) : int {return x + y;}` vous pouvez l’appliquer partiellement à une nouvelle fonction `let NewFunc = MyFunc(_, 3)` . Vous pouvez ensuite appeler la nouvelle fonction ultérieurement avec le paramètre manquant `NewFunc(2)` qui retourne la valeur *5* .  Pour plus d’informations, consultez [application partielle](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
 
 ## <a name="pauli-operators"></a>Pauli, opérateurs
 
-Ensemble de trois matrices d’unités de 2 x 2, appelées `X` `Y` opérations de `Z` Quantum et. La matrice d’identité, $ I $ , est souvent incluse dans le jeu également.  $I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} $ , $ X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} $ .   Pour plus d’informations, consultez [opérations à qubit unique](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
+Ensemble de matrices d’unités 3 2 x 2, appelées `X` opérations de `Y` `Z` Quantum et. La matrice d’identité, $ I $ , est souvent incluse dans le jeu également.  $I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} $ , $ X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} $ .   Pour plus d’informations, consultez [opérations à qubit unique](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 
 ## <a name="quantum-circuit-diagram"></a>Diagramme de circuit quantique
 

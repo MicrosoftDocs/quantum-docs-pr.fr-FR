@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835840"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691591"
 ---
 # <a name="expressions-in-no-locq"></a>Expressions dans Q#
 
@@ -40,7 +40,7 @@ let bigOne = bigZero + 1L;
 Elles peuvent être écrites avec ou sans virgule décimale, `.` , ou une partie exponentielle indiquée par « e » ou « e » (après quoi seuls un signe négatif et des chiffres décimaux possibles sont valides).
 Les littéraux valides sont les suivants `Double` : `0.0` , `1.2e5` , `1e-5` .
 
-À partir d’une expression de tableau de tout type d’élément, vous pouvez former une `Int` expression à l’aide de la [`Length`](xref:microsoft.quantum.core.length) fonction intégrée, avec l’expression de tableau placée entre parenthèses.
+À partir d’une expression de tableau de tout type d’élément, vous pouvez former une `Int` expression à l’aide de la [`Length`](xref:Microsoft.Quantum.Core.Length) fonction intégrée, avec l’expression de tableau placée entre parenthèses.
 Par exemple, si `a` est lié à un tableau, `Length(a)` est une expression d’entier.
 Si `b` est un tableau de tableaux d’entiers, `Int[][]` , `Length(b)` est le nombre de sous-tableaux dans `b` , et `Length(b[1])` est le nombre d’entiers dans le deuxième sous-tableau de `b` .
 
@@ -111,7 +111,7 @@ Compte tenu de deux expressions booléennes, utilisez l' `and` opérateur binair
 
 ## <a name="string-expressions"></a>Expressions de chaîne
 
-Q# autorise l’utilisation de chaînes dans l' `fail` instruction (expliquée dans le [Workflow de contrôle](xref:microsoft.quantum.guide.controlflow#fail-statement)) et dans la [`Message`](xref:microsoft.quantum.intrinsic.message) fonction standard. Le comportement spécifique de ce dernier dépend du simulateur utilisé, mais écrit généralement un message dans la console hôte lorsqu’il est appelé pendant un Q# programme.
+Q# autorise l’utilisation de chaînes dans l' `fail` instruction (expliquée dans le [Workflow de contrôle](xref:microsoft.quantum.guide.controlflow#fail-statement)) et dans la [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) fonction standard. Le comportement spécifique de ce dernier dépend du simulateur utilisé, mais écrit généralement un message dans la console hôte lorsqu’il est appelé pendant un Q# programme.
 
 Les chaînes dans Q# sont des littéraux ou des chaînes interpolées.
 
@@ -128,7 +128,7 @@ La Q# syntaxe pour les interpolations de chaînes est un sous-ensemble de la syn
 
 * Pour identifier un littéral de chaîne comme chaîne interpolée, préfixez-la du symbole `$`. Il ne peut pas y avoir d’espace blanc entre le `$` et le `"` qui démarre un littéral de chaîne.
 
-* L’exemple suivant est un exemple de base [`Message`](xref:microsoft.quantum.intrinsic.message) qui utilise la fonction pour écrire le résultat d’une mesure dans la console, en même temps que d’autres Q# expressions.
+* L’exemple suivant est un exemple de base [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) qui utilise la fonction pour écrire le résultat d’une mesure dans la console, en même temps que d’autres Q# expressions.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -189,7 +189,7 @@ Par exemple, `(1, One)` est une `(Int, Result)` expression.
 
 À part les littéraux, les seules expressions de tuple sont des symboles liés à des valeurs de tuple, des éléments de tableau de tableaux de tuples et des appels pouvant être appelés qui retournent des tuples.
 
-## <a name="user-defined-type-expressions"></a>Expressions de type défini par l’utilisateur
+## <a name="user-defined-type-expressions"></a>Expressions de type User-Defined
 
 Un littéral d’un type défini par l’utilisateur se compose du nom du type suivi d’un littéral de tuple du type de tuple de base du type.
 Par exemple, si `IntPair` est un type défini par l’utilisateur basé sur `(Int, Int)` , `IntPair(2, 3)` est un littéral valide de ce type.
@@ -237,7 +237,7 @@ Dans la plupart des cas, il s’agit d’une variante de zéro.
 
 Pour qubits et callables, qui sont des références à des entités, il n’existe pas de valeur par défaut raisonnable.
 Par conséquent, pour ces types, la valeur par défaut est une référence non valide que vous ne pouvez pas utiliser sans générer d’erreur d’exécution, similaire à une référence null dans des langages tels que C# ou Java.
-Les tableaux contenant qubits ou callables doivent être initialisés avec des valeurs autres que celles par défaut avant de pouvoir utiliser leurs éléments en toute sécurité. Pour les routines d’initialisation appropriées, consultez <xref:microsoft.quantum.arrays> .
+Les tableaux contenant qubits ou callables doivent être initialisés avec des valeurs autres que celles par défaut avant de pouvoir utiliser leurs éléments en toute sécurité. Pour les routines d’initialisation appropriées, consultez <xref:Microsoft.Quantum.Arrays> .
 
 Les valeurs par défaut pour chaque type sont :
 

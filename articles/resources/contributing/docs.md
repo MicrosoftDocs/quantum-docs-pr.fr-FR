@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759677"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691784"
 ---
 # <a name="improving-documentation"></a>Amélioration de la documentation
 
@@ -46,7 +46,7 @@ Nous décrirons plus en détail les requêtes de tirage ci-dessous, mais pour l�
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Référencement d’un exemple de code à partir d’articles conceptuels
 
-Si vous souhaitez inclure du code à partir du [référentiel d’exemples](https://github.com/Microsoft/Quantum), vous pouvez le faire à l’aide d’une commande spéciale DocFX-Flavored dismarque :
+Si vous souhaitez inclure du code à partir du [référentiel d’exemples](https://github.com/Microsoft/Quantum), vous pouvez le faire à l’aide d’une commande spéciale DocFX-Flavored démarque :
 
 ```markdown
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
@@ -138,7 +138,7 @@ Pour l’exemple de `ControlledOnBitString` , nous pouvons écrire une commande 
  }
 ```
 
-Vous pouvez voir la version rendue du code ci-dessus dans la [documentation de l’API pour la `ControlledOnBitString` fonction](xref:microsoft.quantum.canon.controlledonbitstring).
+Vous pouvez voir la version rendue du code ci-dessus dans la [documentation de l’API pour la `ControlledOnBitString` fonction](xref:Microsoft.Quantum.Canon.ControlledOnBitString).
 
 En plus de la pratique générale de la rédaction de documentation, l’écriture de commentaires de documentation API permet de garder à l’esprit les points suivants :
 

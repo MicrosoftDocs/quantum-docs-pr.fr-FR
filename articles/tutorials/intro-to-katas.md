@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 097d7f70088b6ee84a1e91ee99be59149dd9e15b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b2eff2a457b809bd168b9b59ab013b7fc7541e6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834820"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691648"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Découvrez l’informatique quantique avec les katas quantiques
 
@@ -55,7 +55,7 @@ Découvrez les concepts et les principes de base de l’informatique quantique, 
 |[Reconnaissance des portes quantiques](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|Une série d’exercices conçus pour vous familiariser avec les portes quantique de base dans Q# . Comprend des exercices pour les portes à qubit unique, les portes multiqubits, les portes adjacentes et les portes contrôlées, ainsi que des exercices expliquant comment utiliser les portes pour modifier l’état d’un qubit.|
 |[Création d’une superposition quantique](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|Utilisez ces exercices pour vous familiariser avec le concept de superposition et de programmation dans Q# . Comprend des exercices pour les portes qubit et qubit de base, la superposition et le contrôle de Flow et la récursivité dans Q# .|
 |[Distinction des états quantiques à l’aide de mesures](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|Faites ces exercices pendant votre apprentissage de la mesure quantique, ainsi que des états orthogonaux et non orthogonaux. |
-|[Mesures communes](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Découvrez les mesures de parité communes et comment utiliser l’opération [Measure](xref:microsoft.quantum.intrinsic.measure) pour distinguer les états quantiques.|
+|[Mesures communes](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Découvrez les mesures de parité communes et comment utiliser l’opération [Measure](xref:Microsoft.Quantum.Intrinsic.Measure) pour distinguer les états quantiques.|
 
 ### <a name="algorithms"></a>Algorithmes
 

@@ -9,22 +9,22 @@ uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835976"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690956"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Simulateur de traces Quantum : compteur d’opérations primitives
 
 Le compteur d’opérations primitifs fait partie du [simulateur](xref:microsoft.quantum.machines.qc-trace-simulator.intro)Quantum Development Kit. Il compte le nombre de processus primitifs utilisés par chaque opération appelée dans un programme Quantum. 
 
-Toutes les <xref:microsoft.quantum.intrinsic> opérations sont exprimées en termes de rotations à qubit unique, d’opérations T, d’opérations de Clifford qubit, d’opérations cnotin et de mesures de plusieurs qubit Pauli observables. Le compteur opérations primitives agrège et collecte des statistiques sur tous les bords du [graphique des appels](https://en.wikipedia.org/wiki/Call_graph)de l’opération.
+Toutes les <xref:Microsoft.Quantum.Intrinsic> opérations sont exprimées en termes de rotations à qubit unique, d’opérations T, d’opérations de Clifford qubit, d’opérations cnotin et de mesures de plusieurs qubit Pauli observables. Le compteur opérations primitives agrège et collecte des statistiques sur tous les bords du [graphique des appels](https://en.wikipedia.org/wiki/Call_graph)de l’opération.
 
 ## <a name="invoking-the-primitive-operation-counter"></a>Appel du compteur d’opérations primitifs
 
-Pour exécuter le simulateur de trace Quantum avec le compteur d’opérations primitifs, vous devez créer une <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, affecter la `UsePrimitiveOperationsCounter` **valeur true**à la propriété, puis créer une nouvelle <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance avec le `QCTraceSimulatorConfiguration` comme paramètre.
+Pour exécuter le simulateur de trace Quantum avec le compteur d’opérations primitifs, vous devez créer une <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, affecter la `UsePrimitiveOperationsCounter` **valeur true** à la propriété, puis créer une nouvelle <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance avec le `QCTraceSimulatorConfiguration` comme paramètre.
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Utilisation du compteur d’opérations primitifs dans un programme hôte C#
 
-L’exemple C# qui suit dans cette section compte le nombre <xref:microsoft.quantum.intrinsic.t> d’opérations nécessaires pour implémenter l' <xref:microsoft.quantum.intrinsic.ccnot> opération, en fonction de l' Q# exemple de code suivant :
+L’exemple C# qui suit dans cette section compte le nombre <xref:Microsoft.Quantum.Intrinsic.T> d’opérations nécessaires pour implémenter l' <xref:Microsoft.Quantum.Intrinsic.ccnot> opération, en fonction de l' Q# exemple de code suivant :
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833518"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691083"
 ---
 # <a name="control-flow-in-no-locq"></a>Workflow de contrôle dans Q#
 
@@ -38,10 +38,10 @@ Il se compose du mot clé `if` , d’une expression booléenne entre parenthèse
 Si vous le souhaitez, un nombre quelconque de clauses Else-If peuvent suivre, chacune comprenant le mot clé `elif` , une expression booléenne entre parenthèses et un bloc d’instructions (le bloc _else-if_ ).
 Enfin, l’instruction peut éventuellement se terminer par une clause Else, qui se compose du mot clé `else` suivi d’un autre bloc d’instructions (le bloc _else_ ).
 
-La `if` condition est évaluée, et si elle a la *valeur true*, le bloc *Then* est exécuté.
-Si la condition est *false*, la première condition else-if est évaluée ; Si la valeur est true, le bloc *else-if* est exécuté.
+La `if` condition est évaluée, et si elle a la *valeur true* , le bloc *Then* est exécuté.
+Si la condition est *false* , la première condition else-if est évaluée ; Si la valeur est true, le bloc *else-if* est exécuté.
 Dans le cas contraire, le deuxième bloc Else-If prend la valeur, puis le troisième, et ainsi de suite jusqu’à ce qu’une clause avec une condition true soit rencontrée ou qu’il n’y ait plus aucune clause else-if.
-Si la condition *If* d’origine et toutes les clauses Else-If ont la *valeur false*, le bloc *else* est exécuté, s’il est fourni.
+Si la condition *If* d’origine et toutes les clauses Else-If ont la *valeur false* , le bloc *else* est exécuté, s’il est fourni.
 
 Notez que, quel que soit le bloc exécuté, il s’exécute dans sa propre portée.
 Les liaisons effectuées à l’intérieur d’un `if` `elif` bloc, ou ne `else` sont pas visibles après la fin du bloc.
@@ -69,7 +69,7 @@ if (i == 1) {
 }
 ```
 
-## <a name="for-loop"></a>Boucle for
+## <a name="for-loop"></a>Boucle For
 
 L' `for` instruction prend en charge l’itération sur une plage d’entiers ou un tableau.
 L’instruction se compose du mot clé `for` , suivi d’un symbole ou d’un tuple de symbole, du mot clé et d’une `in` expression de type `Range` ou tableau, tous entre parenthèses et un bloc d’instructions.
@@ -129,7 +129,7 @@ où `expression` est une expression valide qui correspond à une valeur de type 
 Le corps de la boucle s’exécute, puis la condition est évaluée.
 Si la condition est true, l’instruction est terminée ; dans le cas contraire, la correction s’exécute et l’instruction s’exécute à nouveau, en commençant par le corps de la boucle.
 
-Les trois parties d’une boucle de service de contrôle d’accès (corps, test et correction) sont traitées comme une seule étendue *pour chaque répétition*, de sorte que les symboles liés dans le corps sont disponibles à la fois dans le test et dans la correction.
+Les trois parties d’une boucle de service de contrôle d’accès (corps, test et correction) sont traitées comme une seule étendue *pour chaque répétition* , de sorte que les symboles liés dans le corps sont disponibles à la fois dans le test et dans la correction.
 Toutefois, l’exécution de la correction met fin à l’étendue de l’instruction, de sorte que les liaisons de symboles effectuées pendant le corps ou la correction ne sont pas disponibles dans les répétitions suivantes.
 
 En outre, l' `fixup` instruction est souvent utile, mais pas toujours nécessaire.
@@ -324,7 +324,7 @@ Les fonctionnalités de programmation notables présentées dans cette opératio
 * Une partie plus complexe `fixup` de la boucle, qui implique des opérations Quantum. 
 * L’utilisation d' `AssertMeasurementProbability` instructions pour déterminer la probabilité de mesurer l’État Quantum à certains points spécifiés dans le programme.
 
-Pour plus d’informations sur [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) les [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) opérations et, consultez [test et débogage](xref:microsoft.quantum.guide.testingdebugging).
+Pour plus d’informations sur [`AssertMeasurement`](xref:Microsoft.Quantum.Diagnostics.assertmeasurement) les [`AssertMeasurementProbability`](xref:Microsoft.Quantum.Diagnostics.assertmeasurementprobability) opérations et, consultez [test et débogage](xref:microsoft.quantum.guide.testingdebugging).
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {

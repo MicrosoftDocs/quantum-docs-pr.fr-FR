@@ -89,7 +89,7 @@ Cette séquence de porte-clés revêt une importance fondamentale pour l’infor
 
 $$\mathrm{Cnotin } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-Les opérations ayant cette complexité ou une complexité accrue sont omniprésentes dans les algorithmes Quantum et la correction des erreurs Quantum. il doit donc s’avérer très utile de disposer d’une méthode simple pour la visualisation appelée *diagramme de circuit quantique*.
+Les opérations ayant cette complexité ou une complexité accrue sont omniprésentes dans les algorithmes Quantum et la correction des erreurs Quantum. il doit donc s’avérer très utile de disposer d’une méthode simple pour la visualisation appelée *diagramme de circuit quantique* .
 Le schéma de circuit pour la préparation de cet État Quantum enchevêtré de façon optimisée est le suivant :
 
 <!--- ![](.\media\1.svg) --->
@@ -109,7 +109,7 @@ Par exemple, le symbole
 <!--Ne trouve pas de moyen de facilement le centrer... une extension est probablement nécessaire :-->
 ![Symbole pour une opération Hadarmard agissant sur un registre à qubit unique](~/media/2.svg)
 
-est une opération [hadarmard](xref:microsoft.quantum.intrinsic.h) agissant sur un registre à qubit unique.
+est une opération [hadarmard](xref:Microsoft.Quantum.Intrinsic.H) agissant sur un registre à qubit unique.
 
 Les portes de Quantum sont triées dans l’ordre chronologique avec la porte la plus à gauche à mesure que la porte est appliquée en premier au qubits.
 En d’autres termes, si vous constatez que les câbles sont dépendants de l’État Quantum, les fils importent l’État Quantum par le biais de chacune des portes du diagramme, de gauche à droite.
@@ -150,7 +150,7 @@ En général, nous décrivons ces opérations contrôlées dans des diagrammes d
 ![Diagramme de circuit d’une porte contrôlée de façon unique](~/media/5.svg)
 
 Ici, le cercle noir désigne le bit Quantum sur lequel la porte est contrôlée et un câble vertical dénote l’unité qui est appliquée lorsque le contrôle qubit prend la valeur $ 1 $ .
-Dans les cas particuliers où $ g = X $ et $ g = Z, $ nous introduisons la notation suivante pour décrire la version contrôlée des portes (Notez que la porte contrôlée-X est la [ $ $ porte cnotin](xref:microsoft.quantum.intrinsic.cnot)) :
+Dans les cas particuliers où $ g = X $ et $ g = Z, $ nous introduisons la notation suivante pour décrire la version contrôlée des portes (Notez que la porte contrôlée-X est la [ $ $ porte cnotin](xref:Microsoft.Quantum.Intrinsic.CNOT)) :
 
 <!--- ![](.\media\6.svg) --->
 <!--Ne trouve pas de moyen de facilement le centrer... une extension est probablement nécessaire :-->
@@ -175,7 +175,7 @@ Plus précisément, un sous-circuit similaire à ce qui suit :
 <!--Ne trouve pas de moyen de facilement le centrer... une extension est probablement nécessaire :-->
 ![Symbole représentant une opération de mesure](~/media/7.svg)
 
-Q# implémente un [opérateur de mesure](xref:microsoft.quantum.intrinsic.measure) à cet effet.
+Q# implémente un [opérateur de mesure](xref:Microsoft.Quantum.Intrinsic.Measure) à cet effet.
 Pour plus d’informations, consultez la [section sur les mesures](xref:microsoft.quantum.libraries.standard.prelude#measurements) .
 
 De même, le sous-circuit
