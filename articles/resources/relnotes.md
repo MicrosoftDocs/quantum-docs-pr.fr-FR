@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fae603a81f8edc23ab8dc14277c5e3c4699f2cee
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d38482be17e67f180441440ee8ccc7f1f64ebc9d
+ms.sourcegitcommit: fb75d8f30f1d91f644b2a594f46867eb5968cfda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691679"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448342"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notes de publication de Microsoft Quantum Development Kit
 
@@ -23,6 +23,12 @@ Cet article contient des informations sur chaque version de Quantum Development 
 Pour obtenir des instructions d’installation, consultez le [Guide d’installation](xref:microsoft.quantum.install).
 
 Pour obtenir des instructions de mise à jour, consultez le [Guide de mise à jour](xref:microsoft.quantum.update).
+
+## <a name="version-01320111004"></a>Version 0.13.20111004
+
+*Date de publication : 10 novembre 2020*
+
+Cette version désactive les fonctionnalités IntelliSense pour les Q# fichiers dans Visual Studio et Visual Studio code lorsqu’un fichier projet n’est pas présent. Cela résout un problème où les fonctionnalités IntelliSense peuvent cesser de fonctionner après l’ajout Q# d’un nouveau fichier à un projet (consultez [qsharp-compiler # 720](https://github.com/microsoft/qsharp-compiler/issues/720)).
 
 ## <a name="version-01320102604"></a>Version 0.13.20102604
 
