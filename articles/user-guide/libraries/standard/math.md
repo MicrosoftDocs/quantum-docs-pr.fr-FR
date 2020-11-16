@@ -1,13 +1,13 @@
 ---
-title: 'Math dans les :::no-loc(Q#)::: bibliothèques standard'
-description: 'Découvrez les fonctions mathématiques classiques des :::no-loc(Q#)::: bibliothèques standard utilisées avec les types de données intégrés.'
+title: 'Math dans les Q# bibliothèques standard'
+description: 'Découvrez les fonctions mathématiques classiques des Q# bibliothèques standard utilisées avec les types de données intégrés.'
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 6de1574341d67c569cd2f040ec533e263fdd386e
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -17,7 +17,7 @@ ms.locfileid: "92692055"
 ---
 # <a name="classical-mathematical-functions"></a><span data-ttu-id="598f6-103">Fonctions mathématiques classiques</span><span class="sxs-lookup"><span data-stu-id="598f6-103">Classical Mathematical Functions</span></span> #
 
-<span data-ttu-id="598f6-104">Ces fonctions sont principalement utilisées pour travailler avec les :::no-loc(Q#)::: types de données intégrés `Int` , `Double` et `Range` .</span><span class="sxs-lookup"><span data-stu-id="598f6-104">These functions are primarily used to work with the :::no-loc(Q#)::: built-in data types `Int`, `Double`, and `Range`.</span></span>
+<span data-ttu-id="598f6-104">Ces fonctions sont principalement utilisées pour travailler avec les Q# types de données intégrés `Int` , `Double` et `Range` .</span><span class="sxs-lookup"><span data-stu-id="598f6-104">These functions are primarily used to work with the Q# built-in data types `Int`, `Double`, and `Range`.</span></span>
 
 <span data-ttu-id="598f6-105">L' <xref:Microsoft.Quantum.Intrinsic.Random> opération a une signature `(Double[] => Int)` .</span><span class="sxs-lookup"><span data-stu-id="598f6-105">The <xref:Microsoft.Quantum.Intrinsic.Random> operation has signature `(Double[] => Int)`.</span></span>
 <span data-ttu-id="598f6-106">Il prend un tableau de doubles comme entrée et retourne un index sélectionné de façon aléatoire dans le tableau en tant que `Int` .</span><span class="sxs-lookup"><span data-stu-id="598f6-106">It takes an array of doubles as input, and returns a randomly-selected index into the array as an `Int`.</span></span>

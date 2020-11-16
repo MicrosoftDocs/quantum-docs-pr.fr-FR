@@ -1,14 +1,14 @@
 ---
 title: Simulateur de traces quantiques - Kit de développement Microsoft Quantum
-description: Découvrez comment utiliser le simulateur de traces d’ordinateur quantiques de Microsoft pour déboguer du code classique et estimer les besoins en ressources d’un programme :::no-loc(Q#):::.
+description: Découvrez comment utiliser le simulateur de traces d’ordinateur quantiques de Microsoft pour déboguer du code classique et estimer les besoins en ressources d’un programme Q#.
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
@@ -25,7 +25,7 @@ ms.locfileid: "92690829"
 
 ## <a name="invoking-the-quantum-trace-simulator"></a><span data-ttu-id="d6891-110">Appel du simulateur de traces quantiques</span><span class="sxs-lookup"><span data-stu-id="d6891-110">Invoking the quantum trace simulator</span></span>
 
-<span data-ttu-id="d6891-111">Vous pouvez utiliser le simulateur de traces quantiques pour exécuter n’importe quelle opération :::no-loc(Q#):::.</span><span class="sxs-lookup"><span data-stu-id="d6891-111">You can use the quantum trace simulator to run any :::no-loc(Q#)::: operation.</span></span>
+<span data-ttu-id="d6891-111">Vous pouvez utiliser le simulateur de traces quantiques pour exécuter n’importe quelle opération Q#.</span><span class="sxs-lookup"><span data-stu-id="d6891-111">You can use the quantum trace simulator to run any Q# operation.</span></span>
 
 <span data-ttu-id="d6891-112">Comme pour les autres ordinateurs cibles, vous devez d’abord créer une instance de la classe `QCTraceSimulator`, puis la passer en tant que premier paramètre de la méthode `Run` d’une opération.</span><span class="sxs-lookup"><span data-stu-id="d6891-112">As with other target machines, you first create an instance of the `QCTraceSimulator` class and then pass it as the first parameter of an operation's `Run` method.</span></span>
 
@@ -94,7 +94,7 @@ operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
 
 ## <a name="qctracesimulator-methods"></a><span data-ttu-id="d6891-139">Méthodes QCTraceSimulator</span><span class="sxs-lookup"><span data-stu-id="d6891-139">QCTraceSimulator methods</span></span>
 
-<span data-ttu-id="d6891-140">`QCTraceSimulator` comprend plusieurs méthodes intégrées permettant de récupérer les valeurs des métriques suivies au cours d’une opération quantique.</span><span class="sxs-lookup"><span data-stu-id="d6891-140">`QCTraceSimulator` has several built-in methods to retrieve the values of the metrics tracked during a quantum operation.</span></span> <span data-ttu-id="d6891-141">Vous trouverez des exemples pour les méthodes [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) et [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) dans les articles [Compteur d’opérations primitives](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Compteur de profondeur](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) et [Compteur de largeur](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter).</span><span class="sxs-lookup"><span data-stu-id="d6891-141">Examples of the [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) and the [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) methods can be found in the [Primitive operations counter](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter), and [Width counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) articles.</span></span> <span data-ttu-id="d6891-142">Pour plus d’informations sur les méthodes disponibles, consultez [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) dans la référence de l’API :::no-loc(Q#):::.</span><span class="sxs-lookup"><span data-stu-id="d6891-142">For more information on all available methods, see [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) in the :::no-loc(Q#)::: API reference.</span></span>  
+<span data-ttu-id="d6891-140">`QCTraceSimulator` comprend plusieurs méthodes intégrées permettant de récupérer les valeurs des métriques suivies au cours d’une opération quantique.</span><span class="sxs-lookup"><span data-stu-id="d6891-140">`QCTraceSimulator` has several built-in methods to retrieve the values of the metrics tracked during a quantum operation.</span></span> <span data-ttu-id="d6891-141">Vous trouverez des exemples pour les méthodes [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) et [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) dans les articles [Compteur d’opérations primitives](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Compteur de profondeur](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) et [Compteur de largeur](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter).</span><span class="sxs-lookup"><span data-stu-id="d6891-141">Examples of the [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) and the [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) methods can be found in the [Primitive operations counter](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter), and [Width counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) articles.</span></span> <span data-ttu-id="d6891-142">Pour plus d’informations sur les méthodes disponibles, consultez [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) dans la référence de l’API Q#.</span><span class="sxs-lookup"><span data-stu-id="d6891-142">For more information on all available methods, see [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) in the Q# API reference.</span></span>  
 
 ## <a name="see-also"></a><span data-ttu-id="d6891-143">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d6891-143">See also</span></span>
 
