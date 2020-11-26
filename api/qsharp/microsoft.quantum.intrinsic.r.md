@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.R
 title: Opération R
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies a rotation about the given Pauli axis.
 
   \begin{align} R_{\mu}(\theta) \mathrel{:=} e^{-i \theta \sigma_{\mu} / 2}, \end{align} where $\mu \in \{I, X, Y, Z\}$.
-ms.openlocfilehash: 7d1d51031f4587b1c501feab459e614fc1530457
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 89aa5b2867068d4352a0b9550e8d22aa77439111
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707150"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199027"
 ---
 # <a name="r-operation"></a>Opération R
 
 Espace de noms : [Microsoft. Quantum. Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Applique une rotation autour de l’axe Pauli donné.
@@ -29,7 +29,7 @@ Applique une rotation autour de l’axe Pauli donné.
 \begin{align} R_ {\mu} (\Theta) \mathrel{ : =} e ^ {-i \Theta \ sigma_ {\mu}/2}, \end{align} où $ \mu \Dans \{ i, X, Y, Z \} $.
 
 ```qsharp
-operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit
+operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -57,4 +57,4 @@ Qubit auquel la porte doit être appliquée.
 
 ## <a name="remarks"></a>Notes
 
-Quand elle est appelée avec `pauli = PauliI` , cette opération applique une *phase globale* . Cette phase peut être significative lorsqu’elle est utilisée avec `Controlled` functor.
+Quand elle est appelée avec `pauli = PauliI` , cette opération applique une *phase globale*. Cette phase peut être significative lorsqu’elle est utilisée avec `Controlled` functor.
