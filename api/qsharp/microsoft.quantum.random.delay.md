@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.Delay
 title: Opération de retardement
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: Delay
 qsharp.summary: ''
-ms.openlocfilehash: f5b61252705eb8f6112f1cd253607ed8be5b8828
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 98be442282d03f47d446dbb08635d79de00a2aad
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701890"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210197"
 ---
-# <a name="delay-operation"></a><span data-ttu-id="c75c8-102">Opération de retardement</span><span class="sxs-lookup"><span data-stu-id="c75c8-102">Delay operation</span></span>
+# <a name="delay-operation"></a><span data-ttu-id="b9707-102">Opération de retardement</span><span class="sxs-lookup"><span data-stu-id="b9707-102">Delay operation</span></span>
 
-<span data-ttu-id="c75c8-103">Espace de noms : [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)</span><span class="sxs-lookup"><span data-stu-id="c75c8-103">Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)</span></span>
+<span data-ttu-id="b9707-103">Espace de noms : [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)</span><span class="sxs-lookup"><span data-stu-id="b9707-103">Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)</span></span>
 
-<span data-ttu-id="c75c8-104">Packages [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="c75c8-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="b9707-104">Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="b9707-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 
@@ -28,32 +28,32 @@ operation Delay<'TInput, 'TOutput> (op : ('TInput => 'TOutput), input : 'TInput,
 ```
 
 
-## <a name="input"></a><span data-ttu-id="c75c8-105">Entrée</span><span class="sxs-lookup"><span data-stu-id="c75c8-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="b9707-105">Entrée</span><span class="sxs-lookup"><span data-stu-id="b9707-105">Input</span></span>
 
-### <a name="op--tinput--toutput"></a><span data-ttu-id="c75c8-106">OP : 'TInput => 'TOutput</span><span class="sxs-lookup"><span data-stu-id="c75c8-106">op : 'TInput => 'TOutput</span></span> 
-
-
-
-
-### <a name="input--tinput"></a><span data-ttu-id="c75c8-107">entrée : 'TInput</span><span class="sxs-lookup"><span data-stu-id="c75c8-107">input : 'TInput</span></span>
+### <a name="op--tinput--toutput"></a><span data-ttu-id="b9707-106">OP : 'TInput => 'TOutput</span><span class="sxs-lookup"><span data-stu-id="b9707-106">op : 'TInput => 'TOutput</span></span> 
 
 
 
 
-### <a name="delay--unit"></a><span data-ttu-id="c75c8-108">délai : [unité](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="c75c8-108">delay : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+### <a name="input--tinput"></a><span data-ttu-id="b9707-107">entrée : 'TInput</span><span class="sxs-lookup"><span data-stu-id="b9707-107">input : 'TInput</span></span>
+
+
+
+
+### <a name="delay--unit"></a><span data-ttu-id="b9707-108">délai : [unité](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="b9707-108">delay : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
 
 
 
 
-## <a name="output--toutput"></a><span data-ttu-id="c75c8-109">Sortie : 'TOutput</span><span class="sxs-lookup"><span data-stu-id="c75c8-109">Output : 'TOutput</span></span>
+## <a name="output--toutput"></a><span data-ttu-id="b9707-109">Sortie : 'TOutput</span><span class="sxs-lookup"><span data-stu-id="b9707-109">Output : 'TOutput</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="c75c8-110">Paramètres de type</span><span class="sxs-lookup"><span data-stu-id="c75c8-110">Type Parameters</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="b9707-110">Paramètres de type</span><span class="sxs-lookup"><span data-stu-id="b9707-110">Type Parameters</span></span>
 
-### <a name="tinput"></a><span data-ttu-id="c75c8-111">'TInput</span><span class="sxs-lookup"><span data-stu-id="c75c8-111">'TInput</span></span>
+### <a name="tinput"></a><span data-ttu-id="b9707-111">'TInput</span><span class="sxs-lookup"><span data-stu-id="b9707-111">'TInput</span></span>
 
 
-### <a name="toutput"></a><span data-ttu-id="c75c8-112">«TOutput</span><span class="sxs-lookup"><span data-stu-id="c75c8-112">'TOutput</span></span>
+### <a name="toutput"></a><span data-ttu-id="b9707-112">«TOutput</span><span class="sxs-lookup"><span data-stu-id="b9707-112">'TOutput</span></span>
 
