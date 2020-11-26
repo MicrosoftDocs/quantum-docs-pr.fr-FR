@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.PauliEvolutionImpl
 title: Opération PauliEvolutionImpl
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Represents a dynamical generator as a set of simulatable gates and an expansion in the Pauli basis.
 
   See [Dynamical Generator Modeling](/quantum/libraries/data-structures#dynamical-generator-modeling) for more details.
-ms.openlocfilehash: 2fc9fda2dd6eec71d8b17ba8a00d8545e517eec8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 868f3eef187e8e993127cfcab21e1574583ac845
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706667"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229135"
 ---
 # <a name="paulievolutionimpl-operation"></a>Opération PauliEvolutionImpl
 
 Espace de noms : [Microsoft. Quantum. simulation](xref:Microsoft.Quantum.Simulation)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Représente un générateur dynamique sous la forme d’un ensemble de portes simulables et d’une expansion dans la base de Pauli.
@@ -29,7 +29,7 @@ Représente un générateur dynamique sous la forme d’un ensemble de portes si
 Pour plus d’informations, consultez [modélisation de générateurs dynamiques](/quantum/libraries/data-structures#dynamical-generator-modeling) .
 
 ```qsharp
-operation PauliEvolutionImpl (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, delta : Double, qubits : Qubit[]) : Unit
+operation PauliEvolutionImpl (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, delta : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

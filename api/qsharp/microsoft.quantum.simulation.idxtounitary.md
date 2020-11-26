@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.IdxToUnitary
 title: IdxToUnitary fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: IdxToUnitary
 qsharp.summary: Used in implementation of `PauliBlockEncoding`
-ms.openlocfilehash: a142d8a5af56a43de6341e3c0bdc77f50030f06e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: dd13b2d2e846dcddb820599ea26aa25b90903dbd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701737"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229271"
 ---
 # <a name="idxtounitary-function"></a>IdxToUnitary fonction)
 
 Espace de noms : [Microsoft. Quantum. simulation](xref:Microsoft.Quantum.Simulation)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Utilisé dans l’implémentation de `PauliBlockEncoding`
@@ -40,13 +40,13 @@ function IdxToUnitary (idx : Int, genFun : (Int -> Microsoft.Quantum.Simulation.
 
 
 
-### <a name="genidxtounitary--generatorindex---qubit--unit-adj--ctl"></a>genIdxToUnitary : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex) -> [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ajuster + CTL
+### <a name="genidxtounitary--generatorindex---qubit--unit--is-adj--ctl"></a>genIdxToUnitary : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex) -> [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [unité](xref:microsoft.quantum.lang-ref.unit)  est Adj + CTL
 
 
 
 
 
-## <a name="output--qubit--unit-adj--ctl"></a>Sortie : [qubit](xref:microsoft.quantum.lang-ref.qubit)[] [=> ajuster](xref:microsoft.quantum.lang-ref.unit) + CTL
+## <a name="output--qubit--unit--is-adj--ctl"></a>Sortie : [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [unité](xref:microsoft.quantum.lang-ref.unit)  est Adj + CTL
 
 
 
