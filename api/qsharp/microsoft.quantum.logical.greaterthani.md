@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.GreaterThanI
 title: GreaterThanI fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: GreaterThanI
 qsharp.summary: Returns true if and only if a number is greater than another number.
-ms.openlocfilehash: ffd00d8086654a2d783a351fe254fb2ee35b9184
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 06cae04150f9f0164b06a4e3d4bb78242b41dc0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701473"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197991"
 ---
 # <a name="greaterthani-function"></a>GreaterThanI fonction)
 
 Espace de noms : [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retourne la valeur true si et seulement si un nombre est supérieur à un autre nombre.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.Or
 title: Fonction or
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: Or
 qsharp.summary: Returns the Boolean disjunction of two values.
-ms.openlocfilehash: 98a416229386461b241d087b7ae95f078f8be70a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7093d908696a8cfda6b5ef648f9dfafcfac97144
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706515"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197124"
 ---
 # <a name="or-function"></a>Fonction or
 
 Espace de noms : [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retourne la disjonction booléenne de deux valeurs.
