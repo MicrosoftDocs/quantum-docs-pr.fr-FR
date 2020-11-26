@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.IsPermutation
 title: IsPermutation fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: IsPermutation
 qsharp.summary: Outputs true if and only if a given array represents a permutation.
-ms.openlocfilehash: 361bb21bedc725c25a1f3dfc811e9cfda4cb45ff
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 144f683818b5d75de5b075328365d3e994de29d1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705934"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220924"
 ---
 # <a name="ispermutation-function"></a>IsPermutation fonction)
 
 Espace de noms : [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Génère la valeur true si et seulement si un tableau donné représente une permutation.

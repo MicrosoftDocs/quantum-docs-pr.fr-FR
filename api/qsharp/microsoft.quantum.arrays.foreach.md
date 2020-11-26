@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.ForEach
 title: Opération ForEach
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: ForEach
 qsharp.summary: Given an array and an operation that is defined for the elements of the array, returns a new array that consists of the images of the original array under the operation.
-ms.openlocfilehash: ab6ac6eb913095f31ba166ac27f034f2e2875acf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b362d28e77c8dea2b3daeed4a4d605e1dd42e487
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705998"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221145"
 ---
 # <a name="foreach-operation"></a>Opération ForEach
 
 Espace de noms : [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 À partir d’un tableau et d’une opération définie pour les éléments du tableau, retourne un nouveau tableau qui se compose des images du tableau d’origine sous l’opération.
