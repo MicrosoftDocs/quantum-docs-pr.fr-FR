@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AllowAtMostNCallsCA
 title: Opération AllowAtMostNCallsCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AllowAtMostNCallsCA
 qsharp.summary: Between a call to this operation and its adjoint, asserts that a given operation is called at most a certain number of times.
-ms.openlocfilehash: 1a9975d2d2026749238430b247cf47738de545cd
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7caf33e33318bb74cb160436940eff9f0f2782cc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702793"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202564"
 ---
 # <a name="allowatmostncallsca-operation"></a>Opération AllowAtMostNCallsCA
 
 Espace de noms : [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Entre un appel à cette opération et son voisin, déclare qu’une opération donnée est appelée au plus un certain nombre de fois.
 
 ```qsharp
-operation AllowAtMostNCallsCA<'TInput, 'TOutput> (nTimes : Int, op : ('TInput => 'TOutput is Adj + Ctl), message : String) : Unit
+operation AllowAtMostNCallsCA<'TInput, 'TOutput> (nTimes : Int, op : ('TInput => 'TOutput is Adj + Ctl), message : String) : Unit is Adj
 ```
 
 
@@ -35,7 +35,7 @@ operation AllowAtMostNCallsCA<'TInput, 'TOutput> (nTimes : Int, op : ('TInput =>
 Nombre maximal de fois où `op` peut être appelé.
 
 
-### <a name="op--tinput--toutput-adj--ctl"></a>OP : 'TInput => 'TOutput Adj + CTL
+### <a name="op--tinput--toutput--is-adj--ctl"></a>OP : 'TInput => 'TOutput est Adj + CTL
 
 Opération dont les appels doivent être restreints.
 

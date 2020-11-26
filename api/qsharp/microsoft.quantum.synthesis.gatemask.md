@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.GateMask
 title: GateMask fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: GateMask
 qsharp.summary: Constructs a MCMTMask type as a singleton array if targets is not 0, otherwise returns an empty array.
-ms.openlocfilehash: 2c7264250426926db7374220ecb5967eb5aa8d0f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f0716e6986fb2e9c8aab26fbfe2098058a81829f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709308"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203108"
 ---
 # <a name="gatemask-function"></a>GateMask fonction)
 
 Espace de noms : [Microsoft. Quantum. Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Construit un type MCMTMask en tant que tableau Singleton si la cible n’est pas 0, sinon retourne un tableau vide.

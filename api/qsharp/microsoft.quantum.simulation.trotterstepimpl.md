@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Simulation.TrotterStepImpl
 title: Opération TrotterStepImpl
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: TrotterStepImpl
 qsharp.summary: Implements time-evolution by a term contained in a `GeneratorSystem`.
-ms.openlocfilehash: 1ddd7ab33df243d729b5b48cba393d976bfd3640
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: bc6c3c6656da319fce9c7c48824dbc4ad75ccc83
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709218"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203413"
 ---
 # <a name="trotterstepimpl-operation"></a>Opération TrotterStepImpl
 
 Espace de noms : [Microsoft. Quantum. simulation](xref:Microsoft.Quantum.Simulation)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implémente l’évolution du temps d’un terme contenu dans un `GeneratorSystem` .
 
 ```qsharp
-operation TrotterStepImpl (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, idx : Int, stepsize : Double, qubits : Qubit[]) : Unit
+operation TrotterStepImpl (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, idx : Int, stepsize : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

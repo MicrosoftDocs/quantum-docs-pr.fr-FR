@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEXY_
 title: _OptimizedBEXY_ fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _OptimizedBEXY_
 qsharp.summary: ''
-ms.openlocfilehash: fae8f66c63f73b7377cd6f802e73da04d03eee48
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 824df52e0c813bbafbe8f5357051901c5abeda3b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703366"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203567"
 ---
 # <a name="_optimizedbexy_-function"></a>_OptimizedBEXY_ fonction)
 
 Espace de noms : [Microsoft. Quantum. chimie. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. chimie](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 
@@ -36,5 +36,5 @@ function _OptimizedBEXY_ (targetIndex : Int) : ((Qubit, Qubit, Qubit[]) => Unit 
 
 
 
-## <a name="output--qubitqubitqubit--unit-adj--ctl"></a>Sortie : ([qubit](xref:microsoft.quantum.lang-ref.qubit),[qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [unité](xref:microsoft.quantum.lang-ref.unit) Adj + CTL
+## <a name="output--qubitqubitqubit--unit--is-adj--ctl"></a>Sortie : ([qubit](xref:microsoft.quantum.lang-ref.qubit),[qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [unité](xref:microsoft.quantum.lang-ref.unit)  est Adj + CTL
 

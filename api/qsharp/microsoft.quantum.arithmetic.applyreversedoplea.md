@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA
 title: Opération ApplyReversedOpLEA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyReversedOpLEA
 qsharp.summary: Applies an operation that takes little-endian input to a register encoding an unsigned integer using big-endian format.
-ms.openlocfilehash: 073ba908f2a06d36a8b73237f6a12d974b9d4d15
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d5bc1b38500c449b58f8dafd640627b8e933e902
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707499"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202734"
 ---
 # <a name="applyreversedoplea-operation"></a>Opération ApplyReversedOpLEA
 
 Espace de noms : [Microsoft. Quantum. Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applique une opération qui utilise l’entrée Little endian à un registre qui encode un entier non signé utilisant le format Big-endian.
 
 ```qsharp
-operation ApplyReversedOpLEA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit
+operation ApplyReversedOpLEA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit is Adj
 ```
 
 
 ## <a name="input"></a>Entrée
 
-### <a name="op--littleendian--unit-adj"></a>opération : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => ajustement d' [unité](xref:microsoft.quantum.lang-ref.unit) LittleEndian
+### <a name="op--littleendian--unit--is-adj"></a>OP : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) l' => [unité](xref:microsoft.quantum.lang-ref.unit) LittleEndian est ajustée
 
 Opération qui agit sur un registre Little endian.
 
