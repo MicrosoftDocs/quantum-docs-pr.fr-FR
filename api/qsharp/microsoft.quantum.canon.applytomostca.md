@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToMostCA
 title: Opération ApplyToMostCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToMostCA
 qsharp.summary: Applies an operation to all but the last element of an array.
-ms.openlocfilehash: 797cbd835446f31b2df60dbb184f888e6d0356aa
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2ce76d2a86665fbfa5f5d91df23220c7c80981e3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704739"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208412"
 ---
 # <a name="applytomostca-operation"></a>Opération ApplyToMostCA
 
 Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applique une opération à tous les éléments à l’exception du dernier élément d’un tableau.
 
 ```qsharp
-operation ApplyToMostCA<'T> (op : ('T[] => Unit is Adj + Ctl), targets : 'T[]) : Unit
+operation ApplyToMostCA<'T> (op : ('T[] => Unit is Adj + Ctl), targets : 'T[]) : Unit is Adj + Ctl
 ```
 
 
@@ -34,7 +34,7 @@ Pour une opération donnée `op` et un tableau de cibles `targets` , s’appliqu
 
 ## <a name="input"></a>Entrée
 
-### <a name="op--t--unit-adj--ctl"></a>OP : 't [] = [> ajuster](xref:microsoft.quantum.lang-ref.unit) + CTL
+### <a name="op--t--unit--is-adj--ctl"></a>OP : 't [] => [unité](xref:microsoft.quantum.lang-ref.unit)  est Adj + CTL
 
 Opération à appliquer.
 

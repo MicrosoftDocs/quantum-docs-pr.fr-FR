@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ConjugatedByA
 title: ConjugatedByA fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ConjugatedByA
 qsharp.summary: Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.
-ms.openlocfilehash: bcaab28e99d3d61f4a36da866321d28f3dc4bd53
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eaa104039b857f0469ddc0aaba97698eca20860d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704339"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207341"
 ---
 # <a name="conjugatedbya-function"></a>ConjugatedByA fonction)
 
 Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 En fonction des opérations externes et internes, retourne une nouvelle opération qui conjugue l’opération interne par l’opération externe.
@@ -30,18 +30,18 @@ function ConjugatedByA<'T> (outerOperation : ('T => Unit is Adj), innerOperation
 
 ## <a name="input"></a>Entrée
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation : t => ajustement d' [unité](xref:microsoft.quantum.lang-ref.unit)
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation : t => [unité](xref:microsoft.quantum.lang-ref.unit)  est adj
 
 L’opération $U $ qui doit être utilisée pour conjuguer $V $. Notez que l’opération externe $U $ doit être adjointable, mais qu’elle n’a pas besoin d’être contrôlable.
 
 
-### <a name="inneroperation--t--unit-adj"></a>innerOperation : t => ajustement d' [unité](xref:microsoft.quantum.lang-ref.unit)
+### <a name="inneroperation--t--unit--is-adj"></a>innerOperation : t => [unité](xref:microsoft.quantum.lang-ref.unit)  est adj
 
 L’opération $V être conjuguée.
 
 
 
-## <a name="output--t--unit-adj"></a>Sortie : 't => ajustement d' [unité](xref:microsoft.quantum.lang-ref.unit)
+## <a name="output--t--unit--is-adj"></a>Sortie : 't => [unité](xref:microsoft.quantum.lang-ref.unit)  est adj
 
 Nouvelle opération dont l’action est représentée par le $U unitaire ^ {\dagger} V U $.
 

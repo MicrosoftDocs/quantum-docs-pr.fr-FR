@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayedA
 title: Fonction retardée
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayedA
 qsharp.summary: Returns an operation that applies given operation with given argument.
-ms.openlocfilehash: 11c11cdd75d80d6324666ef56930f7a522121826
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 33ff4dab36a6c6e17b9496a623f70b814c9f2fed
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704214"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207069"
 ---
 # <a name="delayeda-function"></a>Fonction retardée
 
 Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retourne une opération qui applique l’opération donnée avec l’argument donné.
@@ -30,7 +30,7 @@ function DelayedA<'T> (op : ('T => Unit is Adj), arg : 'T) : (Unit => Unit is Ad
 
 ## <a name="input"></a>Entrée
 
-### <a name="op--t--unit-adj"></a>OP : t => ajustement d' [unité](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-adj"></a>OP : 'o => [unité](xref:microsoft.quantum.lang-ref.unit)  est adj
 
 Opération à appliquer à la suite de l’application de la valeur de retour
 
@@ -41,7 +41,7 @@ Entrée à laquelle l’opération `op` est appliquée.
 
 
 
-## <a name="output--unit--unit-adj"></a>Sortie : [Unit](xref:microsoft.quantum.lang-ref.unit) => ajustement d' [unité](xref:microsoft.quantum.lang-ref.unit) d’unité
+## <a name="output--unit--unit--is-adj"></a>Sortie : l’unité d' [unité](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) est adj
 
 Nouvelle opération qui s’applique `op` à l’entrée `arg`
 

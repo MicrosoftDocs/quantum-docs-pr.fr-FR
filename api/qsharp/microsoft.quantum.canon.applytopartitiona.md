@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToPartitionA
 title: Opération ApplyToPartitionA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToPartitionA
 qsharp.summary: Applies a pair of operations to a given partition of a register into two parts. The modifier `A` indicates that the operation is adjointable.
-ms.openlocfilehash: 6ff3bf8b5a4344ee5a7a054c6285a5492260068d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 79f8fbed1592670031b3348155cdd4000eadc1fb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704718"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208344"
 ---
 # <a name="applytopartitiona-operation"></a>Opération ApplyToPartitionA
 
 Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applique une paire d’opérations à une partition donnée d’un registre en deux parties.
 Le modificateur `A` indique que l’opération est adjointable.
 
 ```qsharp
-operation ApplyToPartitionA (op : ((Qubit[], Qubit[]) => Unit is Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit
+operation ApplyToPartitionA (op : ((Qubit[], Qubit[]) => Unit is Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit is Adj
 ```
 
 
 ## <a name="input"></a>Entrée
 
-### <a name="op--qubitqubit--unit-adj"></a>OP : ([qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => ajustement d' [unité](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--qubitqubit--unit--is-adj"></a>OP : ([qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [unité](xref:microsoft.quantum.lang-ref.unit)  est adj
 
 Paire d’opérations à appliquer à la partition donnée.
 
