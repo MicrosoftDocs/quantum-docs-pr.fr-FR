@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691740"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231653"
 ---
 # <a name="no-locq-style-guide"></a>Q# Guide de style #
 ## <a name="general-conventions"></a>Conventions générales ##
@@ -215,7 +215,7 @@ _*_
 Étant donné que Q# est un langage fortement et statiquement typé, une valeur d’un type ne peut être utilisée qu’en tant que valeur d’un autre type à l’aide d’un appel explicite à une fonction de conversion de type.
 Cela diffère des langages qui permettent aux valeurs de changer les types implicitement (par exemple, la promotion de type) ou en effectuant une conversion.
 Par conséquent, les fonctions de conversion de type jouent un rôle important dans Q# le développement de bibliothèque, et constituent l’une des décisions les plus fréquemment rencontrées sur l’affectation de noms.
-Toutefois, étant donné que les conversions de type sont toujours _déterministes_ , elles peuvent être écrites en tant que fonctions et, par conséquent, tomber sous les conseils ci-dessus.
+Toutefois, étant donné que les conversions de type sont toujours _déterministes_, elles peuvent être écrites en tant que fonctions et, par conséquent, tomber sous les conseils ci-dessus.
 En particulier, nous suggérons que les fonctions de conversion de type ne doivent jamais être nommées en tant que verbes (par exemple, `ConvertToX` ) ou des expressions prépositionnelles adverbes ( `ToX` ), mais doivent être nommées en tant qu’expressions prépositionnelles avec adjectif qui indiquent les types source et de destination ( `XAsY` ).
 Lors de la liste des types de tableau dans les noms de fonctions de conversion de type, nous vous recommandons le raccourci `Arr` .
 Dans des circonstances exceptionnelles, nous recommandons que toutes les fonctions de conversion de type soient nommées à l’aide `As` de afin qu’elles puissent être identifiées rapidement.
@@ -390,7 +390,7 @@ De même, le serveur de langage fourni avec le kit de développement quantum uti
 L’utilisation de commentaires de documentation peut aider les utilisateurs à obtenir un sens du code en fournissant une référence utile pour les détails qui ne sont pas facilement exprimés à l’aide des autres conventions de ce document.
 
 > [!div class="nextstepaction"]
-> [Référence de la syntaxe des commentaires de documentation](xref:microsoft.quantum.guide.filestructure#documentation-comments).
+> [Référence de la syntaxe des commentaires de documentation](xref:microsoft.quantum.qsharp.comments#documentation-comments).
 
 Afin d’utiliser efficacement cette fonctionnalité pour aider les utilisateurs, nous vous recommandons de garder certaines choses à l’esprit lorsque vous écrivez des commentaires de documentation.
 

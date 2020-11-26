@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c5bdebc826bb85f6d7e0ade6232e15e29e8fb19
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691704"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231687"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Méthodes d’exécution d’un Q# programme
 
@@ -45,7 +45,7 @@ Dans Q# , cette opération est effectuée par le code suivant :
 ```
 
 Toutefois, ce code seul ne peut pas être exécuté par Q# .
-Pour cela, il doit créer le corps d’une [opération](xref:microsoft.quantum.guide.basics#q-operations-and-functions), qui est ensuite exécutée quand elle est appelée---soit directement, soit par une autre opération. Par conséquent, vous pouvez écrire une opération de la forme suivante :
+Pour cela, il doit créer le corps d’une [opération](xref:microsoft.quantum.qsharp.operationsandfunctions), qui est ensuite exécutée quand elle est appelée---soit directement, soit par une autre opération. Par conséquent, vous pouvez écrire une opération de la forme suivante :
 ```qsharp
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) {
@@ -54,18 +54,18 @@ Pour cela, il doit créer le corps d’une [opération](xref:microsoft.quantum.g
         }
     }
 ```
-Vous avez défini une opération, `MeasureSuperposition` , qui ne prend aucune entrée et retourne une valeur de type [résultat](xref:microsoft.quantum.guide.types).
+Vous avez défini une opération, `MeasureSuperposition` , qui ne prend aucune entrée et retourne une valeur de type [résultat](xref:microsoft.quantum.qsharp.typesystem-index#available-types).
 
-Alors que les exemples de cette page consistent uniquement en Q# *opérations* , tous les concepts que nous aborderons se rapportent de la même façon aux Q# *fonctions* et, par conséquent, nous les appelons collectivement *callables* . Leurs différences sont présentées dans [ Q# concepts de base : les opérations et les fonctions](xref:microsoft.quantum.guide.basics#q-operations-and-functions)et plus d’informations sur leur définition sont disponibles dans [opérations et fonctions](xref:microsoft.quantum.guide.operationsfunctions).
+En plus des opérations, Q# permet également d’encapsuler des calculs déterministes dans des fonctions. Hormis la garantie du déterminisme qui implique que les calculs qui agissent sur qubits doivent être encapsulés dans des opérations plutôt que dans des fonctions, il y a peu de différence entre les opérations et la fonction. Nous les appelons collectivement *callables*.
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>Pouvant être appelé dans un Q# fichier
 
 L’appelable est précisément ce qui est appelé et exécuté par Q# .
 Toutefois, il faut quelques ajouts pour inclure un `*.qs` Q# fichier complet.
 
-Tous les Q# types et callables (ceux que vous définissez et ceux qui sont intrinsèques au langage) sont définis dans les *espaces de noms* , qui fournissent chacun un nom complet qui peut ensuite être référencé.
+Tous les Q# types et callables (ceux que vous définissez et ceux qui sont intrinsèques au langage) sont définis dans les *espaces de noms*, qui fournissent chacun un nom complet qui peut ensuite être référencé.
 
-Par exemple, les [`H`](xref:Microsoft.Quantum.Intrinsic.H) [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) opérations et se trouvent dans les [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) espaces de noms et (qui font partie des [ Q# bibliothèques standard](xref:microsoft.quantum.qsharplibintro)).
+Par exemple, les [`H`](xref:Microsoft.Quantum.Intrinsic.H) [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) opérations et se trouvent dans les [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) espaces de noms et (qui font partie des [ Q# bibliothèques standard](xref:microsoft.quantum.libraries.standard.intro)).
 En tant que tels, ils peuvent toujours être appelés par le biais de leurs noms *complets* `Microsoft.Quantum.Intrinsic.H(<qubit>)` et `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` , mais le fait de toujours effectuer cela entraînerait un code très encombré.
 
 Au lieu de cela, `open` les instructions permettent de référencer callables avec un raccourci plus concis, comme nous l’avons fait dans le corps de l’opération ci-dessus.
@@ -103,7 +103,7 @@ Désormais, le modèle d’exécution générale d’un Q# programme devient cla
 Tout d’abord, l’appel spécifique à exécuter a accès à tout autre callables et à tous les types définis dans le même espace de noms.
 Elle y accède également à partir de l’une des [ Q# bibliothèques](xref:microsoft.quantum.libraries), mais celles-ci doivent être référencées par le biais de leur nom complet ou de l’utilisation d' `open` instructions décrites ci-dessus.
 
-L’appel à lui-même est exécuté sur un *[ordinateur cible](xref:microsoft.quantum.machines)* .
+L’appel à lui-même est exécuté sur un *[ordinateur cible](xref:microsoft.quantum.machines)*.
 Ces machines cibles peuvent être du matériel Quantum réel ou des simulateurs multiples disponibles dans le cadre du QDK.
 Dans notre cas, la machine cible la plus utile est une instance du [simulateur d’état complet](xref:microsoft.quantum.machines.full-state-simulator), `QuantumSimulator` , qui calcule le comportement du programme comme s’il était exécuté sur un ordinateur quantique sans bruit.
 
@@ -164,7 +164,7 @@ namespace NamespaceName {
 Par conséquent, vous verrez ou vous pouvez l' `One` `Zero` Imprimer. 
 
 Notez que cela n’a pas d’importance si vous avez plus de callables défini au-dessous, mais uniquement s' `MeasureSuperposition` exécutera.
-En outre, ce n’est pas un problème si votre appelable comprend des [Commentaires de documentation](xref:microsoft.quantum.guide.filestructure#documentation-comments) avant sa déclaration, l' `@EntryPoint()` attribut peut être placé juste au-dessus de lui.
+En outre, ce n’est pas un problème si votre appelable comprend des [Commentaires de documentation](xref:microsoft.quantum.qsharp.comments#documentation-comments) avant sa déclaration, l' `@EntryPoint()` attribut peut être placé juste au-dessus de lui.
 
 ### <a name="callable-arguments"></a>Arguments pouvant être appelés
 
@@ -589,7 +589,7 @@ Ici, nous allons expliquer en détail comment exécuter les Q# opérations défi
 
 Dans un Q# Jupyter Notebook, vous entrez du Q# code comme nous le feriez à l’intérieur de l’espace de noms d’un Q# fichier.
 
-Nous pouvons donc activer l’accès à callables à partir des [ Q# bibliothèques standard](xref:microsoft.quantum.qsharplibintro) avec des `open` instructions pour leurs espaces de noms respectifs.
+Nous pouvons donc activer l’accès à callables à partir des [ Q# bibliothèques standard](xref:microsoft.quantum.libraries.standard.intro) avec des `open` instructions pour leurs espaces de noms respectifs.
 Lors de l’exécution d’une cellule avec une telle instruction, les définitions de ces espaces de noms sont disponibles dans l’ensemble de l’espace de travail.
 
 > [!NOTE]

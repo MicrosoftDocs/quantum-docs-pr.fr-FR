@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b8623ba7e876c4ccda42d0ddaa07c0012a763292
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691821"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231772"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# Principes de conception d’API
 
@@ -215,7 +215,7 @@ Cet article répertorie ces principes et donne des exemples pour vous aider à l
   *Exemples :*
   - Préférez « itération d’amplification d’amplitude » à « itération Grover ».
 
-- ✅**Choisissez des** opérations et des noms de fonctions qui communiquent clairement l’effet prévu d’un appelable, et non son implémentation. Notez que l’implémentation peut et doit être documentée dans les [Commentaires de documentation d’API](xref:microsoft.quantum.guide.filestructure#documentation-comments).
+- ✅**Choisissez des** opérations et des noms de fonctions qui communiquent clairement l’effet prévu d’un appelable, et non son implémentation. Notez que l’implémentation peut et doit être documentée dans les [Commentaires de documentation d’API](xref:microsoft.quantum.qsharp.comments#documentation-comments).
 
   *Exemples :*
   - Préférez « chevauchement d’estimation » à « Hadarmard test », car ce dernier communique la manière dont le premier est implémenté.
@@ -224,32 +224,32 @@ Cet article répertorie ces principes et donne des exemples pour vous aider à l
 
   - **Verbes**
 
-    - **Assertion** : Vérifiez qu’une hypothèse sur l’état d’un ordinateur cible et de son qubits contient, éventuellement à l’aide de ressources non physiques. Les opérations utilisant ce verbe doivent toujours être amovibles en toute sécurité sans affecter les fonctionnalités des bibliothèques et des programmes exécutables. Notez que, contrairement aux faits, les assertions peuvent, en général, dépendre de l’état externe, par exemple l’état d’un registre qubit, l’environnement d’exécution, etc. Comme la dépendance sur l’état externe est un type d’effet secondaire, les assertions doivent être exposées comme des opérations plutôt que des fonctions.
+    - **Assertion**: Vérifiez qu’une hypothèse sur l’état d’un ordinateur cible et de son qubits contient, éventuellement à l’aide de ressources non physiques. Les opérations utilisant ce verbe doivent toujours être amovibles en toute sécurité sans affecter les fonctionnalités des bibliothèques et des programmes exécutables. Notez que, contrairement aux faits, les assertions peuvent, en général, dépendre de l’état externe, par exemple l’état d’un registre qubit, l’environnement d’exécution, etc. Comme la dépendance sur l’état externe est un type d’effet secondaire, les assertions doivent être exposées comme des opérations plutôt que des fonctions.
 
-    - **Estimation** : à l’aide d’une ou plusieurs mesures éventuellement répétées, estimez une quantité classique à partir des résultats de mesure.
+    - **Estimation**: à l’aide d’une ou plusieurs mesures éventuellement répétées, estimez une quantité classique à partir des résultats de mesure.
 
       *Exemples :*
       - @"microsoft.quantum.characterization.estimatefrequency"
       - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-    - **Préparer** : appliquer une opération de Quantum ou une séquence d’opérations à un ou plusieurs qubits supposés démarrer dans un état initial particulier (en général, $ \ket{00\cdots 0} $), provoquant l’évolution de l’état de ces qubits à un état final souhaité. En règle générale, les États autres que l’état de départ donné **peuvent** entraîner une transformation unitaire non définie, mais **doivent** toujours conserver une opération et son voisin « annuler » et appliquer une absence d’opération.
+    - **Préparer**: appliquer une opération de Quantum ou une séquence d’opérations à un ou plusieurs qubits supposés démarrer dans un état initial particulier (en général, $ \ket{00\cdots 0} $), provoquant l’évolution de l’état de ces qubits à un état final souhaité. En règle générale, les États autres que l’état de départ donné **peuvent** entraîner une transformation unitaire non définie, mais **doivent** toujours conserver une opération et son voisin « annuler » et appliquer une absence d’opération.
 
       *Exemples :*
       - @"microsoft.quantum.preparation.preparearbitrarystate"
       - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Mesure** : appliquez une opération de Quantum ou une séquence d’opérations à un ou plusieurs qubits, en lisant les données classiques à nouveau.
+    - **Mesure**: appliquez une opération de Quantum ou une séquence d’opérations à un ou plusieurs qubits, en lisant les données classiques à nouveau.
 
       *Exemples :*
       - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Appliquer** : appliquez une opération de Quantum ou une séquence d’opérations à un ou plusieurs qubits, ce qui entraîne la modification de l’état de ces qubits de manière cohérente. Ce verbe est le verbe le plus général de la \# nomenclature Q et ne **doit pas être** utilisé lorsqu’un verbe plus spécifique est plus directement pertinent.
+    - **Appliquer**: appliquez une opération de Quantum ou une séquence d’opérations à un ou plusieurs qubits, ce qui entraîne la modification de l’état de ces qubits de manière cohérente. Ce verbe est le verbe le plus général de la \# nomenclature Q et ne **doit pas être** utilisé lorsqu’un verbe plus spécifique est plus directement pertinent.
 
-  - **Noms** :
+  - **Noms**:
 
-    - **Fait** : condition booléenne qui dépend uniquement de ses entrées et non de l’état d’un ordinateur cible, de son environnement ou de l’état du qubits de l’ordinateur. En revanche, avec une assertion, un fait est sensible uniquement aux *valeurs* fournies à ce fait. Par exemple :
+    - **Fait**: condition booléenne qui dépend uniquement de ses entrées et non de l’état d’un ordinateur cible, de son environnement ou de l’état du qubits de l’ordinateur. En revanche, avec une assertion, un fait est sensible uniquement aux *valeurs* fournies à ce fait. Par exemple :
 
       *Exemples :*
       - @"microsoft.quantum.diagnostics.equalityfacti": représente un fait d’égalité sur deux entrées entières ; soit les entiers fournis comme entrée sont égaux les uns des autres, soit ils ne le sont pas, indépendamment de tout autre État du programme.
@@ -259,9 +259,9 @@ Cet article répertorie ces principes et donne des exemples pour vous aider à l
       *Exemples :*
       - Le @"microsoft.quantum.machinelearning.trainingoptions" type défini par l’utilisateur comprend des éléments nommés pour le taux d’apprentissage, la taille de minilot et d’autres paramètres configurables pour la formation ml.
 
-  - **Adjectifs** :
+  - **Adjectifs**:
 
-    - ⛔️ **nouveau** : cet adjectif ne **doit pas** être utilisé, car cela évite toute confusion avec son utilisation en tant que verbe dans de nombreux langages de programmation (par exemple, C++, C#, Java, machine à écrire, PowerShell).
+    - ⛔️ **nouveau**: cet adjectif ne **doit pas** être utilisé, car cela évite toute confusion avec son utilisation en tant que verbe dans de nombreux langages de programmation (par exemple, C++, C#, Java, machine à écrire, PowerShell).
 
   - **Prépositions :** Dans certains cas, les prépositions peuvent être utilisées pour lever toute ambiguïté ou clarifier les rôles des noms et des verbes dans les noms de fonctions et d’opérations. Toutefois, il convient de veiller à ce que cela ne soit pas très prudent et cohérent.
 
