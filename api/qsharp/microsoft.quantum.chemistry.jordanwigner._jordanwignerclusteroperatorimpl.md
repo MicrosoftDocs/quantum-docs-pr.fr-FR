@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorImpl
 title: Opération de _JordanWignerClusterOperatorImpl
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Represents a dynamical generator as a set of simulatable gates and an expansion in the JordanWigner basis.
 
   See [Dynamical Generator Modeling](../libraries/data-structures#dynamical-generator-modeling) for more details.
-ms.openlocfilehash: 9507558ebe73bce87d9089aad22b94c1d9d579d0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9a01742f25790e32d1787cc6cc266407de909c16
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703453"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96215739"
 ---
 # <a name="_jordanwignerclusteroperatorimpl-operation"></a>Opération de _JordanWignerClusterOperatorImpl
 
 Espace de noms : [Microsoft. Quantum. chimie. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. chimie](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Représente un générateur dynamique sous la forme d’un ensemble de portes simulables et d’une expansion dans la base de JordanWigner.
@@ -29,7 +29,7 @@ Représente un générateur dynamique sous la forme d’un ensemble de portes si
 Pour plus d’informations, consultez [modélisation de générateurs dynamiques](../libraries/data-structures#dynamical-generator-modeling) .
 
 ```qsharp
-operation _JordanWignerClusterOperatorImpl (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, qubits : Qubit[]) : Unit
+operation _JordanWignerClusterOperatorImpl (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

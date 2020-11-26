@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.ResultArrayAsInt
 title: ResultArrayAsInt fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: ResultArrayAsInt
 qsharp.summary: Produces a positive integer from a string of Results in little endian format.
-ms.openlocfilehash: ad337a69d41593bb25d299c9c47b1075ebf25c25
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b3fffdcaa9e4fcd29918ebd84ef356a55b215112
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702916"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213971"
 ---
 # <a name="resultarrayasint-function"></a>ResultArrayAsInt fonction)
 
 Espace de noms : [Microsoft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Produit un entier positif à partir d’une chaîne de résultats au format Little endian.

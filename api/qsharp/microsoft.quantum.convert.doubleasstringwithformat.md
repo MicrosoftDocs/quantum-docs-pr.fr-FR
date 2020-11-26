@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.DoubleAsStringWithFormat
 title: DoubleAsStringWithFormat fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: DoubleAsStringWithFormat
 qsharp.summary: Converts a given double-precision floating-point number to an equivalent string representation, using the given format.
-ms.openlocfilehash: 2d5caa6172e1b4c66fabd560024f07c7df6dd7e4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e2c2f8692d2ef63510c36777aef83699339b774e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702988"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214175"
 ---
 # <a name="doubleasstringwithformat-function"></a>DoubleAsStringWithFormat fonction)
 
 Espace de noms : [Microsoft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Convertit un nombre à virgule flottante double précision donné en une représentation sous forme de chaîne équivalente à l’aide du format donné.
