@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseBC
 title: Opération ApplyIfElseBC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseBC
 qsharp.summary: Applies one of two controllable operations, depending on the value of a classical bit.
-ms.openlocfilehash: 032d92484dc96481cb981d9d8acfeed248a9116d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ea06b0a0a07659407e13caa2baa4f3e37ca2a0f7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705339"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209517"
 ---
 # <a name="applyifelsebc-operation"></a>Opération ApplyIfElseBC
 
 Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applique l’une des deux opérations contrôlable, en fonction de la valeur d’un bit classique.
 
 ```qsharp
-operation ApplyIfElseBC<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit
+operation ApplyIfElseBC<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit is Ctl
 ```
 
 
@@ -39,7 +39,7 @@ operation ApplyIfElseBC<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Ctl), true
 Valeur booléenne utilisée pour déterminer si `trueOp` ou `falseOp` est appliqué.
 
 
-### <a name="trueop--t--unit-ctl"></a>trueOp : t => CTL de l' [unité](xref:microsoft.quantum.lang-ref.unit)
+### <a name="trueop--t--unit--is-ctl"></a>trueOp : t => [unité](xref:microsoft.quantum.lang-ref.unit)  est CTL
 
 Opération contrôlable à appliquer lorsque `bit` a la valeur `true` .
 
@@ -49,7 +49,7 @@ Opération contrôlable à appliquer lorsque `bit` a la valeur `true` .
 Entrée à fournir `trueOp` lorsque a la valeur `bit` `true` .
 
 
-### <a name="falseop--u--unit-ctl"></a>falseOp : 'U => CTL de l' [unité](xref:microsoft.quantum.lang-ref.unit)
+### <a name="falseop--u--unit--is-ctl"></a>falseOp : 'U => [unité](xref:microsoft.quantum.lang-ref.unit)  est CTL
 
 Opération contrôlable à appliquer lorsque `bit` a la valeur `false` .
 
