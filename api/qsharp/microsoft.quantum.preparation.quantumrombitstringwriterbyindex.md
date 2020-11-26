@@ -1,50 +1,55 @@
 ---
 uid: Microsoft.Quantum.Preparation.QuantumROMBitStringWriterByIndex
 title: QuantumROMBitStringWriterByIndex fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: QuantumROMBitStringWriterByIndex
 qsharp.summary: ''
-ms.openlocfilehash: cccc18a14aa6870dd29de5001a5cc184ff28eaaf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7a0a8668a8e771268dda0e17e15942e6d30c7deb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708195"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226449"
 ---
-# <a name="quantumrombitstringwriterbyindex-function"></a><span data-ttu-id="8222f-102">QuantumROMBitStringWriterByIndex fonction)</span><span class="sxs-lookup"><span data-stu-id="8222f-102">QuantumROMBitStringWriterByIndex function</span></span>
+# <a name="quantumrombitstringwriterbyindex-function"></a><span data-ttu-id="79020-102">QuantumROMBitStringWriterByIndex fonction)</span><span class="sxs-lookup"><span data-stu-id="79020-102">QuantumROMBitStringWriterByIndex function</span></span>
 
-<span data-ttu-id="8222f-103">Espace de noms : [Microsoft. Quantum. PREPARATION](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="8222f-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
+<span data-ttu-id="79020-103">Espace de noms : [Microsoft. Quantum. PREPARATION](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="79020-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
 
-<span data-ttu-id="8222f-104">Packages [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="8222f-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="79020-104">Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="79020-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 
 
 ```qsharp
-function QuantumROMBitStringWriterByIndex (idx : Int, keepCoeff : Int[], altIndex : Int[]) : ((Microsoft.Quantum.Arithmetic.LittleEndian, Microsoft.Quantum.Arithmetic.LittleEndian) => Unit is Adj + Ctl)
+function QuantumROMBitStringWriterByIndex (idx : Int, keepCoeff : Int[], altIndex : Int[], data : Bool[][]) : ((Microsoft.Quantum.Arithmetic.LittleEndian, Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[], Qubit[]) => Unit is Adj + Ctl)
 ```
 
 
-## <a name="input"></a><span data-ttu-id="8222f-105">Entrée</span><span class="sxs-lookup"><span data-stu-id="8222f-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="79020-105">Entrée</span><span class="sxs-lookup"><span data-stu-id="79020-105">Input</span></span>
 
-### <a name="idx--int"></a><span data-ttu-id="8222f-106">idx : [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="8222f-106">idx : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
-
-
-### <a name="keepcoeff--int"></a><span data-ttu-id="8222f-107">keepCoeff : [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="8222f-107">keepCoeff : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
+### <a name="idx--int"></a><span data-ttu-id="79020-106">idx : [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="79020-106">idx : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
-### <a name="altindex--int"></a><span data-ttu-id="8222f-108">altIndex : [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="8222f-108">altIndex : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
+### <a name="keepcoeff--int"></a><span data-ttu-id="79020-107">keepCoeff : [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="79020-107">keepCoeff : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
+
+
+
+
+### <a name="altindex--int"></a><span data-ttu-id="79020-108">altIndex : [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="79020-108">altIndex : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
+
+
+
+
+### <a name="data--bool"></a><span data-ttu-id="79020-109">données : [bool](xref:microsoft.quantum.lang-ref.bool)[] []</span><span class="sxs-lookup"><span data-stu-id="79020-109">data : [Bool](xref:microsoft.quantum.lang-ref.bool)[][]</span></span>
 
 
 
 
 
-## <a name="output--littleendianlittleendian--unit-adj--ctl"></a><span data-ttu-id="8222f-109">Sortie : ([LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)) => [unité](xref:microsoft.quantum.lang-ref.unit) + CTL</span><span class="sxs-lookup"><span data-stu-id="8222f-109">Output : ([LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)) => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl</span></span>
+## <a name="output--littleendianlittleendianqubitqubit--unit--is-adj--ctl"></a><span data-ttu-id="79020-110">Sortie : ([LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [unité](xref:microsoft.quantum.lang-ref.unit)  est Adj + CTL</span><span class="sxs-lookup"><span data-stu-id="79020-110">Output : ([LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
