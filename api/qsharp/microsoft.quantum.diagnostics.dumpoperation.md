@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.DumpOperation
 title: Opération DumpOperation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: DumpOperation
 qsharp.summary: Given an operation, displays diagnostics about the operation that are made available by the current execution target.
-ms.openlocfilehash: 444d42e2440b30b3bdf50d55a399568bed063222
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b0e07173ddbeb8a96d4a85928258b6e30deb394d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702706"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202054"
 ---
 # <a name="dumpoperation-operation"></a>Opération DumpOperation
 
 Espace de noms : [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Pour une opération donnée, affiche des diagnostics sur l’opération qui sont rendues disponibles par la cible d’exécution actuelle.
@@ -35,7 +35,7 @@ operation DumpOperation (nQubits : Int, op : (Qubit[] => Unit is Adj)) : Unit
 Nombre de qubits sur lequel l’opération donnée agit.
 
 
-### <a name="op--qubit--unit-adj"></a>OP : [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => ajustement d' [unité](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--qubit--unit--is-adj"></a>OP : [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [unité](xref:microsoft.quantum.lang-ref.unit)  est adj
 
 Opération à diagnostiquer.
 

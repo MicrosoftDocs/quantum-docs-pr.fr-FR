@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.EncodeOp
 title: Type défini par l’utilisateur EncodeOp
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Represents an operation which encodes a physical register into a logical register, using the provided scratch qubits.
 
   The first argument is taken to be the physical register that will be encoded, while the second argument is taken to be the scratch register that will be used.
-ms.openlocfilehash: da947cdc25cb0edd3a4144022bbfc6ecb84c647f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 18d6df6037b1fe66a171acea1936fcb9ba1b27e5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702487"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200898"
 ---
 # <a name="encodeop-user-defined-type"></a>Type défini par l’utilisateur EncodeOp
 
 Espace de noms : [Microsoft. Quantum. ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Représente une opération qui encode un registre physique en Registre logique, à l’aide du qubits Scratch fourni.

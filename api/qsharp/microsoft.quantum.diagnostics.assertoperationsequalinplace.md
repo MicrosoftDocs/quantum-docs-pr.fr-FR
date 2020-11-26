@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace
 title: Opération AssertOperationsEqualInPlace
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -12,18 +12,18 @@ qsharp.summary: >-
   This assertion is implemented by checking the action of the operations on all states of the form $V_0 \otimes ... \otimes V_{n-1}$, where $V_k$ is one of the states $\ket{0}$, $\ket{1}$, $\ket{+}$ and $\ket{i}$ (+1 eigenstate of Pauli Y operator).
 
   This assertion uses $n$ qubits and requires multiple calls of the operations being compared.
-ms.openlocfilehash: 407a139da816281346eb06849f81e91b83202653
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9b17bac9d95baf5a542604892c64130bf35d7f69
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702754"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202428"
 ---
 # <a name="assertoperationsequalinplace-operation"></a>Opération AssertOperationsEqualInPlace
 
 Espace de noms : [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 À partir de deux opérations, déclare qu’elles agissent de la même manière pour tous les États d’entrée.
@@ -49,7 +49,7 @@ Nombre de qubits $n $ que les opérations `givenU` et `expectedU` utilisent.
 Opération sur $n $ qubits à vérifier.
 
 
-### <a name="expectedu--qubit--unit-adj"></a>expected : [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => ajustement d' [unité](xref:microsoft.quantum.lang-ref.unit)
+### <a name="expectedu--qubit--unit--is-adj"></a>expected : [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [unité](xref:microsoft.quantum.lang-ref.unit)  est adj
 
 Opération de référence sur $n $ qubits `givenU` à comparer.
 
