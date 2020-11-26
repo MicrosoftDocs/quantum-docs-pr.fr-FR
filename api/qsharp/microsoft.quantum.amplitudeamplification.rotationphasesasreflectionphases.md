@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases
 title: RotationPhasesAsReflectionPhases fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: RotationPhasesAsReflectionPhases
 qsharp.summary: Converts phases specified as single-qubit rotations to phases specified as partial reflections.
-ms.openlocfilehash: d62a7584324c9467ccc759e4bed81acbceee719c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6e601cfd867b449d628da7cd60dfacd465e48860
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707688"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191191"
 ---
 # <a name="rotationphasesasreflectionphases-function"></a>RotationPhasesAsReflectionPhases fonction)
 
 Espace de noms : [Microsoft. Quantum. AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Convertit les phases spécifiées sous forme de rotations de qubit simple en phases spécifiées comme réflexions partielles.
