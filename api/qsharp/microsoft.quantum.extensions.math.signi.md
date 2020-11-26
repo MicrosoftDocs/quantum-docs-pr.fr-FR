@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.SignI
 title: Fonction signi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.signi".
-ms.openlocfilehash: eac53109e5ce9ff96a50bb124c4d3099cefca0de
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 81aae2c97af14eee4eb70a3c878fdf36c9f63b40
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701506"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212696"
 ---
 # <a name="signi-function"></a>Fonction signi
 
 Espace de noms : [Microsoft. Quantum. extensions. Math](xref:Microsoft.Quantum.Extensions.Math)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]
