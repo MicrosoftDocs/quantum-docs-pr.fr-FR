@@ -81,6 +81,8 @@ functions:
   uid: Microsoft.Quantum.Canon.HammingWeightI
 - summary: Ignore la sortie d’une opération ou d’une fonction.
   uid: Microsoft.Quantum.Canon.Ignore
+- summary: Retourne la valeur true si et seulement si la plage d’entrée est vide.
+  uid: Microsoft.Quantum.Canon.IsRangeEmpty
 - summary: Teste si une valeur de résultat donnée est égale à `One` .
   uid: Microsoft.Quantum.Canon.IsResultOne
 - summary: Teste si une valeur de résultat donnée est égale à `Zero` .
@@ -220,6 +222,8 @@ operations:
   uid: Microsoft.Quantum.Canon.AndLadder
 - summary: Inverse un qubit cible donné si et seulement si les deux contrôles qubits sont dans l’État 1, à l’aide de mesures pour exécuter l’opération joint.
   uid: Microsoft.Quantum.Canon.ApplyAnd
+- summary: Calcule une chaîne de et des portes
+  uid: Microsoft.Quantum.Canon.ApplyAndChain
 - summary: ''
   uid: Microsoft.Quantum.Canon.ApplyBound
 - summary: ''
@@ -658,8 +662,6 @@ operations:
   uid: Microsoft.Quantum.Canon.IterateThroughCartesianPower
 - summary: Applique une opération pour chaque index dans le produit cartésien de plusieurs plages.
   uid: Microsoft.Quantum.Canon.IterateThroughCartesianProduct
-- summary: Calcule le AND logique de plusieurs qubits.
-  uid: Microsoft.Quantum.Canon.LogicalANDMeasAndFix
 - summary: >+
     > [!WARNING]
 
@@ -727,6 +729,8 @@ operations:
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
   uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator
+- summary: Étape d’implémentation de `MultiplexOperationsFromGenerator` .
+  uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGeneratorImpl
 - summary: Étape d’implémentation de MultiplexOperations.
   uid: Microsoft.Quantum.Canon.MultiplexOperationsWithAuxRegister
 - summary: Applique une rotation Pauli conditionnée sur un tableau de qubits.
@@ -767,14 +771,12 @@ operations:
   uid: Microsoft.Quantum.Canon.Trotter2ImplCA
 - summary: Implémentation récursive de l’intégrateur Trotter-Suzuki pair-Order.
   uid: Microsoft.Quantum.Canon.TrotterArbitraryImplCA
-- summary: Étape d’implémentation de `MultiplexOperationsFromGenerator` .
-  uid: Microsoft.Quantum.Canon._MultiplexOperationsFromGenerator
 summary: ''
 uid: Microsoft.Quantum.Canon
 metadata:
-  ms.openlocfilehash: 15dd183daa445cbde87b573386780d3da34beb86
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: c8bb0e87c5f22812587ed5eaefcddc4ad04b851b
+  ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92704062"
+  ms.lasthandoff: 11/26/2020
+  ms.locfileid: "96204485"

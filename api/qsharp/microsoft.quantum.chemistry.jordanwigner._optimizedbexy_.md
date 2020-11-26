@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEXY_
 title: _OptimizedBEXY_ fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _OptimizedBEXY_
 qsharp.summary: ''
-ms.openlocfilehash: fae8f66c63f73b7377cd6f802e73da04d03eee48
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 824df52e0c813bbafbe8f5357051901c5abeda3b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703366"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203567"
 ---
-# <a name="_optimizedbexy_-function"></a><span data-ttu-id="3791f-102">_OptimizedBEXY_ fonction)</span><span class="sxs-lookup"><span data-stu-id="3791f-102">_OptimizedBEXY_ function</span></span>
+# <a name="_optimizedbexy_-function"></a><span data-ttu-id="620b4-102">_OptimizedBEXY_ fonction)</span><span class="sxs-lookup"><span data-stu-id="620b4-102">_OptimizedBEXY_ function</span></span>
 
-<span data-ttu-id="3791f-103">Espace de noms : [Microsoft. Quantum. chimie. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="3791f-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
+<span data-ttu-id="620b4-103">Espace de noms : [Microsoft. Quantum. chimie. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="620b4-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
 
-<span data-ttu-id="3791f-104">Packages [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="3791f-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="620b4-104">Package : [Microsoft. Quantum. chimie](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="620b4-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
 
 
 
@@ -28,13 +28,13 @@ function _OptimizedBEXY_ (targetIndex : Int) : ((Qubit, Qubit, Qubit[]) => Unit 
 ```
 
 
-## <a name="input"></a><span data-ttu-id="3791f-105">Entrée</span><span class="sxs-lookup"><span data-stu-id="3791f-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="620b4-105">Entrée</span><span class="sxs-lookup"><span data-stu-id="620b4-105">Input</span></span>
 
-### <a name="targetindex--int"></a><span data-ttu-id="3791f-106">targetIndex : [entier](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="3791f-106">targetIndex : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
+### <a name="targetindex--int"></a><span data-ttu-id="620b4-106">targetIndex : [entier](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="620b4-106">targetIndex : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
-## <a name="output--qubitqubitqubit--unit-adj--ctl"></a><span data-ttu-id="3791f-107">Sortie : ([qubit](xref:microsoft.quantum.lang-ref.qubit),[qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [unité](xref:microsoft.quantum.lang-ref.unit) Adj + CTL</span><span class="sxs-lookup"><span data-stu-id="3791f-107">Output : ([Qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl</span></span>
+
+
+## <a name="output--qubitqubitqubit--unit--is-adj--ctl"></a><span data-ttu-id="620b4-107">Sortie : ([qubit](xref:microsoft.quantum.lang-ref.qubit),[qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [unité](xref:microsoft.quantum.lang-ref.unit)  est Adj + CTL</span><span class="sxs-lookup"><span data-stu-id="620b4-107">Output : ([Qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
