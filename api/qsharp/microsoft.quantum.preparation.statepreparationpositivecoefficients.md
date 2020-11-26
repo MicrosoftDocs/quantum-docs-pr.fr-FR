@@ -1,30 +1,38 @@
 ---
 uid: Microsoft.Quantum.Preparation.StatePreparationPositiveCoefficients
 title: StatePreparationPositiveCoefficients fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: StatePreparationPositiveCoefficients
 qsharp.summary: >-
+  > [!WARNING]
+
+  > StatePreparationPositiveCoefficients has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateD> instead.
+
+
   Returns an operation that prepares the given quantum state.
 
   The returned operation $U$ prepares an arbitrary quantum state $\ket{\psi}$ with positive coefficients $\alpha_j\ge 0$ from the $n$-qubit computational basis state $\ket{0...0}$.
 
   The action of U on a newly-allocated register is given by $$ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j=0}^{2^n-1}\alpha_j \ket{j}}{\sqrt{\sum_{j=0}^{2^n-1}|\alpha_j|^2}}. \end{align} $$
-ms.openlocfilehash: 39d961c71d231e7b51290f81c20c8c6b48c7e0b1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f1fd7d77531996faf566adb78f452929d6cbd50
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708177"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193248"
 ---
 # <a name="statepreparationpositivecoefficients-function"></a>StatePreparationPositiveCoefficients fonction)
 
 Espace de noms : [Microsoft. Quantum. PREPARATION](xref:Microsoft.Quantum.Preparation)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
+
+> [!WARNING]
+> StatePreparationPositiveCoefficients est déconseillé. Utilisez plutôt <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateD>.
 
 Retourne une opération qui prépare l’État Quantum donné.
 
@@ -46,7 +54,7 @@ Tableau allant jusqu’à $2 ^ n $ coefficients $ \ alpha_j $. Le $j $ th coeffi
 
 
 
-## <a name="output--littleendian--unit-adj--ctl"></a>Sortie : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [unité](xref:microsoft.quantum.lang-ref.unit) Adj + CTL
+## <a name="output--littleendian--unit--is-adj--ctl"></a>Sortie : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) l' => [unité](xref:microsoft.quantum.lang-ref.unit) LittleEndian est Adj + CTL
 
 Une opération unitaire de préparation de l’État $U $.
 

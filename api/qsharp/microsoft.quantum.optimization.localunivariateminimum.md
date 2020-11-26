@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Optimization.LocalUnivariateMinimum
 title: LocalUnivariateMinimum fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Optimization
 qsharp.name: LocalUnivariateMinimum
 qsharp.summary: Returns the local minimum for a univariate function over a bounded interval, using a golden interval search.
-ms.openlocfilehash: 3b09af88bbed20a392768d005e5e9567b3bb7022
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e804e6a6ed82f14dcc9b8f721ad503d77922dc0f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701917"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194081"
 ---
 # <a name="localunivariateminimum-function"></a>LocalUnivariateMinimum fonction)
 
 Espace de noms : [Microsoft. Quantum. Optimization](xref:Microsoft.Quantum.Optimization)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retourne la valeur minimale locale pour une fonction Student sur un intervalle délimité, à l’aide d’une recherche d’intervalle d’or.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Measurement.MeasurePaulis
 title: Opération MeasurePaulis
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Measurement
 qsharp.name: MeasurePaulis
 qsharp.summary: Given an array of multi-qubit Pauli operators, measures each using a specified measurement gadget, then returns the array of results.
-ms.openlocfilehash: 7348ab3941af391c451d5c66f888cf3b6662cf20
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4faaf78f24fa28ae5e4f701b80d9297c910b975e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706758"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194217"
 ---
 # <a name="measurepaulis-operation"></a>Opération MeasurePaulis
 
 Espace de noms : [Microsoft. Quantum. Measurement](xref:Microsoft.Quantum.Measurement)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 À partir d’un tableau d’opérateurs Pauli à plusieurs qubit, les mesures de chacune à l’aide d’un gadget de mesure spécifié, puis retourne le tableau de résultats.
@@ -40,7 +40,7 @@ Tableau d’opérateurs Pauli à plusieurs qubit à mesurer.
 Inscrivez-vous pour mesurer les opérateurs donnés.
 
 
-### <a name="gadget--pauliqubit--__invalidresult__"></a>Gadget : ( [Pauli](xref:microsoft.quantum.lang-ref.pauli)[], [qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => __non <Result> valide__ 
+### <a name="gadget--pauliqubit--__invalidresult__"></a>Gadget : ([Pauli](xref:microsoft.quantum.lang-ref.pauli)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => __non <Result> valide__ 
 
 Opération qui effectue la mesure d’un opérateur multi-qubit donné.
 
