@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRCA
 title: Opération ApplyIfElseRCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseRCA
 qsharp.summary: Applies one of two unitary operations, depending on the value of a classical result.
-ms.openlocfilehash: c48d75323f036ebce1a316382a05cd2578db47a3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: dfd1c16a25a2da507024813a380386c8f4e49d30
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705278"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218748"
 ---
 # <a name="applyifelserca-operation"></a>Opération ApplyIfElseRCA
 
 Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applique l’une des deux opérations unitaires, en fonction de la valeur d’un résultat classique.
 
 ```qsharp
-operation ApplyIfElseRCA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit
+operation ApplyIfElseRCA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit is Adj + Ctl
 ```
 
 
@@ -39,7 +39,7 @@ Avec un résultat donné `result` , applique l’opération `zeroOp` avec `zeroI
 Résultat de mesure utilisé pour déterminer si `zeroOp` ou `oneOp` est appliqué.
 
 
-### <a name="zeroop--t--unit-adj--ctl"></a>zeroOp : 't = [> Adj](xref:microsoft.quantum.lang-ref.unit) + CTL
+### <a name="zeroop--t--unit--is-adj--ctl"></a>zeroOp : t => [unité](xref:microsoft.quantum.lang-ref.unit)  est Adj + CTL
 
 Opération unitaire à appliquer lorsque `result == Zero` .
 
@@ -49,7 +49,7 @@ Opération unitaire à appliquer lorsque `result == Zero` .
 Entrée à fournir `zeroOp` lorsque `result == Zero` .
 
 
-### <a name="oneop--u--unit-adj--ctl"></a>oneOp : 'U [=> Adj](xref:microsoft.quantum.lang-ref.unit) + CTL
+### <a name="oneop--u--unit--is-adj--ctl"></a>oneOp : 'U => [unité](xref:microsoft.quantum.lang-ref.unit)  est Adj + CTL
 
 Opération unitaire à appliquer lorsque `result == One` .
 

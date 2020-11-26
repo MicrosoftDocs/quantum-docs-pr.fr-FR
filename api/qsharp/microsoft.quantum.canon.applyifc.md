@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfC
 title: Opération ApplyIfC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfC
 qsharp.summary: Applies a controllable operation conditioned on a classical bit.
-ms.openlocfilehash: e16254154909eb844164538acb7b82fedc11f86a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 35430cb7cf491965b7b69ace6d3f41599dbadd51
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705355"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218714"
 ---
 # <a name="applyifc-operation"></a>Opération ApplyIfC
 
 Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applique une opération contrôlable conditionnée sur un bit classique.
 
 ```qsharp
-operation ApplyIfC<'T> (op : ('T => Unit is Ctl), bit : Bool, target : 'T) : Unit
+operation ApplyIfC<'T> (op : ('T => Unit is Ctl), bit : Bool, target : 'T) : Unit is Ctl
 ```
 
 
@@ -35,7 +35,7 @@ Le suffixe `C` indique que l’opération à appliquer est contrôlable.
 
 ## <a name="input"></a>Entrée
 
-### <a name="op--t--unit-ctl"></a>OP : t => CTL de l' [unité](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-ctl"></a>OP : t => [unité](xref:microsoft.quantum.lang-ref.unit)  est CTL
 
 Opération à appliquer de manière conditionnelle.
 

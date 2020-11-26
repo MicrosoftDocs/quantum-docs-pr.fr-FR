@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Not
 title: Not, fonction
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: Not
 qsharp.summary: Returns the bitwise NOT of an integer. This performs the same computation as the built-in `~~~` operator.
-ms.openlocfilehash: e27a38514702d5bed17e35737d608ab1c3d39159
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 99c4a503b79ea0cb416c8b4e64d053be82ee9605
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705598"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219581"
 ---
 # <a name="not-function"></a>Not, fonction
 
 Espace de noms : [Microsoft. Quantum. au niveau du bit](xref:Microsoft.Quantum.Bitwise)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Retourne l’opérateur or au niveau du bit d’un entier.

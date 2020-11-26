@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Xor
 title: Xor, fonction
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: Xor
 qsharp.summary: Returns the bitwise exclusive-OR (XOR) of two integers. This performs the same computation as the built-in `^^^` operator.
-ms.openlocfilehash: 0d635092db96037f5d1451ff51cedbfe369d1531
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ced1022514bef7b2ecd557fb589f44829dae54ce
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705566"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219479"
 ---
 # <a name="xor-function"></a>Xor, fonction
 
 Espace de noms : [Microsoft. Quantum. au niveau du bit](xref:Microsoft.Quantum.Bitwise)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Retourne l’opérateur OR exclusif au niveau du bit (XOR) de deux entiers.

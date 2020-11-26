@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Parity
 title: Fonction Parity
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: Parity
 qsharp.summary: Returns the bitwise PARITY of an integer (1 if its binary representation contains odd number of ones and 0 otherwise).
-ms.openlocfilehash: 732dfa93e2bd946833e18663567c36d422789494
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7a590fa05e8dc0d13bdf58412d928fcf7141c1b0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705590"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219547"
 ---
 # <a name="parity-function"></a>Fonction Parity
 
 Espace de noms : [Microsoft. Quantum. au niveau du bit](xref:Microsoft.Quantum.Bitwise)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Retourne la parité au niveau du bit d’un entier (1 si sa représentation binaire contient un nombre impair de uns et 0 dans le cas contraire).
