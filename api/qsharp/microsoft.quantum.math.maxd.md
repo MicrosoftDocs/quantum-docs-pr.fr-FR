@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.MaxD
 title: MaxD fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: MaxD
 qsharp.summary: Returns the larger of two specified numbers.
-ms.openlocfilehash: 1fcaffdc008cd297ed23244f5b4b3190da76ad7a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: bc6140f4fc4015619194a7a0c3023fc9414fee08
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701335"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228030"
 ---
 # <a name="maxd-function"></a>MaxD fonction)
 
 Espace de noms : [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Retourne le plus grand de deux nombres spécifiés.

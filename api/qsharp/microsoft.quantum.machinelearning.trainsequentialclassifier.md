@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifier
 title: Opération TrainSequentialClassifier
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: TrainSequentialClassifier
 qsharp.summary: Given the structure of a sequential classifier, trains the classifier on a given labeled training set.
-ms.openlocfilehash: 12c4df59941b682d9de798e6585b59d1c34924dc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d0b0587ffa93141739bcd6f39324571ffc28dacc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702040"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228659"
 ---
 # <a name="trainsequentialclassifier-operation"></a>Opération TrainSequentialClassifier
 
 Espace de noms : [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Étant donné la structure d’un classifieur séquentiel, forme le classifieur sur un jeu d’apprentissage étiqueté donné.

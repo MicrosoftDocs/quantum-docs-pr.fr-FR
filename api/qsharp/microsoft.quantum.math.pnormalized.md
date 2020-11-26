@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.PNormalized
 title: PNormalized fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Normalizes a vector of `Double`s in the `L(p)` norm.
 
   That is, given an array $x$ of type `Double[]`, this returns an array where all elements are divided by the $p$-norm $\|x\|_p$.
-ms.openlocfilehash: 6f9dfebe83f52cbf486cd8e6874d3699f5e6b8ab
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 196bdab67528aa8672a010ac3830459e27276ce9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707916"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227520"
 ---
 # <a name="pnormalized-function"></a>PNormalized fonction)
 
 Espace de noms : [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Normalise un vecteur de `Double` s dans la `L(p)` norme.
