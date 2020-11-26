@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToTailC
 title: Opération ApplyToTailC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToTailC
 qsharp.summary: Applies an operation to the last element of an array.
-ms.openlocfilehash: 631e08666002d8077c6f8b78525b06b104dd4c7c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5a68cae3fd122416cfd064e0078e03f5c00ab492
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704627"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217286"
 ---
 # <a name="applytotailc-operation"></a>Opération ApplyToTailC
 
 Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applique une opération au dernier élément d’un tableau.
 
 ```qsharp
-operation ApplyToTailC<'T> (op : ('T => Unit is Ctl), targets : 'T[]) : Unit
+operation ApplyToTailC<'T> (op : ('T => Unit is Ctl), targets : 'T[]) : Unit is Ctl
 ```
 
 
@@ -34,7 +34,7 @@ Pour une opération donnée `op` et un tableau de cibles `targets` , s’appliqu
 
 ## <a name="input"></a>Entrée
 
-### <a name="op--t--unit-ctl"></a>OP : t => CTL de l' [unité](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-ctl"></a>OP : t => [unité](xref:microsoft.quantum.lang-ref.unit)  est CTL
 
 Opération à appliquer.
 

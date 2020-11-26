@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToEachCA
 title: Opération ApplyToEachCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToEachCA
 qsharp.summary: Applies a single-qubit operation to each element in a register. The modifier `CA` indicates that the single-qubit operation is controllable and adjointable.
-ms.openlocfilehash: b24fbb8c7a1a55c0a7750c5d096a61f4824dadfb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: dcfd4619a77413e71044e6a7d5fc19a9f22bbf94
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704958"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217745"
 ---
 # <a name="applytoeachca-operation"></a>Opération ApplyToEachCA
 
 Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applique une opération à qubit unique à chaque élément d’un registre.
 Le modificateur `CA` indique que l’opération de qubit simple est contrôlable et adjointable.
 
 ```qsharp
-operation ApplyToEachCA<'T> (singleElementOperation : ('T => Unit is Adj + Ctl), register : 'T[]) : Unit
+operation ApplyToEachCA<'T> (singleElementOperation : ('T => Unit is Adj + Ctl), register : 'T[]) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>Entrée
 
-### <a name="singleelementoperation--t--unit-adj--ctl"></a>singleElementOperation : 't = [> Adj](xref:microsoft.quantum.lang-ref.unit) + CTL
+### <a name="singleelementoperation--t--unit--is-adj--ctl"></a>singleElementOperation : t => [unité](xref:microsoft.quantum.lang-ref.unit)  est Adj + CTL
 
 Opération à appliquer à chaque qubit.
 
