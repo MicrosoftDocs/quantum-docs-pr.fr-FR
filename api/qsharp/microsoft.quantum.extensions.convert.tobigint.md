@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Convert.ToBigInt
 title: ToBigInt fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Convert
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.convert.intasbigint".
-ms.openlocfilehash: 0898c43f021e6f3c2a5cadc7419833131f3b6632
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e5d99ff14b7767266d5ded73bf2dc30fbf571261
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702277"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213461"
 ---
-# <a name="tobigint-function"></a><span data-ttu-id="03414-102">ToBigInt fonction)</span><span class="sxs-lookup"><span data-stu-id="03414-102">ToBigInt function</span></span>
+# <a name="tobigint-function"></a><span data-ttu-id="05734-102">ToBigInt fonction)</span><span class="sxs-lookup"><span data-stu-id="05734-102">ToBigInt function</span></span>
 
-<span data-ttu-id="03414-103">Espace de noms : [Microsoft. Quantum. extensions. Convert](xref:Microsoft.Quantum.Extensions.Convert)</span><span class="sxs-lookup"><span data-stu-id="03414-103">Namespace: [Microsoft.Quantum.Extensions.Convert](xref:Microsoft.Quantum.Extensions.Convert)</span></span>
+<span data-ttu-id="05734-103">Espace de noms : [Microsoft. Quantum. extensions. Convert](xref:Microsoft.Quantum.Extensions.Convert)</span><span class="sxs-lookup"><span data-stu-id="05734-103">Namespace: [Microsoft.Quantum.Extensions.Convert](xref:Microsoft.Quantum.Extensions.Convert)</span></span>
 
-<span data-ttu-id="03414-104">Packages [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="03414-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="05734-104">Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="05734-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="03414-105">ToBigInt est déconseillé.</span><span class="sxs-lookup"><span data-stu-id="03414-105">ToBigInt has been deprecated.</span></span> <span data-ttu-id="03414-106">Utilisez plutôt <xref:Microsoft.Quantum.Convert.IntAsBigInt>.</span><span class="sxs-lookup"><span data-stu-id="03414-106">Please use <xref:Microsoft.Quantum.Convert.IntAsBigInt> instead.</span></span>
+> <span data-ttu-id="05734-105">ToBigInt est déconseillé.</span><span class="sxs-lookup"><span data-stu-id="05734-105">ToBigInt has been deprecated.</span></span> <span data-ttu-id="05734-106">Utilisez plutôt <xref:Microsoft.Quantum.Convert.IntAsBigInt>.</span><span class="sxs-lookup"><span data-stu-id="05734-106">Please use <xref:Microsoft.Quantum.Convert.IntAsBigInt> instead.</span></span>
 >
-> <span data-ttu-id="03414-107">Utilisez @"microsoft.quantum.convert.intasbigint".</span><span class="sxs-lookup"><span data-stu-id="03414-107">Please use @"microsoft.quantum.convert.intasbigint".</span></span>
+> <span data-ttu-id="05734-107">Utilisez @"microsoft.quantum.convert.intasbigint".</span><span class="sxs-lookup"><span data-stu-id="05734-107">Please use @"microsoft.quantum.convert.intasbigint".</span></span>
 
 
 
@@ -40,13 +40,13 @@ function ToBigInt (a : Int) : BigInt
 ```
 
 
-## <a name="input"></a><span data-ttu-id="03414-108">Entrée</span><span class="sxs-lookup"><span data-stu-id="03414-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="05734-108">Entrée</span><span class="sxs-lookup"><span data-stu-id="05734-108">Input</span></span>
 
-### <a name="a--int"></a><span data-ttu-id="03414-109">r : [entier](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="03414-109">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
+### <a name="a--int"></a><span data-ttu-id="05734-109">r : [entier](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="05734-109">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
-## <a name="output--bigint"></a><span data-ttu-id="03414-110">Sortie : [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="03414-110">Output : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
+
+
+## <a name="output--bigint"></a><span data-ttu-id="05734-110">Sortie : [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="05734-110">Output : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
 
