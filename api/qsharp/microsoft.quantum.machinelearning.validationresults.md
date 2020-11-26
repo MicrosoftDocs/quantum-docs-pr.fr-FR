@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ValidationResults
 title: Type défini par l’utilisateur ValidationResults
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: ValidationResults
 qsharp.summary: The results from having validated a classifier against a set of samples.
-ms.openlocfilehash: 1e54a5a086035f5f8d36d777badb306156d99600
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 42bfab7fd1f9372d9394f2eaf2d698b39b4307e1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706814"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211489"
 ---
 # <a name="validationresults-user-defined-type"></a>Type défini par l’utilisateur ValidationResults
 
 Espace de noms : [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Le résultat de l’utilisation d’un classifieur sur un ensemble d’exemples est validé.
