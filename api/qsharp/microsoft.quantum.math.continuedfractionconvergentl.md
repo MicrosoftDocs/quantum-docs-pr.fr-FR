@@ -1,46 +1,46 @@
 ---
 uid: Microsoft.Quantum.Math.ContinuedFractionConvergentL
 title: ContinuedFractionConvergentL fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ContinuedFractionConvergentL
 qsharp.summary: Finds the continued fraction convergent closest to `fraction` with the denominator less or equal to `denominatorBound`
-ms.openlocfilehash: a02b38fedb5b0025f04e7bba86f2f998493206b3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c10fcbbe63d3d4c7d6c56196768c1062be1ca350
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708576"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210928"
 ---
-# <a name="continuedfractionconvergentl-function"></a><span data-ttu-id="9b60e-102">ContinuedFractionConvergentL fonction)</span><span class="sxs-lookup"><span data-stu-id="9b60e-102">ContinuedFractionConvergentL function</span></span>
+# <a name="continuedfractionconvergentl-function"></a><span data-ttu-id="70d58-102">ContinuedFractionConvergentL fonction)</span><span class="sxs-lookup"><span data-stu-id="70d58-102">ContinuedFractionConvergentL function</span></span>
 
-<span data-ttu-id="9b60e-103">Espace de noms : [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)</span><span class="sxs-lookup"><span data-stu-id="9b60e-103">Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)</span></span>
+<span data-ttu-id="70d58-103">Espace de noms : [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)</span><span class="sxs-lookup"><span data-stu-id="70d58-103">Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)</span></span>
 
-<span data-ttu-id="9b60e-104">Packages [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="9b60e-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="70d58-104">Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="70d58-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="9b60e-105">Recherche la fraction continue la plus proche de `fraction` avec le dénominateur inférieur ou égal à `denominatorBound`</span><span class="sxs-lookup"><span data-stu-id="9b60e-105">Finds the continued fraction convergent closest to `fraction` with the denominator less or equal to `denominatorBound`</span></span>
+<span data-ttu-id="70d58-105">Recherche la fraction continue la plus proche de `fraction` avec le dénominateur inférieur ou égal à `denominatorBound`</span><span class="sxs-lookup"><span data-stu-id="70d58-105">Finds the continued fraction convergent closest to `fraction` with the denominator less or equal to `denominatorBound`</span></span>
 
 ```qsharp
 function ContinuedFractionConvergentL (fraction : Microsoft.Quantum.Math.BigFraction, denominatorBound : BigInt) : Microsoft.Quantum.Math.BigFraction
 ```
 
 
-## <a name="input"></a><span data-ttu-id="9b60e-106">Entrée</span><span class="sxs-lookup"><span data-stu-id="9b60e-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="70d58-106">Entrée</span><span class="sxs-lookup"><span data-stu-id="70d58-106">Input</span></span>
 
-### <a name="fraction--bigfraction"></a><span data-ttu-id="9b60e-107">fraction : [BigFraction](xref:Microsoft.Quantum.Math.BigFraction)</span><span class="sxs-lookup"><span data-stu-id="9b60e-107">fraction : [BigFraction](xref:Microsoft.Quantum.Math.BigFraction)</span></span>
-
-
-
-
-### <a name="denominatorbound--bigint"></a><span data-ttu-id="9b60e-108">denominatorBound : [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="9b60e-108">denominatorBound : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
+### <a name="fraction--bigfraction"></a><span data-ttu-id="70d58-107">fraction : [BigFraction](xref:Microsoft.Quantum.Math.BigFraction)</span><span class="sxs-lookup"><span data-stu-id="70d58-107">fraction : [BigFraction](xref:Microsoft.Quantum.Math.BigFraction)</span></span>
 
 
 
 
+### <a name="denominatorbound--bigint"></a><span data-ttu-id="70d58-108">denominatorBound : [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="70d58-108">denominatorBound : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
 
-## <a name="output--bigfraction"></a><span data-ttu-id="9b60e-109">Sortie : [BigFraction](xref:Microsoft.Quantum.Math.BigFraction)</span><span class="sxs-lookup"><span data-stu-id="9b60e-109">Output : [BigFraction](xref:Microsoft.Quantum.Math.BigFraction)</span></span>
 
-<span data-ttu-id="9b60e-110">Fraction continue la plus proche de `fraction` avec le dénominateur inférieur ou égal à `denominatorBound`</span><span class="sxs-lookup"><span data-stu-id="9b60e-110">Continued fraction closest to `fraction` with the denominator less or equal to `denominatorBound`</span></span>
+
+
+
+## <a name="output--bigfraction"></a><span data-ttu-id="70d58-109">Sortie : [BigFraction](xref:Microsoft.Quantum.Math.BigFraction)</span><span class="sxs-lookup"><span data-stu-id="70d58-109">Output : [BigFraction](xref:Microsoft.Quantum.Math.BigFraction)</span></span>
+
+<span data-ttu-id="70d58-110">Fraction continue la plus proche de `fraction` avec le dénominateur inférieur ou égal à `denominatorBound`</span><span class="sxs-lookup"><span data-stu-id="70d58-110">Continued fraction closest to `fraction` with the denominator less or equal to `denominatorBound`</span></span>
