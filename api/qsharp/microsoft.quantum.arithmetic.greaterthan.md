@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.GreaterThan
 title: GreaterThan, opération
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: GreaterThan
 qsharp.summary: Applies a greater-than comparison between two integers encoded into qubit registers, flipping a target qubit based on the result of the comparison.
-ms.openlocfilehash: b7214b43dacd07b4750be4b681f30937185ac953
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 644d68affbdb508938f76de5025a1a463e7284e2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707286"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223083"
 ---
 # <a name="greaterthan-operation"></a>GreaterThan, opération
 
 Espace de noms : [Microsoft. Quantum. Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applique une comparaison « supérieur à » entre deux entiers encodés dans des registres qubit, en retournant un qubit cible en fonction du résultat de la comparaison.
 
 ```qsharp
-operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit
+operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit is Adj + Ctl
 ```
 
 
