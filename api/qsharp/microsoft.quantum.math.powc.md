@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.PowC
 title: PowC fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PowC
 qsharp.summary: Returns a number raised to a given power.
-ms.openlocfilehash: d7db6dcf1e06ad87b001fa2916e9eb92ed0c8447
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 57a0f4c8176a7f87835c7d096136e288c4875eea
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707910"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194710"
 ---
 # <a name="powc-function"></a>PowC fonction)
 
 Espace de noms : [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retourne un nombre élevé à une puissance donnée.

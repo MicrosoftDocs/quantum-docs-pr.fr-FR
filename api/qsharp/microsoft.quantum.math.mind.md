@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.MinD
 title: Fonction d’esprit
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: MinD
 qsharp.summary: Returns the smaller of two specified numbers.
-ms.openlocfilehash: 21579cf91d60a3f29f5c812070eefee75ccbafe4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ffa06d270df3ff9b427ee765c0a4e2ea3c386cd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702016"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195169"
 ---
 # <a name="mind-function"></a>Fonction d’esprit
 
 Espace de noms : [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Retourne le plus petit de deux nombres spécifiés.

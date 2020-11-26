@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.EstimateClassificationProbability
 title: Opération EstimateClassificationProbability
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: EstimateClassificationProbability
 qsharp.summary: Given a sample and a sequential classifier, estimates the classification probability for that sample by repeatedly measuring the output of the classifier on the given sample.
-ms.openlocfilehash: 79e40bc4bc0954dc6742307122609950bf22ec71
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9d127bba9624e178fbdb631a1249efe5fc2be3b0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701383"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196461"
 ---
 # <a name="estimateclassificationprobability-operation"></a>Opération EstimateClassificationProbability
 
 Espace de noms : [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Étant donné un échantillon et un classifieur séquentiel, évalue la probabilité de classification pour cet échantillon en mesurant de manière répétée la sortie du classifieur sur l’échantillon donné.
