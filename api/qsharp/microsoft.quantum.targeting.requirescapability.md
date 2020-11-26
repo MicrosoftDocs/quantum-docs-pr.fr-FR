@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Targeting.RequiresCapability
 title: Type défini par l’utilisateur RequiresCapability
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Targeting
 qsharp.name: RequiresCapability
 qsharp.summary: Compiler-recognized attribute used to mark a callable with the runtime capabilities it requires.
-ms.openlocfilehash: 63b1952d402f1bcb81a8f9d0afc3cdf7aa7e5ed8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0d9e4eb294b3ce91058c204d5dba37ea29b4ac28
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709137"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231005"
 ---
 # <a name="requirescapability-user-defined-type"></a>Type défini par l’utilisateur RequiresCapability
 
 Espace de noms : [Microsoft. Quantum. Targeting](xref:Microsoft.Quantum.Targeting)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Attribut reconnu par le compilateur utilisé pour marquer un pouvant être appelé avec les fonctionnalités d’exécution dont il a besoin.

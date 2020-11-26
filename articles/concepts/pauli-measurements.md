@@ -87,8 +87,8 @@ Auteur : bradben UID : Microsoft. Quantum. concepts. Pauli ms. Author : v-ben
 
 Dans les discussions précédentes, nous nous sommes concentrés sur les mesures de base de calcul.
 En fait, il existe d’autres mesures courantes qui se produisent dans quantum computing qui, du point de vue de la notation, sont pratiques pour exprimer en termes de mesures de la base de calcul.
-À mesure que vous travaillez avec Q# , le type de mesure le plus courant dans lequel vous allez être exécuté sera probablement des *mesures Pauli* , qui généralisent les mesures de base de calcul pour inclure des mesures dans d’autres bases et de la parité entre différents qubits.
-Dans ce cas, il est courant d’examiner la mesure d’un opérateur Pauli, en général un opérateur tel que $ X, Y, z $ ou $ z \otimes z, x \otimes x, x \otimes Y $ , etc.
+À mesure que vous travaillez avec Q# , le type de mesure le plus courant dans lequel vous allez être exécuté sera probablement des *mesures Pauli*, qui généralisent les mesures de base de calcul pour inclure des mesures dans d’autres bases et de la parité entre différents qubits.
+Dans ce cas, il est courant d’examiner la mesure d’un opérateur Pauli, en général un opérateur tel que $ X, Y, z $ ou $ z \otimes z, x \otimes x, x \otimes Y $ , etc. 
 
 > [!TIP]
 > Dans Q# , les opérateurs Pauli multi-qubit sont généralement représentés par des tableaux de type `Pauli[]` .
@@ -247,12 +247,12 @@ Pour plus d’informations, consultez [`Measure`](xref:Microsoft.Quantum.Intrins
 Les informations de Quantum sont puissantes.
 Cela nous permet de faire des choses étonnantes, telles que les chiffres de facteur de façon exponentielle plus rapide que les algorithmes classiques les plus connus, ou de simuler efficacement des systèmes d’électrons corrélés qui nécessitent un coût exponentiel pour une simulation précise.
 Toutefois, il existe des limitations à la puissance de quantum computing.
-L’une de ces limitations est donnée par le seuil de *non-clonage* .
+L’une de ces limitations est donnée par le seuil de *non-clonage*.
 
 Le nom de l' No-Cloning le nom de la.
 Il interdit le clonage d’États de Quantum génériques par un ordinateur Quantum.
 La preuve du pas de l’un est remarquablement simple.
-Bien qu’une preuve complète de l’qubits de non-clonage soit un peu trop technique pour notre discussion ici, la preuve dans le cas d’un auxiliaire supplémentaire se trouve dans notre étendue (les qubits auxiliaires sont qubits utilisés pour l’espace de travail pendant un calcul et sont facilement utilisés et gérés dans Q# , consultez [qubits empruntés](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
+Bien qu’une preuve complète de l’qubits de non-clonage soit un peu trop technique pour notre discussion ici, la preuve dans le cas d’un auxiliaire supplémentaire est dans notre portée.
 
 Pour un tel ordinateur Quantum, l’opération de clonage doit être décrite par une matrice d’unités.
 Nous interdisent la mesure, car cela corromprait l’État Quantum que nous essayons de cloner.

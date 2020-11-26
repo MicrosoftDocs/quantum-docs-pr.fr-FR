@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionallyIntrinsicA
 title: Opération ApplyConditionallyIntrinsicA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyConditionallyIntrinsicA
 qsharp.summary: ''
-ms.openlocfilehash: c914ae48646501851cb115d723a28f65c86881de
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d815467b714d1a529e784c2d8519e981cf4750b0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706630"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230223"
 ---
 # <a name="applyconditionallyintrinsica-operation"></a>Opération ApplyConditionallyIntrinsicA
 
 Espace de noms : [Microsoft. Quantum. simulation. QuantumProcessor. extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyConditionallyIntrinsicA (measurementResults : Result[], resultsValues : Result[], onEqualOp : (Unit => Unit is Adj), onNonEqualOp : (Unit => Unit is Adj)) : Unit
+operation ApplyConditionallyIntrinsicA (measurementResults : Result[], resultsValues : Result[], onEqualOp : (Unit => Unit is Adj), onNonEqualOp : (Unit => Unit is Adj)) : Unit is Adj
 ```
 
 
@@ -40,12 +40,12 @@ operation ApplyConditionallyIntrinsicA (measurementResults : Result[], resultsVa
 
 
 
-### <a name="onequalop--unit--unit-adj"></a>onEqualOp : [Unit](xref:microsoft.quantum.lang-ref.unit) => ajustement d' [unité](xref:microsoft.quantum.lang-ref.unit) d’unité
+### <a name="onequalop--unit--unit--is-adj"></a>onEqualOp : l’unité d' [unité](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) est adj
 
 
 
 
-### <a name="onnonequalop--unit--unit-adj"></a>onNonEqualOp : [Unit](xref:microsoft.quantum.lang-ref.unit) => ajustement d' [unité](xref:microsoft.quantum.lang-ref.unit) d’unité
+### <a name="onnonequalop--unit--unit--is-adj"></a>onNonEqualOp : l’unité d' [unité](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) est adj
 
 
 
