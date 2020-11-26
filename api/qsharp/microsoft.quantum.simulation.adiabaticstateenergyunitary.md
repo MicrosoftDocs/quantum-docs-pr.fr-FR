@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.AdiabaticStateEnergyUnitary
 title: Opération AdiabaticStateEnergyUnitary
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: AdiabaticStateEnergyUnitary
 qsharp.summary: Performs state preparation by applying a `statePrepUnitary` on the input state, followed by adiabatic state preparation using a `adiabaticUnitary`, and finally phase estimation with respect to `qpeUnitary`on the resulting state using a `phaseEstAlgorithm`.
-ms.openlocfilehash: 642f6a0af76b3b2d0703f0377c379abf33ecee71
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a69eb29318a750bea9c7c84ae4f90f7a31007c33
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92708123"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225531"
 ---
 # <a name="adiabaticstateenergyunitary-operation"></a>Opération AdiabaticStateEnergyUnitary
 
 Espace de noms : [Microsoft. Quantum. simulation](xref:Microsoft.Quantum.Simulation)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Exécute la préparation de l’État en appliquant un `statePrepUnitary` à l’état d’entrée, suivi de la préparation de l’état de adiabatic à l’aide d’un et d’une `adiabaticUnitary` estimation de la phase finale en ce qui concerne `qpeUnitary` l’état résultant à l’aide d’un `phaseEstAlgorithm` .
@@ -40,7 +40,7 @@ Oracle qui représente la préparation de l’état du générateur dynamique in
 Oracle représentant l’algorithme d’évolution adiabatic à utiliser pour implémenter les balayages à l’état final de l’algorithme.
 
 
-### <a name="qpeunitary--qubit--unit-adj--ctl"></a>qpeUnitary : [qubit](xref:microsoft.quantum.lang-ref.qubit)[] [=> ajuster](xref:microsoft.quantum.lang-ref.unit) + CTL
+### <a name="qpeunitary--qubit--unit--is-adj--ctl"></a>qpeUnitary : [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [unité](xref:microsoft.quantum.lang-ref.unit)  est Adj + CTL
 
 Oracle représentant un opérateur d’unités $U $ représentant l’évolution de l’heure $ \delta t $ sous un générateur dynamique avec l’état du sol $ \ket{\Phi} $ et l’énergie de l’état du sol $E = \Phi \\ , \delta t $.
 
