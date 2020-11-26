@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexZ
 title: Opération MultiplexZ
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: MultiplexZ
 qsharp.summary: Applies a Pauli Z rotation conditioned on an array of qubits.
-ms.openlocfilehash: f7b1973e18ad396ebe892ad63ae47374a7cafbd5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 364d23a0e57a2510f069b6db66b085368f20162e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703957"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206066"
 ---
 # <a name="multiplexz-operation"></a>Opération MultiplexZ
 
 Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applique une rotation Pauli Z conditionnée sur un tableau de qubits.
 
 ```qsharp
-operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit
+operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit is Adj + Ctl
 ```
 
 

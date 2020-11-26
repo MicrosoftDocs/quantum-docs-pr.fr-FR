@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.TransformedOperationCA
 title: TransformedOperationCA fonction)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TransformedOperationCA
 qsharp.summary: Given a function and an operation, returns a new operation whose input is transformed by the given function.
-ms.openlocfilehash: 21c9cdfc3b5b266cb3b93e52ee2fa4c655caf795
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fa204433dc8195dd27fa40980fb2262f8a3848bb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703759"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204842"
 ---
 # <a name="transformedoperationca-function"></a>TransformedOperationCA fonction)
 
 Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Packages [](https://nuget.org/packages/)
+Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 À partir d’une fonction et d’une opération, retourne une nouvelle opération dont l’entrée est transformée par la fonction donnée.
@@ -35,13 +35,13 @@ function TransformedOperationCA<'T, 'U> (fn : ('U -> 'T), op : ('T => Unit is Ad
 Fonction qui transforme l’entrée donnée en une forme attendue par l’opération.
 
 
-### <a name="op--t--unit-adj--ctl"></a>OP : t [=> ajuster](xref:microsoft.quantum.lang-ref.unit) + CTL
+### <a name="op--t--unit--is-adj--ctl"></a>OP : 't => [unité](xref:microsoft.quantum.lang-ref.unit)  est Adj + CTL
 
 Opération à transformer.
 
 
 
-## <a name="output--u--unit-adj--ctl"></a>Sortie : 'U => ajustable d' [unité](xref:microsoft.quantum.lang-ref.unit) + CTL
+## <a name="output--u--unit--is-adj--ctl"></a>Sortie : 'U => [unité](xref:microsoft.quantum.lang-ref.unit)  est Adj + CTL
 
 Une nouvelle opération tbat appelle `fn` avec son entrée, puis passe la sortie obtenue à `op` .
 
