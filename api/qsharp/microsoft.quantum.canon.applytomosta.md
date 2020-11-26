@@ -1,62 +1,62 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToMostA
 title: Opération ApplyToMostA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToMostA
 qsharp.summary: Applies an operation to all but the last element of an array.
-ms.openlocfilehash: 994cada2952809dc84a70b76dc4ede8286c89855
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7c226de9b2c99d124c467175dfe65a60a89d4332
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704763"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208497"
 ---
-# <a name="applytomosta-operation"></a><span data-ttu-id="fa83a-102">Opération ApplyToMostA</span><span class="sxs-lookup"><span data-stu-id="fa83a-102">ApplyToMostA operation</span></span>
+# <a name="applytomosta-operation"></a><span data-ttu-id="d5988-102">Opération ApplyToMostA</span><span class="sxs-lookup"><span data-stu-id="d5988-102">ApplyToMostA operation</span></span>
 
-<span data-ttu-id="fa83a-103">Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="fa83a-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="d5988-103">Espace de noms : [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="d5988-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="fa83a-104">Packages [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="fa83a-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="d5988-104">Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="d5988-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="fa83a-105">Applique une opération à tous les éléments à l’exception du dernier élément d’un tableau.</span><span class="sxs-lookup"><span data-stu-id="fa83a-105">Applies an operation to all but the last element of an array.</span></span>
+<span data-ttu-id="d5988-105">Applique une opération à tous les éléments à l’exception du dernier élément d’un tableau.</span><span class="sxs-lookup"><span data-stu-id="d5988-105">Applies an operation to all but the last element of an array.</span></span>
 
 ```qsharp
-operation ApplyToMostA<'T> (op : ('T[] => Unit is Adj), targets : 'T[]) : Unit
+operation ApplyToMostA<'T> (op : ('T[] => Unit is Adj), targets : 'T[]) : Unit is Adj
 ```
 
 
-## <a name="description"></a><span data-ttu-id="fa83a-106">Description</span><span class="sxs-lookup"><span data-stu-id="fa83a-106">Description</span></span>
+## <a name="description"></a><span data-ttu-id="d5988-106">Description</span><span class="sxs-lookup"><span data-stu-id="d5988-106">Description</span></span>
 
-<span data-ttu-id="fa83a-107">Pour une opération donnée `op` et un tableau de cibles `targets` , s’applique `op(Most(targets))` .</span><span class="sxs-lookup"><span data-stu-id="fa83a-107">Given an operation `op` and an array of targets `targets`, applies `op(Most(targets))`.</span></span>
+<span data-ttu-id="d5988-107">Pour une opération donnée `op` et un tableau de cibles `targets` , s’applique `op(Most(targets))` .</span><span class="sxs-lookup"><span data-stu-id="d5988-107">Given an operation `op` and an array of targets `targets`, applies `op(Most(targets))`.</span></span>
 
-## <a name="input"></a><span data-ttu-id="fa83a-108">Entrée</span><span class="sxs-lookup"><span data-stu-id="fa83a-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="d5988-108">Entrée</span><span class="sxs-lookup"><span data-stu-id="d5988-108">Input</span></span>
 
-### <a name="op--t--unit-adj"></a><span data-ttu-id="fa83a-109">OP : 't [] => ajustement d' [unité](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="fa83a-109">op : 'T[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj</span></span>
+### <a name="op--t--unit--is-adj"></a><span data-ttu-id="d5988-109">OP : 't [] => [unité](xref:microsoft.quantum.lang-ref.unit)  est adj</span><span class="sxs-lookup"><span data-stu-id="d5988-109">op : 'T[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj</span></span>
 
-<span data-ttu-id="fa83a-110">Opération à appliquer.</span><span class="sxs-lookup"><span data-stu-id="fa83a-110">An operation to be applied.</span></span>
-
-
-### <a name="targets--t"></a><span data-ttu-id="fa83a-111">cibles : 't []</span><span class="sxs-lookup"><span data-stu-id="fa83a-111">targets : 'T[]</span></span>
-
-<span data-ttu-id="fa83a-112">Tableau de cibles, dont toutes les dernières sont appliquées `op` .</span><span class="sxs-lookup"><span data-stu-id="fa83a-112">An array of targets, of which all but the last will be applied to `op`.</span></span>
+<span data-ttu-id="d5988-110">Opération à appliquer.</span><span class="sxs-lookup"><span data-stu-id="d5988-110">An operation to be applied.</span></span>
 
 
+### <a name="targets--t"></a><span data-ttu-id="d5988-111">cibles : 't []</span><span class="sxs-lookup"><span data-stu-id="d5988-111">targets : 'T[]</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="fa83a-113">Sortie : [unité](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="fa83a-113">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="d5988-112">Tableau de cibles, dont toutes les dernières sont appliquées `op` .</span><span class="sxs-lookup"><span data-stu-id="d5988-112">An array of targets, of which all but the last will be applied to `op`.</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="fa83a-114">Paramètres de type</span><span class="sxs-lookup"><span data-stu-id="fa83a-114">Type Parameters</span></span>
+## <a name="output--unit"></a><span data-ttu-id="d5988-113">Sortie : [unité](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="d5988-113">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-### <a name="t"></a><span data-ttu-id="fa83a-115">Peut</span><span class="sxs-lookup"><span data-stu-id="fa83a-115">'T</span></span>
 
-<span data-ttu-id="fa83a-116">Type d’entrée de l’opération à appliquer.</span><span class="sxs-lookup"><span data-stu-id="fa83a-116">The input type of the operation to be applied.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="fa83a-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fa83a-117">See Also</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="d5988-114">Paramètres de type</span><span class="sxs-lookup"><span data-stu-id="d5988-114">Type Parameters</span></span>
 
-- [<span data-ttu-id="fa83a-118">Microsoft. Quantum. Canon. ApplyToMost</span><span class="sxs-lookup"><span data-stu-id="fa83a-118">Microsoft.Quantum.Canon.ApplyToMost</span></span>](xref:Microsoft.Quantum.Canon.ApplyToMost)
-- [<span data-ttu-id="fa83a-119">Microsoft. Quantum. Canon. ApplyToMostC</span><span class="sxs-lookup"><span data-stu-id="fa83a-119">Microsoft.Quantum.Canon.ApplyToMostC</span></span>](xref:Microsoft.Quantum.Canon.ApplyToMostC)
-- [<span data-ttu-id="fa83a-120">Microsoft. Quantum. Canon. ApplyToMostCA</span><span class="sxs-lookup"><span data-stu-id="fa83a-120">Microsoft.Quantum.Canon.ApplyToMostCA</span></span>](xref:Microsoft.Quantum.Canon.ApplyToMostCA)
+### <a name="t"></a><span data-ttu-id="d5988-115">Peut</span><span class="sxs-lookup"><span data-stu-id="d5988-115">'T</span></span>
+
+<span data-ttu-id="d5988-116">Type d’entrée de l’opération à appliquer.</span><span class="sxs-lookup"><span data-stu-id="d5988-116">The input type of the operation to be applied.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="d5988-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d5988-117">See Also</span></span>
+
+- [<span data-ttu-id="d5988-118">Microsoft. Quantum. Canon. ApplyToMost</span><span class="sxs-lookup"><span data-stu-id="d5988-118">Microsoft.Quantum.Canon.ApplyToMost</span></span>](xref:Microsoft.Quantum.Canon.ApplyToMost)
+- [<span data-ttu-id="d5988-119">Microsoft. Quantum. Canon. ApplyToMostC</span><span class="sxs-lookup"><span data-stu-id="d5988-119">Microsoft.Quantum.Canon.ApplyToMostC</span></span>](xref:Microsoft.Quantum.Canon.ApplyToMostC)
+- [<span data-ttu-id="d5988-120">Microsoft. Quantum. Canon. ApplyToMostCA</span><span class="sxs-lookup"><span data-stu-id="d5988-120">Microsoft.Quantum.Canon.ApplyToMostCA</span></span>](xref:Microsoft.Quantum.Canon.ApplyToMostCA)
