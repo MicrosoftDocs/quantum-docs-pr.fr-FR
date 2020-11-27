@@ -10,12 +10,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
-ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
+ms.openlocfilehash: eeb567dedc1b8123b32faf7ed3a42bb51f16a7d2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93376420"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228727"
 ---
 # <a name="develop-with-no-locq-applications-in-an-ide"></a>Développer avec des applications Q# dans un IDE
 
@@ -63,7 +63,7 @@ Pour créer un projet :
 
 1. Cliquez sur **Affichage** -> **Palette de commandes** et sélectionnez **Q# : Créer un projet**.
 2. Cliquez sur **Application console autonome**.
-3. Accédez à l’emplacement où vous souhaitez enregistrer le projet, puis cliquez sur **Créer le projet**.
+3. Accédez à l’emplacement d’enregistrement du projet. Entrez le nom du projet et cliquez sur **Créer un projet**.
 4. Une fois le projet créé, cliquez sur **Ouvrir le nouveau projet...** dans le coin inférieur droit.
 
 Examinez le projet. Vous devriez voir un fichier source nommé `Program.qs`. Il s’agit d’un programme Q# qui définit une opération simple pour afficher un message dans la console.
