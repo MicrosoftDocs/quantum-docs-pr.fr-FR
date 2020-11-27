@@ -1,0 +1,32 @@
+- name: Expressions dans Q#
+  href: index.md
+- name: Priorité et associativité
+  href: precedenceandassociativity.md
+- name: Opérateurs
+  items:
+    - name: Expressions de copie et de mise à jour
+      href: copyandupdateexpressions.md
+    - name: Expressions conditionnelles
+      href: conditionalexpressions.md
+    - name: Expresssions comparatives
+      href: comparativeexpressions.md
+    - name: Expressions logiques
+      href: logicalexpressions.md
+    - name: Expressions au niveau du bit
+      href: bitwiseexpressions.md
+    - name: Expressions arithmétiques
+      href: arithmeticexpressions.md
+    - name: Concaténations
+      href: concatenation.md
+- name: Modificateurs et combinateurs
+  items:
+    - name: Application partielle
+      href: partialapplication.md
+    - name: Application de foncteur
+      href: functorapplication.md
+    - name: Expressions d’accès aux éléments
+      href: itemaccessexpressions.md
+- name: Expressions contextuelles
+  href: contextualexpressions.md
+- name: Littéraux de valeur et valeurs par défaut
+  href: valueliterals.md
