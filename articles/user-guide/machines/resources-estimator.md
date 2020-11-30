@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
+ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691867"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96318488"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimation des ressources du kit de développement quantique (QDK)
 
@@ -127,11 +127,11 @@ L’estimateur de ressources effectue le suivi des mesures suivantes :
 |----|----|
 |__CNOT__    |Nombre d’exécutions d' `CNOT` opérations (également appelées opérations Pauli X contrôlées).|
 |__QubitClifford__ |Nombre d’exécutions d’opérations qubit Clifford et Pauli uniques.|
-|__Unité__  :    |Nombre d’exécutions de mesures.  |
+|__Mesure__    |Nombre d’exécutions de mesures.  |
 |__R__    |Nombre d’exécutions de rotations à qubit unique, à l’exception des `T` opérations Clifford et Pauli.  |
 |__T__    |Nombre d’exécutions d' `T` opérations et de leurs conjugués, y compris les `T` opérations, T_x = H. T. H et T_y = Hy. t. hy.  |
 |__Profondeur__|Profondeur du circuit Quantum exécuté par l' Q# opération (voir [ci-dessous](#depth-width-and-qubitcount)). Par défaut, la mesure de profondeur compte uniquement les `T` portes. Pour plus d’informations, consultez [compteur de profondeur](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Width__|Largeur du circuit Quantum exécutée par l' Q# opération (voir [ci-dessous](#depth-width-and-qubitcount)). Par défaut, la mesure de profondeur compte uniquement les `T` portes. Pour plus d’informations, consultez [compteur de profondeur](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Width__|Largeur du circuit Quantum exécutée par l' Q# opération (voir [ci-dessous](#depth-width-and-qubitcount)). Par défaut, la mesure de profondeur compte uniquement les `T` portes. Pour plus d’informations, consultez [compteur de largeur](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter).   |
 |__QubitCount__    |Limite inférieure pour le nombre maximal de qubits allouées pendant l’exécution de l' Q# opération. Cette métrique peut ne pas être compatible avec la __profondeur__ (voir ci-dessous).  |
 |__BorrowedWidth__    |Nombre maximal de qubits empruntés dans l' Q# opération.  |
 
