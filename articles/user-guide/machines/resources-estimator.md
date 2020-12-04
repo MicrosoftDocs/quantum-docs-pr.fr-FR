@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
-ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
+ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
+ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96318488"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604641"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimation des ressources du kit de développement quantique (QDK)
 
@@ -28,9 +28,9 @@ Vous pouvez utiliser l’estimateur de ressources pour exécuter toute Q# opéra
 
 ### <a name="invoking-the-resources-estimator-from-c"></a>Appel de l’estimateur de ressources à partir de C # 
 
-Comme pour les autres ordinateurs cibles, vous devez d’abord créer une instance de la classe `ResourceEstimator`, puis la passer en tant que premier paramètre de la méthode `Run` d’une opération.
+Comme pour les autres ordinateurs cibles, vous devez d’abord créer une instance de la classe `ResourcesEstimator`, puis la passer en tant que premier paramètre de la méthode `Run` d’une opération.
 
-Notez que, contrairement à la classe `QuantumSimulator`, la classe `ResourceEstimator` n’implémente pas l’interface <xref:System.IDisposable>. Vous n’avez donc pas besoin de la placer dans une instruction `using`.
+Notez que, contrairement à la classe `QuantumSimulator`, la classe `ResourcesEstimator` n’implémente pas l’interface <xref:System.IDisposable>. Vous n’avez donc pas besoin de la placer dans une instruction `using`.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
