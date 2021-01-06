@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 72af3f5517b272d6d8159b158103b5af91d266b5
+ms.sourcegitcommit: c48cdafccb3487bf93d67fa80cdc64768445b691
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692157"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940884"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caractérisation quantique et statistiques #
 
@@ -22,7 +22,7 @@ Il est essentiel de pouvoir caractériser les effets des opérations afin de dé
 Cela est difficile, car chaque mesure d’un système Quantum produit au plus un peu d’informations.
 Pour apprendre un eigenvalue, laisser un État Quantum autonome, les résultats de nombreuses mesures doivent être regroupés afin que l’utilisateur puisse glaner les nombreux éléments d’informations nécessaires pour représenter ces concepts.
 Les États quantiques sont particulièrement vexing, car le titre de [non-clonage](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) stipule qu’il n’existe aucun moyen d’apprendre un État Quantum arbitraire à partir d’une copie unique de l’État, car cela vous permet de créer des copies de l’État.
-Cet obscurcissement de l’État Quantum de l’utilisateur est reflété dans le fait que Q# n’expose pas ou ne définit pas l’état *is* des programmes quantiques.
+Cet obscurcissement de l’État Quantum de l’utilisateur est reflété dans le fait que Q# n’expose pas ou ne définit pas l’état  des programmes quantiques.
 Nous allons donc aborder la caractérisation quantique en traitant les opérations et les États comme une boîte noire. Cette approche partage en grande partie en commun avec la pratique expérimentale de la caractérisation quantique, la vérification et la validation (QCVV).
 
 La caractérisation est distincte de la plupart des autres bibliothèques présentées précédemment.
@@ -56,7 +56,7 @@ Nous insistons sur cela en décrivant brièvement l’estimation de phase itéra
 
 Si un état d’entrée qui n’est pas un eigenstate est fourni, ce qui signifie que si $U (m) \ket{\Phi \_ j} = e ^ {im\phi \_ j} $, le processus d’estimation de phase ne redirige pas de façon déterminante l’État Quantum vers un eigenstate d’énergie unique.  Le eigenstate qui se converge finalement vers est le eigenstate qui est le plus susceptible de produire le observé `Result` .
 
-Plus précisément, une seule étape de PE effectue la transformation non unitaire suivante sur un État \begin{align} \ sum_j \sqrt{\Pr (\Phi \_ j)} \ket{\Phi \_ j} \mapsto \sum \_ j\frac {\ sqrt {\ PR (\Phi \_ j)} \sqrt{\Pr (\text{result} | \Phi j \_ )} \Ket{\Phi \_ j}} {\sqrt{\Pr (\Phi \_ j) \sum \_ j \Pr (\text{result} | \Phi \_ j)}}.
+Plus précisément, une seule étape de PE effectue la transformation non unitaire suivante sur un État \begin{align} \ sum_j \sqrt{\Pr (\Phi \_ j)} \ket{\Phi \_ j} \mapsto \sum \_ j\frac {\ sqrt {\ PR (\Phi \_ j)} \sqrt{\Pr (\text{result} | \Phi \_ j)} \Ket{\Phi \_ j}} {\sqrt{\Pr (\Phi \_ j) \sum \_ k \Pr (\text{result} | \Phi \_ k)}}.
 \end{align} étant donné que ce processus est itéré sur plusieurs `Result` valeurs, les eigenstates qui n’ont pas de valeurs maximales de $ \ prod_k \pr (\text{result} \_ k | \Phi \_ j) $ seront supprimés de façon exponentielle.
 Par conséquent, le processus d’inférence aura tendance à converger vers des États avec un seul eigenvalue si les expériences sont correctement choisies.
 
@@ -153,7 +153,7 @@ operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, ei
 ```
 
 L' `bitsPrecision` entrée est unique à `RobustPhaseEstimation` , tandis que `oracle` et `eigenstate` sont en commun.
-Ainsi, comme indiqué dans **H2Sample** , une opération peut accepter un algorithme d’estimation de phase itérative avec une entrée de la forme `(DiscreteOracle, Qubit[]) => Unit` pour permettre à un utilisateur de spécifier des algorithmes d’estimation de phase arbitraires :
+Ainsi, comme indiqué dans **H2Sample**, une opération peut accepter un algorithme d’estimation de phase itérative avec une entrée de la forme `(DiscreteOracle, Qubit[]) => Unit` pour permettre à un utilisateur de spécifier des algorithmes d’estimation de phase arbitraires :
 
 ```qsharp
 operation H2EstimateEnergy(
