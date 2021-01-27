@@ -1,19 +1,19 @@
 ---
 uid: Microsoft.Quantum.Environment
 title: Espace de noms Microsoft. Quantum. Environment
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/23/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Environment
 qsharp.summary: These functions provide information about the environment in which the quantum computation is occuring.
-ms.openlocfilehash: 68e929671b83652ee9f57a427875a02c8aa181de
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 0eab4b22fe8cd304587a1b4e251419d28e5ee29e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96201357"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853229"
 ---
-# <a name="microsoftquantumenvironment-namespace"></a><span data-ttu-id="5e11e-102">Espace de noms Microsoft. Quantum. Environment</span><span class="sxs-lookup"><span data-stu-id="5e11e-102">Microsoft.Quantum.Environment namespace</span></span>
+# <a name="microsoftquantumenvironment-namespace"></a><span data-ttu-id="ce6ba-102">Espace de noms Microsoft. Quantum. Environment</span><span class="sxs-lookup"><span data-stu-id="ce6ba-102">Microsoft.Quantum.Environment namespace</span></span>
 
-<span data-ttu-id="5e11e-103">Ces fonctions fournissent des informations sur l’environnement dans lequel le calcul de Quantum se produit.</span><span class="sxs-lookup"><span data-stu-id="5e11e-103">These functions provide information about the environment in which the quantum computation is occuring.</span></span>
+<span data-ttu-id="ce6ba-103">Ces fonctions fournissent des informations sur l’environnement dans lequel le calcul de Quantum se produit.</span><span class="sxs-lookup"><span data-stu-id="ce6ba-103">These functions provide information about the environment in which the quantum computation is occuring.</span></span>
 

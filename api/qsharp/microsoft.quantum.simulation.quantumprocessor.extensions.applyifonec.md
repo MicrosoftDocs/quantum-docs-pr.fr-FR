@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfOneC
 title: Opération ApplyIfOneC
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyIfOneC
 qsharp.summary: ''
-ms.openlocfilehash: d7c4e39ba26befeabad612e888da4abd00efaeb5
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ae6e0d16424e745303b377e70927cda847d2f1e8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96230954"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858737"
 ---
-# <a name="applyifonec-operation"></a><span data-ttu-id="8f911-102">Opération ApplyIfOneC</span><span class="sxs-lookup"><span data-stu-id="8f911-102">ApplyIfOneC operation</span></span>
+# <a name="applyifonec-operation"></a><span data-ttu-id="5839e-102">Opération ApplyIfOneC</span><span class="sxs-lookup"><span data-stu-id="5839e-102">ApplyIfOneC operation</span></span>
 
-<span data-ttu-id="8f911-103">Espace de noms : [Microsoft. Quantum. simulation. QuantumProcessor. extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span><span class="sxs-lookup"><span data-stu-id="8f911-103">Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span></span>
+<span data-ttu-id="5839e-103">Espace de noms : [Microsoft. Quantum. simulation. QuantumProcessor. extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span><span class="sxs-lookup"><span data-stu-id="5839e-103">Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span></span>
 
-<span data-ttu-id="8f911-104">Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="8f911-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="5839e-104">Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="5839e-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 
@@ -28,29 +28,29 @@ operation ApplyIfOneC<'T> (measurementResult : Result, (onResultOneOp : ('T => U
 ```
 
 
-## <a name="input"></a><span data-ttu-id="8f911-105">Entrée</span><span class="sxs-lookup"><span data-stu-id="8f911-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="5839e-105">Entrée</span><span class="sxs-lookup"><span data-stu-id="5839e-105">Input</span></span>
 
-### <a name="measurementresult--__invalidresult__"></a><span data-ttu-id="8f911-106">measurementResult : __non <Result> valide__</span><span class="sxs-lookup"><span data-stu-id="8f911-106">measurementResult : __invalid<Result>__</span></span>
-
-
-
-
-### <a name="onresultoneop--t--unit--is-ctl"></a><span data-ttu-id="8f911-107">onResultOneOp : t => [unité](xref:microsoft.quantum.lang-ref.unit)  est CTL</span><span class="sxs-lookup"><span data-stu-id="8f911-107">onResultOneOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl</span></span>
+### <a name="measurementresult--__invalidresult__"></a><span data-ttu-id="5839e-106">measurementResult : __non <Result> valide__</span><span class="sxs-lookup"><span data-stu-id="5839e-106">measurementResult : __invalid<Result>__</span></span>
 
 
 
 
-### <a name="onearg--t"></a><span data-ttu-id="8f911-108">oneArg : 't</span><span class="sxs-lookup"><span data-stu-id="8f911-108">oneArg : 'T</span></span>
+### <a name="onresultoneop--t--unit--is-ctl"></a><span data-ttu-id="5839e-107">onResultOneOp : t => [unité](xref:microsoft.quantum.lang-ref.unit)  est CTL</span><span class="sxs-lookup"><span data-stu-id="5839e-107">onResultOneOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl</span></span>
+
+
+
+
+### <a name="onearg--t"></a><span data-ttu-id="5839e-108">oneArg : 't</span><span class="sxs-lookup"><span data-stu-id="5839e-108">oneArg : 'T</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="8f911-109">Sortie : [unité](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="8f911-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="5839e-109">Sortie : [unité](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="5839e-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="8f911-110">Paramètres de type</span><span class="sxs-lookup"><span data-stu-id="8f911-110">Type Parameters</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="5839e-110">Paramètres de type</span><span class="sxs-lookup"><span data-stu-id="5839e-110">Type Parameters</span></span>
 
-### <a name="t"></a><span data-ttu-id="8f911-111">Peut</span><span class="sxs-lookup"><span data-stu-id="8f911-111">'T</span></span>
+### <a name="t"></a><span data-ttu-id="5839e-111">Peut</span><span class="sxs-lookup"><span data-stu-id="5839e-111">'T</span></span>
 

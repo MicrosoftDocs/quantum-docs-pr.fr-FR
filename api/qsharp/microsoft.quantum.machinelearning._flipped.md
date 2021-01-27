@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._Flipped
 title: _Flipped fonction)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _Flipped
 qsharp.summary: ''
-ms.openlocfilehash: 7799b03a791466a8ae6c62168812437e8b875fbb
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 176a375f574ec122580ef31cd9cab076b19fa96d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96212237"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855013"
 ---
-# <a name="_flipped-function"></a><span data-ttu-id="c1af2-102">_Flipped fonction)</span><span class="sxs-lookup"><span data-stu-id="c1af2-102">_Flipped function</span></span>
+# <a name="_flipped-function"></a><span data-ttu-id="7c5a5-102">_Flipped fonction)</span><span class="sxs-lookup"><span data-stu-id="7c5a5-102">_Flipped function</span></span>
 
-<span data-ttu-id="c1af2-103">Espace de noms : [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="c1af2-103">Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span></span>
+<span data-ttu-id="7c5a5-103">Espace de noms : [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="7c5a5-103">Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span></span>
 
-<span data-ttu-id="c1af2-104">Package : [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="c1af2-104">Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span></span>
+<span data-ttu-id="7c5a5-104">Package : [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="7c5a5-104">Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span></span>
 
 
 
@@ -28,25 +28,25 @@ function _Flipped<'TInput1, 'TInput2, 'TOutput> (fn : (('TInput1, 'TInput2) -> '
 ```
 
 
-## <a name="input"></a><span data-ttu-id="c1af2-105">Entrée</span><span class="sxs-lookup"><span data-stu-id="c1af2-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="7c5a5-105">Entrée</span><span class="sxs-lookup"><span data-stu-id="7c5a5-105">Input</span></span>
 
-### <a name="fn--tinput1tinput2---toutput"></a><span data-ttu-id="c1af2-106">FN : ('TInput1, 'TInput2)-> 'TOutput</span><span class="sxs-lookup"><span data-stu-id="c1af2-106">fn : ('TInput1,'TInput2) -> 'TOutput</span></span>
-
-
+### <a name="fn--tinput1tinput2---toutput"></a><span data-ttu-id="7c5a5-106">FN : ('TInput1, 'TInput2)-> 'TOutput</span><span class="sxs-lookup"><span data-stu-id="7c5a5-106">fn : ('TInput1,'TInput2) -> 'TOutput</span></span>
 
 
 
-## <a name="output--tinput2tinput1---toutput"></a><span data-ttu-id="c1af2-107">Sortie : ('TInput2, 'TInput1)-> 'TOutput</span><span class="sxs-lookup"><span data-stu-id="c1af2-107">Output : ('TInput2,'TInput1) -> 'TOutput</span></span>
+
+
+## <a name="output--tinput2tinput1---toutput"></a><span data-ttu-id="7c5a5-107">Sortie : ('TInput2, 'TInput1)-> 'TOutput</span><span class="sxs-lookup"><span data-stu-id="7c5a5-107">Output : ('TInput2,'TInput1) -> 'TOutput</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="c1af2-108">Paramètres de type</span><span class="sxs-lookup"><span data-stu-id="c1af2-108">Type Parameters</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="7c5a5-108">Paramètres de type</span><span class="sxs-lookup"><span data-stu-id="7c5a5-108">Type Parameters</span></span>
 
-### <a name="tinput1"></a><span data-ttu-id="c1af2-109">'TInput1</span><span class="sxs-lookup"><span data-stu-id="c1af2-109">'TInput1</span></span>
-
-
-### <a name="tinput2"></a><span data-ttu-id="c1af2-110">'TInput2</span><span class="sxs-lookup"><span data-stu-id="c1af2-110">'TInput2</span></span>
+### <a name="tinput1"></a><span data-ttu-id="7c5a5-109">'TInput1</span><span class="sxs-lookup"><span data-stu-id="7c5a5-109">'TInput1</span></span>
 
 
-### <a name="toutput"></a><span data-ttu-id="c1af2-111">«TOutput</span><span class="sxs-lookup"><span data-stu-id="c1af2-111">'TOutput</span></span>
+### <a name="tinput2"></a><span data-ttu-id="7c5a5-110">'TInput2</span><span class="sxs-lookup"><span data-stu-id="7c5a5-110">'TInput2</span></span>
+
+
+### <a name="toutput"></a><span data-ttu-id="7c5a5-111">«TOutput</span><span class="sxs-lookup"><span data-stu-id="7c5a5-111">'TOutput</span></span>
 
