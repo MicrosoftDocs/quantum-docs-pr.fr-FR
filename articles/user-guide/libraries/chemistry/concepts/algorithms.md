@@ -4,17 +4,17 @@ description: Découvrez comment utiliser Trotter-Suzuki formules et qubitization
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eeaa13b99ab07ce22f8a3306a756bf7ac7cde65b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691886"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857594"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Simulation de Dynamics Hamilton
 
@@ -28,7 +28,7 @@ L’idée sous-jacente des formules Trotter – Suzuki est simple : Exprimez le
 En particulier, laissez $H = \ sum_ {j = 1} ^ m H_j $ est le lieu de la Hamilton.
 Puis, $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $, ce qui signifie que, si $t \ll $1, l’erreur de cette approximation devient négligeable.
 Notez que si $e ^ {-i H t} $ étaient une valeur exponentielle ordinaire, l’erreur de cette approximation ne serait pas $O (m ^ 2 t ^ 2) $ : il s’agit de zéro.
-Cette erreur se produit car $e ^ {-iHt} $ est un opérateur exponentiel et, par conséquent, une erreur est survenue lors de l’utilisation de cette formule en raison du fait que les $H _j $ Terms ne sont pas inactives (par *exemple* , $H _J H_k \ne H_k H_j $ en général).
+Cette erreur se produit car $e ^ {-iHt} $ est un opérateur exponentiel et, par conséquent, une erreur est survenue lors de l’utilisation de cette formule en raison du fait que les $H _j $ Terms ne sont pas inactives (par *exemple*, $H _J H_k \ne H_k H_j $ en général).
 
 Si $t $ est large, les formules Trotter – Suzuki peuvent toujours être utilisées pour simuler la dynamique avec précision en la fractionnant en une séquence d’étapes courtes.
 $R $ étant le nombre d’étapes effectuées dans l’évolution du temps, chaque étape s’exécute pendant l’heure $t/r $. Ensuite, nous avons le signe $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ Right) ^ r + O (m ^ 2 t ^ 2/r), $ $, ce qui signifie que si $r $ se met à l’échelle comme $m ^ 2 t ^ 2/\ Epsilon $, l’erreur peut être effectuée au plus de $ \epsilon $ pour n’importe quel $ \epsilon>$0.
