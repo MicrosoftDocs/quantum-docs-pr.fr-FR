@@ -1,6 +1,6 @@
 ---
 titre : « itérations et boucles dans Q# » Description : en savoir plus sur l’utilisation des boucles « for » dans le Q# langage de programmation.
-Auteur : bettinaheim ms. Author : Beheim ms. Date : 10/07/2020 ms. topic : article UID : Microsoft. Quantum. qsharp. iterations No-Loc :
+Auteur : bettinaheim ms. Author : Beheim ms. Date : 10/07/2020 ms. rubrique : référence UID : Microsoft. Quantum. qsharp. iterations No-Loc :
 - "Q#"
 - "$$v"
 

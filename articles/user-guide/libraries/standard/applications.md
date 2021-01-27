@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 214d584840f235868c66a1fb3ee24d0acab49630
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692176"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857241"
 ---
 # <a name="applications"></a>Applications #
 
@@ -140,7 +140,7 @@ operation EstimateAdiabaticStateEnergy(
 
 ## <a name="shors-algorithm"></a>Algorithme de Shor ##
 L’algorithme de Shori reste l’un des développements les plus significatifs de l’informatique Quantum, car il a montré que les ordinateurs quantiques pouvaient être utilisés pour résoudre des problèmes importants, actuellement des problèmes d’inversion classiques.
-L’algorithme de Shori offre un moyen rapide de factoriser de grands nombres à l’aide d’un ordinateur quantique, un problème appelé *factorisation* .
+L’algorithme de Shori offre un moyen rapide de factoriser de grands nombres à l’aide d’un ordinateur quantique, un problème appelé *factorisation*.
 La sécurité de nombreux Cryptosystems en cours d’existence est basée sur l’hypothèse qu’il n’existe aucun algorithme rapide pour la factorisation.
 Ainsi, l’algorithme de Shori a eu un impact important sur la façon dont nous pensons à la sécurité dans un monde postérieur au quantum.
 
@@ -151,7 +151,7 @@ Nous allons passer en revue ces deux étapes ci-dessous.
 
 ### <a name="period-finding"></a>Recherche de période ###
 
-Après avoir vu comment le fonctionnement de la transformation de Fourier quantique et l’estimation de phase (voir [algorithmes Quantum](xref:microsoft.quantum.libraries.standard.algorithms)), nous pouvons utiliser ces outils pour résoudre un problème de calcul classique appelé *période de recherche* .  Dans la section suivante, nous verrons comment appliquer la détection de période à la factorisation.
+Après avoir vu comment le fonctionnement de la transformation de Fourier quantique et l’estimation de phase (voir [algorithmes Quantum](xref:microsoft.quantum.libraries.standard.algorithms)), nous pouvons utiliser ces outils pour résoudre un problème de calcul classique appelé *période de recherche*.  Dans la section suivante, nous verrons comment appliquer la détection de période à la factorisation.
 
 À partir de deux entiers $a $ et $N $, où $a<N $, l’objectif de la recherche de la période, également appelée recherche de commande, est de trouver la _commande_ $r $ de $a $ modulo $N $, où $r $ est défini comme étant le moins positif $a ^ r \equiv 1 \text{mod} N $.  
 
@@ -178,7 +178,7 @@ Le $U contrôlé _a $ Gate mappe $ \ket{x} $ à $ \ket{(ax) \text{mod} N} $ si l
 Pour obtenir $ (a ^ NX) \text{mod} N $, nous pouvons simplement appliquer le contrôle de $U _ {a ^ n} $, où nous calculons $a ^ n \text{mod} N $ de façon classique pour brancher le circuit Quantum.  
 Les circuits permettant d’atteindre ce type d’arithmétique modulaire ont été décrits dans la documentation sur les opérations [arithmétiques Quantum](./algorithms.md#arithmetic), en particulier, nous avons besoin d’un circuit modulaire à élévation à la puissance pour implémenter les opérations de $U de contrôle \_ {a ^ i} $.
 
-Alors que le circuit ci-dessus correspond à l' [estimation de phase quantique](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) et active explicitement la recherche de commande, nous pouvons réduire le nombre de qubits requis. Nous pouvons soit suivre la méthode de Beauregard pour trouver la commande comme décrit [à la page 8 de arXiv : quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), soit utiliser l’une des routines d’estimation de phase disponibles dans Microsoft. Quantum. caractérisation. Par exemple, l' [estimation de phase robuste](xref:microsoft.quantum.characterization.robustphaseestimation) utilise également un qubit supplémentaire.
+Alors que le circuit ci-dessus correspond à l' [estimation de phase quantique](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) et active explicitement la recherche de commande, nous pouvons réduire le nombre de qubits requis. Nous pouvons soit suivre la méthode de Beauregard pour trouver la commande comme décrit [à la page 8 de arXiv : quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), soit utiliser l’une des routines d’estimation de phase disponibles dans Microsoft. Quantum. caractérisation. Par exemple, l' [estimation de phase robuste](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) utilise également un qubit supplémentaire.
 
 ### <a name="factoring"></a>Factorisation ###
 L’objectif de la factorisation est de déterminer les deux facteurs premiers de l’entier $N $, où $N $ est un nombre $n de $ bits.  

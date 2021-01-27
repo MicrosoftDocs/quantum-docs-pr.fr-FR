@@ -1,6 +1,6 @@
 ---
 titre : « branchement conditionnel dans Q# » Description : en savoir plus sur la branche conditionnelle et l’instruction « if » dans le Q# langage de programmation.
-Auteur : bettinaheim ms. Author : Beheim ms. Date : 10/07/2020 ms. topic : article UID : Microsoft. Quantum. qsharp. conditionalbranching No-Loc :
+Auteur : bettinaheim ms. Author : Beheim ms. Date : 10/07/2020 ms. rubrique : référence UID : Microsoft. Quantum. qsharp. conditionalbranching No-Loc :
 - "Q#"
 - "$$v"
 
