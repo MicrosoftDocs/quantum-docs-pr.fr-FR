@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Convert.ToStringI
 title: ToString, fonction
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Convert
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.convert.intasstring".
-ms.openlocfilehash: 9bb09e1d73cec408ec3be532201ef2e58bf6685e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 607c7cf9e8fcf3a3256c4932123d752603e9d63a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96199929"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849861"
 ---
-# <a name="tostringi-function"></a><span data-ttu-id="94c96-102">ToString, fonction</span><span class="sxs-lookup"><span data-stu-id="94c96-102">ToStringI function</span></span>
+# <a name="tostringi-function"></a><span data-ttu-id="9e126-102">ToString, fonction</span><span class="sxs-lookup"><span data-stu-id="9e126-102">ToStringI function</span></span>
 
-<span data-ttu-id="94c96-103">Espace de noms : [Microsoft. Quantum. extensions. Convert](xref:Microsoft.Quantum.Extensions.Convert)</span><span class="sxs-lookup"><span data-stu-id="94c96-103">Namespace: [Microsoft.Quantum.Extensions.Convert](xref:Microsoft.Quantum.Extensions.Convert)</span></span>
+<span data-ttu-id="9e126-103">Espace de noms : [Microsoft. Quantum. extensions. Convert](xref:Microsoft.Quantum.Extensions.Convert)</span><span class="sxs-lookup"><span data-stu-id="9e126-103">Namespace: [Microsoft.Quantum.Extensions.Convert](xref:Microsoft.Quantum.Extensions.Convert)</span></span>
 
-<span data-ttu-id="94c96-104">Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="94c96-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="9e126-104">Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="9e126-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="94c96-105">ToStringi est déconseillé.</span><span class="sxs-lookup"><span data-stu-id="94c96-105">ToStringI has been deprecated.</span></span> <span data-ttu-id="94c96-106">Utilisez plutôt <xref:Microsoft.Quantum.Convert.IntAsString>.</span><span class="sxs-lookup"><span data-stu-id="94c96-106">Please use <xref:Microsoft.Quantum.Convert.IntAsString> instead.</span></span>
+> <span data-ttu-id="9e126-105">ToStringi est déconseillé.</span><span class="sxs-lookup"><span data-stu-id="9e126-105">ToStringI has been deprecated.</span></span> <span data-ttu-id="9e126-106">Utilisez plutôt <xref:Microsoft.Quantum.Convert.IntAsString>.</span><span class="sxs-lookup"><span data-stu-id="9e126-106">Please use <xref:Microsoft.Quantum.Convert.IntAsString> instead.</span></span>
 >
-> <span data-ttu-id="94c96-107">Utilisez @"microsoft.quantum.convert.intasstring".</span><span class="sxs-lookup"><span data-stu-id="94c96-107">Please use @"microsoft.quantum.convert.intasstring".</span></span>
+> <span data-ttu-id="9e126-107">Utilisez @"microsoft.quantum.convert.intasstring".</span><span class="sxs-lookup"><span data-stu-id="9e126-107">Please use @"microsoft.quantum.convert.intasstring".</span></span>
 
 
 
@@ -40,13 +40,13 @@ function ToStringI (a : Int) : String
 ```
 
 
-## <a name="input"></a><span data-ttu-id="94c96-108">Entrée</span><span class="sxs-lookup"><span data-stu-id="94c96-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="9e126-108">Entrée</span><span class="sxs-lookup"><span data-stu-id="9e126-108">Input</span></span>
 
-### <a name="a--int"></a><span data-ttu-id="94c96-109">r : [entier](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="94c96-109">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
+### <a name="a--int"></a><span data-ttu-id="9e126-109">r : [entier](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="9e126-109">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
-## <a name="output--string"></a><span data-ttu-id="94c96-110">Sortie : [chaîne](xref:microsoft.quantum.lang-ref.string)</span><span class="sxs-lookup"><span data-stu-id="94c96-110">Output : [String](xref:microsoft.quantum.lang-ref.string)</span></span>
+
+
+## <a name="output--string"></a><span data-ttu-id="9e126-110">Sortie : [chaîne](xref:microsoft.quantum.lang-ref.string)</span><span class="sxs-lookup"><span data-stu-id="9e126-110">Output : [String](xref:microsoft.quantum.lang-ref.string)</span></span>
 

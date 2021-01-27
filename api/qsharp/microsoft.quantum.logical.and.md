@@ -1,57 +1,57 @@
 ---
 uid: Microsoft.Quantum.Logical.And
 title: Fonction and
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: And
 qsharp.summary: Returns the Boolean conjunction of two values.
-ms.openlocfilehash: 279221ed785dd76e28146e4c22e70290936bf529
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 6c405bdb4182cc7f32bd04952dec25a974c03445
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96198569"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849241"
 ---
-# <a name="and-function"></a><span data-ttu-id="de65e-102">Fonction and</span><span class="sxs-lookup"><span data-stu-id="de65e-102">And function</span></span>
+# <a name="and-function"></a><span data-ttu-id="6855f-102">Fonction and</span><span class="sxs-lookup"><span data-stu-id="6855f-102">And function</span></span>
 
-<span data-ttu-id="de65e-103">Espace de noms : [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)</span><span class="sxs-lookup"><span data-stu-id="de65e-103">Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)</span></span>
+<span data-ttu-id="6855f-103">Espace de noms : [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)</span><span class="sxs-lookup"><span data-stu-id="6855f-103">Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)</span></span>
 
-<span data-ttu-id="de65e-104">Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="de65e-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="6855f-104">Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="6855f-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="de65e-105">Retourne la combinaison booléenne de deux valeurs.</span><span class="sxs-lookup"><span data-stu-id="de65e-105">Returns the Boolean conjunction of two values.</span></span>
+<span data-ttu-id="6855f-105">Retourne la combinaison booléenne de deux valeurs.</span><span class="sxs-lookup"><span data-stu-id="6855f-105">Returns the Boolean conjunction of two values.</span></span>
 
 ```qsharp
 function And (a : Bool, b : Bool) : Bool
 ```
 
 
-## <a name="input"></a><span data-ttu-id="de65e-106">Entrée</span><span class="sxs-lookup"><span data-stu-id="de65e-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="6855f-106">Entrée</span><span class="sxs-lookup"><span data-stu-id="6855f-106">Input</span></span>
 
-### <a name="a--bool"></a><span data-ttu-id="de65e-107">r : [bool](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="de65e-107">a : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
+### <a name="a--bool"></a><span data-ttu-id="6855f-107">r : [bool](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="6855f-107">a : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
 
-<span data-ttu-id="de65e-108">Première valeur à prendre en compte.</span><span class="sxs-lookup"><span data-stu-id="de65e-108">The first value to be considered.</span></span>
-
-
-### <a name="b--bool"></a><span data-ttu-id="de65e-109">b : [bool](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="de65e-109">b : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
-
-<span data-ttu-id="de65e-110">Deuxième valeur à prendre en compte.</span><span class="sxs-lookup"><span data-stu-id="de65e-110">The second value to be considered.</span></span>
+<span data-ttu-id="6855f-108">Première valeur à prendre en compte.</span><span class="sxs-lookup"><span data-stu-id="6855f-108">The first value to be considered.</span></span>
 
 
+### <a name="b--bool"></a><span data-ttu-id="6855f-109">b : [bool](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="6855f-109">b : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
 
-## <a name="output--bool"></a><span data-ttu-id="de65e-111">Sortie : [bool](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="de65e-111">Output : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
+<span data-ttu-id="6855f-110">Deuxième valeur à prendre en compte.</span><span class="sxs-lookup"><span data-stu-id="6855f-110">The second value to be considered.</span></span>
 
-<span data-ttu-id="de65e-112">`true` Si et seulement si `a` et `b` sont tous les deux `true` .</span><span class="sxs-lookup"><span data-stu-id="de65e-112">`true` if and only if `a` and `b` are both `true`.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="de65e-113">Notes</span><span class="sxs-lookup"><span data-stu-id="de65e-113">Remarks</span></span>
 
-<span data-ttu-id="de65e-114">Contrairement `and` à l’opérateur, cette fonction n’a pas de court-circuit, de sorte que les deux entrées sont entièrement évaluées.</span><span class="sxs-lookup"><span data-stu-id="de65e-114">Unlike the `and` operator, this function does not short-circuit, such that both inputs are fully evaluated.</span></span>
+## <a name="output--bool"></a><span data-ttu-id="6855f-111">Sortie : [bool](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="6855f-111">Output : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
 
-<span data-ttu-id="de65e-115">Jusqu’au comportement de court-circuit, les éléments suivants sont équivalents :</span><span class="sxs-lookup"><span data-stu-id="de65e-115">Up to short-circuiting behavior, the following are equivalent:</span></span>
+<span data-ttu-id="6855f-112">`true` Si et seulement si `a` et `b` sont tous les deux `true` .</span><span class="sxs-lookup"><span data-stu-id="6855f-112">`true` if and only if `a` and `b` are both `true`.</span></span>
 
-```Q#
+## <a name="remarks"></a><span data-ttu-id="6855f-113">Notes</span><span class="sxs-lookup"><span data-stu-id="6855f-113">Remarks</span></span>
+
+<span data-ttu-id="6855f-114">Contrairement `and` à l’opérateur, cette fonction n’a pas de court-circuit, de sorte que les deux entrées sont entièrement évaluées.</span><span class="sxs-lookup"><span data-stu-id="6855f-114">Unlike the `and` operator, this function does not short-circuit, such that both inputs are fully evaluated.</span></span>
+
+<span data-ttu-id="6855f-115">Jusqu’au comportement de court-circuit, les éléments suivants sont équivalents :</span><span class="sxs-lookup"><span data-stu-id="6855f-115">Up to short-circuiting behavior, the following are equivalent:</span></span>
+
+```qsharp
 let x = a and b;
 let x = And(a, b);
 ```
