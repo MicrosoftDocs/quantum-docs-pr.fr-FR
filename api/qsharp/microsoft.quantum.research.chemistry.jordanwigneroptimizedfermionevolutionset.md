@@ -1,41 +1,41 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.JordanWignerOptimizedFermionEvolutionSet
 title: JordanWignerOptimizedFermionEvolutionSet fonction)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: JordanWignerOptimizedFermionEvolutionSet
 qsharp.summary: Represents a dynamical generator as a set of simulatable gates and an expansion in the Pauli basis.
-ms.openlocfilehash: 2cd555882792c29cb2ed71972739505df11fbabc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 941d66a936ef1a2ac76230d14ca8437ac2a4a049
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96225735"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857879"
 ---
-# <a name="jordanwigneroptimizedfermionevolutionset-function"></a><span data-ttu-id="697a5-102">JordanWignerOptimizedFermionEvolutionSet fonction)</span><span class="sxs-lookup"><span data-stu-id="697a5-102">JordanWignerOptimizedFermionEvolutionSet function</span></span>
+# <a name="jordanwigneroptimizedfermionevolutionset-function"></a><span data-ttu-id="0b1c1-102">JordanWignerOptimizedFermionEvolutionSet fonction)</span><span class="sxs-lookup"><span data-stu-id="0b1c1-102">JordanWignerOptimizedFermionEvolutionSet function</span></span>
 
-<span data-ttu-id="697a5-103">Espace de noms : [Microsoft. Quantum. Research. chimie](xref:Microsoft.Quantum.Research.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="697a5-103">Namespace: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)</span></span>
+<span data-ttu-id="0b1c1-103">Espace de noms : [Microsoft. Quantum. Research. chimie](xref:Microsoft.Quantum.Research.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="0b1c1-103">Namespace: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)</span></span>
 
-<span data-ttu-id="697a5-104">Package : [Microsoft. Quantum. Research. chimie](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="697a5-104">Package: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)</span></span>
+<span data-ttu-id="0b1c1-104">Package : [Microsoft. Quantum. Research. chimie](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="0b1c1-104">Package: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)</span></span>
 
 
-<span data-ttu-id="697a5-105">Représente un générateur dynamique sous la forme d’un ensemble de portes simulables et d’une expansion dans la base de Pauli.</span><span class="sxs-lookup"><span data-stu-id="697a5-105">Represents a dynamical generator as a set of simulatable gates and an expansion in the Pauli basis.</span></span>
+<span data-ttu-id="0b1c1-105">Représente un générateur dynamique sous la forme d’un ensemble de portes simulables et d’une expansion dans la base de Pauli.</span><span class="sxs-lookup"><span data-stu-id="0b1c1-105">Represents a dynamical generator as a set of simulatable gates and an expansion in the Pauli basis.</span></span>
 
 ```qsharp
 function JordanWignerOptimizedFermionEvolutionSet (parityQubit : Qubit) : Microsoft.Quantum.Simulation.EvolutionSet
 ```
 
 
-## <a name="input"></a><span data-ttu-id="697a5-106">Entrée</span><span class="sxs-lookup"><span data-stu-id="697a5-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="0b1c1-106">Entrée</span><span class="sxs-lookup"><span data-stu-id="0b1c1-106">Input</span></span>
 
-### <a name="parityqubit--qubit"></a><span data-ttu-id="697a5-107">parityQubit : [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="697a5-107">parityQubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
+### <a name="parityqubit--qubit"></a><span data-ttu-id="0b1c1-107">parityQubit : [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="0b1c1-107">parityQubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
 
-<span data-ttu-id="697a5-108">Qubit qui détermine le signe de l’évolution du temps.</span><span class="sxs-lookup"><span data-stu-id="697a5-108">Qubit that determines the sign of time-evolution.</span></span>
+<span data-ttu-id="0b1c1-108">Qubit qui détermine le signe de l’évolution du temps.</span><span class="sxs-lookup"><span data-stu-id="0b1c1-108">Qubit that determines the sign of time-evolution.</span></span>
 
 
 
-## <a name="output--evolutionset"></a><span data-ttu-id="697a5-109">Sortie : [EvolutionSet](xref:Microsoft.Quantum.Simulation.EvolutionSet)</span><span class="sxs-lookup"><span data-stu-id="697a5-109">Output : [EvolutionSet](xref:Microsoft.Quantum.Simulation.EvolutionSet)</span></span>
+## <a name="output--evolutionset"></a><span data-ttu-id="0b1c1-109">Sortie : [EvolutionSet](xref:Microsoft.Quantum.Simulation.EvolutionSet)</span><span class="sxs-lookup"><span data-stu-id="0b1c1-109">Output : [EvolutionSet](xref:Microsoft.Quantum.Simulation.EvolutionSet)</span></span>
 
-<span data-ttu-id="697a5-110">`EvolutionSet`Qui mappe un `GeneratorIndex` pour la base JWOptimized à un’EvolutionUnitary.</span><span class="sxs-lookup"><span data-stu-id="697a5-110">An `EvolutionSet` that maps a `GeneratorIndex` for the JWOptimized basis to an \`EvolutionUnitary.</span></span>
+<span data-ttu-id="0b1c1-110">`EvolutionSet`Qui mappe un `GeneratorIndex` pour la base JWOptimized à un’EvolutionUnitary.</span><span class="sxs-lookup"><span data-stu-id="0b1c1-110">An `EvolutionSet` that maps a `GeneratorIndex` for the JWOptimized basis to an \`EvolutionUnitary.</span></span>

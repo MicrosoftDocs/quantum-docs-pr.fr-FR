@@ -1,47 +1,47 @@
 ---
 uid: Microsoft.Quantum.Arrays.HeadAndRest
 title: HeadAndRest fonction)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: HeadAndRest
 qsharp.summary: Returns a tuple of first and all remaining elements of the array.
-ms.openlocfilehash: 1144e00227df1cd7d96bc76b118b0b556adbaa96
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c082e0a917343c18e5f511f065b2e78f1e217ecc
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221077"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848560"
 ---
-# <a name="headandrest-function"></a><span data-ttu-id="2b990-102">HeadAndRest fonction)</span><span class="sxs-lookup"><span data-stu-id="2b990-102">HeadAndRest function</span></span>
+# <a name="headandrest-function"></a><span data-ttu-id="16f6c-102">HeadAndRest fonction)</span><span class="sxs-lookup"><span data-stu-id="16f6c-102">HeadAndRest function</span></span>
 
-<span data-ttu-id="2b990-103">Espace de noms : [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="2b990-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
+<span data-ttu-id="16f6c-103">Espace de noms : [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="16f6c-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
 
-<span data-ttu-id="2b990-104">Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="2b990-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="16f6c-104">Package : [Microsoft. Quantum. standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="16f6c-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="2b990-105">Retourne un tuple du premier et de tous les éléments restants du tableau.</span><span class="sxs-lookup"><span data-stu-id="2b990-105">Returns a tuple of first and all remaining elements of the array.</span></span>
+<span data-ttu-id="16f6c-105">Retourne un tuple du premier et de tous les éléments restants du tableau.</span><span class="sxs-lookup"><span data-stu-id="16f6c-105">Returns a tuple of first and all remaining elements of the array.</span></span>
 
 ```qsharp
 function HeadAndRest<'A> (array : 'A[]) : ('A, 'A[])
 ```
 
 
-## <a name="input"></a><span data-ttu-id="2b990-106">Entrée</span><span class="sxs-lookup"><span data-stu-id="2b990-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="16f6c-106">Entrée</span><span class="sxs-lookup"><span data-stu-id="16f6c-106">Input</span></span>
 
-### <a name="array--a"></a><span data-ttu-id="2b990-107">Tableau : 'A []</span><span class="sxs-lookup"><span data-stu-id="2b990-107">array : 'A[]</span></span>
+### <a name="array--a"></a><span data-ttu-id="16f6c-107">Tableau : 'A []</span><span class="sxs-lookup"><span data-stu-id="16f6c-107">array : 'A[]</span></span>
 
-<span data-ttu-id="2b990-108">Tableau avec au moins un élément.</span><span class="sxs-lookup"><span data-stu-id="2b990-108">An array with at least one element.</span></span>
+<span data-ttu-id="16f6c-108">Tableau avec au moins un élément.</span><span class="sxs-lookup"><span data-stu-id="16f6c-108">An array with at least one element.</span></span>
 
 
 
-## <a name="output--aa"></a><span data-ttu-id="2b990-109">Sortie : ('A, 'A [])</span><span class="sxs-lookup"><span data-stu-id="2b990-109">Output : ('A,'A[])</span></span>
+## <a name="output--aa"></a><span data-ttu-id="16f6c-109">Sortie : ('A, 'A [])</span><span class="sxs-lookup"><span data-stu-id="16f6c-109">Output : ('A,'A[])</span></span>
 
-<span data-ttu-id="2b990-110">Tuple du premier et de tous les éléments restants du tableau.</span><span class="sxs-lookup"><span data-stu-id="2b990-110">A tuple of first and all remaining elements of the array.</span></span>
+<span data-ttu-id="16f6c-110">Tuple du premier et de tous les éléments restants du tableau.</span><span class="sxs-lookup"><span data-stu-id="16f6c-110">A tuple of first and all remaining elements of the array.</span></span>
 
-## <a name="type-parameters"></a><span data-ttu-id="2b990-111">Paramètres de type</span><span class="sxs-lookup"><span data-stu-id="2b990-111">Type Parameters</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="16f6c-111">Paramètres de type</span><span class="sxs-lookup"><span data-stu-id="16f6c-111">Type Parameters</span></span>
 
-### <a name="a"></a><span data-ttu-id="2b990-112">'A</span><span class="sxs-lookup"><span data-stu-id="2b990-112">'A</span></span>
+### <a name="a"></a><span data-ttu-id="16f6c-112">'A</span><span class="sxs-lookup"><span data-stu-id="16f6c-112">'A</span></span>
 
-<span data-ttu-id="2b990-113">Type des éléments du tableau.</span><span class="sxs-lookup"><span data-stu-id="2b990-113">The type of the array elements.</span></span>
+<span data-ttu-id="16f6c-113">Type des éléments du tableau.</span><span class="sxs-lookup"><span data-stu-id="16f6c-113">The type of the array elements.</span></span>
