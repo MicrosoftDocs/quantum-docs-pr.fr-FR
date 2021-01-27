@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToRest
 title: Opération ApplyToRest
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToRest
 qsharp.summary: Applies an operation to all but the first element of an array.
-ms.openlocfilehash: fe49361f3c2259960eaa58d47df9b69b30b572a8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f18536a056935220feedc4ea50531c5def61d650
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208262"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850506"
 ---
 # <a name="applytorest-operation"></a>Opération ApplyToRest
 
@@ -54,6 +54,15 @@ Tableau de cibles, dont tous les sauf le premier seront appliqués `op` .
 ### <a name="t"></a>Peut
 
 Type d’entrée de l’opération à appliquer.
+
+## <a name="example"></a>Exemple
+
+Les extraits de code Q # suivants sont équivalents :
+
+```qsharp
+ApplyToRest(ApplyCNOTChain, register);
+ApplyCNOTChain(Rest(register));
+```
 
 ## <a name="see-also"></a>Voir aussi
 

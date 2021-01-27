@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToMost
 title: Opération ApplyToMost
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToMost
 qsharp.summary: Applies an operation to all but the last element of an array.
-ms.openlocfilehash: 7e7824b431ccff644cf5cc53145163327eb8ad36
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a3918233e101f3d8956601dcc7d85edcf6196ac7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208531"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850588"
 ---
 # <a name="applytomost-operation"></a>Opération ApplyToMost
 
@@ -54,6 +54,15 @@ Tableau de cibles, dont toutes les dernières sont appliquées `op` .
 ### <a name="t"></a>Peut
 
 Type d’entrée de l’opération à appliquer.
+
+## <a name="example"></a>Exemple
+
+Les extraits de code Q # suivants sont équivalents :
+
+```qsharp
+ApplyToMost(ApplyCNOTChain, register);
+ApplyCNOTChain(Most(register));
+```
 
 ## <a name="see-also"></a>Voir aussi
 

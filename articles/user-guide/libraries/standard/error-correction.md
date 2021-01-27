@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fc8e46aa22cb2575de42cfc3d4f57c43e5d3f7b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692038"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857206"
 ---
 # <a name="error-correction"></a>Correction des erreurs #
 
@@ -61,7 +61,7 @@ Nous désignons les résultats de chaque mesure par le signe du eigenvalue obser
 | $X _2 $ | $ \ket {001} $ | $ \ket {110} $ | $+$ | $-$ |
 
 Ainsi, les résultats des deux mesures déterminent de manière unique l’erreur de retournement de bits qui s’est produite, mais sans révéler d’informations sur l’état que nous envoyons.
-Nous appelons ces résultats un *syndrome* et revenons au processus de mappage d’un syndrome à l’erreur qui l’a provoquée comme *récupération* .
+Nous appelons ces résultats un *syndrome* et revenons au processus de mappage d’un syndrome à l’erreur qui l’a provoquée comme *récupération*.
 En particulier, nous insistons sur le fait que la récupération est une procédure d’inférence *classique* qui prend comme entrée le syndrome qui s’est produit, et retourne une prescription pour la résolution des erreurs qui se sont produites.
 
 > [!NOTE]
@@ -70,7 +70,7 @@ En particulier, nous insistons sur le fait que la récupération est une procéd
 > De même, l’application d’une opération de retournement de phase `Z` mappe $ \ket{\overline {1} } $ à $-\ket{\overline {1} } $, et mappe donc $ \ket{\overline{+}} $ à $ \ket{\overline {-} } $.
 > Plus généralement, il est possible de créer des codes pour gérer le plus grand nombre d’erreurs et de gérer les erreurs de $Z $, ainsi que les erreurs $X $.
 
-L’information qui nous permet de décrire les mesures dans la correction des erreurs Quantum qui agissent de la même manière sur tous les États de code est l’essence du *formalisme du stabilisant* .
+L’information qui nous permet de décrire les mesures dans la correction des erreurs Quantum qui agissent de la même manière sur tous les États de code est l’essence du *formalisme du stabilisant*.
 Q#Canon fournit une infrastructure pour décrire l’encodage et le décodage à partir de codes stabilisants, et pour décrire la façon dont l’un récupère les erreurs.
 Dans cette section, nous décrivons cette infrastructure et son application à quelques codes de correction des erreurs Quantum simples.
 

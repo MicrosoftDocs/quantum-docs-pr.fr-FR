@@ -4,17 +4,17 @@ description: En savoir plus sur les opérations et les fonctions intrinsèques d
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ed5b1677a204b9425f229a3ea0855bb789f3f75
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692113"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857183"
 ---
 # <a name="the-prelude"></a>Préambule destiné à #
 
@@ -109,13 +109,13 @@ Nous commençons par rappeler que nous pouvons exprimer une opération à qubit 
 Le $T $ Gate est à son tour implémenté par l' <xref:Microsoft.Quantum.Intrinsic.T> opération, et possède la signature `(Qubit => Unit is Adj + Ctl)` , indiquant qu’il s’agit d’une opération d’unité sur un qubit unique.
 
 Même si cela est en principe suffisant pour décrire une opération arbitraire à qubit unique, les différentes machines cibles peuvent avoir des représentations plus efficaces pour les rotations sur les opérateurs Pauli, de sorte que le préambule destiné à comprend de nombreuses façons de convienently exprimer ces rotations.
-Le plus simple est l' <xref:Microsoft.Quantum.Intrinsic.r> opération, qui implémente une rotation autour d’un axe Pauli spécifié, \Begin{Equation} R (\sigma, \Phi) \mathrel{ : =} \exp (-i \Phi \sigma/2), \end{Equation} où $ \sigma $ est un opérateur Pauli, $ \Phi $ est un angle et où $ \exp $ représente l’exponentiel de la matrice.
+Le plus simple est l' <xref:Microsoft.Quantum.Intrinsic.R> opération, qui implémente une rotation autour d’un axe Pauli spécifié, \Begin{Equation} R (\sigma, \Phi) \mathrel{ : =} \exp (-i \Phi \sigma/2), \end{Equation} où $ \sigma $ est un opérateur Pauli, $ \Phi $ est un angle et où $ \exp $ représente l’exponentiel de la matrice.
 Elle possède une signature `((Pauli, Double, Qubit) => Unit is Adj + Ctl)` , où les deux premières parties de l’entrée représentent les arguments classiques $ \sigma $ et $ \Phi $ requis pour spécifier l’opérateur unitaire $R (\sigma, \Phi) $.
 Nous pouvons appliquer partiellement $ \sigma $ et $ \Phi $ pour obtenir une opération dont le type est celui d’une unité qubit unique.
 Par exemple, `R(PauliZ, PI() / 4, _)` a le type `(Qubit => Unit is Adj + Ctl)` .
 
 > [!NOTE]
-> L' <xref:Microsoft.Quantum.Intrinsic.r> opération divise l’angle d’entrée par 2 et le multiplie par-1.
+> L' <xref:Microsoft.Quantum.Intrinsic.R> opération divise l’angle d’entrée par 2 et le multiplie par-1.
 > Pour $Z $ rotations, cela signifie que $ \ket {0} $ eigenstate est pivoté par $-\Phi/$2 et que $ \ket {1} $ eigenstate est pivoté par $ \phi/$2, de sorte que le \ket $ eigenstate {1} $ est pivoté par $ \Phi $ par rapport au $ \ket {0} $ eigenstate.
 >
 > En particulier, cela signifie que `T` et `R(PauliZ, PI() / 8, _)` diffère uniquement par une [phase globale](xref:microsoft.quantum.glossary#global-phase)non pertinente.
@@ -217,7 +217,7 @@ Tout d’abord, étant donné que l’exécution de mesures qubit simples est as
 L' <xref:Microsoft.Quantum.Intrinsic.M> opération mesure l’opérateur Pauli $Z $ sur un qubit unique et possède une signature `(Qubit => Result)` .
 `M(q)` équivaut à `Measure([PauliZ], [q])`.
 
-Le <xref:microsoft.quantum.measurement.MultiM> mesure le Pauli $Z $ Operator *séparément* sur chacun d’un tableau de qubits, en retournant le *tableau* de `Result` valeurs obtenues pour chaque qubit.
+Le <xref:Microsoft.Quantum.Measurement.MultiM> mesure le Pauli $Z $ Operator *séparément* sur chacun d’un tableau de qubits, en retournant le *tableau* de `Result` valeurs obtenues pour chaque qubit.
 Dans certains cas, cela peut être optimisé. Il possède une signature ( `Qubit[] => Result[])` .
 `MultiM(qs)` équivaut à :
 
