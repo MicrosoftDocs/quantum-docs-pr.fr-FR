@@ -4,17 +4,17 @@ description: Apprenez à contribuer à l’exemple de code de bibliothèque et �
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 54ef15db2b850e6a3bff38945c57129361517bfe
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691801"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856675"
 ---
 # <a name="contributing-code"></a>Code de contribution
 
@@ -59,7 +59,7 @@ function PairTest () : Unit {
 Des conditions plus complexes peuvent être vérifiées à l’aide des techniques décrites dans la [section Test](xref:microsoft.quantum.libraries.diagnostics) du Guide des bibliothèques standard.
 Par exemple, le test suivant vérifie que `H(q); X(q); H(q);` , comme appelé par, <xref:Microsoft.Quantum.Canon.ApplyWith> fait la même chose que `Z(q)` .
 
-```Q#
+```qsharp
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);

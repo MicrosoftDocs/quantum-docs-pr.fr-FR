@@ -1,6 +1,6 @@
 ---
 titre : Glossaire quantum computing Description : Glossaire des termes, actions et objets les plus courants utilisés dans quantum computing.
-Auteur : bradben ms. Author : v-benbra ms. Date : 9/1/2020 ms. topic : article UID : Microsoft. Quantum. Glossaire No-Loc :
+Auteur : bradben ms. Author : v-benbra ms. Date : 9/1/2020 ms. topic : référence UID : Microsoft. Quantum. Glossaire No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -95,7 +95,7 @@ Un [qubit](xref:microsoft.quantum.glossary#qubit) qui sert de mémoire temporair
 
 ## <a name="bell-state"></a>État de la cloche
 
-L’un des quatre [entangled](xref:microsoft.quantum.glossary#entanglement) [États quantiques](xref:microsoft.quantum.glossary#quantum-state) des deux qubits. Les quatre États sont définis $ \ket { \beta _ { IJ } } = ( \mathbb { I } \otimes X ^ iz ^ j) ( \ket { 00 }  +  \ket { 11 } )/ \sqrt { 2 } $ . Un état de cloche est également appelé [paire de EPR](xref:microsoft.quantum.glossary#epr-pair).
+L’un des quatre [](xref:microsoft.quantum.glossary#entanglement) [États quantiques](xref:microsoft.quantum.glossary#quantum-state) des deux qubits. Les quatre États sont définis $ \ket { \beta _ { IJ } } = ( \mathbb { I } \otimes X ^ iz ^ j) ( \ket { 00 }  +  \ket { 11 } )/ \sqrt { 2 } $ . Un état de cloche est également appelé [paire de EPR](xref:microsoft.quantum.glossary#epr-pair).
 
 ## <a name="bloch-sphere"></a>Sphère Bloch
 

@@ -4,17 +4,17 @@ description: Découvrez comment charger votre propre jeu de données pour former
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.load
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cd6fdb6bb33a65ee02ac8c43f40df9abeff9c841
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7ebfe085e50d4647fdb1027250cf3134f8d8f8c2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833699"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856453"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Charger et classer vos propres jeux de données
 
@@ -75,14 +75,14 @@ Ces jeux peuvent être représentés par un `data.json` fichier similaire à ce 
 
 Supposons que nous ayons un petit jeu de données avec des hauteurs et des poids de différents chats et chiens. Ce jeu de données est très petit pour effectuer l’apprentissage d’un modèle, mais il sera suffisant pour montrer le processus de chargement d’un jeu de données.
 
-| Hauteur (m) | Poids (kg) | Animal |
+| Hauteur (m) | Weight (kg) - Poids (kg) | Animal |
 |-----------|------------|--------|
 | 0,54      | 30         | Dog    |
-| 0.30      | 8          | Chats    |
+| 0.30      | 8          | Chat    |
 | 0,91      | 44         | Dog    |
 | 0,86      | 31          | Dog    |
-| 0.32      | 5         | Chats    |
-| 0,25      | 4          | Chats    |
+| 0.32      | 5         | Chat    |
+| 0,25      | 4          | Chat    |
 
 Le processus est le suivant :
 
