@@ -1,6 +1,6 @@
 ---
 title : description des concepts avancés de la matrice : en savoir plus sur les fonctionnalités exponentielles de vecteurs propres, de valeurs propres et de matrice, les outils fondamentaux utilisés pour décrire et simuler des algorithmes Quantum.
-Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. Matrix-Advanced ms. Auteur : v-benbra ms. Date : 12/11/2017 ms. topic : article No-Loc :
+Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. Matrix-Advanced ms. Author : v-benbra ms. Date : 12/11/2017 ms. rubrique : Conceptual No-Loc :
 - "Q#"
 - "$$v"
 - "$$"

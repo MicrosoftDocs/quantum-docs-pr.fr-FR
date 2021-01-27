@@ -1,6 +1,6 @@
 ---
 title : « instructions Return et Fail dans Q# » Description : en savoir plus sur l’utilisation des instructions « Return » et « Fail » dans Q# pour terminer une sous-routine ou un programme.
-Auteur : bettinaheim ms. Author : Beheim ms. Date : 10/07/2020 ms. topic : article UID : Microsoft. Quantum. qsharp. returnsandtermination No-Loc :
+Auteur : bettinaheim ms. Author : Beheim ms. Date : 10/07/2020 ms. rubrique : référence UID : Microsoft. Quantum. qsharp. returnsandtermination No-Loc :
 - "Q#"
 - "$$v"
 

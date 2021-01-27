@@ -1,6 +1,6 @@
 ---
 title : description des circuits quantiques : Découvrez comment représenter visuellement des opérations quantiques simples et complexes avec des diagrammes de circuit quantique.
-Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. circuits ms. Author : v-benbra ms. Date : 12/11/2017 ms. topic : article No-Loc :
+Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. circuits ms. Author : v-benbra ms. Date : 12/11/2017 ms. rubrique : Conceptual No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -89,7 +89,7 @@ Cette séquence de porte-clés revêt une importance fondamentale pour l’infor
 
 $$\mathrm{Cnotin } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-Les opérations ayant cette complexité ou une complexité accrue sont omniprésentes dans les algorithmes Quantum et la correction des erreurs Quantum. il doit donc s’avérer très utile de disposer d’une méthode simple pour la visualisation appelée *diagramme de circuit quantique* .
+Les opérations ayant cette complexité ou une complexité accrue sont omniprésentes dans les algorithmes Quantum et la correction des erreurs Quantum. il doit donc s’avérer très utile de disposer d’une méthode simple pour la visualisation appelée *diagramme de circuit quantique*.
 Le schéma de circuit pour la préparation de cet État Quantum enchevêtré de façon optimisée est le suivant :
 
 <!--- ![](.\media\1.svg) --->

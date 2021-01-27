@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f4b69250ed49bd56c3066d5cd40db4b8abfc9cb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690875"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858700"
 ---
 # <a name="higher-order-control-flow"></a>Higher-Order le contrôle de workflow #
 
@@ -162,9 +162,9 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-À ce stade, nous pouvons maintenant expliquer l’expansion Trotter – Suzuki *sans référence à la mécanique des quantums* .
+À ce stade, nous pouvons maintenant expliquer l’expansion Trotter – Suzuki *sans référence à la mécanique des quantums*.
 L’expansion est effectivement un modèle d’itération très particulier motivé par $ \eqref{EQ : Trotter-Suzuki-0} $.
-Ce modèle d’itération est implémenté par <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> :
+Ce modèle d’itération est implémenté par <xref:Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA> :
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -213,7 +213,7 @@ Cette construction est précise `ApplyWith` , donc nous écrivons le corps de no
 ```
 
 Ici, nous avons utilisé <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> pour appliquer $P $, partiellement appliqué sur sa cible pour une utilisation avec `ApplyWith` .
-Notez, toutefois, que nous devons transformer le registre de *contrôle* au format souhaité, donc nous appliquons partiellement l’opération interne `(Controlled oracle)` sur la *cible* .
+Notez, toutefois, que nous devons transformer le registre de *contrôle* au format souhaité, donc nous appliquons partiellement l’opération interne `(Controlled oracle)` sur la *cible*.
 Cela permet de mettre en place `ApplyWith` le registre de contrôle avec $P $, exactement comme nous le souhaitons.
 
 À ce stade, nous avons pu le faire, mais cela ne suffit pas à ce que notre nouvelle opération ne semble pas être l’application de `Controlled` functor.

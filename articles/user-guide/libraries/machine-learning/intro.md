@@ -4,17 +4,17 @@ description: En savoir plus sur l’utilisation de Machine Learning sur des syst
 author: alexeib2
 ms.author: alexeib
 ms.date: 11/22/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e2f4a4a63eef40474856426b3b29652b5d3053b2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833797"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854035"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Présentation des Machine Learning Quantum
 
@@ -41,7 +41,7 @@ Par conséquent, la solution est une analogie quantique d’une machine à vecte
 
 Une conception de classifieur Quantum simple peut être comparée à une solution SVM (support vector machine) classique. L’inférence pour un exemple de données $x $ dans le cas de SVM est effectuée à l’aide d’une forme de noyau optimale $ \sum \ alpha_j k (x_j, x) $ où $k $ est une fonction de noyau spécifique.
 
-En revanche, un classifieur quantum utilise le $p de prédiction (o x, U (\Theta)) = 〈 U (\Theta) x | M | U (\Theta) x 〉 $, qui est similaire dans l’esprit, mais techniquement très différent. Ainsi, lorsqu’un encodage d’amplitude simple est utilisé, $p (o x, U (\Theta)) $ est une forme quadratique dans les amplitudes de $x $, mais les coefficients de ce formulaire ne sont plus appris de manière indépendante. ils sont à la place regroupés à partir des éléments de matrice du circuit $U (\Theta) $, qui a généralement beaucoup moins de paramètres d’apprentissage $ \Theta $ que la dimension du vecteur $x $. Le degré polynomial de $p (y x │ x, U (\Theta)) $ dans les fonctionnalités d’origine peut être augmenté jusqu’à $2 ^ l $ en utilisant un encodage de produit Quantum sur $l $ copies de $x $.
+En revanche, un classifieur quantum utilise le $p de prédiction (o x, U (\Theta)) = 〈 U (\Theta) x | M | U (\Theta) x 〉 $, qui est similaire à l’esprit, mais techniquement très différent. Ainsi, lorsqu’un encodage d’amplitude simple est utilisé, $p (o x, U (\Theta)) $ est une forme quadratique dans les amplitudes de $x $, mais les coefficients de ce formulaire ne sont plus appris de manière indépendante. ils sont à la place regroupés à partir des éléments de matrice du circuit $U (\Theta) $, qui a généralement beaucoup moins de paramètres d’apprentissage $ \Theta $ que la dimension du vecteur $x $. Le degré polynomial de $p (y x │ x, U (\Theta)) $ dans les fonctionnalités d’origine peut être augmenté jusqu’à $2 ^ l $ en utilisant un encodage de produit Quantum sur $l $ copies de $x $.
 
 Notre architecture explore des circuits relativement superficiels, qui doivent donc être *rapidement emmêlants* afin de capturer toutes les corrélations entre les fonctionnalités de données de toutes les plages. La figure ci-dessous montre un exemple du composant de circuit le plus rapide et le plus utile. Même si un circuit avec cette géométrie se compose uniquement de $3 n + 1 $ portes, la matrice de poids unitaire qu’il calcule assure une communication croisée importante entre les fonctionnalités de $2 ^ n $.
 
