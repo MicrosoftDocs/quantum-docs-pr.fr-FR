@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfC
 title: Opération ApplyIfC
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfC
 qsharp.summary: Applies a controllable operation conditioned on a classical bit.
-ms.openlocfilehash: 35430cb7cf491965b7b69ace6d3f41599dbadd51
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ef16b23349b604d174e72d9ae06d2052e2ab60f8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218714"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841857"
 ---
 # <a name="applyifc-operation"></a>Opération ApplyIfC
 
@@ -60,6 +60,19 @@ Entrée à laquelle l’opération est appliquée.
 ### <a name="t"></a>Peut
 
 Type d’entrée de l’opération à appliquer de façon conditionnelle.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant prépare un registre de qubits dans un état de base de calcul représenté par une chaîne de bits classique donnée sous la forme d’un tableau de `Bool` valeurs :
+
+```qsharp
+let bitstring = [true, false, true];
+using (register = Qubit(3)) {
+    ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));
+    // register should now be in the state |101⟩.
+    ...
+}
+```
 
 ## <a name="see-also"></a>Voir aussi
 

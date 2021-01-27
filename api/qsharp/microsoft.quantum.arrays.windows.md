@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.Windows
 title: Fonction Windows
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Windows
 qsharp.summary: Returns all consecutive subarrays of length `size`.
-ms.openlocfilehash: 8f32a23aa4379744b84c3b8d9c8f565e61c3c64e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: adfea2b9a2f6c22446817538d29586284dba723e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96219887"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842193"
 ---
 # <a name="windows-function"></a>Fonction Windows
 
@@ -57,3 +57,10 @@ Tableau d’éléments.
 ### <a name="t"></a>Peut
 
 Type des `array` éléments.
+
+## <a name="example"></a>Exemple
+
+```qsharp
+// same as [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
+let windows = Windows(3, [1, 2, 3, 4, 5]);
+```
