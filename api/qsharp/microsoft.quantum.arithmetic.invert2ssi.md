@@ -1,40 +1,40 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.Invert2sSI
 title: Opération Invert2sSI
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: Invert2sSI
 qsharp.summary: Inverts a given integer modulo 2's complement.
-ms.openlocfilehash: 86d90fc5406089549de0036fcaebd9dc9d188c40
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e86a5f8586cf438189c19da75c60cfd97632dcb1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222845"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843137"
 ---
-# <a name="invert2ssi-operation"></a><span data-ttu-id="9c023-102">Opération Invert2sSI</span><span class="sxs-lookup"><span data-stu-id="9c023-102">Invert2sSI operation</span></span>
+# <a name="invert2ssi-operation"></a><span data-ttu-id="52713-102">Opération Invert2sSI</span><span class="sxs-lookup"><span data-stu-id="52713-102">Invert2sSI operation</span></span>
 
-<span data-ttu-id="9c023-103">Espace de noms : [Microsoft. Quantum. Arithmetic](xref:Microsoft.Quantum.Arithmetic)</span><span class="sxs-lookup"><span data-stu-id="9c023-103">Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)</span></span>
+<span data-ttu-id="52713-103">Espace de noms : [Microsoft. Quantum. Arithmetic](xref:Microsoft.Quantum.Arithmetic)</span><span class="sxs-lookup"><span data-stu-id="52713-103">Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)</span></span>
 
-<span data-ttu-id="9c023-104">Package : [Microsoft. Quantum. Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)</span><span class="sxs-lookup"><span data-stu-id="9c023-104">Package: [Microsoft.Quantum.Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)</span></span>
+<span data-ttu-id="52713-104">Package : [Microsoft. Quantum. Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)</span><span class="sxs-lookup"><span data-stu-id="52713-104">Package: [Microsoft.Quantum.Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)</span></span>
 
 
-<span data-ttu-id="9c023-105">Inverse un entier donné du complément modulo 2.</span><span class="sxs-lookup"><span data-stu-id="9c023-105">Inverts a given integer modulo 2's complement.</span></span>
+<span data-ttu-id="52713-105">Inverse un entier donné du complément modulo 2.</span><span class="sxs-lookup"><span data-stu-id="52713-105">Inverts a given integer modulo 2's complement.</span></span>
 
 ```qsharp
 operation Invert2sSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="9c023-106">Entrée</span><span class="sxs-lookup"><span data-stu-id="9c023-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="52713-106">Entrée</span><span class="sxs-lookup"><span data-stu-id="52713-106">Input</span></span>
 
-### <a name="xs--signedlittleendian"></a><span data-ttu-id="9c023-107">XS : [SignedLittleEndian](xref:Microsoft.Quantum.Arithmetic.SignedLittleEndian)</span><span class="sxs-lookup"><span data-stu-id="9c023-107">xs : [SignedLittleEndian](xref:Microsoft.Quantum.Arithmetic.SignedLittleEndian)</span></span>
+### <a name="xs--signedlittleendian"></a><span data-ttu-id="52713-107">XS : [SignedLittleEndian](xref:Microsoft.Quantum.Arithmetic.SignedLittleEndian)</span><span class="sxs-lookup"><span data-stu-id="52713-107">xs : [SignedLittleEndian](xref:Microsoft.Quantum.Arithmetic.SignedLittleEndian)</span></span>
 
-<span data-ttu-id="9c023-108">entier signé n bits (SignedLittleEndian), sera inversé complément de modulo 2.</span><span class="sxs-lookup"><span data-stu-id="9c023-108">n-bit signed integer (SignedLittleEndian), will be inverted modulo 2's complement.</span></span>
+<span data-ttu-id="52713-108">entier signé n bits (SignedLittleEndian), sera inversé complément de modulo 2.</span><span class="sxs-lookup"><span data-stu-id="52713-108">n-bit signed integer (SignedLittleEndian), will be inverted modulo 2's complement.</span></span>
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="9c023-109">Sortie : [unité](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="9c023-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="52713-109">Sortie : [unité](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="52713-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
