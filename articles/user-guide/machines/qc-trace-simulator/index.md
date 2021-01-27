@@ -4,17 +4,17 @@ description: Découvrez comment utiliser le simulateur de traces d’ordinateur 
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1e9207d7dcd6ec09353b234654e0567b377144e9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690829"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858633"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Simulateur de traces quantiques - Kit de développement Microsoft Quantum (QDK)
 
@@ -74,7 +74,7 @@ operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-Lorsque le simulateur de traces quantiques rencontre `AssertMeasurementProbability`, il enregistre que la mesure de `PauliZ` sur `source` et `q` doit avoir un résultat de `Zero` avec une probabilité de **0,5** . Lorsque plus tard, il exécutera l’opération `M`, il trouvera les valeurs enregistrées des probabilités de résultat. En outre, `M` retournera `Zero` ou `One`, avec une probabilité de **0,5** . Quand le même code est exécuté sur un simulateur qui effectue le suivi de l’état quantique, ce simulateur vérifie que les probabilités fournies dans `AssertMeasurementProbability` sont correctes.
+Lorsque le simulateur de traces quantiques rencontre `AssertMeasurementProbability`, il enregistre que la mesure de `PauliZ` sur `source` et `q` doit avoir un résultat de `Zero` avec une probabilité de **0,5**. Lorsque plus tard, il exécutera l’opération `M`, il trouvera les valeurs enregistrées des probabilités de résultat. En outre, `M` retournera `Zero` ou `One`, avec une probabilité de **0,5**. Quand le même code est exécuté sur un simulateur qui effectue le suivi de l’état quantique, ce simulateur vérifie que les probabilités fournies dans `AssertMeasurementProbability` sont correctes.
 
 Notez que s’il existe au moins une opération de mesure qui n’est pas annotée à l’aide de `AssertMeasurementProbability`, le simulateur lèvera une [`UnconstrainedMeasurementException`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception).
 
