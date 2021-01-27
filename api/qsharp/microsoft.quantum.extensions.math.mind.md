@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.MinD
 title: Fonction d’esprit
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.mind".
-ms.openlocfilehash: 01e8ae907c5ab72de509e623be8404ecaeb634a5
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 90ac403f6c36c5be5bdd0bea2b1566d929a41b1a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96212849"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98821623"
 ---
-# <a name="mind-function"></a><span data-ttu-id="c2adf-102">Fonction d’esprit</span><span class="sxs-lookup"><span data-stu-id="c2adf-102">MinD function</span></span>
+# <a name="mind-function"></a><span data-ttu-id="85f09-102">Fonction d’esprit</span><span class="sxs-lookup"><span data-stu-id="85f09-102">MinD function</span></span>
 
-<span data-ttu-id="c2adf-103">Espace de noms : [Microsoft. Quantum. extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="c2adf-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
+<span data-ttu-id="85f09-103">Espace de noms : [Microsoft. Quantum. extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="85f09-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
 
-<span data-ttu-id="c2adf-104">Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="c2adf-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="85f09-104">Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="85f09-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="c2adf-105">L’esprit est déconseillé.</span><span class="sxs-lookup"><span data-stu-id="c2adf-105">MinD has been deprecated.</span></span> <span data-ttu-id="c2adf-106">Utilisez plutôt <xref:Microsoft.Quantum.Math.MinD>.</span><span class="sxs-lookup"><span data-stu-id="c2adf-106">Please use <xref:Microsoft.Quantum.Math.MinD> instead.</span></span>
+> <span data-ttu-id="85f09-105">L’esprit est déconseillé.</span><span class="sxs-lookup"><span data-stu-id="85f09-105">MinD has been deprecated.</span></span> <span data-ttu-id="85f09-106">Utilisez plutôt <xref:Microsoft.Quantum.Math.MinD>.</span><span class="sxs-lookup"><span data-stu-id="85f09-106">Please use <xref:Microsoft.Quantum.Math.MinD> instead.</span></span>
 >
-> <span data-ttu-id="c2adf-107">Utilisez @"microsoft.quantum.math.mind".</span><span class="sxs-lookup"><span data-stu-id="c2adf-107">Please use @"microsoft.quantum.math.mind".</span></span>
+> <span data-ttu-id="85f09-107">Utilisez @"microsoft.quantum.math.mind".</span><span class="sxs-lookup"><span data-stu-id="85f09-107">Please use @"microsoft.quantum.math.mind".</span></span>
 
 
 
@@ -40,18 +40,18 @@ function MinD (a : Double, b : Double) : Double
 ```
 
 
-## <a name="input"></a><span data-ttu-id="c2adf-108">Entrée</span><span class="sxs-lookup"><span data-stu-id="c2adf-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="85f09-108">Entrée</span><span class="sxs-lookup"><span data-stu-id="85f09-108">Input</span></span>
 
-### <a name="a--double"></a><span data-ttu-id="c2adf-109">r : [double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="c2adf-109">a : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
-
-
-
-
-### <a name="b--double"></a><span data-ttu-id="c2adf-110">b : [double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="c2adf-110">b : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="a--double"></a><span data-ttu-id="85f09-109">r : [double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="85f09-109">a : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
 
+### <a name="b--double"></a><span data-ttu-id="85f09-110">b : [double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="85f09-110">b : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-## <a name="output--double"></a><span data-ttu-id="c2adf-111">Sortie : [double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="c2adf-111">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+
+
+
+
+## <a name="output--double"></a><span data-ttu-id="85f09-111">Sortie : [double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="85f09-111">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
