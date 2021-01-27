@@ -1,6 +1,6 @@
 ---
 title : plusieurs qubits Description : Apprenez à effectuer des opérations sur deux qubits ou plus.
-Auteur : bradben UID : Microsoft. Quantum. concepts. multiple-qubits ms. Auteur : v-benbra ms. Date : 12/11/2017 ms. topic : article No-Loc :
+Auteur : bradben UID : Microsoft. Quantum. concepts. multiple-qubits ms. Auteur : v-benbra ms. Date : 12/11/2017 ms. topic : No-Loc conceptuel :
 - "Q#"
 - "$$v"
 - "$$"
@@ -105,10 +105,10 @@ Cela est dû au fait que la base de calcul pour les États de deux qubit est for
 Il est facile de voir que plus généralement, l’État Quantum de $ n $ qubits est représenté par un vecteur d’unité de dimension $ 2 ^ n $ à l’aide de cette construction.  Le vecteur
 
 $$
-\begin{bmatrix}\alpha _ { 00 } 01 \\\\ 10 \alpha   _ { } \\\\ \alpha _ { 11 } \\\\ \alpha   _ { }  \end{bmatrix}
+\begin{bmatrix}\alpha _{ 00 } 01 \\\\ 10 \alpha_ { } \\\\ \alpha _{ 11 } \\\\ \alpha_ { }  \end{bmatrix}
 $$
 
-représente un État Quantum sur deux qubits si $ | \alpha _ { 00 } | ^ 2 + | \alpha _ { 01 } | ^ 2 + | \alpha _ { 10 } | ^ 2 + | \alpha _ { 11 } | ^ 2 = 1 $ . Tout comme avec un qubits unique, le vecteur d’État Quantum de plusieurs qubits contient toutes les informations nécessaires pour décrire le comportement du système.
+représente un État Quantum sur deux qubits si $ | \alpha _{ 00 } | ^ 2 + | \alpha_ { 01 } | ^ 2 + | \alpha _{ 10 } | ^ 2 + | \alpha_ { 11 } | ^ 2 = 1 $ . Tout comme avec un qubits unique, le vecteur d’État Quantum de plusieurs qubits contient toutes les informations nécessaires pour décrire le comportement du système.
 
 Si vous disposez de deux qubits distincts, l’un dans l’état $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ et le second qubit dans l’état $ \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $ , l’état deux-qubit correspondant est    
 
@@ -124,22 +124,22 @@ $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt {
 
 Un tel État à deux qubit, qui ne peut pas être écrit en tant que produit tenseur d’États de qubit unique, est appelé « état enchevêtré ». les deux qubits sont considérés comme étant [*enchevêtrés*](https://en.wikipedia.org/wiki/Quantum_entanglement).  En fait, comme l’État Quantum ne peut pas être considéré comme un produit tenseur d’États qubit uniques, les informations que l’état contient ne sont pas limitées à l’un ou l’autre des qubits individuellement.  Au lieu de cela, les informations sont stockées non localement dans les corrélations entre les deux États.  Cette non-localité d’informations est l’une des principales fonctionnalités distinctives de quantum computing par rapport à l’informatique classique et est essentielle pour un certain nombre de protocoles quantiques, y compris la [téléportage quantique](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) et la [Correction d’Erreurs quantique](xref:microsoft.quantum.libraries.error-correction).
 
-## <a name="measuring-two-qubit-states"></a>Mesure de deux États qubit ##
+## <a name="measuring-two-qubit-states"></a>Mesure des États de Two-Qubit ##
 La mesure de deux États qubit est très similaire aux mesures à qubit unique. Mesure de l’État
 
 $$
     \begin{bmatrix}
-        \alpha_ { 00 } 01 \\\\ \alpha _ { }\\\\ 
-        \alpha_ { 10 } 11 \\\\ \alpha _ {}
+        \alpha_{ 00 } 01 \\\\ \alpha_ { }\\\\ 
+        \alpha_{ 10 } 11 \\\\ \alpha_ {}
     \end{bmatrix}
 $$
 
-donne $ 00 $ avec la probabilité $ | \alpha _ { 00 } | ^ 2 $ , $ 01 $ avec la $ | probabilité \alpha _ { 01 } | ^ 2 $ , $ 10 avec la $ probabilité $ | \alpha _ { 10 } | ^ 2 $ et $ 11 avec la $ probabilité $ 11 | ^ 2 \alpha _ { } | $ . Les variables $ \alpha _ { 00 } , \alpha _ { 01 } , \alpha _ { 10 } $ et $ 11 \alpha _ { } $ ont été délibérément nommées pour rendre cette connexion claire. Après la mesure, si le résultat est $ 00, $ alors l’État Quantum du système à deux qubit est réduit et est maintenant
+donne $ 00 $ avec la probabilité $ | \alpha _{ 00 } | ^ 2 $ , $ 01 $ avec la $ | probabilité \alpha_ { 01 } | ^ 2 $ , $ 10 avec la $ probabilité $ | \alpha _{ 10 } | ^ 2 $ et $ 11 avec la $ probabilité $ 11 | ^ 2 \alpha_ { } | $ . Les variables $ \alpha _{ 00 } , \alpha_ { 01 } , \alpha _{ 10 } $ et $ 11 \alpha_ { } $ ont été délibérément nommées pour rendre cette connexion claire. Après la mesure, si le résultat est $ 00, $ alors l’État Quantum du système à deux qubit est réduit et est maintenant
 
 $$
     producteurs \equiv
     \begin{bmatrix}
-        1,0 \\\\ 
+        1 \\\\ 
         entre \\\\ 
         entre \\\\ 
         0 \end{bmatrix} .
@@ -193,7 +193,7 @@ $$
 
 là encore, conformément à notre intuition.
 
-## <a name="two-qubit-operations"></a>Opérations à deux qubit
+## <a name="two-qubit-operations"></a>Opérations de Two-Qubit
 Comme dans le cas d’une qubit, toute transformation unitaire est une opération valide sur qubits. En général, une transformation unitaire sur $ n $ qubits est une matrice $ U $ de taille $ 2 ^ n \times 2 ^ n $ (afin qu’elle agisse sur des vecteurs de taille $ 2 ^ n $ ), par exemple, $ u ^ { -1 } = u ^ \dagger $ .
 Par exemple, la porte CNOTIN (contrôlée-NOT) est une porte à deux qubit couramment utilisée et est représentée par la matrice d’unités suivante :
 
@@ -208,7 +208,7 @@ $$
 a \ b \\\\ c \ d \end{bmatrix}
 $$
 
-et
+and
 
 $$\begin{bmatrix}
 e \ f \\\\ g \ h \end{bmatrix}
@@ -240,7 +240,7 @@ Les portes peuvent également être contrôlées à l’aide d’informations cl
 Comme dans le cas d’une qubit, un ensemble de portes à deux qubit est universel si $ une \times $ matrice unitaire de 4 4 peut être approximative par un produit de portes de ce jeu à une précision arbitraire.
 Un exemple de jeu de portes universel est la porte Hadarmard, la porte T et la porte CNOTIN. En acceptant les produits de ces portes, nous pouvons rapprocher n’importe quelle matrice unitaire sur deux qubits.
 
-## <a name="many-qubit-systems"></a>Systèmes à plusieurs qubit
+## <a name="many-qubit-systems"></a>Systèmes Many-Qubit
 Nous suivons exactement les mêmes modèles que ceux explorés dans le cas de qubit pour créer des États quantiques à plusieurs qubit à partir de systèmes plus petits.  De tels États sont créés en formant des produits tenseur d’États plus petits.  Par exemple, envisagez d’encoder la chaîne $ de bits 1011001 $ sur un ordinateur Quantum.  Nous pouvons Encoder ceci comme
 
 $$

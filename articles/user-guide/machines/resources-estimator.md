@@ -1,20 +1,20 @@
 ---
 title: Estimation des ressources de Quantum-Kit de développement quantique
 description: Découvrez l’estimateur des ressources Microsoft QDK, qui estime les ressources requises pour exécuter une instance donnée d’une Q# opération sur un ordinateur Quantum.
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
-ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
+ms.openlocfilehash: c3aa94c8b34ad7247fbdeab4bf4dcb96ce746014
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604641"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847461"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimation des ressources du kit de développement quantique (QDK)
 
@@ -143,8 +143,8 @@ Les estimations de profondeur et de largeur signalées sont compatibles les unes
 
 Les métriques suivantes sont signalées :
 
-__Profondeur :__ Pour l’opération racine, le temps nécessaire à l’exécution de celle-ci en supposant des durées de la porte.
-Pour les opérations appelées ou opérations ultérieures, différence de temps entre le dernier temps de disponibilité de qubit au début et la fin de l’opération.
+__Profondeur :__ Pour l’opération racine, le temps nécessaire à l’exécution de celle-ci suppose des durées de la porte configurées.
+Pour les opérations appelées ou opérations ultérieures, différence de temps entre le dernier temps de disponibilité de qubit au début et à la fin de l’opération.
 
 __Largeur :__ Pour l’opération racine : nombre de qubits réellement utilisés pour l’exécuter (et l’opération qu’il appelle).
 Pour les opérations appelées ou opérations suivantes : combien d’qubits ont été utilisées en plus de la qubits déjà utilisée au début de l’opération.
@@ -157,9 +157,9 @@ Pour les opérations appelées ou opérations suivantes-nombre minimal de qubits
 
 Deux modes d’opération sont pris en charge. Le mode est sélectionné en définissant QCTraceSimulatorConfiguration. OptimizeDepth.
 
-__OptimizeDepth = true :__ QubitManager est déconseillé de la réutilisation de qubit et alloue de nouvelles qubit chaque fois qu’un qubit est demandé. La __profondeur__ de l’opération racine devient la profondeur minimale (limite inférieure). La __largeur__ compatible est signalée pour cette profondeur (les deux peuvent être effectuées en même temps). Notez que cette largeur n’est probablement pas optimale en raison de cette profondeur. __QubitCount__ peut être inférieur à la largeur de l’opération racine, car il suppose une réutilisation.
+__OptimizeDepth = false :__ Il s’agit du mode par défaut. QubitManager est encouragé à réutiliser qubits et à réutiliser les qubits libérés avant d’en allouer de nouveaux. La __largeur__ de l’opération racine devient la largeur minimale (limite inférieure). Une __profondeur__ compatible est signalée sur laquelle elle peut être obtenue. __QubitCount__ sera identique à la __largeur__ de l’opération racine en supposant qu’il n’y ait pas de emprunt.
 
-__OptimizeDepth = false :__ QubitManager est encouragé à réutiliser qubits et à réutiliser les qubits libérés avant d’en allouer de nouveaux. La __largeur__ de l’opération racine devient la largeur minimale (limite inférieure). Une __profondeur__ compatible est signalée sur laquelle elle peut être obtenue. __QubitCount__ sera identique à la __largeur__ de l’opération racine en supposant qu’il n’y ait pas de emprunt.
+__OptimizeDepth = true :__ QubitManager est déconseillé de la réutilisation de qubit et de l’optimisation heuristique pour la réutilisation de qubit, pendant et après l’exécution. La __profondeur__ de l’opération racine devient la profondeur minimale (limite inférieure). La __largeur__ compatible est signalée pour cette profondeur (les deux peuvent être effectuées en même temps). Pour optimiser la largeur, les portes rencontrées plus tard dans le programme peuvent être planifiées avant les portes rencontrées plus tôt dans le programme, mais les qubits sont planifiés pour être réutilisés de manière à ce que la profondeur reste minime. Comme les qubits sont réutilisés en fonction de valeurs d’heure, il est recommandé de configurer les durées de la porte comme des valeurs entières. La __largeur__ n’est pas forcément optimale. Pour plus d’informations, consultez la largeur et la profondeur du livre blanc [dans le traceur](https://github.com/microsoft/qsharp-runtime/tree/main/src/Simulation/Simulators/QCTraceSimulator/Docs).
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Calcul de la probabilité des résultats de mesure
 

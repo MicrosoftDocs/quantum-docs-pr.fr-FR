@@ -4,17 +4,17 @@ description: Apprenez à contribuer au contenu conceptuel ou d’API dans le jeu
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8602705d2dd071e822e2ff58a9a44cd0684f77f1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691784"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857357"
 ---
 # <a name="improving-documentation"></a>Amélioration de la documentation
 
@@ -42,7 +42,7 @@ Nous décrirons plus en détail les requêtes de tirage ci-dessous, mais pour l�
 - Certains lecteurs recherchent les instructions et définitions abstraites les plus utiles, tandis que les autres lecteurs fonctionnent mieux en extrapolant des exemples concrets. Le fait de fournir à la fois le cas général et des exemples spécifiques peut aider les deux lecteurs à tirer le meilleur parti de la programmation Quantum.
 - En particulier, si vous avez également écrit le code documenté, il peut être évident que vous n’êtes pas du tout évident pour votre lecteur. Il n’existe pas de meilleure façon de programmer. par conséquent, quelle que soit la façon dont un lecteur est habile ou expérimenté, il ne peut pas deviner à quel modèle de conception vous avez trouvé le plus utile pour exprimer vos idées dans le code. Le fait de savoir comment un lecteur peut s’attendre à utiliser votre code peut vous aider à fournir ce contexte.
 - De nombreux membres de la communauté de programmation quantique sont des chercheurs universitaires et sont reconnus principalement par des citations pour leurs contributions à la communauté. En plus d’aider les lecteurs à trouver des documents supplémentaires, en veillant à citer correctement les sorties académiques, telles que les documents, les discussions, les billets de blog et les outils logiciels, peuvent aider les contributeurs universitaires à continuer à faire leurs efforts pour améliorer la communauté.
-- La communauté de programmation quantique est une communauté large et formidablement diversifiée. L’utilisation de pronoms par sexe dans des exemples de tiers (par exemple, « si un utilisateur..., il va... ») peut travailler pour exclure plutôt que d’inclure. L’Cognizant de noms de personnes dans des citations et des liens, et de l’inclusion correcte de caractères non-ASCII, peut servir la diversité de la communauté en s’expliquant à ses membres. De même, de nombreux mots de la langue anglaise sont souvent utilisés de manière Hateful, de sorte que leur utilisation dans la documentation technique peut nuire aux lecteurs individuels et à la communauté.
+- La communauté de programmation quantique est une communauté large et formidablement diversifiée. L’utilisation de pronoms par sexe dans des exemples de sociétés tierces (par exemple, «si un utilisateur.............. L’Cognizant de noms de personnes dans des citations et des liens, et de l’inclusion correcte de caractères non-ASCII, peut servir la diversité de la communauté en s’expliquant à ses membres. De même, de nombreux mots de la langue anglaise sont souvent utilisés de manière Hateful, de sorte que leur utilisation dans la documentation technique peut nuire aux lecteurs individuels et à la communauté.
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Référencement d’un exemple de code à partir d’articles conceptuels
 
@@ -54,6 +54,19 @@ Si vous souhaitez inclure du code à partir du [référentiel d’exemples](http
 
 Cette commande importera les lignes 4 à 8 du [ `Game.qs` fichier de l' `chsh-game` exemple](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs), en les marquant comme Q# code à des fins de mise en surbrillance de la syntaxe.
 À l’aide de cette commande, vous pouvez éviter de dupliquer le code entre des articles conceptuels et le référentiel d’exemples, afin que l’exemple de code dans la documentation soit toujours aussi à jour que possible.
+
+### <a name="contributing-image-files"></a>Contribution des fichiers image
+
+**Important**: pour que les images soient correctement rendues en mode sombre, vous devez éviter les transparences.
+
+- Pour les fichiers. jpg. vous n’avez rien à faire, car le format. jpg ne prend pas en charge les éléments transparents.
+- Pour les fichiers. png, vous devez ajouter un arrière-plan blanc ou modifier la valeur du canal alpha sur **100**. Pour ce faire, le plus simple est d’ouvrir le fichier dans **Paint** et de l’enregistrer en remplaçant le fichier d’origine.
+- Pour les fichiers. svg, vous devez ajouter un rectangle blanc dans la couche la plus basse. Pour ce faire, vous pouvez utiliser **Inkscape**:
+  1. Ouvrez le fichier. svg.
+  1. Sélectionnez l’outil générateur carré et dessinez un rectangle blanc en plus de la figure d’origine.
+  1. Sélectionnez l’outil **Sélectionner et transformer des objets** en cliquant sur la flèche foncée ou en appuyant sur **F1**.
+  1. Lorsque le rectangle est sélectionné, cliquez sur l’élément de barre d’outils **de la sélection inférieure en bas (fin)**.
+  1. Ajustez le rectangle à l’aide de la souris ou des touches de direction.
 
 ## <a name="contributing-to-the-api-references"></a>Contribution aux références d’API
 
