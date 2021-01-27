@@ -4,17 +4,17 @@ description: Découvrez les concepts de base de la conception de modèles de cir
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/17/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 221479e616ff7a03c4ac20e0062125660314e95b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2100fe120ba3b5fce5d06e77d7f3f5174bc04adb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691163"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858811"
 ---
 # <a name="design-your-own-classifier"></a>Concevoir votre propre classifieur
 

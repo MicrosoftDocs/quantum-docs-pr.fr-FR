@@ -4,17 +4,17 @@ description: Découvrez la deuxième approche de quantification de la modélisat
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a08e20d5b53aa97cb12ead0dc3a36069d0ec5df8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835806"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858834"
 ---
 # <a name="second-quantization"></a>Deuxième quantification
 
@@ -84,7 +84,7 @@ Les États de la profession pour les orbites de type « $ 2N $ » peuvent êtr
 Par exemple, si $N = $2, alors l’État $ $ \ket {0} \ket {1} \ket {1} \ket {0} , $ $
 
 correspondrait aux orbites de rotation $1 $ et $2 $ en cours d’emploi avec le reste vide.
-De même, l’État $ $ \ket {0} \equiv \ket {0} _ {0} \cdots \ket {0} _{N-1}, $ $
+De même, l’État $ $ \ket {0} \equiv \ket {0} _{0} \cdots \ket {0}_{N-1}, $ $
 
 n’a aucun électron et est appelé « état de dépression ».
 
@@ -211,12 +211,12 @@ Tout `FermionTerm` est automatiquement placé dans l’ordre canonique comme sui
     var signEqual = sign0 == sign1;
 ```
 
-## <a name="second-quantized-fermionic-hamiltonian"></a>Deuxième Fermionic Hamilton
+## <a name="second-quantized-fermionic-hamiltonian"></a>Second-Quantized Fermionic Hamilton
 
 Il est peut-être trop surprenant que les [modèles quantiques pour les systèmes électroniques](xref:microsoft.quantum.chemistry.concepts.quantummodels) puissent être écrits en termes de création et d’opérateurs de annihilation.
 En particulier, si $ \Psi \_ j $ est les orbites de spin qui forment la base,
 
-\begin{Equation} \hat{H} = \sum \_ {PQ} h \_ {PQ} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {PQRS} h \_ {PQRS} a ^ \dagger \_ p a ^ \dagger \_ q a \_ RA \_ s + h \_ {\textrm NUC}, \label{EQ : totalHam} \end{Equation}, où $h \_ {\textrm NUC} $ est l’énergie nucléaire (qui est une constante sous la approximation Oppenheimer) et
+\begin{Equation} \hat{H} = \sum \_ {PQ} h \_ {PQ} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {PQRS} h \_ {PQRS} a ^ \dagger \_ p a ^ \dagger \_ q a \_ RA \_ s + h \_ {\textrm NUC}, \label{EQ : totalHam} \end{Equation} où $h \_ {\textrm NUC} $ est l’énergie nucléaire (qui est une constante en Born-Oppenheimer approximation) et
 
 \begin{align} h \_ {PQ} &= \int \_ {-\infty} ^ \infty \Psi ^ \* \_ p (x \_ 1) \left (-\Frac{\nabla ^ 2} {2} + V (x \_ 1) \right) \Psi \_ q (x \_ 1) \mathrm{d} ^ 3x \_ 1, \end{align}
 

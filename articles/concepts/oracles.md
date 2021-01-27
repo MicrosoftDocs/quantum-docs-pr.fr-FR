@@ -1,6 +1,6 @@
 ---
 title : description d’Oracle Quantum : Apprenez à utiliser et à définir des opérations de boîte noire à l’aide d’Oracle Quantum, qui sont utilisées comme entrée d’un autre algorithme.
-Auteur : cgranade UID : Microsoft. Quantum. concepts. oracles ms. Auteur : chgranad ms. Date : 07/11/2018 ms. topic : article No-Loc :
+Auteur : cgranade UID : Microsoft. Quantum. concepts. Oracle ms. Author : chgranad ms. Date : 07/11/2018 ms. rubrique : Conceptual No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -134,7 +134,7 @@ où $ \alpha : \\ { 0, 1 \\ } ^ n \times \\ { 0, 1 \\ } ^ m \to \mathbb { C } $ 
 
 $$
 \begin{align}
-O \ket { \psi } & = o \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+O \ket { \psi } & = o \sum _{ x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum_ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
              &= \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y \oplus f (x) } .
 \end{align}
 $$
@@ -157,6 +157,9 @@ Cliquez $$
         &=(-1) ^ { f (0) } Z ^ { f (0)-f (1) } \ket { + } .
 \end{align}
 $$
+
+> [!NOTE]
+>Notez que $ z ^ { -1 } = z ^ { \dagger } = Z $ et donc $ z ^ { f (0)-f (1) } = z ^ { f (1)-f (0) } .$
 
 Plus généralement, les deux vues d’Oracle peuvent être élargies pour représenter des fonctions classiques qui retournent des nombres réels au lieu d’un seul bit.
 
