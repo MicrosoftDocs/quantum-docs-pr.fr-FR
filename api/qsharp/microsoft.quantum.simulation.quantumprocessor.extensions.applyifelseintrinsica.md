@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfElseIntrinsicA
 title: Opération ApplyIfElseIntrinsicA
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyIfElseIntrinsicA
 qsharp.summary: ''
-ms.openlocfilehash: 12144630d1ffe0210c5979db0a94dc5267f17d30
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f8a2c494bcda6687f3f51044cf4c923213e9d218
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96230155"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855736"
 ---
 # <a name="applyifelseintrinsica-operation"></a>Opération ApplyIfElseIntrinsicA
 
@@ -35,12 +35,12 @@ operation ApplyIfElseIntrinsicA (measurementResult : Result, onResultZeroOp : (U
 
 
 
-### <a name="onresultzeroop--unit--unit--is-adj"></a>onResultZeroOp : l’unité d' [unité](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) est adj
+### <a name="onresultzeroop--unit--unit--is-adj"></a>onResultZeroOp : l’unité d' [unité](xref:microsoft.quantum.lang-ref.unit) => [](xref:microsoft.quantum.lang-ref.unit) est adj
 
 
 
 
-### <a name="onresultoneop--unit--unit--is-adj"></a>onResultOneOp : l’unité d' [unité](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) est adj
+### <a name="onresultoneop--unit--unit--is-adj"></a>onResultOneOp : l’unité d' [unité](xref:microsoft.quantum.lang-ref.unit) => [](xref:microsoft.quantum.lang-ref.unit) est adj
 
 
 
