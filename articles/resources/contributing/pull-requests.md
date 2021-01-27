@@ -4,17 +4,17 @@ description: Découvrez comment envoyer une requête de tirage GitHub quand vous
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.pulls
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8e04e6502e0a6005dfdf0f93450bf3ffd5aaa672
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a936283f3e51da9b97b8145bad3ab765b6423458
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866925"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858472"
 ---
 # <a name="opening-pull-requests"></a>Ouverture des demandes de tirage (pull requests) #
 
@@ -38,7 +38,7 @@ La page de chaque demande de tirage comprend les détails de toutes les modifica
 
 ## <a name="what-is-a-pull-request"></a>Qu’est-ce qu’une requête de tirage ? ##
 
-En ayant dit ce qui précède, il est utile de prendre quelques instants pour dire ce qu' **est**une requête de tirage.
+En ayant dit ce qui précède, il est utile de prendre quelques instants pour dire ce qu' **est** une requête de tirage.
 Lorsque vous utilisez git, toutes les modifications sont représentées en tant que _validations_ qui décrivent comment ces modifications sont liées à l’état du dépôt avant ces modifications.
 Nous allons souvent dessiner des diagrammes dans lesquels les validations sont dessinées sous forme de cercles avec des flèches issues des validations précédentes.
 

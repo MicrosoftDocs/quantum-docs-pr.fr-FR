@@ -4,24 +4,24 @@ description: Découvrez les conventions d’attribution de noms, d’entrée, de
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 2edd6baf7375415e395d15bac422168216bcff9a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231653"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852757"
 ---
 # <a name="no-locq-style-guide"></a>Q# Guide de style #
 ## <a name="general-conventions"></a>Conventions générales ##
 
 Les conventions suggérées dans ce guide sont destinées à faciliter la lecture et la compréhension des programmes et des bibliothèques Q# .
 
-## <a name="guidance"></a>Guidance
+## <a name="guidance"></a>Assistance
 
 Nous vous suggérons :
 
@@ -68,7 +68,7 @@ D’autres verbes peuvent également être utiles dans ce cas, comme dans `Itera
 | Appliquer | Une opération fournie en tant qu’entrée est appelée |
 | Assert | Une hypothèse sur le résultat d’une mesure de Quantum possible est vérifiée par un simulateur |
 | Estimation | Une valeur classique est retournée, représentant une estimation dessinée à partir d’une ou de plusieurs mesures. |
-| Measure | Une mesure de Quantum est exécutée et son résultat est renvoyé à l’utilisateur. |
+| Mesure | Une mesure de Quantum est exécutée et son résultat est renvoyé à l’utilisateur. |
 | Préparation | Un registre donné de qubits est initialisé dans un état particulier |
 | Exemple | Une valeur classique est retournée au hasard à partir d’une distribution |
 
