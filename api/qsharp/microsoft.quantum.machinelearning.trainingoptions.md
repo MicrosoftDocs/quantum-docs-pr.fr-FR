@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainingOptions
 title: Type défini par l’utilisateur TrainingOptions
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: TrainingOptions
 qsharp.summary: A collection of options to be used in training quantum classifiers.
-ms.openlocfilehash: 280a3857aa7bc42f636a33f893d4f450e79b6a6a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 762d6853910832c6d4cda522c0c5df706d1ed195
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96196121"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842778"
 ---
 # <a name="trainingoptions-user-defined-type"></a>Type défini par l’utilisateur TrainingOptions
 
@@ -57,7 +57,7 @@ Valeur de redimensionnement des modèles bloqués par avant une nouvelle tentati
 
 Nombre d’étapes de dégradé à effectuer entre les points de notation.
 Pour une meilleure précision, définissez sur 1.
-### <a name="verbosemessage--string---unit"></a>VerboseMessage : [String](xref:microsoft.quantum.lang-ref.string) -> [unité](xref:microsoft.quantum.lang-ref.unit) de chaîne
+### <a name="verbosemessage--string---unit"></a>VerboseMessage : [](xref:microsoft.quantum.lang-ref.string) -> [unité](xref:microsoft.quantum.lang-ref.unit) de chaîne
 
 Fonction qui peut être utilisée pour fournir des commentaires détaillés.
 
@@ -67,7 +67,7 @@ Ce type défini par l’utilisateur ne doit pas être créé directement, mais i
 
 Par exemple, pour utiliser les mesures 100 000 et au plus 8 époques de formation :
 
-```Q#
+```qsharp
 let options = DefaultTrainingOptions()
               w/ NMeasurements <- 100000
               w/ MaxEpochs <- 8;
