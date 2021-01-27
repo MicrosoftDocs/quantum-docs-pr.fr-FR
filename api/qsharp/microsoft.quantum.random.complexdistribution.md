@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.ComplexDistribution
 title: Type défini par l’utilisateur ComplexDistribution
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: ComplexDistribution
 qsharp.summary: Represents a univariate probability distribution over complex numbers.
-ms.openlocfilehash: 660ebd43ffc1ce25f070716c936ec15ed54bd5dc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 51371cf6e699cb0be6e32f485054a9e92572991d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193146"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857838"
 ---
 # <a name="complexdistribution-user-defined-type"></a>Type défini par l’utilisateur ComplexDistribution
 
@@ -32,7 +32,7 @@ newtype ComplexDistribution = (Sample : (Unit => Microsoft.Quantum.Math.Complex)
 
 ## <a name="named-items"></a>Éléments nommés
 
-### <a name="sample--unit--complex"></a>Exemple : [Unit](xref:microsoft.quantum.lang-ref.unit) => [complexe](xref:Microsoft.Quantum.Math.Complex) d’unité 
+### <a name="sample--unit--complex"></a>Exemple : [](xref:microsoft.quantum.lang-ref.unit) => [complexe](xref:Microsoft.Quantum.Math.Complex) d’unité 
 
 
 

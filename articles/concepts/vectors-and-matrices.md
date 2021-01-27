@@ -1,6 +1,6 @@
 ---
 titre : vecteurs et matrices dans quantum computing Description : Découvrez les principes de base de l’utilisation des vecteurs et des matrices.
-Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. vectors ms. Author : v-benbra ms. Date : 12/11/2017 ms. topic : article No-Loc :
+Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. vectors ms. Author : v-benbra ms. Date : 12/11/2017 ms. rubrique : Conceptual No-Loc :
 - "Q#"
 - "$$v"
 - "$$"
@@ -85,7 +85,7 @@ Auteur : QuantumWriter UID : Microsoft. Quantum. concepts. vectors ms. Author�
 
 # <a name="vectors-and-matrices"></a>Vecteurs et matrices
 
-Une certaine connaissance des vecteurs et des matrices est essentielle pour comprendre l’informatique quantique. Nous fournissons une brève présentation ci-dessous et les lecteurs intéressés sont recommandés pour lire une référence standard sur l’algèbre linéaire telle que *Strang, G. (1993). Présentation de l’algèbre linéaire (vol. 3). Wellesley, MA : Wellesley-Cambridge Press* ou une référence en ligne telle que [algébrique linéaire](http://joshua.smcvt.edu/linearalgebra/).
+Une certaine connaissance des vecteurs et des matrices est essentielle pour comprendre l’informatique quantique. Nous fournissons une brève présentation ci-dessous et les lecteurs intéressés sont recommandés pour lire une référence standard sur l’algèbre linéaire telle que *Strang, G. (1993). Présentation de l’algèbre linéaire (vol. 3). Wellesley, MA : Wellesley-Cambridge Appuyez* ou une référence en ligne telle que l' [algèbre linéaire](http://joshua.smcvt.edu/linearalgebra/).
 
 Un vecteur de colonne (ou simplement [*Vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ de dimension (ou taille) $ n $ est une collection de $ n $ nombres complexes $ (V_1, V_2, \ldots, V_n) $ organisés en tant que colonne :
 
@@ -217,7 +217,7 @@ $$
     =\begin{bmatrix}un c \\\\ a d \\\\ a e \\\\ b c \\\\ b \\\\ est\end{bmatrix}
 $$
 
-et
+and
 
 $$
     \begin{bmatrix}

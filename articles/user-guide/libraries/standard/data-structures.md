@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9b593ba69ed41a9fb3c1298b5b945a4cbe43d5d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692237"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858326"
 ---
 # <a name="data-structures-and-modeling"></a>Structures de données et modélisation #
 
@@ -72,7 +72,7 @@ ApplyToEach(
 ## <a name="oracles"></a>Oracle ##
 
 Dans la documentation sur l' [estimation de phase](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) et l' [amplification d’amplitude](https://en.wikipedia.org/wiki/Amplitude_amplification) , le concept d’Oracle s’affiche fréquemment.
-Ici, le terme Oracle fait référence à une sous-routine Quantum Blackbox qui agit sur un ensemble de qubits et renvoie la réponse en tant que phase.
+Ici, le terme Oracle fait référence à une sous-routine Quantum qui agit sur un ensemble de qubits et renvoie la réponse en tant que phase.
 Cette sous-routine peut souvent être considérée comme une entrée d’un algorithme Quantum qui accepte Oracle, en plus d’autres paramètres, et applique une série d’opérations de Quantum et traite un appel à cette sous-routine Quantum comme s’il s’agissait d’une porte fondamentale.
 Évidemment, pour implémenter réellement le plus grand algorithme, une décomposition concrète d’Oracle en portes fondamentales doit être fournie, mais une telle décomposition n’est pas nécessaire pour comprendre l’algorithme qui appelle Oracle.
 Dans Q# , cette abstraction est représentée à l’aide de ces opérations qui sont des valeurs de première classe, de telle sorte que les opérations peuvent être passées aux implémentations d’algorithmes de Quantum en utilisant une boîte noire.

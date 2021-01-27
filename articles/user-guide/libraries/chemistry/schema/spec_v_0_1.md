@@ -4,17 +4,17 @@ description: Décrit en détail les spécifications du schéma Broombridge Quant
 author: cgranade
 ms.author: chgranad
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b99c90c434958f7b04712580789b203766cd084d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 0a306f59a823e76ba0518d023a41f1f9d5670e7a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835738"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858191"
 ---
 # <a name="broombridge-specification-v01"></a>Spécification Broombridge v 0.1 #
 
@@ -111,7 +111,7 @@ Cette section est normative.
 L’objet Broombridge doit avoir une propriété `format` dont la valeur est un objet JSON avec une propriété appelée `version` .
 La `version` propriété doit avoir la valeur `"0.1"` .
 
-### <a name="example"></a> Exemple ###
+### <a name="example"></a>Exemple ###
 
 Cette section est informatif.
 
@@ -169,7 +169,7 @@ La valeur de la `hamiltonian` propriété est appelée objet Hamilton, et doit a
 Un objet Hamilton peut également avoir une propriété `particle_hole_representation` .
 Si elle est présente, la valeur de `particle_hole_representation` doit respecter le format décrit dans le reste de cette section.
 
-##### <a name="one-electron-integrals-object"></a>Objet intégral à un seul électrons #####
+##### <a name="one-electron-integrals-object"></a>Objet One-Electron intégrales #####
 
 Cette section est normative.
 
@@ -179,7 +179,7 @@ Chaque terme doit avoir des index `[i, j]` où `i >= j` .
 > OBSERVE Cela reflète la symétrie qui $h _ {IJ} = h_ {ji} $, qui est une conséquence du fait que le Hermitian de la Hamilton est le même.
 
 
-###### <a name="example"></a> Exemple ######
+###### <a name="example"></a>Exemple ######
 
 Cette section est informatif.
 
@@ -199,7 +199,7 @@ one_electron_integrals:     # required
 > Broombridge utilise l’indexation basée sur 1.
 
 
-##### <a name="two-electron-integrals-object"></a>Objet de type intégral à deux électrons #####
+##### <a name="two-electron-integrals-object"></a>Objet Two-Electron intégrales #####
 
 Cette section est normative.
 
@@ -230,7 +230,7 @@ Si la `index_convention` propriété d’un `two_electron_integrals` objet est �
 
 <!-- h_{ijkl} = h_{ijlk}=h_{jikl}=h_{jilk}=h_{klij}=h_{klji}=h_{lkji}. -->
 
-###### <a name="example"></a> Exemple #######
+###### <a name="example"></a>Exemple #######
 
 Cette section est informatif.
 
