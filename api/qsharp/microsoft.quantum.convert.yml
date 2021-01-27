@@ -4,7 +4,7 @@ functions:
   uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
 - summary: Convertit un tableau de valeurs booléennes donné en un grand entier équivalent. L’élément 0 du tableau est le bit le moins significatif du grand entier.
   uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
-- summary: Produit un entier positif à partir d’une chaîne de bits au format Little endian.
+- summary: Produit un entier non négatif à partir d’une chaîne de bits au format Little endian.
   uid: Microsoft.Quantum.Convert.BoolArrayAsInt
 - summary: Dans le cas d’une chaîne binaire, retourne un opérateur Pauli qubit multiple représenté sous la forme d’un tableau d’opérateurs Pauli qubit uniques.
   uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
@@ -22,7 +22,7 @@ functions:
   uid: Microsoft.Quantum.Convert.FunctionAsOperation
 - summary: Convertit un entier donné en un grand entier équivalent.
   uid: Microsoft.Quantum.Convert.IntAsBigInt
-- summary: Produit une représentation binaire d’un entier positif, à l’aide de la représentation avec primauté des octets de poids faible (Little-endian) pour le tableau retourné.
+- summary: Produit une représentation binaire d’un entier non négatif, à l’aide de la représentation avec primauté des octets de poids faible (Little-endian) pour le tableau retourné.
   uid: Microsoft.Quantum.Convert.IntAsBoolArray
 - summary: Convertit un entier donné en nombre à virgule flottante double précision équivalent.
   uid: Microsoft.Quantum.Convert.IntAsDouble
@@ -38,7 +38,7 @@ functions:
   uid: Microsoft.Quantum.Convert.RangeAsIntArray
 - summary: Convertit un `Result[]` type en un `Bool[]` type, où `One` est mappé à `true` et `Zero` est mappé à `false` .
   uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
-- summary: Produit un entier positif à partir d’une chaîne de résultats au format Little endian.
+- summary: Produit un entier non négatif à partir d’une chaîne de résultats au format Little endian.
   uid: Microsoft.Quantum.Convert.ResultArrayAsInt
 - summary: Convertit un `Result` type en un `Bool` type, où `One` est mappé à `true` et `Zero` est mappé à `false` .
   uid: Microsoft.Quantum.Convert.ResultAsBool
@@ -50,9 +50,9 @@ operations:
 summary: 'Cet espace de noms contient des fonctions de conversion entre différents types de données Q #.'
 uid: Microsoft.Quantum.Convert
 metadata:
-  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: 18cef8a797a4657f1b846a5b2d2ba2a673378f9a
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92703117"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98850065"

@@ -1,45 +1,45 @@
 ---
 uid: Microsoft.Quantum.Convert.IntAsBigInt
 title: IntAsBigInt fonction)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: IntAsBigInt
 qsharp.summary: Converts a given integer to an equivalent big integer.
-ms.openlocfilehash: 80fe4f0def684b7e2f8c364f2ef76801998a35d1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: da78d6cc1111d48bab8d431114b6695e520a7a3f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96214124"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850165"
 ---
-# <a name="intasbigint-function"></a><span data-ttu-id="9bbbd-102">IntAsBigInt fonction)</span><span class="sxs-lookup"><span data-stu-id="9bbbd-102">IntAsBigInt function</span></span>
+# <a name="intasbigint-function"></a><span data-ttu-id="d0f55-102">IntAsBigInt fonction)</span><span class="sxs-lookup"><span data-stu-id="d0f55-102">IntAsBigInt function</span></span>
 
-<span data-ttu-id="9bbbd-103">Espace de noms : [Microsoft. Quantum. Convert](xref:Microsoft.Quantum.Convert)</span><span class="sxs-lookup"><span data-stu-id="9bbbd-103">Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)</span></span>
+<span data-ttu-id="d0f55-103">Espace de noms : [Microsoft. Quantum. Convert](xref:Microsoft.Quantum.Convert)</span><span class="sxs-lookup"><span data-stu-id="d0f55-103">Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)</span></span>
 
-<span data-ttu-id="9bbbd-104">Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="9bbbd-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="d0f55-104">Package : [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="d0f55-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
-<span data-ttu-id="9bbbd-105">Convertit un entier donné en un grand entier équivalent.</span><span class="sxs-lookup"><span data-stu-id="9bbbd-105">Converts a given integer to an equivalent big integer.</span></span>
+<span data-ttu-id="d0f55-105">Convertit un entier donné en un grand entier équivalent.</span><span class="sxs-lookup"><span data-stu-id="d0f55-105">Converts a given integer to an equivalent big integer.</span></span>
 
 ```qsharp
 function IntAsBigInt (a : Int) : BigInt
 ```
 
 
-## <a name="input"></a><span data-ttu-id="9bbbd-106">Entrée</span><span class="sxs-lookup"><span data-stu-id="9bbbd-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="d0f55-106">Entrée</span><span class="sxs-lookup"><span data-stu-id="d0f55-106">Input</span></span>
 
-### <a name="a--int"></a><span data-ttu-id="9bbbd-107">r : [entier](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="9bbbd-107">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
+### <a name="a--int"></a><span data-ttu-id="d0f55-107">r : [entier](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="d0f55-107">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
-## <a name="output--bigint"></a><span data-ttu-id="9bbbd-108">Sortie : [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="9bbbd-108">Output : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
+
+
+## <a name="output--bigint"></a><span data-ttu-id="d0f55-108">Sortie : [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="d0f55-108">Output : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
 
 
 
-## <a name="remarks"></a><span data-ttu-id="9bbbd-109">Notes</span><span class="sxs-lookup"><span data-stu-id="9bbbd-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="d0f55-109">Notes</span><span class="sxs-lookup"><span data-stu-id="d0f55-109">Remarks</span></span>
 
-<span data-ttu-id="9bbbd-110">Pour plus d’informations, consultez [constructeur BigInteger C#](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) .</span><span class="sxs-lookup"><span data-stu-id="9bbbd-110">See [C# BigInteger constructor](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) for more details.</span></span>
+<span data-ttu-id="d0f55-110">Pour plus d’informations, consultez [constructeur BigInteger C#](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) .</span><span class="sxs-lookup"><span data-stu-id="d0f55-110">See [C# BigInteger constructor](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) for more details.</span></span>
