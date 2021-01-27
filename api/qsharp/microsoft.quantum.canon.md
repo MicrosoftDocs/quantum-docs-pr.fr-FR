@@ -1,19 +1,19 @@
 ---
 uid: Microsoft.Quantum.Canon
 title: Espace de noms Microsoft. Quantum. Canon
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/23/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Canon
 qsharp.summary: ''
-ms.openlocfilehash: 68b52b5b2d04cf2f6d18b58d7e36b38805e4ca80
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 436dd70385cb5276bc74dab8a9b0e1910d10f271
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96206457"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852676"
 ---
-# <a name="microsoftquantumcanon-namespace"></a><span data-ttu-id="a8087-102">Espace de noms Microsoft. Quantum. Canon</span><span class="sxs-lookup"><span data-stu-id="a8087-102">Microsoft.Quantum.Canon namespace</span></span>
+# <a name="microsoftquantumcanon-namespace"></a><span data-ttu-id="26bc1-102">Espace de noms Microsoft. Quantum. Canon</span><span class="sxs-lookup"><span data-stu-id="26bc1-102">Microsoft.Quantum.Canon namespace</span></span>
 
 
 
