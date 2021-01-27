@@ -1,30 +1,30 @@
 ---
-title: Jordanie-représentation Wigner
-description: En savoir plus sur la représentation Jordanie-Wigner, qui met en correspondance les opérateurs Hamilton et les matrices unitaires qui peuvent être plus facilement implémentées sur un ordinateur quantique.
+title: Représentation Jordan-Wigner
+description: En savoir plus sur la représentation Jordan-Wigner, qui met en correspondance les opérateurs de niveau de Hamilton et les matrices unitaires qui peuvent être plus facilement implémentées sur un ordinateur quantique.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 29abb4d2ef11239a58af45bc4eee3bd60d20a6c7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 738c8262ea66b8a02ea7541e402953237dc2ea48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833856"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844134"
 ---
-# <a name="jordan-wigner-representation"></a>Jordanie-représentation Wigner
+# <a name="jordan-wigner-representation"></a>Représentation Jordan-Wigner
 
 Tandis que les deuxième Hamiltonians quantifiés sont facilement représentées en termes de $a ^ \dagger $ (création) et $a $ (annihilation), ces opérations ne sont pas des opérations fondamentales sur les ordinateurs quantiques.
 Par conséquent, si nous souhaitons qu’il les implémente sur un ordinateur quantique, nous devons mapper les opérateurs aux matrices unitaires qui peuvent être implémentées sur un ordinateur quantique.
 La représentation Jordanie – Wigner fournit une telle carte.
 Toutefois, d’autres, telles que la représentation Bravyi – kitaev, existent également et présentent leurs propres avantages et inconvénients.
-Le principal avantage de la représentation Jordanie-Wigner est sa simplicité.
+Le principal avantage de la représentation Jordan-Wigner est sa simplicité.
 
-La représentation Jordanie-Wigner est simple à dériver.
+La représentation Jordan-Wigner est directe à dériver.
 Rappelez-vous qu’un État $ \ket {0} _J $ implique que spin orbital $j $ est vide et $ \ket {1} _J $ signifie qu’il est occupé.
 Cela signifie que qubits peut naturellement stocker l’occupation d’un spin orbital donné.
 Nous avons ensuite cette $a ^ \ dagger_j \ket {0} _J = \ket {1} _J $ et $a ^ \ dagger_j \ket {1} _J = $0.
@@ -51,14 +51,14 @@ La construction complète est la suivante :
 \begin{align} a ^ \ dagger_1 &= \left (\frac{X-iY} {2} \right) \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1, \\ \\ un ^ \ dagger_2 &= Z\otimes\left (\frac{X-Iy} {2} \right) \otimes 1 \ otimes 1 \otimes \cdots \otimes 1, \\ \\ a ^ \ dagger_3 &= Z\otimes Z\otimes \left (\frac{X-Iy} \right {2} ) \otimes 1 \otimes \cdots \otimes 1, \\ \\ & \Vdots \\ \\ a ^ \ dagger_N &= Z\otimes Z\otimes Z\otimes Z \otimes \cdots \otimes Z\otimes \left (\frac{X-Iy} {2} \right). \label{EQ : JW} \end{align}
 
 Il est également pratique d’exprimer les opérateurs numériques, $n _j $, en termes d’opérateurs Pauli.
-Heureusement, les chaînes de $Z $ Operators (appelées chaînes Jordanie-Wigner) annulent à l’issue de cette substitution.
+Heureusement, les chaînes de $Z $ Operators (appelées chaînes Jordan-Wigner) annulent à l’issue de cette substitution.
 Après avoir effectué cette sortie (et rappelant que $X _jY_j = iZ_j $), nous avons \begin{Equation} n_j = a ^ \ dagger_j a_j = \frac{(1-Z_j)} {2} .
 \end{equation}
 
 
-## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Construction de Hamiltonians dans la représentation Jordanie-Wigner
+## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Construction de Hamiltonians dans la représentation Jordan-Wigner
 
-Une fois que nous avons appelé la représentation Jordanie-Wigner qui traduit le Hamilton en une somme d’opérateurs Pauli est simple.
+Une fois que nous avons appelé la représentation Jordan-Wigner qui traduisant le Pauli de la même façon en une somme d’opérateurs, c’est simple.
 Il suffit de remplacer chacun des opérateurs $a ^ \dagger $ et $a $ dans le Fermionic Hamilton par les chaînes des opérateurs Pauli ci-dessus.
 Lorsqu’une de ces substitutions est effectuée, il n’y a que cinq classes de termes au sein de la partie Hamilton.
 Ces cinq classes correspondent aux différentes façons dont nous pouvons choisir les $p, q $ et $p, q, r, s $ dans le corps et les deux termes dans le même corps.

@@ -4,17 +4,17 @@ description: Découvrez comment générer automatiquement un grand degré de Ham
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57e25bf55009797b01695cef0f3d29b94662ccc0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4bd663ade7649be05058f07bee1acf541ec3e487
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869237"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844117"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Chargement d’un Hamiltonien à partir d’un fichier
 Auparavant, nous avons construit Hamiltonians en y ajoutant des termes. Bien que cela soit parfait pour les petits exemples, la chimie quantique à l’échelle nécessite Hamiltonians avec des millions ou des milliards de termes. Ces Hamiltonians, générés par des packages de chimie tels que NWChem, sont trop volumineux pour être importés manuellement. Dans cet exemple, nous illustrons comment une `FermionHamiltonian` instance peut être générée automatiquement à partir d’une molécule représentée par le [schéma Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge). Pour référence, vous pouvez inspecter l' `LithiumHydrideGUI` exemple fourni ou l' `RunSimulation` exemple. Une prise en charge limitée est également disponible pour l’importation à partir du format consommé par [LIQUi |>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).
