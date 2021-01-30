@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
-ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.openlocfilehash: dd37581dff2a512a29eb7729ecbf81412917b8f8
+ms.sourcegitcommit: e915baf3b84ee3a562004c5b31d157d21533d450
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98856658"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99101456"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notes de publication de Microsoft Quantum Development Kit
 
@@ -23,6 +23,15 @@ Cet article contient des informations sur chaque version de Quantum Development 
 Pour obtenir des instructions d’installation, consultez le [Guide d’installation](xref:microsoft.quantum.install).
 
 Pour obtenir des instructions de mise à jour, consultez le [Guide de mise à jour](xref:microsoft.quantum.update).
+
+## <a name="version-0152101126807"></a>Version 0.15.2101.126807
+
+*Date de publication : 29 janvier 2021*
+
+- Ajout de modèles de projet au Q# compilateur pour les exécutables ciblant les fournisseurs IonQ et Honeywell
+- Mise à jour de la Q# syntaxe du noyau mise à jour pour inclure les modifications apportées à la Q# syntaxe introduite dans la version [0.15.2101125897](#version-0152101125897)
+- Ensemble vos résolutions pour prendre en charge le passage de tableaux en tant qu’arguments d’entrée aux Q# programmes soumis à Azure Quantum via `%azure.execute` , consultez [#401](https://github.com/microsoft/iqsharp/issues/401) du problème
+- Correction de l’erreur « autorisation refusée » rencontrée à l' `az` intérieur des images de l' `iqsharp-base` arrimeur. consultez le [#404](https://github.com/microsoft/iqsharp/issues/404) du problème
 
 ## <a name="version-0152101125897"></a>Version 0.15.2101125897
 
@@ -34,6 +43,7 @@ Pour obtenir des instructions de mise à jour, consultez le [Guide de mise à jo
 - Amélioration des estimations de largeur pour une profondeur optimale, [consultez détails](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
 - Appliquer l’opération unitaire fournie comme matrice explicite à l’aide `ApplyUnitary` de ([QuantumLibraries # 391](https://github.com/microsoft/QuantumLibraries/pull/391), contribution externe de Dmytro Fedoriaka)
 - Résolu https://github.com/microsoft/iqsharp/issues/387 en réduisant l’impact sur les performances du Q# démarrage du noyau.
+
 ## <a name="version-0142011120240"></a>Version 0.14.2011120240
 
 *Date de publication : 25 novembre, 2020*
