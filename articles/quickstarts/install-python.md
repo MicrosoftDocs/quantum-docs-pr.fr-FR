@@ -4,18 +4,17 @@ description: Découvrez comment créer une application Q# à l’aide de Python.
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1ec40b6f1b7a8d9144860e3b8cfd554eb51bae81
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834157"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844268"
 ---
 # <a name="develop-with-no-locq-and-python"></a>Développer en Q# et Python
 
@@ -72,7 +71,7 @@ Installez le QDK pour développer des programmes hôtes Python afin d’appeler 
     > où `/path/to/dotnet-iqsharp` doit être remplacé par le chemin absolu à l’outil `dotnet-iqsharp` dans votre système de fichiers.
     > En général, il se trouve sous `.dotnet/tools` dans le dossier de votre profil utilisateur.
     
-***
+**_
 
 Et voilà ! Vous disposez maintenant du package Python `qsharp` et du noyau IQ# pour Jupyter, qui fournit les fonctionnalités de base pour la compilation et l’exécution des opérations Q# à partir de Python et vous permet d’utiliser les notebooks Jupyter Q#.
 
@@ -113,7 +112,7 @@ Vous êtes maintenant prêt à vérifier l’installation de votre package Pytho
 1. Vous devez voir le résultat de l’opération que vous avez appelée. Dans ce cas, étant donné que votre opération génère un résultat aléatoire, vous verrez soit `0`, soit `1` à l’écran. Si vous exécutez le programme à plusieurs reprises, vous devriez voir chaque résultat environ une fois sur deux.
 
 > [!NOTE]
-> * Le code Python est un programme Python normal. Pour écrire le programme Python et appeler les opérations Q#, vous pouvez utiliser n’importe quel environnement Python, y compris les notebooks Jupyter basés sur Python. Le programme Python peut importer des opérations Q# à partir de n’importe quel fichier .qs situé dans le même dossier que le code Python.
+> _ Le code Python est juste un programme Python normal. Pour écrire le programme Python et appeler les opérations Q#, vous pouvez utiliser n’importe quel environnement Python, y compris les notebooks Jupyter basés sur Python. Le programme Python peut importer des opérations Q# à partir de n’importe quel fichier .qs situé dans le même dossier que le code Python.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

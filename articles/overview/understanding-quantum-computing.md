@@ -9,16 +9,16 @@ uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c6c6249fd56c6fb65550c81ffee902eca555b0cd
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834990"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855104"
 ---
 # <a name="understanding-quantum-computing"></a>Fonctionnement de l’informatique quantique
 
-L’informatique quantique utilise les principes de la mécanique quantique pour traiter les informations. C’est la raison pour laquelle l’informatique quantique nécessite une approche différente de l’informatique classique. L’une des différences est le processeur qui équipe les ordinateurs quantiques. Alors que les ordinateurs classiques utilisent les puces en silicium habituelles, les ordinateurs quantiques utilisent des systèmes quantiques tels que des atomes, des ions, des photons ou des électrons. Ils utilisent leurs propriétés quantiques pour représenter les bits qui peuvent être préparés selon différentes superpositions quantiques de 1 et 0.  
+L’informatique quantique utilise les principes de la mécanique quantique pour traiter les informations. C’est la raison pour laquelle l’informatique quantique nécessite une approche différente de l’informatique classique. L’une des différences est le processeur qui équipe les ordinateurs quantiques. Là où les ordinateurs classiques utilisent des puces de silicium connues, les ordinateurs quantiques utilisent des systèmes quantiques (systèmes dans lesquels nous pouvons contrôler les propriétés et comportements uniques de la mécanique quantique) tels que les atomes, les ions, les photons ou les électrons. Tandis que les ordinateurs classiques utilisent des valeurs haute et basse basées sur la logique binaire, respectivement 1 et 0, les ordinateurs quantiques utilisent leurs propriétés quantiques pour représenter les bits qui peuvent être préparés dans différentes superpositions quantiques de 1 et 0.  
 
 Le matériel quantique se comporte selon les lois de la mécanique quantique, en appliquant des concepts tels que le calcul probabiliste, la superposition et l’intrication. Ces concepts sont à la base des algorithmes quantiques qui exploitent la puissance de l’informatique quantique pour résoudre des problèmes complexes. Cet article décrit quelques-uns des concepts fondamentaux de la mécanique quantique sur laquelle repose l’informatique quantique.
 
@@ -52,7 +52,7 @@ En plus de cette interdépendance, les particules sont capables de conserver ce 
 
 ### <a name="qubits-and-probability"></a>Qubits et probabilité
 
-Les ordinateurs classiques stockent et traitent les informations en bits, qui peuvent avoir l’état 1 ou 0, mais jamais les deux à la fois. En informatique quantique, l’équivalent est le **qubit**, qui représente l’état d’une particule quantique. Avec le phénomène de superposition, un qubit peut avoir la valeur 1, la valeur 0 ou toute autre valeur intermédiaire. Selon sa configuration, un qubit a une certaine *probabilité* d’être réduit à 1 ou à 0. La probabilité de réduction d’un qubit dans un sens ou l’autre est déterminée par l’**interférence quantique**. 
+Les ordinateurs classiques stockent et traitent les informations en bits, qui peuvent avoir l’état 1 ou 0, mais jamais les deux à la fois. En informatique quantique, l’équivalent est le **qubit**, qui représente l’état d’une particule quantique. Avec le phénomène de superposition, un qubit peut avoir la valeur 1, la valeur 0 ou toute autre valeur intermédiaire. Selon sa configuration, un qubit a une certaine *probabilité* d’être réduit à 1 ou à 0. La probabilité de réduction d’un qubit dans un sens ou l’autre est déterminée par l’**interférence quantique**.
 
 Vous vous souvenez de l’ami qui vous prenait en photo ? Supposons que son appareil photo comporte des filtres spéciaux appelés filtres d’*interférence*. Si votre ami sélectionne le filtre *70/30* avant de commencer à prendre des photos, sur 70 % des photos, vous serez tourné vers la gauche et sur 30 % d’entre elles, vous serez tourné vers la droite. En effet, le filtre perturbe l’état normal de l’appareil photo pour influencer la probabilité de son comportement.
 
